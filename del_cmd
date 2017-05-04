@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+CMD=""
+FILE=""
+
+if [[ -z "$1" ]]; then
+  echo "Please enter command name."
+else
+  CMD="$1" && shift
+  FILE="$BIN/$CMD"
+
+  if [[ ! -e "$FILE" ]]; then
+    echo "Command $FILE not found."
+  else
+    rm -rf "$FILE"
+    echo "Command $FILE deleted."
+  fi
+fi

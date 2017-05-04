@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+CMD=""
+FILE=""
+
+if [[ -z "$1" ]]; then
+  echo "Please enter command name."
+else
+  CMD="$1"; shift
+  FILE="$BIN/$CMD"
+
+  if [[ -e "$FILE" ]]; then
+    open -a "Atom" "$FILE"
+  else
+    echo "Command $FILE not found."
+  fi
+fi

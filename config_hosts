@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+open -a "Atom" "/etc/hosts"
