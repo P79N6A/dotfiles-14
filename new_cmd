@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 CMD=""
 FILE=""
 
@@ -14,8 +12,12 @@ else
   if [[ -e "$FILE" ]]; then
     echo "Command $FILE already exists."
   else
-    echo -e "#!/bin/sh" &> "$FILE"
+    echo -e "#!/bin/bash" &> "$FILE"
 
     chmod 0755 "$FILE"
+
+    if [[ -n "$1" && "-e" == "$1" ]]; then
+      edit_cmd "$CMD"
+    fi
   fi
 fi

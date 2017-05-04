@@ -1,22 +1,7 @@
+#!/bin/bash
+
 export GIT_URL="https://github.com"
 export subl=`echo "Sublime Text"`
-
-function gitac() {
-  local GIT="$PWD/.git"
-  if [[ ! -e "$GIT" ]]; then
-    echo "No .git repository directory."
-  else
-    git add --all && git commit -m "$1"
-  fi
-}
-
-function gitp() {
-  git push origin $*
-}
-
-function gitpl() {
-  git pull origin $*
-}
 
 alias ls="ls -A"
 alias la="ls -1"
