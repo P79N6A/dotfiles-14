@@ -6,7 +6,7 @@ function gitac() {
   if [[ ! -e "$GIT" ]]; then
     echo "No .git repository directory."
   else
-    git add --all && git commit -m $*
+    git add --all && git commit -m "$1"
   fi
 }
 
