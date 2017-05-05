@@ -1,8 +1,5 @@
 #!/bin/bash
 
-export GIT_URL="https://github.com"
-export subl=`echo "Sublime Text"`
-
 alias ls="ls -A"
 alias la="ls -1"
 alias ll="ls -l"
