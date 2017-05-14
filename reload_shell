@@ -2,4 +2,10 @@
 
 printf "\x00\x03"
 
+echo -ne "$PWD" &> "$DIR_LOG"
+
+if [[ -n $1 && $1 == "-f" ]]; then
+  echo -ne "" &> "$DIR_LOG"
+fi
+
 clear && login -f `whoami`

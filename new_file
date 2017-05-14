@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ -z $1 ]]; then
+  echo "Please enter file name."
+else
+  FILE="$1"
+  shift
+
+  if [[ ! -e $FILE ]]; then
+    echo -ne "" &> "$FILE"
+  fi
+
+  open -a "Atom" "$FILE"
+fi

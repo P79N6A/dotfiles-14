@@ -36,4 +36,5 @@ export CLICOLOR="1"
 export LSCOLORS="ExFxCxDxBxegedabagacad"
 
 export GIT_URL="https://github.com"
+export DIR_LOG="$BIN/dir.log"
 export subl=`echo "Sublime Text"`
