@@ -27,7 +27,7 @@ export FG_U=$(tput smul)
 
 export BIN="$HOME/bin"
 export PATH="$BIN:/usr/local/opt/ruby@2.3/bin:/usr/local/opt/openssl/bin:$HOME/.composer/vendor/bin:/usr/local/bin:$PATH"
-export PS1="$FG_CYAN=>$END_SGR \w  \$  "
+export PS1="$FG_MAGENTA$FG_B=>$END_SGR$END_SGR $FG_WHITE$FG_B\w$END_SGR$END_SGR  $FG_CYAN$FG_B\$$END_SGR$END_SGR  "
 export PROMPT_COMMAND=""
 
 export TERM="xterm-color"
