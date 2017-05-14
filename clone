@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ -z $1 ]]; then
+  echo "Please enter git repository."
+else
+  REPO="$1"
+  shift
+
+  git clone "$GIT_URL/$REPO" $*
+fi
