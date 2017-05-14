@@ -3,3 +3,43 @@
 alias ls="ls -A"
 alias la="ls -1"
 alias ll="ls -l"
+alias .a="cd_atom"
+alias .b="cd_bin"
+alias .h="cd_home"
+alias .w="cd_www"
+alias .p="cd_projects"
+alias .="cd_to"
+alias ..="cd_up"
+
+function cd_atom() {
+  cd "$HOME/.atom"
+}
+function cd_bin() {
+  cd "$HOME/bin"
+}
+function cd_home() {
+  cd "$HOME/$1"
+}
+function cd_www() {
+  cd "$HOME/www/$1"
+}
+function cd_projects() {
+  cd "$HOME/projects/$1"
+}
+function cd_to() {
+  cd "$PWD/$1"
+}
+function cd_up() {
+  cd "../$1"
+}
+function take() {
+  if [[ -z "$1" ]]; then
+    echo "Please enter directory name."
+  else
+    if [[ ! -e "$1" ]]; then
+      mkdir -p "$1"
+    fi
+
+    cd "$1"
+  fi
+}
