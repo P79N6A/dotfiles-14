@@ -12,6 +12,9 @@ alias .="cd_to"
 alias ..="cd_up"
 alias compup="composer_update"
 alias tinker="artisan tinker"
+alias show_files='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hide_files='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias disk="diskutil"
 
 
 function restore_dir() {

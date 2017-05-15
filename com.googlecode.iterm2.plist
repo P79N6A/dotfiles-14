@@ -12,8 +12,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "\x03reload_shell -f\x0d"</string>
+		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "`reload_shell `"</string>
 		<string>printf "reload_shell"</string>
 		<string>reload_shell</string>
