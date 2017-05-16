@@ -28,19 +28,6 @@ function restore_dir() {
 # Restore previous working directory after reload shell.
 restore_dir
 
-function flags() {
-  local USAGE="usage: (hidden | nohidden) path"
-
-  if [[ -z $1 || -z $2 ]]; then
-    echo -e "$USAGE"
-  else
-    FLAG="$1"
-    PATH="$2"
-    shift 2
-
-    chflags "$FLAG" "$PATH"
-  fi
-}
 function artisan() {
   php artisan $*
 }
