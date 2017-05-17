@@ -1,9 +1,0 @@
-2017-05-17 {2017.05.21} @phone Mom (+1 234 567 8901) +family
-2017-05-17 {2017.05.20} @skype Dad +family
-(A) 2017-05-17 {2017.05.18} @email mentor
-2017-05-17 {2017.05.21} @write old flame <hot@example.com>
-(B) 2017-05-17 {2017.05.19} Some task
-2017-05-17 {2017.05.18} A third task
-2017-05-18  More things I need to do so
-2017-05-18   Things I need to do
-2017-05-18  2017-05-18 {2017.05.19} Foo
