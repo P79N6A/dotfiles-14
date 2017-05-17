@@ -1,7 +1,6 @@
 #!/usr/bin/env php
 <?php
-require(__DIR__ . '/lib/Controllers/BaseController.php');
-require(__DIR__ . '/lib/AppService.php');
+require(__DIR__ . '/lib/autoload.php');
 
 function usage() {
   echo "usage: {$cmd} current_amount amount\n";

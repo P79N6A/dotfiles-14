@@ -26,6 +26,8 @@ export FG_B=$(tput bold)
 export FG_U=$(tput smul)
 
 export BIN="$HOME/bin"
+# export JAVA_HOME="/usr/bin/java"
+# export JIRA_HOME="$HOME/www/jira"
 export PATH="$BIN:/usr/local/opt/ruby@2.3/bin:/usr/local/opt/openssl/bin:$HOME/.composer/vendor/bin:/usr/local/bin:$PATH"
 export PS1="$FG_MAGENTA=>$END_SGR $FG_WHITE\w$END_SGR  $FG_CYAN\$$END_SGR  "
 export PROMPT_COMMAND=""

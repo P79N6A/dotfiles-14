@@ -27,15 +27,11 @@ class App extends BaseController
   }
 
   public function getArgv() {
-    return BaseController::getArgv();
+    return parent::getArgv();
   }
 
   public function getCommand() {
-    return BaseController::getCommand();
-  }
-
-  public function pp($argv) {
-    print_r($argv);
+    return parent::getCommand();
   }
 }
 
