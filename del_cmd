@@ -8,8 +8,15 @@ FILE=""
 if [[ -z "$1" ]]; then
   echo "Please enter command name."
 else
-  CMD="$1" && shift
+  CMD="$1"; shift
   FILE="$BIN/$CMD"
+  ONPATH=""
+
+  if [[ -n $1 ]]; then
+    ONPATH="$1"
+    shift
+    FILE="$BIN/$ONPATH/$CMD"
+  fi
 
   if [[ ! -e "$FILE" ]]; then
     echo "Command $FILE not found."

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+if [[ -z $1 ]]; then
+  echo "Please enter addon name."
+else
+  ADDON="$1"
+  shift
+
+  new_cmd "$ADDON" "todo/addons/$*" -e
+fi

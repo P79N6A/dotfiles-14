@@ -8,6 +8,13 @@ if [[ -z "$1" ]]; then
 else
   CMD="$1"; shift
   FILE="$BIN/$CMD"
+  ONPATH=""
+
+  if [[ -n $1 && $1 != "-e" ]]; then
+    ONPATH="$1"
+    shift
+    FILE="$BIN/$ONPATH/$CMD"
+  fi
 
   if [[ -e "$FILE" ]]; then
     echo "Command $FILE already exists."
@@ -17,7 +24,7 @@ else
     chmod 0755 "$FILE"
 
     if [[ -n "$1" && "-e" == "$1" ]]; then
-      edit_cmd "$CMD"
+      edit_cmd "$CMD" "$ONPATH"
     fi
   fi
 fi

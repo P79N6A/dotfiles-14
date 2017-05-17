@@ -40,3 +40,8 @@ export LSCOLORS="ExFxCxDxBxegedabagacad"
 export GIT_URL="https://github.com"
 export DIR_LOG="$BIN/dir.log"
 export subl=`echo "Sublime Text"`
+
+export EDITOR="Atom"
+export TODO_DIR="$BIN/todo"
+export TODOTXT_CFG_FILE="$TODO_DIR/todo.cfg"
+export TODO_ACTIONS_DIR="$TODO_DIR/addons"

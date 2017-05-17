@@ -10,6 +10,13 @@ if [[ -z "$1" ]]; then
 else
   CMD="$1"; shift
   FILE="$BIN/$CMD"
+  ONPATH=""
+
+  if [[ -n $1 ]]; then
+    ONPATH="$1"
+    shift
+    FILE="$BIN/$ONPATH/$CMD"
+  fi
 
   if [[ -e "$FILE" ]]; then
     open -a "Atom" "$FILE"

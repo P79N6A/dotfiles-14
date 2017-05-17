@@ -905,11 +905,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>744 71 445 77 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>523 314 918 498 0 0 1920 1177 </string>
+	<string>523 384 918 381 0 0 1920 1177 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 38 1920 281 0 0 1920 1177 </string>
+	<string>0 38 1920 298 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1726,6 +1726,8 @@
 	<real>513777310.36099303</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
