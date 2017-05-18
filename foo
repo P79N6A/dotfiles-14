@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# echo 54657374696e672031203220330 | xxd -r -p
+
+# echo -n "$1" | od -A n -t x1
+
+printf '%d\n' 0x15a
+
+echo
+
+printf '%x\n' 346

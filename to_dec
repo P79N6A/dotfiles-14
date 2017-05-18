@@ -1,0 +1,43 @@
+#!/usr/bin/env php
+<?php
+require(__DIR__ . '/lib/autoload.php');
+
+function usage() {
+  global $cmd;
+  echo "usage: " . $cmd . " hex(s)";
+  echo "
+";
+}
+
+if (!$argv) {
+  usage();
+} else {
+  $result = array();
+
+  for ($i = 0; $i < $argc; $i++) {
+    $result[] = hexdec($argv[$i]);
+  }
+
+  echo implode(" ", $result);
+}
+
+// END
+echo "\n";
+
+/*#!/bin/bash
+
+
+function usage() {
+  cat <<-EndVersion
+  usage: $(basename $0) hex
+EndVersion
+
+  complete 1
+}
+
+if [[ -z $1 ]]; then
+  usage
+else
+  printf '%d\n' $1
+fi
+*/

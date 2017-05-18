@@ -33,8 +33,17 @@ class App extends BaseController
   public function getCommand() {
     return parent::getCommand();
   }
+
+  public function argv() {
+    return parent::getArgv();
+  }
+
+  public function cmd() {
+    return parent::getCommand();
+  }
 }
 
 
 $cmd = App::getCommand();
 $argv = App::getArgv();
+$argc = count($argv);
