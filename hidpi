@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+require(__DIR__ . '/lib/autoload.php');
+
+function usage() {
+  global $cmd;
+  echo "usage: " . $cmd . " horizontal vertical";
+  echo "
+";
+}
+
+if (!$argv || $argc != 2) {
+  usage();
+} else {
+  echo ($argv[0] * 2) . " " . ($argv[1] * 2);
+
+  // END
+  echo "\n";
+}

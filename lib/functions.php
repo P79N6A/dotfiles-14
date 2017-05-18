@@ -1,4 +1,8 @@
 <?php
+function imp($argv) {
+  echo implode(" ", $argv);
+}
+
 function pp($argv) {
   if (is_bool($argv)) {
     if ($argv === true) {
