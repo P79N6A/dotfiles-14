@@ -31,7 +31,7 @@ alias .p="cd_projects"
 alias .="cd_to"
 alias ..="cd_up"
 alias compup="composer_update"
-alias tink="artisan tinker"
+alias tink="php_artisan tinker"
 alias show_files='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hide_files='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias disk="diskutil"
@@ -47,6 +47,7 @@ alias tinkdev="(RGM && tink)"
 alias ATOM='.a'
 alias BIN='.b'
 alias git-push='gac "Update packages" && gp master'
+alias phpar="php_artisan"
 
 
 function restore_dir() {
@@ -60,7 +61,7 @@ function restore_dir() {
 # Restore previous working directory after reload shell.
 restore_dir
 
-function artisan() {
+function php_artisan() {
   php artisan $*
 }
 function composer_update() {
