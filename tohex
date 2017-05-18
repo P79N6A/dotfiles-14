@@ -12,10 +12,10 @@ function usage() {
 if (!$argv) {
   usage();
 } else {
-  $hex = "00000000";
   $result = array();
 
   for ($i = 0; $i < $argc; $i++) {
+    $hex = "00000000";
     $len = strlen(dechex($argv[$i]));
     $hex = substr($hex, 0, "-". $len) . dechex($argv[$i]);
 
