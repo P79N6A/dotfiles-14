@@ -41,6 +41,7 @@ alias tarm="todo_addon_remove"
 # alias t="todo.sh -d $BIN/todo/todo.cfg"
 # alias t="todo.sh"
 # alias t='todo -d /path/to/your/todo.cfg'
+alias AAD=".w testaad"
 
 
 function restore_dir() {
