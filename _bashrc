@@ -31,7 +31,7 @@ alias .p="cd_projects"
 alias .="cd_to"
 alias ..="cd_up"
 alias compup="composer_update"
-alias tink="php_artisan tinker"
+alias tinker='(.w laravel && php_artisan tinker)'
 alias show_files='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hide_files='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias disk="diskutil"
@@ -43,11 +43,15 @@ alias tarm="todo_addon_remove"
 # alias t='todo -d /path/to/your/todo.cfg'
 alias AAD=".w testaad"
 alias RGM=".w repro-gallery-master"
-alias tinkdev="(RGM && tink)"
+# alias tinkdev="(RGM && tink)"
 alias ATOM='.a'
 alias BIN='.b'
 alias git-push='gac "Update packages" && gp master'
 alias phpar="php_artisan"
+alias updisplay="update_display 9cc7 610"
+alias rr='sudo defaults read'
+alias ww='sudo defaults write'
+
 
 
 function restore_dir() {
