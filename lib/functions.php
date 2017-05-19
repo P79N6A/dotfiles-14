@@ -16,3 +16,7 @@ function pp($argv) {
     print_r($argv);
   }
 }
+
+function file_not_found($file) {
+  return 'File '. $file .' not found.';
+}

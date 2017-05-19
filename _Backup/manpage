@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+require(__DIR__ . '/lib/autoload.php');
+
+function usage() {
+ global $cmd;
+ echo "usage: " . $cmd . " command";
+ echo "
+";
+}
+
+
+if (!$argv || !$argv[0]) {
+ usage();
+} else {
+ $called_cmd = $argv[0];
+ $file = __DIR__ . '/manpages/' . $called_cmd . '.txt';
+
+ if (!file_exists($file)) {
+   echo 'echo No manual entry for '. $file;
+ } else {
+   $content = file_get_contents($file);
+   echo 'man ' . $file;
+ }
+}

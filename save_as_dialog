@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
+defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true

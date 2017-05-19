@@ -5,15 +5,15 @@ cmd=$(basename $0)
 
 function usage() {
   cat <<-EndVersion
-  usage: $cmd arg(s)
+  usage: $cmd source target
 EndVersion
 
   complete 1
 }
 
 
-if [[ -n $1 && $1 == "-h" ]]; then
-  manpage $cmd
+if [[ $# != "2" || -z $1 || -z $2 ]]; then
+  usage
 else
-  echo $cmd $*
+  sudo ln -s $1 $2
 fi
