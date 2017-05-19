@@ -51,6 +51,7 @@ alias phpar="php_artisan"
 alias updisplay="update_display 9cc7 610"
 alias rr='sudo defaults read'
 alias ww='sudo defaults write'
+alias git-pull="gpl master"
 
 
 
