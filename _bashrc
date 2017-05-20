@@ -20,7 +20,7 @@ _todotxtcli() {
 }
 complete -F _todotxtcli t
 
-alias ec='echo'
+alias sym="ev SYMBOLS"
 alias ls="ls -A"
 alias la="ls -1"
 alias ll="ls -l"
