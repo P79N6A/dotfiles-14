@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+current_folder=$PWD
+
+if [[ -e $current_folder/.git ]]; then
+  echo ".git"
+fi
+
+done

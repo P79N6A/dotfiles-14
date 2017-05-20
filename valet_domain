@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+cmd=$(basename $0)
+
+function usage() {
+  cat <<-EndVersion
+  usage: $cmd tld-name
+EndVersion
+
+  complete 1
+}
+
+
+if [[ -z $1 ]]; then
+  error "Please enter tld-name."
+else
+  tld_name=$1
+  shift
+
+  valet domain $tld_name
+fi

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+cmd=$(basename $0)
+
+function usage() {
+  cat <<-EndVersion
+  usage: $cmd message
+EndVersion
+
+  complete 1
+}
+
+if [[ -z $1 ]]; then
+  errmsg='Unknown error.'
+else
+  errmsg=$*
+  shift
+fi
+
+cat <<-EndContent
+
+   ${FG_RED}⩐  ERROR: ${errmsg}${END_SGR}
+
+EndContent
