@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# vagrant box add laravel/homestead
-#
-# cd "$HOME"
-# git clone https://github.com/laravel/homestead.git Homestead
-# cd "$HOME/Homestead"
-# git checkout v4.0.5
-#
-# bash init.sh
+vagrant box add laravel/homestead
+
+cd "$HOME"
+clone laravel/homestead.git Homestead
+cd "$HOME/Homestead"
+git checkout v4.0.5
+
+bash init.sh

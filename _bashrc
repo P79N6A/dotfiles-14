@@ -54,7 +54,6 @@ alias ww='sudo defaults write'
 alias git-pull="gpl master"
 
 
-
 function restore_dir() {
   local DIR=`cat "$DIR_LOG"`
   if [[ -n $DIR ]]; then
