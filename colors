@@ -1,0 +1,60 @@
+#!/bin/bash
+
+
+printf "
+1	`shell_escape "${FG_B}Bold/Bright${END_SGR}"`
+2	`shell_escape "${FG_D}Dim${END_SGR}"`
+4	`shell_escape "${FG_U}Underlined${END_SGR}"`
+5	`shell_escape "${FG_BL}Blink 1)${END_SGR}"`
+7	`shell_escape "${FG_R}Reverse (invert the foreground and background colors)${END_SGR}"`
+8	`shell_escape "${FG_H}Hidden (usefull for passwords)${END_SGR}"`
+
+
+0	Reset all attributes
+21	Reset bold/bright
+22	Reset dim
+24	Reset underlined
+25	Reset blink
+27	Reset reverse
+28	Reset hidden
+
+
+Text Color
+39	Default foreground color
+30	`shell_escape "${FG_BLACK}${BG_WHITE}Black${END_SGR}"`
+31	`shell_escape "${FG_RED}Red${END_SGR}"`
+32	`shell_escape "${FG_GREEN}Green${END_SGR}"`
+33	`shell_escape "${FG_YELLOW}Yellow${END_SGR}"`
+34	`shell_escape "${FG_BLUE}Blue${END_SGR}"`
+35	`shell_escape "${FG_MAGENTA}Magenta${END_SGR}"`
+36	`shell_escape "${FG_CYAN}Cyan${END_SGR}"`
+37	Light gray
+90	Dark gray
+91	Light red
+92	Light green
+93	Light yellow
+94	Light blue
+95	Light magenta
+96	Light cyan
+97	`shell_escape "${FG_WHITE}White${END_SGR}"`
+
+
+Background Color
+49	Default background color
+40	`shell_escape "${FG_WHITE}${BG_BLACK}Black${END_SGR}"`
+41	`shell_escape "${FG_WHITE}${BG_RED}Red${END_SGR}"`
+42	`shell_escape "${FG_WHITE}${BG_GREEN}Green${END_SGR}"`
+43	`shell_escape "${FG_WHITE}${BG_YELLOW}Yellow${END_SGR}"`
+44	`shell_escape "${FG_WHITE}${BG_BLUE}Blue${END_SGR}"`
+45	`shell_escape "${FG_WHITE}${BG_MAGENTA}Magenta${END_SGR}"`
+46	`shell_escape "${FG_WHITE}${BG_CYAN}Cyan${END_SGR}"`
+47	Light gray
+100	Dark gray
+101	Light red
+102	Light green
+103	Light yellow
+104	Light blue
+105	Light magenta
+106	Light cyan
+107	`shell_escape "${FG_BLACK}${BG_WHITE}White${END_SGR}"`
+"

@@ -12,12 +12,10 @@ EndVersion
 }
 
 if [[ -z $1 ]]; then
-  errmsg='Unknown error.'
+  usage
 else
   errmsg=$1
   shift
+
+  printf "`shell_escape "${FG_YELLOW}${errmsg}${END_SGR}"`\n"
 fi
-
-
-
-printf "`shell_escape "${FG_RED}${errmsg}${END_SGR}"`\n"

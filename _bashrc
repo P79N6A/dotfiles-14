@@ -20,6 +20,7 @@ _todotxtcli() {
 }
 complete -F _todotxtcli t
 
+alias ec='echo'
 alias ls="ls -A"
 alias la="ls -1"
 alias ll="ls -l"
@@ -54,6 +55,9 @@ alias updisplay="update_display 9cc7 610"
 alias rr='sudo defaults read'
 alias ww='sudo defaults write'
 alias git-pull="gpl master"
+alias envp='printenv'
+alias e="echo"
+alias ev="printenv"
 
 
 function restore_dir() {

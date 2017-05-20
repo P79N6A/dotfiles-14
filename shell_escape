@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+require(__DIR__ . '/lib/autoload.php');
+
+function usage() {
+  global $cmd;
+  echo "usage: " . $cmd . " string";
+  echo "
+";
+}
+
+if (!$argv) {
+  usage();
+} else {
+  $str = implode(' ', $argv);
+  $str = str_replace(array(
+    '\[', '\]'
+  ), array(
+    '', ''
+  ), $str);
+
+  echo $str;
+}

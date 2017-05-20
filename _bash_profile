@@ -1,46 +1,46 @@
 #!/bin/bash
 
-export BG_BLACK=$(tput setab 0)
-export BG_RED=$(tput setab 1)
-export BG_GREEN=$(tput setab 2)
-export BG_YELLOW=$(tput setab 3)
-export BG_BLUE=$(tput setab 4)
-export BG_MAGENTA=$(tput setab 5)
-export BG_CYAN=$(tput setab 6)
-export BG_WHITE=$(tput setab 7)
+export BG_DEF="\[\e[39m\]"
+export BG_BLACK="\[\e[40m\]"
+export BG_RED="\[\e[41m\]"
+export BG_GREEN="\[\e[42m\]"
+export BG_YELLOW="\[\e[43m\]"
+export BG_BLUE="\[\e[44m\]"
+export BG_MAGENTA="\[\e[45m\]"
+export BG_CYAN="\[\e[46m\]"
+export BG_WHITE="\[\e[47m\]"
 
-export FG_BLACK=$(tput setaf 0)
-export FG_RED=$(tput setaf 1)
-export FG_GREEN=$(tput setaf 2)
-export FG_YELLOW=$(tput setaf 3)
-export FG_BLUE=$(tput setaf 4)
-export FG_MAGENTA=$(tput setaf 5)
-export FG_CYAN=$(tput setaf 6)
-export FG_WHITE=$(tput setaf 7)
+export FG_DEF="\[\e[39m\]"
+export FG_BLACK="\[\e[30m\]"
+export FG_RED="\[\e[31m\]"
+export FG_GREEN="\[\e[32m\]"
+export FG_YELLOW="\[\e[33m\]"
+export FG_BLUE="\[\e[34m\]"
+export FG_MAGENTA="\[\e[35m\]"
+export FG_CYAN="\[\e[36m\]"
+export FG_WHITE="\[\e[37m\]"
 
-export BG_RESET=$(tput setab 9)
-export FG_RESET=$(tput setaf 9)
-export END_SGR=$(tput sgr0)
-export END_SGRU=$(tput smul)
-export FG_B=$(tput bold)
-export FG_U=$(tput smul)
+export BG_RESET="\[\e[49m\]"
+export FG_RESET="\[\e[39m\]"
+export END_SGR="\[\e[0m\]"
+export END_SGRU="\[\e[0m\]"
+export FG_B="\[\e[1m\]"
+export FG_D="\[\e[2m\]"
+export FG_U="\[\e[4m\]"
+export FG_BL="\[\e[5m\]"
+export FG_R="\[\e[7m\]"
+export FG_H="\[\e[8m\]"
 
 export BIN="$HOME/bin"
 # export JAVA_HOME="/usr/bin/java"
 # export JIRA_HOME="$HOME/www/jira"
 export PATH="$BIN:/usr/local/opt/ruby@2.3/bin:/usr/local/opt/openssl/bin:$HOME/.composer/vendor/bin:/usr/local/bin:$PATH"
-# export PS1="$FG_MAGENTA=>$END_SGR $FG_WHITE\w$END_SGR  $FG_CYAN\$$END_SGR  "
-export PS1="${FG_MAGENTA}λ${END_SGR}  ${FG_GREEN}\u${END_SGR}  in  ${FG_YELLOW}[\w]${END_SGR}
-${FG_WHITE}\$${END_SGR}  "
+export PS1="${FG_MAGENTA}${FG_B}λ${END_SGR}  ${FG_GREEN}\u${END_SGR}  in  ${FG_YELLOW}[\w]${END_SGR}  \n${FG_WHITE}\$${END_SGR}  "
+# export PS1="\[\e[35m\]\[\e[1m\]λ\[\e[0m\]  \[\e[32m\]\u\[\e[0m\]  in  \[\e[33m\][\w]\[\e[0m\]  \n\[\e[1m\]\$\[\e[0m\]  "
+# export PS1="λ  \u  in  [\w]  \n\$  "
 
 ## Symbols
-export SYMBOLS='
-λ    ⤑    ⤇    ⤵    ⚡    ⚓    ☕    ⨯
-⩐    ⩨    𐄷    𐄹    ˿    ⌘    @    ➾
-⌦    ⌫    ⎈    ⎋    ⏏    ⌗    ⍟    ⍝
-⍣    ⎆    ⌚    ⌛    ⌨    ⏎    ⚙    🜨
-🜲    🝙    🝱
-'
+export SYMBOLS='λ    ⤑    ⤇    ⤵    ⚡    ⚓    ☕    ⨯    ⩐    ⩨    𐄷    𐄹    ˿    ⌘    @    ➾    ⌦    ⌫    ⎈    ⎋    ⏏    ⌗    ⍟    ⍝    ⍣    ⎆    ⌚    ⌛    ⌨    ⏎    ⚙    🜨    🜲    🝙    🝱'
 
 ## Copperplate
 # export PS1="  Ꙭ  \u  at [\w]\n\$  "

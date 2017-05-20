@@ -739,6 +739,8 @@
 	<string>E04D8006-D5A2-4700-9AA2-9BB92AD058E3</string>
 	<key>DimInactiveSplitPanes</key>
 	<false/>
+	<key>DisableAppNap</key>
+	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<true/>
 	<key>DisableWindowSizeSnap</key>
@@ -862,6 +864,8 @@
 	<integer>50</integer>
 	<key>HotkeyModifiers</key>
 	<integer>262401</integer>
+	<key>JiggleTTYSizeOnClearBuffer</key>
+	<true/>
 	<key>JobName</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -919,9 +923,9 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>423 129 228 265 0 0 1280 777 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>450 128 601 288 0 0 1280 777 </string>
+	<string>414 382 601 154 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>245 121 918 495 0 0 1280 777 </string>
+	<string>245 86 1016 502 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 37 1280 281 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1622,7 +1626,7 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>AppleSymbols 18</string>
+			<string>Menlo-Italic 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -1639,6 +1643,8 @@
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
 			<integer>5000</integer>
+			<key>Scrollback in Alternate Screen</key>
+			<false/>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1798,10 +1804,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-19T12:18:44Z</date>
+	<date>2017-05-20T12:18:46Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowPaneTitles</key>
+	<false/>
+	<key>ShowSessionRestoredBanner</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>1</integer>
