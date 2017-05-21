@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+(artisan clear-compiled && artisan cache:clear && artisan config:clear && artisan route:clear && artisan view:clear)
+
+success "Clear artisan successful."
