@@ -20,6 +20,20 @@ _todotxtcli() {
 }
 complete -F _todotxtcli t
 
+
+# === Custom alias shortcuts ===
+# Directory
+alias ATOM='.a'
+alias BIN='.b'
+# WWW
+alias HOME=".h"
+alias PROJ=".p"
+alias PROJECTS=".p"
+alias WWW=".w"
+alias LAV=".w laravel"
+alias AAD=".w testaad"
+alias RGM=".w repro-gallery-master"
+
 alias sym="ev SYMBOLS"
 alias ls="ls -A"
 alias la="ls -1"
@@ -40,15 +54,6 @@ alias disk="diskutil"
 alias t="todo.sh"
 alias tai="todo_addon_install"
 alias tarm="todo_addon_remove"
-alias valt="valet"
-# alias t="todo.sh -d $BIN/todo/todo.cfg"
-# alias t="todo.sh"
-# alias t='todo -d /path/to/your/todo.cfg'
-alias AAD=".w testaad"
-alias RGM=".w repro-gallery-master"
-# alias tinkdev="(RGM && tink)"
-alias ATOM='.a'
-alias BIN='.b'
 alias git-push='gac "Update packages" && gp master'
 alias phpar="php_artisan"
 alias updisplay="update_display 9cc7 610"
