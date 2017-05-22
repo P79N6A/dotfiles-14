@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+cmd=$(basename $0)
+
+function usage() {
+  cat <<-EndVersion
+  usage: $cmd provider
+EndVersion
+
+  complete 1
+}
+
+
+if [[ -z $1 ]]; then
+  usage
+else
+  provider=$1
+  shift
+
+  artisan vendor:publish --provider=$provider
+fi

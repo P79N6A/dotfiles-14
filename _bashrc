@@ -64,6 +64,7 @@ alias envp='printenv'
 alias e="echo"
 alias ev="printenv"
 alias laravel-mod="chmod -R o+w storage && chmod -R o+w bootstrap/cache"
+alias tinker="(LAV && artisan tinker)"
 
 
 function restore_dir() {
