@@ -63,6 +63,7 @@ alias git-pull="gpl master"
 alias envp='printenv'
 alias e="echo"
 alias ev="printenv"
+alias laravel-mod="chmod -R o+w storage && chmod -R o+w bootstrap/cache"
 
 
 function restore_dir() {

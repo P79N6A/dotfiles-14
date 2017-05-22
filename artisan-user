@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+cmd=$(basename $0)
+
+function usage() {
+  cat <<-EndVersion
+usage: $cmd name email
+EndVersion
+
+  complete 1
+}
+
+if [[ $# != 2 ]]; then
+  usage
+else
+  artisan make:user $2 --name=$1 --password=Y
+fi
