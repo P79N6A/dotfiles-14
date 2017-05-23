@@ -63,8 +63,9 @@ alias git-pull="gpl master"
 alias envp='printenv'
 alias e="echo"
 alias ev="printenv"
-alias laravel-mod="chmod -R o+w storage && chmod -R o+w bootstrap/cache"
-alias tinker="(LAV && artisan tinker)"
+alias laravel-mod="sudo chmod -R 777 storage/ bootstrap/ database/migrations/"
+alias tinker="(artisan tinker)"
+alias tinkerglob="(www laravel && artisan tinker)"
 
 
 function restore_dir() {
