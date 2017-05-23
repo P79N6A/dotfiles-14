@@ -23,16 +23,16 @@ complete -F _todotxtcli t
 
 # === Custom alias shortcuts ===
 # Directory
-alias ATOM='.a'
-alias BIN='.b'
+alias atom='.a'
+alias bin='.b'
 # WWW
-alias HOME=".h"
-alias PROJ=".p"
-alias PROJECTS=".p"
-alias WWW=".w"
-alias LAV=".w laravel"
-alias AAD=".w testaad"
-alias RGM=".w repro-gallery-master"
+alias home=".h"
+alias proj=".p"
+alias projects=".p"
+alias www=".w"
+alias lav=".w laravel"
+alias aad=".w testaad"
+alias rgm=".w repro-gallery-master"
 
 alias sym="ev SYMBOLS"
 alias ls="ls -A"
