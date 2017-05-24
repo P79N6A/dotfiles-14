@@ -8,4 +8,4 @@ if [[ -n $1 && $1 == "-f" ]]; then
   echo -ne "" &> "$DIR_LOG"
 fi
 
-clear && login -f `whoami`
+clear && login -q -f `whoami`
