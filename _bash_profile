@@ -14,7 +14,7 @@ function git_check() {
     local status=`git status -s`
 
     if [[ -n $status ]]; then
-      local ps="  < ℹ  ⚡    ${FG_MAGENTA}${branch}${END_SGR} ${FG_RED}***${END_SGR} >"
+      local ps="  < ${FG_MAGENTA}${branch}${END_SGR} ${FG_RED}***${END_SGR}  ⚡  ℹ  >"
     fi
   fi
 
