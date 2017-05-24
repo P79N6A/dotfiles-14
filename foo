@@ -1,19 +1,10 @@
 #!/bin/bash
 
 
-cmd=$(basename $0)
+cat <<-EndVersion
 
-function usage() {
-  cat <<-EndVersion
-  usage: $cmd arg(s)
+                                  
+                              
+                  🙏  🔑  📤  💡  ⚠
+
 EndVersion
-
-  complete 1
-}
-
-
-if [[ -n $1 && $1 == "-h" ]]; then
-  manpage $cmd
-else
-  echo $cmd $*
-fi
