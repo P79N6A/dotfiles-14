@@ -9,16 +9,16 @@ function git_check() {
 
   if [[ -e "$PWD/.git" ]]; then
     local branch=`cat "$PWD/.git/HEAD" | perl -pe "s/ref\: refs\/heads\///g"`
-    local ps="  < ${branch} ${FG_GREEN}${END_SGR} >"
+    local ps="  < ${branch} ${FG_GREEN}${END_SGR} >"
     local refs=`cat "$PWD/.git/refs/heads/${branch}"`
     local status=`git status -s`
 
     if [[ -n $status ]]; then
-      local ps="  <  ${FG_MAGENTA}${branch}${END_SGR} ${FG_YELLOW}${END_SGR}${FG_RED}${END_SGR} >"
+      local ps="  < ${FG_MAGENTA}${branch}${END_SGR} ${FG_RED}📤${END_SGR} >"
     fi
   fi
 
-  export PS1="${FG_MAGENTA}${FG_B}${END_SGR}  ${FG_GREEN}\u${END_SGR}  in  ${FG_YELLOW}[\w]${END_SGR}${ps}\n${FG_WHITE}\$${END_SGR}  "
+  export PS1="${FG_MAGENTA}${FG_B}${END_SGR}  ${FG_GREEN}\u${END_SGR}  in  ${FG_YELLOW}[\w]${END_SGR}${ps}\n${FG_WHITE}\$${END_SGR}  "
 }
 
 
