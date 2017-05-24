@@ -14,11 +14,11 @@ function git_check() {
     local status=`git status -s`
 
     if [[ -n $status ]]; then
-      local ps="  < ${FG_MAGENTA}${branch}${END_SGR} ${FG_RED}⚡${END_SGR} >"
+      local ps="  < ${FG_MAGENTA}${branch}${END_SGR} ${FG_RED}⁉${END_SGR} >"
     fi
   fi
 
-  export PS1="${FG_MAGENTA}${FG_B}${END_SGR}  ${FG_GREEN}\u${END_SGR}  in  ${FG_YELLOW}[\w]${END_SGR}${ps}\n${FG_WHITE}\$${END_SGR}  "
+  export PS1="${FG_MAGENTA}${FG_B}Λ${END_SGR}  ${FG_GREEN}\u${END_SGR}  in  ${FG_YELLOW}[\w]${END_SGR}${ps}\n${FG_WHITE}\$${END_SGR}  "
 }
 
 
