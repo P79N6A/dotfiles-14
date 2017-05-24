@@ -7,7 +7,8 @@ function git_check() {
   local ps=
 
   if [[ -e "$PWD/.git" ]]; then
-    local ps="  .git branch xxx"
+    local branch=`cat "$PWD/.git/HEAD" | perl -pe "s/ref\: refs\/heads\///g"`
+    local ps="  < *** ${branch} *** >"
   fi
 
   export PS1="${FG_MAGENTA}${FG_B}λ${END_SGR}  ${FG_GREEN}\u${END_SGR}  in  ${FG_YELLOW}[\w]${END_SGR}${ps}\n${FG_WHITE}\$${END_SGR}  "
