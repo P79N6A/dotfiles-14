@@ -23,7 +23,6 @@ function refresh_profile() {
 
 export PATH="$BIN:/usr/local/opt/ruby@2.3/bin:/usr/local/opt/openssl/bin:$HOME/.composer/vendor/bin:/usr/local/bin:$PATH"
 export PROMPT_COMMAND='git_check && refresh_profile'
-# export PS1="${FG_MAGENTA}${FG_B}λ${END_SGR}  ${FG_GREEN}\u${END_SGR}  in  ${FG_YELLOW}[\w]${END_SGR}\n${FG_WHITE}\$${END_SGR}  "
 
 
 
