@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # todo-txt completion
 _todotxtcli() {
   local cur=${COMP_WORDS[COMP_CWORD]}
