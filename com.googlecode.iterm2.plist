@@ -917,11 +917,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>530 110 684 296 0 0 1280 777 </string>
+	<string>521 325 684 162 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>342 177 918 495 0 0 1280 777 </string>
+	<string>342 89 918 495 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 37 1280 315 0 0 1280 777 </string>
+	<string>0 37 1280 349 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1627,7 +1627,7 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Material-Design-Icons 16</string>
+			<string>SegoeUISymbol 10</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
