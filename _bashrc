@@ -69,6 +69,29 @@ alias tinker="(artisan tinker)"
 alias tinkerglob="(www laravel && artisan tinker)"
 
 
+function usage() {
+  cat <<-EndVersion
+  usage: $*
+EndVersion
+
+  complete 1
+}
+
+
+function hyperi() {
+  if [[ $# != 2 ]]; then
+    usage "hyperi user repo"
+  else
+    user=$1
+    shift
+    repo=$1
+    shift
+
+    (clone $user/$repo $HYPER_LOCAL/$repo && cd $HYPER_LOCAL/$repo && npm install)
+  fi
+}
+
+
 function restore_dir() {
   local DIR=`cat "$DIR_LOG"`
   if [[ -n $DIR ]]; then

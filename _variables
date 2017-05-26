@@ -46,6 +46,8 @@ export TODO_DIR="$BIN/todo"
 export TODOTXT_CFG_FILE="$TODO_DIR/todo.cfg"
 export TODO_ACTIONS_DIR="$TODO_DIR/addons"
 export MAN="$BIN/manpages"
+export HYPER="${HOME}/.hyper_plugins"
+export HYPER_LOCAL="${HYPER}/local"
 
 
 ## github

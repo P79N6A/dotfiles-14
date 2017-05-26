@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+cmd=$(basename $0)
+
+function usage() {
+  cat <<-EndVersion
+  usage: $cmd user repo
+EndVersion
+
+  complete 1
+}
+
+
+if [[ $# != 2 ]]; then
+  usage
+else
+  user=$1
+  shift
+  repo=$1
+  shift
+
+  clone $user/$repo && cd $repo && npm install
+fi
