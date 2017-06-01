@@ -10,7 +10,7 @@ function git_check() {
   if [[ -e "$PWD/.git" ]]; then
     local branch=`cat "$PWD/.git/HEAD" | perl -pe "s/ref\: refs\/heads\///g"`
     local ps="  < ${FG_MAGENTA}${branch}${END_SGR} ${FG_GREEN}${END_SGR}  >"
-    local refs=`cat "$PWD/.git/refs/heads/${branch}"`
+    # local refs=`cat "$PWD/.git/refs/heads/${branch}"`
     local status=`git status -s`
 
     if [[ -n $status ]]; then
@@ -29,7 +29,7 @@ function refresh_profile() {
 }
 
 
-export PATH="$BIN:/usr/local/opt/ruby@2.3/bin:/usr/local/opt/openssl/bin:$HOME/.composer/vendor/bin:/usr/local/bin:$PATH"
+export PATH="$BIN:/usr/local/opt/ruby@2.3/bin:/usr/local/opt/openssl/bin:$HOME/.composer/vendor/bin:${HOME}/.npm:/usr/local/bin:$PATH"
 export PROMPT_COMMAND='git_check && refresh_profile'
 
 

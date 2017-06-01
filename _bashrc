@@ -34,6 +34,7 @@ alias www=".w"
 alias lav=".w laravel"
 alias aad=".w testaad"
 alias rgm=".w repro-gallery-master"
+alias hyper='.hy'
 
 alias sym="ev SYMBOLS"
 alias ls="ls -A"
@@ -42,6 +43,7 @@ alias ll="ls -l"
 alias .a="cd_atom"
 alias .b="cd_bin"
 alias .h="cd_home"
+alias .hy="cd_home .hyper_plugins"
 alias .w="cd_www"
 alias .p="cd_projects"
 alias .="cd_to"
@@ -67,6 +69,7 @@ alias ev="printenv"
 alias laravel-mod="sudo chmod -R 777 storage/ bootstrap/ database/migrations/"
 alias tinker="(artisan tinker)"
 alias tinkerglob="(www laravel && artisan tinker)"
+alias hyper_update='cp ${HYPER}/.hyper.js ${HOME}/'
 
 
 function usage() {
