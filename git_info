@@ -24,7 +24,7 @@ end
 
 def git_parse_branch
   path = File.dirname(__FILE__)
-  @git_parse_branch ||= `#{path}/git_current_branch`.chomp
+  @git_parse_branch ||= `#{path}/current_branch`.chomp
 end
 
 def git_head_commit_id
@@ -32,7 +32,7 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  " \e[31m✗" unless git_repo_path == '.' || `git ls-files -m`.strip.empty?
+  "\e[31m✗" unless git_repo_path == '.' || `git ls-files -m`.strip.empty?
 end
 
 def rebasing_etc
@@ -46,5 +46,7 @@ def rebasing_etc
 end
 
 if in_git_repo
-  print " \e[37m\e[3m#{git_parse_branch}\e[23m:\e[32m#{git_head_commit_id}#{rebasing_etc}#{git_cwd_dirty} \e[0m\n"
+  print "\e[37m\e[3m#{git_parse_branch}\e[23m:\e[32m#{git_head_commit_id}#{rebasing_etc}#{git_cwd_dirty}\e[0m"
 end
+
+print "\n"

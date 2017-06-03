@@ -80,10 +80,8 @@ alias hyper_update='cp ${HYPER}/.hyper.js ${HOME}/'
 
 
 alias git='hub'
-alias g='git s'
-
+alias g='git status'
 alias pu='phpunit --colors'
-alias sf='app/console'
 
 
 function usage() {
