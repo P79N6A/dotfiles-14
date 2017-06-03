@@ -14,8 +14,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "\x00\x03clear\x0d"</string>
+		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "clear"</string>
 		<string>clear</string>
 		<string>printf '\x03clear'</string>
@@ -1811,7 +1811,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-01T12:08:32Z</date>
+	<date>2017-06-02T14:54:58Z</date>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>ShowSessionRestoredBanner</key>

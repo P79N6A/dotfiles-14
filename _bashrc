@@ -23,6 +23,12 @@ complete -F _todotxtcli t
 
 
 # === Custom alias shortcuts ===
+alias cp='cp -v'
+alias mv='mv -v'
+alias ln='ln -v'
+alias rm='rm -v'
+
+alias export=' export'
 # Directory
 alias atom='.a'
 alias bin='.b'
@@ -37,7 +43,7 @@ alias rgm=".w repro-gallery-master"
 alias hyper='.hy'
 
 alias sym="ev SYMBOLS"
-alias ls="ls -A"
+alias ls="ls -lhA"
 alias la="ls -1"
 alias ll="ls -l"
 alias .a="cd_atom"
@@ -48,6 +54,7 @@ alias .w="cd_www"
 alias .p="cd_projects"
 alias .="cd_to"
 alias ..="cd_up"
+alias c-='cd_back'
 alias compup="composer_update"
 alias compglobup="composer global update"
 alias tinker='(.w laravel && php_artisan tinker)'
@@ -70,6 +77,13 @@ alias laravel-mod="sudo chmod -R 777 storage/ bootstrap/ database/migrations/"
 alias tinker="(artisan tinker)"
 alias tinkerglob="(www laravel && artisan tinker)"
 alias hyper_update='cp ${HYPER}/.hyper.js ${HOME}/'
+
+
+alias git='hub'
+alias g='git s'
+
+alias pu='phpunit --colors'
+alias sf='app/console'
 
 
 function usage() {
@@ -121,6 +135,9 @@ function cd_bin() {
 function cd_home() {
   cd "$HOME/$1"
 }
+function cd_back() {
+  cd - $1
+}
 function cd_www() {
   cd "$HOME/www/$1"
 }
@@ -143,4 +160,10 @@ function take() {
 
     cd "$1"
   fi
+}
+
+
+
+function tpwd {
+    tmux rename-session ${PWD##*/}
 }

@@ -55,4 +55,16 @@ export GIT_URL="https://github.com"
 
 
 ## Others
-export EDITOR="Atom"
+# export EDITOR="Atom"
+
+
+
+
+# editors
+export EDITOR='Atom'
+export GIT_EDITOR='Atom'
+export SHELL='/bin/bash'
+
+# modules
+export JS_CMD="node"
+export NODE_PATH="/usr/local/lib/node_modules"
