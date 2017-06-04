@@ -1,6 +1,9 @@
 #!/bin/bash
 
 
+source "$HOME/bin/_alias"
+
+
 # todo-txt completion
 _todotxtcli() {
   local cur=${COMP_WORDS[COMP_CWORD]}
@@ -20,68 +23,6 @@ _todotxtcli() {
   esac
 }
 complete -F _todotxtcli t
-
-
-# === Custom alias shortcuts ===
-alias cp='cp -v'
-alias mv='mv -v'
-alias ln='ln -v'
-alias rm='rm -v'
-
-alias export=' export'
-# Directory
-alias atom='.a'
-alias bin='.b'
-# WWW
-alias home=".h"
-alias proj=".p"
-alias projects=".p"
-alias www=".w"
-alias lav=".w laravel"
-alias aad=".w testaad"
-alias rgm=".w repro-gallery-master"
-alias hyper='.hy'
-
-alias sym="ev SYMBOLS"
-alias ls="ls -lhA"
-alias la="ls -1"
-alias ll="ls -l"
-alias .a="cd_atom"
-alias .b="cd_bin"
-alias .h="cd_home"
-alias .hy="cd_home .hyper_plugins"
-alias .w="cd_www"
-alias .p="cd_projects"
-alias .="cd_to"
-alias ..="cd_up"
-alias c-='cd_back'
-alias compup="composer_update"
-alias compglobup="composer global update"
-alias tinker='(.w laravel && php_artisan tinker)'
-alias show_files='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hide_files='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-alias disk="diskutil"
-alias t="todo.sh"
-alias tai="todo_addon_install"
-alias tarm="todo_addon_remove"
-alias git-push='gac "Update packages" && gp master'
-alias phpar="php_artisan"
-alias updisplay="update_display 9cc7 610"
-alias rr='sudo defaults read'
-alias ww='sudo defaults write'
-alias git-pull="gpl master"
-alias envp='printenv'
-alias e="echo"
-alias ev="printenv"
-alias laravel-mod="sudo chmod -R 777 storage/ bootstrap/ database/migrations/"
-alias tinker="(artisan tinker)"
-alias tinkerglob="(www laravel && artisan tinker)"
-alias hyper_update='cp ${HYPER}/.hyper.js ${HOME}/'
-
-
-alias git='hub'
-alias g='git status'
-alias pu='phpunit --colors'
 
 
 function usage() {
