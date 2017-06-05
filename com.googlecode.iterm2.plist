@@ -14,8 +14,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "\x00\x03clear\x0d"</string>
+		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "clear"</string>
 		<string>clear</string>
 		<string>printf '\x03clear'</string>
@@ -927,9 +927,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>470 195 1094 595 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>472 276 918 495 0 0 1920 1057 </string>
+	<string>472 276 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 35 1920 315 0 0 1920 1057 </string>
+	<string>0 35 1920 298 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
