@@ -14,8 +14,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "\x00\x03clear\x0d"</string>
+		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "clear"</string>
 		<string>clear</string>
 		<string>printf '\x03clear'</string>
@@ -923,11 +923,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>819 199 445 77 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>591 293 918 498 0 0 1920 1177 </string>
+	<string>591 243 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 38 584 314 0 0 1920 1177 </string>
+	<string>0 38 1920 314 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1645,7 +1645,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>70</integer>
+			<integer>18</integer>
 			<key>Screen</key>
 			<integer>0</integer>
 			<key>Scrollback Lines</key>
@@ -1712,7 +1712,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.070728550295857992</real>
+			<real>0.2135794193786982</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1736,7 +1736,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>2</integer>
+			<integer>5</integer>
 			<key>Working Directory</key>
 			<string>/Users/sudprawat</string>
 		</dict>

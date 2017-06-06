@@ -63,6 +63,7 @@ alias git='hub'
 alias g='git status'
 alias pu='phpunit --colors'
 alias goldfish='www goldfishcreativethailand'
+alias goldfishtheme='www goldfishcreativethailand/wp-content/themes'
 
 
 alias apmi="apm install"
