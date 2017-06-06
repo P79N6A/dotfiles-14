@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+clone nopphasinara/wordpress $1
+rm -rf $1/.git

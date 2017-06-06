@@ -927,9 +927,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>470 195 1094 595 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>472 276 796 473 0 0 1920 1057 </string>
+	<string>2392 201 918 498 1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 35 1920 298 0 0 1920 1057 </string>
+	<string>3270 0 570 1057 1920 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1649,7 +1649,7 @@
 			<key>Rows</key>
 			<integer>17</integer>
 			<key>Screen</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>Scrollback Lines</key>
 			<integer>5000</integer>
 			<key>Scrollback With Status Bar</key>
@@ -1712,7 +1712,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.097085336538461547</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1821,7 +1821,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-05T02:48:00Z</date>
+	<date>2017-06-06T02:48:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowPaneTitles</key>
