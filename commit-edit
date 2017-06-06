@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+cmd=$(basename $0)
+
+function usage() {
+  cat <<-EndVersion
+  usage: $cmd message
+EndVersion
+
+  complete 1
+}
+
+
+if [[ $# < 1 ]]; then
+  usage
+else
+  message=$1 && shift
+
+  git commit --amend -m "${message}"
+fi
