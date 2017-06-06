@@ -63,3 +63,7 @@ alias git='hub'
 alias g='git status'
 alias pu='phpunit --colors'
 alias goldfish='www goldfishcreativethailand'
+
+
+alias apmi="apm install"
+alias apmun="apm uninstall"
