@@ -8,5 +8,5 @@ else
   REPO="$1"
   shift
 
-  git remote add "$REMOTE" -f "$GIT_URL/$REPO" $*
+  git remote add "$REMOTE" -f "$GIT_URL$REPO" $*
 fi

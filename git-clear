@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+rm -rf .gitignore config.cson init.coffee keymap.cson packages snippets.cson styles.less toolbar.cson variables.less custom.less $*

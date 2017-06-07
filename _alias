@@ -62,8 +62,8 @@ alias hyper_update='cp ${HYPER}/.hyper.js ${HOME}/'
 alias git='hub'
 alias g='git status'
 alias pu='phpunit --colors'
-alias goldfish='www goldfishcreativethailand'
-alias goldfishtheme='www goldfishcreativethailand/wp-content/themes'
+alias goldfish='www goldfish'
+alias goldfishtheme='www goldfish/wp-content/themes/goldfish'
 
 
 alias apmi="apm install"

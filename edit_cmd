@@ -19,7 +19,7 @@ else
   fi
 
   if [[ -e "$FILE" ]]; then
-    open -a "Atom" "$FILE"
+    open -a "$EDITOR" "$FILE"
   else
     echo "Command $FILE not found."
   fi

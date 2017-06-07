@@ -10,5 +10,5 @@ else
     echo -ne "" &> "$FILE"
   fi
 
-  open -a "Atom" "$FILE"
+  open -a "$EDITOR" "$FILE"
 fi
