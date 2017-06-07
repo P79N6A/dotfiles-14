@@ -6,5 +6,5 @@ else
   REPO="$1"
   shift
 
-  git clone "$GIT_URL/$REPO" $*
+  git clone "$GIT_URL$REPO" $*
 fi
