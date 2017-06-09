@@ -105,3 +105,11 @@ function take() {
 function tpwd {
     tmux rename-session ${PWD##*/}
 }
+
+
+
+function psg {
+  FIRST=`echo $1 | sed -e 's/^\(.\).*/\1/'`
+  REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
+  ps aux | grep "[$FIRST]$REST"
+}

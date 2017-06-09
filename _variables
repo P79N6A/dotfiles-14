@@ -61,8 +61,8 @@ export GIT_URL="git@github.com:"
 
 
 # editors
-export EDITOR='Atom Beta'
-export GIT_EDITOR='Atom Beta'
+export EDITOR='Atom'
+export GIT_EDITOR='Atom'
 export SHELL='/bin/bash'
 
 # modules

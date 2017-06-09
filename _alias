@@ -3,9 +3,9 @@
 
 # === Custom alias shortcuts ===
 alias cp='cp -v'
-alias mv='mv -v'
 alias ln='ln -v'
-alias rm='rm -v'
+alias mv='mv -i'
+alias rm='rm -i'
 
 alias export=' export'
 # Directory
@@ -67,3 +67,34 @@ alias goldfishtheme='www goldfish/wp-content/themes/goldfish'
 
 alias apmi="apm install"
 alias apmun="apm uninstall"
+
+
+# ip addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+
+
+alias h?="history | grep "
+
+
+
+
+
+# Thanks to Geoffrey's peepcode for many of these
+# alias g='git '
+# alias gst='git status'
+# alias gs='git status'
+# alias gl='git pull'
+# alias gp='git push'
+# alias gd='git diff'
+# alias gdh='git diff HEAD'
+# alias gc='git commit -v'
+# alias gca='git commit -v -a'
+# alias gb='git branch'
+# alias gba='git branch -a'
+# alias gcap='git commit -v -a && git push'
+# alias gpp='git pull; git push'
+
+# For when you are stuck between worlds...
+alias decommit='git svn dcommit'
+alias rebase='git svn rebase'

@@ -23,8 +23,10 @@ else
 
     chmod 0755 "$FILE"
 
-    if [[ -n "$1" && "-e" == "$1" ]]; then
-      edit_cmd "$CMD" "$ONPATH"
-    fi
+    edit_cmd "$CMD" "$ONPATH"
+
+    # if [[ -n "$1" && "-e" == "$1" ]]; then
+    #   edit_cmd "$CMD" "$ONPATH"
+    # fi
   fi
 fi

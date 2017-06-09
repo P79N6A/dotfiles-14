@@ -1,4 +1,18 @@
 #!/bin/bash
+#/ Usage: git pr [<branch>]
+#/ Open the pull request page for <branch>, or the current branch if not
+#/ specified. Lands on the new pull request page when no PR exists yet.
+#/ The branch must already be pushed
+
+# Credit: https://github.com/pengwynn/dotfiles/blob/a549f0e/bin/git-pr
+# Based on script from @rtomayko
+set -e
+
+# usage message
+if [ "$1" == "--help" -o "$1" == '-h' ]; then
+    grep ^#/ "$0" | cut -c4-
+    exit
+fi
 
 
 # Material-Design-Icons
