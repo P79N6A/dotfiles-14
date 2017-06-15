@@ -12,6 +12,6 @@ else
     PERM="$1"
     shift
 
-    chmod $PERM "$FILE" $*
+    sudo chmod -R $PERM "$FILE" $*
   fi
 fi

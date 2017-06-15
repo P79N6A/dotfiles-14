@@ -98,3 +98,7 @@ alias h?="history | grep "
 # For when you are stuck between worlds...
 alias decommit='git svn dcommit'
 alias rebase='git svn rebase'
+
+
+alias gem='sudo gem'
+alias wp-key='curl -G https://api.wordpress.org/secret-key/1.1/salt/'
