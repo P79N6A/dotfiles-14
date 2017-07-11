@@ -14,8 +14,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "\x00\x03clear\x0d"</string>
+		<string>printf "\x03reload_shell\x0d"</string>
 		<string>printf "clear"</string>
 		<string>clear</string>
 		<string>printf '\x03clear'</string>
@@ -880,8 +880,12 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSColorPanelMode</key>
+	<string>1</string>
+	<key>NSColorPickerSlidersDefaults</key>
+	<string>1</string>
 	<key>NSFontPanelAttributes</key>
-	<string>1, 6</string>
+	<string>1, 7</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/bin</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -917,11 +921,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>521 259 684 253 0 0 1280 777 </string>
+	<string>819 199 445 77 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>225 150 796 473 0 0 1280 777 </string>
+	<string>591 218 796 473 0 0 1920 1177 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 37 1280 314 0 0 1280 777 </string>
+	<string>0 38 1920 314 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1735,10 +1741,16 @@
 			<string>/Users/sudprawat</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
+	<key>NoSyncConfirmShellIntegrationCommand</key>
+	<true/>
+	<key>NoSyncConfirmShellIntegrationCommand_selection</key>
+	<integer>0</integer>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>8C102FFA-AF79-4308-A7B9-33098C04CB99</string>
+	<string>5D953684-BFA0-41A0-A3B8-D4684F06FF6C</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1746,7 +1758,7 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>517045068.816872</real>
+	<real>513777310.36099303</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>PasteTabToStringTabStopSize</key>
@@ -1797,13 +1809,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=56</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=87</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-17T16:13:47Z</date>
-	<key>SUSendProfileInfo</key>
-	<false/>
+	<date>2017-07-09T18:18:52Z</date>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>ShowSessionRestoredBanner</key>
@@ -1812,6 +1822,8 @@
 	<integer>1</integer>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1495025408</real>
 	<key>UseLionStyleFullscreen</key>
 	<true/>
 	<key>WindowNumber</key>
