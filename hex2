@@ -1,17 +1,96 @@
 #!/usr/bin/env php
 <?php
-error_reporting(0);
+// error_reporting(0);
 
 array_shift($_SERVER['argv']);
 
 $argv = (isset($_SERVER['argv']) && $_SERVER['argv']) ? $_SERVER['argv'] : array();
-$hex = (isset($argv[0]) && $argv[0]) ? str_replace('#', '', $argv[0]) : '';
+$hex = (isset($argv[0]) && $argv[0]) ? str_replace('#', '', $argv[0]) : '000000';
+$target = (isset($argv[1]) && $argv[1]) ? $argv[1] : 'hsl';
 
-list($h, $l, $s) = hex2hsl($hex);
-echo "$h, $l%, $s%";
-echo "\n";
+$hex = validate_hex($hex);
 
-exit;
+$output = (function ($hex) {
+    if (!$hex) { return; }
+
+    $rgb = (function ($input) {
+        if (!$input) { return; }
+
+        $hex = str_split($input, 2);
+        return array(
+            hexdec($hex[0]),
+            hexdec($hex[1]),
+            hexdec($hex[2]),
+        );
+    })($hex);
+
+    $crgb = (function ($input) {
+        if (!$input) { return; }
+
+        $r = $input[0] / 255;
+        $g = $input[1] / 255;
+        $b = $input[2] / 255;
+
+        return array(
+            $r,
+            $g,
+            $b,
+        );
+    })($rgb);
+
+    $min = min($rgb[0], $rgb[1], $rgb[2]);
+    $max = max($rgb[0], $rgb[1], $rgb[2]);
+    $diff = $max - $min;
+
+    if ($diff == 0) {
+        $h = 0;
+        $s = 0;
+    } else {
+        list($r, $g, $b) = $rgb;
+        switch ($max) {
+            case $r:
+                $h_ = (($g - $b) / $diff);
+                $h_ = ($h_ < 0) ? (6 - fmod(abs($h_), 6)) : fmod(abs($h_), 6);
+                break;
+            case $g:
+                $h_ = (($b - $r) / $diff) + 2;
+                break;
+            case $b:
+                $h_ = (($r - $g) / $diff) + 4;
+                break;
+        }
+
+        $h = 60 * $h_;
+    }
+
+    $s = ($diff / $max) * 100;
+    $l = ($max / 255) * 100;
+
+    $hsl = array(
+        round($h),
+        round($s),
+        round($l),
+    );
+
+    return array(
+        'hex' => $hex,
+        'crgb' => $crgb,
+        'min' => $min,
+        'max' => $max,
+        'diff' => $diff,
+        'rgb' => $rgb,
+        'hsl' => $hsl,
+    );
+})($hex);
+
+$percent = ($target == 'hsl') ? '%' : '';
+$result = $target . '('. $output[$target][0] .', '. $output[$target][1] . $percent .', '. $output[$target][2] . $percent .')';
+
+shell_exec("echo '${result}' | pbcopy -Prefer txt");
+echo $result;
+
+// print_r($output);
+exit("\n");
 
 // Validates hex color code and returns proper value
 // Input: String - Format #ffffff, #fff, ffffff or fff

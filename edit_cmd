@@ -19,7 +19,7 @@ else
   fi
 
   if [[ -e "$FILE" ]]; then
-    open -a "$EDITOR" "$FILE"
+    open -a "Sublime Text" "$FILE"
   else
     echo "Command $FILE not found."
   fi
