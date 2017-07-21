@@ -84,6 +84,12 @@ $output = (function ($hex) {
 })($hex);
 
 $percent = ($target == 'hsl') ? '%' : '';
+
+if ($target == 'hsl') {
+    $percent = '';
+    $output['hsl'] = hex2hsl($hex);
+}
+
 $result = $target . '('. $output[$target][0] .', '. $output[$target][1] . $percent .', '. $output[$target][2] . $percent .')';
 
 shell_exec("echo '${result}' | pbcopy -Prefer txt");
