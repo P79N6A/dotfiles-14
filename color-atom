@@ -16,8 +16,8 @@ $hex = '#' . str_replace('#', '', $argv[0]);
 
 list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
 
-shell_exec("echo $r, $g, $b | pbcopy -Prefer txt");
-echo "$r, $g, $b";
+shell_exec("echo rgb\($r, $g, $b\) | pbcopy -Prefer txt");
+echo "rgb($r, $g, $b)";
 
 // extract($_SERVER);
 // $r = $argv[1];

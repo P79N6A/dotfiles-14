@@ -1,0 +1,3 @@
+#!/bin/bash
+
+(cd ~/.atom && git add . && git commit -m "Update Packages" && git push $*)

@@ -14,8 +14,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>printf "\x00\x03clear\x0d"</string>
 		<string>printf "\x03reload_shell\x0d"</string>
+		<string>printf "\x00\x03clear\x0d"</string>
 		<string>printf "clear"</string>
 		<string>clear</string>
 		<string>printf '\x03clear'</string>
@@ -923,7 +923,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>819 199 445 77 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>591 218 796 473 0 0 1920 1177 </string>
+	<string>591 160 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1813,7 +1813,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-09T18:18:52Z</date>
+	<date>2017-07-20T14:43:38Z</date>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>ShowSessionRestoredBanner</key>
