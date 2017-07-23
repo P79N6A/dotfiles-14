@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+cmd=$(basename $0)
+
+function usage() {
+  cat <<-EndVersion
+  usage: $cmd target_file message
+EndVersion
+
+  complete 1
+}
+
+
+if [[ $# != 2 ]]; then
+  usage
+else
+  status=`git status -s`
+
+  if [[ -z $status ]]; then
+    echo "Nothing to commit, your working tree clean."
+  else
+    file=$1 && shift
+    message=$1 && shift
+
+    git add "${file}"
+    git commit -m "${message}"
+  fi
+fi

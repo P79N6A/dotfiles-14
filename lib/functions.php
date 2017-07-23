@@ -1,4 +1,23 @@
 <?php
+
+function gct_footer () {
+    echo "\n";
+}
+
+function gct_usage ($cmd, $content = '', $argv = array()) {
+    $str = "usage: $cmd $content";
+    echo $str;
+    return;
+}
+function _usage ($cmd, $content = '', $argv = array()) {
+    $result = <<<EOF
+    usage: $cmd $content
+EOF;
+
+    echo $result;
+    return;
+}
+
 function imp($argv) {
   echo implode(" ", $argv);
 }

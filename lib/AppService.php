@@ -16,34 +16,47 @@
 // }
 
 /**
- * Base class of the software.
- */
+* Base class of the software.
+*/
 class App extends BaseController
 {
 
-  function __construct()
-  {
-    # code...
-  }
+    protected $usage;
 
-  public function getArgv() {
-    return parent::getArgv();
-  }
+    function __construct()
+    {
+        # code...
+        $this->usage = (object) array(
+            'cmd' => '',
+            'content' => '',
+            'opts' => array(),
+        );
+    }
 
-  public function getCommand() {
-    return parent::getCommand();
-  }
+    private function registerUsage($cmd, $content = '', $argv = array()) {
+        echo '<pre>'; print_r($this->usage); echo '</pre>';
+    }
 
-  public function argv() {
-    return parent::getArgv();
-  }
+    public function getArgv() {
+        return parent::getArgv();
+    }
 
-  public function cmd() {
-    return parent::getCommand();
-  }
+    public function getCommand() {
+        return parent::getCommand();
+    }
+
+    public function argv() {
+        return parent::getArgv();
+    }
+
+    public function cmd() {
+        return parent::getCommand();
+    }
 }
 
 
 $cmd = App::getCommand();
 $argv = App::getArgv();
 $argc = count($argv);
+
+$usage = App::registerUsage($cmd);
