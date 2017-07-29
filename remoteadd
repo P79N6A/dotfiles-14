@@ -9,4 +9,7 @@ else
   shift
 
   git remote add "$REMOTE" -f "$GIT_URL$REPO" $*
+
+  git config branch.master.remote origin
+  git config branch.master.merge master
 fi
