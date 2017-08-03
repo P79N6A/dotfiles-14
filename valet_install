@@ -1,6 +1,0 @@
-#!/bin/bash
-
-
-## Install Laravel Valet
-composer global require laravel/valet
-valet install

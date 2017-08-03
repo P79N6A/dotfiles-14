@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+params=$*
+
+if [[ $# < 1 ]]; then
+  echo "usage: $(basename $0) - uri [--ssh]"
+  exit 0
+fi
+
+url='https://github.com/'
+uri=$1
+target=''
+shift
+
+if [[ -n $1 && $1 == '--ssh' ]]; then
+  url='git@github.com:'
+else
+  target=$1
+fi
+shift
+
+echo "$url$uri $target $*"

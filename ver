@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -e
-
-if [[ -z "$1" ]]; then
-  echo "Please enter command name."
-else
-  echo "`$1 -v`"
-fi

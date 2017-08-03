@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/bash
 
 ## Colors
 # Background
@@ -35,36 +34,17 @@ export FG_R="\[\e[7m\]"
 export FG_H="\[\e[8m\]"
 
 
-## Symbols
-export SYMBOLS='λ    ⤑    ⤇    ⤵    ⚡    ⚓    ☕    ⨯    ⩐    ⩨    𐄷    𐄹    ˿    ⌘    @    ➾    ⌦    ⌫    ⎈    ⎋    ⏏    ⌗    ⍟    ⍝    ⍣    ⎆    ⌚    ⌛    ⌨    ⏎    ⚙    🜨    🜲    🝙    🝱'
+export BIN=$HOME'/.bin'
+export GIT_URL='git@github.com:'
 
-
-## Additional paths
-export BIN="$HOME/bin"
-export DIR_LOG="$BIN/dir.log"
-export TODO_DIR="$BIN/todo"
-export TODOTXT_CFG_FILE="$TODO_DIR/todo.cfg"
-export TODO_ACTIONS_DIR="$TODO_DIR/addons"
-export MAN="$BIN/manpages"
-export HYPER="${HOME}/.hyper_plugins"
-export HYPER_LOCAL="${HYPER}/local"
-
-
-## github
-export GIT_URL="git@github.com:"
-
-
-## Others
-# export EDITOR="Atom"
-
-
-
-
-# editors
-export EDITOR='Atom'
-export GIT_EDITOR='Atom'
-export SHELL='/bin/bash'
-
-# modules
-export JS_CMD="node"
-export NODE_PATH="/usr/local/lib/node_modules"
+export PATH=~/.bin:/usr/local/opt/ruby@2.3/bin:/usr/local/opt/openssl/bin:~/.composer/vendor/bin:~/.npm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PROMPT_COMMAND='git_check && refresh_profile'
+export TERM="xterm-color"
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+export CLICOLOR="1"
+export LSCOLORS="ExFxCxDxBxegedabagacad"
+# History: don't store duplicates
+export HISTCONTROL=erasedups
+# History: 10,000 entries
+export HISTSIZE=100
