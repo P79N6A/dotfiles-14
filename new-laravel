@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cmd=`basename $0`
+
+project=$1
+shift
+
+target=$1
+shift
+
+if [[ -z $project || -z $target ]]; then
+  echo "usage: $cmd - project target"
+  exit 0
+fi
+
+composer create-project $project $target $* && cd $target && sudo chmod -R 0755 storage bootstrap database

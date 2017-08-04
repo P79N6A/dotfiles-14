@@ -1,5 +1,0 @@
-#!/bin/bash
-
-printf "\x00\x03"
-
-clear

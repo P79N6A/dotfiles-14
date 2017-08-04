@@ -1,115 +1,103 @@
-#!/bin/bash
+#!/usr/bin/bash
 
+alias ~="cd ~"
+alias ls="ls -lhA"
+alias la="ls -1"
+alias cls="clear"
+alias rel="clear && refresh_profile"
+alias subl="open -a \"Sublime Text\""
+alias ato="open -a \"Atom\""
 
-source "$HOME/bin/_alias"
+function hexdec() {
+    local hex=`php -r '
+    $foo = str_replace("#", "", "'$1'");
+    if (strlen($foo) == 2) {
+        $foo = "$foo$foo$foo";
+    } elseif (strlen($foo) == 3) {
+        $foo = "$foo$foo";
+    } else {
+        $foo = "$foo";
+    }
+    $foo = str_split($foo, 2);
+    $result = array();
+    foreach ($foo as $val) {
+        $result[] = hexdec($val);
+    }
+    echo "rgb(". implode(", ", $result) .")";
+    '`
 
-
-# todo-txt completion
-_todotxtcli() {
-  local cur=${COMP_WORDS[COMP_CWORD]}
-  local pre=${COMP_WORDS[COMP_CWORD-1]}
-  local cst="${COMP_WORDS[COMP_CWORD-2]}_${COMP_WORDS[COMP_CWORD-1]}"
-  case $pre in
-    mit )
-      COMPREPLY=( $(compgen -W "today tomorrow monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september october november december" -- $cur) )
-      ;;
-    * )
-      if [[ $cst =~ ^mv_[0-9]+$ ]]; then
-        COMPREPLY=( $(compgen -W "today tomorrow monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september october november december" -- $cur) )
-      else
-        COMPREPLY=( $(compgen -W "mit `eval todo.sh lsprj` `eval todo.sh lsc`" -- $cur) )
-      fi
-      ;;
-  esac
-}
-complete -F _todotxtcli t
-
-
-function usage() {
-  cat <<-EndVersion
-  usage: $*
-EndVersion
-
-  complete 1
+    echo $hex
 }
 
-
-function hyperi() {
-  if [[ $# != 2 ]]; then
-    usage "hyperi user repo"
-  else
-    user=$1
-    shift
-    repo=$1
-    shift
-
-    (clone $user/$repo $HYPER_LOCAL/$repo && cd $HYPER_LOCAL/$repo && npm install)
-  fi
+function refresh_profile() {
+  source ~/.bash_profile
+  source ~/.bashrc
+  source ~/.exrc
 }
 
+function git_check() {
+  local ps=
 
-function restore_dir() {
-  local DIR=`cat "$DIR_LOG"`
-  if [[ -n $DIR ]]; then
-    cd "$DIR"
+  if [[ -e "$PWD/.git" ]]; then
+    local branch=`cat "$PWD/.git/HEAD" | perl -pe "s/ref\: refs\/heads\///g"`
+    local ps=" ${FG_MAGENTA}${branch}${END_SGR} ${FG_GREEN}✓${END_SGR}"
+    local status=`git status -s`
+
+    if [[ -n $status ]]; then
+      local ps=" ${FG_MAGENTA}${branch}${END_SGR} ${FG_RED}x${END_SGR}"
+    fi
   fi
 
-  echo -ne "" &> "$DIR_LOG"
+  export PS1="\n${FG_GREEN}\u${END_SGR} in ${FG_YELLOW}[\w]${END_SGR}${ps}\n${FG_MAGENTA}${FG_B}\$${END_SGR} "
 }
-# Restore previous working directory after reload shell.
-restore_dir
 
-function php_artisan() {
-  php artisan $*
+function atom-push() {
+  (cd ~/.atom && git add . && git commit -m "Update packages" && git push $*)
 }
-function composer_update() {
-  composer update
+function bin-push() {
+  (cd ~/.bin && git add . && git commit -m "Update packages" && git push $*)
 }
-function cd_atom() {
-  cd "$HOME/.atom"
+
+function cdw() {
+  local target=~/www/$*
+  shift
+
+  cd "${target}"
 }
-function cd_bin() {
-  cd "$HOME/bin/$1"
+function cda() {
+  local target=~/.atom/$*
+  shift
+
+  cd "${target}"
 }
-function cd_home() {
-  cd "$HOME/$1"
+function cdb() {
+  local target=~/.bin/$*
+  shift
+
+  cd "${target}"
 }
-function cd_back() {
-  cd - $1
+function cdp() {
+  local target=~/Projects/$*
+  shift
+
+  cd "${target}"
 }
-function cd_www() {
-  cd "$HOME/www/$1"
-}
-function cd_projects() {
-  cd "$HOME/projects/$1"
-}
-function cd_to() {
-  cd "$PWD/$1"
-}
-function cd_up() {
-  cd "../$1"
-}
+
 function take() {
   if [[ -z "$1" ]]; then
-    echo "Please enter directory name."
-  else
-    if [[ ! -e "$1" ]]; then
-      mkdir -p "$1"
-    fi
-
-    cd "$1"
+    echo "usage: xxx - target"
+    return 0
   fi
-}
 
+  local target="`PWD`/$1"
+  shift
 
-function tpwd {
-    tmux rename-session ${PWD##*/}
-}
+  if [[ -e "$target" ]]; then
+    echo "Directory \"$target\" exists"
+    return 0
+  fi
 
+  mkdir "$target" && cd "$target"
 
-
-function psg {
-  FIRST=`echo $1 | sed -e 's/^\(.\).*/\1/'`
-  REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
-  ps aux | grep "[$FIRST]$REST"
+  return 1
 }

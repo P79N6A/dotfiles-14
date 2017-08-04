@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cmd=`basename $0`
+
+package=$1
+shift
+
+if [[ -z $package ]]; then
+  echo "usage: $cmd - package"
+  exit 0
+fi
+
+composer require $package $*

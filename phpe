@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+<?php
+
+function script_end($output = '') {
+    echo $output;
+    echo "\n";
+}
+
+function usage($msg = '') {
+    $result = "\nusage: %s - %s\n\n";
+    echo sprintf($result, CMD, $msg);
+}
+
+$argv = $_SERVER['argv'];
+
+define('CMD', basename($argv[0]));
+
+array_shift($argv);
+
+$argv = trim(implode('/', $argv));
+if (substr($argv, -1) != ';') {
+    $argv .= ';';
+}
+
+if (!$argv || $argv == '') {
+    usage('code...');
+}
+
+exec("php -r '$argv'", $resp);
+foreach ($resp as $line) {
+    $line = trim($line);
+    echo "$line\n";
+}
+
+script_end();
