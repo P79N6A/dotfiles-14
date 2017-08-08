@@ -1,0 +1,23 @@
+#!/bin/bash
+
+cmd=$(basename $0)
+
+function usage() {
+    echo "usage: $cmd - name"
+}
+
+if [[ -z $1 ]]; then
+    usage && exit 0
+fi
+
+file=$BIN/$1
+shift
+
+if [[ ! -e $file ]]; then
+    echo -e "#!/bin/bash\n" 1> "$file"
+    chmod 755 "$file"
+fi
+
+open -a 'Sublime Text' "$file"
+
+complete 1

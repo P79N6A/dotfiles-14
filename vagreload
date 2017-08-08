@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ ! -e ~/Homestead ]]; then
+    echo "Homestead not exists"
+else
+    (cd ~/Homestead && vagrant reload --provision)
+fi
+
+complete 1
