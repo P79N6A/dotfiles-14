@@ -1,0 +1,41 @@
+#!/bin/bash
+
+OF=home-$(date +%Y%m%d).tgz
+
+exit 1
+
+cmd=$(basename $0)
+menu_items=(
+    'Display free disk space'
+    'Display free memory'
+    )
+menu="\n\033[41mPROGRAME MENU\033[0m"
+count=0
+while [[ "x${menu_items[${count}]}" != "x" ]]; do
+    menu="${menu}\n$((${count} + 1)) - ${menu_items[${count}]}"
+    count=$(($count + 1))
+done
+
+function usage() {
+    echo "usage: $cmd - [-n number of lines] target"
+}
+
+function press_enter() {
+# echo -en "\nPress Enter to continue"
+# read
+clear
+}
+
+selection=''
+until [[ $selection = 0 ]]; do
+    clear
+    echo -e "$menu"
+    read selection; echo ""
+
+    case $selection in
+        1 ) clear; (echo "" & df); read; press_enter;;
+2 ) free; press_enter;;
+0 ) exit;;
+* ) echo "Please enter 1, 2, or 0"; press_enter
+esac
+done
