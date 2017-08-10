@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cmd=$(basename $0)
+
+number=$1
+shift
+
+case $number in
+    1) echo "General errors" ;;
+    2) echo "Misuse of shell builtins" ;;
+    126) echo "Command is not an executable" ;;
+    127) echo "Command not found" ;;
+    128) echo "Invalid argument to exit" ;;
+    '128+n') echo "Fatal error signal \"n\"" ;;
+    130) echo "Script terminated" ;;
+    255*) echo "Exit status out of range" ;;
+    0) exit ;;
+esac

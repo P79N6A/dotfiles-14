@@ -1,0 +1,23 @@
+#!/bin/bash
+
+foo &> /dev/null
+        echo rv: $?
+        pwd &> /dev/null
+        echo rv: $?
+
+exit 1
+
+cmd=$(basename $0)
+
+dateset=$1
+shift
+
+dateformat='%Y-%m-%d %H:%M:%S'
+if [[ -n $1 ]]; then
+    dateformat=$1
+    shift
+fi
+
+function usage {
+    echo "usage: ${cmd} - date|time [format - default %Y-%m-%d %H:%M:%S]"
+}
