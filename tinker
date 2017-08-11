@@ -1,0 +1,16 @@
+#!/bin/bash
+
+global=0
+
+case $1 in
+    -g|-G|--global) global=1 ;;
+    *) global=0 ;;
+esac
+
+if [[ $global = 1 ]]; then
+    (cd $WWW/laravel && php artisan tinker)
+else
+    php artisan tinker
+fi
+
+exit 0

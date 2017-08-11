@@ -1,6 +1,7 @@
 #!/bin/bash
 
-OF=home-$(date +%Y%m%d).tgz
+echo -n -e "foo\0027\0027"
+# OF=home-$(date +%Y%m%d).tgz
 
 exit 1
 
