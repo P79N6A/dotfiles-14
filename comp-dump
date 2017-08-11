@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ ! -e "composer.json" && ! -e "composer.lock" ]]; then
+    echo "ERROR: Composer does not exists" && exit 1
+fi
+
+composer dump-autoload && composer update

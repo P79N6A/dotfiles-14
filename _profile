@@ -34,6 +34,7 @@ export FG_R="\[\e[7m\]"
 export FG_H="\[\e[8m\]"
 
 
+export WWW=$HOME'/www'
 export BIN=$HOME'/.bin'
 export GIT_URL='git@github.com:'
 
@@ -51,3 +52,7 @@ export HISTSIZE=100
 
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+## Paths Alias
+# --------------------------------------
+export rgm=$WWW/repro-gallery-master
