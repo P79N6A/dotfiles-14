@@ -7,6 +7,13 @@ alias cls="clear"
 alias rel="clear && refresh_profile"
 alias subl="open -a \"Sublime Text\""
 alias ato="open -a \"Atom\""
+alias apmi='apm install'
+alias apmun='apm uninstall'
+alias npmi='npm install'
+alias npmig='npm -g install'
+alias npmun='npm uninstall'
+alias rename='mv -v'
+alias h?='history | grep'
 
 function hexdec() {
     local hex=`php -r '
