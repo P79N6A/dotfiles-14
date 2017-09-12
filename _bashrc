@@ -14,6 +14,10 @@ alias npmig='npm -g install'
 alias npmun='npm uninstall'
 alias rename='mv -v'
 alias h?='history | grep'
+alias apmse='apm search'
+alias apmvi='apm view'
+alias gitpush='git push'
+alias gitcommit='git add . && git commit'
 
 function hexdec() {
     local hex=`php -r '
