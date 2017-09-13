@@ -17,6 +17,7 @@ alias h?='history | grep'
 alias apmse='apm search'
 alias apmvi='apm view'
 alias gitpush='git push'
+alias gitpull='git pull'
 alias gitcommit='git add . && git commit'
 
 function hexdec() {
