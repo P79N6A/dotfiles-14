@@ -39,7 +39,7 @@ export BIN=$HOME'/.bin'
 export GIT_URL='git@github.com:'
 
 export PATH=~/.bin:/usr/local/lib/node_modules/yslow/bin:/usr/local/opt/ruby@2.3/bin:/usr/local/opt/openssl/bin:~/.composer/vendor/bin:~/.npm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-export PROMPT_COMMAND='git_check && refresh_profile'
+export PROMPT_COMMAND='git_check; refresh_profile; history -a; history -n;'
 export TERM="xterm-color"
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
