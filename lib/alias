@@ -15,3 +15,5 @@ alias gem?="gem search ";
 alias brew?="brew search ";
 alias npm?="npm search ";
 alias rmf="rm -rf"
+alias curdate="date +%Y%m%d";
+alias curtime="date +%H%M";
