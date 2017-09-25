@@ -1,0 +1,65 @@
+#!/bin/bash
+
+if tput setaf 1 &> /dev/null; then
+  # reset colors
+  tput sgr0;
+  bold=$(tput bold);
+  reset=$(tput sgr0);
+  # Solarized colors
+  black=$(tput setaf 0);
+  blue=$(tput setaf 33);
+  cyan=$(tput setaf 37);
+  green=$(tput setaf 64);
+  orange=$(tput setaf 166);
+  purple=$(tput setaf 125);
+  red=$(tput setaf 124);
+  violet=$(tput setaf 61);
+  white=$(tput setaf 15);
+  yellow=$(tput setaf 136);
+else
+  bold='';
+  reset="\e[0m";
+  black="\e[1;30m";
+  blue="\e[1;34m";
+  cyan="\e[1;36m";
+  green="\e[1;32m";
+  orange="\e[1;33m";
+  purple="\e[1;35m";
+  red="\e[1;31m";
+  violet="\e[1;35m";
+  white="\e[1;37m";
+  yellow="\e[1;33m";
+fi
+
+
+# Background
+export BG_DEF="\e[39m"
+export BG_BLACK="\e[40m"
+export BG_RED="\e[41m"
+export BG_GREEN="\e[42m"
+export BG_YELLOW="\e[43m"
+export BG_BLUE="\e[44m"
+export BG_MAGENTA="\e[45m"
+export BG_CYAN="\e[46m"
+export BG_WHITE="\e[47m"
+# Foreground
+export FG_DEF="\e[39m"
+export FG_BLACK="\e[30m"
+export FG_RED="\e[31m"
+export FG_GREEN="\e[32m"
+export FG_YELLOW="\e[33m"
+export FG_BLUE="\e[34m"
+export FG_MAGENTA="\e[35m"
+export FG_CYAN="\e[36m"
+export FG_WHITE="\e[37m"
+# Others
+export BG_RESET="\e[49m"
+export FG_RESET="\e[39m"
+export END_SGR="\e[0m"
+export END_SGRU="\e[0m"
+export FG_B="\e[1m"
+export FG_D="\e[2m"
+export FG_U="\e[4m"
+export FG_BL="\e[5m"
+export FG_R="\e[7m"
+export FG_H="\e[8m"

@@ -1,0 +1,68 @@
+#!/bin/bash
+
+take() {
+  if [[ $# = "0" || $# > "2" ]]; then
+    __return "
+    command: `basename $0`
+    usage: [-q] directory
+  "; exit 1;
+  fi
+
+  local is_cd="";
+  local target="";
+  for i in $*; do
+    if [[ $i = "-q" ]]; then
+      is_cd="$i";
+    else
+      target="$i";
+    fi
+  done
+
+  if [[ -e "$target" ]]; then
+    __return "
+    ERROR: This directory \"$target\" already exists
+  "; exit 1;
+  else
+    mkdir -p "$target";
+    
+    if [[ $is_cd = "-q" ]]; then
+      complete 0;
+    else
+      cd "$target";
+    fi
+  fi
+}
+
+
+create() {
+  if [[ $# = "0" || $# > "2" ]]; then
+    __return "
+    command: `basename $0`
+    usage: [-q] file
+  "; exit 1;
+  fi
+
+  local is_open="";
+  local target="";
+  for i in $*; do
+    if [[ $i = "-q" ]]; then
+      is_open="$i";
+    else
+      target="$i";
+    fi
+  done
+
+  if [[ -e "$target" ]]; then
+    __return "
+    ERROR: This file \"$target\" already exists
+  "; exit 1;
+  else
+    echo '' > "$target";
+    
+    if [[ $is_open = "-q" ]]; then
+      complete 0;
+    else
+      open -a "Sublime Text" "$target";
+    fi
+  fi
+}

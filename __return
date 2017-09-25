@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [[ '0' = $# ]]; then
+  echo -e "
+  command: `basename $0`
+  usage: message [exit 0|1]
+"
+fi
+
+__exit='0'
+__content=''
+
+if [[ -n $1 ]]; then
+  __content=$1; shift
+fi
+
+echo -e "${__content}"
+
+if [[ -n $1 && '1' = $1 ]]; then
+  exit 1
+else
+  exit 0
+fi

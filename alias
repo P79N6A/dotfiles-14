@@ -1,0 +1,23 @@
+#!/bin/bash
+
+alias .="cd";
+alias ..="cd ../";
+alias ...="cd ../../";
+alias ls="ls -lAFh ";
+alias la="ls -1 ";
+alias h?="history | grep ";
+alias c.="clear ";
+alias r.="__reload ";
+alias cmdv="command -v ";
+alias gem="sudo gem ";
+alias composer?="composer search ";
+alias gem?="gem search ";
+alias brew?="brew search ";
+alias npm?="npm search ";
+alias rmf="rm -rf"
+
+alias projects.="$HOME/Projects";
+alias atom.="$HOME/.atom";
+alias dotfiles.="$HOME/.dotfiles";
+alias www.="$HOME/www";
+alias home.="$HOME";

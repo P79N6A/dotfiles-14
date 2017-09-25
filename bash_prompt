@@ -1,0 +1,121 @@
+#!/bin/bash
+
+icons=(
+  "" #0 +
+  "" #1 !
+  "" #2 ?
+  "" #3 $
+  "" #4 user
+  "" #5 host
+  "" #6 directory
+  "" #7 begin_github
+  "" #8 end_github
+  "" #9 command_1
+  "" #10 command_2
+);
+
+
+function prompt_git() {
+  local s='';
+  local branchName='';
+
+  # Check if the current directory is in a Git repository.
+  if [ $(git rev-parse --is-inside-work-tree &>/dev/null; echo "${?}") == '0' ]; then
+
+    # check if the current directory is in .git before running git checks
+    if [ "$(git rev-parse --is-inside-git-dir 2> /dev/null)" == 'false' ]; then
+
+      # Ensure the index is up to date.
+      git update-index --really-refresh -q &>/dev/null;
+
+      # Check for uncommitted changes in the index.
+      if ! $(git diff --quiet --ignore-submodules --cached); then
+        # Get all icons
+        uncommitted="${FG_GREEN}${icons[0]}${END_SGR} ";
+        s+="${uncommitted}";
+      fi
+
+      # Check for unstaged changes.
+      if ! $(git diff-files --quiet --ignore-submodules --); then
+        unstaged="${FG_GREEN}${icons[1]}${END_SGR} ";
+        s+="${unstaged}";
+      fi
+
+      # Check for untracked files.
+      if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+        untracked="${FG_GREEN}${icons[2]}${END_SGR} ";
+        s+="${untracked}";
+      fi
+
+      # Check for stashed files.
+      if $(git rev-parse --verify refs/stash &>/dev/null); then
+        stashed="${FG_GREEN}${icons[3]}${END_SGR} ";
+        s+="${stashed}";
+      fi
+    fi
+
+    # Get the short symbolic ref.
+    # If HEAD isn’t a symbolic ref, get the short SHA for the latest commit
+    # Otherwise, just give up.
+    branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
+    git rev-parse --short HEAD 2> /dev/null || \
+    echo '(unknown)')";
+
+    [ -n "${s}" ] && s=" ${s}";
+
+    github_status="${s} ";
+    github_branch="${1}${branchName}${2}";
+
+    # echo -e "${1}${branchName}${2}";
+    # echo -e "${1}${branchName}${2}${s}";
+  else
+    # echo " ";
+    return;
+  fi
+}
+
+__prompt() {
+  local icn_user="";
+  local icn_at="";
+  local icn_host="";
+  local icn_host_ssh="";
+  local icn_path="";
+  local icn_ps1="";
+  local icn_ps2="";
+  local icn_star="";
+  local icn_lighting=" ";
+  local icn_github=" ";
+  local icn_uncommitted=""; # +
+  local icn_unstaged=""; # !
+  local icn_untracked=""; # ?
+  local icn_stashed=""; # $
+
+  if [[ -n $icn_user ]]; then
+    user="${FG_MAGENTA}${icn_user}${END_SGR}";
+    user+=" ${FG_MAGENTA}${FG_B}\u${END_SGR}${END_SGR}";
+  fi
+
+  if [[ -n $icn_host ]]; then
+    host=" ${FG_BLUE}${icn_host}${END_SGR} \h";
+  fi
+
+  if [[ -n $icn_path ]]; then
+    path=" [${FG_BLUE}${icn_path}${END_SGR} \w]";
+  fi
+}
+
+__prompt;
+# export PROMPT_COMMAND="";
+
+
+# prompt_git "${begin_github}" "${end_github}";
+# repository="\$(prompt_git \"${begin_github}\" \"${end_github}\")";
+
+# Set the terminal title and prompt.
+PS1="${user}${host}${path}";
+PS1+="\n";
+PS1+="${icn_ps1} ";
+export PS1;
+
+PS2="${icn_ps2} ";
+export PS2;

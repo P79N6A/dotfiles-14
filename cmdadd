@@ -1,0 +1,34 @@
+#!/bin/bash
+
+if [[ '0' = $# ]]; then
+  __return "
+  command: `basename $0`
+  usage: name [target]
+"; exit 1;
+fi
+
+__name="";
+__target="";
+
+if [[ -n $1 ]]; then
+  __name="$1"; shift
+
+  if [[ -n $1 ]]; then
+    __target="$1"; shift
+  else
+    __target="$__DOTFILES_PATH";
+  fi
+
+  if [[ -e $__target/$__name ]]; then
+    __return "
+  ERROR: This command \"$__name\" already exists
+"; exit 1;
+  else
+    echo '#!/bin/bash' > "$__target/$__name";
+
+    chmod -R 755 "$__target/$__name";
+    open -a "Sublime Text" "$__target/$__name";
+  fi
+fi
+
+complete

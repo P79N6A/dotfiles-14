@@ -1,0 +1,562 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"php",
+				"php\tPHP Tag"
+			],
+			[
+				"USER",
+				"USER_STYLE"
+			],
+			[
+				"USR",
+				"USER_STYLE"
+			],
+			[
+				"icn",
+				"icn_command"
+			],
+			[
+				"icn_",
+				"icn_github"
+			],
+			[
+				"icn_com",
+				"icn_uncomitted"
+			],
+			[
+				"fget",
+				"fgets"
+			],
+			[
+				"p",
+				"php"
+			],
+			[
+				"for",
+				"forin\tfor … in … done"
+			],
+			[
+				"sy",
+				"syntax--name"
+			],
+			[
+				"text",
+				"text-color"
+			],
+			[
+				"lig",
+				" lightness(color)"
+			],
+			[
+				"sa",
+				" saturation(color)"
+			],
+			[
+				"color",
+				"spin(color, 10)"
+			],
+			[
+				"syntax-b",
+				"syntax-brightness"
+			],
+			[
+				"syntax-",
+				"syntax-saturation"
+			],
+			[
+				"syntax",
+				"syntax-hue"
+			],
+			[
+				"syn",
+				"syntax--type"
+			],
+			[
+				"syntax--s",
+				"syntax--string"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "packres",
+		"selected_items":
+		[
+			[
+				"packres",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"skin",
+				"UI: Select Skin"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"snippet",
+				"Snippet: <?php … ?>"
+			],
+			[
+				"Snippet: php",
+				"Snippet: php_tag"
+			],
+			[
+				"text",
+				"Snippet: Cartthrob plain text email"
+			],
+			[
+				"folder",
+				"Project: Add Folder"
+			],
+			[
+				"file",
+				"Preferences: File Manager Settings"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Create Package File"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			]
+		],
+		"width": 544.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/sudprawat/.dotfiles"
+	],
+	"file_history":
+	[
+		"/Users/sudprawat/.dotfiles/bash_prompt",
+		"/Users/sudprawat/.dotfiles/ip",
+		"/Users/sudprawat/www/index.php",
+		"/Users/sudprawat/Google Drive/Fineart Drive/fine art.txt",
+		"/Users/sudprawat/.dotfiles/bash_profile",
+		"/Users/sudprawat/.dotfiles/bash_options",
+		"/Users/sudprawat/.dotfiles/bash_colors",
+		"/Users/sudprawat/.dotfiles/bash_autocomplete",
+		"/Users/sudprawat/.dotfiles/alias",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Installed Packages/Theme - Spacegray.sublime-package",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/snippets/php/php.sublime-snippet",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/ExpressionEngine Add-On Builder/Main.sublime-menu",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/ExpressionEngine Add-On Builder/Default (OSX).sublime-keymap",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/ExpressionEngine Add-On Builder/Default.sublime-commands",
+		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/colors.less",
+		"/Users/sudprawat/.dotfiles/functions",
+		"/Users/sudprawat/.dotfiles/bashrc",
+		"/Users/sudprawat/Dropbox/control.txt",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/SnippetMaker.sublime-settings",
+		"/Volumes/Adobe Zii 2.2.1  for Adobe CC15 CC17/Help.txt",
+		"/Users/sudprawat/Downloads/sslaccesslog_farangmart.co.th_9_24_2017",
+		"/Users/sudprawat/.iterm2_shell_integration.bash",
+		"/Users/sudprawat/.profile",
+		"/Users/sudprawat/.bashrc",
+		"/Users/sudprawat/.bash_profile",
+		"/Users/sudprawat/.bash-powerline.sh",
+		"/Volumes/Datas/Desktop/dotfiles/_bashrc",
+		"/Volumes/Datas/Desktop/dotfiles/_bash_profile",
+		"/Volumes/Datas/Desktop/dotfiles/last_commit",
+		"/Volumes/Datas/Desktop/dotfiles/lgrep",
+		"/Volumes/Datas/Desktop/dotfiles/log",
+		"/Volumes/Datas/Desktop/dotfiles/manpage",
+		"/Volumes/Datas/Desktop/dotfiles/mklink",
+		"/Volumes/Datas/Desktop/dotfiles/mod",
+		"/Volumes/Datas/Desktop/dotfiles/mount",
+		"/Volumes/Datas/Desktop/dotfiles/new_file",
+		"/Volumes/Datas/Desktop/dotfiles/new_alias",
+		"/Volumes/Datas/Desktop/dotfiles/percentage",
+		"/Volumes/Datas/Desktop/dotfiles/print_env",
+		"/Volumes/Datas/Desktop/dotfiles/pull",
+		"/Volumes/Datas/Desktop/dotfiles/push",
+		"/Volumes/Datas/Desktop/dotfiles/pushups",
+		"/Volumes/Datas/Desktop/dotfiles/reflog",
+		"/Volumes/Datas/Desktop/dotfiles/refno.log",
+		"/Volumes/Datas/Desktop/dotfiles/reload_shell",
+		"/Volumes/Datas/Desktop/dotfiles/remoteadd",
+		"/Volumes/Datas/Desktop/dotfiles/reset_author",
+		"/Volumes/Datas/Desktop/dotfiles/rmd",
+		"/Volumes/Datas/Desktop/dotfiles/runphp",
+		"/Volumes/Datas/Desktop/dotfiles/save_as_dialog",
+		"/Volumes/Datas/Desktop/dotfiles/scale10",
+		"/Volumes/Datas/Desktop/dotfiles/scale3",
+		"/Volumes/Datas/Desktop/dotfiles/scale9",
+		"/Volumes/Datas/Desktop/dotfiles/shell_escape",
+		"/Volumes/Datas/Desktop/dotfiles/showfiles",
+		"/Volumes/Datas/Desktop/dotfiles/ssh_me",
+		"/Volumes/Datas/Desktop/dotfiles/sshgen",
+		"/Volumes/Datas/Desktop/dotfiles/status",
+		"/Volumes/Datas/Desktop/dotfiles/stdout",
+		"/Volumes/Datas/Desktop/dotfiles/stdout.log",
+		"/Volumes/Datas/Desktop/dotfiles/success",
+		"/Volumes/Datas/Desktop/dotfiles/system_install",
+		"/Volumes/Datas/Desktop/dotfiles/take",
+		"/Volumes/Datas/Desktop/dotfiles/takedir",
+		"/Volumes/Datas/Desktop/dotfiles/timeago",
+		"/Volumes/Datas/Desktop/dotfiles/todec",
+		"/Volumes/Datas/Desktop/dotfiles/tohex",
+		"/Volumes/Datas/Desktop/dotfiles/hex2",
+		"/Users/sudprawat/.vimrc",
+		"/Users/sudprawat/.dotfiles/cmdadd",
+		"/Users/sudprawat/.dotfiles/vimrc",
+		"/Users/sudprawat/Downloads/colortest",
+		"/Users/sudprawat/.atom/packages/tool-bar/iconsets/icomoon/icomoon.css",
+		"/Users/sudprawat/.dotfiles/sym",
+		"/Volumes/Datas/Desktop/dotfiles/_alias",
+		"/Users/sudprawat/.dotfiles/brew_installer",
+		"/Applications/Spectacle.app/Contents/Resources/en.lproj/Localizable.strings",
+		"/Users/sudprawat/www/debug/index.php",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/php/php_tag.sublime-snippet",
+		"/Users/sudprawat/www/mr-travl/d4/services/authen.php",
+		"/Users/sudprawat/.dotfiles/cmdi",
+		"/Users/sudprawat/.dotfiles/exrc",
+		"/Users/sudprawat/Projects/foo.log",
+		"/Users/sudprawat/.dotfiles/localip",
+		"/Users/sudprawat/.bash_history",
+		"/Users/sudprawat/.exrc",
+		"/Users/sudprawat/.gitconfig",
+		"/Users/sudprawat/.viminfo",
+		"/Applications/Spectacle.app/Contents/Resources/Defaults.plist",
+		"/Users/sudprawat/Projects/Carthage/Cartfile",
+		"/Users/sudprawat/.dotfiles/__mkdir",
+		"/Users/sudprawat/.dotfiles/take",
+		"/Applications/Spectacle.app/Contents/Resources/en.lproj/InfoPlist.strings",
+		"/Applications/Spectacle.app/Contents/Resources/en.lproj/Credits.rtf",
+		"/Applications/Spectacle.app/Contents/Resources/Base.lproj/SpectaclePreferencesWindow.nib",
+		"/Applications/Spectacle.app/Contents/Resources/Base.lproj/Spectacle.nib",
+		"/Applications/Spectacle.app/Contents/MacOS/Spectacle",
+		"/Applications/Spectacle.app/Contents/_CodeSignature/CodeResources",
+		"/Applications/Spectacle.app/Contents/Resources/Assets.car",
+		"/Applications/Spectacle.app/Contents/PkgInfo",
+		"/Users/sudprawat/.dotfiles/__reload",
+		"/Users/sudprawat/.dotfiles/__return",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/LinkOpener/linkopener.sublime-settings",
+		"/Users/sudprawat/.bin/ip",
+		"/Users/sudprawat/.bin/cmdi",
+		"/Users/sudprawat/.bin/brew_installer",
+		"/Users/sudprawat/.bin/__return",
+		"/Users/sudprawat/.bin/__reload",
+		"/Users/sudprawat/.bin/ips",
+		"/Users/sudprawat/.bin/localip",
+		"/Users/sudprawat/.bin/myip",
+		"/Users/sudprawat/.bin/sym",
+		"/Users/sudprawat/.bin/symlink",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/FileBrowser/Default.sublime-keymap",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/FileBrowser/Default (OSX).sublime-keymap",
+		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/editor.less",
+		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/syntax-variables.less",
+		"/Users/sudprawat/.atom/packages/goldfish-ui/styles/editor.less",
+		"/Users/sudprawat/.atom/packages/goldfish-ui/styles/atom.less",
+		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/syntax/_base.less",
+		"/Users/sudprawat/.atom/packages/goldfish-syntax/index.less",
+		"/Users/sudprawat/.atom/packages/goldfish-ui/styles/ui-variables.less",
+		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/syntax-variables-bak1.less",
+		"/Users/sudprawat/.atom/packages/dash-syntax/styles/syntax-variables.less",
+		"/Users/sudprawat/.atom/packages/dash-ui/styles/ui-variables.less",
+		"/Users/sudprawat/.atom/packages/dash-syntax/styles/colors.less",
+		"/Users/sudprawat/.atom/packages/dash-syntax/styles/base.less"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+			"",
+			".bin"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"reproduction-gallery",
+			"aia",
+			"uncommitted",
+			"unstaged",
+			"untracked",
+			"github_branch",
+			"\\\"",
+			"github_status+",
+			"s+=",
+			"github_status",
+			"=\"\";",
+			"HOST_STYLE",
+			"USER_STYLE",
+			"FG_GREEN",
+			"USER_STYLE",
+			"icn_",
+			"repository",
+			"REPOSITORY",
+			"DIRECTORY",
+			"HOST",
+			"USER",
+			"icn_host",
+			"icn_user",
+			"icn_directory",
+			"prompt_git",
+			"github",
+			"\\\"",
+			"icn_directory",
+			"host",
+			"user",
+			"icn_host",
+			"icn_user",
+			"FG_GREEN",
+			"${END_SGR}\";",
+			"${FG_B}",
+			"HOST_STYLE",
+			"erasedups",
+			"icn_unstaged",
+			"icn_uncommitted",
+			"icn_unstaged",
+			"icn_uncommitted",
+			"END_SGR",
+			"icn_unstaged",
+			"FG_B",
+			"FG_GREEN",
+			"icn_command_1",
+			"icn_github",
+			"icn_command_1",
+			"icn_github",
+			"local",
+			"FG_WHITE",
+			"whoami",
+			"WORKING_PATH",
+			"yellow",
+			"${FG_B}",
+			"yellow",
+			"hostStyle",
+			"purple",
+			"red",
+			"userStyle",
+			"END_SGR",
+			"FG_B",
+			"FG_WHITE",
+			"white",
+			"violet",
+			"blue",
+			"purple",
+			"green",
+			"violet",
+			"purple",
+			"red",
+			"blue",
+			"violet",
+			"green",
+			"1000000",
+			"handle",
+			"hello",
+			"condition",
+			"Exception",
+			"__target",
+			"is_cd",
+			"__target",
+			"__cd",
+			"__target",
+			"gmail",
+			"tonymillion",
+			"3.1.0",
+			"Reachability",
+			"directory",
+			"take",
+			"www",
+			"atom",
+			"www",
+			"projects",
+			"__GEM_PATH",
+			"brew",
+			"bash_autocomplete",
+			"bash_colors",
+			"bash_autocomplete",
+			"newline",
+			"HOME",
+			"exrc",
+			"bash_profile",
+			"alias",
+			"Refresh",
+			"yellow",
+			"HISTSIZE",
+			"'",
+			"__reload",
+			"1000",
+			"erasedups",
+			"Reload",
+			"bash_profile",
+			"usr",
+			"profile",
+			"HOME",
+			"bashrc",
+			"__target",
+			"__source",
+			"\"",
+			"__target",
+			"__",
+			"complete",
+			"exit",
+			"__usage",
+			"usage",
+			"__usage",
+			"usage"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"nopphasinara",
+			"1.0.0",
+			"GoldfishCarthage"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Default.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 231.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
