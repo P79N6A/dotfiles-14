@@ -27,7 +27,19 @@ export __SSH="";
 
 ## Load the shell dotfiles, and then some:
 # vimrc,bash_colors,bash_options,bash_prompt,functions,alias,bashrc,exrc,bash_autocomplete
-source_files=("options");
+sources=("alias");
+
+for file in $sources; do
+  file="$__LIB_PATH/$file";
+
+  if [[ -r "$file" && -f "$file" ]]; then
+    source "$file";
+  fi
+
+  # if [[ -r "$file" && -f "$file" ]]; then
+  #   source "$file";
+  # fi
+done
 
 # for file in $__DOTFILES_PATH/{vimrc,bash_colors,bash_options,bash_prompt,functions,alias,bashrc,exrc,bash_autocomplete}; do
 #   [ -r "$file" ] && [ -f "$file" ] && source "$file";
