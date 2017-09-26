@@ -1,0 +1,65 @@
+#!/bin/bash
+
+if [[ $# = "0" ]]; then
+  __return "
+  command: `basename $0`
+  usage: name [target]
+"; exit 1;
+fi
+
+isOpenFile="";
+if [[ `echo "${[($# - 1)]}"` = "-o" ]]; then
+  isOpenFile="1";
+fi
+
+argv=();
+for value in $*; do
+  argv+=($value);
+done
+
+file='';
+target='';
+
+echo "${argv[0]}";
+
+# return
+echo 'success: '${argv[*]};
+exit;
+
+__name="";
+__target="";
+isOpenFile="";
+argv=($*);
+for (( i=0; i <= $#; i++ )) do
+  # echo "$i: ${argv:$i:1}";
+  echo "${argv[${i}]}";
+  # echo "${argv[${i}]}";
+  # [[ $item = "-o" ]] && isOpenFile="1" && break;
+done
+echo "${#}: ${argv}";
+echo "success";
+
+exit;
+
+if [[ -n $1 ]]; then
+  __name="$1"; shift
+
+  if [[ -n $1 ]]; then
+    __target="$1"; shift
+  else
+    __target="$__DOTFILES_PATH";
+  fi
+
+  if [[ -e $__target/$__name ]]; then
+    __return "
+  ERROR: This command \"$__name\" already exists
+"; exit 1;
+  else
+    echo '#!/bin/bash' > "$__target/$__name";
+
+    chmod -R 755 "$__target/$__name";
+    open -a "Sublime Text" "$__target/$__name";
+  fi
+fi
+
+complete

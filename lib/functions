@@ -24,7 +24,7 @@ take() {
   "; exit 1;
   else
     mkdir -p "$target";
-    
+
     if [[ $is_cd = "-q" ]]; then
       complete 0;
     else
@@ -58,11 +58,15 @@ create() {
   "; exit 1;
   else
     echo '' > "$target";
-    
+
     if [[ $is_open = "-q" ]]; then
       complete 0;
     else
       open -a "Sublime Text" "$target";
     fi
   fi
+}
+
+vag() {
+  (cd "$HOME/Homestead" && vagrant $*);
 }

@@ -1,47 +1,33 @@
 #!/bin/bash
 
 ## iTerm2 script
-test -e "${HOME}/.iterm2_shell_integration.bash";
-source "${HOME}/.iterm2_shell_integration.bash";
+test -e "$HOME/.iterm2_shell_integration.bash";
+source "$HOME/.iterm2_shell_integration.bash";
 
 ## Setup common variables
-export __DOTFILES_PATH="${HOME}/.dotfiles:${HOME}/.dotfiles/bin";
-export __LIB_PATH="${HOME}/.dotfiles/lib";
-export __COMPOSER_BIN_PATH="${HOME}/.composer/vendor/bin";
+export __DOTFILES_PATH="$HOME/.dotfiles";
+export __LIB_PATH="$__DOTFILES_PATH/lib";
+export __COMPOSER_BIN_PATH="$HOME/.composer/vendor/bin";
 export __OTHERS_PATH="/usr/local/Cellar:/usr/local/sbin";
-export __GEM_PATH="${HOME}/.gem";
+export __GEM_PATH="$HOME/.gem";
 export GEM_HOME="$__GEM_PATH";
 
+## Change default settings
+export HISTCONTROL='ignoreboth';
+export HISTFILE="$__DOTFILES_PATH/bash_history";
+export HISTSIZE="1000";
+
 ## Set up all common paths
-export PATH="${__DOTFILES_PATH}:${__COMPOSER_BIN_PATH}:${__GEM_PATH}:${__OTHERS_PATH}:${PATH}";
-
-## Highlight the user name when logged in as root.
-export __USER_LEVEL="normal";
-[[ "${USER}" == "root" ]] && __USER_LEVEL="root";
-
-## Highlight the hostname when connected via SSH.
-export __SSH="";
-[[ "${SSH_TTY}" ]] && __SSH="1";
-
-##
+export PATH="$__DOTFILES_PATH:$__DOTFILES_PATH/bin:$__COMPOSER_BIN_PATH:$__GEM_PATH:$__OTHERS_PATH:$PATH";
 
 ## Load the shell dotfiles, and then some:
 # vimrc,bash_colors,bash_options,bash_prompt,functions,alias,bashrc,exrc,bash_autocomplete
-sources=("alias");
-
+sources=("options colors prompt alias functions");
 for file in $sources; do
   file="$__LIB_PATH/$file";
 
   if [[ -r "$file" && -f "$file" ]]; then
     source "$file";
   fi
-
-  # if [[ -r "$file" && -f "$file" ]]; then
-  #   source "$file";
-  # fi
 done
-
-# for file in $__DOTFILES_PATH/{vimrc,bash_colors,bash_options,bash_prompt,functions,alias,bashrc,exrc,bash_autocomplete}; do
-#   [ -r "$file" ] && [ -f "$file" ] && source "$file";
-# done;
-# unset file;
+unset file;

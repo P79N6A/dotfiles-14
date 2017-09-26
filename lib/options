@@ -1,1 +1,7 @@
 #!/bin/bash
+
+## Check window sizes LINES, COLUMNS
+# shopt -s checkwinsize;
+## Append command history rather than overwrite when exist
+# shopt -s histappend;
+# shopt -s nocaseglob;
