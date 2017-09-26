@@ -8,7 +8,8 @@ source "$HOME/.iterm2_shell_integration.bash";
 export __DOTFILES_PATH="$HOME/.dotfiles";
 export __LIB_PATH="$__DOTFILES_PATH/lib";
 export __COMPOSER_BIN_PATH="$HOME/.composer/vendor/bin";
-export __OTHERS_PATH="/usr/local/Cellar:/usr/local/sbin";
+export __CELLAR_PATH="/usr/local/Cellar";
+export __OTHERS_PATH="$__CELLAR_PATH:/usr/local/sbin";
 export __GEM_PATH="$HOME/.gem";
 export GEM_HOME="$__GEM_PATH";
 
