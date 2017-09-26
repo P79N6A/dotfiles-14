@@ -23,10 +23,62 @@ git_branch() {
   echo "${git_status}";
 }
 
+# Get the status of the working tree
+function git_prompt_status() {
+  local INDEX STATUS
+  INDEX="\$(git status --porcelain -b 2> /dev/null)";
+  STATUS="";
+  if [[ `echo "$INDEX" | command grep -E '^\?\? ' &> /dev/null` ]]; then
+    STATUS="UNTRACKED$STATUS";
+  fi
+  if [[ `echo "$INDEX" | grep '^A  ' &> /dev/null` ]]; then
+    STATUS="ADDED$STATUS";
+  elif [[ `echo "$INDEX" | grep '^M  ' &> /dev/null` ]]; then
+    STATUS="ADDED$STATUS"
+  fi
+  if [[ `echo "$INDEX" | grep '^ M ' &> /dev/null` ]]; then
+    STATUS="MODIFIED$STATUS"
+  elif [[ `echo "$INDEX" | grep '^AM ' &> /dev/null` ]]; then
+    STATUS="MODIFIED$STATUS"
+  elif [[ `echo "$INDEX" | grep '^ T ' &> /dev/null` ]]; then
+    STATUS="MODIFIED$STATUS"
+  fi
+  if [[ `echo "$INDEX" | grep '^R  ' &> /dev/null` ]]; then
+    STATUS="RENAMED$STATUS"
+  fi
+  if [[ `echo "$INDEX" | grep '^ D ' &> /dev/null` ]]; then
+    STATUS="DELETED$STATUS"
+  elif [[ `echo "$INDEX" | grep '^D  ' &> /dev/null` ]]; then
+    STATUS="DELETED$STATUS"
+  elif [[ `echo "$INDEX" | grep '^AD ' &> /dev/null` ]]; then
+    STATUS="DELETED$STATUS"
+  fi
+  if $(command git rev-parse --verify refs/stash >/dev/null 2>&1); then
+    STATUS="STASHED$STATUS"
+  fi
+  if [[ `echo "$INDEX" | grep '^UU ' &> /dev/null` ]]; then
+    STATUS="UNMERGED$STATUS"
+  fi
+  if [[ `echo "$INDEX" | grep '^## [^ ]\+ .*ahead' &> /dev/null` ]]; then
+    STATUS="AHEAD$STATUS"
+  fi
+  if [[ `echo "$INDEX" | grep '^## [^ ]\+ .*behind' &> /dev/null` ]]; then
+    STATUS="BEHIND$STATUS"
+  fi
+  if [[ `echo "$INDEX" | grep '^## [^ ]\+ .*diverged' &> /dev/null` ]]; then
+    STATUS="DIVERGED$STATUS"
+  fi
+
+  echo $STATUS;
+}
+
+PROMPT_COMMAND="git_prompt_status";
+export PROMPT_COMMAND;
+
 PS1="\u \h [\w] \$(git_branch) ${git_status}";
 PS1+="\n";
 PS1+="$ ";
-PS2="->";
-
 export PS1;
+
+PS2="->";
 export PS2;
