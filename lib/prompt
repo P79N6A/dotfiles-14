@@ -35,13 +35,19 @@ prompt() {
   if [[ `echo "$index" | grep -E '^\?\? '` ]]; then
     status+='?'
   fi
-  ## uncommitted
+  if [[ `echo "$index" | grep -E '^[A-Z]  '` ]]; then
+    status+='uncommitted'
+  fi
+  if [[ `echo "$index" | grep -E '^ [A-Z] |[A-Z][A-Z] '` ]]; then
+    status+='unstaged'
+  fi
   if [[ `echo "$index" | grep '^A  '` ]]; then
     status+='A'
   elif [[ `echo "$index" | grep '^M  '` ]]; then
-    status+='A'
+    status+='+'
+  elif [[ `echo "$index" | grep '^MM '` ]]; then
+    status+='!'
   fi
-  ## unstaged
   if [[ `echo "$index" | grep '^ M '` ]]; then
     status+='M'
   elif [[ `echo "$index" | grep '^AM '` ]]; then
@@ -61,6 +67,10 @@ prompt() {
   fi
   if [[ `git rev-parse --verify refs/stash >/dev/null 2>&1` ]]; then
     status+='$'
+  fi
+
+  if [[ $status ]]; then
+    status+=' (unstaged)'
   fi
 
   prompt_update;
