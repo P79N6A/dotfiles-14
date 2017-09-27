@@ -24,9 +24,7 @@ prompt() {
   ref="$(git symbolic-ref HEAD 2> /dev/null)"
   if [[ $? != 0 ]]; then
     ref="$(git rev-parse --short HEAD 2> /dev/null)"
-    if [[ $? != 0 ]]; then
-      ref='';
-    fi
+    [[ $? != 0 ]] && ref=''
   fi
 
   branch="$(echo $ref | grep -e [^\/]*$ -io)"
