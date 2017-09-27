@@ -177,6 +177,29 @@ function git_prompt_status() {
     STATUS="$ZSH_THEME_GIT_PROMPT_DIVERGED$STATUS"
   fi
   echo $STATUS
+
+  # if [[ `echo "$index" | grep '^A  '` ]]; then
+  #   status+='+'
+  # elif [[ `echo "$index" | grep '^M  '` ]]; then
+  #   status+='+'
+  # fi
+  # if [[ `echo "$index" | grep '^ M '` ]]; then
+  #   status+='!'
+  # elif [[ `echo "$index" | grep '^AM '` ]]; then
+  #   status+='!'
+  # elif [[ `echo "$index" | grep '^ T '` ]]; then
+  #   status+='!'
+  # fi
+  # if [[ `echo "$index" | grep '^R  '` ]]; then
+  #   status+='-'
+  # fi
+  # if [[ `echo "$index" | grep '^ D '` ]]; then
+  #   status+='x'
+  # elif [[ `echo "$index" | grep '^D  '` ]]; then
+  #   status+='x'
+  # elif [[ `echo "$index" | grep '^AD '` ]]; then
+  #   status+='x'
+  # fi
 }
 
 # Compares the provided version of git to the version installed and on path
