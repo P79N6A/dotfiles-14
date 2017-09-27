@@ -14,6 +14,11 @@ export __GEM_PATH="$HOME/.gem";
 export GEM_HOME="$__GEM_PATH";
 
 ## Change default settings
+export TERM="xterm-256color"
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+export CLICOLOR="1"
+export LSCOLORS="ExFxCxDxBxegedabagacad"
 export HISTCONTROL='ignoreboth';
 export HISTFILE="$__DOTFILES_PATH/bash_history";
 export HISTSIZE="1000";
@@ -22,13 +27,12 @@ export HISTSIZE="1000";
 export PATH="$__DOTFILES_PATH:$__DOTFILES_PATH/bin:$__COMPOSER_BIN_PATH:$__GEM_PATH:$__OTHERS_PATH:$PATH";
 
 ## Load the shell dotfiles, and then some:
-# vimrc,bash_colors,bash_options,bash_prompt,functions,alias,bashrc,exrc,bash_autocomplete
-sources=("options colors prompt alias functions");
-for file in $sources; do
-  file="$__LIB_PATH/$file";
-
-  if [[ -r "$file" && -f "$file" ]]; then
-    source "$file";
-  fi
-done
-unset file;
+source "${HOME}/.profile";
+source "${HOME}/.bashrc";
+source "${HOME}/.exrc";
+source "${HOME}/.vimrc";
+source "${__LIB_PATH}/options";
+source "${__LIB_PATH}/colors";
+source "${__LIB_PATH}/functions";
+source "${__LIB_PATH}/prompt";
+source "${__LIB_PATH}/alias";
