@@ -37,7 +37,7 @@ prompt() {
 
   index="$(git status --short --porcelain -b 2> /dev/null)"
   if [[ `echo "$index" | grep -E '^\?\? '` ]]; then
-    untracked=1
+    untracked='?'
   fi
   if [[ `echo "$index" | grep -E '^[A-Z][A-Z] '` ]]; then
     uncommitted=1
@@ -56,35 +56,12 @@ prompt() {
   [[ $unstashed ]] && unstashed='-'
 
   status+="${uncommitted}${unstaged}${untracked}${unstashed}"
-  # if [[ `echo "$index" | grep '^A  '` ]]; then
-  #   status+='+'
-  # elif [[ `echo "$index" | grep '^M  '` ]]; then
-  #   status+='+'
-  # fi
-  # if [[ `echo "$index" | grep '^ M '` ]]; then
-  #   status+='!'
-  # elif [[ `echo "$index" | grep '^AM '` ]]; then
-  #   status+='!'
-  # elif [[ `echo "$index" | grep '^ T '` ]]; then
-  #   status+='!'
-  # fi
-  # if [[ `echo "$index" | grep '^R  '` ]]; then
-  #   status+='-'
-  # fi
-  # if [[ `echo "$index" | grep '^ D '` ]]; then
-  #   status+='x'
-  # elif [[ `echo "$index" | grep '^D  '` ]]; then
-  #   status+='x'
-  # elif [[ `echo "$index" | grep '^AD '` ]]; then
-  #   status+='x'
-  # fi
+  [[ ! $status ]] && is_dirty=''
 
   prompt_update;
 }
 
 prompt_update() {
-  [[ ! $status ]] && is_dirty=''
-
   PS1="${user}${host}${dir}${is_dirty}${branch}${status}";
   PS1+="\n";
   PS1+="${ps1}";
