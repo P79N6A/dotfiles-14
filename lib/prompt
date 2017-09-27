@@ -6,8 +6,8 @@ status=''
 user="\u"
 host=" at \h"
 dir=" in [\w]"
-ps1="$ "
-ps2="-> "
+ps1=" "
+ps2=" "
 
 prompt() {
   local ref index
