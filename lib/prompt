@@ -53,7 +53,7 @@ prompt() {
   [[ $untracked ]] && untracked='?'
   [[ $uncommitted ]] && uncommitted='+'
   [[ $unstaged ]] && unstaged='!'
-  [[ $unstashed ]] && unstaged='-'
+  [[ $unstashed ]] && unstashed='-'
 
   status+="${uncommitted}${unstaged}${untracked}${unstashed}"
   # if [[ `echo "$index" | grep '^A  '` ]]; then
@@ -76,10 +76,7 @@ prompt() {
   # elif [[ `echo "$index" | grep '^D  '` ]]; then
   #   status+='x'
   # elif [[ `echo "$index" | grep '^AD '` ]]; then
-  #   status+='xx'
-  # fi
-  # if [[ `git rev-parse --verify refs/stash >/dev/null 2>&1` ]]; then
-  #   status+='$'
+  #   status+='x'
   # fi
 
   if [[ ! $status ]]; then
