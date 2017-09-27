@@ -33,7 +33,7 @@ prompt() {
 
   index="$(git status --short --porcelain -b 2> /dev/null)"
   if [[ `echo "$index" | grep -E '^\?\? '` ]]; then
-    status+='?'
+    status+='untracked'
   fi
   if [[ `echo "$index" | grep -E '^[A-Z]  '` ]]; then
     status+='uncommitted'
@@ -67,10 +67,6 @@ prompt() {
   fi
   if [[ `git rev-parse --verify refs/stash >/dev/null 2>&1` ]]; then
     status+='$'
-  fi
-
-  if [[ $status ]]; then
-    status+=' (unstaged)'
   fi
 
   prompt_update;
