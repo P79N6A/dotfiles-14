@@ -1,25 +1,67 @@
 #!/bin/bash
 
-function prompt_update() {
-  local is_dirty='';
-  local branch='';
-  local status='';
+is_dirty=''
+branch=''
+status=''
+user="\u"
+host=" at \h"
+dir=" in [\w]"
+ps1="$ "
+ps2="-> "
 
-  if [[ `git symbolic-ref HEAD 2> /dev/null` && `git rev-parse --short HEAD 2> /dev/null` ]]; then
-    branch=`git symbolic-ref HEAD 2> /dev/null | grep -e '[^\/]*'$ -io`;
+prompt() {
+  local ref index
+  local flags='--porcelain --ignore-submodules=dirty --untracked-files=no'
 
-    local flags='--porcelain --ignore-submodules=dirty --untracked-files=no';
-    if [[ `git status ${flags} 2> /dev/null | tail -n1` ]]; then
-      is_dirty=1;
+  is_dirty=''
+  branch=''
+  status=''
+
+  ref="$(git symbolic-ref HEAD 2> /dev/null)"
+  if [[ $? != 0 ]]; then
+    ref="$(git rev-parse --short HEAD 2> /dev/null)"
+    if [[ $? != 0 ]]; then
+      ref='';
     fi
   fi
 
-  local user="\u";
-  local host=" at \h";
-  local dir=" in [\w]";
-  local ps1="$ ";
-  local ps2="-> ";
+  branch="$(echo $ref | grep -e [^\/]*$ -io)"
 
+  if [[ -n `git status ${FLAGS} 2> /dev/null | tail -n1` ]]; then
+    is_dirty=1
+  fi
+
+  index="$(git status --short --porcelain -b 2> /dev/null)"
+  if [[ `echo "$index" | grep -E '^\?\? '` ]]; then
+    status+='?'
+  fi
+  if [[ `echo "$index" | grep '^A  '` ]]; then
+    status+='+'
+  elif [[ `echo "$INDEX" | grep '^M  '` ]]; then
+    status+='+'
+  fi
+  if [[ `echo "$index" | grep '^ M '` ]]; then
+    status+='!'
+  elif [[ `echo "$INDEX" | grep '^AM '` ]]; then
+    status+='!'
+  elif [[ `echo "$INDEX" | grep '^ T '` ]]; then
+    status+='!'
+  fi
+  if [[ `echo "$index" | grep '^R  '` ]]; then
+    status+='?'
+  fi
+  if [[ `echo "$index" | grep '^ D '` ]]; then
+    status+='x'
+  elif [[ `echo "$INDEX" | grep '^D  '` ]]; then
+    status+='x'
+  elif [[ `echo "$INDEX" | grep '^AD '` ]]; then
+    status+='x'
+  fi
+
+  prompt_update;
+}
+
+prompt_update() {
   PS1="${user}${host}${dir}${is_dirty}${branch}${status}";
   PS1+="\n";
   PS1+="${ps1}";
@@ -29,4 +71,4 @@ function prompt_update() {
   export PS2;
 }
 
-export PROMPT_COMMAND="history -a; prompt_update";
+export PROMPT_COMMAND="history -a; prompt";
