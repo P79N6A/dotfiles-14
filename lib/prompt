@@ -33,29 +33,29 @@ prompt() {
 
   index="$(git status --short --porcelain -b 2> /dev/null)"
   if [[ `echo "$index" | grep -E '^\?\? '` ]]; then
-    status+='?'
+    status+='??'
   fi
   if [[ `echo "$index" | grep '^A  '` ]]; then
-    status+='+'
-  elif [[ `echo "$INDEX" | grep '^M  '` ]]; then
-    status+='+'
+    status+='A '
+  elif [[ `echo "$index" | grep '^M  '` ]]; then
+    status+='A '
   fi
   if [[ `echo "$index" | grep '^ M '` ]]; then
-    status+='!'
-  elif [[ `echo "$INDEX" | grep '^AM '` ]]; then
-    status+='!'
-  elif [[ `echo "$INDEX" | grep '^ T '` ]]; then
-    status+='!'
+    status+=' M'
+  elif [[ `echo "$index" | grep '^AM '` ]]; then
+    status+='AM'
+  elif [[ `echo "$index" | grep '^ T '` ]]; then
+    status+=' T'
   fi
   if [[ `echo "$index" | grep '^R  '` ]]; then
-    status+='?'
+    status+='R '
   fi
   if [[ `echo "$index" | grep '^ D '` ]]; then
-    status+='x'
-  elif [[ `echo "$INDEX" | grep '^D  '` ]]; then
-    status+='x'
-  elif [[ `echo "$INDEX" | grep '^AD '` ]]; then
-    status+='x'
+    status+=' D'
+  elif [[ `echo "$index" | grep '^D  '` ]]; then
+    status+='D '
+  elif [[ `echo "$index" | grep '^AD '` ]]; then
+    status+='AD'
   fi
 
   prompt_update;
