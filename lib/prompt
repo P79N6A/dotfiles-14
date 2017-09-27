@@ -31,10 +31,10 @@ prompt() {
   [[ `echo "$index" | grep -E '^ [A-Z] '` ]] && unstaged=1 && is_dirty=1
   [[ `echo "$index" | grep -E '^[A-Z]  '` ]] && uncommitted=1 && is_dirty=1
 
-  [[ $untracked ]] && untracked='❓'
-  [[ $uncommitted ]] && uncommitted='±'
-  [[ $unstaged ]] && unstaged=''
-  [[ $unstashed ]] && unstashed=''
+  [[ $untracked ]] && untracked=' '
+  [[ $uncommitted ]] && uncommitted=' '
+  [[ $unstaged ]] && unstaged=' '
+  [[ $unstashed ]] && unstashed=' '
 
   [[ $is_dirty = 1 ]] && status+=' ⚡ ';
   status+="${green}${uncommitted}${re}"
@@ -47,10 +47,11 @@ prompt() {
 
 prompt_update() {
   user="\u"
-  host=" at \h"
-  dir=" [📂 \w]"
-  ps1=" "
-  ps2="➝ "
+  host=""
+  # host=" at \h"
+  dir=" [ \w]"
+  ps1=" "
+  ps2=" "
 
   PS1="${user}${host}${dir}${branch}${status}";
   PS1+="\n";
