@@ -30,25 +30,15 @@ prompt() {
   fi
 
   branch="$(echo $ref | grep -e [^\/]*$ -io)"
+  [[ $branch ]] && branch=" ${yellow}${branch}${re}"
 
-  if [[ -n `git status ${FLAGS} 2> /dev/null | tail -n1` ]]; then
-    is_dirty=1
-  fi
+  [[ -n `git status ${FLAGS} 2> /dev/null | tail -n1` ]] && is_dirty=1
 
   index="$(git status --short --porcelain -b 2> /dev/null)"
-  if [[ `echo "$index" | grep -E '^\?\? '` ]]; then
-    untracked='?'
-  fi
-  if [[ `echo "$index" | grep -E '^[A-Z][A-Z] '` ]]; then
-    uncommitted=1
-    unstaged=1
-  fi
-  if [[ `echo "$index" | grep -E '^ [A-Z] '` ]]; then
-    unstaged=1
-  fi
-  if [[ `echo "$index" | grep -E '^[A-Z]  '` ]]; then
-    uncommitted=1
-  fi
+  [[ `echo "$index" | grep -E '^\?\? '` ]] && untracked='?'
+  [[ `echo "$index" | grep -E '^[A-Z][A-Z] '` ]] && uncommitted=1 && unstaged=1
+  [[ `echo "$index" | grep -E '^ [A-Z] '` ]] && unstaged=1
+  [[ `echo "$index" | grep -E '^[A-Z]  '` ]] && uncommitted=1
 
   [[ $untracked ]] && untracked='?'
   [[ $uncommitted ]] && uncommitted='+'
