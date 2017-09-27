@@ -43,14 +43,17 @@ prompt() {
   [[ $unstaged ]] && unstaged='!'
   [[ $unstashed ]] && unstashed='-'
 
-  status+="${uncommitted}${unstaged}${untracked}${unstashed}"
-  [[ ! $status ]] && is_dirty=''
+  [[ $is_dirty = 1 ]] && status+=' ';
+  status+="${uncommitted}"
+  status+="${unstaged}"
+  status+="${untracked}"
+  status+="${unstashed}"
 
   prompt_update;
 }
 
 prompt_update() {
-  PS1="${user}${host}${dir}${is_dirty}${branch}${status}";
+  PS1="${user}${host}${dir}${branch}${status}";
   PS1+="\n";
   PS1+="${ps1}";
   export PS1;
