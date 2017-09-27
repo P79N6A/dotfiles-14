@@ -1,5 +1,7 @@
 #!/bin/bash
 
+let is_dirty branch status user host dir ps1 ps2 untracked unstaged uncommitted unstashed
+
 prompt() {
   local ref index
   local flags='--porcelain --ignore-submodules=dirty --untracked-files=no'
@@ -7,11 +9,6 @@ prompt() {
   is_dirty=''
   branch=''
   status=''
-  user="\u"
-  host=" at \h"
-  dir=" in [\w]"
-  ps1=" "
-  ps2=" "
   untracked=''
   unstaged=''
   uncommitted=''
@@ -49,6 +46,12 @@ prompt() {
 }
 
 prompt_update() {
+  user="\u"
+  host=" at \h"
+  dir=" in [\w]"
+  ps1=" "
+  ps2=" "
+
   PS1="${user}${host}${dir}${branch}${status}";
   PS1+="\n";
   PS1+="${ps1}";
