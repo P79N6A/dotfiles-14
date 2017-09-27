@@ -35,11 +35,13 @@ prompt() {
   if [[ `echo "$index" | grep -E '^\?\? '` ]]; then
     status+='?'
   fi
+  ## uncommitted
   if [[ `echo "$index" | grep '^A  '` ]]; then
     status+='A'
   elif [[ `echo "$index" | grep '^M  '` ]]; then
     status+='A'
   fi
+  ## unstaged
   if [[ `echo "$index" | grep '^ M '` ]]; then
     status+='M'
   elif [[ `echo "$index" | grep '^AM '` ]]; then
