@@ -1,14 +1,5 @@
 #!/bin/bash
 
-is_dirty=''
-branch=''
-status=''
-user="\u"
-host=" at \h"
-dir=" in [\w]"
-ps1=" "
-ps2=" "
-
 prompt() {
   local ref index
   local flags='--porcelain --ignore-submodules=dirty --untracked-files=no'
@@ -16,6 +7,11 @@ prompt() {
   is_dirty=''
   branch=''
   status=''
+  user="\u"
+  host=" at \h"
+  dir=" in [\w]"
+  ps1=" "
+  ps2=" "
   untracked=''
   unstaged=''
   uncommitted=''
@@ -28,26 +24,26 @@ prompt() {
   fi
 
   branch="$(echo $ref | grep -e [^\/]*$ -io)"
-  [[ $branch ]] && branch=" ${yellow}${branch}${re}"
+  [[ $branch ]] && branch=" ${yellow} ${branch}${re}"
 
-  [[ -n `git status ${FLAGS} 2> /dev/null | tail -n1` ]] && is_dirty=1
+  # [[ -n `git status ${FLAGS} 2> /dev/null | tail -n1` ]] && is_dirty=1
 
   index="$(git status --short --porcelain -b 2> /dev/null)"
-  [[ `echo "$index" | grep -E '^\?\? '` ]] && untracked='?'
-  [[ `echo "$index" | grep -E '^[A-Z][A-Z] '` ]] && uncommitted=1 && unstaged=1
-  [[ `echo "$index" | grep -E '^ [A-Z] '` ]] && unstaged=1
-  [[ `echo "$index" | grep -E '^[A-Z]  '` ]] && uncommitted=1
+  [[ `echo "$index" | grep -E '^\?\? '` ]] && untracked='?' && is_dirty=1
+  [[ `echo "$index" | grep -E '^[A-Z][A-Z] '` ]] && uncommitted=1 && unstaged=1 && is_dirty=1
+  [[ `echo "$index" | grep -E '^ [A-Z] '` ]] && unstaged=1 && is_dirty=1
+  [[ `echo "$index" | grep -E '^[A-Z]  '` ]] && uncommitted=1 && is_dirty=1
 
-  [[ $untracked ]] && untracked='?'
-  [[ $uncommitted ]] && uncommitted='+'
-  [[ $unstaged ]] && unstaged='!'
-  [[ $unstashed ]] && unstashed='-'
+  [[ $untracked ]] && untracked=''
+  [[ $uncommitted ]] && uncommitted='±'
+  [[ $unstaged ]] && unstaged=''
+  [[ $unstashed ]] && unstashed='x'
 
-  [[ $is_dirty = 1 ]] && status+=' ';
-  status+="${uncommitted}"
-  status+="${unstaged}"
-  status+="${untracked}"
-  status+="${unstashed}"
+  [[ $is_dirty = 1 ]] && status+='  ';
+  status+="${green}${uncommitted}${re}"
+  status+="${yellow}${unstaged}${re}"
+  status+="${blue}${untracked}${re}"
+  status+="${red}${unstashed}${re}"
 
   prompt_update;
 }

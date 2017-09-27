@@ -68,6 +68,8 @@
 	<true/>
 	<key>FlashTabBarInFullscreen</key>
 	<false/>
+	<key>FocusFollowsMouse</key>
+	<true/>
 	<key>FocusReportingEnabled</key>
 	<false/>
 	<key>GlobalTouchBarMap</key>
@@ -186,7 +188,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 599 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>976 125 796 473 0 0 1920 1177 </string>
+	<string>736 217 918 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 44 1920 394 0 0 1920 1177 </string>
 	<key>NeverWarnAboutSpaces</key>
@@ -510,7 +512,7 @@
 			<key>Description</key>
 			<string>Default</string>
 			<key>Disable Smcup Rmcup</key>
-			<false/>
+			<true/>
 			<key>Disable Window Resizing</key>
 			<false/>
 			<key>Flashing Bell</key>
@@ -867,7 +869,7 @@
 			<key>Scrollback Lines</key>
 			<integer>10000</integer>
 			<key>Scrollback in Alternate Screen</key>
-			<false/>
+			<true/>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1668,7 +1670,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-09-26T11:20:24Z</date>
+	<date>2017-09-27T12:45:15Z</date>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowPaneTitles</key>
