@@ -21,7 +21,7 @@ prompt() {
   fi
 
   branch="$(echo $ref | grep -e [^\/]*$ -io)"
-  [[ $branch ]] && branch=" ${yellow}[B] ${branch}${re}"
+  [[ $branch ]] && branch=" ${yellow} ${branch}${re}"
 
   # [[ -n `git status ${FLAGS} 2> /dev/null | tail -n1` ]] && is_dirty=1
 
@@ -34,29 +34,26 @@ prompt() {
   [[ $untracked ]] && untracked='?'
   [[ $uncommitted ]] && uncommitted='+'
   [[ $unstaged ]] && unstaged='!'
-  [[ $unstashed ]] && unstashed='$'
+  [[ $unstashed ]] && unstashed=' '
 
   [[ $is_dirty = 1 ]] && status+=' '
-  # [[ $is_dirty = 1 ]] && status+='  '
-  status+="${green}${uncommitted}${re}"
-  status+="${yellow}${unstaged}${re}"
   status+="${blue}${untracked}${re}"
-  status+="${red}${unstashed}${re}"
+  status+="${blue}${unstaged}${re}"
+  status+="${blue}${b}${uncommitted}${re}${re}"
+  status+="${blue}${unstashed}${re}"
 
   prompt_update;
 }
 
 prompt_update() {
-  user="\u"
+  user="${magenta}\u${re}"
   host=""
   # host=" at \h"
-  dir=" [[B] \w]"
-  ps1="$ "
-  ps2="> "
+  dir=" ${green}[ \w]${re}"
+  ps1=" "
+  ps2=" "
 
   PS1="${user}${host}${dir}${branch}${status}";
-  PS1+="\n";
-  PS1+="   ";
   PS1+="\n";
   PS1+="${ps1}";
   export PS1;

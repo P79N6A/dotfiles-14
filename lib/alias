@@ -43,12 +43,10 @@ alias gpl='git pull'
 alias copy="tr -d '\n' | pbcopy"
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
-# Always enable colored `grep` output
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# Get week number
 alias week='date +%V'
 
 alias .home="cd $HOME"
