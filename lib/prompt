@@ -21,20 +21,20 @@ prompt() {
   fi
 
   branch="$(echo $ref | grep -e [^\/]*$ -io)"
-  [[ $branch ]] && branch=" ${yellow} ${branch}${re}"
+  [[ $branch ]] && branch=" ${yellow}[B] ${branch}${re}"
 
   # [[ -n `git status ${FLAGS} 2> /dev/null | tail -n1` ]] && is_dirty=1
 
   index="$(git status --short --porcelain -b 2> /dev/null)"
-  [[ `echo "$index" | grep -E '^\?\? '` ]] && untracked='?' && is_dirty=1
+  [[ `echo "$index" | grep -E '^\?\? '` ]] && untracked=1 && is_dirty=1
   [[ `echo "$index" | grep -E '^[A-Z][A-Z] '` ]] && uncommitted=1 && unstaged=1 && is_dirty=1
   [[ `echo "$index" | grep -E '^ [A-Z] '` ]] && unstaged=1 && is_dirty=1
   [[ `echo "$index" | grep -E '^[A-Z]  '` ]] && uncommitted=1 && is_dirty=1
 
   [[ $untracked ]] && untracked='?'
-  [[ $uncommitted ]] && uncommitted=' '
+  [[ $uncommitted ]] && uncommitted='+'
   [[ $unstaged ]] && unstaged='!'
-  [[ $unstashed ]] && unstashed='$ '
+  [[ $unstashed ]] && unstashed='$'
 
   [[ $is_dirty = 1 ]] && status+=' '
   # [[ $is_dirty = 1 ]] && status+='  '
@@ -50,11 +50,13 @@ prompt_update() {
   user="\u"
   host=""
   # host=" at \h"
-  dir=" [ \w]"
+  dir=" [[B] \w]"
   ps1="$ "
-  ps2=" → "
+  ps2="> "
 
   PS1="${user}${host}${dir}${branch}${status}";
+  PS1+="\n";
+  PS1+="   ";
   PS1+="\n";
   PS1+="${ps1}";
   export PS1;

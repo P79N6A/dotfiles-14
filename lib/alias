@@ -5,6 +5,8 @@ alias ..="cd ../";
 alias ...="cd ../../";
 alias ls="ls -lAFh ";
 alias la="ls -1 ";
+alias lf="ls | grep --color=never '^-'"
+alias ld="ls | grep --color=never '^d'"
 alias h?="history | grep ";
 alias c.="clear ";
 alias r.="__reload ";
@@ -19,6 +21,8 @@ alias composeri="composer require ";
 alias composergi="composer global require ";
 alias gemi="gem install ";
 alias brewi="brew install ";
+alias brewt="brew tap ";
+alias brewci="brew cask install ";
 alias npmi="npm install ";
 alias apmi="apm install ";
 alias composerr="composer remove ";
@@ -34,6 +38,17 @@ alias gs='git status'
 alias gss='git status --short'
 alias gl='git log'
 alias gcp='git add .; git commit -a -m \"update\"; git push'
+alias copy="tr -d '\n' | pbcopy"
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# # Always enable colored `grep` output
+# # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
+# alias grep='grep --color=auto'
+# alias fgrep='fgrep --color=auto'
+# alias egrep='egrep --color=auto'
+
+# # Get week number
+# alias week='date +%V'
 
 alias .home="cd $HOME"
 alias .atom="cd $HOME/.atom"

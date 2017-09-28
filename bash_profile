@@ -23,6 +23,17 @@ export HISTCONTROL='ignoreboth';
 export HISTFILE="$__DOTFILES_PATH/bash_history";
 export HISTSIZE="1000";
 
+export NODE_REPL_HISTORY="$HOME/.node_history";
+export NODE_REPL_HISTORY_SIZE="32768";
+export NODE_REPL_MODE="sloppy";
+export PYTHONIOENCODING="UTF-8";
+export LANG='en_US.UTF-8';
+export LC_ALL='en_US.UTF-8';
+export MANPAGER='less -X';
+export GPG_TTY=$(tty);
+
+export EDITOR="Atom";
+
 ## Set up all common paths
 export PATH="$__DOTFILES_PATH:$__DOTFILES_PATH/bin:$__COMPOSER_BIN_PATH:$__GEM_PATH:$__OTHERS_PATH:$PATH";
 
