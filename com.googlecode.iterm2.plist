@@ -197,7 +197,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 599 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>540 465 918 485 0 0 1920 1177 </string>
+	<string>540 429 918 485 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 44 1920 394 0 0 1920 1177 </string>
 	<key>NeverWarnAboutSpaces</key>
@@ -860,7 +860,7 @@
 			<key>Name</key>
 			<string>Root</string>
 			<key>Non Ascii Font</key>
-			<string>SegoeUISymbol 14</string>
+			<string>Material-Design-Icons 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
