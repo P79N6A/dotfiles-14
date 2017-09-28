@@ -24,17 +24,26 @@
 	<string>RobotoMono-Regular</string>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>printf 'r.\x03'</string>
-		<string>printf 'r.\x13'</string>
-		<string>printf 'r.x03'</string>
-		<string>printf 'r.0x03'</string>
-		<string>printf 'r.0x13'</string>
-		<string>printr 'r.\x03'</string>
-		<string>printr 'r.\x13'</string>
-		<string>exec '/bin/bash r.' -l</string>
-		<string>exec 'r.' -l</string>
-		<string>exec "r." -l</string>
-		<string>exec "r."</string>
+		<string>printf '\x17'</string>
+		<string>printf '\x10'</string>
+		<string>printf '\x01'</string>
+		<string>printf '\x02'</string>
+		<string>printf '\x04'</string>
+		<string>printf '\x05'</string>
+		<string>printf '\x0e'</string>
+		<string>printf '\x0f'</string>
+		<string>printf '\x13'</string>
+		<string>printf '\x12'</string>
+		<string>printf '\x11'</string>
+		<string>printf '\x14'</string>
+		<string>printf '\x18'</string>
+		<string>printf '\x1b\x5b\x17'</string>
+		<string>printf '\x1b\x5b\x18'</string>
+		<string>printf '\x1b\x5b\x4b'</string>
+		<string>printf '\x7f'</string>
+		<string>printf '\x7f;\x1b\x5b\x48'</string>
+		<string>printf '\x18;\x1b\x5b\x48'</string>
+		<string>printf '\x1b\x5b\x18;\x1b\x5b\x48'</string>
 	</array>
 	<key>CopySelection</key>
 	<false/>
@@ -184,11 +193,11 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>1590 769 228 297 0 0 1920 1177 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>912 494 758 273 0 0 1920 1177 </string>
+	<string>912 494 758 342 0 0 1920 1177 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 599 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>736 217 918 452 0 0 1920 1177 </string>
+	<string>540 465 918 485 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 44 1920 394 0 0 1920 1177 </string>
 	<key>NeverWarnAboutSpaces</key>
@@ -632,7 +641,7 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>03 72 2e 0d</string>
+					<string>1b 5b 46 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 72 2e 0d</string>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
@@ -851,7 +860,7 @@
 			<key>Name</key>
 			<string>Root</string>
 			<key>Non Ascii Font</key>
-			<string>Material-Design-Icons 14</string>
+			<string>SegoeUISymbol 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
