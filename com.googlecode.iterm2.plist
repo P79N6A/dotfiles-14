@@ -197,7 +197,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 599 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>540 429 918 485 0 0 1920 1177 </string>
+	<string>540 390 1016 512 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 44 1920 394 0 0 1920 1177 </string>
 	<key>NeverWarnAboutSpaces</key>
@@ -636,12 +636,33 @@
 					<key>Text</key>
 					<string>0x7f</string>
 				</dict>
+				<key>0x52-0x120000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>1b 5b 46 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 63 2e 0d</string>
+				</dict>
 				<key>0x72-0x100000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
 					<string>1b 5b 46 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 72 2e 0d</string>
+				</dict>
+				<key>0x7f-0x100000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>1b 5b 46 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17</string>
+				</dict>
+				<key>0x7f-0x20000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17</string>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
@@ -1679,7 +1700,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-09-27T12:45:15Z</date>
+	<date>2017-09-28T15:35:10Z</date>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowPaneTitles</key>

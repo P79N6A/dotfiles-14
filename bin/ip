@@ -2,5 +2,8 @@
 
 echo ""
 echo "=== PUBLIC IP ADDRESS ==="
-dig +short myip.opendns.com @resolver1.opendns.com
+let ip
+ip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+echo "$ip"
+echo "$ip" | copy
 echo ""

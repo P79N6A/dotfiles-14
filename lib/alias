@@ -40,7 +40,6 @@ alias gl='git log'
 alias gcp='git add .; git commit -a -m \"update\"; git push'
 alias gph='git push'
 alias gpl='git pull'
-alias copy="tr -d '\n' | pbcopy"
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 alias grep='grep --color=auto'
