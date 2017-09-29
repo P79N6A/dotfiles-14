@@ -42,6 +42,28 @@ alias gph='git push'
 alias gpl='git pull'
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
+alias b?="brew search"
+alias n?="npm search"
+alias a?="apm search"
+alias ab?="apm-beta search"
+alias g?="gem search"
+alias c?="composer search"
+
+alias b!="brew info"
+alias n!="npm view"
+alias a!="apm view"
+alias ab!="apm-beta view"
+alias g!="gem info"
+alias c!="composer info"
+
+alias bi="brew install"
+alias ni="npm install"
+alias ai="apm install"
+alias abi="apm-beta install"
+alias gi="gem install"
+alias ci="composer require"
+alias cgi="composer global require"
+
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
