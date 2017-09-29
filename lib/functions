@@ -70,3 +70,36 @@ create() {
 vag() {
   (cd "$HOME/Homestead" && vagrant $*);
 }
+
+gitinit() {
+  if [[ $# = 0 ]]; then
+    __return "
+  command: `basename $0`
+  usage: url [user] [email]
+"; exit 1;
+  fi
+
+  local url user email
+
+  url="$1"; shift
+  user='nopphasinara'
+  email='nopphasin.arayasirikul@gmail.com'
+
+
+  if [[ -n $1 ]]; then
+    user="$1"; shift
+  fi
+
+  if [[ -n $1 ]]; then
+    email="$1"; shift
+  fi
+
+  git init
+  git remote add origin -f "$url"
+  git config user.name "$user"
+  git config user.email "$email"
+  git config branch.master.remote origin
+  git config branch.master.merge refs/heads/master
+
+  echo -e "${green}Successful${re}"
+}
