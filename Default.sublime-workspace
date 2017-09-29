@@ -92,16 +92,36 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "packres",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"packres",
-				"PackageResourceViewer: Open Resource"
+				"package",
+				"PackageResourceViewer: Extract Package"
 			],
 			[
-				"package",
-				"Package Control: Discover Packages"
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"syn",
+				"Set Syntax: SASS"
+			],
+			[
+				"syn less",
+				"Set Syntax: Less"
+			],
+			[
+				"synh",
+				"Set Syntax: HTML"
+			],
+			[
+				"packres",
+				"PackageResourceViewer: Open Resource"
 			],
 			[
 				"skin",
@@ -110,10 +130,6 @@
 			[
 				"lower",
 				"Convert Case: Lower Case"
-			],
-			[
-				"wrap",
-				"Word Wrap: Toggle"
 			],
 			[
 				"key",
@@ -172,20 +188,33 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/sudprawat/.dotfiles"
 	],
 	"file_history":
 	[
-		"/Users/sudprawat/.dotfiles/bash_prompt",
-		"/Users/sudprawat/.dotfiles/ip",
+		"/Users/sudprawat/Desktop/ddtweb_agc_2017-09-28.sql",
+		"/Users/sudprawat/Desktop/ddtweb_agc_2017-09-28.sql.gz",
+		"/Users/sudprawat/.dotfiles/lib/alias",
+		"/private/var/folders/mn/86w8jw_s6yg03hf_l675q17m0000gn/T/coprocess-stderr.wxgiMi.txt",
+		"/Users/sudprawat/Downloads/ctlseq.sh",
+		"/Users/sudprawat/.dotfiles/bin/__env",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/Theme - Spacegray/Spacegray Eighties.sublime-theme",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/Theme - Spacegray/package-metadata.json",
+		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+		"/Users/sudprawat/.atom/colors.less",
+		"/Users/sudprawat/.atom/styles.less",
 		"/Users/sudprawat/www/index.php",
-		"/Users/sudprawat/Google Drive/Fineart Drive/fine art.txt",
+		"/Users/sudprawat/.dotfiles/vimrc",
+		"/Users/sudprawat/.dotfiles/exrc",
+		"/Users/sudprawat/.dotfiles/bashrc",
 		"/Users/sudprawat/.dotfiles/bash_profile",
 		"/Users/sudprawat/.dotfiles/bash_options",
 		"/Users/sudprawat/.dotfiles/bash_colors",
 		"/Users/sudprawat/.dotfiles/bash_autocomplete",
 		"/Users/sudprawat/.dotfiles/alias",
-		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+		"/Users/sudprawat/.dotfiles/bash_prompt",
+		"/Users/sudprawat/.dotfiles/brew_installer",
+		"/Users/sudprawat/.dotfiles/ip",
+		"/Users/sudprawat/Google Drive/Fineart Drive/fine art.txt",
 		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Installed Packages/Theme - Spacegray.sublime-package",
 		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/snippets/php/php.sublime-snippet",
 		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/ExpressionEngine Add-On Builder/Main.sublime-menu",
@@ -193,7 +222,6 @@
 		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/ExpressionEngine Add-On Builder/Default.sublime-commands",
 		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/colors.less",
 		"/Users/sudprawat/.dotfiles/functions",
-		"/Users/sudprawat/.dotfiles/bashrc",
 		"/Users/sudprawat/Dropbox/control.txt",
 		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/SnippetMaker.sublime-settings",
 		"/Volumes/Adobe Zii 2.2.1  for Adobe CC15 CC17/Help.txt",
@@ -247,18 +275,15 @@
 		"/Volumes/Datas/Desktop/dotfiles/hex2",
 		"/Users/sudprawat/.vimrc",
 		"/Users/sudprawat/.dotfiles/cmdadd",
-		"/Users/sudprawat/.dotfiles/vimrc",
 		"/Users/sudprawat/Downloads/colortest",
 		"/Users/sudprawat/.atom/packages/tool-bar/iconsets/icomoon/icomoon.css",
 		"/Users/sudprawat/.dotfiles/sym",
 		"/Volumes/Datas/Desktop/dotfiles/_alias",
-		"/Users/sudprawat/.dotfiles/brew_installer",
 		"/Applications/Spectacle.app/Contents/Resources/en.lproj/Localizable.strings",
 		"/Users/sudprawat/www/debug/index.php",
 		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/php/php_tag.sublime-snippet",
 		"/Users/sudprawat/www/mr-travl/d4/services/authen.php",
 		"/Users/sudprawat/.dotfiles/cmdi",
-		"/Users/sudprawat/.dotfiles/exrc",
 		"/Users/sudprawat/Projects/foo.log",
 		"/Users/sudprawat/.dotfiles/localip",
 		"/Users/sudprawat/.bash_history",
@@ -293,17 +318,7 @@
 		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/FileBrowser/Default.sublime-keymap",
 		"/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/FileBrowser/Default (OSX).sublime-keymap",
 		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/editor.less",
-		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/syntax-variables.less",
-		"/Users/sudprawat/.atom/packages/goldfish-ui/styles/editor.less",
-		"/Users/sudprawat/.atom/packages/goldfish-ui/styles/atom.less",
-		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/syntax/_base.less",
-		"/Users/sudprawat/.atom/packages/goldfish-syntax/index.less",
-		"/Users/sudprawat/.atom/packages/goldfish-ui/styles/ui-variables.less",
-		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/syntax-variables-bak1.less",
-		"/Users/sudprawat/.atom/packages/dash-syntax/styles/syntax-variables.less",
-		"/Users/sudprawat/.atom/packages/dash-ui/styles/ui-variables.less",
-		"/Users/sudprawat/.atom/packages/dash-syntax/styles/colors.less",
-		"/Users/sudprawat/.atom/packages/dash-syntax/styles/base.less"
+		"/Users/sudprawat/.atom/packages/goldfish-syntax/styles/syntax-variables.less"
 	],
 	"find":
 	{
@@ -323,6 +338,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"asiaafterdark",
+			"asiaafterdark.net",
+			"color: #",
+			"#",
+			"<string>#",
+			"</string>",
+			"<string>#",
+			"ffffff",
+			"393939",
+			"host",
+			"user",
+			"__prompt",
+			"PROMPT_COMMAND",
+			"user_style",
 			"reproduction-gallery",
 			"aia",
 			"uncommitted",
@@ -436,21 +465,7 @@
 			"erasedups",
 			"Reload",
 			"bash_profile",
-			"usr",
-			"profile",
-			"HOME",
-			"bashrc",
-			"__target",
-			"__source",
-			"\"",
-			"__target",
-			"__",
-			"complete",
-			"exit",
-			"__usage",
-			"usage",
-			"__usage",
-			"usage"
+			"usr"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -458,6 +473,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"asiagolfcourses",
+			"asiagolfcourses.net",
+			"@bg: #",
+			"color: #",
+			"#",
 			"",
 			"nopphasinara",
 			"1.0.0",
@@ -483,7 +503,7 @@
 	},
 	"input":
 	{
-		"height": 43.0
+		"height": 45.0
 	},
 	"layout":
 	{
@@ -554,7 +574,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 231.0,
+	"side_bar_width": 306.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
