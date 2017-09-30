@@ -76,6 +76,8 @@ alias .dot="cd $HOME/.dotfiles"
 alias .www="cd $HOME/www"
 alias .proj="cd $HOME/Projects"
 
+alias art="artisan"
+
 
 # alias ni='npm install'
 # alias nid='npm install --save-dev'
