@@ -1,0 +1,15 @@
+#!/bin/bash
+
+brew install wget
+brew install opam
+brew install git-ftp
+brew install bash-completion
+brew install glib
+brew install ocaml
+brew install ssh-copy-id
+brew install carthage
+brew install grunt-cli
+brew install php71
+brew install watchman
+brew install mercurial
+brew install yarn

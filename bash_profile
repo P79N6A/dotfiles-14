@@ -11,6 +11,7 @@ export __COMPOSER_BIN_PATH="$HOME/.composer/vendor/bin";
 export __CELLAR_PATH="/usr/local/Cellar";
 export __OTHERS_PATH="$__CELLAR_PATH:/usr/local/sbin";
 export __GEM_PATH="$HOME/.gem";
+export __NODE_MODULES_PATH="/usr/local/lib/node_modules";
 export GEM_HOME="$__GEM_PATH";
 
 ## Change default settings
@@ -35,7 +36,7 @@ export GPG_TTY=$(tty);
 export EDITOR="Atom";
 
 ## Set up all common paths
-export PATH="$__DOTFILES_PATH:$__DOTFILES_PATH/bin:$__COMPOSER_BIN_PATH:$__GEM_PATH:$__OTHERS_PATH:$PATH";
+export PATH="$__DOTFILES_PATH:$__NODE_MODULES_PATH:$__DOTFILES_PATH/bin:$__COMPOSER_BIN_PATH:$__GEM_PATH:$__OTHERS_PATH:$PATH";
 
 ## Load the shell dotfiles, and then some:
 source "${HOME}/.profile";

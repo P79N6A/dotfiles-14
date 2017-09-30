@@ -7,10 +7,34 @@ __return "
 
   options
     -o Open file for edit after created.
-"; exit 1;
+"; exit 1
 fi
 
-argv=($*);
-isOpenFile="";
+argv=()
+isOpenFile=''
+file=''
+target="$__DOTFILES_PATH/bin"
 
-echo "${argv[@]}";
+for item in $*; do
+  if [[ $item = '-o' ]]; then
+    isOpenFile=1
+  else
+    argv+=($item);
+  fi
+done
+
+[[ -n "${argv[0]}" ]] && file="${argv[0]}"
+[[ -n "${argv[1]}" ]] && target="${argv[1]}"
+
+if [[ -e "$target/$file" ]]; then
+  __return "
+  ERROR: File \"$target/$file\" already exists
+"; exit 1
+fi
+
+echo '#!/bin/bash' > "$target/$file"
+chmod -R 755 "$target/$file"
+
+if [[ $isOpenFile = 1 ]]; then
+  open -a "Atom" "$target/$file"
+fi
