@@ -1,0 +1,101 @@
+#!/bin/bash
+
+echo ""
+echo "Installing .atom packages:"
+echo ""
+
+apm i Remote-FTP
+apm i aligner
+apm i aligner-css
+apm i aligner-javascript
+apm i aligner-php
+apm i aligner-scss
+apm i aligner-typescript
+apm i atom-autocomplete-php
+# apm i atom-beautify
+# apm i atom-react-snippets
+# apm i atom-ternjs
+# apm i autocomplete-asciidoc
+# apm i autocomplete-awk
+# apm i autocomplete-clang
+# apm i autocomplete-ctags
+# apm i autocomplete-flow
+apm i autocomplete-json
+apm i autocomplete-jsp
+apm i autocomplete-php
+apm i autocomplete-python
+apm i autocomplete-python-jedi
+apm i autocomplete-underdash
+apm i blade-snippets
+# apm i busy-signal
+apm i change-case
+# apm i ctags-status
+apm i docblockr
+# apm i docker
+apm i emmet
+apm i emmet-snippets-compatibility
+apm i flex-tool-bar
+# apm i flow-ide
+# apm i flow-syntax
+apm i ftp-remote-edit
+apm i git-blame
+apm i git-plus
+apm i git-time-machine
+# apm i goldfish-dark-syntax
+# apm i goldfish-dark-ui
+# apm i haskell-grammar
+# apm i hyperclick
+# apm i intentions
+apm i jquery-snippets
+# apm i language-awk
+# apm i language-babel
+apm i language-blade
+# apm i language-ctags
+# apm i language-docker
+apm i language-graphql
+# apm i language-hack
+# apm i language-ini
+apm i language-javascript-jsx
+# apm i language-ocaml
+apm i language-unix-shell
+apm i laravel
+# apm i linter
+# apm i linter-ui-default
+apm i lodash-snippets
+# apm i merge-conflicts
+# apm i php-composer-completion
+# apm i php-cs-fixer
+# apm i php-debug
+# apm i php-extract-method
+# apm i php-hyperclick
+# apm i php-refactoring
+# apm i php-server
+apm i project-manager
+apm i remote-sync
+# apm i script
+# apm i set-syntax
+# apm i sort-lines
+apm i text-buffer
+apm i toggle-quotes
+# apm i tool-bar
+apm i wordpress-api
+apm i wordpress-autocomplete
+
+
+## Nuclide packages
+# apm i file-icons
+# apm i tool-bar
+# apm i haskell-grammar
+# apm i highlight-selected
+# apm i language-babel
+# apm i language-graphql
+# apm i language-ini
+# apm i language-lua
+# apm i language-ocaml
+# apm i language-rust
+# apm i language-swift
+# apm i language-thrift
+# apm i MagicPython
+# apm i nuclide-format-js
+# apm i set-syntax
+# apm i sort-lines
