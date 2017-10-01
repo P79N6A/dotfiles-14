@@ -47,7 +47,7 @@ if [[ -n $1 ]]; then
   if [[ -n $1 ]]; then
     __target="$1"; shift
   else
-    __target="$__DOTFILES_PATH";
+    __target="$DOTFILES_PATH";
   fi
 
   if [[ -e $__target/$__name ]]; then

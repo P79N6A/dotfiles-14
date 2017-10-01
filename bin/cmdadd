@@ -13,7 +13,7 @@ fi
 argv=()
 isOpenFile=''
 file=''
-target="$__DOTFILES_PATH/bin"
+target="$DOTFILES_PATH/bin"
 
 for item in $*; do
   if [[ $item = '-o' ]]; then
