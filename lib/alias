@@ -64,6 +64,12 @@ alias gi="gem install"
 alias ci="composer require"
 alias cgi="composer global require"
 
+alias bls="brew list"
+alias nls="npm list"
+alias als="apm list"
+alias gls="gem list"
+alias gll="gem list --local"
+
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
