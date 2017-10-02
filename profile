@@ -38,6 +38,7 @@ export PATH
 ## Load the shell dotfiles, and then some:
 source "$HOME/.bashrc";
 source "$HOME/.exrc";
+source "$HOME/.npmrc";
 source "$HOME/.vimrc";
 # source "$HOME/.yarnrc";
 source "$DOTFILES_LIB/options";
