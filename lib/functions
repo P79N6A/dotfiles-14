@@ -67,7 +67,11 @@ create() {
   fi
 }
 
-vag() {
+vagrant-reload() {
+  (cd "$HOME/Homestead" && vagrant reload --provision);
+}
+
+v() {
   (cd "$HOME/Homestead" && vagrant $*);
 }
 
