@@ -1,0 +1,47 @@
+#!/usr/bin/env php
+<?php
+
+error_reporting(0);
+
+$argv = $_SERVER['argv'];
+$command = basename($argv[0]);
+unset($argv[0]);
+
+if (count($argv) < 1) {
+  echo "
+  command: {$command}
+  usage: hexcode
+";
+  exit("\n");
+}
+
+echo "\n";
+$dec = array();
+for ($i = 1; $i <= count($argv); $i++) {
+  $hex = strtoupper(trim(str_replace('#', '', $argv[$i])));
+  if (strlen($hex) == 3) {
+    $split = str_split($hex, 1);
+    foreach ($split as $key => $value) {
+      $split[$key] .= $value;
+    }
+  } else {
+    $split = str_split($hex, 2);
+  }
+  $hex = implode('', $split);
+
+  foreach ($split as $key => $value) {
+    $split[$key] = hexdec($value);
+  }
+
+  $dec[] = array(
+    'hex' => $hex,
+    'dec' => implode(', ', $split),
+  );
+}
+
+foreach ($dec as $key => $value) {
+  echo "#{$value['hex']}\n";
+  echo "rgba({$value['dec']}, 1)\n";
+}
+
+echo "\n";

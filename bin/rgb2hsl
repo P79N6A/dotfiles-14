@@ -1,0 +1,59 @@
+#!/usr/bin/env php
+<?php
+
+function rgb2hsl( $r, $g, $b ) {
+	$oldR = $r;
+	$oldG = $g;
+	$oldB = $b;
+	$r /= 255;
+	$g /= 255;
+	$b /= 255;
+    $max = max( $r, $g, $b );
+	$min = min( $r, $g, $b );
+	$h;
+	$s;
+	$l = ( $max + $min ) / 2;
+	$d = $max - $min;
+    	if( $d == 0 ){
+        	$h = $s = 0; // achromatic
+    	} else {
+        	$s = $d / ( 1 - abs( 2 * $l - 1 ) );
+		switch( $max ){
+	            case $r:
+	            	$h = 60 * fmod( ( ( $g - $b ) / $d ), 6 );
+                        if ($b > $g) {
+	                    $h += 360;
+	                }
+	                break;
+	            case $g:
+	            	$h = 60 * ( ( $b - $r ) / $d + 2 );
+	            	break;
+	            case $b:
+	            	$h = 60 * ( ( $r - $g ) / $d + 4 );
+	            	break;
+	        }
+	}
+	return array( round( $h, 2 ), round( $s, 2 ), round( $l, 2 ) );
+}
+
+
+$argv = $_SERVER['argv'];
+$command = basename($argv[0]);
+unset($argv[0]);
+
+if (count($argv) != 3) {
+  echo "
+  command: {$command}
+  usage: red green blue
+";
+  exit("\n");
+}
+
+$red = $argv[1];
+$green = $argv[2];
+$blue = $argv[3];
+
+$color = rgb2hsl($red, $green, $blue);
+echo "hsl(". implode(', ', $color) .")";
+
+echo "\n";
