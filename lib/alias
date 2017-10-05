@@ -95,3 +95,6 @@ alias art="artisan"
 # alias ns='npm start'
 # alias nf='npm cache clean && rm -rf node_modules && npm install'
 # alias nlg='npm list --global --depth=0'
+
+
+alias wpkey='curl -G https://api.wordpress.org/secret-key/1.1/salt/ | copy'
