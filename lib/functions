@@ -107,3 +107,26 @@ gitinit() {
 
   echo -e "${green}Successful${re}"
 }
+
+gitclone() {
+  local repo
+  local target
+  local is_url
+  local url
+
+  args=()
+  for argv in $*; do
+    is_url="$(echo $argv | grep -E '^--url=' -o)"
+    if [[ -n $is_url ]]; then
+      url="$(echo $argv | perl -pe 's/--url=//g')"
+    else
+      args+=($argv)
+    fi
+  done
+
+  [[ -n "$argv[0]" ]] && repo="${argv[0]}"
+  [[ -n "$argv[1]" ]] && target="${argv[1]}"
+  [[ $url = '' ]] && url="git@github.com:${repo}"
+
+  git clone $url $target
+}
