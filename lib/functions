@@ -71,7 +71,7 @@ vagrant-reload() {
   (cd "$HOME/Homestead" && vagrant reload --provision);
 }
 
-v() {
+vg() {
   (cd "$HOME/Homestead" && vagrant $*);
 }
 

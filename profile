@@ -32,7 +32,7 @@ export EDITOR="Atom";
 
 ## Set up all common paths
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin";
-PATH="$DOTFILES_PATH:$MODULES_PATH:$DOTFILES_PATH/bin:$COMPOSER_PATH:$GEM_HOME:$__OTHERS_PATH:$PATH";
+PATH="$(brew --prefix homebrew/php/php70)/bin:$DOTFILES_PATH:$MODULES_PATH:$DOTFILES_PATH/bin:$COMPOSER_PATH:$GEM_HOME:$__OTHERS_PATH:$PATH";
 export PATH
 
 ## Load the shell dotfiles, and then some:

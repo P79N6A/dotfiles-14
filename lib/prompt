@@ -62,4 +62,23 @@ prompt_update() {
   export PS2;
 }
 
+vagrant-up() {
+  local content vagrant_status check_status
+
+  vagrant_status="$(less "$DOTFILES_PATH/env" | grep -E '^VAGRANT_STATUS=off$' -io)"
+  if [[ -n $vagrant_status ]]; then
+    content="$(less $DOTFILES_PATH/env | perl -pe s/'VAGRANT_STATUS=off'/'VAGRANT_STATUS=on'/g)"
+    echo -e "${content}" > "${DOTFILES_PATH}/env"
+  else
+    if [[ $vagrant_status = 'VAGRANT_STATUS=on' ]]; then
+      check_status="$(vg status | grep -E '^homestead-7(.+)running' -io)"
+
+      if [[ ! -n $check_status ]]; then
+        content="$(less $DOTFILES_PATH/env | perl -pe s/'VAGRANT_STATUS=on'/'VAGRANT_STATUS=off'/g)"
+        echo -e "${content}" > "${DOTFILES_PATH}/env"
+      fi
+    fi
+  fi
+}
+
 export PROMPT_COMMAND="history -a; prompt";
