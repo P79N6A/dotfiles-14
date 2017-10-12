@@ -130,3 +130,8 @@ gitclone() {
 
   git clone $url $target
 }
+
+function apmb() {
+  apm $*
+  apm-beta $*
+}
