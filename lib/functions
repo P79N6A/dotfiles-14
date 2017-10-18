@@ -131,6 +131,11 @@ gitclone() {
   git clone $url $target
 }
 
+search() {
+  find $1 -name $2 -type $3;
+  # find . -name "*.c" -type f -exec ls -l {} \;
+}
+
 function apmb() {
   apm $*
   apm-beta $*
