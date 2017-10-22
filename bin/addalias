@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ $# != 2 ]]; then
+  echo -e "usage: shortcut command"
+  exit 0
+fi
+
+isExists=`cat ${DOTFILES_PATH}'/lib/alias' | grep -E '^alias '$1'=' -io`
+if [[ -n $isExists ]]; then
+  echo -e "Alias ${1} already exists"
+  exit 0
+fi
+
+echo -e "alias ${1}=\"${2}\"\n" >> "${DOTFILES_PATH}/lib/alias"
+if [[ "$(echo $?)" != 0 ]]; then
+  echo -e "Cannot create new alias, try again"
+  exit 0
+fi
+
+echo "New alias added"
+exit 1

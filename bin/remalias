@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $# != 1 ]]; then
+  echo -e "usage: shortcut"
+  exit 1
+fi
+
+sed -i '/^alias '${1}'=*/d' "${DOTFILES_PATH}/lib/alias"
+
+echo -e "Alias ${1} removed"
+exit 0
