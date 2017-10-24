@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export _farangs="$HOME/www/staging.farangmart.co.th"
+export _rgm="$HOME/www/repro-gallery-master"

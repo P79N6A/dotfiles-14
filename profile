@@ -41,6 +41,7 @@ source "$HOME/.exrc";
 source "$HOME/.npmrc";
 source "$HOME/.vimrc";
 # source "$HOME/.yarnrc";
+source "$DOTFILES_LIB/paths";
 source "$DOTFILES_LIB/options";
 source "$DOTFILES_LIB/colors";
 source "$DOTFILES_LIB/functions";
