@@ -99,5 +99,6 @@ alias art="artisan"
 
 alias wpkey='curl -G https://api.wordpress.org/secret-key/1.1/salt/ | copy'
 alias clearmail="sudo rm -rf /var/mail/$(whoami)"
-alias farangs="cd ${HOME}/www/staging.farangmart.co.th"
 
+
+source "$DOTFILES_PATH/lib/shortcuts"
