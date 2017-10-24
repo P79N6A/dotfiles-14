@@ -1,4 +1,31 @@
-#!/bin/bash
+#!/usr/bin/env php
+<?php
+$content = '';
+$env = $_SERVER;
+extract($env);
 
-export _farangs="$HOME/www/staging.farangmart.co.th"
-export _rgm="$HOME/www/repro-gallery-master"
+$dirs = array(
+  'farangs' => "$HOME/www/staging.farangmart.co.th",
+  'rpgs' => "$HOME/www/reproduction-galleries",
+  'rpg' => "$HOME/www/reproduction-gallery",
+  'rgm' => "$HOME/www/repro-gallery-master",
+  'www' => "$HOME/www",
+  'dot' => "$HOME/.dotfiles",
+);
+
+foreach ($dirs as $key => $dir) {
+  $content .= "export _$key=\"$dir\"\n";
+}
+
+foreach ($dirs as $key => $dir) {
+  $content .= "alias go$key=\"cd `echo $dir`\"";
+}
+
+$output = __DIR__ . '/export_paths';
+if (!file_exists($output)) {
+  touch($output);
+  chmod($output, 0755);
+}
+$fp = fopen($output, 'rw+');
+fwrite($fp, "#!/bin/bash\n\n" . $content);
+fclose($fp);

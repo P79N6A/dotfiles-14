@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export _farangs="/Users/fineart/www/staging.farangmart.co.th"
+export _rpgs="/Users/fineart/www/reproduction-galleries"
+export _rpg="/Users/fineart/www/reproduction-gallery"
+export _rgm="/Users/fineart/www/repro-gallery-master"
+export _www="/Users/fineart/www"
+export _dot="/Users/fineart/.dotfiles"
+alias gofarangs="cd `echo /Users/fineart/www/staging.farangmart.co.th`"alias gorpgs="cd `echo /Users/fineart/www/reproduction-galleries`"alias gorpg="cd `echo /Users/fineart/www/reproduction-gallery`"alias gorgm="cd `echo /Users/fineart/www/repro-gallery-master`"alias gowww="cd `echo /Users/fineart/www`"alias godot="cd `echo /Users/fineart/.dotfiles`"

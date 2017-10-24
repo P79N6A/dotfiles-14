@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [[ ! `pwd | grep -E '.atom$' -io` ]]; then
-    __return "
-    ERROR: Not .atom directory
-"; exit 1
-fi
-
-git add .; git commit -m 'Create backup'; git push origin HEAD:backup
