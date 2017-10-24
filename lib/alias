@@ -99,5 +99,11 @@ alias art="artisan"
 
 alias wpkey='curl -G https://api.wordpress.org/secret-key/1.1/salt/ | copy'
 alias clearmail="sudo rm -rf /var/mail/$(whoami)"
-alias gorgm="cd `echo $_rgm`"
+
+alias apms="apm search"
+alias apmsh="apmshow"
+alias apmls="apm list"
+alias apmli="apm list -i"
+
+alias apmup="apm update"
 

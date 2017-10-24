@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [[ $# = 0 ]]; then
+  ee "usage: package [-f]"
+  exit 1;
+fi
+
+package="$1"; shift
+packageUrl=''
+isFull="0"
+isOpen="0"
+
+for argv in $*; do
+  [[ $argv = '-f' ]] && isFull="1"
+  [[ $argv = '-o' ]] && isOpen="1"
+done
+
+ee
+ee "Loading package '$package' information.."
+if [[ $isFull = "1" ]]; then
+  apm show $package
+else
+  packageUrl=`apm show $package | grep -E 'https://github.com/(.+)' -io`
+  echo $packageUrl
+fi
+ee
