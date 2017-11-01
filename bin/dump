@@ -1,6 +1,7 @@
 #!/bin/bash
 
-composer dump-autoload; composer update
+composer update
+composer dump-autoload
 
 if [[ -n $1 && $1 = "-m" ]]; then
   php artisan migrate; php artisan db:seed
