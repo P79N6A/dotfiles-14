@@ -27,12 +27,13 @@ export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 export MANPAGER='less -X';
 export GPG_TTY=$(tty);
+export GEM_HOME="${HOME}/.gem";
 
 export EDITOR="Atom";
 
 ## Set up all common paths
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin";
-PATH="$(brew --prefix homebrew/php/php70)/bin:$DOTFILES_PATH:$MODULES_PATH:$DOTFILES_PATH/bin:$COMPOSER_PATH:$GEM_HOME:$__OTHERS_PATH:$PATH";
+PATH="$(brew --prefix homebrew/php/php70)/bin:$DOTFILES_PATH:$GEM_HOME:$MODULES_PATH:$DOTFILES_PATH/bin:$COMPOSER_PATH:$__OTHERS_PATH:$PATH";
 export PATH
 
 ## Load the shell dotfiles, and then some:
