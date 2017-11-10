@@ -1,5 +1,19 @@
 #!/bin/bash
 
+_ret() {
+    local target="${HOME}/${1}"
+
+    if [[ ! -e $target ]]; then
+        echo No such file or directory \'$target\'
+    else
+        cd $HOME
+
+        for target in $*; do
+            cd $target
+        done
+    fi
+}
+
 take() {
   if [[ $# = "0" || $# > "2" ]]; then
     __return "

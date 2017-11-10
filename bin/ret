@@ -1,0 +1,12 @@
+#!/bin/bash
+
+usage() {
+    echo -e "
+command: `basename $0`
+usage: [target]
+"
+}
+
+for target in $*; do
+  cd $target
+done
