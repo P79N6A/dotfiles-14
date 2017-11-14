@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $# = 0 ]]; then
+  find "${HOME}/Dropbox" -iname "control-*" -type f -exec open -a "Atom" {} \;
+  find "${HOME}/Google Drive/Fineart Drive" -iname "control-*" -type f -exec open -a "Atom" {} \;
+else
+  for file in $*; do
+    find "${HOME}/Dropbox" -iname "control-${file}*" -type f -exec open -a "Atom" {} \;
+    find "${HOME}/Google Drive/Fineart Drive" -iname "control-${file}*" -type f -exec open -a "Atom" {} \;
+  done
+fi
