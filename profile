@@ -34,7 +34,7 @@ export PATH="${GEM_HOME}:${COMPOSER_PATH}/bin:${NODE_PATH}/bin:${DOTFILES_PATH}/
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 
-source_files=("${HOME}/.bashrc ${HOME}/.exrc ${HOME}/.npmrc ${HOME}/.vimrc")
+source_files=("${HOME}/.bashrc ${HOME}/.exrc ${HOME}/.npmrc ${HOME}/.vimrc ${HOME}/.lessfilter")
 for file in $source_files; do
   base_filename="$(basename ${file} | perl -pe 's/\.//gi')"
 

@@ -1,5 +1,77 @@
 #!/bin/bash
 
+gohome() {
+  cd "${HOME}" && [[ $# > 0 ]] && cd "./${*}"
+}
+
+godot() {
+  cd "${HOME}/.dotfiles" && [[ $# > 0 ]] && cd "./${*}"
+}
+
+gowww() {
+  cd "${HOME}/www" && [[ $# > 0 ]] && cd "./${*}"
+}
+
+goproj() {
+  cd "${HOME}/projects" && [[ $# > 0 ]] && cd "./${*}"
+}
+
+function press_enter() {
+    # echo -en "\nPress Enter to continue"
+    # read
+    clear
+}
+
+take() {
+  menu_items=(
+      'Display free disk space'
+      'Display free memory'
+      )
+  menu="\n\033[41mPROGRAME MENU\033[0m"
+  count=0
+  while [[ "x${menu_items[${count}]}" != "x" ]]; do
+      menu="${menu}\n$((${count} + 1)) - ${menu_items[${count}]}"
+      count=$(($count + 1))
+  done
+  menu+="\n\nPlease enter option # or enter 0 to exit\n"
+  menu+="\n======== END ========\n"
+
+  selection=''
+  until [[ $selection == 0 ]]; do
+      clear
+      echo -e "$menu"
+      read selection && echo
+
+      case $selection in
+          1 ) clear; (echo "" && df | less); read; press_enter;;
+          2 ) clear; (echo "" && ls | less); read; press_enter;;
+          0 ) return;;
+          * ) press_enter;;
+      esac
+  done
+}
+
+foo() {
+  number=$1
+  shift
+
+  case $number in
+      1) echo "General errors" ;;
+      2) echo "Misuse of shell builtins" ;;
+      126) echo "Command is not an executable" ;;
+      127) echo "Command not found" ;;
+      128) echo "Invalid argument to exit" ;;
+      '128+n') echo "Fatal error signal \"n\"" ;;
+      130) echo "Script terminated" ;;
+      255*) echo "Exit status out of range" ;;
+      0) exit ;;
+  esac
+}
+
+_() {
+  echo -ne "$1"; return
+}
+
 flushdns() {
   (sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && say -f in "Cache flushed")
 }
@@ -13,29 +85,34 @@ reload_shell() {
   clear; exec $SHELL -l;
 }
 
-
-show_colors() {
-  for fgbg in 38 48; do
-    for color in {0..256}; do
-      echo -en "\e[${fgbg};5;${color}m ${color}\t\e[0m"
-      if [ $((($color + 1) % 10)) == 0 ] ; then
-        echo
-      fi
-    done
-    echo
-  done
-}
-
 ver() {
   if [[ $# == 1 ]]; then
     $1 --version 2> /dev/null
   fi
 }
 
-www() {
-  cd "${HOME}/www"
-
-  if [[ $# > 0 ]]; then
-    cd $*
-  fi
+gem_search() {
+  gem search $* --details | (less | grep $*)
 }
+
+brew_search() {
+  selection=''
+  output=''
+
+  output=`brew search --desc $*`
+  until [[ $selection == 'q' ]]; do
+    clear
+    echo -e "\n${output}\n\n(END)\n\n" | grep $*
+    # echo -ne "\n${output}\n\n(END)" | grep $*
+    read -n 1 selection && echo
+
+    case $selection in
+        q ) clear; return;;
+        * ) clear;;
+    esac
+  done
+  # brew desc -s $* | (less | grep $*)
+  # brew search $* -e brew info {} \;
+}
+
+# 1b 5b 46 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 63 2e 0d
