@@ -1,0 +1,41 @@
+#!/bin/bash
+
+flushdns() {
+  (sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && say -f in "Cache flushed")
+}
+
+search() {
+  find $1 -name $2 -type $3;
+  # find . -name "*.c" -type f -exec ls -l {} \;
+}
+
+reload_shell() {
+  clear; exec $SHELL -l;
+}
+
+
+show_colors() {
+  for fgbg in 38 48; do
+    for color in {0..256}; do
+      echo -en "\e[${fgbg};5;${color}m ${color}\t\e[0m"
+      if [ $((($color + 1) % 10)) == 0 ] ; then
+        echo
+      fi
+    done
+    echo
+  done
+}
+
+ver() {
+  if [[ $# == 1 ]]; then
+    $1 --version 2> /dev/null
+  fi
+}
+
+www() {
+  cd "${HOME}/www"
+
+  if [[ $# > 0 ]]; then
+    cd $*
+  fi
+}
