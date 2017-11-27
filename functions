@@ -4,6 +4,10 @@ gohome() {
   cd "${HOME}" && [[ $# > 0 ]] && cd "./${*}"
 }
 
+goatom() {
+  cd "${HOME}/.atom" && [[ $# > 0 ]] && cd "./${*}"
+}
+
 godot() {
   cd "${HOME}/.dotfiles" && [[ $# > 0 ]] && cd "./${*}"
 }
@@ -14,6 +18,43 @@ gowww() {
 
 goproj() {
   cd "${HOME}/projects" && [[ $# > 0 ]] && cd "./${*}"
+}
+
+git_status() {
+  if [[ $# == 1 && $1 == '-S' ]]; then
+    git status --short
+  else
+    git status
+  fi
+}
+
+commit_push() {
+  set -f
+
+  git commit -m $1 && git push $2
+}
+
+function bar {
+  echo "$BASH_SOURCE"
+}
+
+newCommand() {
+  basename="`basename(${0})`"
+
+  command_name=""
+  target_directory="${DOTFILES_PATH}/.bin"
+
+  if [[ $# == 0 ]]; then
+    __ "
+    NAME: ${basename} -- Create new shell command
+    DESCRIPTION:
+      The By default all of these output lines are sorted first by controlling terminal, then by process ID.
+    usage: command_name [target_directory]
+    options:
+      tar
+    "
+    return 1
+  fi
 }
 
 function press_enter() {
@@ -68,8 +109,8 @@ foo() {
   esac
 }
 
-_() {
-  echo -ne "$1"; return
+__() {
+  echo -ne "$1" && return
 }
 
 flushdns() {
