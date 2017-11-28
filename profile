@@ -39,30 +39,24 @@ export PS2="> "
 export PROMPT_COMMAND=""
 
 
-source_files=("${HOME}/.bashrc ${HOME}/.exrc ${HOME}/.npmrc ${HOME}/.vimrc ${HOME}/.lessfilter")
+source_files=("$HOME/.bashrc $HOME/.exrc $HOME/.npmrc $HOME/.vimrc $HOME/.lessfilter")
 for file in $source_files; do
-  base_filename="$(basename ${file} | perl -pe 's/\.//gi')"
+  base_filename="$(basename $file | perl -pe 's/\.//gi')"
 
-  if [[ ! -e "${DOTFILES_PATH}/${base_filename}" ]]; then
-    echo -e '#!/bin/bash'"\n" &> "${DOTFILES_PATH}/${base_filename}"
-    chmod -R 0755 "${DOTFILES_PATH}/${base_filename}"
+  if [[ ! -e "$DOTFILES_PATH/$base_filename" ]]; then
+    touch "$DOTFILES_PATH/$base_filename"
   fi
-
-  if [[ ! -e "$file" ]]; then
-    echo -e 'source "${DOTFILES_PATH}/'${base_filename}'"' &> "${file}"
-    chmod -R 0755 "${file}"
-  fi
-
-  source "${file}"
+  cp "$DOTFILES_PATH/$base_filename" "$file"
+  # chmod -R 0755 "$file"
+  source "$file"
 done
 
-
 # Load additional files
-additional_files=("${DOTFILES_PATH}/alias ${DOTFILES_PATH}/functions")
-for file in $additional_files; do
-  if [[ ! -e "${file}" ]]; then
-    echo -e "Filename ${file} does not exists"
+common_files=("$DOTFILES_PATH/alias $DOTFILES_PATH/functions")
+for file in $common_files; do
+  if [[ ! -e "$file" ]]; then
+    echo -e "Filename $file does not exists"
   else
-    source "${file}"
+    source "$file"
   fi
 done

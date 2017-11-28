@@ -182,7 +182,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>254 539 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>226 155 958 561 0 0 1920 1177 </string>
+	<string>0 52 1920 1125 0 0 1920 1177 </string>
 	<key>NeverWarnAboutSpaces</key>
 	<true/>
 	<key>New Bookmarks</key>
