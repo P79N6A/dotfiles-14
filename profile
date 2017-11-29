@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# iTerm test shell integration
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 ## Custom shell variables configuration
 # Others
@@ -60,3 +58,7 @@ for file in $common_files; do
     source "$file"
   fi
 done
+
+
+# iTerm test shell integration
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
