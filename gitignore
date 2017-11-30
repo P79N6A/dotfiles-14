@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+blob-store
+storage
+recovery
+compile-cache
+cache
+.projects.cson
+.remote-sync.cson

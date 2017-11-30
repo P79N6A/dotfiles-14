@@ -68,7 +68,7 @@
 	<key>DisablePasswordManagerAnimations</key>
 	<true/>
 	<key>DisableWindowSizeSnap</key>
-	<false/>
+	<true/>
 	<key>DisallowCopyEmptyString</key>
 	<true/>
 	<key>DoubleClickPerformsSmartSelection</key>
@@ -1648,6 +1648,12 @@
 	<real>533261645.76638001</real>
 	<key>NoSyncTipsDisabled</key>
 	<true/>
+	<key>NoSyncTurnOffBracketedPasteOnHostChange</key>
+	<false/>
+	<key>NoSyncTurnOffFocusReportingOnHostChange</key>
+	<false/>
+	<key>NoSyncTurnOffMouseReportingOnHostChange</key>
+	<false/>
 	<key>OpenFileInNewWindows</key>
 	<true/>
 	<key>OpenTmuxWindowsIn</key>

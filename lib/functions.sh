@@ -31,7 +31,9 @@ set_gem_home() {
 create_global_git_files() {
   files=("$HOME/.gitconfig $HOME/.gitignore")
   for file in $files; do
-    basename_file="`basename $file`"
+    basename_file="`basename $file | perl -pe 's/\.//g'`"
+    if [[ -e "$DOTFILES_PATH/$basename_file" ]]; then
+      cp "$DOTFILES_PATH/$basename_file" "$file"
+    fi
   done
 }
-
