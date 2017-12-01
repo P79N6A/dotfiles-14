@@ -19,12 +19,11 @@ install_required_packages() {
 }
 
 set_gem_home() {
-  gem_path="`gem environment gempath`"
-  gem_home="`echo -e \"${gem_path//:/\\n}\" | head -n1`"
+  gem_paths="`gem environment gempath`"
+  gem_path="`echo -e \"${gem_paths//:/\\n}\" | head -n1`"
 
-  export GEM_HOME="$gem_home";
-
-  # echo -n 'gem: --bindir /usr/bin'
+  export GEM_HOME="$HOME/.gem";
+  export GEM_PATH="$GEM_HOME/ruby/2.3.0"
 }
 
 

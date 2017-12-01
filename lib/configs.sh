@@ -2,6 +2,6 @@
 
 source "$DOTFILES_PATH/lib/functions.sh"
 
-
-# Setup required packages
+# Configurations
+set_gem_home
 create_global_git_files

@@ -182,7 +182,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>254 539 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 63 1920 1104 0 0 1920 1177 </string>
+	<string>0 53 1920 1124 0 0 1920 1177 </string>
 	<key>NeverWarnAboutSpaces</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1032,7 +1032,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>12</integer>
 			<key>Working Directory</key>
 			<string></string>
 		</dict>
@@ -1760,7 +1760,7 @@
 	<key>UseExperimentalFontMetrics</key>
 	<true/>
 	<key>UseLionStyleFullscreen</key>
-	<false/>
+	<true/>
 	<key>VerticalBarCursorWidth</key>
 	<real>2</real>
 	<key>WindowNumber</key>
