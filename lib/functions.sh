@@ -23,7 +23,7 @@ set_gem_home() {
   gem_path="`echo -e \"${gem_paths//:/\\n}\" | head -n1`"
 
   export GEM_HOME="$HOME/.gem";
-  export GEM_PATH="$GEM_HOME/ruby/2.3.0"
+  export GEM_PATH="$gem_path"
 }
 
 
@@ -35,4 +35,13 @@ create_global_git_files() {
       cp "$DOTFILES_PATH/$basename_file" "$file"
     fi
   done
+}
+
+
+get_brew_prefix() {
+  if [[ $# != 1 ]]; then
+    brew --prefix; return 0
+  fi
+
+  brew --prefix $1; return 0
 }

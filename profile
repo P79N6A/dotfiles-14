@@ -1,16 +1,10 @@
 #!/bin/bash
 
 
-## Define custom variables
+# Define custom variables
 export DOTFILES_PATH="$HOME/.dotfiles"
-
-## Load configuration and core files
-core_files=("$DOTFILES_PATH/lib/configs.sh $DOTFILES_PATH/alias $DOTFILES_PATH/functions")
-for file in $core_files; do
-  if [[ -e "$file" ]]; then
-    source "$file"
-  fi
-done
+# Load core configurations file
+source "$DOTFILES_PATH/lib/configs.sh"
 
 
 ## Custom shell variables configuration
@@ -37,9 +31,24 @@ export MAILCHECK="0"
 # Paths
 export COMPOSER_PATH="$HOME/.composer/vendor"
 export NODE_PATH="/usr/local/opt/node@6"
+export BREW_PREFIX="`get_brew_prefix`"
 
-PATH="/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-export PATH="/usr/local/bin:/Users/sudprawat/.gem/ruby/2.3.0/bin:$COMPOSER_PATH/bin:$NODE_PATH/bin:$DOTFILES_PATH/bin:$PATH"
+# Default paths
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+# Add more additional paths
+PATH="$GEM_PATH/bin:$PATH"
+PATH="$GEM_HOME/bin:$PATH"
+PATH="$COMPOSER_PATH/bin:$PATH"
+PATH="$NODE_PATH/bin:$PATH"
+PATH="$DOTFILES_PATH/bin:$PATH"
+PATH="/usr/local/opt/gettext/bin:$PATH"
+PATH="/usr/local/opt/icu4c/bin:$PATH"
+PATH="/usr/local/opt/icu4c/sbin:$PATH"
+PATH="/usr/local/opt/libxml2/bin:$PATH"
+PATH="/usr/local/opt/php70:$PATH"
+PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH
 
 export PS0="PS0 "
 export PS1="\u [\w]: "
@@ -57,15 +66,6 @@ for file in $source_files; do
   else
     rm -rf $file
   fi
-
-  # if [[ "`cat \"$DOTFILES_PATH/$base_filename\" 2> /dev/null`" != '' ]]; then
-  #   if [[ ! -e "$DOTFILES_PATH/$base_filename" ]]; then
-  #     touch "$DOTFILES_PATH/$base_filename"
-  #   fi
-  #   cp "$DOTFILES_PATH/$base_filename" "$file"
-  #   # chmod -R 0755 "$file"
-  #   source "$file"
-  # fi
 done
 
 

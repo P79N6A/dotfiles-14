@@ -1,0 +1,12 @@
+:verbose: true
+:backtrace: true
+install:
+  --no-ri
+  --no-rdoc
+  --bindir ~/.gem/bin
+  --install-dir ~/.gem
+update:
+  --no-ri
+  --no-rdoc
+  --bindir ~/.gem/bin
+  --install-dir ~/.gem
