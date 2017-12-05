@@ -49,3 +49,4 @@ alias brewi="brew install"
 alias brewu="brew uninstall"
 
 alias vim="vim ex"
+alias clearmai="sudo rm /var/mail/`whoami`"
