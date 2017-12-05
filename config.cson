@@ -1,0 +1,107 @@
+"*":
+  core:
+    allowPendingPaneItems: false
+    audioBeep: false
+    automaticallyUpdate: false
+    closeEmptyWindows: false
+    disabledPackages: [
+      "atom-light-syntax"
+      "atom-light-ui"
+      "base16-tomorrow-dark-theme"
+      "base16-tomorrow-light-theme"
+      "one-light-ui"
+      "one-light-syntax"
+      "solarized-dark-syntax"
+      "solarized-light-syntax"
+      "about"
+      "autosave"
+      "background-tips"
+      "metrics"
+      "open-on-github"
+      "styleguide"
+      "timecop"
+      "welcome"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".apm"
+      "blob-store"
+      "storage"
+      "recovery"
+    ]
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "about"
+      "archive-view"
+      "autocomplete-atom-api"
+      "autocomplete-css"
+      "autocomplete-html"
+      "autocomplete-plus"
+      "autocomplete-snippets"
+      "autoflow"
+      "autosave"
+      "background-tips"
+      "bookmarks"
+      "bracket-matcher"
+      "dalek"
+      "deprecation-cop"
+      "dev-live-reload"
+      "encoding-selector"
+      "exception-reporting"
+      "find-and-replace"
+      "fuzzy-finder"
+      "github"
+      "git-diff"
+      "go-to-line"
+      "grammar-selector"
+      "image-view"
+      "incompatible-packages"
+      "keybinding-resolver"
+      "line-ending-selector"
+      "link"
+      "markdown-preview"
+      "metrics"
+      "notifications"
+      "open-on-github"
+      "package-generator"
+      "snippets"
+      "spell-check"
+      "status-bar"
+      "styleguide"
+      "symbols-view"
+      "tabs"
+      "timecop"
+      "tree-view"
+      "update-package-dependencies"
+      "welcome"
+      "whitespace"
+      "wrap-guide"
+    ]
+    projectHome: "~/projects"
+    reopenProjectMenuCount: 10
+    restorePreviousWindowsOnStart: "always"
+    telemetryConsent: "no"
+    titleBar: "custom"
+  editor:
+    fontFamily: "RobotoMono-Light"
+    fontSize: 12
+    invisibles:
+      cr: " "
+    lineHeight: 1.6
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "ec31d257-4ad1-4912-9376-10166a96bd2d"
+  "one-dark-ui":
+    hideDockButtons: true
+  welcome:
+    showOnStartup: false
