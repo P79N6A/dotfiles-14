@@ -1,0 +1,17 @@
+{
+  "name": "goldfish-dark-vivid-syntax",
+  "theme": "syntax",
+  "version": "1.8.0",
+  "description": "A more vivid Goldfish Dark Syntax theme",
+  "keywords": [
+    "vivid",
+    "dark",
+    "blue",
+    "syntax"
+  ],
+  "repository": "https://github.com/simurai/goldfish-dark-vivid-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.13.0 <2.0.0"
+  }
+}

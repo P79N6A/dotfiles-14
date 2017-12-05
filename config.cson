@@ -82,11 +82,16 @@
       "welcome"
       "whitespace"
       "wrap-guide"
+      "project-manager"
     ]
     projectHome: "~/projects"
     reopenProjectMenuCount: 10
     restorePreviousWindowsOnStart: "always"
     telemetryConsent: "no"
+    themes: [
+      "goldfish-dark-ui"
+      "goldfish-dark-vivid-syntax"
+    ]
     titleBar: "custom"
   editor:
     fontFamily: "RobotoMono-Light"
@@ -101,7 +106,13 @@
     tabType: "soft"
   "exception-reporting":
     userId: "ec31d257-4ad1-4912-9376-10166a96bd2d"
+  "goldfish-dark-ui":
+    hideDockButtons: true
   "one-dark-ui":
     hideDockButtons: true
+  "project-manager":
+    savePathsRelativeToHome: true
+    showPath: false
+    sortBy: "title"
   welcome:
     showOnStartup: false

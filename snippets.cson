@@ -1,21 +1,91 @@
-# Your snippets
-#
-# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
-# expand the prefix into a larger code block with templated values.
-#
-# You can create a new snippet in this file by typing "snip" and then hitting
-# tab.
-#
-# An example CoffeeScript snippet to expand log to console.log:
-#
-# '.source.coffee':
-#   'Console log':
-#     'prefix': 'log'
-#     'body': 'console.log $1'
-#
-# Each scope (e.g. '.source.coffee' above) can only be declared once.
-#
-# This file uses CoffeeScript Object Notation (CSON).
-# If you are unfamiliar with CSON, you can read more about it in the
-# Atom Flight Manual:
-# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+'*':
+  'Single line comments':
+    'prefix': 'single-line-comments'
+    'body': '/*${1: $2 }*/$0'
+
+'.source.coffee':
+  'Add Common Paths':
+    'prefix': 'add-common-paths'
+    'body': '''
+    { title: "home", paths: [ "~/" ] }
+    { title: ".atom", paths: [ "~/.atom" ] }
+    { title: ".dotfiles", paths: [ "~/.dotfiles" ] }
+    { title: "www", paths: [ "~/www" ] }
+    { title: ".logs", paths: [ "~/.logs" ] }
+    { title: "projects", paths: [ "~/projects" ] }
+    $0
+    '''
+  'Add Path':
+    'prefix': 'add-path'
+    'body': '''
+    {
+      title: "$1"
+      paths: [
+        "$1"
+      ]
+    }$0
+    '''
+  'Add New Project':
+    'prefix': 'add-new-project'
+    'body': '''
+    {
+      title: "Project: $1"
+      paths: [
+        "~/projects/$1"
+      ]
+    }$0
+    '''
+  'Add Home Project':
+    'prefix': 'add-home-project'
+    'body': '''
+    {
+      title: "~: $1"
+      paths: [
+        "~/$1"
+      ]
+    }$0
+    '''
+  'Add Web Project':
+    'prefix': 'add-web-project'
+    'body': '''
+    {
+      title: "$1"
+      paths: [
+        "~/www/$1"
+      ]
+    }$0
+    '''
+
+'.text.html, .text.html.php':
+  'div':
+    'prefix': 'div'
+    'body': '<div class="$1">$2</div><!-- /.$1 -->$0'
+  'div.null':
+    'prefix': 'div-null'
+    'body': '<div class="$1">$2</div>$0'
+  'div#id':
+    'prefix': 'div-id'
+    'body': '<div id="$2" class="$3">$4</div>${1:<!-- /#$2 -->}$0'
+  '<?php print_r… ?>':
+    'prefix': 'pre_print_r'
+    'body': '<pre><?php print_r($1); ?></pre>$0'
+  '<?php…':
+    'prefix': 'ph'
+    'body': "<?php$1$0"
+  '<?php?>…':
+    'prefix': 'php'
+    'body': "<?php${1: $2 }?>$0"
+  '<?php if (…) { ?> … <?php } ?>':
+    'prefix': 'if'
+    'body': '<?php if ($1) { ?>\r\n\t$2\n<?php } ?>$0'
+
+'.source.php':
+  'pre…':
+    'prefix': 'pre_print_r'
+    'body': 'echo "<pre>"; print_r($1); echo "</pre>";$0'
+  'if…':
+    'prefix': 'if'
+    'body': 'if ($1) \{$2\}$0'
+  'function…':
+    'prefix': 'function'
+    'body': 'function ${1:name}($2) {\r\n\t$3\n}$0'
