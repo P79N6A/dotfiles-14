@@ -45,3 +45,45 @@ get_brew_prefix() {
 
   brew --prefix $1; return 0
 }
+
+
+gitcm() {
+  msg='upload'
+  if [[ $# == 1 ]]; then
+    msg=$1; shift
+  fi
+
+  git add .; git commit -m $msg $*
+}
+
+gitcam() {
+  msg='upload'
+  if [[ $# == 1 ]]; then
+    msg=$1; shift
+  fi
+
+  git add .; git commit -am $msg $*
+}
+
+gitsl() {
+  git status
+}
+gitss() {
+  git status --short
+}
+gitsth() {
+  git stash $*
+}
+gitchk() {
+  git checkout $*
+}
+gitre() {
+  git reset $*
+}
+
+gitph() {
+  git push $*
+}
+gitpl() {
+  git pull $*
+}
