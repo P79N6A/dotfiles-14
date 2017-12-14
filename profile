@@ -34,7 +34,7 @@ export NODE_PATH="/usr/local/opt/node@6"
 export BREW_PREFIX="`get_brew_prefix`"
 
 # Default paths
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+PATH="/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Add more additional paths
 PATH="$GEM_PATH/bin:$PATH"
 PATH="$GEM_HOME/bin:$PATH"
@@ -48,6 +48,7 @@ PATH="/usr/local/opt/libxml2/bin:$PATH"
 PATH="/usr/local/opt/php70:$PATH"
 PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 PATH="/usr/local/opt/openssl/bin:$PATH"
+PATH="/usr/local/Cellar/watchman:/usr/local/bin:$PATH"
 export PATH
 
 export PS0="PS0 "
