@@ -87,3 +87,9 @@ gitph() {
 gitpl() {
   git pull $*
 }
+
+
+
+
+
+source "$DOTFILES_PATH/lib/laravel.sh"
