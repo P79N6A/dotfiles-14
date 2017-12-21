@@ -5,9 +5,15 @@ artisan() {
 }
 
 laravel-project() {
+  echo -e "Creating new Laravel project...\n"
   composer create-project laravel/laravel $*
 
-  cd $1 && chmod -R storage bootstrap/cache database/seeds && composer install && cd ../
+  echo -e "Setting folders permission...\n"
+  cd $1
+  chmod -R 0775 storage bootstrap/cache database/seeds
+
+  echo -e "Installing require-dev packages...\n"
+  composer install
 }
 
 laravel-frontend-preset() {
