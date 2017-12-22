@@ -1,23 +1,23 @@
 #!/bin/bash
 
 
-gohome() {
+home() {
   cd "${HOME}" && [[ $# > 0 ]] && cd "./${*}"
 }
 
-goatom() {
+atom() {
   cd "${HOME}/.atom" && [[ $# > 0 ]] && cd "./${*}"
 }
 
-godot() {
+dot() {
   cd "${HOME}/.dotfiles" && [[ $# > 0 ]] && cd "./${*}"
 }
 
-gowww() {
+www() {
   cd "${HOME}/www" && [[ $# > 0 ]] && cd "./${*}"
 }
 
-goproj() {
+proj() {
   cd "${HOME}/projects" && [[ $# > 0 ]] && cd "./${*}"
 }
 
