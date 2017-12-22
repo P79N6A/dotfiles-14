@@ -53,3 +53,6 @@ alias brewu="brew uninstall"
 alias vim="vim ex"
 alias clearmail="sudo rm /var/mail/`whoami`"
 alias apmclearcache='(cd /Users/sudprawat/.atom && rm -rf blob-store compile-cache storage recovery)'
+
+alias .='_self'
+alias ..='_parent'

@@ -90,6 +90,32 @@ gitpl() {
 
 
 
+_self() {
+  path=''
+
+  if [[ $# > 0 ]]; then
+    for item in $*; do
+      path+="$item/"
+    done
+  fi
+
+  cd "./$path"
+}
+
+_parent() {
+  path=''
+
+  if [[ $# > 0 ]]; then
+    for item in $*; do
+      path+="$item/"
+    done
+  fi
+
+  cd "../$path"
+}
+
+
+
 
 
 source "$DOTFILES_PATH/lib/laravel.sh"
