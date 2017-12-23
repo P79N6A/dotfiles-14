@@ -91,15 +91,15 @@ gitpl() {
 
 
 _self() {
-  path=''
-
-  if [[ $# > 0 ]]; then
+  if [[ $# == 0 ]]; then
+    cd /
+  else
+    path=''
     for item in $*; do
       path+="$item/"
     done
+    cd "./$path"
   fi
-
-  cd "./$path"
 }
 
 _parent() {
@@ -112,6 +112,18 @@ _parent() {
   fi
 
   cd "../$path"
+}
+
+_home() {
+  path=''
+
+  if [[ $# > 0 ]]; then
+    for item in $*; do
+      path+="$item/"
+    done
+  fi
+
+  cd "$HOME/$path"
 }
 
 

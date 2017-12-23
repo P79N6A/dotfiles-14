@@ -56,3 +56,4 @@ alias apmclearcache='(cd /Users/sudprawat/.atom && rm -rf blob-store compile-cac
 
 alias .='_self'
 alias ..='_parent'
+alias ...='_home'
