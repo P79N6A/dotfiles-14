@@ -68,7 +68,3 @@ for file in $source_files; do
     rm -rf $file
   fi
 done
-
-
-# iTerm test shell integration
-# test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

@@ -47,49 +47,6 @@ get_brew_prefix() {
 }
 
 
-gitcm() {
-  msg='upload'
-  if [[ $# == 1 ]]; then
-    msg=$1; shift
-  fi
-
-  git add .; git commit -m $msg $*
-}
-
-gitcam() {
-  msg='upload'
-  if [[ $# == 1 ]]; then
-    msg=$1; shift
-  fi
-
-  git add .; git commit -am $msg $*
-}
-
-gitsl() {
-  git status
-}
-gitss() {
-  git status --short
-}
-gitsth() {
-  git stash $*
-}
-gitchk() {
-  git checkout $*
-}
-gitre() {
-  git reset $*
-}
-
-gitph() {
-  git push $*
-}
-gitpl() {
-  git pull $*
-}
-
-
-
 _self() {
   if [[ $# == 0 ]]; then
     cd /
@@ -131,3 +88,4 @@ _home() {
 
 
 source "$DOTFILES_PATH/lib/laravel.sh"
+source "$DOTFILES_PATH/lib/git.sh"
