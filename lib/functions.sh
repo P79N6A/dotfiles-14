@@ -84,7 +84,13 @@ _home() {
 }
 
 
+hidden() {
+  chflags hidden $*
+}
 
+nohidden() {
+  chflags nohidden $*
+}
 
 
 source "$DOTFILES_PATH/lib/laravel.sh"
