@@ -11,3 +11,4 @@ source "$DOTFILES_PATH/functions"
 # Shell configurations
 set_gem_home
 create_global_git_files
+set_prompt

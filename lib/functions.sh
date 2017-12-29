@@ -95,3 +95,4 @@ nohidden() {
 
 source "$DOTFILES_PATH/lib/laravel.sh"
 source "$DOTFILES_PATH/lib/git.sh"
+source "$DOTFILES_PATH/lib/prompt.sh"

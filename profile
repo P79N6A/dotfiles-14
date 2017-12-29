@@ -54,7 +54,7 @@ export PATH
 export PS0="PS0 "
 export PS1="\u [\w]: "
 export PS2="> "
-export PROMPT_COMMAND=""
+# export PROMPT_COMMAND=""
 # export PROMPT_COMMAND='STDOUT="`cat /tmp/x`"; exec >/dev/tty; exec > >(tee /tmp/x)'
 
 
