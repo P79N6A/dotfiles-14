@@ -54,10 +54,6 @@ commit_push() {
   return
 }
 
-function bar {
-  echo "$BASH_SOURCE"
-}
-
 newCommand() {
   basename="`basename(${0})`"
 
@@ -112,23 +108,6 @@ take() {
   done
 }
 
-foo() {
-  number=$1
-  shift
-
-  case $number in
-      1) echo "General errors" ;;
-      2) echo "Misuse of shell builtins" ;;
-      126) echo "Command is not an executable" ;;
-      127) echo "Command not found" ;;
-      128) echo "Invalid argument to exit" ;;
-      '128+n') echo "Fatal error signal \"n\"" ;;
-      130) echo "Script terminated" ;;
-      255*) echo "Exit status out of range" ;;
-      0) exit ;;
-  esac
-}
-
 flushdns() {
   (sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && say -f in "Cache flushed")
 }
@@ -148,77 +127,6 @@ ver() {
   fi
 }
 
-brew_search() {
-  basename="$FUNCNAME"
-  search_for=""
-
-  if [[ $# != 1 ]]; then
-    ee "
-NAME: $basename
-USAGE
-  $basename keyword
-
-DESCRIPTION
-  xxx
-"; return 1
-  fi
-
-  search_for="$1"; shift
-
-  ee "\n""======== REMOTE FORMULAS ========\n"
-
-  brew desc -s $search_for
-
-  ee ""
-
-  return
-
-  # selection=''
-  # output=''
-  #
-  # output=`brew search --desc $*`
-  # until [[ $selection == 'q' ]]; do
-  #   clear
-  #   echo -e "\n${output}\n\n(END)\n\n" | grep $*
-  #   # echo -ne "\n${output}\n\n(END)" | grep $*
-  #   read -n 1 selection && echo
-  #
-  #   case $selection in
-  #       q ) clear; return;;
-  #       * ) clear;;
-  #   esac
-  # done
-  # brew desc -s $* | (less | grep $*)
-  # brew search $* -e brew info {} \;
-}
-
-# 1b 5b 46 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 63 6c 65 61 72 0d
-# 1b 5b 46 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 72 65 6c 6f 61 64 5f 73 68 65 6c 6c 0d
-
 ee() {
   echo -e "$1"; return
-}
-
-gem_search() {
-  basename="$FUNCNAME"
-  search_for=""
-
-  if [[ $# != 1 ]]; then
-    ee "
-NAME: $basename
-USAGE
-  $basename keyword
-
-DESCRIPTION
-  xxx
-"; return 1
-  fi
-
-  search_for="$1"; shift
-
-  gem search $search_for --details
-
-  ee ""
-
-  return
 }

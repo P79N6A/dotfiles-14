@@ -13,6 +13,7 @@ prompt() {
   unstaged=''
   uncommitted=''
   unstashed=''
+  git_branch=''
 
   ref="$(git symbolic-ref HEAD 2> /dev/null)"
   if [[ $? != 0 ]]; then
@@ -21,7 +22,7 @@ prompt() {
   fi
 
   branch="$(echo $ref | grep -e [^\/]*$ -io)"
-  [[ $branch ]] && branch="  ${branch}"
+  [[ $branch ]] && branch="${branch}"
 
   # [[ -n `git status ${FLAGS} 2> /dev/null | tail -n1` ]] && is_dirty=1
 
@@ -31,29 +32,41 @@ prompt() {
   [[ `echo "$index" | grep -E '^ [A-Z] '` ]] && unstaged=1 && is_dirty=1
   [[ `echo "$index" | grep -E '^[A-Z]  '` ]] && uncommitted=1 && is_dirty=1
 
-  [[ $untracked ]] && untracked='?'
-  [[ $uncommitted ]] && uncommitted='+'
-  [[ $unstaged ]] && unstaged='!'
-  [[ $unstashed ]] && unstashed='⁉'
+  [[ $untracked ]] && untracked="?"
+  [[ $uncommitted ]] && uncommitted="+"
+  [[ $unstaged ]] && unstaged="!"
+  [[ $unstashed ]] && unstashed="⁉"
 
-  [[ $is_dirty = 1 ]] && status+=' '
+  # [[ $is_dirty = 1 ]] && status+=" "
   status+="${untracked}"
   status+="${unstaged}"
   status+="${uncommitted}"
   status+="${unstashed}"
 
+  [[ $is_dirty = 1 ]] && git_branch=" on ${RED}${branch}${NC} ${GREEN}${status}${NC}"
+
   prompt_update;
 }
 
 prompt_update() {
-  user="\u"
+  if [[ `id -u` == 0 ]]; then
+    user="${RED}\u${NC}"
+  else
+    user="${PURPLE}\u${NC}"
+  fi
+  user=''
+
   host=""
   # host=" at \h"
-  dir=" [ \w]"
-  ps1=" "
-  ps2=" "
+  dir="${PURPLE}\w${NC}"
+  if [[ `id -u` == 0 ]]; then
+    ps1="${RED}$ ${NC}"
+  else
+    ps1="${WHITE}$ ${NC}"
+  fi
+  ps2="- "
 
-  PS1="${user}${host}${dir}${branch}${status}";
+  PS1="${user}${host}${dir}${git_branch}";
   PS1+="\n";
   PS1+="${ps1}";
   export PS1;

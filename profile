@@ -27,6 +27,7 @@ export MANPAGER='less -X';
 export GPG_TTY=$(tty);
 export EDITOR="Atom";
 export MAILCHECK="0"
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 
 # Paths
 export COMPOSER_PATH="$HOME/.composer/vendor"
@@ -48,23 +49,15 @@ PATH="/usr/local/opt/libxml2/bin:$PATH"
 PATH="/usr/local/opt/php70:$PATH"
 PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 PATH="/usr/local/opt/openssl/bin:$PATH"
-PATH="/usr/local/Cellar/watchman:/usr/local/bin:$PATH"
+PATH="/usr/local/Cellar/watchman:$PATH"
+PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+PATH="/usr/local/bin:$PATH"
 export PATH
 
 export PS0="PS0 "
 export PS1="\u [\w]: "
 export PS2="> "
-# export PROMPT_COMMAND=""
 # export PROMPT_COMMAND='STDOUT="`cat /tmp/x`"; exec >/dev/tty; exec > >(tee /tmp/x)'
 
 
-source_files=("$HOME/.bashrc $HOME/.exrc $HOME/.gemrc $HOME/.npmrc $HOME/.vimrc")
-for file in $source_files; do
-  basename_file="$(basename $file | perl -pe 's/\.//gi')"
-
-  if [[ -e "$DOTFILES_PATH/$basename_file" && "`cat \"$DOTFILES_PATH/$basename_file\" 2>/dev/null`" != "" ]]; then
-    cp "$DOTFILES_PATH/$basename_file" "$file"
-  else
-    rm -rf $file
-  fi
-done
+load_additional_files

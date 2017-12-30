@@ -47,6 +47,20 @@ get_brew_prefix() {
 }
 
 
+load_additional_files() {
+  source_files=("$HOME/.bashrc $HOME/.exrc $HOME/.gemrc $HOME/.npmrc $HOME/.vimrc $HOME/.ackrc")
+  for file in $source_files; do
+    basename_file="$(basename $file | perl -pe 's/\.//gi')"
+
+    if [[ -e "$DOTFILES_PATH/$basename_file" && "`cat \"$DOTFILES_PATH/$basename_file\" 2>/dev/null`" != "" ]]; then
+      cp "$DOTFILES_PATH/$basename_file" "$file"
+    else
+      rm -rf $file
+    fi
+  done
+}
+
+
 _self() {
   if [[ $# == 0 ]]; then
     cd /
@@ -93,6 +107,39 @@ nohidden() {
 }
 
 
+foo() {
+  names=( "Aaron Maxwell" "Wayne Gretzky" "David Beckham" "Anderson da Silva" )
+
+echo "With default IFS value..."
+for name in ${names[@]}; do
+  echo "$name"
+done
+
+echo ""
+echo "With strict-mode IFS value..."
+IFS=$'\n\t'
+for name in ${names[@]}; do
+  echo "$name"
+done
+}
+
+
+grep_search() {
+  file=\*.php
+  grep -RHn --include $file "Controller" "."
+}
+
+
+curdate() {
+  date "+DATE: %Y-%m-%d"
+}
+
+curtime() {
+  date "+TIME: %H:%M:%S"
+}
+
+
+source "$DOTFILES_PATH/lib/colors.sh"
 source "$DOTFILES_PATH/lib/laravel.sh"
 source "$DOTFILES_PATH/lib/git.sh"
 source "$DOTFILES_PATH/lib/prompt.sh"
