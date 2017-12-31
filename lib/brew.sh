@@ -28,3 +28,4 @@
 # brew install wget
 # brew install wp-cli
 # brew install tig
+# brew install git-extras

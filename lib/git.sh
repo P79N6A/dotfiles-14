@@ -29,6 +29,27 @@ git_diff_stat() {
   git diff --stat
 }
 
+git_shortlog() {
+  head=''
+  if [[ $# == 1 ]]; then
+    head="HEAD~$1.."; shift
+  fi
+
+  git shortlog $head
+}
+
+git_search_commit() {
+  message=""
+  if [[ $# != 1 ]]; then
+    echo -e "Please put some keywords"
+    return 1
+  else
+    message="$1"; shift
+  fi
+
+  git log --grep="$message"
+}
+
 git_log() {
   ## Commit
   # %H	commit hash
@@ -45,4 +66,8 @@ git_log() {
     format=$1; shift
   fi
   git log --pretty="format:$format"
+}
+
+git_report() {
+  (git summary && git effort)
 }
