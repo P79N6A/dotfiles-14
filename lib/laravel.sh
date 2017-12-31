@@ -28,3 +28,7 @@ laravel-frontend-preset() {
 #   composer require laravelnews/laravel-twbs4
 #   php artisan preset bootstrap4-auth
 # }
+
+tinker() {
+  artisan tinker
+}

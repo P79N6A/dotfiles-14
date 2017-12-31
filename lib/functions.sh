@@ -108,19 +108,72 @@ nohidden() {
 
 
 foo() {
-  names=( "Aaron Maxwell" "Wayne Gretzky" "David Beckham" "Anderson da Silva" )
+  version=''
+  string=''
+  flag='0'
 
-echo "With default IFS value..."
-for name in ${names[@]}; do
-  echo "$name"
-done
+  while [[ "$1" =~ ^- && ! "$1" == "--" ]]; do
+    case $1 in
+      -V | --version)
+        echo $version
+        exit
+        ;;
+      -s | --string)
+        shift;
+        string=$1
+        ;;
+      -f | --flag)
+        flag=1
+        ;;
+    esac
+    shift
+  done
 
-echo ""
-echo "With strict-mode IFS value..."
-IFS=$'\n\t'
-for name in ${names[@]}; do
-  echo "$name"
-done
+  if [[ "$1" == '--' ]]; then
+    shift
+  fi
+
+  echo $version
+  echo $string
+  echo $flag
+
+
+  # names=( "Aaron Maxwell" "Wayne Gretzky" "David Beckham" "Anderson da Silva" )
+  # echo "With default IFS value..."
+  # for name in ${names[@]}; do
+  #   echo "$name"
+  # done
+  #
+  # echo ""
+  # echo "With strict-mode IFS value..."
+  # IFS=$'\n\t'
+  # for name in ${names[@]}; do
+  #   echo "$name"
+  # done
+}
+
+
+git_show() {
+  head=0
+  if [[ $# == 1 ]]; then
+    head=$1; shift
+  fi
+  git show --pretty="format:" --name-only HEAD~$head
+}
+
+
+heredoc() {
+  cat <<END
+hello world
+END
+}
+
+
+reading() {
+  echo -n "Proceed? [y/n]: "
+  read ans
+  echo $ans
+  read -n 1 ans # Just one character
 }
 
 

@@ -9,6 +9,7 @@ source "$DOTFILES_PATH/lib/configs.sh"
 
 ## Custom shell variables configuration
 # Others
+export MAILCHECK=-1
 export TERM="xterm-256color"
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
