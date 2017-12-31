@@ -153,15 +153,6 @@ foo() {
 }
 
 
-git_show() {
-  head=0
-  if [[ $# == 1 ]]; then
-    head=$1; shift
-  fi
-  git show --pretty="format:" --name-only HEAD~$head
-}
-
-
 heredoc() {
   cat <<END
 hello world
