@@ -27,3 +27,4 @@
 # brew install watchman
 # brew install wget
 # brew install wp-cli
+# brew install tig
