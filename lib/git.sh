@@ -71,3 +71,7 @@ git_log() {
 git_report() {
   (git summary && git effort)
 }
+
+git_fork() {
+  git fork $1
+}

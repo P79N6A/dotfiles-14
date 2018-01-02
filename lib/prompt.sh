@@ -22,7 +22,7 @@ prompt() {
   fi
 
   branch="$(echo $ref | grep -e [^\/]*$ -io)"
-  [[ $branch ]] && branch="${branch}"
+  [[ $branch ]] && branch="$branch"
 
   # [[ -n `git status ${FLAGS} 2> /dev/null | tail -n1` ]] && is_dirty=1
 
@@ -38,40 +38,38 @@ prompt() {
   [[ $unstashed ]] && unstashed="⁉"
 
   # [[ $is_dirty = 1 ]] && status+=" "
-  status+="${untracked}"
-  status+="${unstaged}"
-  status+="${uncommitted}"
-  status+="${unstashed}"
+  status+="$untracked"
+  status+="$unstaged"
+  status+="$uncommitted"
+  status+="$unstashed"
 
-  [[ $is_dirty = 1 ]] && git_branch=" on ${RED}${branch}${NC} ${GREEN}${status}${NC}"
+  [[ $is_dirty = 1 ]] && git_branch=" "$WHITE" $branch$R $CYAN$status$R"
 
   prompt_update;
 }
 
 prompt_update() {
-  if [[ `id -u` == 0 ]]; then
-    user="${RED}\u${NC}"
-  else
-    user="${PURPLE}\u${NC}"
-  fi
   user=''
-
-  host=""
+  # if [[ `id -u` == 0 ]]; then
+  #   user="$RED\u$R"
+  # else
+  #   user="$PURPLE\u$R"
+  # fi
+  host=''
   # host=" at \h"
-  dir="${PURPLE}\w${NC}"
+  dir=''
+  dir=$PURPLE"\w"$R
   if [[ `id -u` == 0 ]]; then
-    ps1="${RED}$ ${NC}"
+    ps1='$ '
   else
-    ps1="${WHITE}$ ${NC}"
+    ps1=' '
   fi
-  ps2="- "
+  ps2='- '
 
-  PS1="${user}${host}${dir}${git_branch}";
-  PS1+="\n";
-  PS1+="${ps1}";
+  PS1="$user$host$dir$git_branch\n$ps1";
   export PS1;
 
-  PS2="${ps2}";
+  PS2="$ps2";
   export PS2;
 }
 

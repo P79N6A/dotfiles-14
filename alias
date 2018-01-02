@@ -54,7 +54,5 @@ alias vim="vim ex"
 alias clearmail="sudo rm /var/mail/`whoami`"
 alias apmclearcache='(cd /Users/sudprawat/.atom && rm -rf blob-store compile-cache storage recovery)'
 
-alias .='_self'
-alias ..='_parent'
-alias ...='_home'
+alias pd='_parent'
 alias bd='_home'
