@@ -180,7 +180,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>582 303 721 170 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>292 395 796 473 0 0 1920 1177 </string>
+	<string>292 376 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 53 1920 1124 0 0 1920 1177 </string>
 	<key>NeverWarnAboutSpaces</key>
@@ -907,7 +907,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>DroidSansMono 12</string>
+			<string>FiraMono-Regular 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
