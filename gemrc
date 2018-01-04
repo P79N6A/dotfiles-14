@@ -10,3 +10,8 @@ update:
   --no-rdoc
   --bindir ~/.gem/bin
   --install-dir ~/.gem
+uninstall:
+  --no-ri
+  --no-rdoc
+  --bindir ~/.gem/bin
+  --install-dir ~/.gem

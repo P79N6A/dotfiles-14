@@ -1,5 +1,73 @@
 #!/bin/bash
 
+xcode_select_install() {
+  if [[ `command -v xcode-select` == '' ]]; then
+    xcode-select --install
+  fi
+}
+
+flushdns() {
+  (sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && say -f in "Cache flushed")
+}
+
+search() {
+  find $1 -name $2 -type $3;
+  # find . -name "*.c" -type f -exec ls -l {} \;
+}
+
+reload_shell() {
+  clear; exec $SHELL -l;
+}
+
+ver() {
+  if [[ $# == 1 ]]; then
+    $1 --version 2> /dev/null
+  fi
+}
+
+ee() {
+  echo -e $*
+}
+
+newCommand() {
+  basename="`basename(${0})`"
+
+  command_name=""
+  target_directory="${DOTFILES_PATH}/.bin"
+
+  if [[ $# == 0 ]]; then
+    ee "
+NAME: ${basename} -- Create new shell command
+DESCRIPTION:
+  The By default all of these output lines are sorted first by controlling terminal, then by process ID.
+USAGE: command_name [target_directory]
+OPTIONS:
+  tar
+"
+    return 1
+  fi
+}
+
+home() {
+  cd "${HOME}" && [[ $# > 0 ]] && cd "./${*}"
+}
+
+atm() {
+  cd "${HOME}/.atom" && [[ $# > 0 ]] && cd "./${*}"
+}
+
+dot() {
+  cd "${HOME}/.dotfiles" && [[ $# > 0 ]] && cd "./${*}"
+}
+
+www() {
+  cd "${HOME}/www" && [[ $# > 0 ]] && cd "./${*}"
+}
+
+proj() {
+  cd "${HOME}/projects" && [[ $# > 0 ]] && cd "./${*}"
+}
+
 install_required_packages() {
   if [[ "`command -v composer 2>/dev/null`" == '' ]]; then
     # Install composer
@@ -24,8 +92,6 @@ set_gem_home() {
 
   export GEM_HOME="$HOME/.gem";
   export GEM_PATH="$GEM_HOME/gems"
-  # export GEM_PATH="$GEM_HOME/ruby/2.0.0"
-  # export GEM_PATH="/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/gems/2.0.0/gems"
 }
 
 
@@ -186,6 +252,8 @@ curtime() {
 
 
 source "$DOTFILES_PATH/lib/colors.sh"
+source "$DOTFILES_PATH/lib/gem.sh"
 source "$DOTFILES_PATH/lib/laravel.sh"
 source "$DOTFILES_PATH/lib/git.sh"
 source "$DOTFILES_PATH/lib/prompt.sh"
+source "$DOTFILES_PATH/lib/npm.sh"

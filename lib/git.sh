@@ -1,5 +1,13 @@
 #!bin/bash
 
+git_status() {
+  if [[ $# == 1 && $1 == '-s' ]]; then
+    git status --short
+  else
+    git status
+  fi
+}
+
 git_clone() {
   if [[ $# == 0 || $# > 2 ]]; then
     echo -e 'usage: repository [target_dir]'

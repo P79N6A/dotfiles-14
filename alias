@@ -26,29 +26,6 @@ alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 alias v="command -v"
-alias npm?="npm search"
-alias npmi="npm install"
-alias npmu="npm uninstall"
-alias npmig="npm install -g"
-alias npmug="npm uninstall -g"
-alias apm?="apm search"
-alias apmi="apm install"
-alias apmu="apm uninstall"
-alias apmls="apm list"
-alias comp?="composer search"
-alias compreq="composer require"
-alias compreqg="composer global require"
-alias comprem="composer require"
-alias compremg="composer global require"
-
-alias gemi="gem install"
-alias gemun="gem uninstall"
-alias gems="gem search"
-alias gemsd="gem search --details"
-
-alias brew?="brew_search"
-alias brewi="brew install"
-alias brewu="brew uninstall"
 
 alias vim="vim ex"
 alias clearmail="sudo rm /var/mail/`whoami`"
@@ -56,3 +33,25 @@ alias apmclearcache='(cd /Users/sudprawat/.atom && rm -rf blob-store compile-cac
 
 alias pd='_parent'
 alias bd='_home'
+
+alias laravel-create="composer create-project --prefer-dist laravel/laravel"
+alias laravel-mod="chmod -R 0775 bootstrap/cache storage database/seeds"
+
+alias gems="gem search"
+alias gemi="gem install"
+alias geml="gem list"
+alias gemun="gem list"
+
+alias npms="npm search"
+alias npmi="npm install"
+alias npml="npm list"
+
+alias brews="brew search"
+alias brewi="brew install"
+alias brewl="brew list"
+alias brewinfo="brew search --desc"
+
+# alias sugem="sudo gem"
+# alias sugems="sugem search"
+# alias sugemi="sugem install"
+# alias sugeml="sugem list"
