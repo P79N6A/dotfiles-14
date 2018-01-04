@@ -38,8 +38,8 @@ export BREW_PREFIX="`get_brew_prefix`"
 # Default paths
 PATH="/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Add more additional paths
-PATH="$GEM_PATH/bin:$PATH"
-PATH="$GEM_HOME/bin:$PATH"
+# PATH="$GEM_PATH/bin:$PATH"
+# PATH="$GEM_HOME/bin:$PATH"
 PATH="$COMPOSER_PATH/bin:$PATH"
 PATH="$NODE_PATH/bin:$PATH"
 PATH="$DOTFILES_PATH/bin:$PATH"

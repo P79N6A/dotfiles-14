@@ -116,7 +116,8 @@ get_brew_prefix() {
 
 
 load_additional_files() {
-  source_files=("$HOME/.bashrc $HOME/.exrc $HOME/.gemrc $HOME/.npmrc $HOME/.vimrc $HOME/.ackrc")
+  source_files=("$HOME/.bashrc $HOME/.exrc $HOME/.npmrc $HOME/.vimrc $HOME/.ackrc")
+  # source_files=("$HOME/.bashrc $HOME/.exrc $HOME/.gemrc $HOME/.npmrc $HOME/.vimrc $HOME/.ackrc")
   for file in $source_files; do
     basename_file="$(basename $file | perl -pe 's/\.//gi')"
 

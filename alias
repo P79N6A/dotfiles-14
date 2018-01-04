@@ -37,6 +37,7 @@ alias bd='_home'
 alias laravel-create="composer create-project --prefer-dist laravel/laravel"
 alias laravel-mod="chmod -R 0775 bootstrap/cache storage database/seeds"
 
+alias gem="sudo gem"
 alias gems="gem search"
 alias gemi="gem install"
 alias geml="gem list"
@@ -50,6 +51,8 @@ alias brews="brew search"
 alias brewi="brew install"
 alias brewl="brew list"
 alias brewinfo="brew search --desc"
+
+alias brewclean='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
 # alias sugem="sudo gem"
 # alias sugems="sugem search"
