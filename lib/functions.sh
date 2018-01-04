@@ -23,7 +23,9 @@ set_gem_home() {
   gem_path="`echo -e \"${gem_paths//:/\\n}\" | head -n1`"
 
   export GEM_HOME="$HOME/.gem";
-  export GEM_PATH="$gem_path"
+  export GEM_PATH="$GEM_HOME/gems"
+  # export GEM_PATH="$GEM_HOME/ruby/2.0.0"
+  # export GEM_PATH="/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/gems/2.0.0/gems"
 }
 
 
