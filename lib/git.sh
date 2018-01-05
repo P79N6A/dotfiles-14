@@ -9,7 +9,7 @@ git_commit_push() {
       -m | --message )
         shift; message="$1" ;;
       -p | --push )
-        shift; push="$1"; flag=1 ;;
+        shift; push="$1 $2"; shift; flag=1 ;;
       -- )
         shift ;;
     esac
@@ -19,7 +19,7 @@ git_commit_push() {
   git add .
   git commit -m "$message"
   if [[ $flag == 1 ]]; then
-    git push $push
+    git push "$push"
   fi
 }
 
