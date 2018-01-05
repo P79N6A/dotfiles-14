@@ -12,7 +12,8 @@ git_commit_push() {
         shift; push="$1 $2"; shift; flag=1 ;;
       -- )
         shift ;;
-    esac; shift
+    esac
+    shift
   done
 
   git add .
