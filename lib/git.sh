@@ -2,13 +2,14 @@
 
 git_commit_push() {
   message='upload'
-  push='origin master'
+  push=''
+  flag='0'
   while [[ $1 =~ ^- && ! $1 == '--' ]]; do
     case $1 in
       -m | --message )
         shift; message="$1" ;;
       -p | --push )
-        shift; push="$1" ;;
+        shift; push="$1"; flag=1 ;;
       -- )
         shift ;;
     esac
@@ -17,7 +18,9 @@ git_commit_push() {
 
   git add .
   git commit -m "$message"
-  git push $push
+  if [[ $flag == 1 ]]; then
+    git push $push
+  fi
 }
 
 git_status() {
