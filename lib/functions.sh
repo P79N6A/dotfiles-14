@@ -1,9 +1,60 @@
 #!/bin/bash
 
+source_reload() {
+  source "$DOTFILES_PATH/lib/colors.sh"
+  source "$DOTFILES_PATH/lib/gem.sh"
+  source "$DOTFILES_PATH/lib/laravel.sh"
+  source "$DOTFILES_PATH/lib/git.sh"
+  source "$DOTFILES_PATH/lib/prompt.sh"
+  source "$DOTFILES_PATH/lib/npm.sh"
+
+  # load_additional_files
+}
+
 xcode_select_install() {
   if [[ `command -v xcode-select` == '' ]]; then
     xcode-select --install
   fi
+}
+
+is_numeric() {
+  php -r "error_reporting(0); if (!is_int(${1})) { echo '0'; }"
+}
+
+throw() {
+  message='Whoop! Something went wrong'
+  flag=0
+  while [[ $1 =~ ^- && ! $1 == '--' ]]; do
+    case $1 in
+      -m | --message )
+        shift; message=$1
+        ;;
+      -w | --warning )
+        flag=3
+        ;;
+      -e | --error )
+        flag=2
+        ;;
+      -s | --success )
+        flag=1
+        ;;
+      -- )
+        shift
+        ;;
+    esac; shift
+  done
+
+  if [[ $flag == 0 ]]; then
+    message="$CYAN${message}$R"
+  elif [[ $flag == 1 ]]; then
+    message="$GREEN${message}$R"
+  elif [[ $flag == 2 ]]; then
+    message="$RED${message}$R"
+  elif [[ $flag == 3 ]]; then
+    message="$YELLOW${message}$R"
+  fi
+
+  printf "$message"
 }
 
 flushdns() {
@@ -250,11 +301,3 @@ curdate() {
 curtime() {
   date "+TIME: %H:%M:%S"
 }
-
-
-source "$DOTFILES_PATH/lib/colors.sh"
-source "$DOTFILES_PATH/lib/gem.sh"
-source "$DOTFILES_PATH/lib/laravel.sh"
-source "$DOTFILES_PATH/lib/git.sh"
-source "$DOTFILES_PATH/lib/prompt.sh"
-source "$DOTFILES_PATH/lib/npm.sh"

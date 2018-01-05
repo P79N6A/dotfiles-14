@@ -61,4 +61,4 @@ export PS2="> "
 # export PROMPT_COMMAND='STDOUT="`cat /tmp/x`"; exec >/dev/tty; exec > >(tee /tmp/x)'
 
 
-load_additional_files
+# load_additional_files

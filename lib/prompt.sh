@@ -1,6 +1,17 @@
 #!bin/bash
 
-let is_dirty branch status user host dir ps1 ps2 untracked unstaged uncommitted unstashed
+is_dirty=''
+branch=''
+status=''
+user=''
+host=''
+dir=''
+ps1=''
+ps2=''
+untracked=''
+unstaged=''
+uncommitted=''
+unstashed=''
 
 prompt() {
   local ref index
