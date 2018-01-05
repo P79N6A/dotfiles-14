@@ -22,7 +22,7 @@ git_commit_push() {
 
   git add .
   git commit -m "$message"
-  git push "$push"
+  git push $push
 }
 
 git_status() {
