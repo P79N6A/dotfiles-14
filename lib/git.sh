@@ -9,11 +9,7 @@ git_commit_push() {
       -m | --message )
         shift; message="$1" ;;
       -p | --push )
-        shift; flag=1
-        if [[ ! $1 =~ ^- ]]; then
-          push="$1 $2"; shift
-        fi
-        ;;
+        shift; push="$1"; flag=1 ;;
       -- )
         shift ;;
     esac
