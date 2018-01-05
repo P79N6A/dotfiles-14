@@ -19,7 +19,7 @@ git_commit_push() {
   git add .
   git commit -m "$message"
   if [[ $flag == 1 ]]; then
-    git push "$push"
+    git push $push
   fi
 }
 
