@@ -9,7 +9,7 @@ git_commit_push() {
       -m | --message )
         shift; message="$1" ;;
       -p | --push )
-        shift; push="$1"; shift; push+="$1"; flag=1 ;;
+        shift; push="$1"; shift; push+=" $1"; flag=1 ;;
       -- )
         shift ;;
     esac
