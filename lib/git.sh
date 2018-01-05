@@ -6,18 +6,12 @@ git_commit_push() {
   while [[ $1 =~ ^- && ! $1 == '--' ]]; do
     case $1 in
       -m | --message )
-        shift
-        message="$1"
-        ;;
+        shift; message="$1" ;;
       -p | --push )
-        shift
-        push="$1"
-        ;;
+        shift; push="$1" ;;
       -- )
-        shift
-        ;;
-    esac
-    shift
+        shift ;;
+    esac; shift
   done
 
   git add .
