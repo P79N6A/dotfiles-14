@@ -135,6 +135,8 @@
 	<integer>80</integer>
 	<key>MinTabWidth</key>
 	<integer>80</integer>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/settings</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -170,6 +172,8 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>961 157 752 384 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>405 344 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -898,7 +902,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGS-Regular 12</string>
+			<string>RobotoMono-Light 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>

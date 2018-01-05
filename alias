@@ -45,7 +45,6 @@ alias gemun="gem list"
 
 alias npms="npm search"
 alias npmi="npm install"
-alias npml="npm list"
 
 alias brews="brew search"
 alias brewi="brew install"

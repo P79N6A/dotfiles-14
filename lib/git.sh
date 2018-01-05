@@ -1,5 +1,24 @@
 #!bin/bash
 
+git_commit_push() {
+  message='upload'
+  push='origin master'
+  while [[ $1 =~ ^- && ! $1 == '--' ]]; do
+    case $1 in
+      -m | --message )
+        shift; message=$1 ;;
+      -p | --push )
+        shift; push=$1 ;;
+      -- )
+        shift ;;
+    esac; shift
+  done
+
+  git add .
+  git commit -m $message
+  git push $push
+}
+
 git_status() {
   if [[ $# == 1 && $1 == '-s' ]]; then
     git status --short
