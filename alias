@@ -53,7 +53,7 @@ alias brewinfo="brew search --desc"
 
 alias brewclean='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
-# alias sugem="sudo gem"
-# alias sugems="sugem search"
-# alias sugemi="sugem install"
-# alias sugeml="sugem list"
+alias compre="composer require"
+alias compreg="composer global require"
+alias compcr="composer create-project"
+alias comps="composer search"
