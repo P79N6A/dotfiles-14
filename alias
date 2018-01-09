@@ -57,3 +57,7 @@ alias compre="composer require"
 alias compreg="composer global require"
 alias compcr="composer create-project"
 alias comps="composer search"
+
+localbin() {
+  la /usr/local/bin
+}
