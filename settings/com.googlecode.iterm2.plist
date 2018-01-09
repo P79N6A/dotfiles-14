@@ -180,7 +180,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1101 110 753 397 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>431 325 796 473 0 0 1920 1057 </string>
+	<string>431 313 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 52 1920 1005 0 0 1920 1057 </string>
 	<key>NeverWarnAboutSpaces</key>
@@ -907,7 +907,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SFMono-Light 12</string>
+			<string>Hack-Regular 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -1710,7 +1710,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-08T02:46:58Z</date>
+	<date>2018-01-09T03:40:25Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Installed: tern
+
 npml() {
   re='^[0-9]+$'
 
