@@ -7,6 +7,7 @@ source_reload() {
   source "$DOTFILES_PATH/lib/git.sh"
   source "$DOTFILES_PATH/lib/prompt.sh"
   source "$DOTFILES_PATH/lib/npm.sh"
+  source "$DOTFILES_PATH/lib/youtube.sh"
 
   # load_additional_files
 }

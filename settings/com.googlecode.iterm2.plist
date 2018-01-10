@@ -172,17 +172,12 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1101 110 753 397 0 0 1920 1057 </string>
+	<string>961 157 752 384 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>431 313 796 473 0 0 1920 1057 </string>
+	<string>405 325 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 52 1920 1005 0 0 1920 1057 </string>
+	<string>0 53 1920 1124 0 0 1920 1177 </string>
 	<key>NeverWarnAboutSpaces</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -993,7 +988,7 @@
 			<key>Thin Strokes</key>
 			<integer>0</integer>
 			<key>Transparency</key>
-			<real>0.077623334390862914</real>
+			<real>0.13828124999999997</real>
 			<key>Underline Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1628,18 +1623,16 @@
 			<string>/Users/sudprawat</string>
 		</dict>
 	</array>
-	<key>NoSyncCoprocessCommandsToIgnoreErrorOutput</key>
-	<array>
-		<string>tput home</string>
-	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>3174284D-BE22-4B54-BEC6-98A06A91EF4E</string>
+	<string>90F382E4-9116-44EB-AB00-F18FF03F4E8E</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>533641258.678617</real>
+	<real>536755574.80237103</real>
 	<key>OpenFileInNewWindows</key>
 	<true/>
 	<key>OpenTmuxWindowsIn</key>
@@ -1686,7 +1679,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/Fineart/.dotfiles/settings</string>
+	<string>/Users/sudprawat/.dotfiles/settings</string>
 	<key>PreventEscapeSequenceFromClearingHistory</key>
 	<true/>
 	<key>PromptForPasteWhenNotAtPrompt</key>
@@ -1702,18 +1695,14 @@
 	<key>RunJobsInServers</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=1</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=47</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
-	<key>SULastCheckTime</key>
-	<date>2018-01-09T03:40:25Z</date>
 	<key>SUSendProfileInfo</key>
-	<false/>
-	<key>Secure Input</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>

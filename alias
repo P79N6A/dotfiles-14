@@ -41,13 +41,15 @@ alias gem="sudo gem"
 alias gems="gem search"
 alias gemi="gem install"
 alias geml="gem list"
-alias gemun="gem list"
+alias gemun="gem uninstall"
 
 alias npms="npm search"
 alias npmi="npm install"
+alias npmun="npm uninstall"
 
 alias brews="brew search"
 alias brewi="brew install"
+alias brewun="brew uninstall"
 alias brewl="brew list"
 alias brewinfo="brew search --desc"
 
@@ -57,6 +59,8 @@ alias compre="composer require"
 alias compreg="composer global require"
 alias compcr="composer create-project"
 alias comps="composer search"
+alias comprem="composer remove"
+alias compremg="composer global remove"
 
 localbin() {
   la /usr/local/bin
