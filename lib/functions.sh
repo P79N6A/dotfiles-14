@@ -159,11 +159,7 @@ create_global_git_files() {
 
 
 get_brew_prefix() {
-  if [[ $# != 1 ]]; then
-    brew --prefix; return 0
-  fi
-
-  brew --prefix $1; return 0
+  export BREW_PREFIX="`brew --prefix`"
 }
 
 
@@ -301,4 +297,14 @@ curdate() {
 
 curtime() {
   date "+TIME: %H:%M:%S"
+}
+
+
+cls() {
+  flag=$CLEAR_SCREEN
+  if [[ $flag != 1 ]]; then
+    export CLEAR_SCREEN=1
+  else
+    export CLEAR_SCREEN=0
+  fi
 }

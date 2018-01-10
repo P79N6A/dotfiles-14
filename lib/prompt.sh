@@ -56,7 +56,9 @@ prompt() {
 
   [[ $is_dirty = 1 ]] && git_branch=" "$WHITE" $branch$R $CYAN$status$R"
 
-  prompt_update;
+  prompt_update
+
+  [[ $CLEAR_SCREEN == 1 ]] && clear
 }
 
 prompt_update() {

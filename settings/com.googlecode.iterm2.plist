@@ -32,6 +32,7 @@
 	<integer>14</integer>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>printf '\x1b\x5b\x41'</string>
 		<string>printf 'reload_shell'</string>
 		<string>`reload_shell`</string>
 		<string>(reload_shell)</string>
@@ -51,7 +52,6 @@
 		<string>printf '\x18'</string>
 		<string>printf '\x1b\x5b\x17'</string>
 		<string>printf '\x1b\x5b\x18'</string>
-		<string>printf '\x1b\x5b\x4b'</string>
 	</array>
 	<key>CopySelection</key>
 	<false/>

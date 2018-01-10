@@ -64,9 +64,13 @@ alias compremg="composer global remove"
 
 alias apmi="apm install"
 alias apmun="apm uninstall"
-alias apms="apm search"
+alias apms='apm search'
 alias apminfo="apm view"
 
 localbin() {
   la /usr/local/bin
+}
+
+github_clone() {
+  git clone https://github.com/$1 $2
 }
