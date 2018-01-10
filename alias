@@ -62,6 +62,11 @@ alias comps="composer search"
 alias comprem="composer remove"
 alias compremg="composer global remove"
 
+alias apmi="apm install"
+alias apmun="apm uninstall"
+alias apms="apm search"
+alias apminfo="apm show"
+
 localbin() {
   la /usr/local/bin
 }
