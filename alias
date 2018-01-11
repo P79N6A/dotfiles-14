@@ -51,7 +51,11 @@ alias brews="brew search"
 alias brewi="brew install"
 alias brewun="brew uninstall"
 alias brewl="brew list"
-alias brewinfo="brew search --desc"
+alias brewinfo="brew info"
+alias brewdesc="brew desc"
+alias brewtest="brew test"
+alias brewtests="brew tests"
+alias brewupg="brew upgrade"
 
 alias brewclean='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
@@ -66,6 +70,8 @@ alias apmi="apm install"
 alias apmun="apm uninstall"
 alias apms='apm search'
 alias apminfo="apm view"
+
+alias port="sudo port"
 
 localbin() {
   la /usr/local/bin

@@ -29,31 +29,21 @@ export MANPAGER='less -X'
 export GPG_TTY=$(tty);
 export EDITOR='Atom'
 export MAILCHECK=0
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 
 # Paths
 export COMPOSER_PATH=~/.composer/vendor
-export NODE_PATH=/usr/local/opt/node@9:/usr/local/lib/node_modules
+export NODE_PATH="/usr/local/opt/node@9:/usr/local/lib/node_modules"
 
 # Default paths
-PATH='/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin'
+PATH="/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Add more additional paths
-# PATH="$GEM_PATH/bin:$PATH"
-# PATH="$GEM_HOME/bin:$PATH"
-PATH=$COMPOSER_PATH/bin:$PATH
-PATH=$NODE_PATH/bin:$PATH
-PATH=$DOTFILES_PATH/bin:$PATH
-# PATH="/usr/local/opt/gettext/bin:$PATH"
-# PATH="/usr/local/opt/icu4c/bin:$PATH"
-# PATH="/usr/local/opt/icu4c/sbin:$PATH"
-# PATH="/usr/local/opt/libxml2/bin:$PATH"
-# PATH="/usr/local/opt/php70:$PATH"
-# PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-# PATH="/usr/local/opt/openssl/bin:$PATH"
-# PATH="/usr/local/Cellar/watchman:$PATH"
-PATH=/usr/local/Cellar:$PATH
-PATH=/usr/local/opt/ruby@2.3/bin:$PATH
-PATH=/usr/local/bin:$PATH
+PATH="$COMPOSER_PATH/bin:$PATH"
+PATH="$NODE_PATH/bin:$PATH"
+PATH="$DOTFILES_PATH/bin:$PATH"
+PATH="/usr/local/Cellar:$PATH"
+PATH="/usr/local/opt/ruby@2.3/bin:/usr/local/lib/ruby/gems/2.3.0/bin:$PATH"
+PATH="/usr/local/bin:$PATH"
 export PATH
 
 export PS0='PS0 '
