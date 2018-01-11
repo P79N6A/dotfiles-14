@@ -52,6 +52,7 @@ PATH=$DOTFILES_PATH/bin:$PATH
 # PATH="/usr/local/opt/openssl/bin:$PATH"
 # PATH="/usr/local/Cellar/watchman:$PATH"
 PATH=/usr/local/Cellar:$PATH
+PATH=/usr/local/opt/ruby@2.3/bin:$PATH
 PATH=/usr/local/bin:$PATH
 export PATH
 
