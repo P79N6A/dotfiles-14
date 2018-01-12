@@ -1,13 +1,13 @@
 #!/bin/bash
 
 source_reload() {
-  source "$DOTFILES_PATH/lib/colors.sh"
-  source "$DOTFILES_PATH/lib/gem.sh"
-  source "$DOTFILES_PATH/lib/laravel.sh"
-  source "$DOTFILES_PATH/lib/git.sh"
-  source "$DOTFILES_PATH/lib/prompt.sh"
-  source "$DOTFILES_PATH/lib/npm.sh"
-  source "$DOTFILES_PATH/lib/youtube.sh"
+  source $DOTFILES_PATH/lib/colors.sh
+  source $DOTFILES_PATH/lib/gem.sh
+  source $DOTFILES_PATH/lib/laravel.sh
+  source $DOTFILES_PATH/lib/git.sh
+  source $DOTFILES_PATH/lib/prompt.sh
+  source $DOTFILES_PATH/lib/npm.sh
+  source $DOTFILES_PATH/lib/youtube.sh
 
   # load_additional_files
 }
@@ -20,6 +20,10 @@ xcode_select_install() {
 
 is_numeric() {
   php -r "error_reporting(0); if (!is_int(${1})) { echo '0'; }"
+}
+
+rubyver() {
+    ruby --version | grep -E '[0-9.]+' -io | head -n 1
 }
 
 throw() {
@@ -85,7 +89,7 @@ newCommand() {
   basename="`basename(${0})`"
 
   command_name=""
-  target_directory="${DOTFILES_PATH}/.bin"
+  target_directory=$DOTFILES_PATH/.bin
 
   if [[ $# == 0 ]]; then
     ee "
@@ -101,23 +105,23 @@ OPTIONS:
 }
 
 home() {
-  cd "${HOME}" && [[ $# > 0 ]] && cd "./${*}"
+  cd $HOME && [[ $# > 0 ]] && cd "./${*}"
 }
 
 atm() {
-  cd "${HOME}/.atom" && [[ $# > 0 ]] && cd "./${*}"
+  cd $HOME/.atom && [[ $# > 0 ]] && cd "./${*}"
 }
 
 dot() {
-  cd "${HOME}/.dotfiles" && [[ $# > 0 ]] && cd "./${*}"
+  cd $HOME/.dotfiles && [[ $# > 0 ]] && cd "./${*}"
 }
 
 www() {
-  cd "${HOME}/www" && [[ $# > 0 ]] && cd "./${*}"
+  cd $HOME/www && [[ $# > 0 ]] && cd "./${*}"
 }
 
 proj() {
-  cd "${HOME}/projects" && [[ $# > 0 ]] && cd "./${*}"
+  cd $HOME/projects && [[ $# > 0 ]] && cd "./${*}"
 }
 
 install_required_packages() {

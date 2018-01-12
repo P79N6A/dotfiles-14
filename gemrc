@@ -3,15 +3,24 @@
 install:
   --no-ri
   --no-rdoc
-  --bindir ~/.gem/bin
-  --install-dir ~/.gem
+  --no-document
+  --backtrace
+  --verbose
+  --quiet
+  --install-dir ~/.gem/ruby
+  --bindir /usr/local/bin
 update:
-  --no-ri
-  --no-rdoc
-  --bindir ~/.gem/bin
-  --install-dir ~/.gem
+    --backtrace
+    --verbose
+    --quiet
+    --install-dir ~/.gem/ruby
+    --bindir /usr/local/bin
+list:
+    --install-dir ~/.gem/ruby
+    --bindir /usr/local/bin
 uninstall:
-  --no-ri
-  --no-rdoc
-  --bindir ~/.gem/bin
-  --install-dir ~/.gem
+    --backtrace
+    --verbose
+    --quiet
+    --install-dir ~/.gem/ruby
+    --bindir /usr/local/bin

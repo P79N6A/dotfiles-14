@@ -1,6 +1,9 @@
 #!/bin/bash
 
 
+# Default paths
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+
 # Define custom variables
 export DOTFILES_PATH=~/.dotfiles
 # Load core configurations file
@@ -29,27 +32,25 @@ export MANPAGER='less -X'
 export GPG_TTY=$(tty);
 export EDITOR='Atom'
 export MAILCHECK=0
-export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 # Paths
 export COMPOSER_PATH=~/.composer/vendor
-export NODE_PATH="/usr/local/opt/node@9:/usr/local/lib/node_modules"
+export NODE_PATH=/usr/local/opt/node@9:/usr/local/lib/node_modules
+export BREW_PATH=/usr/local/Cellar
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem/ruby/gems
 
-# Default paths
-PATH="/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Add more additional paths
-PATH="$COMPOSER_PATH/bin:$PATH"
-PATH="$NODE_PATH/bin:$PATH"
-PATH="$DOTFILES_PATH/bin:$PATH"
-PATH="/usr/local/Cellar:$PATH"
-PATH="/usr/local/opt/ruby@2.3/bin:/usr/local/lib/ruby/gems/2.3.0/bin:$PATH"
-PATH="/usr/local/bin:$PATH"
+PATH=$GEM_HOME:$PATH
+PATH=$GEM_PATH:$PATH
+PATH=$COMPOSER_PATH/bin:$PATH
+PATH=$BREW_PATH:$PATH
+PATH=$NODE_PATH/bin:$PATH
+PATH=$DOTFILES_PATH/bin:$PATH
+PATH=/Library/Ruby/Gems:$PATH
 export PATH
 
 export PS0='PS0 '
 export PS1='\u [\w]: '
 export PS2='> '
-# export PROMPT_COMMAND='STDOUT="`cat /tmp/x`"; exec >/dev/tty; exec > >(tee /tmp/x)'
-
-
-# load_additional_files
