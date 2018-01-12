@@ -42,6 +42,7 @@ alias gems="gem search"
 alias gemi="gem install"
 alias geml="gem list"
 alias gemun="gem uninstall"
+alias gemclean="gem uninstall -aIx"
 
 alias npms="npm search"
 alias npmi="npm install"
