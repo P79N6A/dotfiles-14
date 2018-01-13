@@ -108,11 +108,11 @@ home() {
   cd $HOME && [[ $# > 0 ]] && cd "./${*}"
 }
 
-atm() {
+atom() {
   cd $HOME/.atom && [[ $# > 0 ]] && cd "./${*}"
 }
 
-dot() {
+dotf() {
   cd $HOME/.dotfiles && [[ $# > 0 ]] && cd "./${*}"
 }
 
