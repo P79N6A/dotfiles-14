@@ -99,6 +99,10 @@ alias apml="apm list"
 
 alias port="sudo port"
 
+alias ytd="youtube-dl"
+alias ytdvideo="download_video"
+alias ytdaudio="download_audio"
+
 localbin() {
   la /usr/local/bin
 }
