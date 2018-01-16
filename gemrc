@@ -7,20 +7,11 @@ install:
   --backtrace
   --verbose
   --quiet
-  --install-dir ~/.gem/ruby
-  --bindir /usr/local/bin
 update:
     --backtrace
     --verbose
     --quiet
-    --install-dir ~/.gem/ruby
-    --bindir /usr/local/bin
-list:
-    --install-dir ~/.gem/ruby
-    --bindir /usr/local/bin
 uninstall:
     --backtrace
     --verbose
     --quiet
-    --install-dir ~/.gem/ruby
-    --bindir /usr/local/bin

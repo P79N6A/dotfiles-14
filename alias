@@ -41,38 +41,29 @@ alias laravel-create="composer create-project --prefer-dist laravel/laravel"
 alias laravel-mod="chmod -R 0775 bootstrap/cache storage database/seeds"
 
 alias gem="sudo gem"
-gemenv() {
-    gem environment
-}
-gems() {
-    gem search
-}
 gemi() {
-    # gem install $*
-    gem install --no-ri --no-rdoc --no-document --backtrace --verbose --quiet --install-dir ~/.gem/ruby --bindir /usr/local/bin $*
-}
-gemun() {
-    # gem uninstall $*
-    gem uninstall --backtrace --verbose --quiet --install-dir ~/.gem/ruby --bindir /usr/local/bin $*
+    sudo gem install --no-rdoc --norc --no-document --user-install --bindir /usr/local/bin $*
 }
 gemup() {
-    # gem update $*
-    gem update --backtrace --verbose --quiet --install-dir ~/.gem/ruby --bindir /usr/local/bin $*
+    sudo gem update --no-rdoc --norc --no-document --user-install --bindir /usr/local/bin $*
 }
-geml() {
-    gem list
+gemun() {
+    sudo gem uninstall --user-install --bindir /usr/local/bin $*
 }
-gemclean() {
-    # gem uninstall -aIx
-    gem uninstall -aIx --install-dir ~/.gem/ruby --bindir /usr/local/bin
+gems() {
+    sudo gem search $1
 }
-
+geminfo() {
+    sudo gem search --details ^$1$
+}
 
 alias npms="npm search"
 alias npmi="npm install"
 alias npmun="npm uninstall"
 
-alias brews="brew search"
+brews() {
+    brew search /$1/
+}
 alias brewi="brew install"
 alias brewun="brew uninstall"
 alias brewl="brew list"

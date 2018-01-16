@@ -1,0 +1,6 @@
+reload_sources() {
+    rm -rf "$HOME/.gemrc"
+    cp "$HOME/.dotfiles/gemrc" "$HOME/.gemrc"
+}
+
+reload_sources

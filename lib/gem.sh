@@ -1,5 +1,1 @@
-#!bin/bash
-
-geminfo() {
-  gem search --details ^"$1"$
-}
+#!/bin/bash

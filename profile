@@ -38,13 +38,14 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export COMPOSER_PATH=~/.composer/vendor
 export NODE_PATH=/usr/local/opt/node@9:/usr/local/lib/node_modules
 export BREW_PATH=/usr/local/Cellar
-export GEM_HOME=~/.gem
-export GEM_PATH=~/.gem/ruby/gems
+# export GEM_HOME=~/.gem
+# export GEM_PATH=~/.gem/ruby/gems
 
 # Add more additional paths
-PATH=$GEM_HOME:$PATH
-PATH=$GEM_PATH:$PATH
+# PATH=$GEM_HOME:$PATH
+# PATH=$GEM_PATH:$PATH
 PATH=$COMPOSER_PATH/bin:$PATH
+PATH=/usr/local/lib/ruby/gems/2.3.0/bin:/usr/local/Cellar/ruby@2.3/2.3.6_2/bin:$PATH
 PATH=$BREW_PATH:$PATH
 PATH=$NODE_PATH/bin:$PATH
 PATH=$DOTFILES_PATH/bin:$PATH
