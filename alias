@@ -1,108 +1,60 @@
 #!/bin/bash
 
+alias ls="ls -lAfh"
+alias la="ls -1Afh"
+alias lc="ls -CAfh"
+alias lf="ls | grep --color=never '^-'"
+alias ld="ls | grep --color=never '^d'"
+
 alias export=" export"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias pbcopy=" pbcopy -Prefer txt"
 # alias pbcopy=" tr -d '\n' | pbcopy -Prefer txt"
-alias ls="ls -lAFh"
-alias la="ls -1AFh"
-alias lc="ls -CAFh"
-alias lf="ls | grep --color=never '^-'"
-alias ld="ls | grep --color=never '^d'"
 alias h?="history | grep -E -i"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias wpkey="curl -G https://api.wordpress.org/secret-key/1.1/salt/ | pbcopy"
-
 alias cleandotds="find . -type f -name '*.DS_Store' -ls -delete"
-# alias cleanls="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
-# alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 alias urlencode='python -c"import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
-# Merge PDF files
-# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-# alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
-# Print each PATH entry on a separate line
-# alias path='echo -e ${PATH//:/\\n}'
-path() {
-    echo -e ${1//:/\\n}
-}
-alias v="command -v"
-
-alias vim="vim ex"
-alias clearmail="sudo rm /var/mail/`whoami`"
-alias apmclearcache='(cd /Users/sudprawat/.atom && rm -rf blob-store compile-cache storage recovery)'
-
-alias pd='_parent'
-alias bd='_home'
-
-alias laravel-create="composer create-project --prefer-dist laravel/laravel"
-alias laravel-mod="chmod -R 0775 bootstrap/cache storage database/seeds"
-
+alias imgopt="jpegoptim"
 alias gem="sudo gem"
-gemenv() {
-    gem environment
-}
-gems() {
-    gem search
-}
 gemi() {
-    # gem install $*
-    gem install --no-ri --no-rdoc --no-document --backtrace --verbose --quiet --install-dir ~/.gem/ruby --bindir /usr/local/bin $*
+  sudo gem install $* --no-ri --no-rdoc --no-document --backtrace --verbose --quiet
 }
 gemun() {
-    # gem uninstall $*
-    gem uninstall --backtrace --verbose --quiet --install-dir ~/.gem/ruby --bindir /usr/local/bin $*
+  sudo gem uninstall $* --backtrace --verbose --quiet
 }
-gemup() {
-    # gem update $*
-    gem update --backtrace --verbose --quiet --install-dir ~/.gem/ruby --bindir /usr/local/bin $*
+gems() {
+  sudo gem search $1
 }
 geml() {
-    gem list
+  sudo gem list
 }
-gemclean() {
-    # gem uninstall -aIx
-    gem uninstall -aIx --install-dir ~/.gem/ruby --bindir /usr/local/bin
+geminfo() {
+  sudo gem search --details ^$1$
 }
-
-
-alias npms="npm search"
+alias brewclean='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+brews() {
+  brew search $1
+}
+brewt() {
+  brew tap $1
+}
+brewi() {
+  brew install $*
+}
+brewun() {
+  brew uninstall $*
+}
+brewl() {
+  brew list
+}
+brewinfo() {
+  brew info $1
+}
+alias npms="npm search --long"
 alias npmi="npm install"
 alias npmun="npm uninstall"
-
-alias brews="brew search"
-alias brewi="brew install"
-alias brewun="brew uninstall"
-alias brewl="brew list"
-alias brewinfo="brew info"
-alias brewdesc="brew desc"
-alias brewtest="brew test"
-alias brewtests="brew tests"
-alias brewupg="brew upgrade"
-
-alias brewclean='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
-
-alias compre="composer require"
-alias compreg="composer global require"
-alias compcr="composer create-project"
-alias comps="composer search"
-alias comprem="composer remove"
-alias compremg="composer global remove"
-
-alias apmi="apm install"
-alias apmun="apm uninstall"
-alias apms='apm search'
-alias apminfo="apm view"
-alias apml="apm list"
-
-alias port="sudo port"
-
-alias ytd="youtube-dl"
-alias ytdvideo="download_video"
-alias ytdaudio="download_audio"
-
-localbin() {
-  la /usr/local/bin
-}
+alias npminfo="npm info"

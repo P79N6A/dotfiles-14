@@ -18,15 +18,13 @@ alias localip="ipconfig getifaddr en0"
 alias wpkey="curl -G https://api.wordpress.org/secret-key/1.1/salt/ | pbcopy"
 alias cleandotds="find . -type f -name '*.DS_Store' -ls -delete"
 alias urlencode='python -c"import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
-
-alias brewclean='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
-
+alias imgopt="jpegoptim"
 alias gem="sudo gem"
 gemi() {
   sudo gem install $* --no-ri --no-rdoc --no-document --backtrace --verbose --quiet
 }
 gemun() {
-  sudo gem install $* --no-ri --no-rdoc --no-document --backtrace --verbose --quiet
+  sudo gem uninstall $* --backtrace --verbose --quiet
 }
 gems() {
   sudo gem search $1
@@ -37,9 +35,12 @@ geml() {
 geminfo() {
   sudo gem search --details ^$1$
 }
-
+alias brewclean='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 brews() {
   brew search $1
+}
+brewt() {
+  brew tap $1
 }
 brewi() {
   brew install $*
@@ -53,3 +54,7 @@ brewl() {
 brewinfo() {
   brew info $1
 }
+alias npms="npm search --long"
+alias npmi="npm install"
+alias npmun="npm uninstall"
+alias npminfo="npm info"

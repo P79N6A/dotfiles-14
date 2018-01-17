@@ -1,0 +1,36 @@
+#!/bin/bash
+
+press_enter() {
+    # echo -en "\nPress Enter to continue"
+    # read
+    clear
+}
+
+take() {
+  menu_items=(
+      'Display free disk space'
+      'Display free memory'
+      )
+  menu="\n\033[41mPROGRAME MENU\033[0m"
+  count=0
+  while [[ "x${menu_items[${count}]}" != "x" ]]; do
+      menu="${menu}\n$((${count} + 1)) - ${menu_items[${count}]}"
+      count=$(($count + 1))
+  done
+  menu+="\n\nPlease enter option # or enter 0 to exit\n"
+  menu+="\n======== END ========\n"
+
+  selection=''
+  until [[ $selection == 0 ]]; do
+      clear
+      echo -e "$menu"
+      read selection && echo
+
+      case $selection in
+          1 ) clear; (echo "" && df | less); read; press_enter;;
+          2 ) clear; (echo "" && ls | less); read; press_enter;;
+          0 ) return;;
+          * ) press_enter;;
+      esac
+  done
+}
