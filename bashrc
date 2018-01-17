@@ -35,7 +35,8 @@ load_sources() {
     # uncomment for custom prompt end sequence
     # export GIT_PROMPT_END=...
     # use theme optimized for solarized color scheme
-    # export GIT_PROMPT_THEME='Solarized'
+    export GIT_PROMPT_THEME='Custom'
+    export GIT_PROMPT_THEME_FILE="$HOME/.dotfiles/git-prompt-colors"
     # export GIT_PROMPT_START_USER="\w [branch status]"
     # export GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${Yellow}\w${ResetColor}"
     # export GIT_PROMPT_END_USER="\n$ "
