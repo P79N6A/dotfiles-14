@@ -8,7 +8,7 @@ check_git() {
     if [[ -z $gitstatus ]]; then
       gitstatus=''
     else
-      gitstatus='!!'
+      gitstatus=' !!'
     fi
     export PS1="$PURPLE\w$R $CYAN[$gitbranch$gitstatus]$R \n\$ "
     export PS2="> "
