@@ -21,6 +21,7 @@ check_git() {
 cmd() {
   command -v $1
 }
+
 v() {
   $1 --version
 }
