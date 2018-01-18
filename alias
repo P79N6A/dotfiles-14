@@ -58,3 +58,5 @@ alias npms="npm search --long"
 alias npmi="npm install"
 alias npmun="npm uninstall"
 alias npminfo="npm info"
+
+alias gs="git status"
