@@ -75,6 +75,6 @@ gitcp() {
   fi
 
   msg=$1; shift
-  repo=$1; shift
-  git commit -m $msg; git push $repo $*
+  git commit -m $msg
+  git push $*
 }
