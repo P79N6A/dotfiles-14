@@ -1,0 +1,11 @@
+guzzlehttp/guzzle         6.3.0  Guzzle is a PHP HTTP client library
+guzzlehttp/promises       v1.3.1 Guzzle promises library
+guzzlehttp/psr7           1.4.2  PSR-7 message implementation that also provides common utility methods
+laravel/installer         v1.5.0 Laravel application installer.
+psr/http-message          1.0.1  Common interface for HTTP messages
+psr/log                   1.0.2  Common interface for logging libraries
+symfony/console           v3.4.3 Symfony Console Component
+symfony/debug             v3.4.3 Symfony Debug Component
+symfony/filesystem        v3.4.3 Symfony Filesystem Component
+symfony/polyfill-mbstring v1.6.0 Symfony polyfill for the Mbstring extension
+symfony/process           v3.4.3 Symfony Process Component

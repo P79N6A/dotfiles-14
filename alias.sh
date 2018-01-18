@@ -77,3 +77,12 @@ gitcp() {
   msg=$1; shift
   git commit -m $msg; git push $*
 }
+
+pushdotf() {
+  brew list 1>brew.log
+  gem list 1>gem.log
+  npm list -g --depth 0 1>npm.log
+  composer global show 1>composer.log
+
+  git add .; git commit -m 'upload'; git push origin master
+}
