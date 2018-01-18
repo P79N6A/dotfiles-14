@@ -145,6 +145,8 @@ getnpm() {
   npm list -g --depth 0 | perl -pe 's/^.+\ //g' | perl -pe 's/\@[a-zA-Z0-9\.\-]+$//g' | tail +2
 }
 genlog() {
+  printf "${GREEN}Generating log files...${R}\n\n"
+
   getgem 1>$DOTFILES/gem.log
   getbrew 1>$DOTFILES/brew.log
   getcomp 1>$DOTFILES/composer.log
