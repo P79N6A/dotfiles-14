@@ -59,4 +59,22 @@ alias npmi="npm install"
 alias npmun="npm uninstall"
 alias npminfo="npm info"
 
-alias gs="git status"
+alias gits="git status"
+alias gitiw="git instaweb"
+gita() {
+  files=.
+  if [[ $# > 0 ]]; then
+    files=$*
+  fi
+  git add $files
+}
+gitcp() {
+  if [[ $# == 0 ]]; then
+    echo  -e "${Red}Please add messages${ResetColor}"
+    return 1
+  fi
+
+  msg=$1; shift
+  repo=$1; shift
+  git commit -m $msg; git push $repo $*
+}
