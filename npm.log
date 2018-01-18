@@ -5,7 +5,7 @@
 @angular/common
 @angular/compiler
 @angular/core
-@angular/flex-layout@2.0.0-beta.12
+@angular/flex-layout
 @angular/material
 @angular/platform-browser
 @angular/router
@@ -73,7 +73,7 @@ parse-json
 path-parse
 postcss-sass
 protractor
-pug@2.0.0-rc.4
+pug
 rxjs
 tern
 ts-loader
