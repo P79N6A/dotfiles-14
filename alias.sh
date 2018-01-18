@@ -64,3 +64,13 @@ npml() {
 
 alias gits="git status"
 alias gitiw="git instaweb"
+
+
+alias a.="brewinfo"
+alias aa.="brewi"
+alias b.="brewinfo"
+alias bb.="brewi"
+alias g.="geminfo"
+alias gg.="gemi"
+alias n.="npminfo"
+alias nn.="npmi"
