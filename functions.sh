@@ -121,7 +121,7 @@ push() {
 
   if [[ $# < 2 ]]; then
     echo "usage: target_dir messages [remote:origin] [branch:master]"
-    return 1
+    return 50
   fi
 
   repo=$1; shift
