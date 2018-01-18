@@ -69,3 +69,14 @@ curtime() {
 path() {
     echo -e ${1//:/\\n}
 }
+
+gitclone() {
+  if [[ $# == 0 ]]; then
+    printf "${Red}RED${ResetColor}"
+    return 1
+  fi
+
+  repo=$1; shift
+  target_dir=$1; shift
+  git clone https://github.com/$repo $target_dir $*
+}

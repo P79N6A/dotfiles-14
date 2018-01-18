@@ -8,9 +8,9 @@ reload_shell() {
 load_sources() {
   test -e "$HOME/.iterm2_shell_integration.bash" && source "$HOME/.iterm2_shell_integration.bash"
 
-  source "$DOTFILES/colors"
-  source "$DOTFILES/functions"
-  source "$DOTFILES/alias"
+  source "$DOTFILES/colors.sh"
+  source "$DOTFILES/functions.sh"
+  source "$DOTFILES/alias.sh"
 
   if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
     __GIT_PROMPT_DIR="$(brew --prefix)/opt/bash-git-prompt/share"
@@ -27,7 +27,7 @@ load_sources() {
     # can be no, normal or all; determines counting of untracked files
     export GIT_PROMPT_SHOW_UNTRACKED_FILES='no'
     # uncomment to avoid printing the number of changed files
-    export GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=1
+    export GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0
     # uncomment to support Git older than 1.7.10
     # export GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh
     # uncomment for custom prompt start sequence

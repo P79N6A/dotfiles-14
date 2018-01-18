@@ -27,3 +27,5 @@ _PATH="$DOTFILES/bin:$_PATH"
 export PATH="$_PATH"
 export PROMPT_COMMAND="gp_install_prompt"
 # export PROMPT_COMMAND="check_git"
+
+source "$HOME/.bashrc"
