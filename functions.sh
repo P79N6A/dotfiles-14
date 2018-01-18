@@ -117,15 +117,15 @@ pushatom() {
 }
 
 push() {
-  msg=''
-  repo=''
-  if [[ $# != 2 ]]; then
+  msg=''; repo=''
+
+  if [[ $# < 2 ]]; then
     echo "usage: target_dir messages [remote:origin] [branch:master]"
     return 1
   fi
 
   repo=$1; shift
   msg=$1; shift
-  (cd $repo; git add .; git commit -m $msg; git push $*)
 
+  (cd $repo; git add .; git commit -m $msg; git push $*)
 }
