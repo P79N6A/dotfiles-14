@@ -144,21 +144,19 @@ getapm() {
 getnpm() {
   npm list -g --depth 0 | perl -pe 's/^.+\ //g' | perl -pe 's/\@[a-zA-Z0-9\.\-]+$//g' | tail +2
 }
-
-pushdotf() {
-  printf "${GREEN}Generating log files...${R}\n"
+genlog() {
   getgem 1>$DOTFILES/gem.log
   getbrew 1>$DOTFILES/brew.log
   getcomp 1>$DOTFILES/composer.log
+  getapm 1> $DOTFILES/apm.log
   getnpm 1> $DOTFILES/npm.log
+}
 
+pushdotf() {
   (cd $HOME/.dotfiles; git add .; git commit -m 'upload'; git push origin master)
 }
 
 pushatom() {
-  printf "${GREEN}Generating log files...${R}\n"
-  getapm 1> $DOTFILES/apm.log
-
   (cd $HOME/.atom; git add .; git commit -m 'upload'; git push origin master)
 }
 
