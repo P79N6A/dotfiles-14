@@ -1,4 +1,3 @@
-@angular/cli
 angular
 angular-ui-bootstrap
 axios
@@ -82,3 +81,4 @@ typescript
 url-loader
 webpack
 yarn
+
