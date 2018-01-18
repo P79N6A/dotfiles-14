@@ -80,7 +80,15 @@ gitcp() {
 
 pushdotf() {
   printf "${GREEN}Generating log files...${R}\n"
-  gem list 1>gem.log; brew list 1>brew.log; npm list -g --depth 0 1>npm.log; composer global show 1>composer.log; apm list -i 1>apm.log
+  gem list 1>$DOTFILES/gem.log; brew list 1>$DOTFILES/brew.log; npm list -g --depth 0 1>$DOTFILES/npm.log
 
-  git add .; git commit -m 'upload'; git push origin master
+  composer global show | grep -E '^\S+' -io 1>$DOTFILES/composer.log
+
+  cd $HOME/.dotfiles; git add .; git commit -m 'upload'; git push origin master
+}
+pushatom() {
+  printf "${GREEN}Generating log files...${R}\n"
+  apm list -i | grep -E '\s(\S+)$' -io | perl -pe 's/\@.+//g' | tail +2 1>$DOTFILES/apm.log
+
+  (cd $HOME/.atom; git add .; git commit -m 'upload'; git push origin master)
 }
