@@ -1,15 +1,4 @@
-@angular-devkit/schematics
-@angular/animations
-@angular/cdk
 @angular/cli
-@angular/common
-@angular/compiler
-@angular/core
-@angular/flex-layout
-@angular/material
-@angular/platform-browser
-@angular/router
-@segment/to-iso-string
 angular
 angular-ui-bootstrap
 axios
@@ -93,6 +82,3 @@ typescript
 url-loader
 webpack
 yarn
-zone
-zone.js
-
