@@ -99,19 +99,65 @@ gitcp() {
   git commit -m $msg; git push $*
 }
 
+apmi() {
+  apm install $*
+}
+apmun() {
+  apm uninstall $*
+}
+apms() {
+  apm search $1
+}
+apminfo() {
+  apm view $1
+}
+apml() {
+  apm list $*
+}
+
+npmi() {
+  npm install $*
+}
+npmun() {
+  npm uninstall $*
+}
+npms() {
+  npm search $1
+}
+npminfo() {
+  npm view $1
+}
+
+
+getgem() {
+  gem list | grep -E '^\S+' -io
+}
+getbrew() {
+  brew list | perl -pe 's/\t//g'
+}
+getcomp() {
+  composer global show | grep -E '^\S+' -io
+}
+getapm() {
+  apm list -i | grep -E '\s\S+' -io | perl -pe 's/^\s//g' | perl -pe 's/\@.+$//g' | tail +4
+}
+getnpm() {
+  npm list -g --depth 0 | perl -pe 's/^.+\ //g' | perl -pe 's/\@[a-zA-Z0-9\.\-]+$//g' | tail +2
+}
+
 pushdotf() {
   printf "${GREEN}Generating log files...${R}\n"
-  gem list | grep -E '^\S+' -io 1>$DOTFILES/gem.log
-  brew list 1>$DOTFILES/brew.log
-  composer global show | grep -E '^\S+' -io 1>$DOTFILES/composer.log
-  npm list -g --depth 0 | perl -pe 's/^.+\ //g' | perl -pe 's/\@[a-zA-Z0-9\.\-]+$//g' | tail +2 1> $DOTFILES/npm.log
+  getgem 1>$DOTFILES/gem.log
+  getbrew 1>$DOTFILES/brew.log
+  getcomp 1>$DOTFILES/composer.log
+  getnpm 1> $DOTFILES/npm.log
 
   (cd $HOME/.dotfiles; git add .; git commit -m 'upload'; git push origin master)
 }
 
 pushatom() {
   printf "${GREEN}Generating log files...${R}\n"
-  apm list -i | grep -E '\s\S+' -io | perl -pe 's/\@.+$//g' | tail +4 1> $DOTFILES/apm.log
+  getapm 1> $DOTFILES/apm.log
 
   (cd $HOME/.atom; git add .; git commit -m 'upload'; git push origin master)
 }
@@ -145,16 +191,20 @@ ll() {
   total_lines="$(cat -b $file | grep -E '\S+' -ic)"
   begin_line=1
   line_to_get=1
+  _coproc=0
   _exec=''
+  _argv=()
   if [[ $1 =~ ^- && $1 == '-e' ]]; then
-    shift; _exec=$*
+    shift; _exec=$*; _coproc=1
   fi
 
   for (( i = 1; i <= $total_lines; i++ )); do
-    if [[ -z $_exec || $_exec == '' ]]; then
-      echo "`tail +$i $file | head -1`"
-    else
-      $* "`tail +$i $file | head -1`"
-    fi
+    _argv+="`tail +$i $file | head -1` "
   done
+
+  if [[ $_coproc == 1 ]]; then
+    $_exec $_argv
+  else
+    echo $_argv | perl -pe 's/\s/\n/g'
+  fi
 }

@@ -1,39 +1,39 @@
- advanced-open-file
- atom-autocomplete-php
- atom-beautify
- autocomplete-bash-builtins
- autocomplete-ctags
- autocomplete-json
- autocomplete-jsp
- autocomplete-python
- autocomplete-sql
- busy-signal
- emmet
- flex-tool-bar
- git-plus
- git-time-machine
- goldfish-dark-ui
- goldfish-dark-vivid-syntax
- hyperclick
- javascript-snippets
- jquery-snippets
- js-hyperclick
- language-babel
- language-blade
- language-dotfiles
- language-gitignore
- language-htaccess
- language-ini
- language-markdown
- language-nginx
- language-unix-shell
- laravel
- merge-conflicts
- php-hyperclick
- pretty-json
- project-manager
- remote-sync
- sass-autocompile
- sort-lines
- spaces-in-braces
- tool-bar
+advanced-open-file
+atom-autocomplete-php
+atom-beautify
+autocomplete-bash-builtins
+autocomplete-ctags
+autocomplete-json
+autocomplete-jsp
+autocomplete-python
+autocomplete-sql
+busy-signal
+emmet
+flex-tool-bar
+git-plus
+git-time-machine
+goldfish-dark-ui
+goldfish-dark-vivid-syntax
+hyperclick
+javascript-snippets
+jquery-snippets
+js-hyperclick
+language-babel
+language-blade
+language-dotfiles
+language-gitignore
+language-htaccess
+language-ini
+language-markdown
+language-nginx
+language-unix-shell
+laravel
+merge-conflicts
+php-hyperclick
+pretty-json
+project-manager
+remote-sync
+sass-autocompile
+sort-lines
+spaces-in-braces
+tool-bar

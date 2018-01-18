@@ -6,6 +6,7 @@ cmath
 compass
 compass-core
 compass-import-once
+concurrent-ruby
 csv
 date
 dbm
@@ -32,12 +33,16 @@ rdoc
 sass
 sass-listen
 sassc
+sasslint
 sassy
 scanf
 sdbm
 stringio
 strscan
 test-unit
+thor
+thread_safe
+tzinfo
 webrick
 xmlrpc
 zlib

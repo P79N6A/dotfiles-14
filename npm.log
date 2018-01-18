@@ -1,3 +1,4 @@
+@angular-devkit/schematics
 @angular/animations
 @angular/cdk
 @angular/cli
@@ -92,5 +93,6 @@ typescript
 url-loader
 webpack
 yarn
+zone
 zone.js
 

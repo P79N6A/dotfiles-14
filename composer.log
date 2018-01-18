@@ -1,0 +1,11 @@
+guzzlehttp/guzzle
+guzzlehttp/promises
+guzzlehttp/psr7
+laravel/installer
+psr/http-message
+psr/log
+symfony/console
+symfony/debug
+symfony/filesystem
+symfony/polyfill-mbstring
+symfony/process
