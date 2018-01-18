@@ -64,35 +64,3 @@ npml() {
 
 alias gits="git status"
 alias gitiw="git instaweb"
-gita() {
-  files=.
-  if [[ $# > 0 ]]; then
-    files=$*
-  fi
-  git add $files
-}
-gitcp() {
-  if [[ $# == 0 ]]; then
-    echo  -e "${Red}Please add messages${ResetColor}"
-    return 1
-  fi
-
-  msg=$1; shift
-  git commit -m $msg; git push $*
-}
-
-pushdotf() {
-  printf "${GREEN}Generating log files...${R}\n"
-  gem list | grep -E '^\S+' -io 1>$DOTFILES/gem.log
-  brew list 1>$DOTFILES/brew.log
-  composer global show | grep -E '^\S+' -io 1>$DOTFILES/composer.log
-  npm list -g --depth 0 | perl -pe 's/^.+\ //g' | perl -pe 's/\@[a-zA-Z0-9\.\-]+$//g' | tail +2 1>$DOTFILES/npm.log
-
-  (cd $HOME/.dotfiles; git add .; git commit -m 'upload'; git push origin master)
-}
-pushatom() {
-  printf "${GREEN}Generating log files...${R}\n"
-  apm list -i | grep -E '\s(\S+)$' -io | perl -pe 's/.+\@.+//g' | tail +2 1>$DOTFILES/apm.log
-
-  (cd $HOME/.atom; git add .; git commit -m 'upload'; git push origin master)
-}
