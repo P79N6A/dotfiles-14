@@ -16,15 +16,21 @@ babel-cli
 babel-core
 babel-eslint
 binding
+bootstrap-loader
+bootstrap-sass
 clang
 compile
+css-loader
 eslint
 eslint-loader
+extract-text-webpack-plugin
+file-loader
 fs-extra
 graceful-fs
 grunt
 grunt-autoprefixer
 grunt-babel
+grunt-cli
 grunt-concurrent
 grunt-contrib-clean
 grunt-contrib-coffee
@@ -66,6 +72,8 @@ node-sass
 nodemailer
 nodemon
 npm
+npm-run-all
+npm-run-path
 nslog
 parse
 parse-json
@@ -73,12 +81,16 @@ path-parse
 postcss-sass
 protractor
 pug
+resolve-url-loader
 rxjs
+sass-loader
 tern
 ts-loader
 ts-node
 tslint
 typescript
+url-loader
 webpack
+yarn
 zone.js
 

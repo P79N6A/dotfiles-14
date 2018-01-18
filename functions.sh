@@ -104,14 +104,14 @@ pushdotf() {
   gem list | grep -E '^\S+' -io 1>$DOTFILES/gem.log
   brew list 1>$DOTFILES/brew.log
   composer global show | grep -E '^\S+' -io 1>$DOTFILES/composer.log
-  npm list -g --depth 0 | perl -pe 's/^.+\ //g' | perl -pe 's/\@[a-zA-Z0-9\.\-]+$//g' | tail +2 1>$DOTFILES/npm.log
+  npm list -g --depth 0 | perl -pe 's/^.+\ //g' | perl -pe 's/\@[a-zA-Z0-9\.\-]+$//g' | tail +2 1> $DOTFILES/npm.log
 
   (cd $HOME/.dotfiles; git add .; git commit -m 'upload'; git push origin master)
 }
 
 pushatom() {
   printf "${GREEN}Generating log files...${R}\n"
-  apm list -i | grep -E '\s(\S+)$' -io | perl -pe 's/.+\@.+//g' | tail +2 1>$DOTFILES/apm.log
+  apm list -i | grep -E '\s\S+' -io | perl -pe 's/\@.+$//g' | tail +4 1> $DOTFILES/apm.log
 
   (cd $HOME/.atom; git add .; git commit -m 'upload'; git push origin master)
 }
@@ -128,4 +128,33 @@ push() {
   msg=$1; shift
 
   (cd $repo; git add .; git commit -m $msg; git push $*)
+}
+
+ll() {
+  if [[ $# == 0 ]]; then
+    printf "usage: file\n"
+    return 1
+  fi
+
+  file=$1; shift
+  if [[ ! -e $file ]]; then
+    printf "File not exists\n"
+    return 1
+  fi
+
+  total_lines="$(cat -b $file | grep -E '\S+' -ic)"
+  begin_line=1
+  line_to_get=1
+  _exec=''
+  if [[ $1 =~ ^- && $1 == '-e' ]]; then
+    shift; _exec=$*
+  fi
+
+  for (( i = 1; i <= $total_lines; i++ )); do
+    if [[ -z $_exec || $_exec == '' ]]; then
+      echo "`tail +$i $file | head -1`"
+    else
+      $* "`tail +$i $file | head -1`"
+    fi
+  done
 }

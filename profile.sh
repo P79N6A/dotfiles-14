@@ -15,6 +15,7 @@ export LC_ALL='en_US.UTF-8'
 export MANPAGER='less -X'
 export GPG_TTY=$(tty);
 export EDITOR='Atom'
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 
 export DOTFILES="$HOME/.dotfiles"
 export BREW_PREFIX="$(brew --prefix)"
