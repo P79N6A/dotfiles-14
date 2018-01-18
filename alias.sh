@@ -86,7 +86,7 @@ pushdotf() {
   gem list | grep -E '^\S+' -io 1>$DOTFILES/gem.log
   brew list 1>$DOTFILES/brew.log
   composer global show | grep -E '^\S+' -io 1>$DOTFILES/composer.log
-  npm list -g --depth 0 | perl -pe 's/^.+\ //g' | perl -pe 's/\@[a-zA-Z0-9\.\-]+$//g' 1>$DOTFILES/npm.log
+  npm list -g --depth 0 | perl -pe 's/^.+\ //g' | perl -pe 's/\@[a-zA-Z0-9\.\-]+$//g' | tail +2 1>$DOTFILES/npm.log
 
   (cd $HOME/.dotfiles; git add .; git commit -m 'upload'; git push origin master)
 }
