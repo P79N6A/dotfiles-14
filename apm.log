@@ -32,6 +32,7 @@ merge-conflicts
 php-hyperclick
 pretty-json
 project-manager
+remote-ftp
 remote-sync
 sass-autocompile
 sort-lines

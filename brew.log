@@ -126,6 +126,7 @@ python3
 rbenv
 readline
 renameutils
+rmate
 rsync
 ruby
 ruby-build
