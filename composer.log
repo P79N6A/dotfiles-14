@@ -2,6 +2,7 @@ guzzlehttp/guzzle
 guzzlehttp/promises
 guzzlehttp/psr7
 laravel/installer
+nmenglund/mdb
 psr/http-message
 psr/log
 symfony/console

@@ -1,6 +1,10 @@
 activesupport
+ADB
+adb-sdklib
+android-adb
 bigdecimal
 bundler
+childprocess
 chunky_png
 cmath
 compass
@@ -24,12 +28,14 @@ minitest
 multi_json
 net-telnet
 openssl
+Platform
 power_assert
 psych
 rake
 rb-fsevent
 rb-inotify
 rdoc
+rjb
 sass
 sass-listen
 sassc
