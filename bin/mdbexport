@@ -1,0 +1,48 @@
+#!/usr/bin/env php
+<?php
+error_reporting(0);
+
+
+
+exit(0);
+
+$argv = $_SERVER['argv'];
+$cmd = basename($argv[0]);
+$file = $argv[1];
+$sh = shell_exec("mdb-tables -d:: $file");
+if ( ! $sh ) {
+  exit(0);
+}
+$sh = trim($sh);
+
+$tables = explode('::', substr($sh, 0, -2));
+foreach ($tables as $key => $table) {
+  $table = trim($table);
+  $schema = shell_exec("mdb-schema -T $table $file");
+  $data = shell_exec("mdb-export -d \"\t\" -R \"\n\" -q \"\" $file \"$table\"");
+  // $data = shell_exec("mdb-array $file $table");
+  // $schema = exec("mdb-schema $file $table");
+  // echo $schema;
+  // $data = preg_replace("/\n|\t/i", "", $data);
+  // preg_match_all("/\{(.+)\}/i", $data, $matches);
+  // if ($matches) {
+  //   $result = str_replace(array(
+  //     '},{',
+  //     '{',
+  //     '}',
+  //   ), array(
+  //     '::',
+  //     '',
+  //     '',
+  //   ), $matches[1]);
+  //   $result = explode('::', preg_replace("/\/\*[0-9\s]+\*\//i", "", $result[0]));
+  // }
+  // print_r($result);
+  // print_r($data);
+  // $data = shell_exec("echo \"$data\" 1> ~/.dotfiles/bin/$table.txt");
+  // print_r($data);
+  // exit(0);
+  echo "Exporting...". trim($table) ."\n";
+  // shell_exec("echo \"$data\" 1> '" . __DIR__ . "/$table.txt'");
+  echo "\n\n";
+}

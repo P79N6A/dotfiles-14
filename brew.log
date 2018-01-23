@@ -9,6 +9,7 @@ ascii
 autoconf
 autoconf-archive
 automake
+awscli
 babel
 babeld
 bash
@@ -57,6 +58,7 @@ dateutils
 emacs
 epstool
 exiftool
+faad2
 ffmpeg
 findutils
 flac
@@ -75,6 +77,7 @@ glib
 gmp
 gnutls
 go
+godep
 goenv
 gsasl
 hfsutils
@@ -90,6 +93,8 @@ jpeginfo
 jpegoptim
 lame
 languagetool
+libao
+libcue
 libebml
 libffi
 libgcrypt
@@ -119,10 +124,12 @@ libyaml
 lighttpd
 little-cms2
 log4shib
+mad
 mailutils
 mdbtools
 mjpegtools
 mkvtoolnix
+mp4v2
 mruby
 mruby-cli
 nasm

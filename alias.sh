@@ -35,6 +35,9 @@ gems() {
 geml() {
   sudo gem list
 }
+gemup() {
+  sudo gem update
+}
 geminfo() {
   sudo gem search --details ^$1$
 }

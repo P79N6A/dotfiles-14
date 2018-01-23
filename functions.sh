@@ -208,3 +208,53 @@ ll() {
     echo $_argv | perl -pe 's/\s/\n/g'
   fi
 }
+
+mdb2xls() {
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'บัญชีพยานประเด็น' 1> $HOME'/.dotfiles/bin/บัญชีพยานประเด็น.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'บัญชีรับประเด็น' 1> $HOME'/.dotfiles/bin/บัญชีรับประเด็น.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'Paste Errors' 1> $HOME'/.dotfiles/bin/Paste Errors.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'บัญชีพยาน' 1> $HOME'/.dotfiles/bin/บัญชีพยาน.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'Table2' 1> $HOME'/.dotfiles/bin/Table2.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'การนัดความ' 1> $HOME'/.dotfiles/bin/การนัดความ.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ของกลาง' 1> $HOME'/.dotfiles/bin/ของกลาง.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'อาชีพ' 1> $HOME'/.dotfiles/bin/อาชีพ.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ครบผัดฟ้อง' 1> $HOME'/.dotfiles/bin/ครบผัดฟ้อง.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ความเห็นพนักงานสอบสวน' 1> $HOME'/.dotfiles/bin/ความเห็นพนักงานสอบสวน.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'คำพิพากษา ส11' 1> $HOME'/.dotfiles/bin/คำพิพากษา ส11.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'คำสั่งคดี' 1> $HOME'/.dotfiles/bin/คำสั่งคดี.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'คำสั่งคดีส1' 1> $HOME'/.dotfiles/bin/คำสั่งคดีส1.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'คำสั่งฎีกา' 1> $HOME'/.dotfiles/bin/คำสั่งฎีกา.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'คำสั่งอุทธรณ์' 1> $HOME'/.dotfiles/bin/คำสั่งอุทธรณ์.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ชั้นฎีกา' 1> $HOME'/.dotfiles/bin/ชั้นฎีกา.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ชั้นฎีกาของจำเลย' 1> $HOME'/.dotfiles/bin/ชั้นฎีกาของจำเลย.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ชั้นอุทธรณ์ของจำเลย' 1> $HOME'/.dotfiles/bin/ชั้นอุทธรณ์ของจำเลย.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ชั้นอุทรธณ์' 1> $HOME'/.dotfiles/bin/ชั้นอุทรธณ์.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ชื่อผู้เสียหาย' 1> $HOME'/.dotfiles/bin/ชื่อผู้เสียหาย.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ตำบล' 1> $HOME'/.dotfiles/bin/ตำบล.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ที่อยู่ของสำนวน' 1> $HOME'/.dotfiles/bin/ที่อยู่ของสำนวน.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'โทษ' 1> $HOME'/.dotfiles/bin/โทษ.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ผู้อุทธรณ์' 1> $HOME'/.dotfiles/bin/ผู้อุทธรณ์.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'รับประเด็น' 1> $HOME'/.dotfiles/bin/รับประเด็น.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'รายการอก5' 1> $HOME'/.dotfiles/bin/รายการอก5.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ส2' 1> $HOME'/.dotfiles/bin/ส2.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ส3' 1> $HOME'/.dotfiles/bin/ส3.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ส่งประเด็น' 1> $HOME'/.dotfiles/bin/ส่งประเด็น.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'สภอ' 1> $HOME'/.dotfiles/bin/สภอ.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'สารบบ ส1' 1> $HOME'/.dotfiles/bin/สารบบ ส1.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'เหตุค้าง' 1> $HOME'/.dotfiles/bin/เหตุค้าง.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'อก5' 1> $HOME'/.dotfiles/bin/อก5.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'อำเภอ' 1> $HOME'/.dotfiles/bin/อำเภอ.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'รับสำนวน ส1' 1> $HOME'/.dotfiles/bin/รับสำนวน ส1.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ชื่ออัยการ' 1> $HOME'/.dotfiles/bin/ชื่ออัยการ.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ชื่อพยาน' 1> $HOME'/.dotfiles/bin/ชื่อพยาน.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'Table1' 1> $HOME'/.dotfiles/bin/Table1.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'คำสั่งคดีส2' 1> $HOME'/.dotfiles/bin/คำสั่งคดีส2.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'จุดประสงค์การนัด' 1> $HOME'/.dotfiles/bin/จุดประสงค์การนัด.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'สัญชาติ' 1> $HOME'/.dotfiles/bin/สัญชาติ.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ประกัน' 1> $HOME'/.dotfiles/bin/ประกัน.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ผลคดี' 1> $HOME'/.dotfiles/bin/ผลคดี.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ประเภทคดี' 1> $HOME'/.dotfiles/bin/ประเภทคดี.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'คำพิพากษา ส1' 1> $HOME'/.dotfiles/bin/คำพิพากษา ส1.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ชื่อผู้พิพากษา' 1> $HOME'/.dotfiles/bin/ชื่อผู้พิพากษา.txt';
+  mdb-export -d '\t' $HOME/Desktop/test.mdb 'ชื่อผู้ว่าความ' 1> $HOME'/.dotfiles/bin/ชื่อผู้ว่าความ.txt';
+}
