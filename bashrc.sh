@@ -46,6 +46,24 @@ load_sources() {
     # export GIT_PROMPT_COMMAND_FAIL="${Red}✘-_LAST_COMMAND_STATE_ " # displays as ✘-1 for exit code 1
     source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
   fi
+
+  eval `opam config env`
+  . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 }
 
+shell_setup() {
+  sources=("gemrc npmrc vimrc exrc ocamlinit")
+  for item in $sources; do
+    dest="${HOME}/.${item}"
+    source="${DOTFILES}/${item}"
+
+    rm -rf $dest
+
+    if [[ -e $source ]]; then
+      cp $source $dest
+    fi
+  done
+}
+
+shell_setup
 load_sources
