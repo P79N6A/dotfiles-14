@@ -65,6 +65,7 @@ faad2
 ffmpeg
 findutils
 flac
+flow
 flow-tools
 fontconfig
 fonttools
@@ -207,10 +208,12 @@ texi2html
 tiff2png
 uniutils
 unixodbc
+watchexec
 watchman
 webkit2png
 webp
 wget
+whois
 x264
 xdebug-osx
 xerces-c
