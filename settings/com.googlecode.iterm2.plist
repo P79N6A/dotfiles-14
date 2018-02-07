@@ -1068,13 +1068,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.575897216796875</real>
+				<real>0.57647058823529407</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.5146325854318915</real>
+				<real>0.51372549019607838</real>
 				<key>Red Component</key>
-				<real>0.49235450988635421</real>
+				<real>0.49411764705882355</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1096,13 +1096,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.24705882352941178</real>
+				<real>0.111907958984375</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.20392156862745098</real>
+				<real>0.10329640566681809</real>
 				<key>Red Component</key>
-				<real>0.18823529411764706</real>
+				<real>0.10016493173316121</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -1609,7 +1609,7 @@
 			<key>Normal Font</key>
 			<string>InputMono-ExtraLight 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
-			<true/>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1642,13 +1642,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.462554931640625</real>
+				<real>0.46274509803921571</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.42135259137564329</real>
+				<real>0.41960784313725491</real>
 				<key>Red Component</key>
-				<real>0.40681062545627356</real>
+				<real>0.40784313725490196</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
@@ -1680,7 +1680,7 @@
 			<key>Thin Strokes</key>
 			<integer>0</integer>
 			<key>Transparency</key>
-			<real>0.14759676395939084</real>
+			<real>0.1857332645939086</real>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
