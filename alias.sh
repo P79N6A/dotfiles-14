@@ -99,3 +99,6 @@ alias artisan="php artisan"
 alias ytdvideo="youtube-dl --yes-playlist --no-part --no-mark-watched --no-continue --no-cache-dir -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o '%(title)s.%(ext)s'"
 alias ytdaudio="youtube-dl --yes-playlist --no-part --no-mark-watched --no-continue --no-cache-dir -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o '%(title)s.%(ext)s' -x --audio-format 'mp3' --audio-quality 3"
 alias apmb="apm-beta"
+
+
+alias master='git checkout master'
