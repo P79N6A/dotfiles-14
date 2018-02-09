@@ -227,3 +227,41 @@ install_merlin() {
   opam user-setup install
   yarn global add flow-typed
 }
+
+pullatom() {
+  _follow=0
+  _argv=()
+
+  for item in $*; do
+    if [[ $item == '--follow' ]]; then
+      _follow=1
+    else
+      _argv+=" $item"
+    fi
+  done
+
+  (cd $HOME/.atom; git pull $_argv)
+
+  if [[ $_follow == 1 ]]; then
+    cd $HOME/.atom
+  fi
+}
+
+pulldotf() {
+  _follow=0
+  _argv=()
+
+  for item in $*; do
+    if [[ $item == '--follow' ]]; then
+      _follow=1
+    else
+      _argv+=" $item"
+    fi
+  done
+
+  (cd $HOME/.dotfiles; git pull $_argv)
+
+  if [[ $_follow == 1 ]]; then
+    cd $HOME/.dotfiles
+  fi
+}
