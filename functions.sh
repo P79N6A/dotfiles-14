@@ -265,3 +265,32 @@ pulldotf() {
     cd $HOME/.dotfiles
   fi
 }
+
+
+payment() {
+  # curl -v https://api.sandbox.paypal.com/v1/oauth2/token \
+  #  -H "Accept: application/json" \
+  #  -H "Accept-Language: en_US" \
+  #  -u "ASLH5Kpr3cPW4_hUHODb6V2E05bZ8MKvtJZQcSLOsHp6AyyM1mNbOEonJuUWOzHoRD_AuWigflzqCuTp:EMKUQnSfEoMy4c7dQl9XaIWNqsYytgzwMgaasd2wU33UImnTaI_1bjYI-Kp38wu1Bw37UAcLtBQ2iv8c" \
+  #  -d "grant_type=client_credentials"
+
+  curl -v https://api.sandbox.paypal.com/v1/payments/payment \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer A21AAHxaH-3rVwHKMwGQyIqyrpUT25h3D_0BefQ3lGIyq00_Uv1v3XdEolSOeJXK_thEESCVhOiyMuisfxDgN9LPD3wI_kbVg" \
+    -d '{
+    "intent": "sale",
+    "redirect_urls": {
+      "return_url": "https://example.com/your_redirect_url.html",
+      "cancel_url": "https://example.com/your_cancel_url.html"
+    },
+    "payer": {
+      "payment_method": "paypal"
+    },
+    "transactions": [{
+      "amount": {
+        "total": "7.47",
+        "currency": "AUD"
+      }
+    }]
+  }'
+}
