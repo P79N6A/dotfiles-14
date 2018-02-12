@@ -865,7 +865,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>665 248 775 417 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>297 361 796 473 0 0 1920 1177 </string>
+	<string>297 382 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 58 1920 1119 0 0 1920 1177 </string>
 	<key>NeverWarnAboutSpaces</key>
