@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f $HOME'/Desktop/google-cloud-sdk/path.bash.inc' ]; then source $HOME'/Desktop/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f $HOME'/Desktop/google-cloud-sdk/completion.bash.inc' ]; then source $HOME'/Desktop/google-cloud-sdk/completion.bash.inc'; fi
+
 export MAILCHECK=-1
 export TERM='xterm-256color'
 export GREP_OPTIONS='--color=auto'
