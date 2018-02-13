@@ -294,3 +294,25 @@ payment() {
     }]
   }'
 }
+
+
+push() {
+  files='.'
+  messsage='upload'
+  origin='origin master'
+  if [[ -n $1 ]]; then
+    files=$1; shift
+  fi
+
+  if [[ -n $1 ]]; then
+    message=$1; shift
+  fi
+
+  if [[ -n $1 ]]; then
+    origin=$1; shift
+  fi
+
+  git add $files
+  git commit -m $messsage
+  git push $origin
+}

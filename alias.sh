@@ -103,4 +103,3 @@ alias apmb="apm-beta"
 
 alias master='git checkout master'
 alias pull="git pull"
-alias push="git push"
