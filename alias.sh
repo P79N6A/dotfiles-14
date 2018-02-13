@@ -63,13 +63,6 @@ brewl() {
 brewinfo() {
   brew info $1
 }
-alias npms="npm search --long"
-alias npmi="npm install"
-alias npmun="npm uninstall"
-alias npminfo="npm info"
-npml() {
-  npm list $*
-}
 
 alias gits="git status"
 alias gitiw="git instaweb"
