@@ -96,3 +96,22 @@ alias apmb="apm-beta"
 
 alias master='git checkout master'
 alias pull="git pull"
+
+alias ..="cdup"
+alias ...="cdhome"
+
+cdup() {
+  if [[ $# == 0 ]]; then
+    cd ../
+  else
+    cd $1
+  fi
+}
+
+cdhome() {
+  if [[ $# == 0 ]]; then
+    cd
+  else
+    cd && cd $1
+  fi
+}
