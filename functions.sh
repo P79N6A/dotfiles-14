@@ -112,7 +112,7 @@ apminfo() {
   apm view $1
 }
 apml() {
-  apm list -b $* | perl -pe "s/(\@.+$|^.+\ )//g" | tail +2
+  apm list -b $* | perl -pe "s/(\@.+$|^.+\ )//g" | tail +1
 }
 
 npmi() {
