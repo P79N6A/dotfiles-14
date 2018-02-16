@@ -316,3 +316,13 @@ push() {
   git commit -m $messsage
   git push $origin
 }
+
+
+untar() {
+  tar_file=$1; shift
+  target_dir=$1; shift
+
+  tar -xzf $tar_file -C $target_dir
+  cd $target_dir
+  tar -xf $tar_file
+}
