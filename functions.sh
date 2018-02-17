@@ -326,3 +326,8 @@ untar() {
   cd $target_dir
   tar -xf $tar_file
 }
+
+
+copy() {
+  perl -pe "s/(\r|\n)$//g" | pbcopy
+}
