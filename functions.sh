@@ -318,16 +318,6 @@ push() {
 }
 
 
-untar() {
-  tar_file=$1; shift
-  target_dir=$1; shift
-
-  tar -xzf $tar_file -C $target_dir
-  cd $target_dir
-  tar -xf $tar_file
-}
-
-
 copy() {
   perl -pe "s/(\r|\n)$//g" | pbcopy
 }
