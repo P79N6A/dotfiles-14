@@ -106,6 +106,7 @@ tern
 ts-loader
 ts-node
 tslint
+>=2.8.0-dev
 url-loader
 webpack
 yarn
