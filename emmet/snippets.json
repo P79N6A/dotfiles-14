@@ -1,0 +1,47 @@
+{
+  "variables": {
+    "lang": "en",
+    "locale": "en-US",
+    "charset": "UTF-8",
+    "indentation": "\t",
+    "newline": "\n"
+  },
+
+  "html": {
+    "filters": "html, c",
+
+    "snippets": {
+      "ec": "<?php echo ${1:\\$var}; ?>$0",
+      "prep": "<pre><?php echo ${1:\\$var}; ?></pre>$0",
+      "php": "<?php$1?>$0",
+      "ph": "<?php\n$1$0",
+      "jsr|jsrea|jsready": "\\$(document).ready(function() {\n\t$1\n});"
+    },
+    "abbreviations": {
+      ":ccr": "div.container-fluid>div.row",
+      ":cr": "div.container>div.row"
+    }
+  },
+
+  "css": {
+    "filters": "css",
+
+    "snippets": {
+      "t:bg": "background: transparent$1;$0",
+      "t:bd": "border-color: transparent$1;$0"
+    },
+    "abbreviations": {}
+  },
+
+  "source.php": {
+    "filters": "html",
+
+    "snippets": {
+      "ec": "echo ${1:\\$var};",
+      "prep": "echo '<pre>'; print_r($1); echo '</pre>';",
+      "php": "?>$1<?php",
+      "ph": "?>\n$1"
+    },
+    "abbreviations": {}
+  }
+}
