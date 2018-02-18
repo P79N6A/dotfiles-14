@@ -1,11 +1,7 @@
 #!/bin/bash
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f $HOME'/Desktop/google-cloud-sdk/path.bash.inc' ]; then source $HOME'/Desktop/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f $HOME'/Desktop/google-cloud-sdk/completion.bash.inc' ]; then source $HOME'/Desktop/google-cloud-sdk/completion.bash.inc'; fi
-
+export HOMEBREW_NO_EMOJI=1
+# export HOMEBREW_INSTALL_BADGE="☕️ 🐸"
 export MAILCHECK=-1
 export TERM='xterm-256color'
 export GREP_OPTIONS='--color=auto'
@@ -29,7 +25,6 @@ export BREW_PATH="/usr/local/Cellar"
 export BREWGEM="/usr/local/lib/ruby/gems/2.5.0"
 export BREWGEMBIN="/usr/local/lib/ruby/gems/2.5.0/bin"
 export COMPOSERBIN="$HOME/.composer/vendor/bin"
-export JIRA_HOME="$HOME/jirasoftware-home"
 _PATH=""
 _PATH="/usr/local/sbin:/usr/sbin:/sbin:$_PATH"
 _PATH="$DOTFILES/bin:$_PATH"
@@ -37,7 +32,7 @@ _PATH="$BREW_PATH:$_PATH"
 _PATH="$COMPOSERBIN:$_PATH"
 _PATH="/usr/local/bin:/usr/bin:/bin:$_PATH"
 export PATH="$_PATH"
-export PROMPT_COMMAND="gp_install_prompt"
-# export PROMPT_COMMAND="check_git"
+# export PROMPT_COMMAND="gp_install_prompt"
+export PROMPT_COMMAND="check_git"
 
 source "$HOME/.bashrc"
