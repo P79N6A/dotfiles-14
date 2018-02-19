@@ -292,3 +292,8 @@ push() {
 copy() {
   perl -pe "s/(\r|\n)$//g" | pbcopy
 }
+
+ip() {
+  my_ip="`dig +short myip.opendns.com @resolver1.opendns.com`"
+  echo $my_ip | copy | echo $my_ip
+}

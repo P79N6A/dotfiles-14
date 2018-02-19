@@ -1,6 +1,0 @@
-:verbose: true
-:backtrace: true
-install:
-  --no-ri
-  --no-rdoc
-  --no-document
