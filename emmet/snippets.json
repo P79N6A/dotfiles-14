@@ -8,7 +8,7 @@
   },
 
   "html": {
-    "filters": "html, c",
+    "filters": "html",
 
     "snippets": {
       "ec": "<?php echo ${1:\\$var}; ?>$0",
