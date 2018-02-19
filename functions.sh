@@ -289,6 +289,16 @@ push() {
 }
 
 
+pull() {
+  origin="origin master"
+  if [[ $# > 0 ]]; then
+    origin=$*
+  fi
+
+  git pull $origin
+}
+
+
 copy() {
   perl -pe "s/(\r|\n)$//g" | pbcopy
 }
