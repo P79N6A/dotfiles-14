@@ -27,8 +27,8 @@
     "filters": "css",
 
     "snippets": {
-      "t:bg": "background: transparent$1;$0",
-      "t:bd": "border-color: transparent$1;$0"
+      "com|comment": "/* $1 */$0",
+      "comb|comment-block": "/** $1 */\n$0"
     },
     "abbreviations": {}
   },

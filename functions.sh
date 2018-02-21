@@ -307,3 +307,22 @@ ip() {
   my_ip="`dig +short myip.opendns.com @resolver1.opendns.com`"
   echo $my_ip | copy | echo $my_ip
 }
+
+commit() {
+  files='.'
+  message='Initial commit'
+
+  cat <<<"
+foo
+bar
+bar bar
+foo foo
+"
+
+  read first second <<< "hello world"
+  echo $second $first
+
+  # if [[ $# == 0 ]]; then
+  #   echo -e "usage: message [files]"
+  # fi
+}
