@@ -312,12 +312,13 @@ commit() {
   files='.'
   message='Initial commit'
 
-  cat <<<"
+  read second first <<<"
 foo
 bar
 bar bar
 foo foo
 "
+  echo $second $first
 
   read first second <<< "hello world"
   echo $second $first
