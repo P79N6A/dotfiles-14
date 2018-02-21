@@ -15,7 +15,10 @@
       "prep": "<pre><?php echo ${1:\\$var}; ?></pre>$0",
       "php": "<?php$1?>$0",
       "ph": "<?php\n$1$0",
-      "jsr|jsrea|jsready": "\\$(document).ready(function() {\n\t$1\n});"
+      "jsr|jsrea|jsready": "\\$(document).ready(function() {\n\t$1\n});",
+      "trbr": "<tr><td${1: colspan=\"$2\"}>&nbsp;</td></tr>",
+      "tdbr": "<td>&nbsp;</td>",
+      "pbr": "<p>&nbsp;</p>"
     },
     "abbreviations": {
       ":ccr": "div.container-fluid>div.row",
