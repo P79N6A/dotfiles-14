@@ -327,3 +327,14 @@ foo foo
   #   echo -e "usage: message [files]"
   # fi
 }
+
+npmglobal() {
+  depth=0
+  [[ $# == 1 ]] && depth=$1; shift
+
+  npm list -g --depth=$depth
+}
+
+new_laravel() {
+  composer create-project --prefer-dist laravel/laravel $*
+}

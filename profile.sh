@@ -18,6 +18,8 @@ export MANPAGER='less -X'
 export GPG_TTY=$(tty);
 export EDITOR='Atom'
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+export GITURL="https://github.com"
+export GITSSH="git@github.com"
 
 export DOTFILES="$HOME/.dotfiles"
 export BREW_PREFIX="$(brew --prefix)"
