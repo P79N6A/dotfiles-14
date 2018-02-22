@@ -32,6 +32,7 @@
 	<integer>14</integer>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>npm run dev</string>
 		<string>printf 'reload_shell'</string>
 		<string>printf '\x1b\x5b\x41'</string>
 		<string>`reload_shell`</string>
@@ -51,7 +52,6 @@
 		<string>printf '\x14'</string>
 		<string>printf '\x18'</string>
 		<string>printf '\x1b\x5b\x17'</string>
-		<string>printf '\x1b\x5b\x18'</string>
 	</array>
 	<key>CopySelection</key>
 	<false/>
@@ -1361,6 +1361,13 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>03 72 65 6c 6f 61 64 5f 73 68 65 6c 6c 0d</string>
+				</dict>
+				<key>0x73-0x180000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>6e 70 6d 20 72 75 6e 20 64 65 76 0d</string>
 				</dict>
 				<key>0x7a-0x100000</key>
 				<dict>
