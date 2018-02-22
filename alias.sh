@@ -114,3 +114,4 @@ cdhome() {
     cd && cd $1
   fi
 }
+alias lav="cd ~/www/laravel.local"
