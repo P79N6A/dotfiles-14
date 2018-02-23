@@ -154,28 +154,6 @@ genlog() {
   getnpm 1> $DOTFILES/npm.log
 }
 
-pushdotf() {
-  (cd $HOME/.dotfiles; git add .; git commit -m 'upload'; git push origin master)
-}
-
-pushatom() {
-  (cd $HOME/.atom; git add .; git commit -m 'upload'; git push origin master)
-}
-
-push() {
-  msg=''; repo=''
-
-  if [[ $# < 2 ]]; then
-    echo "usage: target_dir messages [remote:origin] [branch:master]"
-    return 50
-  fi
-
-  repo=$1; shift
-  msg=$1; shift
-
-  (cd $repo; git add .; git commit -m $msg; git push $*)
-}
-
 ll() {
   if [[ $# == 0 ]]; then
     printf "usage: file\n"
@@ -267,7 +245,7 @@ pulldotf() {
 }
 
 
-push() {
+pushmaster() {
   files='.'
   messsage='upload'
   origin='origin master'
@@ -289,7 +267,7 @@ push() {
 }
 
 
-pull() {
+pullmaster() {
   origin="origin master"
   if [[ $# > 0 ]]; then
     origin=$*
@@ -308,25 +286,25 @@ ip() {
   echo $my_ip | copy | echo $my_ip
 }
 
-commit() {
-  files='.'
-  message='Initial commit'
+# commit() {
+#   files='.'
+#   message='Initial commit'
 
-  read second first <<<"
-foo
-bar
-bar bar
-foo foo
-"
-  echo $second $first
+#   read second first <<<"
+# foo
+# bar
+# bar bar
+# foo foo
+# "
+#   echo $second $first
 
-  read first second <<< "hello world"
-  echo $second $first
+#   read first second <<< "hello world"
+#   echo $second $first
 
-  # if [[ $# == 0 ]]; then
-  #   echo -e "usage: message [files]"
-  # fi
-}
+#   # if [[ $# == 0 ]]; then
+#   #   echo -e "usage: message [files]"
+#   # fi
+# }
 
 npmglobal() {
   depth=0
