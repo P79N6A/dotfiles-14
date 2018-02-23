@@ -11,10 +11,10 @@
     "filters": "html",
 
     "snippets": {
-      "comb|comment-block": "/* $1 */",
-      "docb|doc-block": "/**\n$1\n*/",
+      "comb|comment-block": "/*$1*/",
+      "docb|doc-block": "/**$1*/",
       "ec": "<?php echo ${1:\\$var}; ?>$0",
-      "prep": "<pre><?php echo ${1:\\$var}; ?></pre>$0",
+      "prep": "<pre><?php print_r(${1:\\$var}); ?></pre>$0",
       "php": "<?php$1?>$0",
       "ph": "<?php\n$1$0",
       "jsr|jsrea|jsready": "\\$(document).ready(function() {\n\t$1\n});",

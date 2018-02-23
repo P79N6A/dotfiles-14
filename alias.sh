@@ -115,3 +115,8 @@ cdhome() {
   fi
 }
 alias lav="cd ~/www/laravel.local"
+alias repro="cd ~/www/reproduction-gallery.com"
+alias repron="cd ~/www/repro-gallery-master"
+alias soho="cd ~/www/soho-art.com"
+alias abacus="cd ~/www/abacus-gallery.com"
+alias reprog="cd ~/www/reproduction-galleries.com"
