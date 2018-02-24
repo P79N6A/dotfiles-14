@@ -1,5 +1,24 @@
 #!/bin/bash
 
+error_text() {
+  local _SCRIPTNAME=$1; shift
+  local _MESSAGE=$1; shift
+  local _STATUS=$1; shift
+
+  printf "
+${YELLOW}${B}# !/bin/bash${R}
+${YELLOW}${B}# ${_SCRIPTNAME}${R}${YELLOW}
+—————————————————————————————————————————————
+
+${_MESSAGE}
+
+
+=============================================
+# error: ${_STATUS}
+
+${R}"
+}
+
 check_git() {
   gitrepo=$(git worktree list &>/dev/null; echo "$?")
   if [[ $gitrepo == 0 ]]; then
@@ -277,6 +296,15 @@ pullmaster() {
 }
 
 
+pushdotf() {
+  (cd $HOME/.dotfiles && pushmaster)
+}
+
+pushatom() {
+  (cd $HOME/.atom && pushmaster)
+}
+
+
 copy() {
   perl -pe "s/(\r|\n)$//g" | pbcopy
 }
@@ -316,3 +344,28 @@ npmglobal() {
 new_laravel() {
   composer create-project --prefer-dist laravel/laravel $*
 }
+
+
+create_project() {
+  local _SCRIPTNAME="$(basename ${FUNCNAME})"
+  local _MESSAGE='usage: package [target_dir] [version]'
+  local _STATUS='missing required arguments'
+  local package=''
+  local target_dir='./'
+  local version='latest'
+
+  if [[ $# < 1 ]]; then
+    error_text "$_SCRIPTNAME" "$_MESSAGE" "$_STATUS"
+    return 1
+  fi
+
+  [[ -n $1 ]] && package=$1; shift
+  [[ -n $1 ]] && target_dir=$1; shift
+  [[ -n $1 ]] && version=$1; shift
+
+  composer create-project --prefer-dist --remove-vcs $package $target_dir $version $*
+}
+alias create-project="create_project"
+alias newproj="create_project"
+alias compproj="create_project"
+alias project="create_project"
