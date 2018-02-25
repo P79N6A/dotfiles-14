@@ -11,29 +11,27 @@
     "filters": "html",
 
     "snippets": {
-      "comb|comment-block": "/*$1*/",
-      "docb|doc-block": "/**$1*/",
-      "ec": "<?php echo ${1:\\$var}; ?>$0",
-      "prep": "<pre><?php print_r(${1:\\$var}); ?></pre>$0",
-      "php": "<?php$1?>$0",
-      "ph": "<?php\n$1$0",
-      "jsr|jsrea|jsready": "\\$(document).ready(function() {\n\t$1\n});",
-      "trbr": "<tr><td${1: colspan=\"$2\"}>&nbsp;</td></tr>",
-      "tdbr": "<td>&nbsp;</td>",
-      "pbr": "<p>&nbsp;</p>"
+      "!c": "<!--$1-->",
+      "e:": "<?php echo ${1:\\$var}; ?>",
+      "ph:": "<?php\n\n$1",
+      "p:": "<?php$1?>",
+      "pre:": "<pre><?php print_r(${1:\\$var}); ?></pre>",
+      "prt:": "<?php print($1); ?>",
+      "prf:": "<?php printf($1, $2); ?>",
+      "prr:": "<?php print_r($1) ?>;"
     },
     "abbreviations": {
-      ":ccr": "div.container-fluid>div.row",
-      ":cr": "div.container>div.row"
+
     }
   },
 
   "css": {
-    "filters": "css",
+    "filters": "html,css",
 
     "snippets": {
-      "com|comment": "/* $1 */$0",
-      "comb|comment-block": "/** $1 */\n$0"
+      "!c": "/*$1*/",
+      "!cb": "/**$1*/",
+      "!dc": "/**\n$1\n*/"
     },
     "abbreviations": {}
   },
@@ -42,10 +40,16 @@
     "filters": "html",
 
     "snippets": {
-      "ec": "echo ${1:\\$var};",
-      "prep": "echo '<pre>'; print_r($1); echo '</pre>';",
-      "php": "?>$1<?php",
-      "ph": "?>\n$1"
+      "!c": "/*$1*/",
+      "!cb": "/**$1*/",
+      "!dc": "/**\n$1\n*/",
+      "e:": "echo ${1:\\$var};",
+      "ph:": "?>\n$1",
+      "p:": "?>\n$1\n<?php",
+      "pre:": "echo '<pre>'; print_r(${1:\\$var}); echo '</pre>';",
+      "prt:": "print($1);",
+      "prf:": "printf($1, $2);",
+      "prr:": "print_r($1);"
     },
     "abbreviations": {}
   }
