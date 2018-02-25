@@ -369,3 +369,12 @@ alias create-project="create_project"
 alias newproj="create_project"
 alias compproj="create_project"
 alias project="create_project"
+
+
+npmrun() {
+  if [[ $# == 0 ]]; then
+    npm run dev
+  else
+    npm run $*
+  fi
+}
