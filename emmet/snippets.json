@@ -18,7 +18,8 @@
       "pre:": "<pre><?php print_r(${1:\\$var}); ?></pre>",
       "prt:": "<?php print($1); ?>",
       "prf:": "<?php printf($1, $2); ?>",
-      "prr:": "<?php print_r($1) ?>;"
+      "prr:": "<?php print_r($1) ?>;",
+      "!p": "<p>&nbsp;</p>"
     },
     "abbreviations": {
 
