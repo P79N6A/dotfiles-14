@@ -10,7 +10,7 @@ fi
 install=0
 
 if [[ $install != 1 ]]; then
-  sources=("$lib_dir/profile $lib_dir/exrc $lib_dir/gemrc $lib_dir/npmrc $lib_dir/vimrc $lib_dir/bashrc $lib_dir/yarnrc $lib_dir/ocamlinit")
+  sources=("$lib_dir/profile $lib_dir/exrc $lib_dir/gemrc $lib_dir/npmrc $lib_dir/vimrc $lib_dir/bashrc $lib_dir/yarnrc $lib_dir/ocamlinit $lib_dir/hgrc")
 
   for source_file in $sources; do
     if [[ -e $source_file ]]; then

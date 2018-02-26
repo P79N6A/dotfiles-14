@@ -1,0 +1,4 @@
+[extensions]
+flow = /usr/local/opt/hg-flow/libexec/hgflow.py
+[flow]
+autoshelve = true
