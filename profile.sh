@@ -35,6 +35,6 @@ _PATH="/usr/local/sbin:/usr/sbin:/sbin:$_PATH"
 _PATH="/usr/local/bin:/usr/bin:/bin:$_PATH"
 export PATH="$_PATH"
 # export PROMPT_COMMAND="gp_install_prompt"
-export PROMPT_COMMAND="check_git"
+# export PROMPT_COMMAND="check_git"
 
 source "$HOME/.bashrc"
