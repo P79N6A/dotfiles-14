@@ -12,14 +12,14 @@
 
     "snippets": {
       "!c": "<!--$1-->",
+      "!p": "<p>&nbsp;</p>",
       "e:": "<?php echo ${1:\\$var}; ?>",
       "ph:": "<?php\n\n$1",
       "p:": "<?php$1?>",
       "pre:": "<pre><?php print_r(${1:\\$var}); ?></pre>",
       "prt:": "<?php print($1); ?>",
       "prf:": "<?php printf(${1:string}, ${2:\\$vars}); ?>",
-      "prr:": "<?php print_r($1) ?>;",
-      "!p": "<p>&nbsp;</p>"
+      "prr:": "<?php print_r($1) ?>;"
     },
     "abbreviations": {
 
@@ -30,6 +30,8 @@
     "filters": "html",
 
     "snippets": {
+      "!c": "<!--$1-->",
+      "!p": "<p>&nbsp;</p>",
       "p:": "@php\n\t$1\n@endphp",
       "e:": "@php\n\techo ${1:\\$var};\n@endphp",
       "pre:": "@php\n\techo '<pre>'; print_r(${1:\\$var}); echo '</pre>';\n@endphp",
@@ -47,8 +49,8 @@
 
     "snippets": {
       "!c": "/*$1*/",
-      "!cb": "/**$1*/",
-      "!dc": "/**\n$1\n*/"
+      "!cc": "/**\n$1\n*/",
+      "!s": "/* ${1:SECTION TITLE}\n-------------------------------------------------- */"
     },
     "abbreviations": {}
   },

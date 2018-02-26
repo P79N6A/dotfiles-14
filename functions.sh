@@ -378,3 +378,20 @@ npmrun() {
     npm run $*
   fi
 }
+
+
+clonefineart() {
+  gitclone fineartdeveloper/$1 $2
+}
+
+clonenopphasin() {
+  gitclone nopphasinara/$1 $2
+}
+
+clonescreen() {
+  gitclone screenbeetle/$1 $2
+}
+
+npmupdate() {
+  npm update -g && npm install -g npm
+}
