@@ -17,9 +17,25 @@
       "p:": "<?php$1?>",
       "pre:": "<pre><?php print_r(${1:\\$var}); ?></pre>",
       "prt:": "<?php print($1); ?>",
-      "prf:": "<?php printf($1, $2); ?>",
+      "prf:": "<?php printf(${1:string}, ${2:\\$vars}); ?>",
       "prr:": "<?php print_r($1) ?>;",
       "!p": "<p>&nbsp;</p>"
+    },
+    "abbreviations": {
+
+    }
+  },
+
+  "blade": {
+    "filters": "html",
+
+    "snippets": {
+      "p:": "@php\n\t$1\n@endphp",
+      "e:": "@php\n\techo ${1:\\$var};\n@endphp",
+      "pre:": "@php\n\techo '<pre>'; print_r(${1:\\$var}); echo '</pre>';\n@endphp",
+      "prt:": "@php\n\tprint(${1:\\$var});\n@endphp",
+      "prf:": "@php\n\tprintf(${1:string}, ${2:\\$vars});\n@endphp",
+      "prr:": "@php\n\tprint_r($1);\n@endphp"
     },
     "abbreviations": {
 
@@ -49,7 +65,7 @@
       "p:": "?>\n$1\n<?php",
       "pre:": "echo '<pre>'; print_r(${1:\\$var}); echo '</pre>';",
       "prt:": "print($1);",
-      "prf:": "printf($1, $2);",
+      "prf:": "printf(${1:string}, ${2:\\$vars});",
       "prr:": "print_r($1);"
     },
     "abbreviations": {}
