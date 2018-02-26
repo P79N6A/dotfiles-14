@@ -1,6 +1,6 @@
 #!/bin/bash
 
-error_text() {
+_error() {
   local _SCRIPTNAME=$1; shift
   local _MESSAGE=$1; shift
   local _STATUS=$1; shift
@@ -9,12 +9,67 @@ error_text() {
 ${YELLOW}${B}# !/bin/bash${R}
 ${YELLOW}${B}# ${_SCRIPTNAME}${R}${YELLOW}
 —————————————————————————————————————————————
+${_MESSAGE}
+
+=============================================
+(EXIT) ${_STATUS}
+
+${R}"
+}
+
+_warning() {
+  local _SCRIPTNAME=$1; shift
+  local _MESSAGE=$1; shift
+  local _STATUS=$1; shift
+
+  printf "
+${BLUE}${B}# !/bin/bash${R}
+${BLUE}${B}# ${_SCRIPTNAME}${R}${BLUE}
+—————————————————————————————————————————————
 
 ${_MESSAGE}
 
 
 =============================================
-# error: ${_STATUS}
+(END)
+
+${R}"
+}
+
+_success() {
+  local _SCRIPTNAME=$1; shift
+  local _MESSAGE=$1; shift
+  local _STATUS=$1; shift
+
+  printf "
+${GREEN}${B}# !/bin/bash${R}
+${GREEN}${B}# ${_SCRIPTNAME}${R}${GREEN}
+—————————————————————————————————————————————
+
+${_MESSAGE}
+
+
+=============================================
+(END)
+
+${R}"
+}
+
+_info() {
+  local _SCRIPTNAME=$1; shift
+  local _MESSAGE=$1; shift
+  local _STATUS=$1; shift
+
+  printf "
+${CYAN}${B}# !/bin/bash${R}
+${CYAN}${B}# ${_SCRIPTNAME}${R}${CYAN}
+—————————————————————————————————————————————
+
+${_MESSAGE}
+
+
+=============================================
+(END)
 
 ${R}"
 }
@@ -355,7 +410,7 @@ create_project() {
   local version='latest'
 
   if [[ $# < 1 ]]; then
-    error_text "$_SCRIPTNAME" "$_MESSAGE" "$_STATUS"
+    _error "$_SCRIPTNAME" "$_MESSAGE" "$_STATUS"
     return 1
   fi
 
@@ -394,4 +449,23 @@ clonescreen() {
 
 npmupdate() {
   npm update -g && npm install -g npm
+}
+
+
+newcmd() {
+  local cmd="`basename $0`"
+
+  if [[ $# == 0 ]]; then
+    _error $cmd "usage: command_name [target_dir]" 1; return
+  fi
+
+  local command_name=$1; shift
+  local bindir="$DOTFILES/bin"
+  local target="${bindir}/${command_name}"
+
+  if [[ -e $target ]]; then
+    _error $cmd "Command ${command_name} already exists" 1; return
+  fi
+
+  echo -en "#!/bin/bash\n" > $target && chmod -R 755 $target
 }
