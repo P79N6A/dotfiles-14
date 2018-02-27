@@ -171,11 +171,11 @@ pushmaster() {
 
   git add $files
   git commit -m $messsage
-  git push $origin
+  git push origin $origin
 }
 
 pullmaster() {
-  origin="origin master"
+  origin="master"
   if [[ $# > 0 ]]; then
     origin=$*
   fi
