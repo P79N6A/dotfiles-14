@@ -6,11 +6,9 @@ reload_shell() {
 }
 
 load_sources() {
-  test -e "$HOME/.iterm2_shell_integration.bash" && source "$HOME/.iterm2_shell_integration.bash"
-
-  source "$DOTFILES/colors.sh"
-  source "$DOTFILES/functions.sh"
-  source "$DOTFILES/alias.sh"
+  source "$HOME/.dotfiles/colors.sh"
+  source "$HOME/.dotfiles/functions.sh"
+  source "$HOME/.dotfiles/alias.sh"
 
   # if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   #   __GIT_PROMPT_DIR="$(brew --prefix)/opt/bash-git-prompt/share"
@@ -55,7 +53,7 @@ shell_setup() {
   sources=("gemrc npmrc vimrc exrc ocamlinit")
   for item in $sources; do
     dest="${HOME}/.${item}"
-    source="${DOTFILES}/${item}"
+    source="${HOME}/.dotfiles/${item}"
 
     rm -rf $dest
 

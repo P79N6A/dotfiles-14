@@ -2,13 +2,13 @@
 
 
 # Load core functions file
-source $DOTFILES_PATH/lib/functions.sh
+source $HOME/.dotfiles/lib/functions.sh
 
 source_reload
 
 # Load old files
-source $DOTFILES_PATH/alias
-source $DOTFILES_PATH/functions
+source $HOME/.dotfiles/alias
+source $HOME/.dotfiles/functions
 
 load_additional_files
 
@@ -16,4 +16,4 @@ load_additional_files
 xcode_select_install
 # set_gem_home
 create_global_git_files
-set_prompt
+# set_prompt
