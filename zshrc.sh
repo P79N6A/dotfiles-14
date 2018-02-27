@@ -1,6 +1,18 @@
 export DOTFILES=$HOME/.dotfiles
 export ZSHFILES=$HOME/.dotfiles/zsh
 
+reload_shell() {
+  clear
+  exec $SHELL -l
+  load_sources
+}
+
+load_sources() {
+  source $ZSHFILES/exports.sh
+  source $ZSHFILES/functions.sh
+  source $ZSHFILES/alias.sh
+}
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 

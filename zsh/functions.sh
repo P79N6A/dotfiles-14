@@ -1,23 +1,65 @@
 ## OTHERS
 ## -------------------------------------------------- ##
-reload_shell() { clear; exec $SHELL -l; load_sources }
+home() {
+  cd $HOME && [[ $# > 0 ]] && cd "./${*}"
+}
 
-home() { cd $HOME && [[ $# > 0 ]] && cd "./${*}" }
-atom() { cd $HOME/.atom && [[ $# > 0 ]] && cd "./${*}" }
-dotf() { cd $HOME/.dotfiles && [[ $# > 0 ]] && cd "./${*}" }
-www() { cd $HOME/www && [[ $# > 0 ]] && cd "./${*}" }
-usr() { cd /usr && [[ $# > 0 ]] && cd "./${*}" }
-localbin() { cd /usr/local/bin && [[ $# > 0 ]] && cd "./${*}" }
+atom() {
+  cd $HOME/.atom && [[ $# > 0 ]] && cd "./${*}"
+}
 
-cmd() { command -v $1 }
-ver() { $1 --version }
-hidden() { chflags hidden $* }
-nohidden() { chflags nohidden $* }
-curdate() { date "+DATE: %Y-%m-%d" }
-curtime() { date "+TIME: %H:%M:%S" }
-path() { echo -e ${1//:/\\n} }
-copy() { perl -pe "s/(\r|\n)$//g" | pbcopy -Prefer txt }
-ip() { my_ip="`dig +short myip.opendns.com @resolver1.opendns.com`"; echo $my_ip | copy | echo $my_ip }
+dotf() {
+  cd $HOME/.dotfiles && [[ $# > 0 ]] && cd "./${*}"
+}
+
+www() {
+  cd $HOME/www && [[ $# > 0 ]] && cd "./${*}"
+}
+
+usr() {
+  cd /usr && [[ $# > 0 ]] && cd "./${*}"
+}
+
+localbin() {
+  cd /usr/local/bin && [[ $# > 0 ]] && cd "./${*}"
+}
+
+cmd() {
+  command -v $1
+}
+
+ver() {
+  $1 --version
+}
+
+hidden() {
+  chflags hidden $*
+}
+
+nohidden() {
+  chflags nohidden $*
+}
+
+curdate() {
+  date "+DATE: %Y-%m-%d"
+}
+
+curtime() {
+  date "+TIME: %H:%M:%S"
+}
+
+path() {
+  echo -e ${1//:/\\n}
+}
+
+copy() {
+  perl -pe "s/(\r|\n)$//g" | pbcopy -Prefer txt
+}
+
+ip() {
+  my_ip="`dig +short myip.opendns.com @resolver1.opendns.com`"
+  echo $my_ip | copy | echo $my_ip
+}
 
 cdup() {
   if [[ $# == 0 ]]; then
@@ -216,40 +258,102 @@ project() {
 
 ## NPM
 ## -------------------------------------------------- ##
-n.() { npm view $1 }
-in.() { npm install $* }
-un.() { npm uninstall $* }
-nn.() { npm search $1 }
+n.() {
+  npm view $1
+}
 
-npmupdate() { npm update -g && npm install -g npm }
+in.() {
+  npm install $*
+}
+
+un.() {
+  npm uninstall $*
+}
+
+nn.() {
+  npm search $1
+}
+
+npmupdate() {
+  npm update -g && npm install -g npm
+}
 
 
 ## ATOM
 ## -------------------------------------------------- ##
-a.() { apm view $1 }
-ia.() { apm install $* }
-ua.() { apm uninstall $* }
-aa.() { apm search $1 }
-aal.() { apm list -b $* | perl -pe "s/(\@.+$|^.+\ )//g" | tail +1 }
+a.() {
+  apm view $1
+}
+
+ia.() {
+  apm install $*
+}
+
+ua.() {
+  apm uninstall $*
+}
+
+aa.() {
+  apm search $1
+}
+
+aal.() {
+  apm list -b $* | perl -pe "s/(\@.+$|^.+\ )//g" | tail +1
+}
 
 
 ## BREW
 ## -------------------------------------------------- ##
-b.() { brew info $1 }
-ib.() { brew install $* }
-ub.() { brew uninstall $* }
-bb.() { brew search $1 }
-tbb.() { brew tap $1 }
-bbl.() { brew list }
+b.() {
+  brew info $1
+}
 
-cleanbrew() { brew update; brew upgrade; brew prune; brew cleanup; brew doctor }
+ib.() {
+  brew install $*
+}
+
+ub.() {
+  brew uninstall $*
+}
+
+bb.() {
+  brew search $1
+}
+
+tbb.() {
+  brew tap $1
+}
+
+bbl.() {
+  brew list
+}
+
+cleanbrew() {
+  brew update
+  brew upgrade
+  brew prune
+  brew cleanup
+  brew doctor
+}
 
 
 ## GEM
 ## -------------------------------------------------- ##
-g.() { sudo gem search --details ^$1$ }
-ig.() { sudo gem install $* --no-ri --no-rdoc --no-document --backtrace --verbose --quiet }
-ug.() { sudo gem uninstall $* --backtrace --verbose --quiet }
-gg.() { sudo gem search $1 }
-ggl.() { sudo gem list }
-upg.() { sudo gem update }
+g.() {
+  sudo gem search --details ^$1$
+}
+ig.() {
+  sudo gem install $* --no-ri --no-rdoc --no-document --backtrace --verbose --quiet
+}
+ug.() {
+  sudo gem uninstall $* --backtrace --verbose --quiet
+}
+gg.() {
+  sudo gem search $1
+}
+ggl.() {
+  sudo gem list
+}
+upg.() {
+  sudo gem update
+}
