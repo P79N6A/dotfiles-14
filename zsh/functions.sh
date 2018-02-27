@@ -156,7 +156,7 @@ clonescreen() {
 pushmaster() {
   files='.'
   messsage='upload'
-  origin='origin master'
+  origin='master'
   if [[ -n $1 ]]; then
     files=$1; shift
   fi
@@ -180,7 +180,7 @@ pullmaster() {
     origin=$*
   fi
 
-  git pull $origin
+  git pull origin $origin
 }
 
 
