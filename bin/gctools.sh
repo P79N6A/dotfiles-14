@@ -1,5 +1,27 @@
-foo() {
-  echo 'FOO'
+#!/bin/bash
+
+install() {
+  local bindir="$(grep -E "^([^:]+)" -io <<<"${PATH}")"
+  if [[ ! -e "${bindir}" ]]; then
+    echo -e "
+    error: not found bin dir \"${bindir}\"
+    "; return 1
+  else
+    echo -e "
+    Installing...gctools
+    "
+    if [[ ! -e "./gctools.sh" ]]; then
+      echo -e "
+      error: not found \"gctools.sh\"
+      "; return 1
+    else
+      sudo cp ./gctools.sh /usr/local/bin/gctools
+      echo -e "
+      Completed...
+      Please remove gctools.sh after installed
+      "; return 0
+    fi
+  fi
 }
 
 # Check if the function exists (bash specific)
