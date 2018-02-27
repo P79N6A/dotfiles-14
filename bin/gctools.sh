@@ -15,11 +15,15 @@ install() {
       error: not found \"gctools.sh\"
       "; return 1
     else
-      sudo cp ./gctools.sh /usr/local/bin/gctools
-      echo -e "
-      Completed...
-      Please remove gctools.sh after installed
-      "; return 0
+      # sudo cp ./gctools.sh /usr/local/bin/gctools
+      # echo -e "
+      # Completed...
+      # Please remove gctools.sh after installed
+      # "; return 0
+      echo -ne 'source $HOME/.dotfiles/zshrc.sh' > "${HOME}/.zshrc"
+      echo -e "Please re-login to refresh shell"
+
+      return 0
     fi
   fi
 }
