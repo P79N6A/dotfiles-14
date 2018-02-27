@@ -7,9 +7,9 @@ if declare -f "$1" > /dev/null
 then
   # call arguments verbatim
   "$@"
-  return 0
+  complete 0
 else
   # Show a helpful error
   echo "'$1' is not a known function name" >&2
-  return 1
+  complete 1
 fi
