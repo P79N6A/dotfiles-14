@@ -1,5 +1,17 @@
 ## OTHERS
 ## -------------------------------------------------- ##
+reload_shell() {
+  clear
+  exec $SHELL -l
+  load_sources
+}
+
+load_sources() {
+  source $ZSHFILES/exports.sh
+  source $ZSHFILES/functions.sh
+  source $ZSHFILES/alias.sh
+}
+
 home() {
   cd $HOME && [[ $# > 0 ]] && cd "./${*}"
 }
@@ -85,38 +97,38 @@ flushdns() {
   )
 }
 
-ll() {
-  if [[ $# == 0 ]]; then
-    printf "usage: file\n"
-    return 1
-  fi
-
-  file=$1; shift
-  if [[ ! -e $file ]]; then
-    printf "File not exists\n"
-    return 1
-  fi
-
-  total_lines="$(cat -b $file | grep -E '\S+' -ic)"
-  begin_line=1
-  line_to_get=1
-  _coproc=0
-  _exec=''
-  _argv=()
-  if [[ $1 =~ ^- && $1 == '-e' ]]; then
-    shift; _exec=$*; _coproc=1
-  fi
-
-  for (( i = 1; i <= $total_lines; i++ )); do
-    _argv+="`tail +$i $file | head -1` "
-  done
-
-  if [[ $_coproc == 1 ]]; then
-    $_exec $_argv
-  else
-    echo $_argv | perl -pe 's/\s/\n/g'
-  fi
-}
+# ll() {
+#   if [[ $# == 0 ]]; then
+#     printf "usage: file\n"
+#     return 1
+#   fi
+#
+#   file=$1; shift
+#   if [[ ! -e $file ]]; then
+#     printf "File not exists\n"
+#     return 1
+#   fi
+#
+#   total_lines="$(cat -b $file | grep -E '\S+' -ic)"
+#   begin_line=1
+#   line_to_get=1
+#   _coproc=0
+#   _exec=''
+#   _argv=()
+#   if [[ $1 =~ ^- && $1 == '-e' ]]; then
+#     shift; _exec=$*; _coproc=1
+#   fi
+#
+#   for (( i = 1; i <= $total_lines; i++ )); do
+#     _argv+="`tail +$i $file | head -1` "
+#   done
+#
+#   if [[ $_coproc == 1 ]]; then
+#     $_exec $_argv
+#   else
+#     echo $_argv | perl -pe 's/\s/\n/g'
+#   fi
+# }
 
 newcmd() {
   local cmd="`basename $0`"
@@ -172,6 +184,25 @@ getnpm() {
 
 ## GIT
 ## -------------------------------------------------- ##
+gitraw() {
+  local url=''
+  [[ $# > 0 ]] && url=$1; shift
+  local file=''
+  [[ $# > 0 ]] && file=$1; shift
+
+  if [[ -n $url && -z $file ]]; then
+    file="$(basename ${url})"
+  fi
+
+  if [[ -z $file || -z $url ]]; then
+    echo -ne "
+    usage: file_url [filename]
+    "; return 1
+  fi
+
+  wget https://raw.githubusercontent.com/$url/$file -O $file $*
+}
+
 gitclone() {
   if [[ $# == 0 ]]; then
     printf "${Red}RED${ResetColor}"
