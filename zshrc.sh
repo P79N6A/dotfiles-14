@@ -17,7 +17,8 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="dpoggi"
 # ZSH_THEME="kolo"
 # ZSH_THEME="nanotech"
-ZSH_THEME="theunraveler"
+# ZSH_THEME="theunraveler"
+ZSH_THEME="zhann"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
