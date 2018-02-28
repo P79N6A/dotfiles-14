@@ -1,3 +1,7 @@
+#!/bin/bash
+#
+# Customize zsh
+
 export DOTFILES="${HOME}/.dotfiles"
 export ZSHFILES="${DOTFILES}/zsh"
 
@@ -20,6 +24,7 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="theunraveler"
 # ZSH_THEME="zhann"
 ZSH_THEME="my_awesome_theme"
+# ZSH_THEME="sobole"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -90,4 +95,7 @@ source $ZSH/oh-my-zsh.sh
 ## LOAD SOURCES
 ## -------------------------------------------------- ##
 source $ZSHFILES/functions.sh
+
+check_required_packages
+
 source $ZSHFILES/alias.sh

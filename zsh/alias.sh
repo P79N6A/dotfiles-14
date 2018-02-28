@@ -3,19 +3,26 @@
 alias ..="cdup"
 alias ...="cdhome"
 
-alias lms="lsmac -a"
-alias lmf="lsmac -ao"
-alias lmd="lsmac -aF"
-alias ls="ls -lAh"
-alias la="ls -1Ah"
-alias lc="ls -CAh"
-alias lf="ls | grep --color=never '^-'"
-alias ld="ls | grep --color=never '^d'"
-alias lsf="ls -L"
-alias lsbysize="ls -S"
-alias lsbytime="ls -t"
-alias lsbin="ls /usr/local/bin"
-alias lsbing="ls /usr/local/bin | grep -E "
+
+## LS
+## -------------------------------------------------- ##
+# alias ls="ls -lAh"
+# alias la="ls -1Ah"
+# alias lc="ls -CAh"
+# alias lf="ls | grep --color=never '^-'"
+# alias ld="ls | grep --color=never '^d'"
+# alias lr="ls -R"
+# alias lsf="ls -L"
+# alias lsbysize="ls -S"
+# alias lsbytime="ls -t"
+# alias lsbin="ls /usr/local/bin"
+# alias lsbing="ls /usr/local/bin | grep -E "
+
+
+## EXA
+## -------------------------------------------------- ##
+alias ls="(echo -ne \"\n\" && exa -l -h -a --color=always --group-directories-first && echo -ne \"\n\n\")"
+alias tree="ls -T"
 
 
 ## GEM
