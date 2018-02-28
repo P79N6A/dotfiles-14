@@ -65,8 +65,8 @@ alias stash="git stash"
 alias status="git status"
 alias add="git add"
 alias commit="git commit"
-alias push="git push origin"
-alias pull="git pull origin"
+alias push="git push"
+alias pull="git pull"
 alias checkout="git checkout"
 alias master='git checkout master'
 

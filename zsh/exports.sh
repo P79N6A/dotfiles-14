@@ -17,6 +17,8 @@ export EDITOR="Atom"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 export GITURL="https://github.com"
 export GITSSH="git@github.com"
+export FINEARTGIT="${GITURL}/fineartdeveloper"
+export NOPPHASINGIT="${GITURL}/nopphasinara"
 
 export MANPATH="/usr/local/man:${MANPATH}"
 export ARCHFLAGS="-arch x86_64"

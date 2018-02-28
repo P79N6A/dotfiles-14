@@ -277,24 +277,8 @@ newlaravel() {
 
 ## COMPOSER
 ## -------------------------------------------------- ##
-project() {
-  local _SCRIPTNAME="$(basename ${FUNCNAME})"
-  local _MESSAGE='usage: package [target_dir] [version]'
-  local _STATUS='missing required arguments'
-  local package=''
-  local target_dir='./'
-  local version='latest'
-
-  if [[ $# < 1 ]]; then
-    _error "$_SCRIPTNAME" "$_MESSAGE" "$_STATUS"
-    return 1
-  fi
-
-  [[ -n $1 ]] && package=$1; shift
-  [[ -n $1 ]] && target_dir=$1; shift
-  [[ -n $1 ]] && version=$1; shift
-
-  composer create-project --prefer-dist --remove-vcs $package $target_dir $version $*
+compproject() {
+  composer create-project $* --prefer-dist --remove-vcs
 }
 
 
