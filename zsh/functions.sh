@@ -1,5 +1,16 @@
 ## OTHERS
 ## -------------------------------------------------- ##
+email() {
+  if declare -f $1 > /dev/null
+  then
+    "$@"
+    return 0
+  else
+    echo -e "function name '${1}' not exists"
+    return 1
+  fi
+}
+
 reload_shell() {
   clear
   exec $SHELL -l

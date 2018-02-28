@@ -73,7 +73,7 @@ alias master='git checkout master'
 
 ## NPM
 ## -------------------------------------------------- ##
-alias npmrund="npm run development"
+alias npmrund="npm run dev"
 alias npmrunp="npm run production"
 
 
