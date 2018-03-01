@@ -81,7 +81,13 @@ _commit() {
     [[ $# > 1 ]] && shift;
     git commit -m $message $*
 }
-alias push="git push"
+alias push="_push"
+_push() {
+    local remote="${1:-origin master}"
+    [[ $# == 1 ]] && shift;
+    [[ $# == 2 ]] && shift && shift;
+    git push "$remote" $*
+}
 alias pull="git pull"
 alias checkout="git checkout"
 alias master='git checkout master'
