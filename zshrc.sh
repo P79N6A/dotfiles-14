@@ -80,7 +80,7 @@ plugins=(
   # git
   # brew
   # bundler
-  # dotenv
+  dotenv
   # osx
   # rake
   # rbenv
