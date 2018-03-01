@@ -767,7 +767,7 @@
 	<key>DoubleReportScrollWheel</key>
 	<false/>
 	<key>DwcLineCache</key>
-	<false/>
+	<true/>
 	<key>EliminateCloseButtons</key>
 	<false/>
 	<key>EnableDivisionView</key>
@@ -897,7 +897,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>397 481 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 54 1919 1123 0 0 1920 1177 </string>
+	<string>0 54 1920 1123 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 132 585 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -3424,7 +3424,7 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>ZippyTextDrawing</key>
-	<false/>
+	<true/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
