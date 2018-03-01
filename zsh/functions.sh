@@ -263,41 +263,23 @@ clonescreen() {
 }
 
 pushmaster() {
-  local files='.'
-  local messsage='Update sources'
-  local origin=('origin master')
-
-  if [[ -n $1 ]]; then
-    files=$1; shift
-  fi
-
-  if [[ -n $1 ]]; then
-    message=$1; shift
-  fi
-
-  if [[ -n $1 ]]; then
-    origin=$1; shift
-  fi
-
-  _add $files
-  _commit $messsage
-  _push $origin
+    git add ${1:-.}
+    git commit ${2:-Update source}
+    git push ${3:-origin master}
 }
 
 pushcurrent() {
-  _add
-  _commit
-  _push
+  git add ${1:-.}
+  git commit ${2:-Update source}
+  git push
 }
 
 pullmaster() {
-  origin=('origin master')
-
   if [[ $# > 0 ]]; then
     origin=$*
   fi
 
-  _pull $origin
+  git pull origin master
 }
 
 pullcurrent() {
