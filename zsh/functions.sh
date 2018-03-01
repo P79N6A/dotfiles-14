@@ -265,7 +265,7 @@ clonescreen() {
 pushmaster() {
   files='.'
   messsage='Update sources'
-  origin='origin master'
+  origin=('origin master')
 
   if [[ -n $1 ]]; then
     files=$1; shift
@@ -287,7 +287,7 @@ pushcurrent() {
 }
 
 pullmaster() {
-  origin='origin master'
+  origin=('origin master')
 
   if [[ $# > 0 ]]; then
     origin=$*
