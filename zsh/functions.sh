@@ -264,8 +264,9 @@ clonescreen() {
 
 pushmaster() {
   files='.'
-  messsage='upload'
-  origin='master'
+  messsage='Update sources'
+  origin='origin master'
+
   if [[ -n $1 ]]; then
     files=$1; shift
   fi
@@ -278,18 +279,25 @@ pushmaster() {
     origin=$1; shift
   fi
 
-  git add $files
-  git commit -m $messsage
-  git push origin $origin
+  _add $files && _commit $messsage && _push $origin
+}
+
+pushcurrent() {
+  _add && _commit && _push
 }
 
 pullmaster() {
-  origin="master"
+  origin="origin master"
+
   if [[ $# > 0 ]]; then
     origin=$*
   fi
 
-  git pull origin $origin
+  _pull $origin
+}
+
+pullcurrent() {
+  _pull
 }
 
 
