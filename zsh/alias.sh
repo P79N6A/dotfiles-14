@@ -83,14 +83,20 @@ _commit() {
 }
 alias push="_push"
 _push() {
-    echo $current_branch
     if [[ $# == 0 ]]; then
         git push
     else
         git push $*
     fi
 }
-alias pull="git pull"
+alias pull="_pull"
+_pull() {
+    if [[ $# == 0 ]]; then
+        git pull
+    else
+        git pull $*
+    fi
+}
 alias checkout="git checkout"
 alias master='git checkout master'
 
