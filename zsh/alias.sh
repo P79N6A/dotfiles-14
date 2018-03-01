@@ -83,8 +83,9 @@ _commit() {
 }
 alias push="_push"
 _push() {
+    echo $current_branch
     if [[ $# == 0 ]]; then
-        git push origin master
+        git push
     else
         git push $*
     fi
