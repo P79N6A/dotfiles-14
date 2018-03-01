@@ -263,15 +263,15 @@ clonescreen() {
 }
 
 pushmaster() {
-    git add .
-    git commit -m 'Update source'
-    git push origin master
+  git add .
+  git commit -m 'Update source'
+  git push origin master
 }
 
 pushcurrent() {
-  git add ${1:-"."}
-  git commit ${2:-"Update source"}
-  git push $*
+  git add .
+  git commit -m 'Update source'
+  git push
 }
 
 pullmaster() {
@@ -279,7 +279,7 @@ pullmaster() {
     origin=$*
   fi
 
-  git pull origin master
+  _pull origin master
 }
 
 pullcurrent() {

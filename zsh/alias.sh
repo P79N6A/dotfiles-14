@@ -72,14 +72,15 @@ alias stash="git stash"
 alias status="git status"
 alias add="_add"
 _add() {
-    local file="${1:-.}"
+    local file="${1:=.}"
+    [[ $# > 1 ]] && shift;
     git add $file
 }
 alias commit="_commit"
 _commit() {
-    local message="${1:-Initial commit}"
+    local message="${1:=Update source}"
     [[ $# > 1 ]] && shift;
-    git commit -m $message $*
+    git commit -m $message
 }
 alias push="_push"
 _push() {
