@@ -287,7 +287,7 @@ pushcurrent() {
 }
 
 pullmaster() {
-  origin="origin master"
+  origin='origin master'
 
   if [[ $# > 0 ]]; then
     origin=$*
