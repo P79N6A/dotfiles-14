@@ -264,7 +264,7 @@ clonescreen() {
 
 pushmaster() {
   _add .
-  _commit 'Update xxxsource'
+  _commit 'Update source'
   _push origin master
 }
 
