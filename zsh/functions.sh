@@ -263,15 +263,15 @@ clonescreen() {
 }
 
 pushmaster() {
-  git add .
-  git commit -m 'Update source'
-  git push origin master
+  _add .
+  _commit 'Update xxxsource'
+  _push origin master
 }
 
 pushcurrent() {
-  git add .
-  git commit -m 'Update source'
-  git push
+  _add .
+  _commit 'Update source'
+  _push
 }
 
 pullmaster() {
