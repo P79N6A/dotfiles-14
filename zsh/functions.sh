@@ -263,9 +263,9 @@ clonescreen() {
 }
 
 pushmaster() {
-  files='.'
-  messsage='Update sources'
-  origin=('origin master')
+  local files='.'
+  local messsage='Update sources'
+  local origin=('origin master')
 
   if [[ -n $1 ]]; then
     files=$1; shift
@@ -279,11 +279,15 @@ pushmaster() {
     origin=$1; shift
   fi
 
-  _add $files && _commit $messsage && _push $origin
+  _add $files
+  _commit $messsage
+  _push $origin
 }
 
 pushcurrent() {
-  _add && _commit && _push
+  _add
+  _commit
+  _push
 }
 
 pullmaster() {
