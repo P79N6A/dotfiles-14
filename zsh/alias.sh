@@ -45,7 +45,7 @@ alias wpkey="curl -G https://api.wordpress.org/secret-key/1.1/salt/ | pbcopy"
 alias h="history | grep -E -i"
 alias pbcopy=" pbcopy -Prefer txt"
 alias localip="ipconfig getifaddr en0"
-alias cleandotds="find . -type f -name '*.DS_Store' -ls -delete"
+alias cleandotds="sudo find . -type f -name '*.DS_Store' -ls -delete"
 alias urlencode='python -c"import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 alias imgopt="jpegoptim"
 
@@ -70,8 +70,17 @@ alias reprog="cd ~/www/reproduction-galleries.com"
 alias gits="git status"
 alias stash="git stash"
 alias status="git status"
-alias add="git add"
-alias commit="git commit"
+alias add="_add"
+_add() {
+    local file="${1:-.}"
+    git add $file
+}
+alias commit="_commit"
+_commit() {
+    local message="${1:-Initial commit}"
+    [[ $# > 1 ]] && shift;
+    git commit -m $message $*
+}
 alias push="git push"
 alias pull="git pull"
 alias checkout="git checkout"
