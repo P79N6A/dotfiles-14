@@ -83,10 +83,11 @@ _commit() {
 }
 alias push="_push"
 _push() {
-    local remote="${1:-origin master}"
-    [[ $# == 1 ]] && shift;
-    [[ $# == 2 ]] && shift && shift;
-    git push "$remote" $*
+    if [[ $# == 0 ]]; then
+        git push origin master
+    else
+        git push $*
+    fi
 }
 alias pull="git pull"
 alias checkout="git checkout"
