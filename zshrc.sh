@@ -20,10 +20,10 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="cypher"
 # ZSH_THEME="dpoggi"
 # ZSH_THEME="kolo"
-# ZSH_THEME="nanotech"
+ZSH_THEME="nanotech"
 # ZSH_THEME="theunraveler"
 # ZSH_THEME="zhann"
-ZSH_THEME="my_awesome_theme"
+# ZSH_THEME="my_awesome_theme"
 # ZSH_THEME="sobole"
 
 # Set list of themes to load
