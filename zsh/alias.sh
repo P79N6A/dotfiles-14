@@ -21,7 +21,7 @@ alias ...="cdhome"
 
 ## EXA
 ## -------------------------------------------------- ##
-alias ls="(echo -ne \"\n\" && exa -l -h -a --color=always --group-directories-first && echo -ne \"\n\n\")"
+alias ls="exa -l -h -a --color=always --group-directories-first"
 alias tree="ls -T"
 
 
