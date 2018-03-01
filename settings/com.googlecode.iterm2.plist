@@ -1267,7 +1267,7 @@
 			<key>Has Hotkey</key>
 			<true/>
 			<key>Horizontal Spacing</key>
-			<real>0.99753153237951819</real>
+			<real>1</real>
 			<key>HotKey Activated By Modifier</key>
 			<true/>
 			<key>HotKey Alternate Shortcuts</key>
@@ -1694,7 +1694,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InputMonoCondensed-ExtraLight 14</string>
+			<string>InputMono-ExtraLight 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
