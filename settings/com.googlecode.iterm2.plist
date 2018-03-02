@@ -752,6 +752,8 @@
 	<false/>
 	<key>DisableAppNap</key>
 	<true/>
+	<key>DisableCustomBoxDrawing</key>
+	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>DisablePasswordManagerAnimations</key>
@@ -820,13 +822,13 @@
 	<key>Hotkey</key>
 	<false/>
 	<key>HotkeyChar</key>
-	<integer>63276</integer>
+	<integer>107</integer>
 	<key>HotkeyCode</key>
-	<integer>116</integer>
+	<integer>40</integer>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>HotkeyModifiers</key>
-	<integer>8388864</integer>
+	<integer>1048576</integer>
 	<key>HotkeyTermAnimationDuration</key>
 	<real>1</real>
 	<key>IncludePasteHistoryInAdvancedPaste</key>
@@ -857,11 +859,6 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
-	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
-	<array>
-		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
-		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
-	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -890,18 +887,12 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 132 224 280 0 0 1920 1177 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>688 323 605 294 0 0 1920 1177 </string>
+	<string>684 257 741 297 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>397 462 918 492 0 0 1920 1177 </string>
+	<string>268 415 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 54 1920 1123 0 0 1920 1177 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>247 132 585 452 0 0 1920 1177 </string>
-	<key>NSWindow Frame iTerm Window 3</key>
-	<string>226 155 1920 965 0 0 1920 1177 </string>
+	<string>0 53 1920 1004 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4_selection</key>
@@ -1271,34 +1262,23 @@
 			<key>HotKey Activated By Modifier</key>
 			<false/>
 			<key>HotKey Alternate Shortcuts</key>
-			<array>
-				<dict>
-					<key>characters</key>
-					<string>k</string>
-					<key>charactersIgnoringModifiers</key>
-					<string>k</string>
-					<key>keyCode</key>
-					<integer>40</integer>
-					<key>modifiers</key>
-					<integer>1048576</integer>
-				</dict>
-			</array>
+			<array/>
 			<key>HotKey Characters</key>
-			<string>«</string>
+			<string>k</string>
 			<key>HotKey Characters Ignoring Modifiers</key>
-			<string>\</string>
+			<string>k</string>
 			<key>HotKey Key Code</key>
-			<integer>42</integer>
+			<integer>40</integer>
 			<key>HotKey Modifier Activation</key>
 			<integer>2</integer>
 			<key>HotKey Modifier Flags</key>
-			<integer>524288</integer>
+			<integer>1048576</integer>
 			<key>HotKey Window Animates</key>
 			<false/>
 			<key>HotKey Window AutoHides</key>
 			<true/>
 			<key>HotKey Window Dock Click Action</key>
-			<integer>2</integer>
+			<integer>0</integer>
 			<key>HotKey Window Floats</key>
 			<false/>
 			<key>HotKey Window Reopens On Activation</key>
@@ -1705,7 +1685,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraMono-Regular 12</string>
+			<string>RobotoMono-Light 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1800,7 +1780,7 @@
 			<key>Use Underline Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.1000000000000001</real>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -3293,6 +3273,12 @@
 	<true/>
 	<key>NoSyncConfirmShellIntegrationCommand_selection</key>
 	<integer>0</integer>
+	<key>NoSyncCoprocessCommandsToIgnoreErrorOutput</key>
+	<array>
+		<string>tput home</string>
+	</array>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallUtilitiesPackage</key>
@@ -3300,15 +3286,11 @@
 	<key>NoSyncInstallUtilitiesPackage_selection</key>
 	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>0CEF9659-0883-403C-A473-02B5DF4E2D16</string>
-	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux</key>
-	<true/>
+	<string>3174284D-BE22-4B54-BEC6-98A06A91EF4E</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>540643942.034428</real>
-	<key>NoSyncTipsDisabled</key>
-	<true/>
+	<real>533641258.678617</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -3361,7 +3343,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/sudprawat/.dotfiles/settings</string>
+	<string>/Users/Fineart/.dotfiles/settings</string>
 	<key>PreventEscapeSequenceFromClearingHistory</key>
 	<true/>
 	<key>PromptForPasteWhenNotAtPrompt</key>
@@ -3381,13 +3363,15 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=91</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=1</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
+	<key>SULastCheckTime</key>
+	<date>2018-03-02T03:27:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
-	<true/>
+	<false/>
 	<key>SensitiveScrollWheel</key>
 	<true/>
 	<key>ShowBookmarkName</key>
