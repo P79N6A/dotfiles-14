@@ -1,0 +1,367 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_S",
+				"_STATUS"
+			],
+			[
+				"command",
+				"command"
+			],
+			[
+				"bin",
+				"bindir"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"error",
+				"error_text"
+			],
+			[
+				"sta",
+				"STATUS"
+			],
+			[
+				"ver",
+				"version"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "MAC Address:70:4F:57:81:57:E8\n\nIP Address:192.168.1.10(Static IP)\nSubnet Mask:255.255.255.0\n\nDefault Gateway:192.168.1.1\n\nDNS Server:203.144.206.29 203.144.206.49",
+			"settings":
+			{
+				"buffer_size": 162,
+				"line_ending": "Unix",
+				"name": "MAC Address:70:4F:57:81:57:E8"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 345.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"synta",
+				"Set Syntax: ShellScript Improved"
+			],
+			[
+				"PHP: Generate Constructor",
+				"PHP: Generate Constructor for Class"
+			],
+			[
+				"open",
+				":e - Open file"
+			],
+			[
+				"laravel",
+				"Laravel Artisan 5: List"
+			],
+			[
+				"view",
+				"Diff View: Show uncommitted changes"
+			],
+			[
+				"theme",
+				"ayu: Activate theme"
+			],
+			[
+				"install",
+				"Install Package Control"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/sudprawat/.dotfiles/zshrc.sh",
+		"/Users/sudprawat/.dotfiles/emmet/snippets.json",
+		"/Users/sudprawat/www/laravel.local copy/resources/views/layouts/header.blade.php",
+		"/Users/sudprawat/www/laravel.local copy/resources/views/layouts/app.blade.php",
+		"/Users/sudprawat/www/laravel.local copy/resources/views/home.blade.php",
+		"/Users/sudprawat/www/laravel.local copy/resources/views/welcome.blade.php",
+		"/Users/sudprawat/www/findpattayaproperty.com/.gitignore",
+		"/Users/sudprawat/.dotfiles/zsh/custom/themes/my_awesome_theme.zsh-theme",
+		"/Users/sudprawat/.dotfiles/zsh/alias.sh",
+		"/Users/sudprawat/.dotfiles/zsh/functions.sh",
+		"/Users/sudprawat/.atom/demo.php",
+		"/Users/sudprawat/.atom/styles.less",
+		"/Users/sudprawat/.atom/config.cson",
+		"/Users/sudprawat/.dotfiles/zsh/themes/af-magic.zsh-theme",
+		"/Users/sudprawat/.dotfiles/zsh/themes/adben.zsh-theme",
+		"/Users/sudprawat/.dotfiles/zsh/themes/3den.zsh-theme",
+		"/Users/sudprawat/.dotfiles/functions.sh",
+		"/Users/sudprawat/.dotfiles/alias.sh",
+		"/Users/sudprawat/.dotfiles/bashrc.sh",
+		"/Users/sudprawat/www/laravel.local/app/Console/Kernel.php",
+		"/Users/sudprawat/.dotfiles/profile.sh",
+		"/Users/sudprawat/.dotfiles/lib/gemrc",
+		"/Users/sudprawat/.dotfiles/install.sh",
+		"/Users/sudprawat/.dotfiles/lib/configs.sh",
+		"/Users/sudprawat/.dotfiles/lib/alias.sh",
+		"/Users/sudprawat/.dotfiles/colors.sh",
+		"/Users/sudprawat/.dotfiles/bin/nrund",
+		"/Users/sudprawat/.dotfiles/bin/mdbexport",
+		"/Users/sudprawat/.dotfiles/lib/hgrc",
+		"/Users/sudprawat/.dotfiles/lib/colors.sh",
+		"/Users/sudprawat/www/laravel.local/resources/assets/sass/app.scss",
+		"/Users/sudprawat/www/laravel.local/resources/assets/sass/_variables.scss",
+		"/Users/sudprawat/www/laravel.local/composer.json",
+		"/Users/sudprawat/www/laravel.local/package.json",
+		"/Users/sudprawat/.atom/packages/goldfish-dark-vivid-syntax/styles/editor.less",
+		"/Users/sudprawat/.atom/packages/goldfish-dark-vivid-syntax/styles/syntax/_base.less",
+		"/Users/sudprawat/.atom/packages/goldfish-dark-vivid-syntax/styles/syntax-variables.less",
+		"/Users/sudprawat/.dotfiles/lib/learn.sh",
+		"/Users/sudprawat/.dotfiles/lib/npm.sh",
+		"/Users/sudprawat/.dotfiles/lib/laravel.sh",
+		"/Users/sudprawat/.dotfiles/lib/functions-bak.sh",
+		"/Users/sudprawat/.dotfiles/lib/bashrc",
+		"/Users/sudprawat/.dotfiles/lib/prompt.sh",
+		"/Users/sudprawat/www/laravel.local/composer.lock",
+		"/Users/sudprawat/www/laravel.local/vendor/autoload.php",
+		"/Users/sudprawat/www/repro-gallery-master/composer.json",
+		"/Users/sudprawat/www/laravel.local copy/composer.json",
+		"/Users/sudprawat/Desktop/movements.sql",
+		"/Users/sudprawat/www/laravel.local/public/js/main.js",
+		"/Users/sudprawat/www/laravel.local/resources/views/layouts/header.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/assets/sass/_responsive.scss",
+		"/Users/sudprawat/www/laravel.local/node_modules/bootstrap/scss/_variables.scss",
+		"/Users/sudprawat/www/laravel.local/resources/assets/js/app.js",
+		"/Users/sudprawat/.dotfiles/.git/config",
+		"/Users/sudprawat/www/laravel.local/resources/views/welcome.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/views/vendor/mail/html/message.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/views/vendor/notifications/email.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/views/vendor/mail/html/layout.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/views/vendor/pagination/simple-default.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/views/vendor/pagination/simple-bootstrap-4.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/views/vendor/pagination/semantic-ui.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/views/vendor/pagination/default.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/views/vendor/pagination/bootstrap-4.blade.php",
+		"/Users/sudprawat/www/laravel.local/resources/lang/en/validation.php",
+		"/Users/sudprawat/www/laravel.local/resources/lang/en/passwords.php",
+		"/Users/sudprawat/www/laravel.local/resources/lang/en/pagination.php",
+		"/Users/sudprawat/www/laravel.local/resources/lang/en/auth.php",
+		"/Users/sudprawat/www/laravel.local/resources/assets/js/components/ExampleComponent.vue",
+		"/Users/sudprawat/www/laravel.local/resources/assets/js/bootstrap.js",
+		"/Users/sudprawat/www/laravel.local/vendor/composer/ClassLoader.php",
+		"/Users/sudprawat/www/laravel.local/server.php",
+		"/Users/sudprawat/www/laravel.local/public/css/app.css",
+		"/Users/sudprawat/www/laravel.local/public/js/app.js",
+		"/Users/sudprawat/.dotfiles/git-prompt-colors",
+		"/private/tmp/tnt13925/mount/Extra/tnt.sfv",
+		"/Users/sudprawat/.profile",
+		"/Users/sudprawat/.bashrc"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 134.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"auto_name": "MAC Address:70:4F:57:81:57:E8",
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GitSavvy":
+	{
+		"height": 144.0
+	},
+	"output.commandbox_output":
+	{
+		"height": 144.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "default.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"func",
+				".dotfiles/functions.sh"
+			],
+			[
+				".dotfiles/func",
+				".dotfiles/functions.sh"
+			],
+			[
+				"alias.sh",
+				".dotfiles/alias.sh"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 250.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
