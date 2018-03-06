@@ -1,3 +1,5 @@
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+
 export HOMEBREW_NO_EMOJI="1"
 export MAILCHECK="-1"
 export TERM="xterm-256color"
