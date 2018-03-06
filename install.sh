@@ -53,6 +53,7 @@ initialize() {
     "gitignore"
     "iterm2_shell_integration.bash"
     "zshrc"
+    "tmux.conf"
   )
 
   for item in $sources; do

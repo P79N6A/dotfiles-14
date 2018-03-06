@@ -25,3 +25,31 @@ set hlsearch
 " Space above/beside cursor from screen edges
 set scrolloff=1
 set sidescrolloff=5
+" Remapping <Leader> to <Space>
+let mapleader="\<SPACE>"
+" Disable mouse support
+set mouse=r
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+" Setting Arrow Keys to Resize Panes
+" nnoremap <Left> :vertical resize -1<CR>
+" nnoremap <Right> :vertical resize +1<CR>
+" nnoremap <Up> :resize -1<CR>
+" nnoremap <Down> :resize +1<CR>
+" Disable arrow keys completely in Insert Mode
+" imap <up> <nop>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>
+
+" Return to the last file opened
+nmap <Leader><Leader> <c-^>
+
+" Next/Previous Buffer (tab)
+nnoremap <Tab> :bnext!<CR>
+nnoremap <S-Tab> :bprev!<CR><Paste>
+
+" Load plugins
+call plug#begin('~/.local/share/nvim/plugged')
+" PLUGINS GO HERE!!!
+call plug#end()
