@@ -24,8 +24,7 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="zhann"
 # ZSH_THEME="my_awesome_theme"
 # ZSH_THEME="sobole"
-# ZSH_THEME="nanotech"
-ZSH_THEME="dpoggi-timestamp"
+ZSH_THEME="nanotech"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random

@@ -2,19 +2,6 @@
 #
 # Custom defined functions
 
-# TODO(mrmonkey): Handle the unlikely edge cases (bug ####)
-
-
-#######################################
-# Cleanup files from the backup dir
-# Globals:
-#   BACKUP_DIR
-#   ORACLE_SID
-# Arguments:
-#   None
-# Returns:
-#   None
-#######################################
 check_required_packages() {
   if [[ "$(command -v exa 2> /dev/null)" == '' ]]; then
     echo -ne "\nInstall required packages...\n"
@@ -424,4 +411,11 @@ ggl.() {
 }
 upg.() {
   sudo gem update
+}
+
+
+foobar() {
+  local ref='refs/heads/master'
+  echo -e ${ref#refs/heads/}
+  # echo -e ${ref//refs\/heads\/}
 }
