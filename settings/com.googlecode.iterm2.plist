@@ -846,7 +846,7 @@
 	<key>MinTabWidth</key>
 	<integer>80</integer>
 	<key>NSFontPanelAttributes</key>
-	<string>1, 4</string>
+	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/settings</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -897,7 +897,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>688 323 605 294 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>397 404 796 473 0 0 1920 1177 </string>
+	<string>397 385 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 54 1920 1123 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1713,7 +1713,7 @@
 			<key>Name</key>
 			<string>Root</string>
 			<key>Non Ascii Font</key>
-			<string>Ionicons 12</string>
+			<string>gct_master 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
