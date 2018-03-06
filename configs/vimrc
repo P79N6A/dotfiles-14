@@ -50,6 +50,6 @@ nnoremap <Tab> :bnext!<CR>
 nnoremap <S-Tab> :bprev!<CR><Paste>
 
 " Load plugins
-call plug#begin('~/.local/share/nvim/plugged')
+" call plug#begin('~/.local/share/nvim/plugged')
 " PLUGINS GO HERE!!!
-call plug#end()
+" call plug#end()
