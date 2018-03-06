@@ -26,6 +26,22 @@ check_required_packages() {
 ## OTHERS
 ## -------------------------------------------------- ##
 email() {
+  na() {
+    echo 'nopphasin.arayasirikul@gmail.com' | copy
+  }
+
+  gc() {
+    echo 'goldfishcreative.thailand@gmail.com' | copy
+  }
+
+  fa() {
+    echo 'fineartdeveloper@gmail.com' | copy
+  }
+
+  fd() {
+    echo 'fineartdropbox@gmail.com' | copy
+  }
+
   if declare -f $1 > /dev/null
   then
     "$@"
