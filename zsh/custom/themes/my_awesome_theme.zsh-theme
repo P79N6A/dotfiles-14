@@ -20,5 +20,3 @@ ZSH_THEME_GIT_PROMPT_BRANCH="$(git_current_branch)"
 ZSH_THEME_GIT_PROMPT_DIRTY="$(parse_git_dirty)"
 ZSH_THEME_GIT_PROMPT_STATUS="$(git_prompt_status)"
 ZSH_THEME_GIT_PROMPT_REMOTE_STATUS="$(git_remote_status)"
-
-ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_DETAILED="aaaa"
