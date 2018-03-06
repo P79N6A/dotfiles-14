@@ -16,9 +16,3 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY="  "
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_BRANCH="$(git_current_branch)"
-
-if [[ "$(parse_git_dirty)" ]]; then
-  ZSH_THEME_GIT_PROMPT_DIRTY="$(parse_git_dirty)"
-  ZSH_THEME_GIT_PROMPT_STATUS="$(git_prompt_status)"
-  ZSH_THEME_GIT_PROMPT_REMOTE_STATUS="$(git_remote_status)"
-fi
