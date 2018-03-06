@@ -22,9 +22,9 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="kolo"
 # ZSH_THEME="theunraveler"
 # ZSH_THEME="zhann"
-# ZSH_THEME="my_awesome_theme"
 # ZSH_THEME="sobole"
-ZSH_THEME="nanotech"
+# ZSH_THEME="nanotech"
+ZSH_THEME="my_awesome_theme"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
