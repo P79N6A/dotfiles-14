@@ -20,6 +20,13 @@ check_required_packages() {
     echo -ne "\nInstall required packages...\n"
     brew install exa
   fi
+
+  # curl -L git.io/antigen > "$ZSHFILES/lib/antigen.zsh"
+
+  if [[ ! -f "$ZSHFILES/lib/antigen.zsh" ]]; then
+    curl https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > "$ZSHFILES/lib/antigen.zsh"
+  fi
+  source "$ZSHFILES/lib/antigen.zsh"
 }
 
 
