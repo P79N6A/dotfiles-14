@@ -1,6 +1,6 @@
 PROMPT='%F{green}%2c%F{blue}
 %F{white}$%f '
-RPROMPT='$(git_prompt_info)$(git_prompt_status) %F{blue}[ %F{green}%D{%L:%M} %F{yellow}%D{%p} %F{blue}]%f'
+RPROMPT='$(git_prompt_info) %F{blue}[ %F{green}%D{%L:%M} %F{yellow}%D{%p} %F{blue}]%f'
 
 ZSH_THEME_GIT_PROMPT_ADDED="%F{green}A%f"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%F{yellow}M%f"
