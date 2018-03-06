@@ -419,3 +419,23 @@ foobar() {
   echo -e ${ref#refs/heads/}
   # echo -e ${ref//refs\/heads\/}
 }
+
+updatenpm() {
+  if [[ -n $1 && ($1 == '--global' || $1 == '-g') ]]; then
+    npm install -g npm
+    npm update -g
+  else
+    npm install
+    npm update
+  fi
+}
+
+updatecomp() {
+  if [[ -n $1 && ($1 == '--global' || $1 == '-g') ]]; then
+    composer self-update
+    composer global update
+  else
+    composer self-update
+    composer update
+  fi
+}
