@@ -7,82 +7,87 @@
     "newline": "\n"
   },
 
+  "css": {
+    "filters": "css",
+    "profile": "css",
+    "snippets": {
+      "!t": "!important",
+      "!d": "!default",
+      "bg:t": "background: transparent;",
+      "bd:t": "border-color: transparent;"
+    },
+    "abbreviations": {}
+  },
+
   "html": {
     "filters": "html",
-
-    "snippets": {
-      "!c": "<!--$1-->",
-      "!p": "<p>&nbsp;</p>",
-      "e:": "<?php echo ${1:\\$var}; ?>",
-      "ph:": "<?php\n\n$1",
-      "p:": "<?php$1?>",
-      "pre:": "<pre><?php print_r(${1:\\$var}); ?></pre>",
-      "prt:": "<?php print($1); ?>",
-      "prf:": "<?php printf(${1:string}, ${2:\\$vars}); ?>",
-      "prr:": "<?php print_r($1) ?>;"
-    },
-    "abbreviations": {
-
-    }
-  },
-
-  "js": {
-    "filters": "html",
-
-    "snippets": {
-      "!c": "/*$1*/",
-      "!d": "/**\n$1\n*/",
-      "!s": "/* ${1:SECTION TITLE}\n-------------------------------------------------- */"
-    },
-    "abbreviations": {
-
-    }
-  },
-
-  "blade": {
-    "filters": "html",
-
-    "snippets": {
-      "!c": "<!--$1-->",
-      "!p": "<p>&nbsp;</p>",
-      "p:": "@php\n\t$1\n@endphp",
-      "e:": "@php\n\techo ${1:\\$var};\n@endphp",
-      "pre:": "@php\n\techo '<pre>'; print_r(${1:\\$var}); echo '</pre>';\n@endphp",
-      "prt:": "@php\n\tprint(${1:\\$var});\n@endphp",
-      "prf:": "@php\n\tprintf(${1:string}, ${2:\\$vars});\n@endphp",
-      "prr:": "@php\n\tprint_r($1);\n@endphp"
-    },
-    "abbreviations": {
-
-    }
-  },
-
-  "css": {
-    "filters": "html,css",
-
-    "snippets": {
-      "!c": "/*$1*/",
-      "!cc": "/**\n$1\n*/",
-      "!s": "/* ${1:SECTION TITLE}\n-------------------------------------------------- */"
-    },
+    "profile": "html",
+    "snippets": {},
     "abbreviations": {}
   },
 
-  "source.php": {
-    "filters": "html",
+  "xml": {
+    "extends": "html",
+    "profile": "xml",
+    "filters": "html"
+  },
 
-    "snippets": {
-      "!c": "/*$1*/",
-      "!cb": "/**$1*/",
-      "!dc": "/**\n$1\n*/",
-      "e:": "echo ${1:\\$var};",
-      "ph:": "?>\n$1",
-      "p:": "?>\n$1\n<?php",
-      "pre:": "echo '<pre>'; print_r(${1:\\$var}); echo '</pre>';",
-      "prt:": "print($1);",
-      "prf:": "printf(${1:string}, ${2:\\$vars});",
-      "prr:": "print_r($1);"
-    },
+  "svg": {
+    "filters": "html",
+    "profile": "xml",
+    "snippets": {},
     "abbreviations": {}
+  },
+
+  "xsl": {
+    "extends": "html",
+    "profile": "xml",
+    "filters": "html, xsl",
+    "snippets": {},
+    "abbreviations": {}
+  },
+
+  "haml": {
+    "filters": "haml",
+    "extends": "html",
+    "profile": "xml"
+  },
+
+  "jade": {
+    "filters": "jade",
+    "extends": "html",
+    "profile": "xml"
+  },
+
+  "jsx": {
+    "filters": "jsx, html",
+    "extends": "html",
+    "profile": "xml"
+  },
+
+  "slim": {
+    "filters": "slim",
+    "extends": "html",
+    "profile": "xml"
+  },
+
+  "scss": {
+    "extends": "css"
+  },
+
+  "sass": {
+    "extends": "css"
+  },
+
+  "less": {
+    "extends": "css"
+  },
+
+  "stylus": {
+    "extends": "css"
+  },
+
+  "styl": {
+    "extends": "stylus"
   }
 }
