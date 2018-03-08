@@ -11,10 +11,12 @@
     "filters": "css",
     "profile": "css",
     "snippets": {
-      "!t": "!important",
+      "!i": "!important",
       "!d": "!default",
       "bg:t": "background: transparent;",
-      "bd:t": "border-color: transparent;"
+      "bd:t": "border-color: transparent;",
+      "/**": "/**\n ${child}|\n */",
+      "/*": "/* ${child}| */"
     },
     "abbreviations": {}
   },
