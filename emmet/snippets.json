@@ -11,12 +11,19 @@
     "filters": "css",
     "profile": "css",
     "snippets": {
-      "!i": "!important",
+      "@i": "@include ${1:name};",
+      "@mx": "@mixin ${1:name}(${2:args}) {\n\t${3:}\n}",
+      "@map+": "${1:\\$var}: map-merge((\n\t${2:key}: ${3:value},\n), ${1:\\$var});",
+      "@map": "map-get(${1:\\$var}, ${2:\\$key});",
+      "@fn": "@function ${1:name}(${2:args}) {\n\t${3}\n}",
+      "@ea": "@each ${1:\\$key}, ${2:\\$value} in ${3:\\$var} {\n\t${4:}\n}",
+      "@bp+": "@include media-breakpoint-up($1) {\n\t$2\n}",
+      "@bp-": "@include media-breakpoint-down($1) {\n\t$2\n}",
+      "@s": "/** ${1:SECTION NAME}\n** -------------------------------------------------- **/",
+      "@d": "/**\n * |\n */",
+      "@c": "/* | */",
       "!d": "!default",
-      "bg:t": "background: transparent;",
-      "bd:t": "border-color: transparent;",
-      "/**": "/**\n ${child}|\n */",
-      "/*": "/* ${child}| */"
+      "!": "!important"
     },
     "abbreviations": {}
   },
