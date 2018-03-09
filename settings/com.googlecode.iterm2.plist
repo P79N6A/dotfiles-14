@@ -7,11 +7,11 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
 	<key>AlternateMouseScroll</key>
-	<false/>
+	<true/>
 	<key>AlternateMouseScrollStringForDown</key>
-	<string>\e[6~</string>
+	<string></string>
 	<key>AlternateMouseScrollStringForUp</key>
-	<string>\e[5~</string>
+	<string></string>
 	<key>AlwaysAcceptFirstMouse</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -791,28 +791,9 @@
 	<key>FocusReportingEnabled</key>
 	<false/>
 	<key>GlobalTouchBarMap</key>
-	<dict>
-		<key>touchbar:6F09455C-7862-4E9C-B26A-E2D290F4AC56</key>
-		<dict>
-			<key>Action</key>
-			<integer>13</integer>
-			<key>Label</key>
-			<string>asd</string>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>touchbar:E15E059B-4BED-4E41-A88B-F550D7E6F0DC</key>
-		<dict>
-			<key>Action</key>
-			<integer>0</integer>
-			<key>Label</key>
-			<string>Test</string>
-			<key>Text</key>
-			<string></string>
-		</dict>
-	</dict>
+	<dict/>
 	<key>HideFromDockAndAppSwitcher</key>
-	<true/>
+	<false/>
 	<key>HideMenuBarInFullscreen</key>
 	<false/>
 	<key>HideScrollbar</key>
@@ -901,7 +882,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>583 376 605 294 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>836 505 796 473 0 0 1920 1177 </string>
+	<string>483 272 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 54 1920 1123 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1328,9 +1309,9 @@
 				<key>0x2d-0x100000</key>
 				<dict>
 					<key>Action</key>
-					<integer>8</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string></string>
+					<string>\e[6</string>
 				</dict>
 				<key>0x2d-0x40000</key>
 				<dict>
@@ -1391,9 +1372,9 @@
 				<key>0x3d-0x100000</key>
 				<dict>
 					<key>Action</key>
-					<integer>9</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string></string>
+					<string>\e[5</string>
 				</dict>
 				<key>0x43-0x60000</key>
 				<dict>
@@ -1555,6 +1536,13 @@
 					<integer>53</integer>
 					<key>Text</key>
 					<string></string>
+				</dict>
+				<key>0xf702-0x300000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[5~</string>
 				</dict>
 				<key>0xf702-0x340000</key>
 				<dict>
