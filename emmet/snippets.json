@@ -31,7 +31,13 @@
   "html": {
     "filters": "html",
     "profile": "html",
-    "snippets": {},
+    "snippets": {
+      "ec": "<?php echo $1; ?>",
+      "prep": "<pre><?php print_r($1); ?></pre>",
+      "@s": "<!-- ${1:SECTION NAME}\n--------------------------------------------------------!>",
+      "@d": "<!--\n$1\n-->",
+      "@c": "<!-- $1 -->"
+    },
     "abbreviations": {}
   },
 
