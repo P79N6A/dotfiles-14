@@ -3440,7 +3440,7 @@
 	<key>SmartPlacement</key>
 	<true/>
 	<key>StatusBarIcon</key>
-	<true/>
+	<false/>
 	<key>StretchTabsToFillBar</key>
 	<true/>
 	<key>SuppressMultilinePasteWarningWhenNotAtShellPrompt</key>
