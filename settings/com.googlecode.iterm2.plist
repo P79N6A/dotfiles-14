@@ -903,7 +903,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>836 480 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 54 1920 1123 0 0 1920 1177 </string>
+	<string>0 54 1917 1123 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 132 585 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -3440,7 +3440,7 @@
 	<key>SmartPlacement</key>
 	<true/>
 	<key>StatusBarIcon</key>
-	<false/>
+	<true/>
 	<key>StretchTabsToFillBar</key>
 	<true/>
 	<key>SuppressMultilinePasteWarningWhenNotAtShellPrompt</key>
