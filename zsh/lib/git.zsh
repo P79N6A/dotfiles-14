@@ -6,8 +6,8 @@ function git_prompt_info() {
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
 
     # echo "${ZSH_THEME_GIT_PROMPT_BRANCH}${ZSH_THEME_GIT_PROMPT_DIRTY}${ZSH_THEME_GIT_PROMPT_STATUS}${ZSH_THEME_GIT_PROMPT_REMOTE_STATUS}"
-    echo "${ref#refs/heads/}${GITXXX}"
-    # echo "${ref#refs/heads/}$(parse_git_dirty)$(git_prompt_status)"
+    # echo "${ref#refs/heads/}"
+    echo "${ref#refs/heads/}$(parse_git_dirty)$(git_prompt_status)${GITXXX}"
   fi
 }
 
