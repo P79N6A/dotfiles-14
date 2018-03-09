@@ -8,6 +8,10 @@
 	<false/>
 	<key>AlternateMouseScroll</key>
 	<true/>
+	<key>AlternateMouseScrollStringForDown</key>
+	<string>\e[6~</string>
+	<key>AlternateMouseScrollStringForUp</key>
+	<string>\e[5~</string>
 	<key>AlwaysAcceptFirstMouse</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -753,7 +757,7 @@
 	<key>DisableAppNap</key>
 	<true/>
 	<key>DisableCustomBoxDrawing</key>
-	<true/>
+	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>DisablePasswordManagerAnimations</key>
@@ -767,9 +771,9 @@
 	<key>DoubleClickPerformsSmartSelection</key>
 	<true/>
 	<key>DoubleReportScrollWheel</key>
-	<false/>
+	<true/>
 	<key>DwcLineCache</key>
-	<false/>
+	<true/>
 	<key>EliminateCloseButtons</key>
 	<false/>
 	<key>EnableDivisionView</key>
@@ -846,7 +850,7 @@
 	<key>MinTabWidth</key>
 	<integer>80</integer>
 	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/settings</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -897,9 +901,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>688 255 605 428 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>397 366 796 473 0 0 1920 1177 </string>
+	<string>836 480 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 54 1917 1123 0 0 1920 1177 </string>
+	<string>0 54 1920 1123 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 132 585 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1258,11 +1262,11 @@
 			<key>Description</key>
 			<string>Default</string>
 			<key>Disable Printing</key>
-			<false/>
+			<true/>
 			<key>Disable Smcup Rmcup</key>
-			<false/>
+			<true/>
 			<key>Disable Window Resizing</key>
-			<false/>
+			<true/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -3347,7 +3351,7 @@
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
-	<true/>
+	<false/>
 	<key>OpenFileInNewWindows</key>
 	<true/>
 	<key>OpenNoWindowsAtStartup</key>
