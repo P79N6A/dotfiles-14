@@ -7,7 +7,7 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
 	<key>AlternateMouseScroll</key>
-	<true/>
+	<false/>
 	<key>AlternateMouseScrollStringForDown</key>
 	<string>\e[6~</string>
 	<key>AlternateMouseScrollStringForUp</key>
@@ -850,7 +850,7 @@
 	<key>MinTabWidth</key>
 	<integer>80</integer>
 	<key>NSFontPanelAttributes</key>
-	<string>1, 4</string>
+	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/settings</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -899,11 +899,11 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>0 132 224 280 0 0 1920 1177 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>688 255 605 428 0 0 1920 1177 </string>
+	<string>583 376 605 294 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>836 480 796 473 0 0 1920 1177 </string>
+	<string>836 505 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 54 1917 1123 0 0 1920 1177 </string>
+	<string>0 54 1920 1123 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 132 585 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1264,9 +1264,9 @@
 			<key>Disable Printing</key>
 			<true/>
 			<key>Disable Smcup Rmcup</key>
-			<true/>
+			<false/>
 			<key>Disable Window Resizing</key>
-			<true/>
+			<false/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -1325,6 +1325,13 @@
 			</array>
 			<key>Keyboard Map</key>
 			<dict>
+				<key>0x2d-0x100000</key>
+				<dict>
+					<key>Action</key>
+					<integer>8</integer>
+					<key>Text</key>
+					<string></string>
+				</dict>
 				<key>0x2d-0x40000</key>
 				<dict>
 					<key>Action</key>
@@ -1380,6 +1387,13 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x7f</string>
+				</dict>
+				<key>0x3d-0x100000</key>
+				<dict>
+					<key>Action</key>
+					<integer>9</integer>
+					<key>Text</key>
+					<string></string>
 				</dict>
 				<key>0x43-0x60000</key>
 				<dict>
@@ -1717,11 +1731,11 @@
 			<key>Name</key>
 			<string>Root</string>
 			<key>Non Ascii Font</key>
-			<string>master-icons 12</string>
+			<string>master-icons 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGL-Regular 12</string>
+			<string>MesloLGL-Regular 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
