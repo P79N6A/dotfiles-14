@@ -11,6 +11,8 @@
     "filters": "css",
     "profile": "css",
     "snippets": {
+      "#": "#\\{${1:\\$var}\\}",
+      "@r": "@return ${1:result};",
       "@i": "@include ${1:name};",
       "@mx": "@mixin ${1:name}(${2:args}) {\n\t${3:}\n}",
       "@map+": "${1:\\$var}: map-merge((\n\t${2:key}: ${3:value},\n), ${1:\\$var});",
@@ -22,6 +24,7 @@
       "@s": "/** ${1:SECTION NAME}\n** -------------------------------------------------- **/",
       "@d": "/**\n * |\n */",
       "@c": "/* | */",
+      "!g": "!global",
       "!d": "!default",
       "!": "!important"
     },
