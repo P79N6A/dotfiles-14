@@ -882,9 +882,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>583 376 605 294 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>483 272 796 473 0 0 1920 1177 </string>
+	<string>717 405 1016 512 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 54 1920 1123 0 0 1920 1177 </string>
+	<string>0 54 1925 1123 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 132 585 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1320,6 +1320,13 @@
 					<key>Text</key>
 					<string>0x1f</string>
 				</dict>
+				<key>0x30-0x100000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>01 0B</string>
+				</dict>
 				<key>0x32-0x40000</key>
 				<dict>
 					<key>Action</key>
@@ -1381,7 +1388,7 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>03 6e 70 6d 72 75 6e 70 0d</string>
+					<string>1b 5b 46 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 6e 70 6d 72 75 6e 70 0d</string>
 				</dict>
 				<key>0x65-0x100000</key>
 				<dict>
@@ -1403,14 +1410,21 @@ Clear Buffer</string>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>03 72 65 6c 6f 61 64 5f 73 68 65 6c 6c 0d</string>
+					<string>01 0B 72 65 6C 6F 61 64 5F 73 68 65 6C 6C 0D</string>
+				</dict>
+				<key>0x7a-0x100000</key>
+				<dict>
+					<key>Action</key>
+					<integer>12</integer>
+					<key>Text</key>
+					<string>1B:escape</string>
 				</dict>
 				<key>0x7c-0x120000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>03 6e 70 6d 72 75 6e 64 0d</string>
+					<string>1b 5b 46 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 6e 70 6d 72 75 6e 64 0d</string>
 				</dict>
 				<key>0x7f-0x100000</key>
 				<dict>
