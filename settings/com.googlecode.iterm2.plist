@@ -1432,6 +1432,13 @@
 					<key>Text</key>
 					<string>03 72 65 6c 6f 61 64 5f 73 68 65 6c 6c 0d</string>
 				</dict>
+				<key>0x73-0x100000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>6e 70 6d 72 75 6e 64 0d</string>
+				</dict>
 				<key>0x73-0x180000</key>
 				<dict>
 					<key>Action</key>

@@ -19,6 +19,44 @@ check_required_packages() {
 
 ## OTHERS
 ## -------------------------------------------------- ##
+foobar() {
+  local ref='refs/heads/master'
+  echo -e ${ref#refs/heads/}
+  # echo -e ${ref//refs\/heads\/}
+}
+
+updatenpm() {
+  if [[ -n $1 && ($1 == '--global' || $1 == '-g') ]]; then
+    npm install -g npm
+    npm update -g
+  else
+    npm install
+    npm update
+  fi
+}
+
+updatecomp() {
+  if [[ -n $1 && ($1 == '--global' || $1 == '-g') ]]; then
+    composer self-update
+    composer global update
+  else
+    composer self-update
+    composer update
+  fi
+}
+
+updatebrew() {
+  if [[ -n $1 && ($1 == '--global' || $1 == '-g') ]]; then
+    brew update && brew upgrade
+  else
+    brew update
+  fi
+}
+
+sinetv() {
+  echo 'wolff91mac@outlook.com:wolff91mac:22Hdbfgur'
+}
+
 email() {
   na() {
     echo 'nopphasin.arayasirikul@gmail.com' | copy
@@ -303,6 +341,14 @@ newlaravel() {
   composer create-project laravel/laravel $* --prefer-dist
 }
 
+migrate() {
+  php artisan migrate $*
+}
+
+seed() {
+  php artisan db:seed $*
+}
+
 
 ## COMPOSER
 ## -------------------------------------------------- ##
@@ -411,31 +457,4 @@ ggl.() {
 }
 upg.() {
   sudo gem update
-}
-
-
-foobar() {
-  local ref='refs/heads/master'
-  echo -e ${ref#refs/heads/}
-  # echo -e ${ref//refs\/heads\/}
-}
-
-updatenpm() {
-  if [[ -n $1 && ($1 == '--global' || $1 == '-g') ]]; then
-    npm install -g npm
-    npm update -g
-  else
-    npm install
-    npm update
-  fi
-}
-
-updatecomp() {
-  if [[ -n $1 && ($1 == '--global' || $1 == '-g') ]]; then
-    composer self-update
-    composer global update
-  else
-    composer self-update
-    composer update
-  fi
 }
