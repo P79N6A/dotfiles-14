@@ -1376,14 +1376,6 @@
 					<key>Text</key>
 					<string>\e[5</string>
 				</dict>
-				<key>0x45-0x120000</key>
-				<dict>
-					<key>Action</key>
-					<integer>25</integer>
-					<key>Text</key>
-					<string>Clear Buffer
-Clear Buffer</string>
-				</dict>
 				<key>0x5c-0x180000</key>
 				<dict>
 					<key>Action</key>
@@ -1396,8 +1388,8 @@ Clear Buffer</string>
 					<key>Action</key>
 					<integer>25</integer>
 					<key>Text</key>
-					<string>Clear Scrollback Buffer
-Clear Scrollback Buffer</string>
+					<string>Clear Buffer
+Clear Buffer</string>
 				</dict>
 				<key>0x69-0x180000</key>
 				<dict>
