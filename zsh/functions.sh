@@ -3,17 +3,42 @@
 # Custom defined functions
 
 check_required_packages() {
+  local install=0
+  local commands=""
+
   if [[ "$(command -v exa 2> /dev/null)" == '' ]]; then
+    install=1;
+    commands+="\\\n"
+    commands+="brew install exa;"
+  fi
+
+  if [[ "$(command -v terminal-notifier 2> /dev/null)" == '' ]]; then
+    install=1;
+    commands+="\\\n"
+    commands+="brew install terminal-notifier;"
+  fi
+
+  if [[ "$(command -v docker-langserver 2> /dev/null)" == '' ]]; then
+    install=1
+    commands+="\\\n"
+    commands+="npm install -g dockerfile-language-server-nodejs;"
+  fi
+
+  if [[ "$(command -v antigen 2> /dev/null)" == '' ]]; then
+    install=1
+  fi
+
+  if [[ install == 1 ]]; then
     echo -ne "\nInstall required packages...\n"
-    brew install exa
-  fi
 
-  # curl -L git.io/antigen > "$ZSHFILES/lib/antigen.zsh"
+    # curl -L git.io/antigen > "$ZSHFILES/lib/antigen.zsh"
+    if [[ ! -f "$ZSHFILES/lib/antigen.zsh" ]]; then
+      curl https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > "$ZSHFILES/lib/antigen.zsh"
+    fi
+    source "$ZSHFILES/lib/antigen.zsh"
 
-  if [[ ! -f "$ZSHFILES/lib/antigen.zsh" ]]; then
-    curl https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > "$ZSHFILES/lib/antigen.zsh"
+    "`$commands`"
   fi
-  source "$ZSHFILES/lib/antigen.zsh"
 }
 
 
@@ -58,20 +83,30 @@ sinetv() {
 }
 
 email() {
+  local email_address=''
+
+  result() {
+    echo $1
+  }
+
   na() {
-    echo 'nopphasin.arayasirikul@gmail.com' | copy
+    email_address='nopphasin.arayasirikul@gmail.com'
+    email result $email_address
   }
 
   gc() {
-    echo 'goldfishcreative.thailand@gmail.com' | copy
+    email_address='goldfishcreative.thailand@gmail.com'
+    email result $email_address
   }
 
   fa() {
-    echo 'fineartdeveloper@gmail.com' | copy
+    email_address='fineartdeveloper@gmail.com'
+    email result $email_address
   }
 
   fd() {
-    echo 'fineartdropbox@gmail.com' | copy
+    email_address='fineartdropbox@gmail.com'
+    email result $email_address
   }
 
   if declare -f $1 > /dev/null
