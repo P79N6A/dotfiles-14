@@ -35,8 +35,39 @@
     "filters": "html",
     "profile": "html",
     "snippets": {
-      
+      "cro": "crossorigin=\"${1:anonymous}\"$0",
+      "scs": "<script src=\"$1\">$2</script>$0",
+      "scp": "<script>$1</script>$0",
+      "prep": "<pre><?php print_r($1); ?></pre>$0",
+      "divc": "<!-- .$1 -->\n<div class=\"$1\">\n\t$2\n</div>\n<!-- /.$1 -->$0",
+      "divd": "<!-- #$1 -->\n<div id=\"$1\" class=\"$2\">\n\t$3\n</div>\n<!-- /#$1 -->$0",
+      "div": "<div class=\"$1\">$2</div>$0",
+      "!": "<!--$1-->$0"
     },
+    "abbreviations": {}
+  },
+
+  "php": {
+    "filters": "html",
+    "profile": "html",
+    "snippets": {
+      "cro": "crossorigin=\"${1:anonymous}\"$0",
+      "scs": "<script src=\"$1\">$2</script>$0",
+      "scp": "<script>$1</script>$0",
+      "prep": "<pre><?php print_r($1); ?></pre>$0",
+      "divc": "<!-- .$1 -->\n<div class=\"$1\">\n\t$2\n</div>\n<!-- /.$1 -->$0",
+      "divd": "<!-- #$1 -->\n<div id=\"$1\" class=\"$2\">\n\t$3\n</div>\n<!-- /#$1 -->$0",
+      "div": "<div class=\"$1\">$2</div>$0",
+      "!": "/*$1*/$0"
+    },
+    "abbreviations": {}
+  },
+
+  "blade": {
+    "extends": "html",
+    "filters": "html",
+    "profile": "html",
+    "snippets": {},
     "abbreviations": {}
   },
 
