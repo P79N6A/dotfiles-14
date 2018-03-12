@@ -824,14 +824,18 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>MaxVertically</key>
+	<key>LogRestorableStateSize</key>
 	<true/>
+	<key>LowFiCombiningMarks</key>
+	<true/>
+	<key>MaxVertically</key>
+	<false/>
 	<key>MinCompactTabWidth</key>
 	<integer>80</integer>
 	<key>MinTabWidth</key>
 	<integer>80</integer>
 	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/settings</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -844,6 +848,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
+		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -872,12 +881,18 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>0 132 224 280 0 0 1920 1177 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>684 257 741 317 0 0 1920 1057 </string>
+	<string>583 376 605 294 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>794 365 918 452 0 0 1920 1057 </string>
+	<string>717 386 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 51 1919 1006 0 0 1920 1057 </string>
+	<string>0 54 1917 1123 0 0 1920 1177 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>247 132 585 452 0 0 1920 1177 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>226 155 1920 965 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4_selection</key>
@@ -1154,7 +1169,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>1.6460521097715737</real>
+			<real>2.7725194321065989</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1177,7 +1192,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>271</integer>
+			<integer>237</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Boost</key>
@@ -1232,7 +1247,7 @@
 			<key>Description</key>
 			<string>Default</string>
 			<key>Disable Printing</key>
-			<true/>
+			<false/>
 			<key>Disable Smcup Rmcup</key>
 			<false/>
 			<key>Disable Window Resizing</key>
@@ -1401,14 +1416,7 @@ Clear Buffer</string>
 					<key>Text</key>
 					<string>01 0B 72 65 6C 6F 61 64 5F 73 68 65 6C 6C 0D</string>
 				</dict>
-				<key>0x7a-0x100000</key>
-				<dict>
-					<key>Action</key>
-					<integer>12</integer>
-					<key>Text</key>
-					<string>1B:escape</string>
-				</dict>
-				<key>0x7c-0x120000</key>
+				<key>0x73-0x100000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
@@ -1692,7 +1700,7 @@ Clear Buffer</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InputMonoCondensed-Regular 12</string>
+			<string>InputMono-Regular 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1704,9 +1712,11 @@ Clear Buffer</string>
 			<key>Rows</key>
 			<integer>40</integer>
 			<key>Screen</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>Scrollback Lines</key>
 			<integer>10000</integer>
+			<key>Scrollback With Status Bar</key>
+			<true/>
 			<key>Scrollback in Alternate Screen</key>
 			<false/>
 			<key>Selected Text Color</key>
@@ -1765,7 +1775,7 @@ Clear Buffer</string>
 			<key>Thin Strokes</key>
 			<integer>0</integer>
 			<key>Transparency</key>
-			<real>0.20746946383248724</real>
+			<real>0.17238459708121823</real>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
@@ -1787,7 +1797,7 @@ Clear Buffer</string>
 			<key>Use Underline Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.2000000000000002</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -3301,12 +3311,6 @@ Clear Buffer</string>
 	<true/>
 	<key>NoSyncConfirmShellIntegrationCommand_selection</key>
 	<integer>0</integer>
-	<key>NoSyncCoprocessCommandsToIgnoreErrorOutput</key>
-	<array>
-		<string>tput home</string>
-	</array>
-	<key>NoSyncHaveUsedCopyMode</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallUtilitiesPackage</key>
@@ -3314,11 +3318,15 @@ Clear Buffer</string>
 	<key>NoSyncInstallUtilitiesPackage_selection</key>
 	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>3174284D-BE22-4B54-BEC6-98A06A91EF4E</string>
+	<string>0CEF9659-0883-403C-A473-02B5DF4E2D16</string>
+	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux</key>
+	<true/>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>533641258.678617</real>
+	<real>540643942.034428</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -3373,7 +3381,7 @@ Clear Buffer</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/Fineart/.dotfiles/settings</string>
+	<string>/Users/sudprawat/.dotfiles/settings</string>
 	<key>PreventEscapeSequenceFromClearingHistory</key>
 	<true/>
 	<key>ProfilesWindowJoinsActiveSpace</key>
@@ -3395,15 +3403,13 @@ Clear Buffer</string>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=1</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=91</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
-	<key>SULastCheckTime</key>
-	<date>2018-03-02T03:27:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
-	<false/>
+	<true/>
 	<key>SensitiveScrollWheel</key>
 	<true/>
 	<key>ShowBookmarkName</key>
@@ -3413,7 +3419,7 @@ Clear Buffer</string>
 	<key>ShowSessionRestoredBanner</key>
 	<false/>
 	<key>SmartPlacement</key>
-	<true/>
+	<false/>
 	<key>StatusBarIcon</key>
 	<true/>
 	<key>StretchTabsToFillBar</key>
@@ -3445,9 +3451,9 @@ Clear Buffer</string>
 	<key>UseBorder</key>
 	<true/>
 	<key>UseExperimentalFontMetrics</key>
-	<true/>
+	<false/>
 	<key>UseLionStyleFullscreen</key>
-	<true/>
+	<false/>
 	<key>VerticalBarCursorWidth</key>
 	<real>2</real>
 	<key>WindowNumber</key>
@@ -3455,7 +3461,7 @@ Clear Buffer</string>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>ZippyTextDrawing</key>
-	<false/>
+	<true/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
