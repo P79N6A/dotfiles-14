@@ -8,10 +8,10 @@ runcmd="`cd $target_dir && npm run dev 2>&1`"
 
 if [[ $? == 0 ]]; then
   # terminal-notifier -title '---- NPM ----' -message 'Build and compiled successfully'
-  # echo -ne "success"
+  echo -ne $runcmd
   exit 0
 else
   # terminal-notifier -title '---- NPM ----' -message $runcmd
-  # echo -ne "error"
+  echo -ne $runcmd
   exit 1
 fi

@@ -35,6 +35,7 @@
     "filters": "html",
     "profile": "html",
     "snippets": {
+      "form": "<form id=\"$1\" action=\"$2\" method=\"${3:post}\">$4</form>$0",
       "cro": "crossorigin=\"${1:anonymous}\"$0",
       "scs": "<script src=\"$1\">$2</script>$0",
       "scp": "<script>$1</script>$0",
