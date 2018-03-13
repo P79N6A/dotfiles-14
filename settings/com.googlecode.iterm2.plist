@@ -1318,7 +1318,7 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>01 0B</string>
+					<string>0A</string>
 				</dict>
 				<key>0x32-0x40000</key>
 				<dict>
@@ -1620,14 +1620,14 @@ Clear Buffer</string>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>01 0B 70 75 6c 6c 63 75 72 72 65 6e 74 0a</string>
+					<string>01 0B 70 75 6c 6c 63 75 72 72 65 6e 74 0A</string>
 				</dict>
 				<key>0xf70e-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>01 0B 70 75 73 68 63 75 72 72 65 6e 74 0d</string>
+					<string>01 0B 70 75 73 68 63 75 72 72 65 6e 74 0A</string>
 				</dict>
 				<key>0xf70f-0x20000</key>
 				<dict>
