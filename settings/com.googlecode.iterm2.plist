@@ -881,7 +881,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>380 392 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 51 1925 1006 0 0 1920 1057 </string>
+	<string>0 51 1920 1006 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4_selection</key>
@@ -1376,7 +1376,7 @@
 					<key>Text</key>
 					<string>\e[5</string>
 				</dict>
-				<key>0x5c-0x180000</key>
+				<key>0x53-0x120000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
