@@ -144,7 +144,32 @@ dotf() {
 }
 
 www() {
-  cd $HOME/www && [[ $# > 0 ]] && cd "./${*}"
+  cd $HOME/www
+
+  lav() {
+    cd laravel.local
+  }
+
+  lpp() {
+    cd luxurypropertiespattaya.com
+  }
+
+  repron() {
+    cd repro-gallery-master
+  }
+
+  repro() {
+    cd reproduction-gallery.com
+  }
+
+  if declare -f $1 > /dev/null
+  then
+    "$@"
+    return 0
+  else
+    echo -e "Web project name '${1}' not exists"
+    return 0
+  fi
 }
 
 usr() {
