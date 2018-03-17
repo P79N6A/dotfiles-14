@@ -119,6 +119,46 @@ email() {
   fi
 }
 
+domain() {
+  local result
+  local domain='goldfishcreativethailand.com'
+
+  if [[ $# == 0 ]]; then
+    echo $domain | copy
+    echo $domain
+  else
+    for host in $*; do
+      if [[ $result != '' ]]; then
+        result+="\n"
+      fi
+      result+="${host}.${domain}"
+    done
+
+    echo -ne $result | copy -e
+    echo $result
+  fi
+}
+
+remote() {
+  local host
+
+  if [[ $# > 0 ]]; then
+    case $1 in
+      'staging' )
+        host='root@159.89.226.205'
+        ;;
+      * )
+        ;;
+    esac
+
+    if [[ $host != '' ]]; then
+      ssh $host
+    else
+      echo "No remote host"
+    fi
+  fi
+}
+
 reload_shell() {
   clear
   exec $SHELL -l
@@ -209,7 +249,11 @@ path() {
 }
 
 copy() {
-  perl -pe "s/(\r|\n)$//g" | pbcopy -Prefer txt
+  if [[ $# > 0 && $1 == '-e' ]]; then
+    pbcopy -Prefer txt
+  else
+    perl -pe "s/(\r|\n)$//g" | pbcopy -Prefer txt
+  fi
 }
 
 ip() {
