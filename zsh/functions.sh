@@ -124,7 +124,6 @@ domain() {
   local domain='goldfishcreativethailand.com'
 
   if [[ $# == 0 ]]; then
-    echo $domain | copy
     echo $domain
   else
     for host in $*; do
@@ -134,8 +133,7 @@ domain() {
       result+="${host}.${domain}"
     done
 
-    echo -ne $result | copy -e
-    echo $result
+    echo -ne $result
   fi
 }
 
@@ -207,7 +205,15 @@ www() {
     "$@"
     return 0
   else
-    echo -e "Web project name '${1}' not exists"
+    for i in $*; do
+      if [[ -e $i ]]; then
+        cd $i
+      else
+        echo -e "Directory name '${i}' not exists"
+        return 0
+      fi
+    done
+
     return 0
   fi
 }
