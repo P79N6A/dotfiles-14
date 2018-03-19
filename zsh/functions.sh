@@ -44,6 +44,10 @@ check_required_packages() {
 
 ## OTHERS
 ## -------------------------------------------------- ##
+public_key() {
+  cat ~/.ssh/id_rsa.pub
+}
+
 foobar() {
   local ref='refs/heads/master'
   echo -e ${ref#refs/heads/}
@@ -140,17 +144,9 @@ domain() {
 remote() {
   local host
 
-  if [[ $# > 0 ]]; then
-    case $1 in
-      'staging' )
-        host='root@159.89.226.205'
-        ;;
-      * )
-        ;;
-    esac
-
-    if [[ $host != '' ]]; then
-      ssh $host
+  if [[ $# == 1 ]]; then
+    if [[ $1 == 'hostinger' ]]; then
+      ssh -p 65002 u822159201@185.224.137.8
     else
       echo "No remote host"
     fi
