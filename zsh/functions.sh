@@ -6,6 +6,12 @@ check_required_packages() {
   local install=0
   local commands=""
 
+  # Check command-toolbar folder
+  local COMMAND_TOOLBAR_DIR='/Users/Shared/CommandToolbar'
+  if [[ ! -e $COMMAND_TOOLBAR_DIR ]]; then
+    ln -s ~/.dotfiles $COMMAND_TOOLBAR_DIR
+  fi
+
   if [[ "$(command -v exa 2> /dev/null)" == '' ]]; then
     install=1;
     commands+="\\\n"
