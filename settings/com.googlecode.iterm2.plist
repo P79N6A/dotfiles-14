@@ -888,7 +888,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>553 465 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 54 1920 1123 0 0 1920 1177 </string>
+	<string>0 55 1920 1122 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 132 585 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1714,7 +1714,7 @@ Clear Buffer</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InputMono-Regular 12</string>
+			<string>InputMono-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
