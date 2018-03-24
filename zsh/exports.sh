@@ -22,6 +22,7 @@ export GITSSH="git@github.com"
 export FINEARTGIT="${GITURL}/fineartdeveloper"
 export NOPPHASINGIT="${GITURL}/nopphasinara"
 
+export PHP_HOME="/usr/local/bin/php"
 export MANPATH="/usr/local/man:${MANPATH}"
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="${HOME}/.ssh/rsa_id"
