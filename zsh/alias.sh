@@ -111,3 +111,4 @@ alias npmrunp="npm run production"
 ## -------------------------------------------------- ##
 alias artisan="php artisan"
 alias tinker="artisan tinker"
+alias passv="echo \"VpjkcV88\"" | copy
