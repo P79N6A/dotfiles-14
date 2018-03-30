@@ -1,0 +1,4 @@
+{
+  "filter.commentTrigger": "id, class",
+  "filter.commentAfter": "<!-- <%= attr('id', '/#') %><%= attr('class', '/.') %> -->",
+}
