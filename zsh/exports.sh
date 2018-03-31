@@ -22,6 +22,7 @@ export GITSSH="git@github.com"
 export FINEARTGIT="${GITURL}/fineartdeveloper"
 export NOPPHASINGIT="${GITURL}/nopphasinara"
 
+export ATOM_DEV_RESOURCE_PATH="${HOME}/.atom/dev/packages"
 export PHP_HOME="/usr/local/bin/php"
 export MANPATH="/usr/local/man:${MANPATH}"
 export ARCHFLAGS="-arch x86_64"
