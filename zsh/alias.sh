@@ -62,6 +62,14 @@ alias repron="cd ~/www/repro-gallery-master"
 alias soho="cd ~/www/soho-art.com"
 alias abacus="cd ~/www/abacus-gallery.com"
 alias reprog="cd ~/www/reproduction-galleries.com"
+alias lpp="cd ~/www/luxurypropertiespattaya.com"
+alias gct="cd ~/www/goldfishcreativethailand.com"
+alias ddt="cd ~/www/devilsdenthailand.com"
+alias ddvb="cd ~/www/devilsdenvipbus.com"
+alias ddbe="cd ~/www/devilsdenbangkokescorts.com"
+alias ddp="cd ~/www/devilsdenpinkdevils.com"
+alias pse="cd ~/www/pattayasecretescorts.com"
+alias atom-dev="atom --dev"
 
 
 ## GIT
