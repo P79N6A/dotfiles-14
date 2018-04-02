@@ -793,7 +793,7 @@
 	<key>GlobalTouchBarMap</key>
 	<dict/>
 	<key>HideFromDockAndAppSwitcher</key>
-	<true/>
+	<false/>
 	<key>HideMenuBarInFullscreen</key>
 	<false/>
 	<key>HideScrollbar</key>
