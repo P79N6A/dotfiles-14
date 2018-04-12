@@ -126,6 +126,19 @@ _add_commit() {
 }
 alias checkout="git checkout"
 alias master='git checkout master'
+alias project="_composer_project"
+_composer_project() {
+    if [[ $# == 0 ]]; then
+        echo -e "Please provide package";
+        return 1
+    fi
+
+    package=''; [[ -n $1 ]] && package=$1; shift
+    target_dir=''; [[ -n $1 ]] && target_dir=$1; shift
+    version=''; [[ -n $1 ]] && version=$1; shift
+
+    composer create-project $package $target_dir $version $*
+}
 
 
 ## NPM
