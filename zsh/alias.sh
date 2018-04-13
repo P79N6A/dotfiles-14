@@ -94,7 +94,7 @@ _push() {
     if [[ $# == 0 ]]; then
         git push
     else
-        git push $*
+        git push origin $*
     fi
 }
 alias pull="_pull"
@@ -102,11 +102,43 @@ _pull() {
     if [[ $# == 0 ]]; then
         git pull
     else
-        git pull $*
+        git pull origin $*
     fi
+}
+alias add-commit="_add_commit"
+_add_commit() {
+    files="."
+    message="Initial commit"
+
+    _argv=()
+
+    for item in $*; do
+        if [[ $1 == '-f' ]]; then
+            shift; files="$1"
+        elif [[ $1 == '-m' ]]; then
+            shift; message="$1"
+        else
+            _argv+=" $1 "; shift
+        fi
+    done
+
+    git add $files && git commit -m $message
 }
 alias checkout="git checkout"
 alias master='git checkout master'
+alias project="_composer_project"
+_composer_project() {
+    if [[ $# == 0 ]]; then
+        echo -e "Please provide package";
+        return 1
+    fi
+
+    package=''; [[ -n $1 ]] && package=$1; shift
+    target_dir=''; [[ -n $1 ]] && target_dir=$1; shift
+    version=''; [[ -n $1 ]] && version=$1; shift
+
+    composer create-project $package $target_dir $version $*
+}
 
 
 ## NPM
