@@ -22,7 +22,10 @@ export GITSSH="git@github.com"
 export FINEARTGIT="${GITURL}/fineartdeveloper"
 export NOPPHASINGIT="${GITURL}/nopphasinara"
 
-export PHP_HOME="/usr/local/Cellar/php/7.2.4/bin"
+export LDFLAGS=-L/usr/local/opt/php@7.1/lib
+export CPPFLAGS=-I/usr/local/opt/php@7.1/include
+
+export PHP_HOME="/usr/local/Cellar/php/7.2.4_1"
 export MANPATH="/usr/local/man:${MANPATH}"
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="${HOME}/.ssh/rsa_id"
@@ -30,7 +33,7 @@ export BREW_PREFIX="`brew --prefix`"
 export BREW_PATH="/usr/local/Cellar"
 export BREWGEMBIN="/usr/local/Cellar/ruby/2.5.0_2/bin"
 export COMPOSERBIN="${HOME}/.composer/vendor/bin"
-export PHP_PATH="/usr/local/opt/php@7.1/bin"
+export PHP_PATH="/usr/local/Cellar/php/7.2.4_1/bin:/usr/local/Cellar/php/7.2.4_1/sbin"
 _PATH=""
 _PATH="/usr/local/sbin:/usr/sbin:/sbin:${_PATH}"
 _PATH="${DOTFILES}/bin:${_PATH}"
