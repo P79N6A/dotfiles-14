@@ -793,7 +793,7 @@
 	<key>GlobalTouchBarMap</key>
 	<dict/>
 	<key>HideFromDockAndAppSwitcher</key>
-	<true/>
+	<false/>
 	<key>HideMenuBarInFullscreen</key>
 	<false/>
 	<key>HideScrollbar</key>
@@ -886,7 +886,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>583 376 605 294 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>553 508 796 473 0 0 1920 1177 </string>
+	<string>553 530 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 55 1920 1122 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
