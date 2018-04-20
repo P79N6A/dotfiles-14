@@ -1,0 +1,49 @@
+#!/usr/bin/env php
+<?php
+
+ini_set('memory_limit', '1000M');
+ini_set('max_execution_time', 0);
+ini_set('max_input_time', -1);
+error_reporting(0);
+
+list($cmd, $source, $target, $size) = $GLOBALS['argv'];
+$cmd = basename($cmd);
+
+if (!isset($source)) {
+    $source = './';
+}
+
+if (!isset($target)) {
+    $target = './';
+}
+
+if (isset($size)) {
+    $size = '-resize ' . $size;
+}
+
+$n = 1;
+foreach (glob($source . "*.jpg") as $filename)
+{
+    if (!file_exists($source)) {
+        echo 'Source path does not exists.' . "\n";
+        break;
+    }
+
+    if (!file_exists($target)) {
+        echo 'Target path does not exists.' . "\n";
+        break;
+    }
+
+    $filenameWithoutPrefix = basename($filename);
+    $exec = shell_exec('convert '. $source . $filenameWithoutPrefix .' -colorspace RGB '. $size .' '. $target . $filenameWithoutPrefix .' && convert '. $target . $filenameWithoutPrefix .' -colorspace sRGB '. $target . $filenameWithoutPrefix .'');
+    // $exec = shell_exec('convert '. $source . $filenameWithoutPrefix .' -colorspace RGB -resize 240 '. $target . $filenameWithoutPrefix .' && convert '. $target . $filenameWithoutPrefix .' -colorspace sRGB '. $target . $filenameWithoutPrefix .'');
+
+    // echo '['. $n .'] Convert ' . $source . $filenameWithoutPrefix . ' and output to ' . $target . $filenameWithoutPrefix . "\n";
+
+    $n++;
+}
+
+# foreach (glob('plugins/*.php') as $filename)
+# {
+#     include_once "./{$filename}";
+# }
