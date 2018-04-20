@@ -6,44 +6,163 @@ ini_set('max_execution_time', 0);
 ini_set('max_input_time', -1);
 error_reporting(0);
 
-list($cmd, $source, $target, $size) = $GLOBALS['argv'];
-$cmd = basename($cmd);
+$params = $GLOBALS['argv'];
+$argv = [];
+$cmd = basename($params[0]);
 
-if (!isset($source)) {
-    $source = './';
-}
+$reserved = '';
+foreach ($params as $index => $value) {
+    $key = $index;
+    $value = trim($value);
 
-if (!isset($target)) {
-    $target = './';
-}
-
-if (isset($size)) {
-    $size = '-resize ' . $size;
-}
-
-$n = 1;
-foreach (glob($source . "*.jpg") as $filename)
-{
-    if (!file_exists($source)) {
-        echo 'Source path does not exists.' . "\n";
-        break;
+    if (in_array($value, ['-l', '--log'])) {
+        $key = 'log';
+        $reserved = $index + 1;
+        $value = trim($params[$reserved]);
     }
 
-    if (!file_exists($target)) {
-        echo 'Target path does not exists.' . "\n";
-        break;
+    if (in_array($value, ['-s', '--source'])) {
+        $key = 'source';
+        $reserved = $index + 1;
+        $value = rtrim(trim($params[$reserved]), '/') . '/';
     }
 
-    $filenameWithoutPrefix = basename($filename);
-    $exec = shell_exec('convert '. $source . $filenameWithoutPrefix .' -colorspace RGB '. $size .' '. $target . $filenameWithoutPrefix .' && convert '. $target . $filenameWithoutPrefix .' -colorspace sRGB '. $target . $filenameWithoutPrefix .'');
-    // $exec = shell_exec('convert '. $source . $filenameWithoutPrefix .' -colorspace RGB -resize 240 '. $target . $filenameWithoutPrefix .' && convert '. $target . $filenameWithoutPrefix .' -colorspace sRGB '. $target . $filenameWithoutPrefix .'');
+    if (in_array($value, ['-t', '--target'])) {
+        $key = 'target';
+        $reserved = $index + 1;
+        $value = rtrim(trim($params[$reserved]), '/') . '/';
+    }
 
-    // echo '['. $n .'] Convert ' . $source . $filenameWithoutPrefix . ' and output to ' . $target . $filenameWithoutPrefix . "\n";
+    if (in_array($value, ['-S', '--size'])) {
+        $key = 'size';
+        $reserved = $index + 1;
+        $value = trim($params[$reserved]);
 
-    $n++;
+        $argv['resize'] = '-adaptive-resize ' . $value;
+    }
+
+    if (in_array($value, ['-r', '--regex'])) {
+        $key = 'regex';
+        $reserved = $index + 1;
+        $value = trim($params[$reserved]);
+    }
+
+    if (in_array($value, ['-p', '--prefix'])) {
+        $key = 'prefix';
+        $reserved = $index + 1;
+        $value = trim($params[$reserved]);
+    }
+
+    if (in_array($value, ['-c', '--color'])) {
+        $key = 'color';
+        $reserved = $index + 1;
+        $value = true;
+    }
+
+    if ($index != $reserved) {
+        $argv[$key] = $value;
+    }
 }
 
-# foreach (glob('plugins/*.php') as $filename)
-# {
-#     include_once "./{$filename}";
-# }
+$argv = array_merge([
+    'log' => '',
+    'source' => './',
+    'target' => './',
+    'size' => '',
+    'regex' => '*',
+    'resize' => '',
+    'prefix' => '',
+    'color' => false,
+], $argv);
+extract($argv);
+
+if (!$log && !$source) {
+    echo "No input source\n";
+    exit(1);
+}
+
+$not_exists = [];
+
+if ($log) {
+    if (!file_exists($log)) {
+        echo "Log file does not exists\n";
+        exit(1);
+    }
+
+    $fh = @fopen($log, 'r');
+    while (!feof($fh)) {
+        $buffer = trim(@fgets($fh));
+        if ($buffer) {
+            $input = $source . basename($buffer);
+
+            if (!file_exists($input)) {
+                $not_exists[] = $input;
+            } else {
+                $files[] = $input;
+            }
+        }
+    }
+    @fclose($fh);
+} else {
+    if ($source) {
+        if (!file_exists($source)) {
+            echo "Input source does not exists\n";
+            exit(0);
+        }
+
+        foreach (glob($source . $regex) as $file) {
+            $input = $source . basename(trim($file));
+
+            if (!file_exists($input)) {
+                $not_exists[] = $input;
+            } else {
+                $files[] = $input;
+            }
+
+            $files[] = $input;
+        }
+    }
+}
+
+if ($files) {
+    foreach ($files as $index => $file) {
+        if (!file_exists($file)) {
+            // $not_exists[] = $file;
+        } else {
+            if (!file_exists($target)) {
+                shell_exec('mkdir '. $target .'');
+            }
+
+            $fileWithoutPrefix = basename($file);
+            $output = $target . $prefix . $fileWithoutPrefix;
+
+            echo "Converted {$file} -> {$output}\n\n";
+            if ($color == false) {
+                $command = 'magick convert '. $file .' -unsharp 0x1 ' . $resize . ' '. $output .'';
+            } else {
+                $command = 'magick convert '. $file .' ' . $resize . ' -quality 80 '. $output .'';
+                // $command = 'magick convert '. $file .' ' . $resize . ' '. $output .'';
+                // $command = 'magick convert '. $file .' -colorspace RGB -unsharp 0x1 ' . $resize . ' -colorspace sRGB '. $output .'';
+            }
+
+            // if ($resize) {
+            //     $command .= 'magick convert '. $file .' -colorspace RGB -resize ' . $size . ' '. $output .'';
+            // } else {
+            //     $command = 'magick convert '. $file .' -colorspace RGB '. $output .'';
+            // }
+            // $command .= ' && magick convert -filter '. $output .' -unsharp 0x1 '. $output .'';
+            // $command .= ' && magick convert '. $output .' -colorspace sRGB '. $output .'';
+
+            $exec = shell_exec($command);
+        }
+    }
+}
+
+print_r($argv);
+echo "\n";
+
+if ($not_exists) {
+    echo "File does not exists\n";
+    print_r($not_exists);
+    echo "\n\n";
+}
