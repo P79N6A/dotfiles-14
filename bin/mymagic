@@ -130,7 +130,7 @@ if ($files) {
             // $not_exists[] = $file;
         } else {
             if (!file_exists($target)) {
-                shell_exec('mkdir '. $target .'');
+                shell_exec('mkdir '. $target .' && chmod -R 0775 '. $target .'');
             }
 
             $fileWithoutPrefix = basename($file);
@@ -140,7 +140,7 @@ if ($files) {
             if ($color == false) {
                 $command = 'magick convert '. $file .' -unsharp 0x1 ' . $resize . ' '. $output .'';
             } else {
-                $command = 'magick convert '. $file .' ' . $resize . ' -quality 80 '. $output .'';
+                $command = 'magick '. $file .' ' . $resize . ' -quality 80 '. $output .'';
                 // $command = 'magick convert '. $file .' ' . $resize . ' '. $output .'';
                 // $command = 'magick convert '. $file .' -colorspace RGB -unsharp 0x1 ' . $resize . ' -colorspace sRGB '. $output .'';
             }

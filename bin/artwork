@@ -1,0 +1,59 @@
+#!/usr/bin/env php
+<?php
+
+error_reporting(0);
+
+ini_set('memory_limit', '1000M');
+ini_set('upload_max_filesize', '80M');
+ini_set('post_max_size', '96M');
+ini_set('max_input_time', -1);
+ini_set('max_execution_time', 0);
+
+$params = $GLOBALS['argv'];
+$argv = [];
+$cmd = basename($params[0]);
+$action = $params[1];
+unset($params[0], $params[1]);
+
+$reserved = '';
+foreach ($params as $index => $value) {
+    $key = $index;
+    $value = trim($value);
+
+    if (in_array($value, ['-d', '--download'])) {
+        $key = 'download';
+        $reserved = $index + 1;
+        $value = true;
+    }
+
+    if ($index != $reserved) $argv[$key] = $value;
+}
+
+$argv = array_merge([
+    'catalog_url' => 'https://www.reproduction-gallery.com/catalogue/',
+    'actions' => ['download'],
+], $argv);
+
+extract($argv);
+
+if (!$action) {
+    echo "Please specify command to run\n";
+    exit(1);
+}
+
+if (!in_array($action, $actions)) {
+    echo "Unknown command '{$action}'\n";
+    exit(1);
+}
+
+include 'gallery-functions.php';
+
+if ($action == 'download') {
+    $is_error = downloadCatalog($catalog_url . 'data.log');
+    if ($is_error) {
+        echo "Cannot download catalog, please try again\n";
+        exit(1);
+    }
+
+    createDataLog('data.log', 'artworks.log');
+}
