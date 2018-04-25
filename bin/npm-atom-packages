@@ -1,7 +1,8 @@
 #!/bin/bash
 
-paths=("advanced-open-file aligner aligner-coffeescript aligner-css aligner-javascript aligner-php aligner-scss artisan atom-autocomplete-php autocomplete-font-awesome autocomplete-js-import autocomplete-json autocomplete-plus autocomplete-sql blade-snippets browser-plus busy-signal change-case chrome-color-picker colorio command-toolbar css-hyperclick double-tag emmet ftp-remote-edit goldfish-dark-syntax goldfish-dark-ui hyperclick intentions javascript-snippets jquery-snippets js-hyperclick language-blade menu-manager php-hyperclick pretty-json project-manager remote-ftp remote-sync sass-autocompile script sort-lines split-diff tool-bar tool-bar-main v-bootstrap4")
+paths=("ftp-remote-edit menu-manager jquery-snippets chrome-color-picker javascript-snippets sort-lines autocomplete-json split-diff aligner-php blade-snippets js-hyperclick command-toolbar tool-bar project-manager php-hyperclick double-tag hyperclick css-hyperclick v-bootstrap4 aligner-css autocomplete-font-awesome script emmet aligner-scss pretty-json artisan intentions aligner-coffeescript change-case sass-autocompile browser-plus aligner-javascript busy-signal autocomplete-sql advanced-open-file language-blade autocomplete-js-import atom-autocomplete-php remote-sync remote-ftp aligner")
 
 for item in $paths; do
-  (cd ./packages/$item && npm install)
+  # (cd ./packages/$item && npm install)
+  apm install $item
 done
