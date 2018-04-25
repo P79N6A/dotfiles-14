@@ -1,0 +1,7 @@
+#!/bin/bash
+
+paths=("advanced-open-file aligner aligner-coffeescript aligner-css aligner-javascript aligner-php aligner-scss artisan atom-autocomplete-php autocomplete-font-awesome autocomplete-js-import autocomplete-json autocomplete-plus autocomplete-sql blade-snippets browser-plus busy-signal change-case chrome-color-picker colorio command-toolbar css-hyperclick double-tag emmet ftp-remote-edit goldfish-dark-syntax goldfish-dark-ui hyperclick intentions javascript-snippets jquery-snippets js-hyperclick language-blade menu-manager php-hyperclick pretty-json project-manager remote-ftp remote-sync sass-autocompile script sort-lines split-diff tool-bar tool-bar-main v-bootstrap4")
+
+for item in $paths; do
+  (cd ./packages/$item && npm install)
+done
