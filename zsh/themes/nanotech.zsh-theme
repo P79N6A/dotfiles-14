@@ -8,7 +8,8 @@ function get_right_prompt() {
     fi
 }
 
-PROMPT='$(git_prompt_info)'
+PROMPT='$(git_prompt_info)
+%u'
 
 # PROMPT='%F{green}λ%f %F{yellow}%100c%f$(git_prompt_info)%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
 # %F{white}$%f $(get_right_prompt)'
