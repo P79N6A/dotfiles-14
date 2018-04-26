@@ -9,11 +9,7 @@ function get_right_prompt() {
 }
 
 PROMPT='$(git_prompt_info)
-%u
-%c
-%a
-%r
-%b'
+$ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE'
 
 # PROMPT='%F{green}λ%f %F{yellow}%100c%f$(git_prompt_info)%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
 # %F{white}$%f $(get_right_prompt)'
