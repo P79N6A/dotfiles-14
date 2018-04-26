@@ -75,8 +75,13 @@ alias atom-dev="atom --dev"
 ## GIT
 ## -------------------------------------------------- ##
 alias gits="git status"
+alias checkout="git checkout"
 alias stash="git stash"
 alias status="git status"
+alias headreset="git reset HEAD"
+commita() {
+    git commit -ma $1
+}
 alias add="_add"
 _add() {
     local file="${1:=.}"
