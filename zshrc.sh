@@ -23,8 +23,8 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="theunraveler"
 # ZSH_THEME="zhann"
 # ZSH_THEME="sobole"
-# ZSH_THEME="lambda-mod"
-ZSH_THEME="nanotech"
+ZSH_THEME="lambda-mod"
+# ZSH_THEME="nanotech"
 # ZSH_THEME="lambda-pure"
 # ZSH_THEME="my_awesome_theme"
 
