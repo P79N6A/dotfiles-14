@@ -1,9 +1,11 @@
+#!/usr/bin/env zsh
+
 PROMPT='%~ $(git_current_branch) $(parse_git_dirty) [%D{%L:%M} %D{%p}]
 $ '
 RPROMPT=''
 PS2='> '
 
-ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_PREFIX='$(git_remote_status)'
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
 ZSH_THEME_GIT_PROMPT_CLEAN=""

@@ -25,6 +25,7 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="sobole"
 # ZSH_THEME="lambda-mod"
 ZSH_THEME="nanotech"
+# ZSH_THEME="lambda-pure"
 # ZSH_THEME="my_awesome_theme"
 
 # Set list of themes to load
@@ -76,8 +77,7 @@ HIST_STAMPS="mm dd, yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=("asciidoctor" "zsh-256color" "urltools" "zsh-autosuggestions")
-
+plugins=("asciidoctor" "zsh-256color" "urltools" "zsh-autosuggestions" "git")
 
 ## LOAD ZSH
 ## -------------------------------------------------- ##
