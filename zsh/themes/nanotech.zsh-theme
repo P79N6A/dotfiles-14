@@ -21,7 +21,7 @@ PROMPT='$(git_prompt_info)'
 # ${PR_BATTERY}\
 #  %B%F{red}◀%f%b%F{red}◀%B%F{black}◀%f%b"
 
-ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="aaa"
+ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE="aaa"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{yellow}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f"
