@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-function parse_git_dirty() {
+function _parse_git_dirty() {
   local STATUS=''
   local -a FLAGS
   FLAGS=('--porcelain')
@@ -29,7 +29,8 @@ function get_right_prompt() {
     fi
 }
 
-PROMPT="λ %d $(git_prompt_info) [%D{%L:%M} %D{%p}]\n$ $(get_right_prompt)"
+PROMPT="$(parse_git_dirty)"
+# PROMPT="λ %d $(git_prompt_info) [%D{%L:%M} %D{%p}]\n$ $(get_right_prompt)"
 
 # PROMPT="%B%F{black}▶%f%b%F{red}▶%B%F{red}▶%f%b \
 # %B%F{$HASH_MOD}%D{%R.%S %a %b %d %Y}%b%f\
