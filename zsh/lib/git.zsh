@@ -12,7 +12,7 @@ function git_prompt_info() {
     # if [[ `git_commits_ahead` == 1 ]]; then
     #   ZSH_THEME_GIT_PROMPT_CLEAN=''
     # fi
-    echo ""
+    echo "$(check_fresh)"
     echo "$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)"
   fi
 }
