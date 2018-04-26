@@ -23,6 +23,7 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="theunraveler"
 # ZSH_THEME="zhann"
 # ZSH_THEME="sobole"
+# ZSH_THEME="lambda-mod"
 ZSH_THEME="nanotech"
 # ZSH_THEME="my_awesome_theme"
 
@@ -76,7 +77,6 @@ HIST_STAMPS="mm dd, yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=("asciidoctor" "zsh-256color" "urltools" "zsh-autosuggestions")
-# plugins=("asciidoctor" "zsh-256color" "urltools" "zsh-syntax-highlighting" "zsh-autosuggestions")
 
 
 ## LOAD ZSH

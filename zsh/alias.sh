@@ -149,6 +149,9 @@ alias npmrunp="npm run production"
 
 ## LARAVEL
 ## -------------------------------------------------- ##
+alias la="php artisan"
+alias tkg="(cd ~/www/laravel.local && php artisan tinker)"
+alias tk="php artisan tinker"
 alias artisan="php artisan"
 alias tinker="artisan tinker"
 alias passv="echo \"VpjkcV88\" | copy"
