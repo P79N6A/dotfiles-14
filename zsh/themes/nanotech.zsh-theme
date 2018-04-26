@@ -8,8 +8,7 @@ function get_right_prompt() {
     fi
 }
 
-PROMPT='$(git_prompt_info)
-$ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE'
+PROMPT='$(git_prompt_info)'
 
 # PROMPT='%F{green}λ%f %F{yellow}%100c%f$(git_prompt_info)%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
 # %F{white}$%f $(get_right_prompt)'
@@ -21,6 +20,8 @@ $ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE'
 # %(1j. %B%F{green}◆%f%b %B%F{yellow}Jobs: %j%f%b.)\
 # ${PR_BATTERY}\
 #  %B%F{red}◀%f%b%F{red}◀%B%F{black}◀%f%b"
+
+ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="aaa"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{yellow}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f"
