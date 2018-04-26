@@ -1,4 +1,4 @@
-export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="10"
 
 export HOMEBREW_NO_EMOJI="1"
 export MAILCHECK="-1"
@@ -8,7 +8,7 @@ export GREP_COLOR="1;32"
 export CLICOLOR="1"
 export LSCOLORS="ExFxCxDxBxegedabagacad"
 export HISTCONTROL="ignoreboth:erasedups"
-export HISTFILE="${HOME}/.bash_history"
+export HISTFILE=$HOME/.bash_history
 export HISTSIZE="1000"
 export PYTHONIOENCODING="UTF-8"
 export LANG="en_US.UTF-8"
@@ -19,29 +19,31 @@ export EDITOR="Atom"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 export GITURL="https://github.com"
 export GITSSH="git@github.com"
-export FINEARTGIT="${GITURL}/fineartdeveloper"
-export NOPPHASINGIT="${GITURL}/nopphasinara"
+export FINEARTGIT=$GITURL/fineartdeveloper
+export NOPPHASINGIT=$GITURL/nopphasinara
 
 export LDFLAGS=-L/usr/local/opt/php@7.1/lib
 export CPPFLAGS=-I/usr/local/opt/php@7.1/include
 
-export PHP_HOME="/usr/local/Cellar/php/7.2.4_1"
-export MANPATH="/usr/local/man:${MANPATH}"
 export ARCHFLAGS="-arch x86_64"
-export SSH_KEY_PATH="${HOME}/.ssh/rsa_id"
 export BREW_PREFIX="`brew --prefix`"
-export BREW_PATH="/usr/local/Cellar"
-export BREWGEMBIN="/usr/local/Cellar/ruby/2.5.0_2/bin"
-export COMPOSERBIN="${HOME}/.composer/vendor/bin"
-export PHP_PATH="/usr/local/Cellar/php/7.2.4_1/bin:/usr/local/Cellar/php/7.2.4_1/sbin"
+export SSH_KEY_PATH=$HOME/.ssh/rsa_id
+export MANPATH=/usr/local/man:$MANPATH
+export PHP_HOME=/usr/local/Cellar/php/7.2.4_1
+export BREW_PATH=/usr/local/Cellar
+export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
+export COMPOSERBIN=$HOME/.composer/vendor/bin
+export PHP_PATH=/usr/local/Cellar/php/7.2.4_1/bin:/usr/local/Cellar/php/7.2.4_1/sbin
+
 _PATH=""
-_PATH="/usr/local/sbin:/usr/sbin:/sbin:${_PATH}"
-_PATH="${DOTFILES}/bin:${_PATH}"
-_PATH="${COMPOSERBIN}:${_PATH}"
-_PATH="${BREW_PATH}:${_PATH}"
-_PATH="${PHP_PATH}:${_PATH}"
-_PATH="${BREWGEMBIN}:/usr/local/bin:/usr/bin:/bin:${_PATH}"
-export PATH="${_PATH}"
+_PATH=/usr/local/sbin:/usr/sbin:/sbin:$_PATH
+_PATH=$DOTFILES/bin:$_PATH
+_PATH=$COMPOSERBIN:$_PATH
+_PATH=$BREW_PATH:$_PATH
+_PATH=$PHP_PATH:$_PATH
+_PATH=$BREWGEMBIN:/usr/local/bin:/usr/bin:/bin:$_PATH
+
+export PATH=$_PATH
 
 
 ## THEME VARIABLES
@@ -83,5 +85,3 @@ export PATH="${_PATH}"
 # ZSH_THEME_TERM_TITLE_IDLE
 # chpwd_functions
 # precmd_functions
-
-

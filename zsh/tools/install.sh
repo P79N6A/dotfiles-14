@@ -9,10 +9,6 @@ main() {
     GREEN="$(tput setaf 2)"
     YELLOW="$(tput setaf 3)"
     BLUE="$(tput setaf 4)"
-    MAGENTA="$(tput setaf 5)"
-    PURPLE=$MAGENTA
-    CYAN="$(tput setaf 6)"
-    WHITE="$(tput setaf 7)"
     BOLD="$(tput bold)"
     NORMAL="$(tput sgr0)"
   else
@@ -20,10 +16,6 @@ main() {
     GREEN=""
     YELLOW=""
     BLUE=""
-    MAGENTA=""
-    PURPLE=$MAGENTA
-    CYAN=""
-    WHITE=""
     BOLD=""
     NORMAL=""
   fi
@@ -57,7 +49,7 @@ main() {
   umask g-w,o-w
 
   printf "${BLUE}Cloning Oh My Zsh...${NORMAL}\n"
-  hash git >/dev/null 2>&1 || {
+  command -v git >/dev/null 2>&1 || {
     echo "Error: git is not installed"
     exit 1
   }
