@@ -9,7 +9,9 @@ function git_prompt_info() {
     # echo "${ref#refs/heads/}"
     # echo $ZSH_THEME_GIT_PROMPT_AHEAD
     # echo $ZSH_THEME_GIT_PROMPT_BEHIND
-    echo "$(git_commits_ahead)"
+    if [[ git_commits_ahead == 1 ]]; then
+      ZSH_THEME_GIT_PROMPT_CLEAN=''
+    fi
     echo "$(git_commits_behind)"
     echo "$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)"
   fi
