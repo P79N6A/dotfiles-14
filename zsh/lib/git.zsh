@@ -7,6 +7,7 @@ function git_prompt_info() {
 
     # echo "${ZSH_THEME_GIT_PROMPT_BRANCH}${ZSH_THEME_GIT_PROMPT_DIRTY}${ZSH_THEME_GIT_PROMPT_STATUS}${ZSH_THEME_GIT_PROMPT_REMOTE_STATUS}"
     # echo "${ref#refs/heads/}"
+    echo $ZSH_THEME_GIT_PROMPT_BEHIND
     echo "$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)"
   fi
 }
@@ -177,7 +178,6 @@ function git_prompt_status() {
   fi
   if $(echo "$INDEX" | grep '^## [^ ]\+ .*behind' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_BEHIND$STATUS"
-    ZSH_THEME_GIT_PROMPT_CLEAN=''
   fi
   if $(echo "$INDEX" | grep '^## [^ ]\+ .*diverged' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_DIVERGED$STATUS"
