@@ -9,7 +9,7 @@ function git_prompt_info() {
     if [[ `git_commits_ahead` == 1 ]]; then
       ZSH_THEME_GIT_PROMPT_CLEAN=''
     fi
-    echo "%F{green}%f %F{yellow}%100c%f $(git_current_branch)$(parse_git_dirty)$(git_prompt_status) [$(git_prompt_short_sha)]%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
+    echo "%F{green}%f %F{yellow}%100c%f $(git_current_branch)$(parse_git_dirty)$(git_prompt_status) %F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
 %F{white}$%f "
     # echo "$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)"
   fi
