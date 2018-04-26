@@ -27,10 +27,6 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{red}●%f"
 ZSH_THEME_GIT_PROMPT_AHEAD="[B%.]"
 ZSH_THEME_GIT_PROMPT_BEHIND="[A%.]"
 
-if [[ `git_commits_ahead` == 1 ]]; then
-  ZSH_THEME_GIT_PROMPT_CLEAN='QWERTY'
-fi
-
 
 # if [ $UID -eq 0 ]; then
 #   NCOLOR="red"
