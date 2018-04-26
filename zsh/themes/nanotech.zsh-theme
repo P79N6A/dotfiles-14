@@ -12,8 +12,8 @@ PROMPT='$(git_prompt_info)
 %u
 %c
 %a
-%R
-%S'
+%r
+%b'
 
 # PROMPT='%F{green}λ%f %F{yellow}%100c%f$(git_prompt_info)%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
 # %F{white}$%f $(get_right_prompt)'
