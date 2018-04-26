@@ -172,9 +172,10 @@ load_sources() {
 }
 
 check_fresh() {
-  if [[ $FRESH == 1 ]]; then
+  FRESH+=1
+
+  if [[ $FRESH > 1 ]]; then
     export FRESH=0
-  else
     echo "
 --END
 ";

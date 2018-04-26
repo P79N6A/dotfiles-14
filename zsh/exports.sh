@@ -44,7 +44,7 @@ _PATH="${BREWGEMBIN}:/usr/local/bin:/usr/bin:/bin:${_PATH}"
 export PATH="${_PATH}"
 # export PROMPT_COMMAND=""
 
-export FRESH=1
+export FRESH=0
 
 
 ## THEME VARIABLES
