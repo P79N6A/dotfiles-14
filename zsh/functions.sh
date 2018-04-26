@@ -171,6 +171,16 @@ load_sources() {
   source $ZSHFILES/alias.sh
 }
 
+check_fresh() {
+  if [[ $FRESH == 1 ]]; then
+    export FRESH=0
+  else
+    echo "
+--END
+";
+  fi
+}
+
 home() {
   cd $HOME && [[ $# > 0 ]] && cd "./${*}"
 }
