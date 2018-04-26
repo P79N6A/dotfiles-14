@@ -10,7 +10,7 @@ function git_prompt_info() {
     # echo $ZSH_THEME_GIT_PROMPT_AHEAD
     # echo $ZSH_THEME_GIT_PROMPT_BEHIND
     if [[ `git_commits_ahead` == 1 ]]; then
-      ZSH_THEME_GIT_PROMPT_CLEAN='QWERTY'
+      ZSH_THEME_GIT_PROMPT_CLEAN=''
     fi
     echo "$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)"
   fi
