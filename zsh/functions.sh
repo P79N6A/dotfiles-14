@@ -172,17 +172,6 @@ load_sources() {
   source $ZSHFILES/alias.sh
 }
 
-check_fresh() {
-  local fresh=$(cat $DOTFILES/logs/fresh.log)
-  fresh=$(sumint $fresh 1)
-  echo $fresh &> $DOTFILES/logs/fresh.log
-}
-
-get_fresh() {
-  local fresh=$(cat $DOTFILES/logs/fresh.log)
-  echo $fresh
-}
-
 home() {
   cd $HOME && [[ $# > 0 ]] && cd "./${*}"
 }

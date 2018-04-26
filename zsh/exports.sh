@@ -42,7 +42,6 @@ _PATH="${BREW_PATH}:${_PATH}"
 _PATH="${PHP_PATH}:${_PATH}"
 _PATH="${BREWGEMBIN}:/usr/local/bin:/usr/bin:/bin:${_PATH}"
 export PATH="${_PATH}"
-# export PROMPT_COMMAND=""
 
 
 ## THEME VARIABLES
@@ -85,6 +84,4 @@ export PATH="${_PATH}"
 # chpwd_functions
 # precmd_functions
 
-reset_fresh() {
-  echo 0 &> $DOTFILES/logs/fresh.log
-}
+

@@ -12,6 +12,7 @@ PROMPT='$(git_prompt_info)'
 
 # PROMPT='%F{green}λ%f %F{yellow}%100c%f$(git_prompt_info)%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
 # %F{white}$%f $(get_right_prompt)'
+
 # RPROMPT='$(git_current_branch) $(parse_git_dirty) %F{blue}[ %F{green}%D{%L:%M} %F{yellow}%D{%p} %F{blue}]%f'
 # PROMPT="%B%F{black}▶%f%b%F{red}▶%B%F{red}▶%f%b \
 # %B%F{$HASH_MOD}%D{%R.%S %a %b %d %Y}%b%f\
