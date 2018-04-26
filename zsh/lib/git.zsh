@@ -9,7 +9,7 @@ function git_prompt_info() {
     # echo "${ref#refs/heads/}"
     # echo $ZSH_THEME_GIT_PROMPT_AHEAD
     # echo $ZSH_THEME_GIT_PROMPT_BEHIND
-    echo "$(git_remote_status)"
+    echo "$(git_commits_behind)"
     echo "$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)"
   fi
 }
