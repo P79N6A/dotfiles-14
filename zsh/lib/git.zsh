@@ -5,13 +5,12 @@ function git_prompt_info() {
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
 
-    echo "${ZSH_THEME_GIT_PROMPT_BRANCH}${ZSH_THEME_GIT_PROMPT_DIRTY}${ZSH_THEME_GIT_PROMPT_STATUS}${ZSH_THEME_GIT_PROMPT_REMOTE_STATUS}"
     # echo "${ref#refs/heads/}"
-#     if [[ `git_commits_ahead` == 1 ]]; then
-#       ZSH_THEME_GIT_PROMPT_CLEAN=''
-#     fi
-#     echo "%F{green}λ%f %F{yellow}%100c%f$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
-# %F{white}$%f $(get_right_prompt)"
+    if [[ `git_commits_ahead` == 1 ]]; then
+      ZSH_THEME_GIT_PROMPT_CLEAN=''
+    fi
+    echo "%F{green}λ%f %F{yellow}%100c%f $(git_current_branch)$(parse_git_dirty)$(git_prompt_status) [$(get_right_prompt)]%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
+%F{white}$%f"
     # echo "$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)"
   fi
 }
