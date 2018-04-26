@@ -79,6 +79,8 @@ HIST_STAMPS="mm dd, yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=("asciidoctor" "zsh-256color" "urltools" "zsh-autosuggestions" "git")
 
+reset_fresh
+
 ## LOAD ZSH
 ## -------------------------------------------------- ##
 source $ZSH/oh-my-zsh.sh

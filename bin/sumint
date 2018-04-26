@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+error_reporting(0);
+
+$argv = $GLOBALS['argv'];
+$baseint = 0;
+$result = $baseint;
+
+foreach ($argv as $key => $value) {
+  if ($key > 0) {
+    // if ($key == 1) {
+    //   $baseint = (int) $value;
+    // } else {
+    //   $result += (int) $value;
+    // }
+  }
+
+  if ($key == 0) {
+
+  } else {
+    $result += (integer) $value;
+  }
+}
+
+echo $result;

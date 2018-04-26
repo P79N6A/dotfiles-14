@@ -162,6 +162,7 @@ remote() {
 reload_shell() {
   clear
   exec $SHELL -l
+  reset_fresh
   load_sources
 }
 
@@ -172,14 +173,14 @@ load_sources() {
 }
 
 check_fresh() {
-  FRESH+=1
+  local fresh=$(cat $DOTFILES/logs/fresh.log)
+  fresh=$(sumint $fresh 1)
+  echo $fresh &> $DOTFILES/logs/fresh.log
+}
 
-  if [[ $FRESH > 1 ]]; then
-    export FRESH=0
-    echo "
---END
-";
-  fi
+get_fresh() {
+  local fresh=$(cat $DOTFILES/logs/fresh.log)
+  echo $fresh
 }
 
 home() {

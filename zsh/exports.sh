@@ -44,8 +44,6 @@ _PATH="${BREWGEMBIN}:/usr/local/bin:/usr/bin:/bin:${_PATH}"
 export PATH="${_PATH}"
 # export PROMPT_COMMAND=""
 
-export FRESH=0
-
 
 ## THEME VARIABLES
 ## -------------------------------------------------- ##
@@ -86,3 +84,7 @@ export FRESH=0
 # ZSH_THEME_TERM_TITLE_IDLE
 # chpwd_functions
 # precmd_functions
+
+reset_fresh() {
+  echo 0 &> $DOTFILES/logs/fresh.log
+}
