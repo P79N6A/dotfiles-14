@@ -52,5 +52,4 @@ plugins=("zsh-autosuggestions" "git")
 
 source $ZSH/oh-my-zsh.sh
 
-
 source $ZSHFILES/alias.sh
