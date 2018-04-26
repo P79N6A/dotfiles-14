@@ -1,6 +1,6 @@
 ## OTHERS
 ## -------------------------------------------------- ##
-check_required_packages() {
+function check_required_packages() {
   local install=0
   local commands=""
 
@@ -45,42 +45,42 @@ check_required_packages() {
   fi
 }
 
-reload_shell() {
+function reload_shell() {
   clear && exec $SHELL -l && load_sources
 }
 
-load_sources() {
+function load_sources() {
   source $ZSHFILES/exports.sh && source $ZSHFILES/functions.sh && source $ZSHFILES/alias.sh
 }
 
-home() {
+function home() {
   cd $HOME && [[ $# > 0 ]] && cd "./${*}"
 }
 
-atm() {
+function atm() {
   cd $HOME/.atom && [[ $# > 0 ]] && cd "./${*}"
 }
 
-dotf() {
+function dotf() {
   cd $HOME/.dotfiles && [[ $# > 0 ]] && cd "./${*}"
 }
 
-www() {
+function www() {
   cd $HOME/www
 
-  lav() {
+  function lav() {
     cd laravel.local
   }
 
-  lpp() {
+  function lpp() {
     cd luxurypropertiespattaya.com
   }
 
-  repron() {
+  function repron() {
     cd repro-gallery-master
   }
 
-  repro() {
+  function repro() {
     cd reproduction-gallery.com
   }
 
@@ -102,7 +102,7 @@ www() {
   fi
 }
 
-copy() {
+function copy() {
   if [[ $# > 0 && $1 == '-e' ]]; then
     pbcopy -Prefer txt
   else
@@ -110,12 +110,12 @@ copy() {
   fi
 }
 
-ip() {
+function ip() {
   my_ip="`dig +short myip.opendns.com @resolver1.opendns.com`"
   echo $my_ip | copy | echo $my_ip
 }
 
-flushdns() {
+function flushdns() {
   (
     sudo dscacheutil -flushcache &&
     sudo killall -HUP mDNSResponder &&
@@ -126,19 +126,23 @@ flushdns() {
 
 ## GIT
 ## -------------------------------------------------- ##
-git_add() {
+# function git_prompt_info() {
+#
+# }
+
+function git_add() {
     local file="${1:=.}"
     [[ $# > 1 ]] && shift;
     git add $file
 }
 
-git_commit() {
+function git_commit() {
     local message="${1:=Update source}"
     [[ $# > 1 ]] && shift;
     git commit -m $message
 }
 
-git_push() {
+function git_push() {
     if [[ $# == 0 ]]; then
         git push
     else
@@ -146,7 +150,7 @@ git_push() {
     fi
 }
 
-git_pull() {
+function git_pull() {
     if [[ $# == 0 ]]; then
         git pull
     else
@@ -154,11 +158,11 @@ git_pull() {
     fi
 }
 
-git_add_commit() {
+function git_add_commit() {
     files="."
     message="Initial commit"
 
-    _argv=()
+    function _argv=()
 
     for item in $*; do
         if [[ $1 == '-f' ]]; then
@@ -173,7 +177,7 @@ git_add_commit() {
     git add $files && git commit -m $message
 }
 
-gitraw() {
+function gitraw() {
   local url=''
   [[ $# > 0 ]] && url=$1; shift
   local file=''
@@ -212,29 +216,29 @@ gitraw() {
 
 ## BREW
 ## -------------------------------------------------- ##
-brewclean() {
+function brewclean() {
   brew update && brew upgrade && brew prune && brew cleanup && brew doctor
 }
 
 
 ## GEM
 ## -------------------------------------------------- ##
-gd.() {
+function gd.() {
   sudo gem search --details ^$1$
 }
-ig.() {
+function ig.() {
   sudo gem install $* --no-ri --no-rdoc --no-document --backtrace --verbose --quiet
 }
-ug.() {
+function ug.() {
   sudo gem uninstall $* --backtrace --verbose --quiet
 }
-gg.() {
+function gg.() {
   sudo gem search $1
 }
-ggl.() {
+function ggl.() {
   sudo gem list
 }
-upg.() {
+function upg.() {
   sudo gem update
 }
 
