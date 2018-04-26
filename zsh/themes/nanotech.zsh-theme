@@ -29,7 +29,7 @@ function get_right_prompt() {
     fi
 }
 
-PROMPT="$(parse_git_dirty)"
+PROMPT="$(_parse_git_dirty)"
 # PROMPT="λ %d $(git_prompt_info) [%D{%L:%M} %D{%p}]\n$ $(get_right_prompt)"
 
 # PROMPT="%B%F{black}▶%f%b%F{red}▶%B%F{red}▶%f%b \
