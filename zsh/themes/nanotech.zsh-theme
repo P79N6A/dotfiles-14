@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-PROMPT='%F{green}λ%f %F{yellow}%100c%f %F{blue}$(git_current_branch)%f $(git_prompt_status) $(parse_git_dirty) %F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
+PROMPT='%F{green}λ%f %F{yellow}%100c%f$(git_prompt_info)%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
 %F{white}$%f '
 # RPROMPT='$(git_current_branch) $(parse_git_dirty) %F{blue}[ %F{green}%D{%L:%M} %F{yellow}%D{%p} %F{blue}]%f'
 # PROMPT="%B%F{black}▶%f%b%F{red}▶%B%F{red}▶%f%b \
