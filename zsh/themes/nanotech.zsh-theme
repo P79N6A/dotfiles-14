@@ -13,7 +13,7 @@ PROMPT='%F{green}λ%f %F{yellow}%100c%f %F{blue}$(git_current_branch)%f $(git_pr
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{yellow}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %F{red}*%f "
-ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}●%f"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}%f"
 
 ZSH_THEME_GIT_PROMPT_ADDED="+"
 ZSH_THEME_GIT_PROMPT_MODIFIED="!"
