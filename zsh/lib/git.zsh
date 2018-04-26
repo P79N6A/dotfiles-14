@@ -5,12 +5,11 @@ function git_prompt_info() {
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
 
-    echo "${ZSH_THEME_GIT_PROMPT_BRANCH}${ZSH_THEME_GIT_PROMPT_DIRTY}${ZSH_THEME_GIT_PROMPT_STATUS}${ZSH_THEME_GIT_PROMPT_REMOTE_STATUS}"
+    # echo "${ZSH_THEME_GIT_PROMPT_BRANCH}${ZSH_THEME_GIT_PROMPT_DIRTY}${ZSH_THEME_GIT_PROMPT_STATUS}${ZSH_THEME_GIT_PROMPT_REMOTE_STATUS}"
     # echo "${ref#refs/heads/}"
     # echo $ZSH_THEME_GIT_PROMPT_AHEAD
     # echo $ZSH_THEME_GIT_PROMPT_BEHIND
-    # echo "$(git_commits_behind)"
-    # echo "$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)"
+    echo "$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)"
   fi
 }
 
