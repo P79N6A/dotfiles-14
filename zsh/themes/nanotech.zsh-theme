@@ -1,5 +1,26 @@
 #!/usr/bin/env zsh
 
+function parse_git_dirty() {
+  local STATUS=''
+  local -a FLAGS
+  FLAGS=('--porcelain')
+  if [[ "$(command git config --get oh-my-zsh.hide-dirty)" != "1" ]]; then
+    if [[ $POST_1_7_2_GIT -gt 0 ]]; then
+      FLAGS+='--ignore-submodules=dirty'
+    fi
+    if [[ "$DISABLE_UNTRACKED_FILES_DIRTY" == "true" ]]; then
+      FLAGS+='--untracked-files=no'
+    fi
+    STATUS=$(command git status ${FLAGS} 2> /dev/null | tail -n1)
+  fi
+  # if [[ -n $STATUS ]]; then
+  #   echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
+  # else
+  #   echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
+  # fi
+  echo $STATUS
+}
+
 function get_right_prompt() {
     if git rev-parse --git-dir > /dev/null 2>&1; then
         echo -n "$(git_prompt_short_sha)"
@@ -8,12 +29,8 @@ function get_right_prompt() {
     fi
 }
 
-PROMPT='$(git_prompt_info)'
+PROMPT="λ %d $(git_prompt_info) [%D{%L:%M} %D{%p}]\n$ $(get_right_prompt)"
 
-# PROMPT='%F{green}λ%f %F{yellow}%100c%f$(git_prompt_info)%F{blue}[%f %F{green}%D{%L:%M}%f %F{yellow}%D{%p}%f %F{blue}]%f
-# %F{white}$%f $(get_right_prompt)'
-
-# RPROMPT='$(git_current_branch) $(parse_git_dirty) %F{blue}[ %F{green}%D{%L:%M} %F{yellow}%D{%p} %F{blue}]%f'
 # PROMPT="%B%F{black}▶%f%b%F{red}▶%B%F{red}▶%f%b \
 # %B%F{$HASH_MOD}%D{%R.%S %a %b %d %Y}%b%f\
 # ${EXIT_STATUS}\
