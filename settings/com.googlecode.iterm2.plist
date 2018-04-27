@@ -886,7 +886,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>583 376 605 294 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>552 472 918 492 0 0 1920 1177 </string>
+	<string>552 583 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 55 1920 1122 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -927,13 +927,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.24705882352941178</real>
+				<real>0.41960784313725491</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.20392156862745098</real>
+				<real>0.41960784313725491</real>
 				<key>Red Component</key>
-				<real>0.18823529411764706</real>
+				<real>0.41960784313725491</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>

@@ -134,11 +134,11 @@ function _git_prompt_info() {
       ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}ﯸ%f"
     fi
 
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_prompt_status):$(_git_current_branch):$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX%F{black}$(_git_current_branch)%f %F{black}$(_parse_git_dirty)%f %F{cyan}$(_git_prompt_status)%f$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
-PROMPT='%2c $(_git_prompt_info) %D{%L:%M} %D{%p}
+PROMPT='%F{blue}%10c%f $(_git_prompt_info) %D{%L:%M} %D{%p}
 $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
