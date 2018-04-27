@@ -10,20 +10,31 @@ function _git_prompt_info() {
       ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}○%f"
     fi
 
-    $(_git_prompt_status)
+    local STATUS"$(_git_prompt_status)"
+
+    IS_UNTRACKED="$(echo $STATUS | grep -E /^UNTRACKED/i -io)"
+    echo "${IS_UNTRACKED}"
+    IS_ADDED="$(echo $STATUS | grep -E /^ADDED/i -io)"
+    echo "${IS_ADDED}"
+    IS_MODIFIED="$(echo $STATUS | grep -E /^MODIFIED/i -io)"
+    echo "${IS_MODIFIED}"
+    IS_RENAMED="$(echo $STATUS | grep -E /^RENAMED/i -io)"
+    echo "${IS_RENAMED}"
+    IS_DELETED="$(echo $STATUS | grep -E /^DELETED/i -io)"
+    echo "${IS_DELETED}"
+    IS_STASHED="$(echo $STATUS | grep -E /^STASHED/i -io)"
+    echo "${IS_STASHED}"
+    IS_UNMERGED="$(echo $STATUS | grep -E /^UNMERGED/i -io)"
+    echo "${IS_UNMERGED}"
+    IS_AHEAD="$(echo $STATUS | grep -E /^AHEAD/i -io)"
+    echo "${IS_AHEAD}"
+    IS_BEHIND="$(echo $STATUS | grep -E /^BEHIND/i -io)"
+    echo "${IS_BEHIND}"
+    IS_DIVERGED="$(echo $STATUS | grep -E /^DIVERGED/i -io)"
+    echo "${IS_DIVERGED}"
 
     echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 
-    echo "${IS_UNTRACKED}"
-    echo "${IS_ADDED}"
-    echo "${IS_MODIFIED}"
-    echo "${IS_RENAMED}"
-    echo "${IS_DELETED}"
-    echo "${IS_STASHED}"
-    echo "${IS_UNMERGED}"
-    echo "${IS_AHEAD}"
-    echo "${IS_BEHIND}"
-    echo "${IS_DIVERGED}"
   fi
 }
 
