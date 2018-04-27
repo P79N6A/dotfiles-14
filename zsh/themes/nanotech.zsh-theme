@@ -1,5 +1,20 @@
 #!/usr/bin/env zsh
 
+function _current_repository() {
+  if ! $_omz_git_git_cmd rev-parse --is-inside-work-tree &> /dev/null; then
+    return
+  fi
+  echo $($_omz_git_git_cmd remote -v | cut -d':' -f 2)
+}
+
+function _git_current_user_email() {
+  command git config user.email 2>/dev/null
+}
+
+function _git_current_user_name() {
+  command git config user.name 2>/dev/null
+}
+
 function _git_prompt_status() {
   local INDEX STATUS
   INDEX=$(command git status --porcelain -b 2> /dev/null)
@@ -91,7 +106,7 @@ function _git_prompt_info() {
       ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}ﯸ%f"
     fi
 
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_prompt_status):$(_git_current_branch):$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_current_repository):$(_git_prompt_status):$(_git_current_branch):$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
@@ -123,8 +138,8 @@ function get_right_prompt() {
     fi
 }
 
-PROMPT='%2c $(_git_prompt_info) %D{%L:%M} %D{%p}
-$ '
+PROMPT="%2c $ZSH_THEME_GIT_PROMPT_PREFIX$(_current_repository):$(_git_prompt_status):$(_git_current_branch):$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX %D{%L:%M} %D{%p}
+$ "
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=""
