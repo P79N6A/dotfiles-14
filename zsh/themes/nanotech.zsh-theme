@@ -7,7 +7,7 @@ function _git_prompt_info() {
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
 
     if [[ $(_git_commits_ahead) > 0 || $(_git_commits_behind) > 0 ]]; then
-      ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}●%f"
+      ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}○%f"
     fi
 
     local STATUS="$(_git_prompt_status)"
@@ -32,7 +32,7 @@ PROMPT='%F{green}λ%f %F{yellow}%10c%f $(_git_prompt_info) [%D{%L:%M} %D{%p}]
 $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
-ZSH_THEME_GIT_PROMPT_DIRTY=" %F{red}●%f"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %F{yellow}●%f"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}●%f"
 ZSH_THEME_GIT_PROMPT_UNTRACKED=".UNTRACKED." # default "?"
 ZSH_THEME_GIT_PROMPT_ADDED=".ADDED." # default "+"
