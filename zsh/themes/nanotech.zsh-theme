@@ -14,7 +14,7 @@ function _git_prompt_info() {
   fi
 }
 
-PROMPT='%F{green}﬘%f %F{yellow}%10c%f $(_git_prompt_info) %D{%L:%M} %D{%p}
+PROMPT='%F{green}λ%f %F{yellow}%10c%f $(_git_prompt_info) %D{%L:%M} %D{%p}
 $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
@@ -26,8 +26,8 @@ ZSH_THEME_GIT_PROMPT_STASHED="$"
 ZSH_THEME_GIT_PROMPT_UNMERGED="="
 ZSH_THEME_GIT_PROMPT_DIVERGED="⇕"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="?"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %F{black}*%f"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}%f"
+ZSH_THEME_GIT_PROMPT_DIRTY="*"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH="%F{black}"
 ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH="%f"
 ZSH_THEME_GIT_PROMPT_CURRENT_BRANCH=""
