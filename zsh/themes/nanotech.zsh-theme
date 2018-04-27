@@ -14,7 +14,7 @@ function _git_prompt_info() {
   fi
 }
 
-PROMPT='%F{blue}%10c%f $(_git_prompt_info) %D{%L:%M} %D{%p}
+PROMPT='%F{blue}﬘ %10c%f $(_git_prompt_info) %D{%L:%M} %D{%p}
 $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
