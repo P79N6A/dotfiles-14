@@ -67,7 +67,7 @@ alias atom-dev="atom --dev"
 ## -------------------------------------------------- ##
 alias checkout="git checkout"
 alias master='git checkout master'
-alias dev='git checkout develop'
+alias develop='git checkout develop'
 alias stash="git stash"
 alias status="git status"
 alias headreset="git reset HEAD"
@@ -76,6 +76,9 @@ alias commit="git_commit"
 alias push="git_push"
 alias pull="git_pull"
 alias add-commit="git_add_commit"
+alias feature="git flow feature"
+alias gitrm="git rm"
+alias rmcached="git rm --cached"
 
 
 ## NPM
