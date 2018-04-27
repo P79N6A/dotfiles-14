@@ -10,7 +10,7 @@ function _git_prompt_info() {
       ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}○%f"
     fi
 
-    _git_prompt_status
+    $(_git_prompt_status)
 
     echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 
