@@ -138,7 +138,7 @@ function get_right_prompt() {
     fi
 }
 
-PROMPT="%2c $ZSH_THEME_GIT_PROMPT_PREFIX$(_current_repository):$(_git_prompt_status):$(_git_current_branch):$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX %D{%L:%M} %D{%p}
+PROMPT="%2c $ZSH_THEME_GIT_PROMPT_PREFIX$(_git_prompt_status):$(_git_current_branch):$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX %D{%L:%M} %D{%p}
 $ "
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
