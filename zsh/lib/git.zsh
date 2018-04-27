@@ -58,64 +58,64 @@ function _git_prompt_status() {
   STATUS=""
   if $(echo "$INDEX" | command grep -E '^\?\? ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_UNTRACKED$STATUS"
-    IS_UNTRACKED=1
+    export IS_UNTRACKED=1
   fi
   if $(echo "$INDEX" | grep '^A  ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_ADDED$STATUS"
-    IS_ADDED=1
+    export IS_ADDED=1
   elif $(echo "$INDEX" | grep '^M  ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_ADDED$STATUS"
-    IS_ADDED=1
+    export IS_ADDED=1
   elif $(echo "$INDEX" | grep '^MM ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_ADDED$STATUS"
-    IS_ADDED=1
+    export IS_ADDED=1
   fi
   if $(echo "$INDEX" | grep '^ M ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_MODIFIED$STATUS"
-    IS_MODIFIED=1
+    export IS_MODIFIED=1
   elif $(echo "$INDEX" | grep '^AM ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_MODIFIED$STATUS"
-    IS_MODIFIED=1
+    export IS_MODIFIED=1
   elif $(echo "$INDEX" | grep '^MM ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_MODIFIED$STATUS"
-    IS_MODIFIED=1
+    export IS_MODIFIED=1
   elif $(echo "$INDEX" | grep '^ T ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_MODIFIED$STATUS"
-    IS_MODIFIED=1
+    export IS_MODIFIED=1
   fi
   if $(echo "$INDEX" | grep '^R  ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_RENAMED$STATUS"
-    IS_RENAMED=1
+    export IS_RENAMED=1
   fi
   if $(echo "$INDEX" | grep '^ D ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_DELETED$STATUS"
-    IS_DELETED=1
+    export IS_DELETED=1
   elif $(echo "$INDEX" | grep '^D  ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_DELETED$STATUS"
-    IS_DELETED=1
+    export IS_DELETED=1
   elif $(echo "$INDEX" | grep '^AD ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_DELETED$STATUS"
-    IS_DELETED=1
+    export IS_DELETED=1
   fi
   if $(command git rev-parse --verify refs/stash >/dev/null 2>&1); then
     STATUS="$ZSH_THEME_GIT_PROMPT_STASHED$STATUS"
-    IS_STASHED=1
+    export IS_STASHED=1
   fi
   if $(echo "$INDEX" | grep '^UU ' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_UNMERGED$STATUS"
-    IS_UNMERGED=1
+    export IS_UNMERGED=1
   fi
   if $(echo "$INDEX" | grep '^## [^ ]\+ .*ahead' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_AHEAD$STATUS"
-    IS_AHEAD=1
+    export IS_AHEAD=1
   fi
   if $(echo "$INDEX" | grep '^## [^ ]\+ .*behind' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_BEHIND$STATUS"
-    IS_BEHIND=1
+    export IS_BEHIND=1
   fi
   if $(echo "$INDEX" | grep '^## [^ ]\+ .*diverged' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_DIVERGED$STATUS"
-    IS_DIVERGED=1
+    export IS_DIVERGED=1
   fi
   echo $STATUS
 }
