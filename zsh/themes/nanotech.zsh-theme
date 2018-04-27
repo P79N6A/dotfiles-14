@@ -18,10 +18,10 @@ PROMPT='%F{green}λ%f %F{yellow}%10c%f $(_git_prompt_info) %D{%L:%M} %D{%p}
 $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
-ZSH_THEME_GIT_PROMPT_ADDED="%F{green}+%f"
-ZSH_THEME_GIT_PROMPT_MODIFIED="%F{yellow}+%f"
+ZSH_THEME_GIT_PROMPT_ADDED="%F{cyan}+%f"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%F{blue}+%f"
 ZSH_THEME_GIT_PROMPT_RENAMED="»"
-ZSH_THEME_GIT_PROMPT_DELETED="✘"
+ZSH_THEME_GIT_PROMPT_DELETED="%F{red}-%f"
 ZSH_THEME_GIT_PROMPT_STASHED="" # default "$"
 ZSH_THEME_GIT_PROMPT_UNMERGED="="
 ZSH_THEME_GIT_PROMPT_DIVERGED="⇕"
