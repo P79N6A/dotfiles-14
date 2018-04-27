@@ -121,7 +121,10 @@ function _git_current_branch() {
     [[ $ret == 128 ]] && return  # no git repo.
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
   fi
-  echo ${ref#refs/heads/}
+
+  ZSH_THEME_GIT_PROMPT_CURRENT_BRANCH=${ref#refs/heads/}
+
+  echo "${ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH}${ZSH_THEME_GIT_PROMPT_CURRENT_BRANCH}${ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH}"
 }
 
 function _git_prompt_info() {
@@ -134,7 +137,7 @@ function _git_prompt_info() {
       ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}ﯸ%f"
     fi
 
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX%F{black}$(_git_current_branch)%f%F{black}$(_parse_git_dirty)%f%F{cyan}$(_git_prompt_status)%f$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$(_parse_git_dirty)$(_git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
@@ -142,12 +145,15 @@ PROMPT='%F{blue}%10c%f $(_git_prompt_info) %D{%L:%M} %D{%p}
 $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
+ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH="%F{black}"
+ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH="%f"
+ZSH_THEME_GIT_PROMPT_CURRENT_BRANCH=""
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX=""
 ZSH_THEME_GIT_COMMITS_AHEAD_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY="*"
-ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}ﯸ%f"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %F{black}*%f"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}ﯸ%f"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=""
 ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=""
 ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE=""
