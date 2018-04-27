@@ -1,5 +1,11 @@
 #!/usr/bin/env zsh
 
+function _git_prompt_behind() {
+  if [[ -n "$(command git rev-list HEAD..origin/$(git_current_branch) 2> /dev/null)" ]]; then
+    echo "$ZSH_THEME_GIT_PROMPT_BEHIND"
+  fi
+}
+
 function _git_prompt_ahead() {
   if [[ -n "$(command git rev-list origin/$(git_current_branch)..HEAD 2> /dev/null)" ]]; then
     echo "$ZSH_THEME_GIT_PROMPT_AHEAD"
@@ -22,7 +28,7 @@ function _git_prompt_info() {
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_prompt_ahead)$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_prompt_behind)$(_git_prompt_ahead)$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
