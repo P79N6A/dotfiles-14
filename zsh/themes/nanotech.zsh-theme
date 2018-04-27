@@ -134,7 +134,7 @@ function _git_prompt_info() {
       ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}ﯸ%f"
     fi
 
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX%F{black}$(_git_current_branch)%f %F{black}$(_parse_git_dirty)%f %F{cyan}$(_git_prompt_status)%f$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX%F{black}$(_git_current_branch)%f%F{black}$(_parse_git_dirty)%f%F{cyan}$(_git_prompt_status)%f$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
@@ -146,8 +146,8 @@ ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX=""
 ZSH_THEME_GIT_COMMITS_AHEAD_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY=" *"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}ﯸ%f"
+ZSH_THEME_GIT_PROMPT_DIRTY="*"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}ﯸ%f"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=""
 ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=""
 ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE=""
