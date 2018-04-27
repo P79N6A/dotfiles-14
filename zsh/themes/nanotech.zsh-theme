@@ -33,7 +33,7 @@ $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
 ZSH_THEME_GIT_PROMPT_DIRTY=" %F{red}●%f"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}•%f"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}●%f"
 ZSH_THEME_GIT_PROMPT_UNTRACKED=".UNTRACKED." # default "?"
 ZSH_THEME_GIT_PROMPT_ADDED=".ADDED." # default "+"
 ZSH_THEME_GIT_PROMPT_MODIFIED=".MODIFIED." # default "+"
