@@ -10,7 +10,9 @@ function _git_prompt_info() {
       ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}○%f"
     fi
 
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$(_parse_git_dirty)$(_git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    _git_prompt_status
+
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 
     echo "${IS_UNTRACKED}"
     echo "${IS_ADDED}"
@@ -38,7 +40,6 @@ ZSH_THEME_GIT_PROMPT_DELETED="" # default "-"
 ZSH_THEME_GIT_PROMPT_STASHED="" # default "$"
 ZSH_THEME_GIT_PROMPT_UNMERGED="" # default "="
 ZSH_THEME_GIT_PROMPT_DIVERGED="" # default "⇕"
-ZSH_THEME_GIT_PROMPT_UNSTAGED="xxx" # default "?"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="" # default "?"
 ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH="%F{black}"
 ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH="%f"
