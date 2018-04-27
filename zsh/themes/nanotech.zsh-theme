@@ -7,7 +7,7 @@ function _git_prompt_info() {
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
 
     if [[ $(_git_commits_ahead) > 0 || $(_git_commits_behind) > 0 ]]; then
-      ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}ﯸ%f"
+      ZSH_THEME_GIT_PROMPT_CLEAN="%F{yellow}•%f"
     fi
 
     echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$(_parse_git_dirty)$(_git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
