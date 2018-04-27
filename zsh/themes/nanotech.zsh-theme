@@ -1,5 +1,33 @@
 #!/usr/bin/env zsh
 
+function _parse_git_dirty() {
+  local STATUS=''
+  local -a FLAGS
+  FLAGS=('--porcelain')
+  if [[ "$(command git config --get oh-my-zsh.hide-dirty)" != "1" ]]; then
+    if [[ $POST_1_7_2_GIT -gt 0 ]]; then
+      FLAGS+='--ignore-submodules=dirty'
+    fi
+    if [[ "$DISABLE_UNTRACKED_FILES_DIRTY" == "true" ]]; then
+      FLAGS+='--untracked-files=no'
+    fi
+    STATUS=$(command git status ${FLAGS} 2> /dev/null | tail -n1)
+  fi
+  if [[ -n $STATUS ]]; then
+    echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
+  else
+    echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
+  fi
+}
+
+function _get_right_prompt() {
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        echo -n "$(git_prompt_short_sha)"
+    else
+        echo -n ""
+    fi
+}
+
 function _current_repository() {
   if ! $_omz_git_git_cmd rev-parse --is-inside-work-tree &> /dev/null; then
     return
@@ -110,35 +138,7 @@ function _git_prompt_info() {
   fi
 }
 
-function _parse_git_dirty() {
-  local STATUS=''
-  local -a FLAGS
-  FLAGS=('--porcelain')
-  if [[ "$(command git config --get oh-my-zsh.hide-dirty)" != "1" ]]; then
-    if [[ $POST_1_7_2_GIT -gt 0 ]]; then
-      FLAGS+='--ignore-submodules=dirty'
-    fi
-    if [[ "$DISABLE_UNTRACKED_FILES_DIRTY" == "true" ]]; then
-      FLAGS+='--untracked-files=no'
-    fi
-    STATUS=$(command git status ${FLAGS} 2> /dev/null | tail -n1)
-  fi
-  if [[ -n $STATUS ]]; then
-    echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
-  else
-    echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
-  fi
-}
-
-function get_right_prompt() {
-    if git rev-parse --git-dir > /dev/null 2>&1; then
-        echo -n "$(git_prompt_short_sha)"
-    else
-        echo -n ""
-    fi
-}
-
-PROMPT='%2c $ZSH_THEME_GIT_PROMPT_PREFIX$(_git_prompt_status):$(_git_current_branch):$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX %D{%L:%M} %D{%p}
+PROMPT='%2c $(_git_prompt_info) %D{%L:%M} %D{%p}
 $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 
