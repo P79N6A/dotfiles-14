@@ -1,14 +1,20 @@
 #!/usr/bin/env zsh
 
-function _git_prompt_behind() {
-  if [[ -n "$(command git rev-list HEAD..origin/$(git_current_branch) 2> /dev/null)" ]]; then
-    echo "$ZSH_THEME_GIT_PROMPT_BEHIND"
+function _git_commits_ahead() {
+  if command git rev-parse --git-dir &>/dev/null; then
+    local commits="$(git rev-list --count @{upstream}..HEAD 2>/dev/null)"
+    if [[ -n "$commits" && "$commits" != 0 ]]; then
+      echo "$ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX$commits$ZSH_THEME_GIT_COMMITS_AHEAD_SUFFIX"
+    fi
   fi
 }
 
-function _git_prompt_ahead() {
-  if [[ -n "$(command git rev-list origin/$(git_current_branch)..HEAD 2> /dev/null)" ]]; then
-    echo "$ZSH_THEME_GIT_PROMPT_AHEAD"
+function _git_commits_behind() {
+  if command git rev-parse --git-dir &>/dev/null; then
+    local commits="$(git rev-list --count HEAD..@{upstream} 2>/dev/null)"
+    if [[ -n "$commits" && "$commits" != 0 ]]; then
+      echo "$ZSH_THEME_GIT_COMMITS_BEHIND_PREFIX$commits$ZSH_THEME_GIT_COMMITS_BEHIND_SUFFIX"
+    fi
   fi
 }
 
@@ -28,7 +34,7 @@ function _git_prompt_info() {
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_prompt_behind)$(_git_prompt_ahead)$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_commits_ahead)$(_git_commits_behind)$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
