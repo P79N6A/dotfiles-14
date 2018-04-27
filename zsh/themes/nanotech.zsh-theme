@@ -124,6 +124,12 @@ function _git_current_branch() {
   echo ${ref#refs/heads/}
 }
 
+function _work_in_progress() {
+  if $(git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
+    echo "WIP!!"
+  fi
+}
+
 function _git_prompt_info() {
   local ref
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
@@ -134,7 +140,7 @@ function _git_prompt_info() {
       ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}ﯸ%f"
     fi
 
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_current_repository):$(_git_prompt_status):$(_git_current_branch):$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_work_in_progress):$(_git_prompt_status):$(_git_current_branch):$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
