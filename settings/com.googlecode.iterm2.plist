@@ -1233,7 +1233,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>552 675 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 55 1920 1122 0 0 1920 1177 </string>
+	<string>0 73 1920 1104 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 132 585 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -2134,7 +2134,7 @@ Clear Buffer</string>
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.24705147525380708</real>
+			<real>0.17750634517766495</real>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
