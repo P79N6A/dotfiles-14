@@ -4,7 +4,11 @@ source $HOME/.dotfiles/lib/git.sh
 
 # Outputs current branch info in prompt format
 function _git_prompt_info() {
-  local ref
+  local ref GIT_CURRENT_BRANCH GIT_CURRENT_STATUS
+
+  GIT_CURRENT_BRANCH="${ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH}$(_git_current_branch)${ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH}"
+  GIT_CURRENT_STATUS=""
+
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
@@ -22,50 +26,22 @@ function _git_prompt_info() {
     IS_BEHIND="$(echo ${STATUS} | grep -E 'BEHIND' -io)"
     IS_DIVERGED="$(echo ${STATUS} | grep -E 'DIVERGED' -io)"
     IS_UNPUSHED=""
-    if [[ -n $IS_AHEAD ]]; then
-      IS_UNPUSHED="UNPUSHED"
-    fi
+    [[ $(_git_commits_ahead) > 0 ]] && IS_UNPUSHED="UNPUSHED"
     IS_UNPULLED=""
-    if [[ -n $IS_BEHIND ]]; then
-      IS_UNPULLED="UNPULLED"
-    fi
+    [[ $(_git_commits_behind) > 0 ]] && IS_UNPULLED="UNPULLED"
 
     local STATUS=$(_parse_git_dirty)
     [[ -n $IS_UNTRACKED ]] && STATUS='DIRTY'
-
-    if [[ -z $STATUS || $STATUS == '' ]]; then
-      IS_DIRTY=""
-      IS_CLEAN=""
-    elif [[ $STATUS == 'DIRTY' ]]; then
-      IS_DIRTY="DIRTY"
-      IS_CLEAN=""
-    elif [[ $STATUS == 'CLEAN' ]]; then
-      IS_DIRTY=""
-      IS_CLEAN="CLEAN"
-    else
-      IS_DIRTY=""
-      IS_CLEAN=""
-    fi
-
-    # [[ -n IS_MODIFIED || -n IS_RENAMED || -n IS_DELETED ]]; IS_DIRTY='DIRTY'
-
-
+    [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED ]] && STATUS='DIRTY'
     # if [[ $(_git_commits_ahead) > 0 || $(_git_commits_behind) > 0 ]]; then
     #   ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}○%f"
     # fi
 
-    GIT_CURRENT_BRANCH="${ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH}$(_git_current_branch)${ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH}"
-    GIT_CURRENT_STATUS=""
-
     case $STATUS in
       "DIRTY" )
         GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_DIRTY}"
-        ;;
-      "AHEAD" )
-        GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_AHEAD}"
-        ;;
-      "BEHIND" )
-        GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_BEHIND}"
+        [[ -n $IS_UNPUSHED ]] && GIT_CURRENT_STATUS="${GIT_CURRENT_STATUS}${ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED}"
+        [[ -n $IS_UNPULLED ]] && GIT_CURRENT_STATUS="${GIT_CURRENT_STATUS}${ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED}"
         ;;
       "CLEAN" )
         GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_CLEAN}"
@@ -74,7 +50,7 @@ function _git_prompt_info() {
         ;;
     esac
 
-    echo "{${IS_CLEAN}:${IS_DIRTY}:${IS_UNTRACKED}:${IS_ADDED}:${IS_MODIFIED}:${IS_RENAMED}:${IS_DELETED}:${IS_STASHED}:${IS_UNMERGED}:${IS_AHEAD}:${IS_BEHIND}:${IS_DIVERGED}}"
+    echo "{${STATUS}:${IS_UNTRACKED}:${IS_ADDED}:${IS_MODIFIED}:${IS_RENAMED}:${IS_DELETED}:${IS_STASHED}:${IS_UNMERGED}:${IS_AHEAD}:${IS_BEHIND}:${IS_DIVERGED}}"
 
     # echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${GIT_CURRENT_BRANCH}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
     # echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$ZSH_THEME_GIT_PROMPT_CLEAN$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
@@ -105,7 +81,11 @@ IS_BEHIND=''
 IS_DIVERGED=''
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}●%f"
+ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}○%f"
+ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED="%F{yellow}○%f"
 ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}●%f"
+ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED="%F{yellow}●%f"
+ZSH_THEME_GIT_PROMPT_CLEAN_UNPULLED="%F{yellow}●%f"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="" # default "?"
 ZSH_THEME_GIT_PROMPT_ADDED="" # default "+"
 ZSH_THEME_GIT_PROMPT_MODIFIED="" # default "+"
