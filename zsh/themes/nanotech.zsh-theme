@@ -1,13 +1,18 @@
 #!/usr/bin/env zsh
 
+source $HOME/.dotfiles/lib/git.sh
+
+# Outputs current branch info in prompt format
 function _git_prompt_info() {
   local ref
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
 
-    local STATUS="$(_git_prompt_status)"
+    local STATUS=$(_git_prompt_status)
 
+    IS_DIRTY="$(echo ${STATUS} | grep -E 'DIRTY' -io)"
+    IS_CLEAN="$(echo ${STATUS} | grep -E 'CLEAN' -io)"
     IS_UNTRACKED="$(echo ${STATUS} | grep -E 'UNTRACKED' -io)"
     IS_ADDED="$(echo ${STATUS} | grep -E 'ADDED' -io)"
     IS_MODIFIED="$(echo ${STATUS} | grep -E 'MODIFIED' -io)"
@@ -19,23 +24,27 @@ function _git_prompt_info() {
     IS_BEHIND="$(echo ${STATUS} | grep -E 'BEHIND' -io)"
     IS_DIVERGED="$(echo ${STATUS} | grep -E 'DIVERGED' -io)"
 
-    IS_CLEAN=''
-    IS_DIRTY=$(_parse_git_dirty)
-    IS_DIRTY="$(echo ${IS_DIRTY} | grep -E 'DIRTY' -io)"
-    if [[ -z $IS_DIRTY ]]; then
-      IS_CLEAN='CLEAN'
-    fi
+    # STATUS=$(_parse_git_dirty)
+
+
+    # IS_CLEAN=''
+    # IS_DIRTY=$(_parse_git_dirty)
+    # IS_DIRTY="$(echo ${IS_DIRTY} | grep -E 'DIRTY' -io)"
+    # if [[ -z $IS_DIRTY ]]; then
+    #   IS_CLEAN='CLEAN'
+    # fi
     # [[ -n IS_MODIFIED || -n IS_RENAMED || -n IS_DELETED ]]; IS_DIRTY='DIRTY'
 
-    if [[ $(_git_commits_ahead) > 0 || $(_git_commits_behind) > 0 ]]; then
-      ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}○%f"
-    fi
 
-    GIT_BRANCH=$(_git_current_branch)
+    # if [[ $(_git_commits_ahead) > 0 || $(_git_commits_behind) > 0 ]]; then
+    #   ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}○%f"
+    # fi
 
-    echo "${IS_DIRTY}:${IS_UNTRACKED}:${IS_ADDED}:${IS_MODIFIED}:${IS_RENAMED}:${IS_DELETED}:${IS_STASHED}:${IS_UNMERGED}:${IS_AHEAD}:${IS_BEHIND}:${IS_DIVERGED}"
+    GIT_CURRENT_BRANCH="$(_git_current_branch)"
 
-    echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${GIT_BRANCH}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
+    echo "${IS_CLEAN}:${IS_DIRTY}:${IS_UNTRACKED}:${IS_ADDED}:${IS_MODIFIED}:${IS_RENAMED}:${IS_DELETED}:${IS_STASHED}:${IS_UNMERGED}:${IS_AHEAD}:${IS_BEHIND}:${IS_DIVERGED}"
+
+    # echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${GIT_CURRENT_BRANCH}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
     # echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$ZSH_THEME_GIT_PROMPT_CLEAN$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 
   fi
