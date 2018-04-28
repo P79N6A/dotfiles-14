@@ -23,6 +23,10 @@ function _git_prompt_info() {
     IS_BEHIND="$(echo $STATUS | grep -E 'BEHIND' -io)"
     IS_DIVERGED="$(echo $STATUS | grep -E 'DIVERGED' -io)"
 
+    if [[ -n IS_UNTRACKED || -n IS_ADDED || -n IS_MODIFIED || -n IS_RENAMED || -n IS_DELETED ]]; then
+      IS_DIRTY='.DIRTY.'
+    fi
+
     echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 
   fi
@@ -31,6 +35,18 @@ function _git_prompt_info() {
 PROMPT='%F{green}λ%f %F{yellow}%10c%f $(_git_prompt_info) [%D{%L:%M} %D{%p}]
 $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
+
+IS_DIRTY=''
+IS_UNTRACKED=''
+IS_ADDED=''
+IS_MODIFIED=''
+IS_RENAMED=''
+IS_DELETED=''
+IS_STASHED=''
+IS_UNMERGED=''
+IS_AHEAD=''
+IS_BEHIND=''
+IS_DIVERGED=''
 
 ZSH_THEME_GIT_PROMPT_DIRTY=" %F{yellow}●%f"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}●%f"

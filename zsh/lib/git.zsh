@@ -41,17 +41,6 @@ function _git_current_user_name() {
   command git config user.name 2>/dev/null
 }
 
-IS_UNTRACKED=0
-IS_ADDED=0
-IS_MODIFIED=0
-IS_RENAMED=0
-IS_DELETED=0
-IS_STASHED=0
-IS_UNMERGED=0
-IS_AHEAD=0
-IS_BEHIND=0
-IS_DIVERGED=0
-
 function _git_prompt_status() {
   local INDEX STATUS
   INDEX=$(command git status --porcelain -b 2> /dev/null)
