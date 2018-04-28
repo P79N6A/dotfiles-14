@@ -61,7 +61,12 @@ function _git_prompt_info() {
     # echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${GIT_CURRENT_BRANCH}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
     # echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$ZSH_THEME_GIT_PROMPT_CLEAN$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 
-    local PROMPT="%F{green}λ%f %F{yellow}%10c%f ${GIT_CURRENT_BRANCH}${GIT_CURRENT_STATUS} [%D{%L:%M} %D{%p}]
+    local GIT_INFO="${GIT_CURRENT_BRANCH}"
+    if [[ -n $GIT_CURRENT_STATUS ]]; then
+      GIT_INFO="${GIT_CURRENT_STATUS} ${GIT_INFO}"
+    fi
+
+    local PROMPT="%F{green}λ%f %F{yellow}%10c%f ${GIT_INFO} [%D{%L:%M} %D{%p}]
 $ "
 
     echo $PROMPT
