@@ -4,16 +4,19 @@ source $HOME/.dotfiles/lib/git.sh
 
 # Outputs current branch info in prompt format
 function _git_prompt_info() {
-  local ref GIT_CURRENT_BRANCH GIT_CURRENT_STATUS
-
-  GIT_CURRENT_BRANCH="${ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH}$(_git_current_branch)${ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH}"
-  GIT_CURRENT_STATUS=""
+  local ref
 
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
 
+    local GIT_CURRENT_BRANCH GIT_CURRENT_STATUS
+
+    GIT_CURRENT_BRANCH="${ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH}$(_git_current_branch)${ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH}"
+    GIT_CURRENT_STATUS=""
+
     local STATUS=$(_git_prompt_status)
+    local IS_DIRTY IS_CLEAN IS_UNTRACKED IS_ADDED IS_MODIFIED IS_RENAMED IS_DELETED IS_STASHED IS_UNMERGED IS_AHEAD IS_BEHIND IS_DIVERGED
 
     IS_UNTRACKED="$(echo ${STATUS} | grep -E 'UNTRACKED' -io)"
     IS_ADDED="$(echo ${STATUS} | grep -E 'ADDED' -io)"
@@ -65,10 +68,7 @@ function _git_prompt_info() {
         ;;
     esac
 
-    echo "{${STATUS}:${IS_UNTRACKED}:${IS_ADDED}:${IS_MODIFIED}:${IS_RENAMED}:${IS_DELETED}:${IS_STASHED}:${IS_UNMERGED}:${IS_AHEAD}:${IS_BEHIND}:${IS_DIVERGED}}"
-
-    # echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${GIT_CURRENT_BRANCH}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
-    # echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$ZSH_THEME_GIT_PROMPT_CLEAN$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    # echo "{${STATUS}:${IS_UNTRACKED}:${IS_ADDED}:${IS_MODIFIED}:${IS_RENAMED}:${IS_DELETED}:${IS_STASHED}:${IS_UNMERGED}:${IS_AHEAD}:${IS_BEHIND}:${IS_DIVERGED}}"
 
     local GIT_INFO="${GIT_CURRENT_BRANCH}"
     if [[ -n $GIT_CURRENT_STATUS ]]; then
@@ -86,19 +86,6 @@ $ "
 PROMPT='$(_git_prompt_info)'
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
-
-IS_DIRTY=''
-IS_CLEAN=''
-IS_UNTRACKED=''
-IS_ADDED=''
-IS_MODIFIED=''
-IS_RENAMED=''
-IS_DELETED=''
-IS_STASHED=''
-IS_UNMERGED=''
-IS_AHEAD=''
-IS_BEHIND=''
-IS_DIVERGED=''
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}●%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}●%f"
