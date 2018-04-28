@@ -61,10 +61,10 @@ function _git_prompt_info() {
       "DIRTY" )
         GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_DIRTY}"
         ;;
-      "UNPUSHED" )
+      "AHEAD" )
         GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_AHEAD}"
         ;;
-      "UNPULLED" )
+      "BEHIND" )
         GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_BEHIND}"
         ;;
       "CLEAN" )
