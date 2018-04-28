@@ -22,7 +22,7 @@ function _git_prompt_info() {
     IS_BEHIND="$(echo $STATUS | grep -E 'BEHIND' -io)"
     IS_DIVERGED="$(echo $STATUS | grep -E 'DIVERGED' -io)"
 
-    if [[ -n IS_UNTRACKED || -n IS_ADDED || -n IS_MODIFIED || -n IS_RENAMED || -n IS_DELETED ]]; then
+    if [[ -n IS_ADDED || -n IS_MODIFIED || -n IS_RENAMED || -n IS_DELETED ]]; then
       IS_DIRTY='.DIRTY.'
       ZSH_THEME_GIT_PROMPT_CLEAN=" %F{red}●%f"
     else
