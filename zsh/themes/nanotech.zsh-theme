@@ -21,11 +21,17 @@ function _git_prompt_info() {
     IS_AHEAD="$(echo ${STATUS} | grep -E 'AHEAD' -io)"
     IS_BEHIND="$(echo ${STATUS} | grep -E 'BEHIND' -io)"
     IS_DIVERGED="$(echo ${STATUS} | grep -E 'DIVERGED' -io)"
+    IS_UNPUSHED=""
+    if [[ -n $IS_AHEAD ]]; then
+      IS_UNPUSHED="UNPUSHED"
+    fi
+    IS_UNPULLED=""
+    if [[ -n $IS_BEHIND ]]; then
+      IS_UNPULLED="UNPULLED"
+    fi
 
     local STATUS=$(_parse_git_dirty)
-
     [[ -n $IS_UNTRACKED ]] && STATUS='DIRTY'
-    [[ -n $IS_AHEAD ]] && STATUS='UNPUSHED'
 
     if [[ -z $STATUS || $STATUS == '' ]]; then
       IS_DIRTY=""
