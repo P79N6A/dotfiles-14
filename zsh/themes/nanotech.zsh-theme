@@ -28,7 +28,7 @@ function _git_prompt_info() {
       ZSH_THEME_GIT_PROMPT_DIRTY=" %F{red}●%f"
     else
       IS_DIRTY=''
-      ZSH_THEME_GIT_PROMPT_DIRTY=" %F{yellow}●%f"
+      ZSH_THEME_GIT_PROMPT_DIRTY=" %F{yellow}○%f"
     fi
 
     echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
