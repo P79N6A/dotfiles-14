@@ -34,6 +34,8 @@ function _git_prompt_info() {
 
     GIT_BRANCH=$(_git_current_branch)
 
+    echo "${IS_UNTRACKED} ${IS_ADDED} ${IS_MODIFIED} ${IS_RENAMED} ${IS_DELETED} ${IS_STASHED} ${IS_UNMERGED} ${IS_AHEAD} ${IS_BEHIND} ${IS_DIVERGED}"
+
     echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${GIT_BRANCH}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
     # echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$ZSH_THEME_GIT_PROMPT_CLEAN$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 
