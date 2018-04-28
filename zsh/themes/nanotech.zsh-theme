@@ -11,8 +11,6 @@ function _git_prompt_info() {
 
     local STATUS=$(_git_prompt_status)
 
-    IS_DIRTY="$(echo ${STATUS} | grep -E 'DIRTY' -io)"
-    IS_CLEAN="$(echo ${STATUS} | grep -E 'CLEAN' -io)"
     IS_UNTRACKED="$(echo ${STATUS} | grep -E 'UNTRACKED' -io)"
     IS_ADDED="$(echo ${STATUS} | grep -E 'ADDED' -io)"
     IS_MODIFIED="$(echo ${STATUS} | grep -E 'MODIFIED' -io)"
@@ -24,8 +22,21 @@ function _git_prompt_info() {
     IS_BEHIND="$(echo ${STATUS} | grep -E 'BEHIND' -io)"
     IS_DIVERGED="$(echo ${STATUS} | grep -E 'DIVERGED' -io)"
 
-    # STATUS=$(_parse_git_dirty)
+    local STATUS=$(_parse_git_dirty)
 
+    if [[ -z $STATUS || $STATUS == '' ]]; then
+      IS_DIRTY=""
+      IS_CLEAN=""
+    elif [[ $STATUS == 'DIRTY' ]]; then
+      IS_DIRTY="DIRTY"
+      IS_CLEAN=""
+    elif [[ $STATUS == 'CLEAN' ]]; then
+      IS_DIRTY=""
+      IS_CLEAN="CLEAN"
+    else
+      IS_DIRTY=""
+      IS_CLEAN=""
+    fi
 
     # IS_CLEAN=''
     # IS_DIRTY=$(_parse_git_dirty)
