@@ -19,8 +19,12 @@ function _git_prompt_info() {
     IS_BEHIND="$(echo ${STATUS} | grep -E 'BEHIND' -io)"
     IS_DIVERGED="$(echo ${STATUS} | grep -E 'DIVERGED' -io)"
 
+    IS_CLEAN=''
     IS_DIRTY=$(_parse_git_dirty)
     IS_DIRTY="$(echo ${IS_DIRTY} | grep -E 'DIRTY' -io)"
+    if [[ -z $IS_DIRTY ]]; then
+      IS_CLEAN='CLEAN'
+    fi
     # [[ -n IS_MODIFIED || -n IS_RENAMED || -n IS_DELETED ]]; IS_DIRTY='DIRTY'
 
     if [[ $(_git_commits_ahead) > 0 || $(_git_commits_behind) > 0 ]]; then
