@@ -63,7 +63,7 @@ function _git_prompt_info() {
 
     local GIT_INFO="${GIT_CURRENT_BRANCH}"
     if [[ -n $GIT_CURRENT_STATUS ]]; then
-      GIT_INFO="${GIT_CURRENT_STATUS} ${GIT_INFO}"
+      GIT_INFO="${GIT_INFO} ${GIT_CURRENT_STATUS}"
     fi
 
     local PROMPT="%F{green}λ%f %F{yellow}%10c%f ${GIT_INFO} [%D{%L:%M} %D{%p}]
