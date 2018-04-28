@@ -4,30 +4,30 @@ source $HOME/.dotfiles/lib/git.sh
 
 # Outputs current branch info in prompt format
 function _git_prompt_info() {
-  local ref
+  local ref _PROMPT
 
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
 
-    local GIT_CURRENT_BRANCH GIT_CURRENT_STATUS
+    local GIT_CURRENT_BRANCH GIT_CURRENT_STATUS GIT_INFO
 
-    GIT_CURRENT_BRANCH="${ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH}$(_git_current_branch)${ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH}"
+    GIT_CURRENT_BRANCH="$ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH$(_git_current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH"
     GIT_CURRENT_STATUS=""
 
     local STATUS=$(_git_prompt_status)
     local IS_DIRTY IS_CLEAN IS_UNTRACKED IS_ADDED IS_MODIFIED IS_RENAMED IS_DELETED IS_STASHED IS_UNMERGED IS_AHEAD IS_BEHIND IS_DIVERGED
 
-    IS_UNTRACKED="$(echo ${STATUS} | grep -E 'UNTRACKED' -io)"
-    IS_ADDED="$(echo ${STATUS} | grep -E 'ADDED' -io)"
-    IS_MODIFIED="$(echo ${STATUS} | grep -E 'MODIFIED' -io)"
-    IS_RENAMED="$(echo ${STATUS} | grep -E 'RENAMED' -io)"
-    IS_DELETED="$(echo ${STATUS} | grep -E 'DELETED' -io)"
-    IS_STASHED="$(echo ${STATUS} | grep -E 'STASHED' -io)"
-    IS_UNMERGED="$(echo ${STATUS} | grep -E 'UNMERGED' -io)"
-    IS_AHEAD="$(echo ${STATUS} | grep -E 'AHEAD' -io)"
-    IS_BEHIND="$(echo ${STATUS} | grep -E 'BEHIND' -io)"
-    IS_DIVERGED="$(echo ${STATUS} | grep -E 'DIVERGED' -io)"
+    IS_UNTRACKED="$(echo $STATUS | grep -E 'UNTRACKED' -io)"
+    IS_ADDED="$(echo $STATUS | grep -E 'ADDED' -io)"
+    IS_MODIFIED="$(echo $STATUS | grep -E 'MODIFIED' -io)"
+    IS_RENAMED="$(echo $STATUS | grep -E 'RENAMED' -io)"
+    IS_DELETED="$(echo $STATUS | grep -E 'DELETED' -io)"
+    IS_STASHED="$(echo $STATUS | grep -E 'STASHED' -io)"
+    IS_UNMERGED="$(echo $STATUS | grep -E 'UNMERGED' -io)"
+    IS_AHEAD="$(echo $STATUS | grep -E 'AHEAD' -io)"
+    IS_BEHIND="$(echo $STATUS | grep -E 'BEHIND' -io)"
+    IS_DIVERGED="$(echo $STATUS | grep -E 'DIVERGED' -io)"
     IS_UNPUSHED=""
     [[ $(_git_commits_ahead) > 0 ]] && IS_UNPUSHED="UNPUSHED"
     IS_UNPULLED=""
@@ -43,11 +43,11 @@ function _git_prompt_info() {
     case $STATUS in
       "DIRTY" )
         if [[ -n $IS_UNPUSHED ]]; then
-          GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED}"
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
-          GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED}"
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
         else
-          GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_DIRTY}"
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY"
         fi
 
         # [[ -n $IS_ADDED ]] && GIT_CURRENT_STATUS="${GIT_CURRENT_STATUS}${ZSH_THEME_GIT_PROMPT_ADDED}"
@@ -57,11 +57,11 @@ function _git_prompt_info() {
         ;;
       "CLEAN" )
         if [[ -n $IS_UNPUSHED ]]; then
-          GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED}"
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
-          GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_CLEAN_UNPULLED}"
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPULLED"
         else
-          GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_CLEAN}"
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN"
         fi
         ;;
       "" )
@@ -70,20 +70,16 @@ function _git_prompt_info() {
 
     # echo "{${STATUS}:${IS_UNTRACKED}:${IS_ADDED}:${IS_MODIFIED}:${IS_RENAMED}:${IS_DELETED}:${IS_STASHED}:${IS_UNMERGED}:${IS_AHEAD}:${IS_BEHIND}:${IS_DIVERGED}}"
 
-    local GIT_INFO="${GIT_CURRENT_BRANCH}"
     if [[ -n $GIT_CURRENT_STATUS ]]; then
-      GIT_INFO="${GIT_INFO} ${GIT_CURRENT_STATUS}"
+      GIT_CURRENT_STATUS=" $GIT_CURRENT_STATUS"
     fi
-
-    local PROMPT="%F{green}λ%f %F{yellow}%10c%f ${GIT_INFO} [%D{%L:%M} %D{%p}]
-$ "
-
-    echo $PROMPT
-
   fi
+
+  echo $GIT_CURRENT_BRANCH$GIT_CURRENT_STATUS
 }
 
-PROMPT='$(_git_prompt_info)'
+PROMPT='%F{green}λ%f %F{yellow}%10c%f $(_git_prompt_info) [%D{%L:%M} %D{%p}]
+$ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
 
