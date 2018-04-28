@@ -24,10 +24,8 @@ function _git_prompt_info() {
 
     if [[ -n IS_ADDED || -n IS_MODIFIED || -n IS_RENAMED || -n IS_DELETED ]]; then
       IS_DIRTY='.DIRTY.'
-      ZSH_THEME_GIT_PROMPT_CLEAN=" %F{red}●%f"
     else
       IS_DIRTY=''
-      ZSH_THEME_GIT_PROMPT_CLEAN=" %F{yellow}○%f"
     fi
 
     if [[ $(_git_commits_ahead) > 0 || $(_git_commits_behind) > 0 ]]; then
