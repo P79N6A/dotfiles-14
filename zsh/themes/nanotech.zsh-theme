@@ -25,6 +25,10 @@ function _git_prompt_info() {
 
     if [[ -n IS_UNTRACKED || -n IS_ADDED || -n IS_MODIFIED || -n IS_RENAMED || -n IS_DELETED ]]; then
       IS_DIRTY='.DIRTY.'
+      ZSH_THEME_GIT_PROMPT_DIRTY=" %F{red}●%f"
+    else
+      IS_DIRTY=''
+      ZSH_THEME_GIT_PROMPT_DIRTY=" %F{yellow}●%f"
     fi
 
     echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(_git_current_branch)$(_parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
@@ -48,7 +52,7 @@ IS_AHEAD=''
 IS_BEHIND=''
 IS_DIVERGED=''
 
-ZSH_THEME_GIT_PROMPT_DIRTY=" %F{yellow}●%f"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %F{red}●%f"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}●%f"
 ZSH_THEME_GIT_PROMPT_UNTRACKED=".UNTRACKED." # default "?"
 ZSH_THEME_GIT_PROMPT_ADDED=".ADDED." # default "+"
