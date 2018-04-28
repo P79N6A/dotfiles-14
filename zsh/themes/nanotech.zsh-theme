@@ -57,21 +57,16 @@ function _git_prompt_info() {
     GIT_CURRENT_BRANCH="${ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH}$(_git_current_branch)${ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH}"
     GIT_CURRENT_STATUS=""
 
-    if [[ -n $IS_DIRTY ]]; then
-      GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_DIRTY}"
-    fi
-
-    if [[ -n $IS_UNPUSHED ]]; then
-      GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE}"
-    fi
-
-    if [[ -n $IS_UNPULLED ]]; then
-      GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE}"
-    fi
-
-    if [[ -n $IS_CLEAN ]]; then
-      GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_CLEAN}"
-    fi
+    case $STATUS in
+      "DIRTY" )
+        GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_DIRTY}"
+        ;;
+      "CLEAN" )
+        GIT_CURRENT_STATUS="${ZSH_THEME_GIT_PROMPT_CLEAN}"
+        ;;
+      "" )
+        ;;
+    esac
 
     echo "{${IS_CLEAN}:${IS_DIRTY}:${IS_UNTRACKED}:${IS_ADDED}:${IS_MODIFIED}:${IS_RENAMED}:${IS_DELETED}:${IS_STASHED}:${IS_UNMERGED}:${IS_AHEAD}:${IS_BEHIND}:${IS_DIVERGED}}"
 
