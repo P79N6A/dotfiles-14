@@ -25,6 +25,7 @@ function _git_prompt_info() {
     local STATUS=$(_parse_git_dirty)
 
     [[ -n $IS_UNTRACKED ]] && STATUS='DIRTY'
+    [[ -n $IS_AHEAD ]] && STATUS='UNPUSHED'
 
     if [[ -z $STATUS || $STATUS == '' ]]; then
       IS_DIRTY=""
