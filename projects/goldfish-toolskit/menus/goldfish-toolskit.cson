@@ -1,0 +1,29 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Remote Sync'
+      'submenu': [
+        { 'label': 'Upload File', 'command': 'remote-sync:upload-file' }
+        { 'label': 'Download File', 'command': 'remote-sync:download-file' }
+        { 'label': 'Delete File', 'command': 'remote-sync:delete-file' }
+        { 'label': 'Configure', 'command': 'remote-sync:configure' }
+      ]
+    }
+    { 'label': 'Upload File', 'command': 'remote-ftp:upload-active' }
+    { 'label': 'Download File', 'command': 'remote-ftp:download-active' }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'goldfish-toolskit'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'goldfish-toolskit:toggle'
+        }
+      ]
+    ]
+  }
+]
