@@ -196,6 +196,60 @@ function gitraw() {
   wget https://raw.githubusercontent.com/$url/$file -O $file $*
 }
 
+function newbranch () {
+  local name exists count matches current_branch source_branch
+  
+  if [[ $# == 0 ]]; then
+    echo "
+usage: branch_name [source_branch=master]
+"; return 1
+  fi
+  
+  name=$1; shift
+  
+  current_branch=`git status -bs | perl -pe s/\#\#\ //gi | egrep '^[^\.]+' -o`
+  if [[ -z $1 ]]; then
+    source_branch=$current_branch
+  else
+    source_branch=$1
+  fi
+  
+  count=`git branch -l | grep -w "$name" -c`
+  exists=`git branch -l | grep -w "$name" -i`
+  matches=0
+  if [[ $count > 0 ]]; then
+    echo $exists
+    echo
+    for (( i = 1; i <= $count; i++ )); do
+      existss=`git branch -l | grep -w "$name" -i | head -n $i | tail -n 1 | perl -pe s/\ //gi`
+      if [[ $name == $existss ]]; then
+        matches=1
+        break
+      fi
+    done
+  fi
+  
+  echo "
+creating new branch...$name
+"
+  
+  if [[ $current_branch != $source_branch ]]; then
+    git checkout $source_branch
+    git fetch origin -a
+    git pull origin $source_branch
+  fi
+  
+  if [[ $matches == 1 ]]; then
+    git branch -D $name
+    git add .
+    git commit -m "Delete branch $name and replace new branch from current"
+  fi
+  
+  git branch $name
+  
+  git checkout $name
+}
+
 
 ## LARAVEL
 ## -------------------------------------------------- ##

@@ -50,8 +50,11 @@ alias npmt="npm test"
 # Run npm scripts
 alias npmR="npm run"
 
-# Run npm publish 
+# Run npm publish
 alias npmP="npm publish"
 
 # Run npm init
 alias npmI="npm init"
+
+# Run npm install locally
+alias npmi="npm install"
