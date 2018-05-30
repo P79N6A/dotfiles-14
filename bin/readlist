@@ -1,0 +1,45 @@
+#!/usr/bin/env php
+<?php
+
+error_reporting(0);
+
+ini_set('memory_limit', '1000M');
+ini_set('upload_max_filesize', '80M');
+ini_set('post_max_size', '96M');
+ini_set('max_input_time', -1);
+ini_set('max_execution_time', 0);
+
+$params = $GLOBALS['argv'];
+$argv = [];
+$cmd = basename($params[0]);
+unset($params[0]);
+
+$list = $params[1];
+
+if (!$list) {
+  echo "Empty\n";
+  exit(1);
+}
+
+$files = [];
+
+$fp = fopen($list, 'r');
+while (!feof($fp)) {
+  $buffer = fgets($fp);
+  $buffer = trim($buffer);
+  if ($buffer) {
+    $files[] = ltrim($buffer, '/');
+  }
+}
+fclose($fp);
+
+if ($files) {
+  foreach ($files as $key => $file) {
+    $pathinfo = pathinfo($file);
+    if ($pathinfo['dirname'] != '.') {
+      $path = '/Users/sudprawat/Desktop/uploads/_thumbs/images/' . $pathinfo['dirname'];
+      if (!file_exists($path)) shell_exec("mkdir '$path'");
+    }
+    shell_exec("convert '/Users/sudprawat/Desktop/uploads/$file' -colorspace RGB -resize '320x320^' -gravity center -crop 320x320+0+0 -colorspace sRGB '/Users/sudprawat/Desktop/uploads/_thumbs/images/$file'");
+  }
+}

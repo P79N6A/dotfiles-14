@@ -101,6 +101,15 @@ alias passv="echo \"VpjkcV88\" | copy"
 alias fetch="git fetch"
 alias branch="git branch"
 alias merge="git merge"
-alias ssh-fastcomet="ssh -p 17177 devilsdenthailan@node647.myfcloud.com"
+function ssh-fastcomet()
+{
+  local user='devilsdenthailan'
+  
+  if [[ -n $1 ]]; then
+    user=$1; shift
+  fi
+  
+  ssh -p 17177 "$user@node647.myfcloud.com"
+}
 alias ssh-ddtweb="ssh -p 32123 ddtweb@95.211.214.202"
 alias ssh-remlogin="ssh -p 32123 remlogin@95.211.214.202"
