@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FileZilla3 version="3.33.0" platform="mac">
 	<Servers>
-		<Server>
-			<Host>findpattayaproperty.com</Host>
-			<Port>2002</Port>
-			<Protocol>0</Protocol>
-			<Type>0</Type>
-			<User>findpatt</User>
-			<Pass encoding="base64">b3QxMTI0U29MZw==</Pass>
-			<Logontype>1</Logontype>
-			<TimezoneOffset>0</TimezoneOffset>
-			<PasvMode>MODE_DEFAULT</PasvMode>
-			<MaximumMultipleConnections>0</MaximumMultipleConnections>
-			<EncodingType>Auto</EncodingType>
-			<BypassProxy>0</BypassProxy>
-			<Name>findpattayaproperty.com</Name>
-			<Comments />
-			<Colour>0</Colour>
-			<LocalDir>/Users/sudprawat/www/findpattayaproperty-20180516.com</LocalDir>
-			<RemoteDir>1 0 7 domains 23 findpattayaproperty.com</RemoteDir>
-			<SyncBrowsing>1</SyncBrowsing>
-			<DirectoryComparison>0</DirectoryComparison>
-		</Server>
-		<Folder expanded="0">fineart<Server>
+		<Folder expanded="1">fineart<Server>
 				<Host>abacus-gallery.com</Host>
 				<Port>21</Port>
 				<Protocol>0</Protocol>
@@ -36,6 +15,90 @@
 				<EncodingType>Auto</EncodingType>
 				<BypassProxy>0</BypassProxy>
 				<Name>abacus-gallery.com</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir />
+				<RemoteDir />
+				<SyncBrowsing>0</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
+			<Server>
+				<Host>eazyportrait.com</Host>
+				<Port>22</Port>
+				<Protocol>1</Protocol>
+				<Type>0</Type>
+				<User>eazyport</User>
+				<Pass encoding="base64">QzZuaTExRUA=</Pass>
+				<Logontype>1</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>eazyportrait.com</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir>/Users/Fineart/www/eazyportrait.com</LocalDir>
+				<RemoteDir>1 0 4 home 8 eazyport</RemoteDir>
+				<SyncBrowsing>1</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
+			<Server>
+				<Host>modern-art-reproductions.com</Host>
+				<Port>21</Port>
+				<Protocol>0</Protocol>
+				<Type>0</Type>
+				<User>modern55</User>
+				<Pass encoding="base64">Q3hyMUUwNjlleQ==</Pass>
+				<Logontype>1</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>modern-art-reproductions.com</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir>/Users/Fineart/www/modern-art-reproductions.com</LocalDir>
+				<RemoteDir>1 0</RemoteDir>
+				<SyncBrowsing>1</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
+			<Server>
+				<Host>museum-reproductions.com</Host>
+				<Port>21</Port>
+				<Protocol>0</Protocol>
+				<Type>0</Type>
+				<User>museum55</User>
+				<Pass encoding="base64">MDBKaHR5ZzU1RQ==</Pass>
+				<Logontype>1</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>museum-reproductions.com</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir>/Users/Fineart/www/museum-reproductions.com</LocalDir>
+				<RemoteDir>1 0</RemoteDir>
+				<SyncBrowsing>1</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
+			<Server>
+				<Host>oshjosh.com</Host>
+				<Port>21</Port>
+				<Protocol>0</Protocol>
+				<Type>0</Type>
+				<User>cookies55</User>
+				<Pass encoding="base64">NjNrTW9uZXQ=</Pass>
+				<Logontype>1</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>oshjosh.com</Name>
 				<Comments />
 				<Colour>0</Colour>
 				<LocalDir />
@@ -85,36 +148,78 @@
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
 			</Server>
+			<Server>
+				<Host>soho-art.com</Host>
+				<Port>21</Port>
+				<Protocol>0</Protocol>
+				<Type>0</Type>
+				<User>soho55</User>
+				<Pass encoding="base64">R2hGUmVXMzIzMg==</Pass>
+				<Logontype>1</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>soho-art.com</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir>/Users/Fineart/www/soho-art.com</LocalDir>
+				<RemoteDir>1 0</RemoteDir>
+				<SyncBrowsing>1</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
+			<Server>
+				<Host>soho-art.studio</Host>
+				<Port>21</Port>
+				<Protocol>0</Protocol>
+				<Type>0</Type>
+				<User>webftp@soho-art.studio</User>
+				<Pass encoding="base64">RyphU0dXZ2s4XVg/</Pass>
+				<Logontype>1</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>soho-art.studio</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir>/Users/Fineart/www/soho-art.studio</LocalDir>
+				<RemoteDir>1 0</RemoteDir>
+				<SyncBrowsing>1</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
+			<Server>
+				<Host>192.241.152.124</Host>
+				<Port>22</Port>
+				<Protocol>1</Protocol>
+				<Type>0</Type>
+				<User>forge@192.241.152.124</User>
+				<Keyfile>/Users/Fineart/.ssh/id_rsa</Keyfile>
+				<Logontype>5</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>staging.reproduction-gallery.com</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir />
+				<RemoteDir />
+				<SyncBrowsing>0</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
 		</Folder>
-		<Server>
-			<Host>ftp.goldfishcreativethailand.com</Host>
-			<Port>21</Port>
-			<Protocol>0</Protocol>
-			<Type>0</Type>
-			<User>u822159201.gcreativeth</User>
-			<Pass encoding="base64">MjJIZGJmZ3VS</Pass>
-			<Logontype>1</Logontype>
-			<TimezoneOffset>0</TimezoneOffset>
-			<PasvMode>MODE_DEFAULT</PasvMode>
-			<MaximumMultipleConnections>0</MaximumMultipleConnections>
-			<EncodingType>Auto</EncodingType>
-			<BypassProxy>0</BypassProxy>
-			<Name>goldfishcreativethailand.com</Name>
-			<Comments />
-			<Colour>0</Colour>
-			<LocalDir>/Users/sudprawat/www/goldfishcreativethailand.com</LocalDir>
-			<RemoteDir>1 0</RemoteDir>
-			<SyncBrowsing>1</SyncBrowsing>
-			<DirectoryComparison>0</DirectoryComparison>
-		</Server>
 		<Server>
 			<Host>159.89.226.205</Host>
 			<Port>22</Port>
 			<Protocol>1</Protocol>
 			<Type>0</Type>
 			<User>root</User>
-			<Keyfile>/Users/sudprawat/.ssh/id_rsa</Keyfile>
-			<Logontype>5</Logontype>
+			<Pass encoding="base64" />
+			<Logontype>1</Logontype>
 			<TimezoneOffset>0</TimezoneOffset>
 			<PasvMode>MODE_DEFAULT</PasvMode>
 			<MaximumMultipleConnections>0</MaximumMultipleConnections>
@@ -128,113 +233,7 @@
 			<SyncBrowsing>1</SyncBrowsing>
 			<DirectoryComparison>0</DirectoryComparison>
 		</Server>
-		<Folder expanded="1">leaseweb<Server>
-				<Host>devilsdenbangkokescorts.com</Host>
-				<Port>12321</Port>
-				<Protocol>0</Protocol>
-				<Type>0</Type>
-				<User>ddbe</User>
-				<Pass encoding="base64">dnBqa2NWOA==</Pass>
-				<Logontype>1</Logontype>
-				<TimezoneOffset>0</TimezoneOffset>
-				<PasvMode>MODE_DEFAULT</PasvMode>
-				<MaximumMultipleConnections>0</MaximumMultipleConnections>
-				<EncodingType>Auto</EncodingType>
-				<BypassProxy>0</BypassProxy>
-				<Name>devilsdenbangkokescorts.com</Name>
-				<Comments />
-				<Colour>0</Colour>
-				<LocalDir>/Users/sudprawat/www/devilsdenbangkokescorts.com</LocalDir>
-				<RemoteDir>1 0 7 domains 27 devilsdenbangkokescorts.com</RemoteDir>
-				<SyncBrowsing>1</SyncBrowsing>
-				<DirectoryComparison>0</DirectoryComparison>
-			</Server>
-			<Server>
-				<Host>devilsdenpinkdevils.com</Host>
-				<Port>12321</Port>
-				<Protocol>0</Protocol>
-				<Type>0</Type>
-				<User>ddtweb</User>
-				<Pass encoding="base64">dnBqa2NWOGRpcg==</Pass>
-				<Logontype>1</Logontype>
-				<TimezoneOffset>0</TimezoneOffset>
-				<PasvMode>MODE_DEFAULT</PasvMode>
-				<MaximumMultipleConnections>0</MaximumMultipleConnections>
-				<EncodingType>Auto</EncodingType>
-				<BypassProxy>0</BypassProxy>
-				<Name>devilsdenpinkdevils.com</Name>
-				<Comments />
-				<Colour>0</Colour>
-				<LocalDir>/Users/sudprawat/www/devilsdenpinkdevils.com</LocalDir>
-				<RemoteDir>1 0 7 domains 23 devilsdenpinkdevils.com</RemoteDir>
-				<SyncBrowsing>1</SyncBrowsing>
-				<DirectoryComparison>0</DirectoryComparison>
-			</Server>
-			<Server>
-				<Host>devilsdenreviews.com</Host>
-				<Port>12321</Port>
-				<Protocol>0</Protocol>
-				<Type>0</Type>
-				<User>ddbe</User>
-				<Pass encoding="base64">dnBqa2NWOA==</Pass>
-				<Logontype>1</Logontype>
-				<TimezoneOffset>0</TimezoneOffset>
-				<PasvMode>MODE_DEFAULT</PasvMode>
-				<MaximumMultipleConnections>0</MaximumMultipleConnections>
-				<EncodingType>Auto</EncodingType>
-				<BypassProxy>0</BypassProxy>
-				<Name>devilsdenreviews.com</Name>
-				<Comments />
-				<Colour>0</Colour>
-				<LocalDir>/Users/sudprawat/www/devilsdenreviews.com</LocalDir>
-				<RemoteDir>1 0 7 domains 20 devilsdenreviews.com</RemoteDir>
-				<SyncBrowsing>1</SyncBrowsing>
-				<DirectoryComparison>0</DirectoryComparison>
-			</Server>
-			<Server>
-				<Host>devilsdenthailand.com</Host>
-				<Port>12321</Port>
-				<Protocol>0</Protocol>
-				<Type>0</Type>
-				<User>ddtweb</User>
-				<Pass encoding="base64">dnBqa2NWOGRpcg==</Pass>
-				<Logontype>1</Logontype>
-				<TimezoneOffset>0</TimezoneOffset>
-				<PasvMode>MODE_DEFAULT</PasvMode>
-				<MaximumMultipleConnections>0</MaximumMultipleConnections>
-				<EncodingType>Auto</EncodingType>
-				<BypassProxy>0</BypassProxy>
-				<Name>devilsdenthailand.com</Name>
-				<Comments />
-				<Colour>0</Colour>
-				<LocalDir>/Users/sudprawat/www/devilsdenthailand.com</LocalDir>
-				<RemoteDir>1 0 7 domains 21 devilsdenthailand.com</RemoteDir>
-				<SyncBrowsing>1</SyncBrowsing>
-				<DirectoryComparison>0</DirectoryComparison>
-			</Server>
-			<Server>
-				<Host>devilsdenvipbus.com</Host>
-				<Port>12321</Port>
-				<Protocol>0</Protocol>
-				<Type>0</Type>
-				<User>ddtweb</User>
-				<Pass encoding="base64">dnBqa2NWOGRpcg==</Pass>
-				<Logontype>1</Logontype>
-				<TimezoneOffset>0</TimezoneOffset>
-				<PasvMode>MODE_DEFAULT</PasvMode>
-				<MaximumMultipleConnections>0</MaximumMultipleConnections>
-				<EncodingType>Auto</EncodingType>
-				<BypassProxy>0</BypassProxy>
-				<Name>devilsdenvipbus.com</Name>
-				<Comments />
-				<Colour>0</Colour>
-				<LocalDir>/Users/sudprawat/www/devilsdenvipbus.com</LocalDir>
-				<RemoteDir>1 0 7 domains 19 devilsdenvipbus.com</RemoteDir>
-				<SyncBrowsing>1</SyncBrowsing>
-				<DirectoryComparison>0</DirectoryComparison>
-			</Server>
-		</Folder>
-		<Folder expanded="1">node647.myfcloud.com<Server>
+		<Folder expanded="0">node647.myfcloud.com<Server>
 				<Host>172.104.189.62</Host>
 				<Port>21</Port>
 				<Protocol>0</Protocol>
@@ -378,6 +377,27 @@
 				<Colour>0</Colour>
 				<LocalDir>/Users/sudprawat/www/heavensinn.com</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
+				<SyncBrowsing>1</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
+			<Server>
+				<Host>172.104.189.62</Host>
+				<Port>21</Port>
+				<Protocol>0</Protocol>
+				<Type>0</Type>
+				<User>lpp</User>
+				<Pass encoding="base64">MjJIZGJmZ3VSQA==</Pass>
+				<Logontype>1</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>luxurypropertiespattaya.com</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir>/Users/Fineart/www/luxurypropertiespattaya.com</LocalDir>
+				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
 			</Server>

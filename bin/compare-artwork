@@ -1,0 +1,46 @@
+#!/usr/bin/env php
+<?php
+
+error_reporting(0);
+
+ini_set('memory_limit', '1000M');
+ini_set('upload_max_filesize', '80M');
+ini_set('post_max_size', '96M');
+ini_set('max_input_time', -1);
+ini_set('max_execution_time', 0);
+
+$params = $GLOBALS['argv'];
+$argv = [];
+$cmd = basename($params[0]);
+unset($params[0]);
+
+if ($params[1] && $params[2]) {
+  $list = glob($params[1] . "/*.jpg");
+  if ($list) {
+    foreach ($list as $key => $value) {
+      $basename = basename($value);
+      
+      $is_exists = file_exists($params[2] . '/' . $basename);
+      
+      if (!$is_exists) {
+        if (!file_exists('new')) shell_exec('mkdir new');
+        if (!file_exists('new/thumbnail')) shell_exec('mkdir new/thumbnail');
+        if (!file_exists('new/medium')) shell_exec('mkdir new/medium');
+        if (!file_exists('new/large')) shell_exec('mkdir new/large');
+        
+        shell_exec('cp '. $value .' new/'. $basename .'');
+        
+        shell_exec('magick convert new/'. $basename .' -colorspace RGB -unsharp 0x1 -resize 800 -quality 80 -colorspace sRGB new/large/'. $basename .'');
+        shell_exec('magick convert new/large/'. $basename .' -colorspace RGB -unsharp 0x1 -resize 540 -quality 80 -colorspace sRGB new/medium/'. $basename .'');
+        shell_exec('magick convert new/medium/'. $basename .' -colorspace RGB -unsharp 0x1 -resize 240 -quality 80 -colorspace sRGB new/thumbnail/'. $basename .'');
+      }
+    }
+  }
+  
+  exit(0);
+  
+  // convert xxx -colorspace RGB -unsharp 0x1 -S 240 -colorspace sRGB xxx
+}
+
+echo "NO\n";
+exit(1);
