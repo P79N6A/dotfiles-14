@@ -30,9 +30,10 @@ if ($params[1] && $params[2]) {
         
         shell_exec('cp '. $value .' new/'. $basename .'');
         
+        // shell_exec('magick convert new/'. $basename .' -colorspace RGB -unsharp 0x1 -resize 800 -quality 80 -colorspace sRGB new/large/'. $basename .'');
         shell_exec('magick convert new/'. $basename .' -colorspace RGB -unsharp 0x1 -resize 800 -quality 80 -colorspace sRGB new/large/'. $basename .'');
-        shell_exec('magick convert new/large/'. $basename .' -colorspace RGB -unsharp 0x1 -resize 540 -quality 80 -colorspace sRGB new/medium/'. $basename .'');
-        shell_exec('magick convert new/medium/'. $basename .' -colorspace RGB -unsharp 0x1 -resize 240 -quality 80 -colorspace sRGB new/thumbnail/'. $basename .'');
+        shell_exec('magick convert new/'. $basename .' -colorspace RGB -unsharp 0x1 -resize 540 -quality 80 -colorspace sRGB new/medium/'. $basename .'');
+        shell_exec('magick convert new/'. $basename .' -colorspace RGB -unsharp 0x1 -resize 240 -quality 80 -colorspace sRGB new/thumbnail/'. $basename .'');
       }
     }
   }
