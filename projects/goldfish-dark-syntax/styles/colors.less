@@ -1,0 +1,80 @@
+
+// Config -----------------------------------
+// @base: #262931;
+// @base: #323336;
+// @base: #2E2C2D;
+@base: #2B3141;
+// @base: #2E3440;
+// @base: #262D39;
+@base-color: hsl(hue(@base), saturation(@base), lightness(@base));
+
+@syntax-hue:        hue(@base-color);
+@syntax-saturation: saturation(@base-color);
+@syntax-lightness:  lightness(@base-color);
+
+@syntax-brightness: @syntax-lightness;
+
+
+// Monochrome -----------------------------------
+@mono-1: hsl(@syntax-hue, 44%, 90%);
+@mono-2: fade(@mono-1, 44%);
+@mono-3: fade(@mono-1, 25%);
+
+// Colors -----------------------------------
+// cyan
+@hue-1:   #59F2F7;
+// @hue-1:   #2DFFFD;
+// blue
+@hue-2:   #74B3FB;
+// @hue-2:   #71B8F2;
+// purple
+@hue-3:   #BD89EC;
+// @hue-3:   #CE9FF4;
+// green
+@hue-4:   #70F49C;
+// red
+@hue-5:   #E5645C;
+// @hue-5:   #DF6A72;
+// darkred
+@hue-5-2: #FB605C;
+// orange
+@hue-6:   #FFCF4F;
+// @hue-6:   #FFCA7B;
+// @hue-6:   #FFCB2A;
+// yellow
+@hue-6-2: #FAD441;
+// pink
+@hue-7:   #ECA5D0;
+
+
+// Accent (Custom) -----------------
+// @accent-luma:            luma(hsl(@syntax-hue, 50%, 50%));
+//
+// @accent-bg-color:        mix(hsv(@syntax-hue, 75%, 80%), hsl(@syntax-hue, 75%, 75%), @accent-luma * 2);
+// @accent-bg-text-color:   contrast(@accent-bg-color, hsl(@syntax-hue, 100%, 12%), #fff, 25%);
+//
+// @accent-color:           @accent-bg-color;
+// @accent-text-color:      @accent-bg-text-color;
+//
+// @accent-only-text-color: @accent-bg-color;
+
+
+// Base colors -----------------------------------
+@syntax-fg:     @mono-1;
+@syntax-bg:     hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+@syntax-gutter: @mono-2;
+@syntax-guide:  fade(@mono-1, 14%);
+@syntax-accent: @accent-bg-color;
+
+
+// Accent (Custom) -----------------
+@accent-luma:             luma(hsl(@syntax-hue, 50%, 25%));
+
+@accent-bg-color:            mix(hsv(@syntax-hue, 100%, 73%), hsl(@syntax-hue, 100%, 77%), @accent-luma);
+@accent-bg-text-color:       contrast(@accent-bg-color, hsl(@syntax-hue,100%,10%), #fff, 25%);
+
+@accent-color:         @accent-bg-color;
+@accent-text-color:    @accent-bg-text-color;
+
+// used for text only
+@accent-only-text-color:  @accent-bg-color;
