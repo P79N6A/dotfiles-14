@@ -90,11 +90,31 @@ module.exports =
     @toolBar.addSpacer()
 
     @toolBar.addButton
+      callback: "git-gui:toggle"
+      text: '<i class="gc">遼</i>'
+      html: true
+      tooltip: "Git Gui"
+      type: "button"
+
+    @toolBar.addButton
+      callback:
+        '': 'git-plus:add-and-commit'
+        'alt': 'git-plus:add'
+        'shift': 'git-plus:commit'
+        'shift-alt': 'git-plus:add-all'
+      text: '<i class="gc"></i>'
+      html: true
+      tooltip: "Add + Commit"
+      type: "button"
+
+    @toolBar.addButton
       callback: "split-diff:toggle"
       text: '<i class="gc"></i>'
       html: true
       tooltip: "Split Diff"
       type: "button"
+      
+    @toolBar.addSpacer()
 
     @toolBar.addButton
       callback:
