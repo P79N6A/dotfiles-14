@@ -1,0 +1,10 @@
+goldfishcreativethailand.com
+
+openssl req -new -sha256 -key domain.key -subj "/CN=goldfishcreativethailand.com" > domain.csr
+
+openssl dgst -sha256 -sign id_rsa -out register_lB9NxI.sig register_nG3GLh.json
+openssl dgst -sha256 -sign id_rsa -out domain_PxuRiO.sig domain_lMPzl8.json
+openssl dgst -sha256 -sign id_rsa -out cert_2ZH1LU.sig cert_u8MG1q.json
+
+
+certbot --email goldfishcreative.thailand@gmail.com --text --authenticator manual --work-dir /tmp/work/ --config-dir /tmp/config/ --logs-dir /tmp/logs/ auth --cert-path /tmp/certs/ --chain-path /tmp/chains/ --csr domain.csr

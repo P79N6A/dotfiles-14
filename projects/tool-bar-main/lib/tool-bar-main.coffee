@@ -118,13 +118,13 @@ module.exports =
 
     @toolBar.addButton
       callback:
-        '': 'remote-ftp:connect'
+        '': 'remote-sync:configure'
         'alt': 'remote-ftp:disconnect'
         'shift': 'remote-ftp:create-ftp-config'
         'shift-alt': 'remote-ftp:create-sftp-config'
       text: '<i class="gc"></i>'
       html: true
-      tooltip: "Remote FTP"
+      tooltip: "FTP Configure"
       type: "button"
 
     @toolBar.addButton
