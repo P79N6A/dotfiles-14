@@ -198,22 +198,22 @@ function gitraw() {
 
 function newbranch () {
   local name exists count matches current_branch source_branch
-  
+
   if [[ $# == 0 ]]; then
     echo "
 usage: branch_name [source_branch=master]
 "; return 1
   fi
-  
+
   name=$1; shift
-  
+
   current_branch=`git status -bs | perl -pe s/\#\#\ //gi | egrep '^[^\.]+' -o`
   if [[ -z $1 ]]; then
     source_branch=$current_branch
   else
     source_branch=$1
   fi
-  
+
   count=`git branch -l | grep -w "$name" -c`
   exists=`git branch -l | grep -w "$name" -i`
   matches=0
@@ -228,25 +228,25 @@ usage: branch_name [source_branch=master]
       fi
     done
   fi
-  
+
   echo "
 creating new branch...$name
 "
-  
+
   if [[ $current_branch != $source_branch ]]; then
     git checkout $source_branch
     git fetch origin -a
     git pull origin $source_branch
   fi
-  
+
   if [[ $matches == 1 ]]; then
     git branch -D $name
     git add .
     git commit -m "Delete branch $name and replace new branch from current"
   fi
-  
+
   git branch $name
-  
+
   git checkout $name
 }
 
@@ -298,3 +298,54 @@ function upg.() {
 
 
 check_required_packages
+
+
+function install_acmephp() {
+  if [[ ! -e $HOME/bin ]]; then
+    mkdir $HOME/bin
+  fi
+
+  if [[ ! -e $HOME/public_html/.well-known ]]; then
+    mkdir $HOME/public_html/.well-known
+  fi
+
+  if [[ ! -e $HOME/public_html/.well-known/acme-challenge ]]; then
+    mkdir $HOME/public_html/.well-known/acme-challenge
+  fi
+
+  check_bin
+  cd $HOME/bin
+
+  php -r "copy('https://github.com/acmephp/acmephp/releases/download/1.0.0-beta4/acmephp.phar', 'acmephp.phar');"
+  php -r "copy('https://github.com/acmephp/acmephp/releases/download/1.0.0-beta4/acmephp.phar.pubkey', 'acmephp.phar.pubkey');"
+  php acmephp.phar --version
+}
+
+function acme_request() {
+  check_bin
+  cd $HOME/bin
+
+  if [[ $# != 2 ]]; then
+    echo 'usage: email domain'; return 1
+  fi
+
+
+  php acmephp.phar register $1 && php acmephp.phar authorize $2 && php acmephp.phar check $2 && php acmephp.phar request $2
+}
+
+function acme_renew() {
+  check_bin
+  cd $HOME/bin
+
+  if [[ $# != 1 ]]; then
+    echo 'usage: domain'; return 1
+  fi
+
+  php acmephp.phar request $1
+}
+
+function check_bin() {
+  if [[ ! -e $HOME/bin ]]; then
+    mkdir $HOME/bin
+  fi
+}

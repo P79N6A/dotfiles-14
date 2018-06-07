@@ -36,26 +36,26 @@
 	<integer>14</integer>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>printf "goldfishcreativethailand.com"</string>
+		<string>printf "nopphasin.arayasirikul@gmail.com"</string>
+		<string>printf "nopphasin.arayasirikul@gmail.com"</string>
+		<string>(printf " nopphasin.arayasirikul@gmail.com")</string>
+		<string>(printf "" &amp;&amp; echo 'nopphasin.arayasirikul@gmail.com')</string>
+		<string>$(printf "" &amp;&amp; echo 'nopphasin.arayasirikul@gmail.com')</string>
+		<string>printf "" | echo 'nopphasin.arayasirikul@gmail.com'</string>
+		<string>printf "" &amp;&amp; echo 'nopphasin.arayasirikul@gmail.com'</string>
+		<string>printf "" &amp;&amp; echo 'nopphasin.arayasirikul@gmail.com'</string>
+		<string>printf "   " &amp;&amp; echo 'nopphasin.arayasirikul@gmail.com'</string>
+		<string>printf "" &amp;&amp; echo 'nopphasin.arayasirikul@gmail.com'</string>
+		<string>printf " " &amp;&amp; echo 'nopphasin.arayasirikul@gmail.com'</string>
+		<string>printf "" &amp;&amp; echo 'nopphasin.arayasirikul@gmail.com'</string>
+		<string>printf "" &amp;&amp; echo "nopphasin.arayasirikul@gmail.com"</string>
 		<string>printf "6e 70 6d 72 75 6e 64 0d"</string>
 		<string>printf '6e 70 6d 72 75 6e 64 0d'</string>
 		<string>npm run dev</string>
 		<string>printf 'reload_shell'</string>
 		<string>printf '\x1b\x5b\x41'</string>
 		<string>`reload_shell`</string>
-		<string>(reload_shell)</string>
-		<string>reload_shell</string>
-		<string>printf '\x17'</string>
-		<string>printf '\x10'</string>
-		<string>printf '\x01'</string>
-		<string>printf '\x02'</string>
-		<string>printf '\x04'</string>
-		<string>printf '\x05'</string>
-		<string>printf '\x0e'</string>
-		<string>printf '\x0f'</string>
-		<string>printf '\x13'</string>
-		<string>printf '\x12'</string>
-		<string>printf '\x11'</string>
-		<string>printf '\x14'</string>
 	</array>
 	<key>CopySelection</key>
 	<false/>
@@ -1181,6 +1181,10 @@
 	<string>~/.dotfiles/settings</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
+	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -1189,6 +1193,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
+		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -1217,12 +1226,20 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>0 132 224 280 0 0 1920 1177 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>861 414 618 232 0 0 1920 1057 </string>
+	<string>583 376 605 294 0 0 1920 1177 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>650 602 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>530 347 796 473 0 0 1920 1057 </string>
+	<string>552 636 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 49 1920 1008 0 0 1920 1057 </string>
+	<string>0 53 1920 1124 0 0 1920 1177 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>247 132 585 452 0 0 1920 1177 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>226 155 1920 965 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4_selection</key>
@@ -1497,7 +1514,7 @@
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
-			<true/>
+			<false/>
 			<key>Blur Radius</key>
 			<real>2.504538784898477</real>
 			<key>Bold Color</key>
@@ -2119,7 +2136,40 @@ Clear Buffer</string>
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.17750634517766495</real>
+			<real>0.18764276649746189</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>CoprocessTrigger</string>
+					<key>parameter</key>
+					<string>printf "\x08\x08\x08\x08\x08\x08\x08nopphasin.arayasirikul@gmail.com"</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>\bnopp-at\b</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>CoprocessTrigger</string>
+					<key>parameter</key>
+					<string>printf "\x08\x08\x08\x08\x08\x08\x08goldfishcreative.thailand@gmail.com"</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>\bgold-at\b</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>CoprocessTrigger</string>
+					<key>parameter</key>
+					<string>printf "\x08\x08\x08\x08\x08\x08\x08\x08goldfishcreativethailand.com"</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>\bgold-web\b</string>
+				</dict>
+			</array>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
@@ -3655,12 +3705,6 @@ Clear Buffer</string>
 	<true/>
 	<key>NoSyncConfirmShellIntegrationCommand_selection</key>
 	<integer>0</integer>
-	<key>NoSyncCoprocessCommandsToIgnoreErrorOutput</key>
-	<array>
-		<string>tput home</string>
-	</array>
-	<key>NoSyncHaveUsedCopyMode</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallUtilitiesPackage</key>
@@ -3668,11 +3712,15 @@ Clear Buffer</string>
 	<key>NoSyncInstallUtilitiesPackage_selection</key>
 	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>3174284D-BE22-4B54-BEC6-98A06A91EF4E</string>
+	<string>0CEF9659-0883-403C-A473-02B5DF4E2D16</string>
+	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux</key>
+	<true/>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>533641258.678617</real>
+	<real>540643942.034428</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -3727,7 +3775,7 @@ Clear Buffer</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/Fineart/.dotfiles/settings</string>
+	<string>/Users/sudprawat/.dotfiles/settings</string>
 	<key>PreventEscapeSequenceFromClearingHistory</key>
 	<true/>
 	<key>ProfilesWindowJoinsActiveSpace</key>
@@ -3749,11 +3797,11 @@ Clear Buffer</string>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=1</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=91</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-02T03:27:19Z</date>
+	<date>2018-05-02T08:55:55Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
@@ -3813,7 +3861,7 @@ Clear Buffer</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.1.6</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
