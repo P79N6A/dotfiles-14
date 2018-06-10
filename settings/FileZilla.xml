@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FileZilla3 version="3.33.0" platform="mac">
 	<Servers>
+		<Folder expanded="1">Hostinger<Server>
+				<Host>185.224.137.89</Host>
+				<Port>65002</Port>
+				<Protocol>1</Protocol>
+				<Type>0</Type>
+				<User>u822159201</User>
+				<Pass encoding="base64">MjJIZGJmZ3VSQGZ0cA==</Pass>
+				<Logontype>1</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>185.224.137.89</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir>/Users/sudprawat/www/goldfishcreativethailand.com</LocalDir>
+				<RemoteDir>1 0 4 home 10 u822159201</RemoteDir>
+				<SyncBrowsing>1</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
+		</Folder>
 		<Folder expanded="1">fineart<Server>
 				<Host>abacus-gallery.com</Host>
 				<Port>21</Port>
@@ -17,7 +39,7 @@
 				<Name>abacus-gallery.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/abacus-gallery.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/abacus-gallery.com</LocalDir>
 				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -38,7 +60,7 @@
 				<Name>eazyportrait.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/eazyportrait.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/eazyportrait.com</LocalDir>
 				<RemoteDir>1 0 4 home 8 eazyport</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -59,7 +81,7 @@
 				<Name>modern-art-reproductions.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/modern-art-reproductions.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/modern-art-reproductions.com</LocalDir>
 				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -80,7 +102,7 @@
 				<Name>museum-reproductions.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/museum-reproductions.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/museum-reproductions.com</LocalDir>
 				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -101,7 +123,7 @@
 				<Name>oshjosh.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/oshjosh.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/oshjosh.com</LocalDir>
 				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -122,7 +144,7 @@
 				<Name>reproduction-galleries.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/reproduction-galleries.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/reproduction-galleries.com</LocalDir>
 				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -143,7 +165,7 @@
 				<Name>reproduction-gallery.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/reproduction-gallery.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/reproduction-gallery.com</LocalDir>
 				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -164,7 +186,7 @@
 				<Name>soho-art.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/soho-art.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/soho-art.com</LocalDir>
 				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -185,7 +207,7 @@
 				<Name>soho-art.studio</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/soho-art.studio</LocalDir>
+				<LocalDir>/Users/sudprawat/www/soho-art.studio</LocalDir>
 				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -196,7 +218,7 @@
 				<Protocol>1</Protocol>
 				<Type>0</Type>
 				<User>forge@192.241.152.124</User>
-				<Keyfile>/Users/Fineart/.ssh/id_rsa</Keyfile>
+				<Keyfile>/Users/sudprawat/.ssh/id_rsa</Keyfile>
 				<Logontype>5</Logontype>
 				<TimezoneOffset>0</TimezoneOffset>
 				<PasvMode>MODE_DEFAULT</PasvMode>
@@ -206,13 +228,13 @@
 				<Name>staging.reproduction-gallery.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/repro-gallery-master</LocalDir>
+				<LocalDir>/Users/sudprawat/www/repro-gallery-master</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
 			</Server>
 		</Folder>
-		<Folder expanded="1">node647.myfcloud.com<Server>
+		<Folder expanded="0">node647.myfcloud.com<Server>
 				<Host>172.104.189.62</Host>
 				<Port>21</Port>
 				<Protocol>0</Protocol>
@@ -228,7 +250,7 @@
 				<Name>amadeous-tapas-restaurant.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/amadeous-tapas-restaurant.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/amadeous-tapas-restaurant.com</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -249,7 +271,7 @@
 				<Name>devilsdenbangkokescorts.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/devilsdenbangkokescorts.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/devilsdenbangkokescorts.com</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -270,7 +292,7 @@
 				<Name>devilsdenphuketescorts.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/devilsdenphuketescorts.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/devilsdenphuketescorts.com</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -291,7 +313,7 @@
 				<Name>devilsdenpinkdevils.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/devilsdenpinkdevils.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/devilsdenpinkdevils.com</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -312,7 +334,7 @@
 				<Name>devilsdenreviews.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/devilsdenreviews.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/devilsdenreviews.com</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -333,7 +355,7 @@
 				<Name>devilsdenvipbus.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/devilsdenvipbus.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/devilsdenvipbus.com</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -354,7 +376,7 @@
 				<Name>heavensinn.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/heavensinn.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/heavensinn.com</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -375,7 +397,7 @@
 				<Name>luxurypropertiespattaya.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/luxurypropertiespattaya.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/luxurypropertiespattaya.com</LocalDir>
 				<RemoteDir>1 0</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
@@ -396,7 +418,7 @@
 				<Name>pattayasecretescorts.com</Name>
 				<Comments />
 				<Colour>0</Colour>
-				<LocalDir>/Users/Shared/www/pattayasecretescorts.com</LocalDir>
+				<LocalDir>/Users/sudprawat/www/pattayasecretescorts.com</LocalDir>
 				<RemoteDir>1 0 11 public_html</RemoteDir>
 				<SyncBrowsing>1</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
