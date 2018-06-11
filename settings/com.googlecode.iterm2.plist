@@ -1522,7 +1522,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>1.8932820431472082</real>
+			<real>1.7094900063451777</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -2142,7 +2142,7 @@ Clear Buffer</string>
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.29243337563451771</real>
+			<real>0.0</real>
 			<key>Triggers</key>
 			<array>
 				<dict>
