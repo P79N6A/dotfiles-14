@@ -36,6 +36,7 @@
 	<integer>14</integer>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>printf "goldfishcreative.thailand@gmail.com"</string>
 		<string>printf "goldfishcreativethailand.com"</string>
 		<string>printf "nopphasin.arayasirikul@gmail.com"</string>
 		<string>printf "nopphasin.arayasirikul@gmail.com"</string>
@@ -55,7 +56,6 @@
 		<string>npm run dev</string>
 		<string>printf 'reload_shell'</string>
 		<string>printf '\x1b\x5b\x41'</string>
-		<string>`reload_shell`</string>
 	</array>
 	<key>CopySelection</key>
 	<false/>
@@ -1201,8 +1201,8 @@
 	<false/>
 	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
 	<array>
-		<string>0.000000, 0.000000, 228.000000, 299.000000, NO, NO</string>
-		<string>0.000000, 300.000000, 228.000000, 43.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 228.000000, 263.000000, NO, NO</string>
+		<string>0.000000, 264.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
@@ -1211,7 +1211,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -1239,7 +1239,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 602 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>552 636 796 473 0 0 1920 1177 </string>
+	<string>552 597 918 512 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 53 1920 1124 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
