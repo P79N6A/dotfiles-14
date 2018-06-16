@@ -1,0 +1,29 @@
+{
+  "name": "goldfish-toolkits",
+  "main": "./lib/main",
+  "version": "1.0.0",
+  "description": "A toolkits plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nopphasinara/goldfish-toolkits.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "keywords": [
+    "toolbar",
+    "tool-bar"
+  ],
+  "dependencies": {},
+  "packageDependencies": {
+    "tool-bar": "^0.1.0"
+  },
+  "consumedServices": {
+    "tool-bar": {
+      "versions": {
+        "^0 || ^1": "consumeToolBar"
+      }
+    }
+  }
+}

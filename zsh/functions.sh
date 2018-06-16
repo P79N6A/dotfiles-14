@@ -322,26 +322,36 @@ function install_acmephp() {
 }
 
 function acme_request() {
-  check_bin
-  cd $HOME/bin
-
-  if [[ $# != 2 ]]; then
+  if [[ $# < 2 ]]; then
     echo 'usage: email domain'; return 1
   fi
 
+  if [[ $# < 3 ]]; then
+    check_bin
+    cd $HOME/bin
 
-  php acmephp.phar register $1 && php acmephp.phar authorize $2 && php acmephp.phar check $2 && php acmephp.phar request $2
+    # acmephp register $1 && acmephp authorize $2 && acmephp check $2 && acmephp request $2
+    php acmephp.phar register $1 && php acmephp.phar authorize $2 && php acmephp.phar check $2 && php acmephp.phar request $2
+  else
+    # acmephp register $1 && acmephp authorize $2 && acmephp check $2 && acmephp request $2
+    /usr/bin/php acmephp.phar register $1 && /usr/bin/php acmephp.phar authorize $2 && /usr/bin/php acmephp.phar check $2 && /usr/bin/php acmephp.phar request $2
+  fi
 }
 
 function acme_renew() {
-  check_bin
-  cd $HOME/bin
-
-  if [[ $# != 1 ]]; then
+  if [[ $# < 1 ]]; then
     echo 'usage: domain'; return 1
   fi
 
-  php acmephp.phar request $1
+  if [[ $# < 2 ]]; then
+    check_bin
+    cd $HOME/bin
+
+    /usr/bin/php acmephp.phar request $1
+  else
+    cd $HOME/.dotfiles/bin
+    /usr/bin/php acmephp.phar request $1
+  fi
 }
 
 function check_bin() {
