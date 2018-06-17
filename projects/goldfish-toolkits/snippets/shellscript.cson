@@ -1,0 +1,120 @@
+'.text.shell-session, .source.shell':
+  '=== .classname ===':
+    'prefix': 'c-title'
+    'body': '''
+        #  ====================  ${1:.classname}  ====================
+        #	 created by:		${2:Jonathan Bergson} ( ${3:jonathan@bergson.me} )
+        #	 creation data:	${4:July 03, 2015}
+        #	 upadate by:		${2:Jonathan Bergson} ( ${3:jonathan@bergson.me} )
+        #	 update data:	${4:July 06, 2015}
+        #  ${5:1. Your text}
+        #  ${6:2. Your text}
+        #  ===========================================================
+    '''
+  '/** Docblock **/':
+    'prefix': 'c-doc'
+    'body': '''
+        ###
+         #
+         # 	${1:Lorem ipsum dolor sit amet}
+         # 		${2:description..}
+         # 		${3:@return type return}
+         #
+         ###
+    '''
+  '/** Comment **/':
+    'prefix': 'c-info'
+    'body': '''
+        ###
+         #
+         # 	${1:TODO: NOTE: FIXME: CHANGES: FUTURE: EXAMPLE:}
+         # 		${2:1. Your text}
+         # 		${3:2. Your text}
+         #
+         ###
+    '''
+  '** todo: comment.':
+    'prefix': 'c-todo'
+    'body': '''
+        ###
+         # TODO: ${1: Tem como objetivo especificar uma tarefa pendente que é necessária}.
+         ###
+    '''
+  '** note: comment.':
+    'prefix': 'c-note'
+    'body': '''
+        ###
+         # NOTE: ${1: Apenas uma observação sobre o código}.
+         ###
+    '''
+  '** fixme: comment.':
+    'prefix': 'c-fixme'
+    'body': '''
+        ###
+         # FIXME: ${1: Se trata de um bug ou erro de desemvolvimento já identificado que está esperando por correção}.
+         ###
+    '''
+  '** changes: comment.':
+    'prefix': 'c-changes'
+    'body': '''
+        ###
+         # CHANGES: ${1: Uma alteração que acaba de ser realizada}.
+         ###
+    '''
+  '** example: comment.':
+    'prefix': 'c-example'
+    'body': '''
+        ###
+         # EXAMPLE: ${1: Um trecho de exemplo, para ilustrar a aplicação e uso de um código}.
+         ###
+    '''
+
+'.source.shell':
+  '#!/usr/bin/env':
+    'prefix': 'env'
+    'body': '#!/usr/bin/env $1\n'
+  '#!/usr/bin/env bash':
+    'prefix': 'env-bash'
+    'body': '#!/usr/bin/env bash\n'
+  '#!/bin/bash':
+    'prefix': 'bash'
+    'body': '#!/bin/bash\n'
+  '#!/bin/sh':
+    'prefix': 'sh'
+    'body': '#!/bin/sh\n'
+  '#!/usr/bin/env zsh':
+    'prefix': 'zsh'
+    'body': '#!/usr/bin/env zsh\n'
+  '#!/usr/bin/env php':
+    'prefix': 'php'
+    'body': '#!/usr/bin/env php\n'
+  'alias …':
+    'prefix': 'alias'
+    'body': 'alias ${1:name}="${2:#statement}"'
+  'case … esac':
+    'prefix': 'case'
+    'body': 'case ${1:word} in\n\t${2:pattern} )\n\t\t$0;;\nesac'
+  'elif …':
+    'prefix': 'elif'
+    'body': 'elif ${2:[[ ${1:condition} ]]}; then\n\t${0:#statements}'
+  'fi':
+    'prefix': 'fi'
+    'body': 'fi'
+  'for … done':
+    'prefix': 'for'
+    'body': 'for (( i = 0; i < ${1:10}; i++ )); do\n\t${0:#statements}\ndone'
+  'function …':
+    'prefix': 'function'
+    'body': 'function ${1:name}(${2:parameter}) {\n\t${3:#statements}\n}'
+  'if … fi':
+    'prefix': 'if'
+    'body': 'if ${2:[[ ${1:condition} ]]}; then\n\t${0:#statements}\nfi'
+  'if … else … fi':
+    'prefix': 'ifel'
+    'body': 'if ${2:[[ ${1:condition} ]]}; then\n\t${0:#statements}\nelse\n\t${3:#statements}\nfi'
+  'until … done':
+    'prefix': 'until'
+    'body': 'until ${2:[[ ${1:condition} ]]}; do\n\t${0:#statements}\ndone'
+  'while … done':
+    'prefix': 'while'
+    'body': 'while ${2:[[ ${1:condition} ]]}; do\n\t${0:#statements}\ndone'

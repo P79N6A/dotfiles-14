@@ -1,0 +1,87 @@
+'.text.html':
+  'meta csrf_token()':
+    'prefix': 'token'
+    'body': '<meta name="csrf-token" content="{{ csrf_token() }}" />'
+    
+  '<!-- comment -->':
+    'prefix': 'comment'
+    'body': '''
+    <!-- ${1:comment} -->$0
+    '''
+    
+  '=== .classname ===':
+    'prefix': 'c-title'
+    'body': '''
+      <!--  ====================  ${1:.classname}  ====================
+      //	created by:		${2:Jonathan Bergson} ( ${3:jonathan@bergson.me} )
+      //	creation data:	${4:July 03, 2015}
+      //	upadate by:		${2:Jonathan Bergson} ( ${3:jonathan@bergson.me} )
+      //	update data:	${4:July 06, 2015}
+      //  ${5:1. Your text}
+      //  ${6:2. Your text}
+      //  =========================================================== -->
+    '''
+    
+  '/** Comment **/':
+    'prefix': 'c-info'
+    'body': '''
+      <!--
+       *
+       * 	${1:TODO: NOTE: FIXME: CHANGES: FUTURE: EXAMPLE:}
+       * 		${2:1. Your text}
+       * 		${3:2. Your text}
+       *
+       -->
+    '''
+    
+  '/** Docblock **/':
+    'prefix': 'c-doc'
+    'body': '''
+      <!--
+       *
+       * 	${1:Lorem ipsum dolor sit amet}
+       * 		${2:description..}
+       * 		${3:@return type return}
+       *
+       -->
+    '''
+    
+  '** todo: comment.':
+    'prefix': 'c-todo'
+    'body': '''
+      <!--
+       * TODO: ${1: Tem como objetivo especificar uma tarefa pendente que é necessária}.
+       -->
+    '''
+    
+  '** note: comment.':
+    'prefix': 'c-note'
+    'body': '''
+      <!--
+       * NOTE: ${1: Apenas uma observação sobre o código}.
+       -->
+    '''
+    
+  '** fixme: comment.':
+    'prefix': 'c-fixme'
+    'body': '''
+      <!--
+       * FIXME: ${1: Se trata de um bug ou erro de desemvolvimento já identificado que está esperando por correção}.
+       -->
+    '''
+    
+  '** changes: comment.':
+    'prefix': 'c-changes'
+    'body': '''
+      <!--
+       * CHANGES: ${1: Uma alteração que acaba de ser realizada}.
+       -->
+    '''
+    
+  '** example: comment.':
+    'prefix': 'c-example'
+    'body': '''
+      <!--
+       * EXAMPLE: ${1: Um trecho de exemplo, para ilustrar a aplicação e uso de um código}.
+       -->
+    '''

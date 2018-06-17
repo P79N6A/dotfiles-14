@@ -11,14 +11,19 @@
   "engines": {
     "atom": ">0.50.0"
   },
-  "keywords": [
-    "toolbar",
-    "tool-bar"
-  ],
-  "dependencies": {},
+  "keywords": [],
+  "dependencies": {
+    "change-case": "^3.0.2",
+    "array-shuffle": "^1.0.1",
+    "javascript-natural-sort": "^0.7.1",
+    "atom-space-pen-views": "^2.0.3",
+    "event-kit": "^1.2.0",
+    "node-uuid": "^1.4.3"
+  },
   "packageDependencies": {
     "tool-bar": "^0.1.0"
   },
+  "activationCommands": {},
   "consumedServices": {
     "tool-bar": {
       "versions": {

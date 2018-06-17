@@ -1,0 +1,8 @@
+"context-menu":
+  ".editor:not([mini])": [
+    "label": "Emmet"
+    "submenu": [
+      { "label": "Encode\\Decode data:URL image", "command": "emmet:encode-decode-data-url" }
+      { "label": "Update Image Size", "command": "emmet:update-image-size" }
+    ]
+  ]

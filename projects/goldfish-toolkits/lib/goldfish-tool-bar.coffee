@@ -1,4 +1,12 @@
 module.exports =
+  activate: (state) ->
+    console.log 'activated'
+    
+  deactivate: ->
+    @toolBar?.removeItems()
+    @toolbar?.destroy()
+    @toolbar = null
+  
   initialize: (toolBar) ->
     @toolBar = toolBar 'goldfish-toolkits'
     
@@ -82,21 +90,41 @@ module.exports =
     @toolBar.addSpacer()
 
     @toolBar.addButton
+      callback: "git-gui:toggle"
+      text: '<i class="gc">遼</i>'
+      html: true
+      tooltip: "Git Gui"
+      type: "button"
+
+    @toolBar.addButton
+      callback:
+        '': 'git-plus:add-and-commit'
+        'alt': 'git-plus:add'
+        'shift': 'git-plus:commit'
+        'shift-alt': 'git-plus:add-all'
+      text: '<i class="gc"></i>'
+      html: true
+      tooltip: "Add + Commit"
+      type: "button"
+
+    @toolBar.addButton
       callback: "split-diff:toggle"
       text: '<i class="gc"></i>'
       html: true
       tooltip: "Split Diff"
       type: "button"
+      
+    @toolBar.addSpacer()
 
     @toolBar.addButton
       callback:
-        '': 'remote-ftp:connect'
+        '': 'remote-sync:configure'
         'alt': 'remote-ftp:disconnect'
         'shift': 'remote-ftp:create-ftp-config'
         'shift-alt': 'remote-ftp:create-sftp-config'
       text: '<i class="gc"></i>'
       html: true
-      tooltip: "Remote FTP"
+      tooltip: "FTP Configure"
       type: "button"
 
     @toolBar.addButton

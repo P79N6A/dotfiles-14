@@ -1,5 +1,5 @@
 module.exports =
-  initialize: () ->
+  activate: (state) ->
     global.gc = {
       init: () ->
         console.log atom
@@ -158,3 +158,6 @@ module.exports =
       selections = editor.getSelections()
       options = { select: false, skip: true }
       gc.mutateSelectedText(selections, '<p>&nbsp;</p>', options)
+      
+  initialize: () ->
+    this.activate()

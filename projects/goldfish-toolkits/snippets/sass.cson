@@ -1,0 +1,15 @@
+'.source.css.scss, .source.css.sass, .source.scss, .source.sass':
+  '@at-root':
+    'prefix': 'root'
+    'body': '''
+      @at-root ${1:selector} {
+        ${2://}
+      }$0
+    '''
+  '@each':
+    'prefix': 'each'
+    'body': '''
+      @each ${1:value}, ${2:index} in ${3:var} {
+        ${4://}
+      }$0
+    '''
