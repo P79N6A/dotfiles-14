@@ -1,3 +1,10 @@
+'.text.html.php':
+  '<pre><?php print_r ... ?></pre>':
+    'prefix': 'pre-print'
+    'body': '''
+    <pre><?php print_r(${1:\$var}); ?></pre>$0
+    '''
+
 '.source.php':
   '=== .classname ===':
     'prefix': 'c-title'

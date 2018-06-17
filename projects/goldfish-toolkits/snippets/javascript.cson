@@ -1,4 +1,16 @@
 '.source.js, .source.ts, .source.es':
+  'var ...':
+    'prefix': 'var'
+    'body': 'var ${1:varname} = ${2:null}$0'
+  
+  'document.ready':
+    'prefix': 'dom-ready'
+    'body': '''
+      \$(document).ready(function () {
+        ${1:\/\/}
+      });$0
+    '''
+  
   '=== .classname ===':
     'prefix': 'c-title'
     'body': '''
