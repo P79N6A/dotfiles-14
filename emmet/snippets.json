@@ -16,7 +16,7 @@
   },
 
   "html": {
-    "filters": "html",
+    "filters": "html, c",
     "profile": "html",
     "snippets": {},
     "abbreviations": {}
