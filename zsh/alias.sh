@@ -122,3 +122,4 @@ function hostinger()
 
   ssh -p 65002 "$user@185.224.137.8"
 }
+alias check="git checkout"
