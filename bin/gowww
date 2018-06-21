@@ -1,0 +1,100 @@
+#!/usr/bin/env php
+<?php
+
+error_reporting(-1);
+
+ini_set('memory_limit', '1000M');
+ini_set('upload_max_filesize', '80M');
+ini_set('post_max_size', '96M');
+ini_set('max_input_time', -1);
+ini_set('max_execution_time', 0);
+
+$params = $GLOBALS['argv'];
+$argv = [];
+$cmd = basename($params[0]);
+unset($params[0]);
+
+if (count($params) === 0) {
+    echo "usage: project_key\n";
+    exit(1);
+}
+
+if ($params[1] === 'status') {
+    shell_exec('echo $?');
+    exit(0);
+}
+
+$routes = [
+    [
+        'name' => 'project',
+        'options' => ['-p', '--project'],
+    ],
+];
+
+$reserved = '';
+foreach ($params as $index => $value) {
+    $key = trim($index);
+    $value = trim($value);
+
+    $route_key = '';
+    $route_name = '';
+    $route_data = [];
+    $route_exists = false;
+
+    if (isset($routes[$index])) {
+        $route_exists = true;
+        $route_data = $routes[$index];
+    } else {
+        $filter = array_filter($routes, function ($route) use ($value) {
+            if (isset($route['options'])) {
+                if (in_array($value, $route['options'])) return true;
+            }
+
+            return false;
+        });
+
+        if ($filter) {
+            if (isset($filter[0])) $route_data = $filter[0];
+        }
+    }
+
+    if ($route_data && isset($route_data['name'])) {
+        $key = $route_data['name'];
+        $reserved = $index + 1;
+        $value = (isset($params[$reserved])) ? trim($params[$reserved]) : '';
+    }
+
+    if ($index != $reserved) $argv[$key] = $value;
+}
+
+if (!isset($argv['project'])) $argv['project'] = $argv[1];
+
+$argv = array_merge([
+    'projects' => [
+        'staging' => 'staging.reproduction-galleries.com',
+        'galleries' => 'reproduction-galleries.com',
+        'gallery' => 'reproduction-gallery.com',
+        'lux' => 'luxurypropertiespattaya.com',
+        'gold' => 'goldfishcreativethailand.com',
+    ],
+], $argv);
+
+extract($argv);
+
+if (!isset($project) || !isset($projects[$project]) || $projects[$project] === '') {
+    echo "Undefined project path\n";
+    exit(1);
+}
+
+$project_path = $projects[$project];
+$homedir = exec('echo "$HOME"', $a);
+$realpath = exec('echo "$HOME/www/'. $project_path .'"', $a);
+// $is_exists = exec('cd '. $realpath .'; $?', $a);
+
+if (file_exists($realpath) !== true) {
+    echo "Project ". str_ireplace($homedir, '~', $realpath) ." does not exists\n";
+    exit(1);
+}
+
+echo "$realpath\n";
+exit(0);
