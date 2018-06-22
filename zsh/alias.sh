@@ -123,3 +123,6 @@ function hostinger()
   ssh -p 65002 "$user@185.224.137.8"
 }
 alias check="git checkout"
+alias staging="cd $HOME/www/staging.reproduction-galleries.com"
+alias lux="cd $HOME/www/luxurypropertiespattaya.com"
+alias gold="cd $HOME/www/goldfishcreativethailand.com"

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $# != 2 ]]; then
+  echo 'usage: key command'
+  exit 1
+fi
+
+echo 'alias '$1'="'$2'"' >> ~/.dotfiles/zsh/alias.sh
+echo 'Add new aliaas '$1' successful'
+
+exit 0
