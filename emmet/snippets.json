@@ -26,7 +26,10 @@
     "extends": "html",
     "filters": "html",
     "profile": "html",
-    "snippets": {},
+    "snippets": {
+      "classm": "echo '<pre>'; print_r(get_class_methods(|)); echo '</pre>';$0",
+      "classv": "echo '<pre>'; print_r(get_class_vars(|)); echo '</pre>';$0"
+    },
     "abbreviations": {}
   },
 
