@@ -46,4 +46,15 @@ To https://github.com/nopphasinara/dotfiles.git
    68e05ad..e8fec9a  master -> master
 [1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                              ]133;D;0]1337;RemoteHost=sudprawat@sudprawat.local]1337;CurrentDir=/Users/sudprawat/.dotfiles[0m[27m[24m[J]133;A[32mλ[39m [33m~/.dotfiles[39m [30mmaster[39m [31m●[39m [9:24 AM]
 $ ]133;B[K[?1h=[?2004ha[90mdd[39ma[39md[39md;[90m commit; push[39m[13D[39m [39mc[39mo[39mm[39mm[39mi[39mt[39m;[39m [39mp[39mu[39ms[39mh[?1l>[?2004l
-]133;C;
+]133;C;[master 027c446] Update source
+ 2 files changed, 19 insertions(+), 3 deletions(-)
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 1.03 KiB | 1.03 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+To https://github.com/nopphasinara/dotfiles.git
+   e8fec9a..027c446  master -> master
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                              ]133;D;0]1337;RemoteHost=sudprawat@sudprawat.local]1337;CurrentDir=/Users/sudprawat/.dotfiles[0m[27m[24m[J]133;A[32mλ[39m [33m~/.dotfiles[39m [30mmaster[39m [31m●[39m [9:24 AM]
+$ ]133;B[K[?1h=[?2004h
