@@ -1245,7 +1245,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>552 597 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 52 1920 1125 0 0 1920 1177 </string>
+	<string>0 78 1918 1099 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 132 585 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1488,7 +1488,7 @@
 				<real>0.90237909555435181</real>
 			</dict>
 			<key>Automatically Log</key>
-			<true/>
+			<false/>
 			<key>BM Growl</key>
 			<false/>
 			<key>Background Color</key>

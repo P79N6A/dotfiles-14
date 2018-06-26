@@ -30,4 +30,20 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 [1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                              ]133;D;0]1337;RemoteHost=sudprawat@sudprawat.local]1337;CurrentDir=/Users/sudprawat/.dotfiles[0m[27m[24m[J]133;A[32mλ[39m [33m~/.dotfiles[39m [30mmaster[39m [31m●[39m [9:23 AM]
 $ ]133;B[K[?1h=[?2004ha[90mdd; commit; push[39m[16Da[39md[39md[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [14D[?1l>[?2004l
+]133;C;[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                              ]133;D;0]1337;RemoteHost=sudprawat@sudprawat.local]1337;CurrentDir=/Users/sudprawat/.dotfiles[0m[27m[24m[J]133;A[32mλ[39m [33m~/.dotfiles[39m [30mmaster[39m [31m●[39m [9:24 AM]
+$ ]133;B[K[?1h=[?2004hc[90mlear[39mc[39mo[90mm[90mp[90mo[90mser update -vvv[39m[18D[39mm[39mm[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [16Dit[?1l>[?2004l
+]133;C;[master e8fec9a] Update source
+ 1 file changed, 25 insertions(+)
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                              ]133;D;0]1337;RemoteHost=sudprawat@sudprawat.local]1337;CurrentDir=/Users/sudprawat/.dotfiles[0m[27m[24m[J]133;A[32mλ[39m [33m~/.dotfiles[39m [30mmaster[39m [33m●[39m [9:24 AM]
+$ ]133;B[K[?1h=[?2004hp[90mhp artisan key:generate[39m[23Dp[39mu[90ml[90ml[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [22D[39ms[39m h[?1l>[?2004l
+]133;C;Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 1.44 KiB | 1.44 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/nopphasinara/dotfiles.git
+   68e05ad..e8fec9a  master -> master
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                              ]133;D;0]1337;RemoteHost=sudprawat@sudprawat.local]1337;CurrentDir=/Users/sudprawat/.dotfiles[0m[27m[24m[J]133;A[32mλ[39m [33m~/.dotfiles[39m [30mmaster[39m [31m●[39m [9:24 AM]
+$ ]133;B[K[?1h=[?2004ha[90mdd[39ma[39md[39md;[90m commit; push[39m[13D[39m [39mc[39mo[39mm[39mm[39mi[39mt[39m;[39m [39mp[39mu[39ms[39mh[?1l>[?2004l
 ]133;C;
