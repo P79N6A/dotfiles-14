@@ -146,7 +146,7 @@ function git_push() {
     if [[ $# == 0 ]]; then
         git push
     else
-        git push origin $*
+        git push $*
     fi
 }
 
@@ -154,7 +154,7 @@ function git_pull() {
     if [[ $# == 0 ]]; then
         git pull
     else
-        git pull origin $*
+        git pull $*
     fi
 }
 
