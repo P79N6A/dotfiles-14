@@ -359,3 +359,20 @@ function check_bin() {
     mkdir $HOME/bin
   fi
 }
+
+
+function delete-branch() {
+  if [[ $# < 1 ]]; then
+    echo 'usage: <remote> banch_name'; return 1
+  fi
+
+  local remote='origin'
+  local branch_name
+
+  [[ $# == 1 ]] && branch_name=$1
+  [[ $# == 2 ]] && branch_name=$2; remote=$1
+
+  git branch -d $branch_name 2> /dev/null
+  git branch -D $branch_name 2> /dev/null
+  git push $remote :$branch_name 2> /dev/null
+}

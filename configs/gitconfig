@@ -16,3 +16,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[alias]
+	plfs = !git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull
