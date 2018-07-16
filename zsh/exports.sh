@@ -29,11 +29,11 @@ export ARCHFLAGS="-arch x86_64"
 export BREW_PREFIX="`brew --prefix`"
 export SSH_KEY_PATH=$HOME/.ssh/rsa_id
 export MANPATH=/usr/local/man:$MANPATH
-export PHP_HOME=/usr/local/Cellar/php/7.2.5
 export BREW_PATH=/usr/local/Cellar
 export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
 export COMPOSERBIN=$HOME/.composer/vendor/bin
-export PHP_PATH=/usr/local/Cellar/php/7.2.4_1/bin:/usr/local/Cellar/php/7.2.4_1/sbin
+export PHP_HOME=/usr/local/Cellar/php/7.2.5
+export PHP_PATH=$PHP_HOME/bin:$PHP_HOME/sbin
 
 _PATH=""
 _PATH=/usr/local/sbin:/usr/sbin:/sbin:$_PATH
