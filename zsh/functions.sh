@@ -305,12 +305,12 @@ function install_acmephp() {
     mkdir $HOME/bin
   fi
 
-  if [[ ! -e $HOME/public_html/.well-known ]]; then
-    mkdir $HOME/public_html/.well-known
+  if [[ ! -e .well-known ]]; then
+    mkdir .well-known
   fi
 
-  if [[ ! -e $HOME/public_html/.well-known/acme-challenge ]]; then
-    mkdir $HOME/public_html/.well-known/acme-challenge
+  if [[ ! -e .well-known/acme-challenge ]]; then
+    mkdir .well-known/acme-challenge
   fi
 
   check_bin
