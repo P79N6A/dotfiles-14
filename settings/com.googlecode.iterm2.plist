@@ -46717,7 +46717,7 @@
 	<key>EliminateCloseButtons</key>
 	<false/>
 	<key>EnableDivisionView</key>
-	<false/>
+	<true/>
 	<key>EnableProxyIcon</key>
 	<false/>
 	<key>EnableRendezvous</key>
@@ -46741,9 +46741,9 @@
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
-	<true/>
+	<false/>
 	<key>HideTabCloseButton</key>
-	<true/>
+	<false/>
 	<key>HideTabNumber</key>
 	<true/>
 	<key>Hotkey</key>
@@ -46821,7 +46821,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>861 414 618 232 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>398 524 796 473 0 0 1920 1057 </string>
+	<string>398 485 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 49 1920 1008 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
@@ -46849,6 +46849,8 @@
 			<string></string>
 			<key>AWDS Window Option</key>
 			<string>No</string>
+			<key>Allow Title Reporting</key>
+			<false/>
 			<key>Allow Title Setting</key>
 			<true/>
 			<key>Ambiguous Double Width</key>
@@ -47626,7 +47628,7 @@ Clear Buffer</string>
 			<key>Space</key>
 			<integer>-1</integer>
 			<key>Sync Title</key>
-			<false/>
+			<true/>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
@@ -49322,6 +49324,10 @@ Clear Buffer</string>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
+	<key>ShowNewOutputIndicator</key>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>ShowSessionRestoredBanner</key>
@@ -49331,7 +49337,7 @@ Clear Buffer</string>
 	<key>StatusBarIcon</key>
 	<true/>
 	<key>StretchTabsToFillBar</key>
-	<false/>
+	<true/>
 	<key>SuppressMultilinePasteWarningWhenNotAtShellPrompt</key>
 	<false/>
 	<key>SuppressMultilinePasteWarningWhenPastingOneLineWithTerminalNewline</key>
@@ -49342,6 +49348,8 @@ Clear Buffer</string>
 	<real>0.0</real>
 	<key>TabStyle</key>
 	<integer>3</integer>
+	<key>TabTitlesUseSmartTruncation</key>
+	<false/>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TerminalMargin</key>

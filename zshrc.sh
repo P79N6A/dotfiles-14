@@ -21,17 +21,17 @@ CASE_SENSITIVE="false"
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_UPDATE_PROMPT="true"
 DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -48,8 +48,10 @@ ZSH_CUSTOM=$ZSH/custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=("zsh-autosuggestions" "npm")
+plugins=("zsh-autosuggestions")
 
 source $ZSH/oh-my-zsh.sh
 
 source $ZSHFILES/alias.sh
+
+source $ZSHFILES/bashrc.sh
