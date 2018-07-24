@@ -128,3 +128,20 @@ alias lux="cd $HOME/www/luxurypropertiespattaya.com"
 alias gold="cd $HOME/www/goldfishcreativethailand.com"
 alias luxaffi="cd ~/www/affiliate.luxurypropertiespattaya.com"
 alias del="rm -rf"
+
+# Scanning for Abusing IP Addresses
+alias scanabuse="netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -n"
+# Block IP address
+function blockip() {
+  iptables -A INPUT -s $1 -j DROP
+}
+# Block IP address load website more than 10 times
+function blockip10() {
+  iptables -I INPUT -p tcp —dport 80 -i eth0 -m state —state NEW -m recent —set
+  iptables -I INPUT -p tcp —dport 80 -i eth0 -m state —state NEW -m recent —update —seconds 60 —hitcount 10 -j DROP
+  iptables-save >/etc/iptables.up.rules
+
+  # Save what you have done
+  iptables-save > /etc/iptables.up.rules
+  iptables-restore < /etc/iptables.up.rules
+}
