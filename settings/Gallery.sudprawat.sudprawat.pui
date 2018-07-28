@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<!DOCTYPE PRJ SYSTEM "Gallery.sudprawat.sudprawat.dtd">
+<PRJ>
+  <Folder Name="/Users/sudprawat/www/reproduction-gallery.com/">
+    <Folder Name="gallery.com/">
+      <Expand>1</Expand>
+    </Folder>
+  </Folder>
+  <Project_Information>
+    <Working_Time>1610</Working_Time>
+    <Project_Start>06000000200000000B0000001B000000060000007600000005000000CF00000000000000FE7F00007062000000000000500A84CE847F00009A</Project_Start>
+    <MDIPerspective/>
+  </Project_Information>
+  <Active_Settings>
+    <Active_File_Display_Mode>-1</Active_File_Display_Mode>
+  </Active_Settings>
+</PRJ>

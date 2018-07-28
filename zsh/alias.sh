@@ -136,9 +136,9 @@ function blockip() {
   iptables -A INPUT -s $1 -j DROP
 }
 # Block IP address load website more than 10 times
-function blockip10() {
+function blockipbytimes() {
   iptables -I INPUT -p tcp —dport 80 -i eth0 -m state —state NEW -m recent —set
-  iptables -I INPUT -p tcp —dport 80 -i eth0 -m state —state NEW -m recent —update —seconds 60 —hitcount 10 -j DROP
+  iptables -I INPUT -p tcp —dport 80 -i eth0 -m state —state NEW -m recent —update —seconds 60 —hitcount $1 -j DROP
   iptables-save >/etc/iptables.up.rules
 
   # Save what you have done
