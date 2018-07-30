@@ -129,6 +129,9 @@ alias gold="cd $HOME/www/goldfishcreativethailand.com"
 alias luxaffi="cd ~/www/affiliate.luxurypropertiespattaya.com"
 alias del="rm -rf"
 
+function benchmark() {
+  ab -k -n $1 -c $2 $3
+}
 # Scanning for Abusing IP Addresses
 alias scanabuse="netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -n"
 # Block IP address
