@@ -10,6 +10,8 @@ alias cmd="command -v"
 alias curdate="date \"+DATE: %Y-%m-%d\""
 alias curtime="date \"+TIME: %H:%M:%S\""
 alias path="echo -e ${1//:/\\n}"
+alias pullall="dotf; git pull; atm; git pull; repro; git pull; repronew; git pull; gold; git pull; lux; git pull; luxaffi; git pull; cd ~;"
+alias pushall="dotf; add; commit; push; atm; add; commit; push; repro; add; commit; push; repronew; add; commit; push; gold; add; commit; push; lux; add; commit; push; luxaffi; add; commit; push; cd ~;"
 
 
 ## LS
