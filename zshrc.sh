@@ -3,6 +3,10 @@ export ZSHFILES=$HOME/.dotfiles/zsh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+function phpversion() {
+  php -v | grep -E '([0-9\.]+)' -io | head -n1
+}
+
 source $ZSHFILES/exports.sh
 source $ZSHFILES/functions.sh
 

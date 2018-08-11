@@ -150,3 +150,4 @@ function blockipbytimes() {
   iptables-save > /etc/iptables.up.rules
   iptables-restore < /etc/iptables.up.rules
 }
+alias houzez="$HOME/www/houzez.local"
