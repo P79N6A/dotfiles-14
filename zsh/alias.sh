@@ -153,19 +153,19 @@ alias houzez="$HOME/www/houzez.local"
 
 
 function pullall() {
-  echo -ne "Pulling... .dotfiles\n";
+  echo -ne "\n\e[33m\e[1mPulling... .dotfiles\e[39m\e[0m\n";
   dotf; git pull;
-  echo -ne "Pulling... .atom\n";
+  echo -ne "\n\e[33m\e[1mPulling... .atom\e[39m\e[0m\n";
   atm; git pull;
-  echo -ne "Pulling... reproduction-gallery.com\n";
+  echo -ne "\n\e[33m\e[1mPulling... reproduction-gallery.com\e[39m\e[0m\n";
   repro; git pull;
-  echo -ne "Pulling... repro-gallery-master\n";
+  echo -ne "\n\e[33m\e[1mPulling... repro-gallery-master\e[39m\e[0m\n";
   repronew; git pull;
-  echo -ne "Pulling... goldfishcreativethailand.com\n";
+  echo -ne "\n\e[33m\e[1mPulling... goldfishcreativethailand.com\e[39m\e[0m\n";
   gold; git pull;
-  echo -ne "Pulling... luxurypropertiespattaya.com\n";
+  echo -ne "\n\e[33m\e[1mPulling... luxurypropertiespattaya.com\e[39m\e[0m\n";
   lux; git pull;
-  echo -ne "Pulling... affiliate.luxurypropertiespattaya.com\n";
+  echo -ne "\n\e[33m\e[1mPulling... affiliate.luxurypropertiespattaya.com\e[39m\e[0m\n";
   luxaffi; git pull;
   cd ~;
 }
