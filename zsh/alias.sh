@@ -171,19 +171,19 @@ function pullall() {
 }
 
 function pushall() {
-  echo -ne "\e[33m\e[1mPushing... .dotfiles\e[39m\e[0m\n";
+  echo -ne "\n\e[33m\e[1mPushing... .dotfiles\e[39m\e[0m\n";
   dotf; add; commit; push;
-  echo -ne "Pushing... .atom\n";
+  echo -ne "\n\e[33m\e[1mPushing... .atom\e[39m\e[0m\n";
   atm; add; commit; push;
-  echo -ne "Pushing... reproduction-gallery.com\n";
+  echo -ne "\n\e[33m\e[1mPushing... reproduction-gallery.com\e[39m\e[0m\n";
   repro; add; commit; push;
-  echo -ne "Pushing... repro-gallery-master\n";
+  echo -ne "\n\e[33m\e[1mPushing... repro-gallery-master\e[39m\e[0m\n";
   repronew; add; commit; push;
-  echo -ne "Pushing... goldfishcreativethailand.com\n";
+  echo -ne "\n\e[33m\e[1mPushing... goldfishcreativethailand.com\e[39m\e[0m\n";
   gold; add; commit; push;
-  echo -ne "Pushing... luxurypropertiespattaya.com\n";
+  echo -ne "\n\e[33m\e[1mPushing... luxurypropertiespattaya.com\e[39m\e[0m\n";
   lux; add; commit; push;
-  echo -ne "Pushing... affiliate.luxurypropertiespattaya.com\n";
+  echo -ne "\n\e[33m\e[1mPushing... affiliate.luxurypropertiespattaya.com\e[39m\e[0m\n";
   luxaffi; add; commit; push;
   cd ~;
 }
