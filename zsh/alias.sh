@@ -167,6 +167,8 @@ function pullall() {
   lux; git pull;
   echo -ne "\n\e[33m\e[1mPulling... affiliate.luxurypropertiespattaya.com\e[39m\e[0m\n";
   luxaffi; git pull;
+  echo -ne "\n\e[33m\e[1mPulling... houzez.local\e[39m\e[0m\n";
+  houzez; git pull;
   cd ~;
   echo -ne "\n";
 }
@@ -186,6 +188,8 @@ function pushall() {
   lux; add; commit; push;
   echo -ne "\n\e[33m\e[1mPushing... affiliate.luxurypropertiespattaya.com\e[39m\e[0m\n";
   luxaffi; add; commit; push;
+  echo -ne "\n\e[33m\e[1mPushing... houzez.local\e[39m\e[0m\n";
+  houzez; add; commit; push;
   cd ~;
   echo -ne "\n";
 }
