@@ -10,8 +10,6 @@ alias cmd="command -v"
 alias curdate="date \"+DATE: %Y-%m-%d\""
 alias curtime="date \"+TIME: %H:%M:%S\""
 alias path="echo -e ${1//:/\\n}"
-alias pullall="dotf; git pull; atm; git pull; repro; git pull; repronew; git pull; gold; git pull; lux; git pull; luxaffi; git pull; cd ~;"
-alias pushall="dotf; add; commit; push; atm; add; commit; push; repro; add; commit; push; repronew; add; commit; push; gold; add; commit; push; lux; add; commit; push; luxaffi; add; commit; push; cd ~;"
 
 
 ## LS
@@ -151,3 +149,41 @@ function blockipbytimes() {
   iptables-restore < /etc/iptables.up.rules
 }
 alias houzez="$HOME/www/houzez.local"
+
+
+
+function pullall() {
+  echo -ne "Pulling... .dotfiles\n";
+  dotf; git pull;
+  echo -ne "Pulling... .atom\n";
+  atm; git pull;
+  echo -ne "Pulling... reproduction-gallery.com\n";
+  repro; git pull;
+  echo -ne "Pulling... repro-gallery-master\n";
+  repronew; git pull;
+  echo -ne "Pulling... goldfishcreativethailand.com\n";
+  gold; git pull;
+  echo -ne "Pulling... luxurypropertiespattaya.com\n";
+  lux; git pull;
+  echo -ne "Pulling... affiliate.luxurypropertiespattaya.com\n";
+  luxaffi; git pull;
+  cd ~;
+}
+
+function pushall() {
+  echo -ne "Pushing... .dotfiles\n";
+  dotf; add; commit; push;
+  echo -ne "Pushing... .atom\n";
+  atm; add; commit; push;
+  echo -ne "Pushing... reproduction-gallery.com\n";
+  repro; add; commit; push;
+  echo -ne "Pushing... repro-gallery-master\n";
+  repronew; add; commit; push;
+  echo -ne "Pushing... goldfishcreativethailand.com\n";
+  gold; add; commit; push;
+  echo -ne "Pushing... luxurypropertiespattaya.com\n";
+  lux; add; commit; push;
+  echo -ne "Pushing... affiliate.luxurypropertiespattaya.com\n";
+  luxaffi; add; commit; push;
+  cd ~;
+}
