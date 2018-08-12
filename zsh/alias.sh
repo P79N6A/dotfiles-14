@@ -168,6 +168,7 @@ function pullall() {
   echo -ne "\n\e[33m\e[1mPulling... affiliate.luxurypropertiespattaya.com\e[39m\e[0m\n";
   luxaffi; git pull;
   cd ~;
+  echo -ne "\n";
 }
 
 function pushall() {
@@ -186,4 +187,5 @@ function pushall() {
   echo -ne "\n\e[33m\e[1mPushing... affiliate.luxurypropertiespattaya.com\e[39m\e[0m\n";
   luxaffi; add; commit; push;
   cd ~;
+  echo -ne "\n";
 }
