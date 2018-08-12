@@ -171,7 +171,7 @@ function pullall() {
 }
 
 function pushall() {
-  echo -ne "%F{yellow}Pushing... .dotfiles%f\n";
+  printf "%F{yellow}Pushing... .dotfiles%f\n";
   dotf; add; commit; push;
   echo -ne "Pushing... .atom\n";
   atm; add; commit; push;
