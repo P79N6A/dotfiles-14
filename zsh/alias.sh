@@ -114,13 +114,13 @@ function fastcomet()
 
 function hostinger()
 {
-  local user='u822159201'
+  local user='u113671738'
 
   if [[ -n $1 ]]; then
     user=$1; shift
   fi
 
-  ssh -p 65002 "$user@185.224.137.8"
+  ssh -p 65002 "$user@185.201.11.43"
 }
 alias check="git checkout"
 alias staging="cd $HOME/www/staging.reproduction-galleries.com"
