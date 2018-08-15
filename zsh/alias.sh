@@ -10,6 +10,13 @@ alias cmd="command -v"
 alias curdate="date \"+DATE: %Y-%m-%d\""
 alias curtime="date \"+TIME: %H:%M:%S\""
 alias path="echo -e ${1//:/\\n}"
+alias hostof="host -a "
+alias nsof="host -t ns "
+function hostquery() {
+  if [[ $# != 1 ]]; then
+    echo -ne "usage: query hostname|ip\n"
+  fi
+}
 
 
 ## LS
