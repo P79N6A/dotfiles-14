@@ -267,3 +267,8 @@ function show_calendar() {
 
   cal $1 $2
 }
+
+
+function toggle_browser_editor() {
+  data:text/html, <html contenteditable>
+}
