@@ -200,3 +200,70 @@ function pushall() {
   cd ~;
   echo -ne "\n";
 }
+
+function screenshots_folder() {
+  defaults write com.apple.screencapture location $1
+  killall SystemUIServer
+}
+
+function screenshot_type() {
+  defaults write com.apple.screencapture type $1
+  killall SystemUIServer
+}
+
+function toggle_single_app() {
+  is_active=`defaults read com.apple.dock single-app`
+
+  if [[ $is_active == 1 ]]; then
+    new_status=false
+  else;
+    new_status=true
+  fi
+
+  defaults write com.apple.dock single-app -bool $new_status; killall Dock
+}
+
+function toggle_quickview_copy() {
+  is_active=`defaults read com.apple.finder QLEnableTextSelection`
+
+  if [[ $is_active == 1 ]]; then
+    new_status=false
+  else;
+    new_status=true
+  fi
+
+  defaults write com.apple.finder QLEnableTextSelection -bool $new_status; killall Finder
+}
+
+function toggle_window_effect() {
+  is_active=`defaults read NSGlobalDomain NSAutomaticWindowAnimationsEnabled`
+
+  if [[ $is_active == 1 ]]; then
+    new_status=false
+  else;
+    new_status=true
+  fi
+
+  defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool $new_status
+}
+
+function toggle_floating_viewer() {
+  is_active=`defaults read com.apple.helpviewer DevMode`
+
+  if [[ $is_active == 1 ]]; then
+    new_status=false
+  else;
+    new_status=true
+  fi
+
+  defaults write com.apple.helpviewer DevMode -bool $new_status
+}
+
+function show_calendar() {
+  if [[ $# != 2 ]]; then
+    echo -ne "usage: month[MM] year[YYYY]\n"
+    return 0
+  fi
+
+  cal $1 $2
+}
