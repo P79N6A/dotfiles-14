@@ -269,6 +269,6 @@ function show_calendar() {
 }
 
 
-function toggle_browser_editor() {
-  data:text/html, <html contenteditable>
-}
+# function toggle_browser_editor() {
+#   data:text/html, <html contenteditable>
+# }
