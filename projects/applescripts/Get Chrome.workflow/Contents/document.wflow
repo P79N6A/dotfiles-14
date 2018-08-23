@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on getChrome()	set frontWindow to ""	set isCanary to false		set appwindow to get frontmost of application "Google Chrome"		if appwindow then		set frontWindow to "Chrome"	end if		set appwindow to get frontmost of application "Google Chrome Canary"		if appwindow then		set frontWindow to "Canary"		set isCanary to true	end if		return frontWindowend getChromeset chrome to getChrome()if {chrome = "Chrome"} then	tell application "Google Chrome"		activate				tell front window			set n to active tab index			make new tab at after tab n		end tell	end tellelse	tell application "Google Chrome Canary"		activate				tell front window			set n to active tab index			make new tab at after tab n		end tell	end tellend if</string>
+					<string></string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -68,15 +68,15 @@
 				<key>Class Name</key>
 				<string>RunScriptAction</string>
 				<key>InputUUID</key>
-				<string>2A6D3704-BB22-4899-A00C-C4247CEEFDE1</string>
+				<string>A8DC8DE2-E8E5-4E09-B711-7F9EDE9EC322</string>
 				<key>Keywords</key>
 				<array>
 					<string>Run</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>0A443CCC-80DB-4764-8BDE-FA046F1FAF6C</string>
+				<string>9D02ACF3-8AC0-4FE7-B1D4-BFE8BF7CF44B</string>
 				<key>UUID</key>
-				<string>F10678AC-1B34-43E4-A8F1-12A29C808AE9</string>
+				<string>5BC6FD13-A047-4129-856B-D22617074357</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -115,17 +115,6 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict/>
-	<key>variables</key>
-	<array>
-		<dict>
-			<key>UUID</key>
-			<string>7A7D605C-DE3E-4875-9535-8DE96DF6B345</string>
-			<key>identifier</key>
-			<string>com.apple.Automator.Variable.Storage</string>
-			<key>name</key>
-			<string>appname</string>
-		</dict>
-	</array>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>serviceApplicationBundleID</key>
