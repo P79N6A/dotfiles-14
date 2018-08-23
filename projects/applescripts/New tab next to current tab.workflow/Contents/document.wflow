@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, params}	set appname to ""		set chromeActive to get frontmost of application "Google Chrome Canary"		if {chromeActive = true} then		set appname to "Google Chrome Canary"				tell application "Google Chrome Canary"			tell first window				set n to active tab index				make new tab at after tab n				move active tab to 1			end tell		end tell	end if		set chromeActive to get frontmost of application "Google Chrome"	if {chromeActive = true} then		set appname to "Google Chrome"				tell application "Google Chrome"			tell first window				set n to active tab index				make new tab at after tab n				move active tab to 1			end tell		end tell	end if		return appnameend run</string>
+					<string>on run {input, params}	set appname to ""		set chromeActive to get frontmost of application "Google Chrome Canary"		if {chromeActive = true} then		set appname to "Google Chrome Canary"				tell application "Google Chrome Canary"			tell first window				set n to active tab index				make new tab at after tab n			end tell		end tell	end if		set chromeActive to get frontmost of application "Google Chrome"	if {chromeActive = true} then		set appname to "Google Chrome"				tell application "Google Chrome"			tell first window				set n to active tab index				make new tab at after tab n			end tell		end tell	end ifend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>769.000000:496.000000</string>
+				<string>769.000000:316.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
