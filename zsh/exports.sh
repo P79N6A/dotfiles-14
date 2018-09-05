@@ -35,13 +35,7 @@ export COMPOSERBIN=$HOME/.composer/vendor/bin
 export PHP_HOME=/usr/local/Cellar/php/7.2.8/bin
 export PHP_PATH=$PHP_HOME/bin:$PHP_HOME/sbin
 
-_PATH=""
-_PATH=/usr/local/sbin:/usr/sbin:/sbin:$_PATH
-_PATH=$DOTFILES/bin:$_PATH
-_PATH=$COMPOSERBIN:$_PATH
-_PATH=$BREW_PATH:$_PATH
-_PATH=$PHP_PATH:$_PATH
-_PATH=$BREWGEMBIN:/usr/local/bin:/usr/bin:/bin:$_PATH
+_PATH=/usr/local/bin:/usr/bin:/bin:$DOTFILES/bin:$BREWGEMBIN:$COMPOSERBIN:$BREW_PATH:/usr/local/sbin:/usr/sbin:/sbin
 
 export PATH=$_PATH
 
