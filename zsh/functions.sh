@@ -297,7 +297,7 @@ function upg.() {
 }
 
 
-check_required_packages
+# check_required_packages
 
 
 function install_acmephp() {
