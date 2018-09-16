@@ -1,0 +1,1 @@
+tell application "Google Chrome" to click at {0, 0}
