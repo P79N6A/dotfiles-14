@@ -17,6 +17,7 @@ function hostquery() {
     echo -ne "usage: query hostname|ip\n"
   fi
 }
+alias clearmail=": > /var/mail/$USER"
 
 
 ## LS
