@@ -22,22 +22,36 @@ export GITSSH="git@github.com"
 export FINEARTGIT=$GITURL/fineartdeveloper
 export NOPPHASINGIT=$GITURL/nopphasinara
 
-export LDFLAGS=-L/usr/local/opt/php@7.1/lib
-export CPPFLAGS=-I/usr/local/opt/php@7.1/include
+# export LDFLAGS=-L/usr/local/opt/php@7.1/lib
+# export CPPFLAGS=-I/usr/local/opt/php@7.1/include
 
 export ARCHFLAGS="-arch x86_64"
 export BREW_PREFIX="`brew --prefix`"
 export SSH_KEY_PATH=$HOME/.ssh/rsa_id
 export MANPATH=/usr/local/man:$MANPATH
 export BREW_PATH=/usr/local/Cellar
-export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
+# export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
 export COMPOSERBIN=$HOME/.composer/vendor/bin
-export PHP_HOME=/usr/local/Cellar/php/7.2.8/bin
+export PHP_HOME=/usr/local/Cellar/php/7.2.10/bin
 export PHP_PATH=$PHP_HOME/bin:$PHP_HOME/sbin
 
 _PATH=$BREWGEMBIN:$COMPOSERBIN:$BREW_PATH:/usr/local/bin:/usr/bin:/bin:$DOTFILES/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 export PATH=$_PATH
+
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/apr/bin:$PATH"
+export PATH="/usr/local/opt/apr-util/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/libiconv/bin:$PATH"
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/usr/local/opt/openldap/bin:$PATH"
+export PATH="/usr/local/opt/openldap/sbin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+# export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 
 ## THEME VARIABLES
