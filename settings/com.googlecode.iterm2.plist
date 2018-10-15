@@ -46779,7 +46779,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles/settings</string>
+	<string>~/.dotfiles/settings/schemes</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -46813,12 +46813,17 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>628 155 775 560 0 0 1920 1177 </string>
+	<string>861 414 618 232 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>290 399 796 486 0 0 1920 1177 </string>
+	<string>398 485 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 56 1920 1121 0 0 1920 1177 </string>
+	<string>0 63 1916 994 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4_selection</key>
@@ -47269,7 +47274,7 @@ Clear Buffer</string>
 					<key>Text</key>
 					<string>01 0B 72 65 6C 6F 61 64 5F 73 68 65 6C 6C 0D</string>
 				</dict>
-				<key>0x73-0x100000</key>
+				<key>0x73-0x180000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
@@ -49210,6 +49215,12 @@ Clear Buffer</string>
 	<true/>
 	<key>NoSyncConfirmShellIntegrationCommand_selection</key>
 	<integer>0</integer>
+	<key>NoSyncCoprocessCommandsToIgnoreErrorOutput</key>
+	<array>
+		<string>tput home</string>
+	</array>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallUtilitiesPackage</key>
@@ -49217,15 +49228,11 @@ Clear Buffer</string>
 	<key>NoSyncInstallUtilitiesPackage_selection</key>
 	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>8685B631-17A2-47B9-B989-31147DFD9600</string>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>1</integer>
+	<string>3174284D-BE22-4B54-BEC6-98A06A91EF4E</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>560099058.36621594</real>
+	<real>533641258.678617</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -49282,7 +49289,7 @@ Clear Buffer</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/sudprawat/.dotfiles/settings</string>
+	<string>/Users/Fineart/.dotfiles/settings</string>
 	<key>PreventEscapeSequenceFromClearingHistory</key>
 	<true/>
 	<key>ProfilesWindowJoinsActiveSpace</key>
@@ -49304,10 +49311,14 @@ Clear Buffer</string>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=18</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=1</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
+	<key>SULastCheckTime</key>
+	<date>2018-03-02T03:27:19Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>Secure Input</key>
 	<false/>
 	<key>SensitiveScrollWheel</key>
 	<false/>
@@ -49372,7 +49383,7 @@ Clear Buffer</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.1</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
