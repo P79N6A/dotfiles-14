@@ -273,3 +273,4 @@ function show_calendar() {
 # function toggle_browser_editor() {
 #   data:text/html, <html contenteditable>
 # }
+alias brpt="cd ~/www/buyrentpropertythailand.com"
