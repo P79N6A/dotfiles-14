@@ -1,3 +1,5 @@
+export h=$HOME
+
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="10"
 
 export HOMEBREW_NO_EMOJI="1"

@@ -274,3 +274,6 @@ function show_calendar() {
 #   data:text/html, <html contenteditable>
 # }
 alias brpt="cd ~/www/buyrentpropertythailand.com"
+alias download="it2dl"
+alias preview="imgcat"
+alias hh="echo $HOME"
