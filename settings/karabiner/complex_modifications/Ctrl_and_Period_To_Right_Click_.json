@@ -1,0 +1,29 @@
+{
+  "title": "Change ctrl+period to right click",
+  "rules": [
+    {
+      "description": "Post right click if ctrl+period buttons pressed together.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button2"
+            }
+          ],
+          "parameters": {
+            "basic.to_timeout_milliseconds": 250
+          }
+        }
+      ]
+    }
+  ]
+}
