@@ -1,0 +1,105 @@
+{
+  "title": "Change fn+ctrl+arrows to scroll",
+  "rules": [
+    {
+      "description": "Scroll up if fn+ctrl+up pressed together.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "vertical_wheel": -64
+              },
+              "lazy": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Scroll right if fn+ctrl+right pressed together.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": -64
+              },
+              "lazy": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Scroll down if fn+ctrl+down pressed together.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "vertical_wheel": 64
+              },
+              "lazy": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Scroll left if fn+ctrl+left pressed together.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": 64
+              },
+              "lazy": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
