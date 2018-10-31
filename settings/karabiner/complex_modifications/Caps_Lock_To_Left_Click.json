@@ -2,7 +2,7 @@
   "title": "Change caps_lock to left_click",
   "rules": [
     {
-      "description": "Post left click if caps lock pressed alone. (Any applications)",
+      "description": "Post left click if caps lock pressed alone. (Global)",
       "manipulators": [
         {
           "type": "basic",

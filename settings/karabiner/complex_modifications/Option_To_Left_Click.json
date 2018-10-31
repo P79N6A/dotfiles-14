@@ -41,7 +41,7 @@
       ]
     },
     {
-      "description": "Post left click if right option pressed alone. (Only in browsers)",
+      "description": "Post left click if right option pressed alone. (Global)",
       "manipulators": [
         {
           "type": "basic",
@@ -65,17 +65,7 @@
           ],
           "parameters": {
             "basic.to_if_alone_timeout_milliseconds": 250
-          },
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome",
-                "^com.apple.Safari",
-                "^com.apple.Firefox"
-              ]
-            }
-          ]
+          }
         }
       ]
     }
