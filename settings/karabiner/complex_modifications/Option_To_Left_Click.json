@@ -41,6 +41,35 @@
       ]
     },
     {
+      "description": "Post left click if left option pressed alone. (Global)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250
+          }
+        }
+      ]
+    },
+    {
       "description": "Post left click if right option pressed alone. (Global)",
       "manipulators": [
         {
