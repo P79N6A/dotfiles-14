@@ -2,6 +2,45 @@
   "title": "Change left/right control to left_click",
   "rules": [
     {
+      "description": "Post left click if left control pressed alone. (Only in browsers)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250
+          },
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome",
+                "^com.apple.Safari",
+                "^com.apple.Firefox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Post left click if left control pressed alone. (Global)",
       "manipulators": [
         {
