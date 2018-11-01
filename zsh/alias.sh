@@ -109,6 +109,18 @@ alias passv="echo \"VpjkcV88\" | copy"
 alias fetch="git fetch"
 alias branch="git branch"
 alias merge="git merge"
+
+function sshplesk()
+{
+  local user='adminonly'
+
+  if [[ -n $1 ]]; then
+    user=$1; shift
+  fi
+
+  ssh "$user@184.95.43.90"
+}
+
 function fastcomet()
 {
   local user='devilsdenthailan'
