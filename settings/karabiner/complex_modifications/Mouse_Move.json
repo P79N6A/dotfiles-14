@@ -1,103 +1,99 @@
 {
-  "title": "Change fn+ctrl+arrows to scroll",
+  "title": "Move mouse pointer",
   "rules": [
     {
-      "description": "Scroll up if fn+ctrl+up pressed together.",
+      "description": "control + up_arrow to mouse_key up",
       "manipulators": [
         {
-          "type": "basic",
           "from": {
             "key_code": "up_arrow",
             "modifiers": {
               "mandatory": [
-                "left_control",
-                "fn"
+                "left_control"
               ]
             }
           },
           "to": [
             {
               "mouse_key": {
-                "vertical_wheel": -64
+                "y": -1200
               },
               "lazy": true
             }
-          ]
+          ],
+          "type": "basic"
         }
       ]
     },
     {
-      "description": "Scroll right if fn+ctrl+right pressed together.",
+      "description": "control + right_arrow to mouse_key right",
       "manipulators": [
         {
-          "type": "basic",
           "from": {
             "key_code": "right_arrow",
             "modifiers": {
               "mandatory": [
-                "left_control",
-                "fn"
+                "left_control"
               ]
             }
           },
           "to": [
             {
               "mouse_key": {
-                "horizontal_wheel": -64
+                "x": 1200
               },
               "lazy": true
             }
-          ]
+          ],
+          "type": "basic"
         }
       ]
     },
     {
-      "description": "Scroll down if fn+ctrl+down pressed together.",
+      "description": "control + down_arrow to mouse_key down",
       "manipulators": [
         {
-          "type": "basic",
           "from": {
             "key_code": "down_arrow",
             "modifiers": {
               "mandatory": [
-                "left_control",
-                "fn"
+                "left_control"
               ]
             }
           },
           "to": [
             {
               "mouse_key": {
-                "vertical_wheel": 64
+                "y": 1200
               },
               "lazy": true
             }
-          ]
+          ],
+          "type": "basic"
         }
       ]
     },
     {
-      "description": "Scroll left if fn+ctrl+left pressed together.",
+      "description": "control + left_arrow to mouse_key left",
       "manipulators": [
         {
-          "type": "basic",
           "from": {
             "key_code": "left_arrow",
             "modifiers": {
               "mandatory": [
-                "left_control",
-                "fn"
+                "left_control"
               ]
             }
           },
           "to": [
             {
               "mouse_key": {
-                "horizontal_wheel": 64
+                "x": -1200
               },
               "lazy": true
             }
-          ]
+          ],
+          "type": "basic"
         }
       ]
     }
