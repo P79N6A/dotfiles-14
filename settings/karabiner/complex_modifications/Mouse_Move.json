@@ -16,7 +16,7 @@
           "to": [
             {
               "mouse_key": {
-                "y": -1200
+                "y": -800
               },
               "lazy": true
             }
@@ -40,7 +40,7 @@
           "to": [
             {
               "mouse_key": {
-                "x": 1200
+                "x": 800
               },
               "lazy": true
             }
@@ -64,7 +64,7 @@
           "to": [
             {
               "mouse_key": {
-                "y": 1200
+                "y": 800
               },
               "lazy": true
             }
@@ -88,7 +88,7 @@
           "to": [
             {
               "mouse_key": {
-                "x": -1200
+                "x": -800
               },
               "lazy": true
             }
