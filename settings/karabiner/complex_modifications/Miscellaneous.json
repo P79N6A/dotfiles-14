@@ -15,9 +15,17 @@
           },
           "to": [
             {
+              "key_code": "right_shift"
+            }
+          ],
+          "to_if_alone": [
+            {
               "key_code": "mission_control"
             }
           ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 100
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -39,6 +47,11 @@
           "to": [
             {
               "key_code": "right_shift"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "right_shift"
             },
             {
               "set_variable": {
@@ -47,6 +60,9 @@
               }
             }
           ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 100
+          },
           "to_delayed_action": {
             "to_if_invoked": [
               {
@@ -87,9 +103,6 @@
               "lazy": true
             }
           ],
-          "parameters": {
-            "basic.to_timeout_milliseconds": 100
-          },
           "type": "basic"
         }
       ]

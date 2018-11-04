@@ -23,9 +23,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "conditions": [
             {
               "type": "frontmost_application_if",
@@ -62,9 +59,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "type": "basic"
         }
       ]
@@ -91,9 +85,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "conditions": [
             {
               "type": "frontmost_application_if",
@@ -130,9 +121,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "type": "basic"
         }
       ]
@@ -159,9 +147,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "conditions": [
             {
               "type": "frontmost_application_if",
@@ -198,9 +183,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "type": "basic"
         }
       ]
@@ -227,9 +209,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "conditions": [
             {
               "type": "frontmost_application_if",
@@ -266,9 +245,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "type": "basic"
         }
       ]
@@ -295,9 +271,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "conditions": [
             {
               "type": "frontmost_application_if",
@@ -334,9 +307,6 @@
               "pointing_button": "button1"
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
           "type": "basic"
         }
       ]
