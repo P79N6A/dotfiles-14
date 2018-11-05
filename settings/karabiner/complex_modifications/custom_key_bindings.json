@@ -99,6 +99,12 @@
           "from": {
             "key_code": "left_option"
           },
+          "to": [
+            {
+              "key_code": "left_option",
+              "lazy": true
+            }
+          ],
           "to_if_alone": [
             {
               "pointing_button": "button1"
@@ -117,6 +123,12 @@
           "from": {
             "key_code": "right_option"
           },
+          "to": [
+            {
+              "key_code": "right_option",
+              "lazy": true
+            }
+          ],
           "to_if_alone": [
             {
               "pointing_button": "button1"
