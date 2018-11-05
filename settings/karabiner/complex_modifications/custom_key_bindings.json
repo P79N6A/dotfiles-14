@@ -1,63 +1,141 @@
 {
-  "title": "Complex Key Bindings",
+  "title": "Complex Modifications Rules",
   "rules": [
     {
-      "description": "Change F3, F4, F7, F8, F9 to LEFT_CLICK if CAPS_LOCK activate",
+      "description": "Toggle fn_locked if hold down Fn key",
       "manipulators": [
         {
-          "type": "basic",
           "from": {
-            "key_code": "caps_lock"
+            "key_code": "fn"
           },
           "to": [
             {
+              "key_code": "fn",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "fn"
+            }
+          ],
+          "to_if_held_down": [
+            {
               "set_variable": {
-                "name": "caps_lock activate",
+                "name": "fn_locked",
                 "value": 1
               }
             },
             {
-              "key_code": "vk_none"
+              "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Activate fn_locked successfully.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
+            },
+            {
+              "key_code": "fn",
+              "lazy": true
             }
           ],
           "conditions": [
             {
               "type": "variable_if",
-              "name": "caps_lock activate",
+              "name": "fn_locked",
               "value": 0
             }
-          ]
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 1000
+          },
+          "type": "basic"
         },
         {
-          "type": "basic",
           "from": {
-            "key_code": "caps_lock"
+            "key_code": "fn"
           },
           "to": [
             {
+              "key_code": "fn",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "fn"
+            }
+          ],
+          "to_if_held_down": [
+            {
               "set_variable": {
-                "name": "caps_lock activate",
+                "name": "fn_locked",
                 "value": 0
               }
             },
             {
-              "key_code": "vk_none"
+              "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Deactivate fn_locked successfully.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
+            },
+            {
+              "key_code": "fn",
+              "lazy": true
             }
           ],
           "conditions": [
             {
               "type": "variable_if",
-              "name": "caps_lock activate",
+              "name": "fn_locked",
               "value": 1
             }
-          ]
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 1000
+          },
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Change OPTION, F3-4, F7-9 to LEFT_CLICK when fn_locked activate.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_option"
+          },
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
         },
         {
-          "type": "basic",
+          "from": {
+            "key_code": "right_option"
+          },
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
           "from": {
             "key_code": "f3"
           },
-          "to": [
+          "to_if_alone": [
             {
               "pointing_button": "button1"
             }
@@ -65,17 +143,17 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "caps_lock activate",
+              "name": "fn_locked",
               "value": 1
             }
-          ]
+          ],
+          "type": "basic"
         },
         {
-          "type": "basic",
           "from": {
             "key_code": "f4"
           },
-          "to": [
+          "to_if_alone": [
             {
               "pointing_button": "button1"
             }
@@ -83,17 +161,17 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "caps_lock activate",
+              "name": "fn_locked",
               "value": 1
             }
-          ]
+          ],
+          "type": "basic"
         },
         {
-          "type": "basic",
           "from": {
             "key_code": "f7"
           },
-          "to": [
+          "to_if_alone": [
             {
               "pointing_button": "button1"
             }
@@ -101,17 +179,17 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "caps_lock activate",
+              "name": "fn_locked",
               "value": 1
             }
-          ]
+          ],
+          "type": "basic"
         },
         {
-          "type": "basic",
           "from": {
             "key_code": "f8"
           },
-          "to": [
+          "to_if_alone": [
             {
               "pointing_button": "button1"
             }
@@ -119,17 +197,17 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "caps_lock activate",
+              "name": "fn_locked",
               "value": 1
             }
-          ]
+          ],
+          "type": "basic"
         },
         {
-          "type": "basic",
           "from": {
             "key_code": "f9"
           },
-          "to": [
+          "to_if_alone": [
             {
               "pointing_button": "button1"
             }
@@ -137,103 +215,18 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "caps_lock activate",
+              "name": "fn_locked",
               "value": 1
             }
-          ]
+          ],
+          "type": "basic"
         }
       ]
     },
     {
-      "description": "Change Fn CONTROL + arrow keys to scroll wheel",
+      "description": "Change CONTROL + arrow keys to move mouse cursor when fn_locked activate.",
       "manipulators": [
         {
-          "type": "basic",
-          "from": {
-            "key_code": "left_arrow",
-            "modifiers": {
-              "mandatory": [
-                "fn",
-                "left_control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "mouse_key": {
-                "horizontal_wheel": -32,
-                "speed_multiplier": 1.5
-              }
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "right_arrow",
-            "modifiers": {
-              "mandatory": [
-                "fn",
-                "left_control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "mouse_key": {
-                "horizontal_wheel": 32,
-                "speed_multiplier": 1.5
-              }
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "up_arrow",
-            "modifiers": {
-              "mandatory": [
-                "fn",
-                "left_control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "mouse_key": {
-                "vertical_wheel": -32,
-                "speed_multiplier": 1.5
-              }
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "down_arrow",
-            "modifiers": {
-              "mandatory": [
-                "fn",
-                "left_control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "mouse_key": {
-                "vertical_wheel": 32,
-                "speed_multiplier": 1.5
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "Change CONTROL + arrow keys to move mouse",
-      "manipulators": [
-        {
-          "type": "basic",
           "from": {
             "key_code": "left_arrow",
             "modifiers": {
@@ -245,14 +238,21 @@
           "to": [
             {
               "mouse_key": {
-                "x": -640,
-                "speed_multiplier": 1.5
+                "speed_multiplier": 1.5,
+                "x": -540
               }
             }
-          ]
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
         },
         {
-          "type": "basic",
           "from": {
             "key_code": "right_arrow",
             "modifiers": {
@@ -264,14 +264,21 @@
           "to": [
             {
               "mouse_key": {
-                "x": 640,
-                "speed_multiplier": 1.5
+                "speed_multiplier": 1.5,
+                "x": 540
               }
             }
-          ]
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
         },
         {
-          "type": "basic",
           "from": {
             "key_code": "up_arrow",
             "modifiers": {
@@ -283,14 +290,21 @@
           "to": [
             {
               "mouse_key": {
-                "y": -640,
-                "speed_multiplier": 1.5
+                "speed_multiplier": 1.5,
+                "y": -540
               }
             }
-          ]
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
         },
         {
-          "type": "basic",
           "from": {
             "key_code": "down_arrow",
             "modifiers": {
@@ -302,11 +316,88 @@
           "to": [
             {
               "mouse_key": {
-                "y": 640,
-                "speed_multiplier": 1.5
+                "speed_multiplier": 1.5,
+                "y": 540
               }
             }
-          ]
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Change CONTROL + hjkl to arrow keys.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "type": "basic"
         }
       ]
     }
