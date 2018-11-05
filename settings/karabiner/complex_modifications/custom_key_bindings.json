@@ -2,8 +2,50 @@
   "title": "Complex Key Bindings",
   "rules": [
     {
-      "description": "Change F3, F4, F7, F8, F9 to LEFT_CLICK",
+      "description": "Change F3, F4, F7, F8, F9 to LEFT_CLICK if CAPS_LOCK activate",
       "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "caps_lock activate",
+                "value": 1
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock activate",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "caps_lock activate",
+                "value": 0
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock activate",
+              "value": 1
+            }
+          ]
+        },
         {
           "type": "basic",
           "from": {
@@ -12,6 +54,13 @@
           "to": [
             {
               "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock activate",
+              "value": 1
             }
           ]
         },
@@ -24,6 +73,13 @@
             {
               "pointing_button": "button1"
             }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock activate",
+              "value": 1
+            }
           ]
         },
         {
@@ -34,6 +90,13 @@
           "to": [
             {
               "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock activate",
+              "value": 1
             }
           ]
         },
@@ -46,6 +109,13 @@
             {
               "pointing_button": "button1"
             }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock activate",
+              "value": 1
+            }
           ]
         },
         {
@@ -56,6 +126,13 @@
           "to": [
             {
               "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock activate",
+              "value": 1
             }
           ]
         }
