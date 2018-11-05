@@ -2,6 +2,29 @@
   "title": "Post left_click if buttons pressed alone",
   "rules": [
     {
+      "description": "grave_accent_and_tilde to left_click",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "grave_accent_and_tilde"
+          },
+          "to_after_key_up": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "pointing_button": "button1",
+              "halt": false,
+              "hold_down_milliseconds": 30
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "caps_lock to left_click (Only in browsers)",
       "manipulators": [
         {
