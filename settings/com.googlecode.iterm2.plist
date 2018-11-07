@@ -47038,7 +47038,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>290 390 796 486 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 56 1920 1121 0 0 1920 1177 </string>
+	<string>0 0 1920 1178 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4_selection</key>
@@ -49672,7 +49672,7 @@ Clear Buffer</string>
 	<key>UseGCDUpdateTimer</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
-	<false/>
+	<true/>
 	<key>VerticalBarCursorWidth</key>
 	<real>2</real>
 	<key>WindowNumber</key>
