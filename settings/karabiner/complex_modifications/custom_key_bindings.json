@@ -53,7 +53,7 @@
           },
           "to": [
             {
-              "key_code": "fn",
+              "pointing_button": "button1",
               "lazy": true
             }
           ],
@@ -85,7 +85,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_alone_timeout_milliseconds": 1000,
             "basic.to_if_held_down_threshold_milliseconds": 2000
           },
           "type": "basic"
