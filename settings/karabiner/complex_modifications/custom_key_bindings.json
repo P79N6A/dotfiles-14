@@ -97,6 +97,33 @@
       "manipulators": [
         {
           "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 1200
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
             "key_code": "left_option"
           },
           "to": [
@@ -118,7 +145,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 1000
+            "basic.to_if_alone_timeout_milliseconds": 1200
           },
           "type": "basic"
         },
@@ -145,7 +172,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 1000
+            "basic.to_if_alone_timeout_milliseconds": 1200
           },
           "type": "basic"
         },
@@ -166,7 +193,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 1000
+            "basic.to_if_alone_timeout_milliseconds": 1200
           },
           "type": "basic"
         },
@@ -187,7 +214,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 1000
+            "basic.to_if_alone_timeout_milliseconds": 1200
           },
           "type": "basic"
         },
@@ -208,7 +235,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 1000
+            "basic.to_if_alone_timeout_milliseconds": 1200
           },
           "type": "basic"
         },
@@ -229,7 +256,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 1000
+            "basic.to_if_alone_timeout_milliseconds": 1200
           },
           "type": "basic"
         },
@@ -250,7 +277,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 1000
+            "basic.to_if_alone_timeout_milliseconds": 1200
           },
           "type": "basic"
         }
