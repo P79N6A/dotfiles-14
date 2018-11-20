@@ -10,3 +10,4 @@ cache
 /zsh/log
 /zsh/cache
 Thumbs.db
+.DS_Store
