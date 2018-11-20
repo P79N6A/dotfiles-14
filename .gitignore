@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+blob-store
+storage
+recovery
+compile-cache
+cache
+.projects.cson
+.remote-sync.cson
+/zsh/log
+/zsh/cache
+Thumbs.db
+.DS_Store
