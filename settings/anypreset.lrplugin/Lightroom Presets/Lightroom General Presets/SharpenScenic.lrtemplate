@@ -1,0 +1,18 @@
+s = {
+	id = "480AF1B0-3909-4DB4-9DDB-3DC649DECEF7",
+	internalName = "Sharpen - Scenic",
+	title = ZSTR "$$$/AgDevelopModule/Templates/Sharpening/NarrowEdgesScenic=Sharpen - Scenic",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableDetail = true,
+			SharpenDetail = 35,
+			SharpenEdgeMasking = 0,
+			SharpenRadius = 0.8,
+			Sharpness = 40,
+			ProcessVersion = "6.7",
+		},
+		uuid = "40F923F3-5087-4E3C-81E7-A21E83F5FFCF",
+	},
+	version = 4,
+}

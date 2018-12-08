@@ -1,0 +1,14 @@
+s = {
+	title = ZSTR "$$$/AgDevelopModule/Templates/General/Punch=Punch",
+	internalName = "Punch",
+	type = "Develop",
+	value = {
+		settings = {
+			Clarity2012 = 30,
+			Clarity = 50,
+			Vibrance = 25,
+		},
+		uuid = "DF9F7556-F9C1-11DB-A87E-000D93313A24",
+	},
+	version = 4,
+}

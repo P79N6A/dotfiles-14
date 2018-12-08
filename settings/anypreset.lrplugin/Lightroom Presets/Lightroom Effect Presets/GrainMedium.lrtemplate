@@ -1,0 +1,16 @@
+s = {
+	id = "9B87C419-D87E-41E5-9B62-D0E532A34D1F",
+	internalName = "Grain 2 (Medium)",
+	title = ZSTR "$$$/AgDevelopModule/Templates/Grain/Medium=Grain - Medium",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 56,
+			GrainFrequency = 39,
+			GrainSize = 38,
+		},
+		uuid = "0F1B9717-E71A-447F-8744-268BE876D820",
+	},
+	version = 3,
+}

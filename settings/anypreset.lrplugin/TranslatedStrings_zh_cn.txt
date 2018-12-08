@@ -1,0 +1,1 @@
+"$$$/AgTemplateBrowserDataModel/CatalogBasedPresetFolderName/LightroomSettings=Lightroom 设置"

@@ -1,0 +1,19 @@
+s = {
+	id = "3530FE61-C061-4B88-834B-10D5F820953C",
+	internalName = "Rounded Corners - White",
+	title = ZSTR "$$$/AgDevelopModule/Templates/EdgeEffects/RoundedCornersWhite=Rounded Corners White",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			PostCropVignetteAmount = 100,
+			PostCropVignetteFeather = 0,
+			PostCropVignetteHighlightContrast = 0,
+			PostCropVignetteMidpoint = 44,
+			PostCropVignetteRoundness = -100,
+			PostCropVignetteStyle = 1,
+		},
+		uuid = "CD0E2884-B1AC-4C46-9D93-7AB072BECD6A",
+	},
+	version = 3,
+}

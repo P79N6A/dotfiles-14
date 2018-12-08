@@ -1,0 +1,16 @@
+s = {
+	id = "C90430CE-BDF0-46F9-9C0F-B41E85FAE281",
+	internalName = "Grain 1 (Light)",
+	title = ZSTR "$$$/AgDevelopModule/Templates/Grain/Light=Grain - Light",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 29,
+			GrainFrequency = 49,
+			GrainSize = 28,
+		},
+		uuid = "12E61680-85AC-4791-B184-E5B6FC017810",
+	},
+	version = 3,
+}

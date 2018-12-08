@@ -1,0 +1,13 @@
+s = {
+		internalName = "AutoTone",
+		title = ZSTR "$$$/AgDevelopModule/Templates/General/AutoTone=Auto Tone",
+		type = "Develop",
+		value = {
+		settings = {
+			AutoTone = true,
+			ProcessVersion = "6.7",
+		},
+		uuid = "ED7AD140-FA03-11DB-AB5E-00145166C8C8",
+	},
+	version = 4,
+}

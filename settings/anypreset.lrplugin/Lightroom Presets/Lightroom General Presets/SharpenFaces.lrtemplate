@@ -1,0 +1,18 @@
+s = {
+	id = "638B0155-8432-46C1-9581-B39676A04FB0",
+	internalName = "Sharpen - Faces",
+	title = ZSTR "$$$/AgDevelopModule/Templates/Sharpening/WideEdgesFaces=Sharpen - Faces",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableDetail = true,
+			SharpenDetail = 15,
+			SharpenEdgeMasking = 60,
+			SharpenRadius = 1.4,
+			Sharpness = 35,
+			ProcessVersion = "6.7",
+		},
+		uuid = "5221F12C-0AA7-48EC-8971-2518A1F82093",
+	},
+	version = 4,
+}

@@ -1,0 +1,19 @@
+s = {
+	id = "81C5B129-8A55-4E73-AC10-6EA021FD6F1F",
+	internalName = "Vignette 1",
+	title = ZSTR "$$$/AgDevelopModule/Templates/EdgeEffects/PCVignette1=Vignette 1",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			PostCropVignetteAmount = -15,
+			PostCropVignetteFeather = 50,
+			PostCropVignetteHighlightContrast = 0,
+			PostCropVignetteMidpoint = 50,
+			PostCropVignetteRoundness = 0,
+			PostCropVignetteStyle = 1,
+		},
+		uuid = "EB960C11-881F-4659-9B97-4C37C2478378",
+	},
+	version = 3,
+}

@@ -1,0 +1,16 @@
+s = {
+	id = "0C49F0DF-B902-4700-A4C4-C0AA64226115",
+	internalName = "Grain 3 (Heavy)",
+	title = ZSTR "$$$/AgDevelopModule/Templates/Grain/Heavy=Grain - Heavy",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 92,
+			GrainFrequency = 40,
+			GrainSize = 39,
+		},
+		uuid = "770C1D53-A218-4883-9C15-C5DBF3A1F1C2",
+	},
+	version = 3,
+}
