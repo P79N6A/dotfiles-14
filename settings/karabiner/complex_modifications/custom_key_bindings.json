@@ -645,9 +645,6 @@
             "modifiers": {
               "mandatory": [
                 "fn"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
@@ -677,9 +674,6 @@
             "modifiers": {
               "mandatory": [
                 "fn"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
@@ -709,9 +703,6 @@
             "modifiers": {
               "mandatory": [
                 "fn"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
@@ -738,9 +729,6 @@
             "modifiers": {
               "mandatory": [
                 "fn"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
@@ -772,9 +760,6 @@
             "modifiers": {
               "mandatory": [
                 "control"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
@@ -791,15 +776,59 @@
             "modifiers": {
               "mandatory": [
                 "control"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
           "to": [
             {
               "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "SHIFT + Fn + Left/Right click to Cycle Tabs",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
             }
           ],
           "type": "basic"
