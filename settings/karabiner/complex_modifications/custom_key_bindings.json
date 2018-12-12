@@ -21,25 +21,24 @@
               }
             ],
             "simultaneous_options": {
-              "detect_key_down_uninterruptedly": true,
               "key_down_order": "strict",
               "key_up_order": "insensitive",
-              "key_up_when": "all"
+              "key_up_when": "all",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "fn_locked",
+                    "value": 1
+                  }
+                },
+                {
+                  "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Mode fn_locked activated.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
+                }
+              ]
             }
           },
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "fn_locked",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Mode fn_locked activated.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
-            }
-          ],
           "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 1000
+            "basic.simultaneous_threshold_milliseconds": 500
           },
           "conditions": [
             {
@@ -67,25 +66,24 @@
               }
             ],
             "simultaneous_options": {
-              "detect_key_down_uninterruptedly": true,
               "key_down_order": "strict",
               "key_up_order": "insensitive",
-              "key_up_when": "all"
+              "key_up_when": "all",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "fn_locked",
+                    "value": 0
+                  }
+                },
+                {
+                  "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Mode fn_locked deactivated.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
+                }
+              ]
             }
           },
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "fn_locked",
-                "value": 0
-              }
-            },
-            {
-              "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Mode fn_locked deactivated.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
-            }
-          ],
           "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 1000
+            "basic.simultaneous_threshold_milliseconds": 500
           },
           "conditions": [
             {
