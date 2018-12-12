@@ -6,20 +6,28 @@
       "manipulators": [
         {
           "from": {
-            "key_code": "fn"
+            "simultaneous": [
+              {
+                "key_code": "fn"
+              },
+              {
+                "key_code": "left_control"
+              },
+              {
+                "key_code": "left_option"
+              },
+              {
+                "key_code": "left_command"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "strict",
+              "key_up_order": "insensitive",
+              "key_up_when": "all"
+            }
           },
-          "to": [
-            {
-              "key_code": "fn",
-              "lazy": true
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "fn"
-            }
-          ],
-          "to_if_held_down": [
+          "to_after_key_up": [
             {
               "set_variable": {
                 "name": "fn_locked",
@@ -27,13 +35,12 @@
               }
             },
             {
-              "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Activate fn_locked successfully.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
-            },
-            {
-              "key_code": "fn",
-              "lazy": true
+              "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Mode fn_locked activated.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
             }
           ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 1000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -41,28 +48,32 @@
               "value": 0
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 2000
-          },
           "type": "basic"
         },
         {
           "from": {
-            "key_code": "fn"
+            "simultaneous": [
+              {
+                "key_code": "fn"
+              },
+              {
+                "key_code": "left_control"
+              },
+              {
+                "key_code": "left_option"
+              },
+              {
+                "key_code": "left_command"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "strict",
+              "key_up_order": "insensitive",
+              "key_up_when": "all"
+            }
           },
-          "to": [
-            {
-              "key_code": "fn",
-              "lazy": true
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "fn"
-            }
-          ],
-          "to_if_held_down": [
+          "to_after_key_up": [
             {
               "set_variable": {
                 "name": "fn_locked",
@@ -70,13 +81,12 @@
               }
             },
             {
-              "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Deactivate fn_locked successfully.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
-            },
-            {
-              "key_code": "fn",
-              "lazy": true
+              "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Mode fn_locked deactivated.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
             }
           ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 1000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -84,10 +94,6 @@
               "value": 1
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 2000
-          },
           "type": "basic"
         }
       ]
