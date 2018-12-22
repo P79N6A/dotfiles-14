@@ -46905,7 +46905,7 @@
 	<key>DisableAppNap</key>
 	<true/>
 	<key>DisableCustomBoxDrawing</key>
-	<false/>
+	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>DisablePasswordManagerAnimations</key>
@@ -46913,7 +46913,7 @@
 	<key>DisablePotentiallyInsecureEscapeSequences</key>
 	<true/>
 	<key>DisableWindowSizeSnap</key>
-	<true/>
+	<false/>
 	<key>DisallowCopyEmptyString</key>
 	<true/>
 	<key>DockIconTogglesWindow</key>
@@ -46923,7 +46923,7 @@
 	<key>DoubleReportScrollWheel</key>
 	<false/>
 	<key>DwcLineCache</key>
-	<true/>
+	<false/>
 	<key>EliminateCloseButtons</key>
 	<false/>
 	<key>EnableDivisionView</key>
@@ -46971,7 +46971,7 @@
 	<key>IncludePasteHistoryInAdvancedPaste</key>
 	<false/>
 	<key>JiggleTTYSizeOnClearBuffer</key>
-	<true/>
+	<false/>
 	<key>JobName</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -49653,6 +49653,8 @@ Clear Buffer</string>
 	<false/>
 	<key>TabViewType</key>
 	<integer>0</integer>
+	<key>TabsWrapAround</key>
+	<true/>
 	<key>TerminalMargin</key>
 	<integer>14</integer>
 	<key>TerminalVMargin</key>
@@ -49668,7 +49670,7 @@ Clear Buffer</string>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseExperimentalFontMetrics</key>
-	<true/>
+	<false/>
 	<key>UseGCDUpdateTimer</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
@@ -49680,7 +49682,7 @@ Clear Buffer</string>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>ZippyTextDrawing</key>
-	<true/>
+	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
