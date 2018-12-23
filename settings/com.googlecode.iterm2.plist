@@ -46905,7 +46905,7 @@
 	<key>DisableAppNap</key>
 	<true/>
 	<key>DisableCustomBoxDrawing</key>
-	<true/>
+	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>DisablePasswordManagerAnimations</key>
@@ -46923,7 +46923,7 @@
 	<key>DoubleReportScrollWheel</key>
 	<false/>
 	<key>DwcLineCache</key>
-	<false/>
+	<true/>
 	<key>EliminateCloseButtons</key>
 	<false/>
 	<key>EnableDivisionView</key>
@@ -49670,7 +49670,7 @@ Clear Buffer</string>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseExperimentalFontMetrics</key>
-	<false/>
+	<true/>
 	<key>UseGCDUpdateTimer</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
@@ -49682,7 +49682,7 @@ Clear Buffer</string>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>ZippyTextDrawing</key>
-	<false/>
+	<true/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
