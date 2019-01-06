@@ -956,6 +956,28 @@
           "type": "basic"
         }
       ]
+    },
+    {
+      "description": "Toggle RIGHT_CLICK when pressed Fn + PERIOD.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button2"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
     }
   ]
 }
