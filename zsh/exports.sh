@@ -54,7 +54,7 @@ export PATH="/usr/local/opt/openldap/bin:$PATH"
 export PATH="/usr/local/opt/openldap/sbin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # export PATH="$HOME/.composer/vendor/bin:$PATH"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
+# export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 # /usr/local/lib/node_modules
 
