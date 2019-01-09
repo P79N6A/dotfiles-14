@@ -35,6 +35,7 @@ export BREW_PATH=/usr/local/Cellar
 # export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
 export COMPOSERBIN=$HOME/.composer/vendor/bin
 export PHP_HOME=/usr/local/Cellar/php/7.2.10/bin
+# export PHP_HOME=/usr/local/Cellar/php/7.2.10/bin
 export PHP_PATH=$PHP_HOME/bin:$PHP_HOME/sbin
 
 _PATH=$BREWGEMBIN:$COMPOSERBIN:$BREW_PATH:/usr/local/bin:/usr/bin:/bin:$DOTFILES/bin:/usr/local/sbin:/usr/sbin:/sbin
@@ -54,6 +55,8 @@ export PATH="/usr/local/opt/openldap/sbin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 
 # /usr/local/lib/node_modules
 
