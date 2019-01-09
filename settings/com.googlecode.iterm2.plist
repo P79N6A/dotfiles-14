@@ -47036,7 +47036,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>628 155 775 560 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>290 390 796 486 0 0 1920 1177 </string>
+	<string>343 325 918 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 56 1920 1121 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
@@ -47943,7 +47943,7 @@ Clear Buffer</string>
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.042669336928934008</real>
+			<real>0.080663071065989841</real>
 			<key>Triggers</key>
 			<array>
 				<dict>
