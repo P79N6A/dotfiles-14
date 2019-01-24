@@ -32,29 +32,13 @@ export BREW_PREFIX="`brew --prefix`"
 export SSH_KEY_PATH=$HOME/.ssh/rsa_id
 export MANPATH=/usr/local/man:$MANPATH
 export BREW_PATH=/usr/local/Cellar
-# export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
+export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
 export COMPOSERBIN=$HOME/.composer/vendor/bin
 # export PHP_HOME=/usr/local/Cellar/php@7.2/7.2.13
 # export PHP_PATH=$PHP_HOME/bin:$PHP_HOME/sbin
 
-_PATH=$BREWGEMBIN:$COMPOSERBIN:$BREW_PATH:/usr/bin:/bin:$DOTFILES/bin:/usr/local/sbin:/usr/sbin:/sbin
-
-export PATH=$_PATH
-
-# export PATH="/usr/local/opt/gettext/bin:$PATH"
-# export PATH="/usr/local/opt/openssl/bin:$PATH"
-# export PATH="/usr/local/opt/apr/bin:$PATH"
-# export PATH="/usr/local/opt/apr-util/bin:$PATH"
-# export PATH="/usr/local/opt/icu4c/bin:$PATH"
-# export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-# export PATH="/usr/local/opt/libiconv/bin:$PATH"
-# export PATH="/usr/local/opt/libpq/bin:$PATH"
-# export PATH="/usr/local/opt/openldap/bin:$PATH"
-# export PATH="/usr/local/opt/openldap/sbin:$PATH"
-# export PATH="/usr/local/opt/sqlite/bin:$PATH"
-# export PATH="$HOME/.composer/vendor/bin:$PATH"
-# export PATH="/usr/local/opt/node@8/bin:$PATH"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PHPBIN=/usr/local/Cellar/php/7.2.4_1/bin
+export PATH="$PHPBIN:$COMPOSERBIN:$BREWGEMBIN:$BREW_PATH:$DOTFILES/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 # /usr/local/lib/node_modules
 
