@@ -10,7 +10,7 @@ export GREP_COLOR="1;32"
 export CLICOLOR="1"
 export LSCOLORS="ExFxCxDxBxegedabagacad"
 export HISTCONTROL="ignoreboth:erasedups"
-export HISTFILE=$HOME/.bash_history
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE="1000"
 export PYTHONIOENCODING="UTF-8"
 export LANG="en_US.UTF-8"
@@ -24,8 +24,8 @@ export GITSSH="git@github.com"
 export FINEARTGIT=$GITURL/fineartdeveloper
 export NOPPHASINGIT=$GITURL/nopphasinara
 
-# export LDFLAGS=-L/usr/local/opt/php@7.1/lib
-# export CPPFLAGS=-I/usr/local/opt/php@7.1/include
+# export LDFLAGS=-L/usr/local/opt/php@`phpversion`/lib
+# export CPPFLAGS=-I/usr/local/opt/php@`phpversion`/include
 
 export ARCHFLAGS="-arch x86_64"
 export BREW_PREFIX="`brew --prefix`"
@@ -34,8 +34,8 @@ export MANPATH=/usr/local/man:$MANPATH
 # export BREW_PATH=/usr/local/Cellar
 # export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
 export COMPOSERBIN=$HOME/.composer/vendor/bin
-# export PHP_HOME=/usr/local/opt/php@7.2
-export PHPBIN=$PHP_HOME/bin:$PHP_HOME/sbin
+# export PHP_HOME=/usr/local/opt/php@`phpversion`
+# export PHPBIN=$PHP_HOME/bin:$PHP_HOME/sbin
 export PATH="/usr/local/bin:$COMPOSERBIN:$DOTFILES/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 # /usr/local/lib/node_modules
