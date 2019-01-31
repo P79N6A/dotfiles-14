@@ -92,7 +92,7 @@ function _git_prompt_info() {
 }
 
 PROMPT='%B%F{magenta}%10c%f%{$reset_color%}$(_git_prompt_info)
-›› '
+$ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
 
