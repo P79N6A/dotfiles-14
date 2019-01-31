@@ -303,7 +303,7 @@ function _prompt_geometry_seconds_to_human_time() {
     -prompt_geometry_time_short_format $days $hours $minutes $seconds
   fi
 
-  if [[ -n ${GIT_CURRENT_BRANCH} ]]; then
-    echo ${geometry_time_human}
+  if [[ -n $(_git_current_branch) ]]; then
+    echo $geometry_time_human
   fi
 }
