@@ -79,7 +79,7 @@ function _git_prompt_info() {
 }
 
 PROMPT='%B%F{magenta}%10c%f%{$reset_color%} $(_git_prompt_info) $(_git_prompt_short_sha) $(_time_since_commit)
-$ '
+›› '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
 
@@ -100,7 +100,7 @@ ZSH_THEME_GIT_PROMPT_AHEAD="%F{cyan}⇡%f"
 ZSH_THEME_GIT_PROMPT_BEHIND="%F{cyan}⇣%f"
 ZSH_THEME_GIT_PROMPT_DIVERGED="" # default "⇕"
 # ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH=""
-ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH="%F{white}on%f %Bgit:%F{green}"
+ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH="%F{white}on%f %B%F{green}"
 # ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH=""
 ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH="%f%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CURRENT_BRANCH=""
