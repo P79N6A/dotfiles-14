@@ -75,10 +75,12 @@ function _git_prompt_info() {
     fi
   fi
 
-  echo $GIT_CURRENT_BRANCH$GIT_CURRENT_STATUS
+  export GIT_CURRENT_STATUS
+
+  echo $GIT_CURRENT_BRANCH
 }
 
-PROMPT='%B%F{magenta}%10c%f%{$reset_color%} $(_git_prompt_info) $(_git_prompt_short_sha) $(_time_since_commit)
+PROMPT='%B%F{magenta}%10c%f%{$reset_color%} $(_git_prompt_info) $(_time_since_commit)
 ›› '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
@@ -100,13 +102,13 @@ ZSH_THEME_GIT_PROMPT_AHEAD="%F{cyan}⇡%f"
 ZSH_THEME_GIT_PROMPT_BEHIND="%F{cyan}⇣%f"
 ZSH_THEME_GIT_PROMPT_DIVERGED="" # default "⇕"
 # ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH=""
-ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH="%F{white}on%f %B%F{green}"
+ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH="%F{white}on%f [%B%F{green}"
 # ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH=""
-ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH="%f%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH="%f%{$reset_color%} $(_git_prompt_short_sha) $GIT_CURRENT_STATUS]"
 ZSH_THEME_GIT_PROMPT_CURRENT_BRANCH=""
 ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE=""
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%F{white}["
-ZSH_THEME_GIT_PROMPT_SHA_AFTER="]%f"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%F{white}"
+ZSH_THEME_GIT_PROMPT_SHA_AFTER="%f"
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX=""
