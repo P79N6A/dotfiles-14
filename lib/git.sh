@@ -78,7 +78,11 @@ function _git_current_branch() {
     [[ $ret == 128 ]] && return  # no git repo.
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
   fi
-  echo ${ref#refs/heads/}
+  if [[ -n ${ref#refs/heads/} ]]; then
+    echo ${ref#refs/heads/}
+  else
+    echo ${ref#refs/heads/}
+  fi
 }
 
 
