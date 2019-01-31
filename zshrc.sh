@@ -17,7 +17,11 @@ export ZSH=$ZSHFILES
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="philips"
+# ZSH_THEME="lambda-mod"
+ZSH_THEME="oxide"
+# ZSH_THEME="zhann"
+# ZSH_THEME="ys"
+# ZSH_THEME="smt"
 # ZSH_THEME="kolo"
 # ZSH_THEME="nanotech"
 
