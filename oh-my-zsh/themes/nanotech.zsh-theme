@@ -78,7 +78,8 @@ function _git_prompt_info() {
   echo $GIT_CURRENT_BRANCH$GIT_CURRENT_STATUS
 }
 
-PROMPT='%B%F{magenta}%10c%f%{$reset_color%} $(_git_prompt_info) [$(_git_prompt_short_sha)]
+PROMPT='
+%B%F{magenta}%10c%f%{$reset_color%} $(_git_prompt_info) [$(_git_prompt_short_sha)]
 $ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
