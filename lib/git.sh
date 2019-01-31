@@ -29,10 +29,8 @@ function _parse_git_dirty() {
   fi
   if [[ -n $STATUS ]]; then
     STATUS="DIRTY"
-    # echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
   else
     STATUS="CLEAN"
-    # echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
   fi
 
   echo $STATUS

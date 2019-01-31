@@ -71,18 +71,16 @@ function _git_prompt_info() {
         ;;
     esac
 
-    if [[ -n $GIT_CURRENT_STATUS ]]; then
-      GIT_CURRENT_STATUS="$GIT_CURRENT_STATUS_BEFORE$GIT_CURRENT_STATUS$GIT_CURRENT_STATUS_AFTER"
+    if [[ -z $GIT_CURRENT_STATUS ]]; then
+      GIT_CURRENT_STATUS=""
     fi
   fi
 
-  local INFO=$GIT_CURRENT_BRANCH$ZSH_THEME_GIT_PROMPT_SHA$GIT_CURRENT_STATUS$GIT_TIME_SINCE_COMMIT
-
-  echo $ZSH_THEME_GIT_PROMPT_PREFIX$INFO$ZSH_THEME_GIT_PROMPT_SUFFIX
+  echo $GIT_CURRENT_BRANCH$GIT_CURRENT_STATUS$ZSH_THEME_GIT_PROMPT_SHA$GIT_TIME_SINCE_COMMIT
 }
 
-PROMPT='%B%F{magenta}%10c%f%{$reset_color%}$(_git_prompt_info)
-›› '
+PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX%10c$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
+$ '
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
 
