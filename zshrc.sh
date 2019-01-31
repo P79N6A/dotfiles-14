@@ -20,8 +20,8 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="lambda-mod"
 # ZSH_THEME="oxide"
 # ZSH_THEME="zhann"
-ZSH_THEME="ys"
-# ZSH_THEME="smt"
+# ZSH_THEME="ys"
+ZSH_THEME="smt"
 # ZSH_THEME="kolo"
 # ZSH_THEME="nanotech"
 
