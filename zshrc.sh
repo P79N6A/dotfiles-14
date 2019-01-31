@@ -21,9 +21,9 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="oxide"
 # ZSH_THEME="zhann"
 # ZSH_THEME="ys"
-ZSH_THEME="smt"
+# ZSH_THEME="smt"
 # ZSH_THEME="kolo"
-# ZSH_THEME="nanotech"
+ZSH_THEME="nanotech"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
