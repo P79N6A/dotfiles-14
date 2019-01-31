@@ -79,7 +79,8 @@ function _git_prompt_info() {
 }
 
 PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX%10c$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
-$ '
+%B%F{white}$%f%b '
+RPROMPT='%F{yellow}%D{%H:%M:%S}%f'
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
 
