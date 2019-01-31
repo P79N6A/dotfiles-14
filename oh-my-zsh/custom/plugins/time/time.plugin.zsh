@@ -66,5 +66,5 @@ _prompt_geometry_git_time_since_commit() {
 }
 
 _git_time_since_commit() {
-  echo $(_prompt_geometry_seconds_to_human_time)
+  _prompt_geometry_seconds_to_human_time
 }

@@ -78,11 +78,7 @@ function _git_current_branch() {
     [[ $ret == 128 ]] && return  # no git repo.
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
   fi
-  if [[ -n ${ref#refs/heads/} ]]; then
-    echo ${ref#refs/heads/}
-  else
-    echo ${ref#refs/heads/}
-  fi
+  echo ${ref#refs/heads/}
 }
 
 
@@ -136,7 +132,7 @@ function _git_prompt_remote() {
 # Formats prompt string for current git commit short SHA
 function _git_prompt_short_sha() {
   local SHA
-  SHA=$(command git rev-parse --short HEAD 2> /dev/null) && echo "$SHA"
+  SHA=$(command git rev-parse --short HEAD 2> /dev/null) && echo "[$ZSH_THEME_GIT_PROMPT_SHA_BEFORE$SHA$ZSH_THEME_GIT_PROMPT_SHA_AFTER]"
   # SHA=$(command git rev-parse --short HEAD 2> /dev/null) && echo "$ZSH_THEME_GIT_PROMPT_SHA_BEFORE$SHA$ZSH_THEME_GIT_PROMPT_SHA_AFTER"
 }
 
@@ -145,10 +141,6 @@ function _git_prompt_long_sha() {
   local SHA
   SHA=$(command git rev-parse HEAD 2> /dev/null) && echo "${SHA}"
   # SHA=$(command git rev-parse HEAD 2> /dev/null) && echo "$ZSH_THEME_GIT_PROMPT_SHA_BEFORE$SHA$ZSH_THEME_GIT_PROMPT_SHA_AFTER"
-}
-
-function _git_current_sha() {
-  echo $(_git_prompt_short_sha)
 }
 
 # Get the status of the working tree
@@ -202,61 +194,6 @@ function _git_prompt_status() {
   fi
 
   echo $STATUS
-}
-
-function _git_current_status()
-{
-    if [[ -z $(_git_prompt_status) ]]; then
-      return
-    fi
-
-    local STATUS=$(_git_prompt_status)
-    local CURRENT_STATUS=""
-    local IS_DIRTY IS_CLEAN IS_UNTRACKED IS_ADDED IS_MODIFIED IS_RENAMED IS_DELETED IS_STASHED IS_UNMERGED IS_AHEAD IS_BEHIND IS_DIVERGED
-
-    IS_UNTRACKED="$(echo $STATUS | grep -E 'UNTRACKED' -io)"
-    IS_ADDED="$(echo $STATUS | grep -E 'ADDED' -io)"
-    IS_MODIFIED="$(echo $STATUS | grep -E 'MODIFIED' -io)"
-    IS_RENAMED="$(echo $STATUS | grep -E 'RENAMED' -io)"
-    IS_DELETED="$(echo $STATUS | grep -E 'DELETED' -io)"
-    IS_STASHED="$(echo $STATUS | grep -E 'STASHED' -io)"
-    IS_UNMERGED="$(echo $STATUS | grep -E 'UNMERGED' -io)"
-    IS_AHEAD="$(echo $STATUS | grep -E 'AHEAD' -io)"
-    IS_BEHIND="$(echo $STATUS | grep -E 'BEHIND' -io)"
-    IS_DIVERGED="$(echo $STATUS | grep -E 'DIVERGED' -io)"
-    IS_UNPUSHED=""
-    [[ $(_git_commits_ahead) > 0 ]] && IS_UNPUSHED="UNPUSHED"
-    IS_UNPULLED=""
-    [[ $(_git_commits_behind) > 0 ]] && IS_UNPULLED="UNPULLED"
-
-    local STATUS=$(_parse_git_dirty)
-    [[ -n $IS_UNTRACKED ]] && STATUS='DIRTY'
-    [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED ]] && STATUS='DIRTY'
-
-    case $STATUS in
-      "DIRTY" )
-        if [[ -n $IS_UNPUSHED ]]; then
-          CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
-        elif [[ -n $IS_UNPULLED ]]; then
-          CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
-        else
-          CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY"
-        fi
-        ;;
-      "CLEAN" )
-        if [[ -n $IS_UNPUSHED ]]; then
-          CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
-        elif [[ -n $IS_UNPULLED ]]; then
-          CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPULLED"
-        else
-          CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN"
-        fi
-        ;;
-      "" )
-        ;;
-    esac
-
-    echo $CURRENT_STATUS
 }
 
 # Compares the provided version of git to the version installed and on path
