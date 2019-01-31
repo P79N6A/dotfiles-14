@@ -1,6 +1,6 @@
 typeset -g geometry_time_human
 
--prompt_geometry_time_long_format() {
+_prompt_geometry_time_long_format() {
   local human=""
   local days=$1
   local hours=$2
@@ -15,7 +15,7 @@ typeset -g geometry_time_human
   geometry_time_human=$human
 }
 
--prompt_geometry_time_short_format() {
+_prompt_geometry_time_short_format() {
   local human=""
   local days=$1
   local hours=$2
@@ -35,8 +35,8 @@ typeset -g geometry_time_human
   geometry_time_human=$human
 }
 
-prompt_geometry_seconds_to_human_time() {
-  local total_seconds=$(prompt_geometry_git_time_since_commit)
+_prompt_geometry_seconds_to_human_time() {
+  local total_seconds=$(_prompt_geometry_git_time_since_commit)
   # local total_seconds=$1
 
   local days=$(( total_seconds / 60 / 60 / 24 ))
@@ -45,12 +45,12 @@ prompt_geometry_seconds_to_human_time() {
   local seconds=$(( total_seconds % 60 ))
 
   # It looks redundant but it seems it's not
-  -prompt_geometry_time_short_format $days $hours $minutes $seconds
+  _prompt_geometry_time_short_format $days $hours $minutes $seconds
 
   echo $geometry_time_human
 }
 
-prompt_geometry_git_time_since_commit() {
+_prompt_geometry_git_time_since_commit() {
   # Defaults to "", which would hide the git_time_since_commit block
   local git_time_since_commit=""
 
@@ -63,4 +63,8 @@ prompt_geometry_git_time_since_commit() {
   fi
 
   echo $git_time_since_commit
+}
+
+_time_since_commit() {
+  echo $(_prompt_geometry_seconds_to_human_time)
 }
