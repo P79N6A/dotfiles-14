@@ -47070,13 +47070,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.156097412109375</real>
+				<real>0.13331207633018494</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.07049822062253952</real>
+				<real>0.13334444165229797</real>
 				<key>Red Component</key>
-				<real>0.078650526702404022</real>
+				<real>0.13331398367881775</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -47252,13 +47252,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.45882353186607361</real>
+				<real>0.37713087299944825</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.3333333432674408</real>
+				<real>0.37713087299944825</real>
 				<key>Red Component</key>
-				<real>0.33725491166114807</real>
+				<real>0.37335956426945377</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -47282,13 +47282,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.19215686619281769</real>
+				<real>0.13331207633018494</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.10980392247438431</real>
+				<real>0.13334444165229797</real>
 				<key>Red Component</key>
-				<real>0.11764705926179886</real>
+				<real>0.13331398367881775</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -47885,13 +47885,13 @@ Clear Buffer</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.19215686619281769</real>
+				<real>0.37646776437759399</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.10980392247438431</real>
+				<real>0.37651175260543823</real>
 				<key>Red Component</key>
-				<real>0.11764705926179886</real>
+				<real>0.37239998579025269</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>

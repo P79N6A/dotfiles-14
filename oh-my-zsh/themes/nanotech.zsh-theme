@@ -84,9 +84,10 @@ function _git_prompt_info() {
   echo $(_git_prompt_status)$(_parse_git_dirty)$GIT_CURRENT_BRANCH$GIT_CURRENT_SHA$GIT_TIME_SINCE_COMMIT$GIT_CURRENT_STATUS
 }
 
-PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX%10c$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
-%B%F{cyan}%f%b '
+PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX %10c$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
+$PROMPT_PS1 '
 
+PROMPT_PS1='%B%F{cyan}%f%b'
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED="%F{yellow}%f"
