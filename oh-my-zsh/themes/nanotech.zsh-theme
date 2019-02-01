@@ -78,10 +78,11 @@ function _git_prompt_info() {
     fi
   fi
 
-  echo $GIT_CURRENT_BRANCH$GIT_TIME_SINCE_COMMIT$GIT_CURRENT_SHA$GIT_CURRENT_STATUS
+  echo $GIT_CURRENT_BRANCH$GIT_CURRENT_SHA$GIT_TIME_SINCE_COMMIT$GIT_CURRENT_STATUS
 }
 
-PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX%10c$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)%B%F{white}$%f%b '
+PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX%10c$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
+%B%F{white}$%f%b '
 # RPROMPT='%F{yellow}%D{%H:%M:%S}%f'
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
