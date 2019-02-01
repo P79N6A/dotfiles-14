@@ -50,6 +50,7 @@ function _git_prompt_info() {
         fi
         ;;
       "CLEAN" )
+        IS_CLEAN='CLEAN'
         if [[ -n $IS_UNPUSHED ]]; then
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
