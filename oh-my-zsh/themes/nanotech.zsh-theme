@@ -81,8 +81,6 @@ function _git_prompt_info() {
     fi
   fi
 
-  clear="echo -e '\e[2J\n\n'"
-  
   echo $(_git_prompt_status)$(_parse_git_dirty)$GIT_CURRENT_BRANCH$GIT_CURRENT_SHA$GIT_TIME_SINCE_COMMIT$GIT_CURRENT_STATUS
 }
 
