@@ -43,6 +43,8 @@ function _git_prompt_info() {
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
+        elif [[ -n $IS_ADDED ]]; then
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_ADDED"
         else
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY"
         fi
@@ -83,9 +85,6 @@ function _git_prompt_info() {
 
 PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX%10c$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
 %B%F{white}$%f%b '
-# RPROMPT='%F{yellow}%D{%H:%M:%S}%f'
-# RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
-# !
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}●%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}●%f"
