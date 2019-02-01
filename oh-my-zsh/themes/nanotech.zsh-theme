@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+typeset -l GIT_CURRENT_BRANCH
+typeset -l GIT_TIME_SINCE_COMMIT
+typeset -l GIT_CURRENT_SHA
+typeset -l GIT_CURRENT_STATUS
+
 source $HOME/.dotfiles/lib/git.sh
 
 # Outputs current branch info in prompt format
@@ -9,9 +14,6 @@ function _git_prompt_info() {
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-
-    local GIT_CURRENT_BRANCH GIT_CURRENT_STATUS ZSH_THEME_GIT_PROMPT_SHA GIT_TIME_SINCE_COMMIT
-
 
     local STATUS=$(_git_prompt_status)
     local IS_DIRTY IS_CLEAN IS_UNTRACKED IS_ADDED IS_MODIFIED IS_RENAMED IS_DELETED IS_STASHED IS_UNMERGED IS_AHEAD IS_BEHIND IS_DIVERGED
@@ -80,7 +82,7 @@ function _git_prompt_info() {
 
 PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX%10c$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
 %B%F{white}$%f%b '
-# RPROMPT='%F{yellow}%D{%H:%M:%S}%f'
+RPROMPT='%F{yellow}%D{%H:%M:%S}%f'
 # RPROMPT='$(git_prompt_info) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f'
 # !
 
