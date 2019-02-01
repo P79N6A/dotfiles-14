@@ -60,7 +60,7 @@ function _git_prompt_info() {
         ;;
       "CLEAN" )
         IS_CLEAN='CLEAN'
-        CLEAN_SIDE="%F{green}%f"
+        CLEAN_SIDE="%F{green}%f"
         if [[ -n $IS_UNPUSHED ]]; then
           CLEAN_SIDE="%F{yellow}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
