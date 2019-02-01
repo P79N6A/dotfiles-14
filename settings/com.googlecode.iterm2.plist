@@ -47031,7 +47031,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>534 433 923 261 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>473 618 918 381 0 0 1920 1057 </string>
+	<string>473 526 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 51 1924 1006 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
@@ -47161,13 +47161,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.93394329912304264</real>
+				<real>0.99988096952438354</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.93394329912304264</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.91526443314058181</real>
+				<real>0.99989169836044312</real>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
@@ -47320,13 +47320,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.93340456485748291</real>
+				<real>0.99988096952438354</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.93345409631729126</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.91712456941604614</real>
+				<real>0.99989169836044312</real>
 			</dict>
 			<key>Bound Hosts</key>
 			<array>
