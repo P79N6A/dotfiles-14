@@ -47857,7 +47857,7 @@ Clear Buffer</string>
 			<key>Name</key>
 			<string>Root</string>
 			<key>Non Ascii Font</key>
-			<string>Material-Design-Icons 13</string>
+			<string>master-icons 13</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
