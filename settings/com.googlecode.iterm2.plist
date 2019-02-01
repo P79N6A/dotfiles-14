@@ -47122,13 +47122,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.91367738203681192</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.86666667461395264</real>
+				<real>0.74391382731832756</real>
 				<key>Red Component</key>
-				<real>0.56862747669219971</real>
+				<real>0.38977508157063778</real>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
@@ -47200,13 +47200,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.79889839887619019</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.69803923368453979</real>
+				<real>0.47915881872177124</real>
 				<key>Red Component</key>
-				<real>0.3960784375667572</real>
+				<real>0.0081651229411363602</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
@@ -47840,13 +47840,13 @@ Clear Buffer</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.76588201522827148</real>
+				<real>0.79889839887619019</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.51254469156265259</real>
+				<real>0.47915881872177124</real>
 				<key>Red Component</key>
-				<real>0.2576751708984375</real>
+				<real>0.0081651229411363602</real>
 			</dict>
 			<key>Log Directory</key>
 			<string>/Users/sudprawat/.dotfiles/logs</string>
