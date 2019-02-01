@@ -47031,7 +47031,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>534 433 923 261 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>473 525 796 473 0 0 1920 1057 </string>
+	<string>473 618 918 381 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 51 1924 1006 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
@@ -47161,13 +47161,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.90588235855102539</real>
+				<real>0.93394329912304264</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.89019608497619629</real>
+				<real>0.93394329912304264</real>
 				<key>Red Component</key>
-				<real>0.79607844352722168</real>
+				<real>0.91526443314058181</real>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
@@ -47239,13 +47239,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.80000001192092896</real>
+				<real>0.86448124745966859</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.70196080207824707</real>
+				<real>0.86448124745966859</real>
 				<key>Red Component</key>
-				<real>0.65098041296005249</real>
+				<real>0.8471916225104752</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
@@ -47320,13 +47320,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.968353271484375</real>
+				<real>0.93340456485748291</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90144157409667969</real>
+				<real>0.93345409631729126</real>
 				<key>Red Component</key>
-				<real>0.71185845136642456</real>
+				<real>0.91712456941604614</real>
 			</dict>
 			<key>Bound Hosts</key>
 			<array>
@@ -47404,13 +47404,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.90588235855102539</real>
+				<real>0.58793020248413086</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.88100153207778931</real>
+				<real>0.59629279375076294</real>
 				<key>Red Component</key>
-				<real>0.79607844352722168</real>
+				<real>0.58798307180404663</real>
 			</dict>
 			<key>Guid</key>
 			<string>23B761B0-9F09-4D96-9801-55AFD9215E0B</string>
@@ -47840,13 +47840,13 @@ Clear Buffer</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.87423044443130493</real>
+				<real>0.76588201522827148</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.59353697299957275</real>
+				<real>0.51254469156265259</real>
 				<key>Red Component</key>
-				<real>0.26658016443252563</real>
+				<real>0.2576751708984375</real>
 			</dict>
 			<key>Log Directory</key>
 			<string>/Users/sudprawat/.dotfiles/logs</string>
@@ -47898,13 +47898,13 @@ Clear Buffer</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.90588235855102539</real>
+				<real>0.82716554403305054</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.88235294818878174</real>
+				<real>0.83553856611251831</real>
 				<key>Red Component</key>
-				<real>0.79607844352722168</real>
+				<real>0.8231474757194519</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
