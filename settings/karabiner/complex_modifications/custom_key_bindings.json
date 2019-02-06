@@ -978,6 +978,40 @@
           "type": "basic"
         }
       ]
+    },
+    {
+      "description": "Save Image",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "key_code": "s",
+              "modifiers": [
+                "control",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
     }
   ]
 }
