@@ -294,3 +294,4 @@ alias backpack="cd ~/www/backpack.local"
 # function phpversion() {
 #   php -v 2&> /dev/null | egrep "^PHP\s?[0-9\.]+" -io 2&> /dev/null | egrep "[0-9\.]+" -io 2&> /dev/null
 # }
+alias art="php artisan"
