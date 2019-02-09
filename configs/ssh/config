@@ -29,9 +29,6 @@
 #   UseKeychain no
 
 Host github.com
-  Protocol https,http
-  PasswordAuthentication yes
-  HostbasedAuthentication yes
   User nopphasinara
   ForwardAgent yes
   AddKeysToAgent yes
