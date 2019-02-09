@@ -23,6 +23,15 @@ export GITURL="https://github.com"
 export GITSSH="git@github.com"
 export FINEARTGIT=$GITURL/fineartdeveloper
 export NOPPHASINGIT=$GITURL/nopphasinara
+export NAME="nopphasinara"
+export EMAIL="nopphasin.arayasirikul@gmail.com"
+export GIT_CONFIG_NOSYSTEM=1
+export GIT_AUTHOR_NAME=$NAME
+export GIT_COMMITTER_NAME=$NAME
+export GIT_AUTHOR_EMAIL=$EMAIL
+export GIT_COMMITTER_EMAIL=$EMAIL
+export GIT_SSL_KEY=$HOME/.ssh/github_id_rsa
+
 
 # export LDFLAGS=-L/usr/local/opt/php@`phpversion`/lib
 # export CPPFLAGS=-I/usr/local/opt/php@`phpversion`/include

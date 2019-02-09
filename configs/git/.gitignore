@@ -1,0 +1,51 @@
+Thumbs.db
+blob-store
+storage
+recovery
+compile-cache
+cache
+zsh/log
+zsh/cache
+.DS_Store
+.projects.cson
+.remote-sync.cson
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Temporary files #
+###################
+*.swp
+*.swo
+*~
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+*.lock
