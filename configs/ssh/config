@@ -29,6 +29,7 @@
 #   UseKeychain no
 
 Host github.com
+  Protocol https,http
   PasswordAuthentication no
   HostbasedAuthentication yes
   User git

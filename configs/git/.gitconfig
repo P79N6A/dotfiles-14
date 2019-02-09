@@ -2,13 +2,13 @@
   name = nopphasinara
   email = nopphasin.arayasirikul@gmail.com
 [credential]
+  username = nopphasinara
   helper = osxkeychain
   useHttpPath = true
 [web]
   browser = google-chrome
 [github]
   user = nopphasinara
-  token = 607b3af54cb53f1b651dd99e0e2e30eb0102e0fd
 [core]
   editor = Atom
   excludesfile = ~/.dotfiles/configs/git/.gitignore
