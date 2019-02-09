@@ -32,7 +32,7 @@ Host github.com
   Protocol https,http
   PasswordAuthentication yes
   HostbasedAuthentication yes
-  User git
+  User nopphasinara
   ForwardAgent yes
   AddKeysToAgent yes
   UseKeychain yes
