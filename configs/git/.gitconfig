@@ -1,4 +1,5 @@
 [credential]
+  helper = osxkeychain
   useHttpPath = true
 [web]
   browser = google-chrome
