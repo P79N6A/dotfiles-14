@@ -2,8 +2,6 @@
   name = nopphasinara
   email = nopphasin.arayasirikul@gmail.com
 [credential]
-  username = nopphasinara
-  helper = osxkeychain
   useHttpPath = true
 [web]
   browser = google-chrome
