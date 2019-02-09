@@ -1,3 +1,6 @@
+[user]
+  name = nopphasinara
+  email = nopphasin.arayasirikul@gmail.com
 [credential]
   helper = osxkeychain
   useHttpPath = true
@@ -8,4 +11,4 @@
   token = 607b3af54cb53f1b651dd99e0e2e30eb0102e0fd
 [core]
   editor = Atom
-  excludesfile = ~/.dotfiles/gitignore
+  excludesfile = ~/.dotfiles/configs/git/.gitignore
