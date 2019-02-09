@@ -30,11 +30,12 @@
 
 Host github.com
   Protocol https,http
-  PasswordAuthentication no
+  PasswordAuthentication yes
   HostbasedAuthentication yes
   User git
   ForwardAgent yes
   AddKeysToAgent yes
+  UseKeychain yes
   IdentityFile ~/.ssh/github_id_rsa
 #   # LocalCommand open -a Atom
 #   # PermitLocalCommand yes
