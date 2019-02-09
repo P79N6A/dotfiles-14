@@ -28,15 +28,14 @@
 #   AddKeysToAgent no
 #   UseKeychain no
 
-# Host github.com
-#   User git
-#   ForwardAgent yes
-#   AddKeysToAgent yes
+Host github.com
+  User git
+  ForwardAgent yes
+  AddKeysToAgent yes
 #   # LocalCommand open -a Atom
 #   # PermitLocalCommand yes
 
-# Host *
-#   SendEnv LANG LC_*
-#   AddKeysToAgent no
-#   IdentityFile ~/.ssh/id_rsa
-#   IdentityFile ~/.ssh/github_id_rsa
+Host *
+  SendEnv LANG LC_*
+  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/github_id_rsa
