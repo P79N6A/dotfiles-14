@@ -6,8 +6,6 @@
 #   helper = osxkeychain
 [web]
   browser = google-chrome
-[github]
-  user = nopphasinara
 [core]
   editor = Atom
   excludesfile = ~/.dotfiles/configs/git/.gitignore
