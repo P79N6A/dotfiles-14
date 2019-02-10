@@ -296,4 +296,6 @@ alias backpack="cd ~/www/backpack.local"
 # }
 alias laravelclear="composer dump-autoload -vvv; composer update -vvv; php artisan view:clear; php artisan route:clear; php artisan optimize:clear; php artisan config:clear; php artisan clear-compiled;"
 alias npmi="npm install"
-alias npmig="npm install -g"
+alias npmi-g="npm install -g"
+alias npmu="npm uninstall"
+alias npmu-g="npm uninstall -g"
