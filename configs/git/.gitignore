@@ -1,6 +1,9 @@
 Thumbs.db
 blob-store
-storage
+public/hot
+public/storage
+# storage
+storage/*.key
 recovery
 compile-cache
 cache
@@ -29,12 +32,12 @@ zsh/cache
 ############
 *.7z
 *.dmg
-*.gz
+# *.gz
 *.iso
 *.jar
 *.rar
 *.tar
-*.zip
+# *.zip
 
 # Logs and databases #
 ######################
@@ -48,4 +51,11 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
-*.lock
+# *.lock
+# *-lock.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
