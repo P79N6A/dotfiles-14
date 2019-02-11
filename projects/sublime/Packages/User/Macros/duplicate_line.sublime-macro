@@ -1,0 +1,6 @@
+[
+    { "command": "duplicate_line", },
+    { "command": "move", "args": { "by": "characters", "forward": false, } },
+    { "command": "insert", "args": { "characters": "\n", } },
+    { "command": "expand_selection", "args": { "to": "brackets", "single_line": false, } },
+]

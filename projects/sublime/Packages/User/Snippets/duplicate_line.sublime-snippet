@@ -1,0 +1,5 @@
+<snippet>
+	<description>Duplicate Line</description>
+	<content><![CDATA[$TM_SELECTED_TEXT
+${0:$SELECTION}]]></content>
+</snippet>

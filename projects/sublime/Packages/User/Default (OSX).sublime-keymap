@@ -1,0 +1,49 @@
+[
+	{"keys": ["alt+shift+s"], "command": "noop"},
+	{"keys": ["alt+shift+r"], "command": "noop"},
+	{"keys": ["alt+shift+t"], "command": "noop"},
+	{"keys": ["alt+shift+c"], "command": "noop"},
+	{"keys": ["alt+shift+d"], "command": "noop"},
+	{"keys": ["alt+shift+x"], "command": "noop"},
+	{"keys": ["alt+shift+n"], "command": "noop"},
+	{"keys": ["alt+shift+w"], "command": "noop"},
+	{"keys": ["alt+shift+z"], "command": "noop"},
+
+	{ "keys": ["super+alt+tab"], "command": "reindent" },
+	{ "keys": ["super+shift+i"], "command": "install_package" },
+	{ "keys": ["super+shift+u"], "command": "remove_package" },
+	{ "keys": ["super+shift+a"], "command": "prompt_add_folder" },
+	{
+		"keys": ["super+backspace"], "command": "run_macro_file",
+		"args": { "file": "res://Packages/Default/Delete Line.sublime-macro" },
+	},
+	{
+		"keys": ["enter"], "command": "run_macro_file",
+		"args": { "file": "res://Packages/Default/Add Line in Braces.sublime-macro" },
+		"context": [
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "preceding_text", "operator": "regex_contains", "operand": "\\[$", "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\]", "match_all": true },
+		],
+	},
+	{
+		"keys": ["super+shift+d"], "command": "run_macro_file",
+		"args": {
+			"file": "res://Packages/User/Macros/duplicate_line.sublime-macro",
+		},
+		"context": [
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+		],
+	},
+	{
+		"keys": ["shift+enter"], "command": "insert_best_completion",
+		"args": { "default": "\n", "exact": false },
+		"context":
+		[
+			{ "key": "preceding_text", "operator": "not_regex_match", "operand": ".*\\b[0-9]+$", "match_all": true },
+		],
+	},
+]
+
