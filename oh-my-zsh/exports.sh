@@ -31,6 +31,7 @@ export GIT_COMMITTER_NAME=$NAME
 export GIT_AUTHOR_EMAIL=$EMAIL
 export GIT_COMMITTER_EMAIL=$EMAIL
 export GIT_SSL_KEY=$HOME/.ssh/github_id_rsa
+# export ATOM_DEV_RESOURCE_PATH=$HOME/.dotfiles/projects/atom
 
 
 # export LDFLAGS=-L/usr/local/opt/php@`phpversion`/lib

@@ -297,7 +297,23 @@ alias backpack="cd ~/www/backpack.local"
 alias laravelclear="composer dump-autoload -vvv; composer update -vvv; php artisan view:clear; php artisan route:clear; php artisan optimize:clear; php artisan config:clear; php artisan clear-compiled;"
 alias npmi="npm install"
 alias npmi-g="npm install -g"
-alias npmu="npm uninstall"
-alias npmu-g="npm uninstall -g"
+alias npmun="npm uninstall"
+alias npmun-g="npm uninstall -g"
+alias npmup="npm update"
+alias npmup-g="npm update -g"
 alias launchunload="launchctl unload -w"
 alias launchload="launchctl load -w"
+
+function pushwith() {
+  let message
+
+  if [[ -z $1 || $1 == '' ]]; then
+    echo -ne "please write message for this commit"
+    return 0
+  fi
+
+  message=$1; shift
+
+  commit $message
+  push $*
+}
