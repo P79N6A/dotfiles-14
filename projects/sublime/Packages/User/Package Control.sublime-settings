@@ -84,10 +84,10 @@
 	"installed_packages":
 	[
 		"Better CoffeeScript",
+		"FileManager",
 		"One Dark Color Scheme",
 		"Package Control",
 		"PackageResourceViewer",
-		"PackagesUI",
 		"Theme - One Dark"
 	],
 	"package_destination": "~/.dotfiles/projects",
