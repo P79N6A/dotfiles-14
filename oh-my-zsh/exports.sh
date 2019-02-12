@@ -33,6 +33,7 @@ export GIT_COMMITTER_EMAIL=$EMAIL
 export GIT_SSL_KEY=$HOME/.ssh/github_id_rsa
 export ATOM_DEV_RESOURCE_PATH=$HOME/.dotfiles/projects/atom-source
 # Fingerprint e8a1cc7b157035e64d21d7ab0884430675b0b62b
+# Refined Github 87608c68d0a291bea87f151502aa9af5f75fed5f
 
 
 # export LDFLAGS=-L/usr/local/opt/php@`phpversion`/lib
