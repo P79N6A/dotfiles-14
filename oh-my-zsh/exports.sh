@@ -31,7 +31,8 @@ export GIT_COMMITTER_NAME=$NAME
 export GIT_AUTHOR_EMAIL=$EMAIL
 export GIT_COMMITTER_EMAIL=$EMAIL
 export GIT_SSL_KEY=$HOME/.ssh/github_id_rsa
-# export ATOM_DEV_RESOURCE_PATH=$HOME/.dotfiles/projects/atom-1-master
+export ATOM_DEV_RESOURCE_PATH=$HOME/.dotfiles/projects/atom-source
+# Fingerprint e8a1cc7b157035e64d21d7ab0884430675b0b62b
 
 
 # export LDFLAGS=-L/usr/local/opt/php@`phpversion`/lib
