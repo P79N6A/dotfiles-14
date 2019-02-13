@@ -84,7 +84,12 @@
 	"installed_packages":
 	[
 		"Better CoffeeScript",
+		"Blade Snippets",
+		"DotENV",
 		"FileManager",
+		"Laravel Blade AutoComplete",
+		"Laravel Blade Highlighter",
+		"Laravel Blade Spacer",
 		"LESS",
 		"One Dark Color Scheme",
 		"Package Control",
