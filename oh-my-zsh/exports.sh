@@ -2,13 +2,16 @@ export h=$HOME
 
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="10"
 
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
 export HOMEBREW_NO_EMOJI="1"
 export MAILCHECK="-1"
 export TERM="xterm-256color"
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="1;32"
-export CLICOLOR="1"
-export LSCOLORS="ExFxCxDxBxegedabagacad"
+# export CLICOLOR="1"
+# export LSCOLORS="ExFxCxDxBxegedabagacad"
 export HISTCONTROL="ignoreboth:erasedups"
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE="1000"
@@ -92,3 +95,7 @@ export PATH="/usr/local/bin:$COMPOSERBIN:$DOTFILES/bin:/usr/bin:/bin:/usr/local/
 # ZSH_THEME_TERM_TITLE_IDLE
 # chpwd_functions
 # precmd_functions
+
+# Add colors to Terminal
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
