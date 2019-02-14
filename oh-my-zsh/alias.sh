@@ -328,5 +328,4 @@ function composer_fresh() {
   echo -ne "Update composer packages...\n\n"
   composer update -vvv
 }
-alias npmup="npm update"
-alias npmup-g="npm update -g"
+
