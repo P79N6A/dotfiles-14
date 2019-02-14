@@ -10,7 +10,7 @@
 	[
 		"https://packagecontrol.io/channel_v3.json"
 	],
-	"debug": false,
+	"debug": true,
 	"dirs_to_ignore":
 	[
 		".hg",
@@ -84,7 +84,12 @@
 	"installed_packages":
 	[
 		"Better CoffeeScript",
+		"Blade Snippets",
+		"DotENV",
 		"FileManager",
+		"Laravel Blade AutoComplete",
+		"Laravel Blade Highlighter",
+		"Laravel Blade Spacer",
 		"LESS",
 		"One Dark Color Scheme",
 		"Package Control",
