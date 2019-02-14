@@ -318,3 +318,15 @@ function pushwith() {
   commit $message
   push $*
 }
+
+
+function composer_fresh() {
+  echo -ne "Install composer packages...\n\n"
+  composer install -vvv
+  echo -ne "Dump autoload...\n\n"
+  composer dump-autoload -vvv
+  echo -ne "Update composer packages...\n\n"
+  composer update -vvv
+}
+alias npmup="npm update"
+alias npmup-g="npm update -g"
