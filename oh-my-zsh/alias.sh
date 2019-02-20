@@ -329,3 +329,4 @@ function composer_fresh() {
   composer update -vvv
 }
 
+alias la="php artisan"
