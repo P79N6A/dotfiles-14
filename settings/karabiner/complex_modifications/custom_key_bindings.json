@@ -896,7 +896,7 @@
       ]
     },
     {
-      "description": "COMMAND + OPTION + CONTROL + Backslash to toggle Sublime.app",
+      "description": "COMMAND + OPTION + CONTROL + Backslash to toggle Google Chrome.app",
       "manipulators": [
         {
           "from": {
@@ -906,6 +906,68 @@
                 "command",
                 "option",
                 "control"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Google Chrome'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "option",
+                "control"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chromeeeeee$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "COMMAND + OPTION + SHIFT + Backslash to toggle Sublime.app",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "option",
+                "shift"
               ],
               "optional": []
             }
@@ -932,7 +994,7 @@
               "mandatory": [
                 "command",
                 "option",
-                "control"
+                "shift"
               ],
               "optional": []
             }
@@ -1011,7 +1073,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com\\.apple\\.finder$"
+                "^com\\.apple\\.finderrrrr$"
               ]
             }
           ],
