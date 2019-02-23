@@ -378,3 +378,10 @@ function compvdump() {
 function compvcreate() {
   composer create-project $* -vvv
 }
+
+function submodule() {
+  git submodule $*
+}
+function submoduleup() {
+  git submodule update --init --recursive $*
+}
