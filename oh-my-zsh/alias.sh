@@ -320,16 +320,61 @@ function pushwith() {
 }
 
 
-function composer_fresh() {
-  echo -ne "Install composer packages...\n\n"
+function compfresh() {
+  echo -ne "\nInstall composer packages...\n\n"
   composer install -vvv
-  echo -ne "Dump autoload...\n\n"
+  echo -ne "\nDump autoload...\n\n"
   composer dump-autoload -vvv
-  echo -ne "Update composer packages...\n\n"
+  echo -ne "\nUpdate composer packages...\n\n"
   composer update -vvv
 }
 
 alias la="php artisan"
-alias comp="composer"
-alias compv="composer -vvv"
-alias compdump="composer dump-autoload -vvv && composer update -vvv"
+function comp() {
+  composer $*
+}
+function compi() {
+  composer install $*
+}
+function compu() {
+  composer update $*
+}
+function compreq() {
+  composer require $*
+}
+function comprem() {
+  composer require $*
+}
+function comprem() {
+  composer require $*
+}
+function compdump() {
+  composer dump-autoload && composer update
+}
+function compcreate() {
+  composer create-project $*
+}
+function compv() {
+  composer $* -vvv
+}
+function compvi() {
+  composer install $* -vvv
+}
+function compvu() {
+  composer update $* -vvv
+}
+function compvreq() {
+  composer require $* -vvv
+}
+function compvrem() {
+  composer require $* -vvv
+}
+function comprem() {
+  composer require $*
+}
+function compvdump() {
+  composer dump-autoload -vvv && composer update -vvv
+}
+function compvcreate() {
+  composer create-project $* -vvv
+}
