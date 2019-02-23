@@ -332,3 +332,4 @@ function composer_fresh() {
 alias la="php artisan"
 alias comp="composer"
 alias compv="composer -vvv"
+alias compdump="composer dump-autoload -vvv && composer update -vvv"
