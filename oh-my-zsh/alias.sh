@@ -330,3 +330,5 @@ function composer_fresh() {
 }
 
 alias la="php artisan"
+alias comp="composer"
+alias compv="composer -vvv"
