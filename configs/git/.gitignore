@@ -1,10 +1,5 @@
 Thumbs.db
 blob-store
-public/hot
-public/storage
-# storage
-storage/*.key
-recovery
 compile-cache
 cache
 zsh/log
@@ -41,18 +36,13 @@ zsh/cache
 
 # Logs and databases #
 ######################
-*.log
 *.sqlite
 
 # OS generated files #
 ######################
-.DS_Store*
 ehthumbs.db
 Icon?
-Thumbs.db
 
-# *.lock
-# *-lock.json
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
