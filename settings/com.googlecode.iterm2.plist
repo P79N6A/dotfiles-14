@@ -47292,7 +47292,7 @@
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
-	<true/>
+	<false/>
 	<key>HideTabCloseButton</key>
 	<false/>
 	<key>HideTabNumber</key>
@@ -47372,9 +47372,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>534 433 923 261 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>473 576 796 473 0 0 1920 1057 </string>
+	<string>472 577 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 17 1920 1040 0 0 1920 1057 </string>
+	<string>0 51 1920 1006 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4_selection</key>
