@@ -302,6 +302,7 @@ alias npmun="npm uninstall"
 alias npmun-g="npm uninstall -g"
 alias npmup="npm update"
 alias npmup-g="npm update -g"
+alias npms="npm search"
 alias launchunload="launchctl unload -w"
 alias launchload="launchctl load -w"
 
