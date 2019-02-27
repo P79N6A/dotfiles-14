@@ -387,3 +387,6 @@ function submodule() {
 function submoduleup() {
   git submodule update --init --recursive $*
 }
+
+
+alias sme="source-map-explorer"
