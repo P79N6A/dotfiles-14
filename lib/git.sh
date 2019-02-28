@@ -225,3 +225,34 @@ function _git_current_user_name() {
 function _git_current_user_email() {
   command git config user.email 2>/dev/null
 }
+
+
+# Determine the time since last commit. If branch is clean,
+# use a neutral color, otherwise colors will vary according to time.
+function _git_time_since_commit() {
+  # Only proceed if there is actually a commit.
+  if last_commit=$(git log --pretty=format:'%at' -1 2> /dev/null); then
+    now=$(date +%s)
+    seconds_since_last_commit=$((now-last_commit))
+
+    # Totals
+    minutes=$((seconds_since_last_commit / 60))
+    hours=$((seconds_since_last_commit/3600))
+
+    # Sub-hours and sub-minutes
+    days=$((seconds_since_last_commit / 86400))
+    sub_hours=$((hours % 24))
+    sub_minutes=$((minutes % 60))
+
+    if [ $hours -ge 24 ]; then
+      commit_age="${days}d"
+    elif [ $minutes -gt 60 ]; then
+      commit_age="${sub_hours}h${sub_minutes}m"
+    else
+      commit_age="${minutes}m"
+    fi
+
+    color=$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL
+    echo "$color$commit_age%{$reset_color%}"
+  fi
+}

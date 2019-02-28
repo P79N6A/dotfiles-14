@@ -81,14 +81,14 @@ function _git_prompt_info() {
     if [[ -n $(_git_current_branch) ]]; then
       GIT_CURRENT_BRANCH=$ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH$(_git_current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH
     fi
-    
+
     if [[ -n $(_git_prompt_short_sha) ]]; then
       GIT_CURRENT_SHA=$ZSH_THEME_GIT_PROMPT_SHA_BEFORE$(_git_prompt_short_sha)$ZSH_THEME_GIT_PROMPT_SHA_AFTER
     fi
-    
-    if [[ -n $(_git_time_since_commit) ]]; then
-      GIT_TIME_SINCE_COMMIT=$ZSH_THEME_GIT_PROMPT_TIME_SINCE_COMMIT_BEFORE$(_git_time_since_commit)$ZSH_THEME_GIT_PROMPT_TIME_SINCE_COMMIT_AFTER
-    fi
+
+    # if [[ -n $(_git_time_since_commit) ]]; then
+    #   GIT_TIME_SINCE_COMMIT=$ZSH_THEME_GIT_PROMPT_TIME_SINCE_COMMIT_BEFORE$(_git_time_since_commit)$ZSH_THEME_GIT_PROMPT_TIME_SINCE_COMMIT_AFTER
+    # fi
 
     if [[ -n $GIT_CURRENT_STATUS ]]; then
       GIT_CURRENT_STATUS=$ZSH_THEME_GIT_PROMPT_CURRENT_STATUS_BEFORE$CLEAN_SIDE$DIRTY_SIDE$ZSH_THEME_GIT_PROMPT_CURRENT_STATUS_AFTER
