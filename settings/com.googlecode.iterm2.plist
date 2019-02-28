@@ -47359,7 +47359,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -47385,7 +47385,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>332 220 796 486 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 56 1918 1121 0 0 1920 1177 </string>
+	<string>0 56 1920 1121 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4_selection</key>
@@ -47689,7 +47689,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>211</integer>
+			<integer>212</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Boost</key>
@@ -50034,6 +50034,8 @@ Clear Buffer</string>
 	<key>UseGCDUpdateTimer</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
+	<false/>
+	<key>UseMetal</key>
 	<false/>
 	<key>VerticalBarCursorWidth</key>
 	<real>2</real>
