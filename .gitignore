@@ -13,4 +13,4 @@ Thumbs.db
 .DS_Store
 "projects/sublime/Packages/User/Package Control.cache"
 "projects/sublime/Packages/User/Package Control.last-run"
-
+*.cache
