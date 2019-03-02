@@ -1,0 +1,10 @@
+{
+    "*": {
+        ">=3000": [
+            "pygments",
+            "pyyaml",
+            "python-markdown",
+            "pymdownx"
+        ]
+    }
+}

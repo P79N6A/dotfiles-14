@@ -1,0 +1,38 @@
+{
+	"debug": false,
+	"folder_backup_path": "",
+	"ignore_dirs":
+	[
+		"Package Control.cache",
+		"Package Control.ca-cert"
+	],
+	"ignore_files":
+	[
+		"*.DS_Store",
+		"*.last-run",
+		"Package Control.ca-list",
+		"Package Control.ca-bundle",
+		"Package Control.system-ca-bundle",
+		"*.sublime-package"
+	],
+	"include_files":
+	[
+		"*.sublime-*",
+		"*.tmLanguage",
+		"*.tmTheme",
+		"*.tmPreferences",
+		"*.json",
+		"*.png",
+		"*.txt",
+		"*.py",
+		"*.md"
+	],
+	"list_backup_path": "",
+	"online_sync_enabled": false,
+	"online_sync_folder": "",
+	"online_sync_interval": 5,
+	"preserve_packages": true,
+	"prompt_for_location": true,
+	"sync_package_sync_settings": true,
+	"zip_backup_path": ""
+}

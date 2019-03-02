@@ -1,0 +1,127 @@
+{
+    "last_run_data_local": {
+        "Default (OSX).sublime-keymap": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap", 
+            "version": 1551506043.976251
+        }, 
+        "MarkdownLivePreview.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/MarkdownLivePreview.sublime-settings", 
+            "version": 1551506043.772489
+        }, 
+        "MarkdownPreview.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings", 
+            "version": 1551506043.722357
+        }, 
+        "Package Control.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings", 
+            "version": 1551508802.743438
+        }, 
+        "Package Syncing.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/Package Syncing.sublime-settings", 
+            "version": 1551509080.9582136
+        }, 
+        "PackageSync.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/PackageSync.sublime-settings", 
+            "version": 1551508759.845133
+        }, 
+        "Preferences.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings", 
+            "version": 1551508803.744147
+        }, 
+        "SublimePackageSync.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/SublimePackageSync.sublime-settings", 
+            "version": 1551508748.992272
+        }, 
+        "SublimePackagesList 1.42.36 PM.txt": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/SublimePackagesList 1.42.36 PM.txt", 
+            "version": 1551507550.110258
+        }, 
+        "SublimePackagesList.txt": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/SublimePackagesList.txt", 
+            "version": 1551507325.063689
+        }, 
+        "SyncSettings.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/SyncSettings.sublime-settings", 
+            "version": 1551506044.195727
+        }, 
+        "list_packages.txt": {
+            "dir": "", 
+            "path": "/Users/sudprawat/Library/Application Support/Sublime Text 3/Packages/User/list_packages.txt", 
+            "version": 1551506270.706151
+        }
+    }, 
+    "last_run_data_remote": {
+        "Default (OSX).sublime-keymap": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/Default (OSX).sublime-keymap", 
+            "version": 1551506043.976251
+        }, 
+        "MarkdownLivePreview.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/MarkdownLivePreview.sublime-settings", 
+            "version": 1551506043.772489
+        }, 
+        "MarkdownPreview.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/MarkdownPreview.sublime-settings", 
+            "version": 1551506043.722357
+        }, 
+        "Package Control.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/Package Control.sublime-settings", 
+            "version": 1551508802.743438
+        }, 
+        "Package Syncing.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/Package Syncing.sublime-settings", 
+            "version": 1551509080.958213
+        }, 
+        "PackageSync.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/PackageSync.sublime-settings", 
+            "version": 1551508759.845133
+        }, 
+        "Preferences.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/Preferences.sublime-settings", 
+            "version": 1551508803.744147
+        }, 
+        "SublimePackageSync.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/SublimePackageSync.sublime-settings", 
+            "version": 1551508748.992272
+        }, 
+        "SublimePackagesList 1.42.36 PM.txt": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/SublimePackagesList 1.42.36 PM.txt", 
+            "version": 1551507550.110258
+        }, 
+        "SublimePackagesList.txt": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/SublimePackagesList.txt", 
+            "version": 1551507325.063689
+        }, 
+        "SyncSettings.sublime-settings": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/SyncSettings.sublime-settings", 
+            "version": 1551506044.195727
+        }, 
+        "list_packages.txt": {
+            "dir": "", 
+            "path": "/Users/sudprawat/.dotfiles/settings/sublime/list_packages.txt", 
+            "version": 1551506270.706151
+        }
+    }, 
+    "packages_to_remove": []
+}

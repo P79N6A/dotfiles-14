@@ -1,0 +1,42 @@
+[
+	{ "keys": ["super+ctrl+p"], "command": "noop" },
+	{ "keys": ["super+alt+s"], "command": "noop" },
+	{ "keys": ["super+ctrl+f"], "command": "noop" },
+	{ "keys": ["super+k", "super+b"], "command": "noop" },
+	{ "keys": ["super+ctrl+shift+f"], "command": "noop" },
+	{ "keys": ["ctrl+shift+o"], "command": "open_url" },
+	{ "keys": ["ctrl+shift+p"], "command": "markdown_preview_select" },
+	{ "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["super+shift+a"], "command": "prompt_add_folder" },
+	{ "keys": ["super+shift+i"], "command": "install_package" },
+	{ "keys": ["super+shift+u"], "command": "remove_package" },
+	{ "keys": ["super+shift+d"], "command": "insert_snippet",
+		"args": {
+			"contents": "$SELECTION\n${0:$SELECTION}"
+		}, "context": [
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+		],
+	},
+	{ "keys": ["enter"], "command": "run_macro_file", "args": { "file": "res://Packages/Default/Add Line in Braces.sublime-macro" }, "context":
+		[
+			{ "key": "setting.auto_indent", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "preceding_text", "operator": "regex_contains", "operand": "\\[$", "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\]", "match_all": true }
+		]
+	},
+	{
+		"keys": ["super+e"], "command": "expand_selection",
+		"args": {
+			"to": "brackets",
+		}
+	},
+	{
+		"keys": ["super+e"], "command": "expand_selection",
+		"args": {
+			"to": "tag",
+		},
+	},
+	{ "keys": ["super+alt+tab"], "command": "reindent" },
+]
