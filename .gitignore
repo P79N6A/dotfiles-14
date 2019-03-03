@@ -11,6 +11,6 @@ cache
 /zsh/cache
 Thumbs.db
 .DS_Store
-"projects/sublime/Packages/User/Package Control.cache"
-"projects/sublime/Packages/User/Package Control.last-run"
+"Package Control.cache"
+"Package Control.last-run"
 *.cache
