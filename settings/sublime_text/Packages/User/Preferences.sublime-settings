@@ -93,7 +93,7 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Menlo",
+	"font_face": "Inter-SemiBold",
 	"font_options":
 	[
 		"no_bold",
