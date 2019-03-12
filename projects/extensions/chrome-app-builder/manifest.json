@@ -1,0 +1,39 @@
+{
+  "app": {
+    "background": {
+      "scripts": [
+        "js/foam.js",
+        "js/cab.js",
+        "config.js",
+        "background_main.js"
+      ]
+    }
+  },
+  "default_locale": "en",
+  "icons": {
+    "128": "img/128.png"
+  },
+  "kiosk_enabled": true,
+  "manifest_version": 2,
+  "minimum_chrome_version": "37.0.0.0",
+  "name": "Demo App",
+  "permissions": [
+    "webview",
+    "power",
+    "storage",
+    "videoCapture",
+    "geolocation",
+    "pointerLock",
+    "system.display",
+    {
+      "fileSystem": [
+        "write",
+        "retainEntries",
+        "directory"
+      ]
+    },
+    "accessibilityFeatures.read",
+    "accessibilityFeatures.modify"
+  ],
+  "version": "0.1"
+}

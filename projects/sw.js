@@ -47,6 +47,16 @@ function _download(d, w) {
 window.addEventListener('keypress', function (evt) {
   var code = evt.code;
   if (code == 'KeyS' && evt.altKey == true) {
+    button = '';
+    control = '';
+    download = '';
+    navigation = '';
+    prev = '';
+    next = '';
+    start = '';
+    btnTimeout = '';
+    current_url = '';
+
     _download(document, window);
   }
 
