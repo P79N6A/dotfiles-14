@@ -11,7 +11,7 @@ var current_url = '';
 function _download(d, w) {
   // console.log('start: ' + start);
   // console.log('current_url: ' + current_url);
-  if (start == current_url) {
+  if (start && start == current_url) {
     console.log('————————— END —————————');
     return false;
   }
@@ -22,6 +22,10 @@ function _download(d, w) {
   setTimeout(function () {
     control = button.getAttribute('aria-controls');
     download = d.querySelector('.fbPhotosPhotoActionsMenu[id="'+ control +'"] a[data-action-type="download_photo"]');
+    current_url = download.getAttribute('href');
+    if (start == '') {
+      start = current_url;
+    }
     download.click();
     button.click();
 
@@ -32,7 +36,6 @@ function _download(d, w) {
       next.click();
 
       setTimeout(function () {
-        current_url = w.location.href;
         _download(d, w);
       }, 400);
     }, 400);
@@ -42,7 +45,6 @@ function _download(d, w) {
 window.addEventListener('keypress', function (evt) {
   var code = evt.code;
   if (code == 'KeyS' && evt.altKey == true) {
-    start = window.location.href;
     _download(document, window);
   }
 
