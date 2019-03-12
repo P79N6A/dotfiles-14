@@ -43,11 +43,12 @@ window.onload = function () {
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function (tab) {
   console.clear();
+
   // No tabs or host permissions needed!
-  console.log(tab);
-  console.log('Turning ' + tab.url + ' red!');
-  alert(document.body.style.backgroundColor);
-  chrome.tabs.executeScript({
-    code: 'document.body.style.backgroundColor="red"'
-  });
+  // console.log(tab);
+  // console.log('Turning ' + tab.url + ' red!');
+  // alert(document.body.style.backgroundColor);
+  // chrome.tabs.executeScript({
+  //   code: 'document.body.style.backgroundColor="red"'
+  // });
 });
