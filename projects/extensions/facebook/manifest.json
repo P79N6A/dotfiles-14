@@ -41,10 +41,7 @@
     "tabs",
     "activeTab",
     "geolocation",
-    "*://*.google.com/*",
-    "*://google.com/*",
-    "*://*.facebook.com/*",
-    "*://facebook.com/*"
+    "downloads"
   ],
   "content_scripts": [
     {
