@@ -21,16 +21,17 @@ function _download(d, w) {
       button.click();
       console.log('————————— END —————————');
       return false;
+    } else {
+      download.click();
+      button.click();
     }
 
     if (current_url && start == '') {
       start = current_url;
     }
 
-    download.click();
-    button.click();
-
     setTimeout(function () {
+      button.click();
       navigation = d.querySelector('.fbPhotoSnowliftContainer');
       prev = navigation.querySelector('.snowliftPager.prev');
       next = navigation.querySelector('.snowliftPager.next');
