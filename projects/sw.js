@@ -9,13 +9,6 @@ var btnTimeout = '';
 var current_url = '';
 
 function _download(d, w) {
-  // console.log('start: ' + start);
-  // console.log('current_url: ' + current_url);
-  if (start && start == current_url) {
-    console.log('————————— END —————————');
-    return false;
-  }
-
   button = d.querySelector('.fbPhotoSnowliftDropdownButton');
   button.click();
 
@@ -23,9 +16,17 @@ function _download(d, w) {
     control = button.getAttribute('aria-controls');
     download = d.querySelector('.fbPhotosPhotoActionsMenu[id="'+ control +'"] a[data-action-type="download_photo"]');
     current_url = download.getAttribute('href');
-    if (start == '') {
+
+    if (current_url && start && start == current_url) {
+      button.click();
+      console.log('————————— END —————————');
+      return false;
+    }
+
+    if (current_url && start == '') {
       start = current_url;
     }
+
     download.click();
     button.click();
 
