@@ -21,6 +21,7 @@ chrome.extension.sendMessage({}, function (response) {
       // console.log(sender);
       console.log(response);
       console.log(this);
+      console.log(chrome);
 
     }
   }, 10);
