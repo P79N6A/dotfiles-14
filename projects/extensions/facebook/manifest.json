@@ -5,10 +5,10 @@
   "description": "This extension was created with the awesome goldfishcreativethailand.com",
   "homepage_url": "https://goldfishcreativethailand.com",
   "icons": {
-    "16": "icons/thief.png",
-    "32": "icons/thief.png",
-    "48": "icons/thief.png",
-    "128": "icons/thief.png"
+    "16": "icons/geek.png",
+    "32": "icons/geek.png",
+    "48": "icons/geek.png",
+    "128": "icons/geek.png"
   },
   "default_locale": "en",
   "background": {
@@ -19,7 +19,7 @@
     "persistent": false
   },
   "browser_action": {
-    "default_icon": "icons/thief.png",
+    "default_icon": "icons/geek.png",
     "default_title": "Goldfish Toolkits"
   },
   "commands": {
