@@ -40,8 +40,6 @@ zsh/cache
 
 # OS generated files #
 ######################
-ehthumbs.db
-Icon?
 
 .phpunit.result.cache
 Homestead.json
