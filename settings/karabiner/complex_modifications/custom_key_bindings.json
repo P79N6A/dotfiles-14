@@ -628,7 +628,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com\\.googlecode\\.iterm222222$"
+                "^com\\.googlecode\\.iterm2$"
               ]
             }
           ],
@@ -887,7 +887,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com\\.github\\.atommmmmm$"
+                "^com\\.github\\.atom$"
               ]
             }
           ],
@@ -949,7 +949,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com\\.google\\.Chromeeeeee$"
+                "^com\\.google\\.Chrome$"
               ]
             }
           ],
@@ -1011,7 +1011,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com\\.sublimetext\\.333333$"
+                "^com\\.sublimetext\\.3$"
               ]
             }
           ],
@@ -1020,11 +1020,11 @@
       ]
     },
     {
-      "description": "COMMAND + SHIFT + f to toggle Finder.app",
+      "description": "COMMAND + SHIFT + Backslash to toggle Finder.app",
       "manipulators": [
         {
           "from": {
-            "key_code": "f",
+            "key_code": "backslash",
             "modifiers": {
               "mandatory": [
                 "command",
@@ -1042,8 +1042,6 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.github\\.atom$",
-                "^com\\.sublimetext\\.3$",
                 "^com\\.apple\\.finder$"
               ]
             }
@@ -1052,7 +1050,7 @@
         },
         {
           "from": {
-            "key_code": "f",
+            "key_code": "backslash",
             "modifiers": {
               "mandatory": [
                 "command",
@@ -1073,7 +1071,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com\\.apple\\.finderrrrr$"
+                "^com\\.apple\\.finder$"
               ]
             }
           ],
