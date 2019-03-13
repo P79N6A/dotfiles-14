@@ -43,11 +43,11 @@ function _download() {
         setTimeout(function () {
           current_url = document.URL;
           _download();
-        }, 200);
+        }, 400);
 
-      }, 200);
+      }, 400);
 
-    }, 200);
+    }, 400);
 
   }, 200);
 }
