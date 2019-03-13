@@ -29,7 +29,7 @@
         "*://facebook.com/*"
       ],
       "js": [
-        "src/inject/inject.js"
+        "src/inject/facebook.js"
       ]
     }
   ],
@@ -54,13 +54,6 @@
         "mac": "MacCtrl+Shift+Right"
       },
       "description": "Move current tab to the right."
-    },
-    "_execute_browser_action": {
-      "suggested_key": {
-        "default": "Alt+S",
-        "mac": "Alt+S"
-      },
-      "description": "Download photos from Facebook"
     }
   },
   "permissions": [
