@@ -9,30 +9,29 @@ var next = '';
 var prev = '';
 var start = '';
 
+window.addEventListener('load', function () {
+  console.log('loaded');
+});
+
+document.addEventListener('ready', function () {
+  console.log('ready');
+});
+
+document.addEventListener('readystatechange', function () {
+  console.log('readystatechange');
+});
+
 function _download() {
   button = document.querySelector('.fbPhotoSnowliftDropdownButton');
 
   setTimeout(function () {
-    if (current_url === start) {
-      console.log('————————— END —————————');
-      return false;
-    }
-
     button.click();
 
     setTimeout(function () {
       control = button.getAttribute('aria-controls');
       download = document.querySelector('.fbPhotosPhotoActionsMenu[id="'+ control +'"] a[data-action-type="download_photo"]');
       download.click();
-
-      // if (current_url === start) {
-      //   button.click();
-      //   console.log('————————— END —————————');
-      //   return false;
-      // } else {
-      //   download.click();
-      //   button.click();
-      // }
+      button.click();
 
       setTimeout(function () {
         navigation = document.querySelector('.fbPhotoSnowliftContainer');
@@ -41,13 +40,18 @@ function _download() {
         next.click();
 
         setTimeout(function () {
-          current_url = document.URL;
-          _download();
-        }, 400);
+          if (document.URL === start) {
+            console.log('————————— END —————————');
+            return false;
+          } else {
+            current_url = document.URL;
+            _download();
+          }
+        }, 200);
 
-      }, 400);
+      }, 200);
 
-    }, 400);
+    }, 1000);
 
   }, 200);
 }
@@ -97,6 +101,8 @@ chrome.extension.sendMessage({}, function (response) {
 
       var request = response.request;
       var sender = response.sender;
+
+      console.log('complete');
 
       // if (sender.tab.active === true) {
       //   activeTab = sender.tab;
