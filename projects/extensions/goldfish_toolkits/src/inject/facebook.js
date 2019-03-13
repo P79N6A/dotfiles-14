@@ -107,14 +107,15 @@ function _download() {
 
       control = button.getAttribute('aria-controls');
       download = document.querySelector('.fbPhotosPhotoActionsMenu[id="'+ control +'"] a[data-action-type="download_photo"]');
-      download.click();
-      // downloadHref = set_download_url(get_attribute(download, 'href'));
-      // if (!downloadHref) {
-      //   return false;
-      // }
+      // download.click();
+      downloadHref = set_download_url(get_attribute(download, 'href'));
+      if (!downloadHref) {
+        return false;
+      }
 
       // window.location.href = downloadHref;
-      // window.open(downloadHref, '_parent');
+      window.open(downloadHref, '_top');
+      download.click();
 
       // chrome.tabs.create({
       //   'url': downloadHref,
@@ -156,57 +157,63 @@ function _download() {
   }, 400);
 }
 
-window.addEventListener('load', function () {
-  set_start('');
-  set_current('');
-
-  console.log('load');
-});
-
 document.onreadystatechange = function () {
   if (document.readyState === 'complete') {
     console.log('ready');
+
+    window.addEventListener('load', function () {
+      set_start('');
+      set_current('');
+
+      console.log('load');
+
+      document.addEventListener('keypress', function (evt) {
+        code = evt.code;
+
+        if (code == 'KeyS' && evt.ctrlKey == true) {
+          if (typeof get_start() == 'undefined' || get_start() == '' || !get_start()) {
+            let sign = prompt('Please provide URL to start');
+
+            if (typeof sign != 'undefined') {
+              if (sign == '') {
+                set_start(window.location.href);
+                set_current('');
+                _download();
+              } else {
+                if (valid_url(sign) == true) {
+                  set_start(sign);
+                  set_current('');
+                  _download();
+                } else {
+                  alert('Invalid url please try again!');
+                }
+              }
+            } else {
+              //
+            }
+          } else {
+            set_current('');
+            _download();
+          }
+        }
+
+        if (code == 'KeyD' && evt.ctrlKey == true) {
+          activeTab = null;
+          button = null;
+          code = '';
+          control = '';
+          set_current('');
+          // current_url = get_current();
+          download = '';
+          navigation = '';
+          next = '';
+          prev = '';
+          set_start(window.location.href);
+          // start = get_start();
+
+          _download();
+        }
+      });
+    });
   }
 }
-
-window.addEventListener('keypress', function (evt) {
-  code = evt.code;
-
-  if (code == 'KeyS' && evt.ctrlKey == true) {
-    if (typeof get_start() == 'undefined' || get_start() == '' || !get_start()) {
-      let sign = prompt('Please provide URL to start');
-
-      if (typeof sign != 'undefined' && sign && sign != '' && sign != null) {
-        if (valid_url(sign) == true) {
-          set_start(sign);
-          set_current('');
-          _download();
-        } else {
-          alert('Invalid url please try again!');
-        }
-      } else {
-        // cancel
-      }
-    } else {
-      set_current('');
-      _download();
-    }
-  }
-
-  if (code == 'KeyD' && evt.ctrlKey == true) {
-    activeTab = null;
-    button = null;
-    code = '';
-    control = '';
-    set_current('');
-    // current_url = get_current();
-    download = '';
-    navigation = '';
-    next = '';
-    prev = '';
-    set_start(window.location.href);
-    // start = get_start();
-
-    _download();
-  }
-});

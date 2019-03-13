@@ -25,8 +25,8 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.facebook.com/*",
-        "*://facebook.com/*"
+        "*://*.facebook.com/*/photos/*",
+        "*://facebook.com/*/photos/*"
       ],
       "js": [
         "src/inject/facebook.js"
