@@ -113,44 +113,34 @@ function _download() {
         return false;
       }
 
-      // window.location.href = downloadHref;
-      window.open(downloadHref, '_top');
-      download.click();
+      if (window.location.href == get_start()) {
+        button.click();
+        console.log('————————— END —————————');
+        return false;
+      } else {
+        // window.location.href = downloadHref;
+        window.open(downloadHref, '_top');
+        download.click();
 
-      // chrome.tabs.create({
-      //   'url': downloadHref,
-      //   'active': false,
-      //   'selected': false,
-      //   'pinned': false,
-      //   'openerTabId': sender.tab.id,
-      // }, function (tab) {
-      //   //
-      // });
+        var interval3 = setInterval(function () {
+          clearInterval(interval3);
 
-      var interval3 = setInterval(function () {
-        clearInterval(interval3);
+          navigation = document.querySelector('.fbPhotoSnowliftContainer');
+          prev = navigation.querySelector('.snowliftPager.prev');
+          next = navigation.querySelector('.snowliftPager.next');
 
-        // button.click();
+          next.click();
 
-        navigation = document.querySelector('.fbPhotoSnowliftContainer');
-        prev = navigation.querySelector('.snowliftPager.prev');
-        next = navigation.querySelector('.snowliftPager.next');
+          var interval4 = setInterval(function () {
+            clearInterval(interval4);
 
-        next.click();
-
-        var interval4 = setInterval(function () {
-          clearInterval(interval4);
-
-          if (window.location.href == get_start()) {
-            console.log('————————— END —————————');
-            return false;
-          } else {
             set_current(window.location.href);
             _download();
-          }
+          }, 1000);
+
         }, 1000);
 
-      }, 1000);
+      }
 
     }, 1000);
 
