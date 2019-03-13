@@ -8,6 +8,8 @@ var navigation = '';
 var next = '';
 var prev = '';
 var start = '';
+var dataStart = '';
+var dataCurrent = '';
 
 window.addEventListener('load', function () {
   console.log('loaded');
@@ -20,6 +22,32 @@ document.addEventListener('ready', function () {
 document.addEventListener('readystatechange', function () {
   console.log('readystatechange');
 });
+
+function get_start() {
+  dataStart = document.querySelector('body').getAttribute('data-start');
+  if (typeof dataStart === 'undefined' || !dataStart) {
+    dataStart = '';
+  }
+  return dataStart;
+}
+
+function get_current() {
+  dataCurrent = document.querySelector('body').getAttribute('data-current');
+  if (typeof dataCurrent === 'undefined' || !dataCurrent) {
+    dataCurrent = '';
+  }
+  return dataCurrent;
+}
+
+function set_start(value = '') {
+  document.querySelector('body').setAttribute('data-start', value);
+  return value;
+}
+
+function set_current(value = '') {
+  document.querySelector('body').setAttribute('data-current', value);
+  return value;
+}
 
 function _download() {
   button = document.querySelector('.fbPhotoSnowliftDropdownButton');
@@ -40,49 +68,49 @@ function _download() {
         next.click();
 
         setTimeout(function () {
-          if (document.URL === start) {
+          if (document.URL === get_start()) {
             console.log('————————— END —————————');
             return false;
           } else {
-            current_url = document.URL;
+            set_current(document.URL);
+            current_url = get_current();
             _download();
           }
-        }, 200);
+        }, 400);
 
-      }, 200);
+      }, 400);
 
     }, 1000);
 
-  }, 200);
+  }, 400);
 }
 
 document.addEventListener('keypress', function (evt) {
   code = evt.code;
 
   if (code === 'KeyS' && evt.ctrlKey === true) {
-    // console.log('S');
+    set_current('');
 
-    if (start === '') {
+    if (get_start() === '') {
       alert('Please restart again!');
     } else {
-      current_url = '';
       _download();
     }
   }
 
   if (code === 'KeyD' && evt.ctrlKey === true) {
-    // console.log('D');
-
     activeTab = null;
     button = null;
     code = '';
     control = '';
-    current_url = '';
+    set_current('');
+    current_url = get_current();
     download = '';
     navigation = '';
     next = '';
     prev = '';
-    start = document.URL;
+    set_start(document.URL);
+    start = get_start();
 
     _download();
   }
@@ -103,6 +131,9 @@ chrome.extension.sendMessage({}, function (response) {
       var sender = response.sender;
 
       console.log('complete');
+
+      set_start('');
+      set_current('');
 
       // if (sender.tab.active === true) {
       //   activeTab = sender.tab;
