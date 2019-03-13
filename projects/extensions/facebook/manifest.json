@@ -13,6 +13,7 @@
   "default_locale": "en",
   "background": {
     "scripts": [
+      "src/bg/helpers.js",
       "src/bg/background.js",
       "src/inject/tab_shortcuts.js"
     ],
@@ -22,6 +23,17 @@
     "default_icon": "icons/geek.png",
     "default_title": "Goldfish Toolkits"
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*",
+        "*://facebook.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ],
   "commands": {
     "duplicate-tab": {
       "suggested_key": {
@@ -53,7 +65,6 @@
     }
   },
   "permissions": [
-    "activeTab",
     "browsingData",
     "clipboardRead",
     "clipboardWrite",

@@ -7,16 +7,16 @@
 * one of our registered commands is detected.
 */
 
-let hasPinTabs = false;
-let windowTabs = null;
-let firstTab = null;
-let lastTab = null;
-let firstPinTab = null;
-let lastPinTab = null;
-let firstIndex = 0;
-let lastIndex = -1;
-let firstPinIndex = 0;
-let lastPinIndex = -1;
+var hasPinTabs = false;
+var windowTabs = null;
+var firstTab = null;
+var lastTab = null;
+var firstPinTab = null;
+var lastPinTab = null;
+var firstIndex = 0;
+var lastIndex = -1;
+var firstPinIndex = 0;
+var lastPinIndex = -1;
 
 chrome.commands.onCommand.addListener(function(command) {
   // Call 'update' with an empty properties object to get access to the current
@@ -55,12 +55,12 @@ chrome.commands.onCommand.addListener(function(command) {
     'currentWindow': true,
     'active': true,
   }, function (tabs) {
-    let activeTab = tabs[0];
+    var activeTab = tabs[0];
 
     if (command == 'duplicate-tab') {
       chrome.tabs.duplicate(activeTab.id);
     } else if (command == 'move-tab-left') {
-      let newIndex = parseInt(activeTab.index) - 1;
+      var newIndex = parseInt(activeTab.index) - 1;
 
       if (activeTab.pinned == true) {
         if (newIndex < firstPinIndex) {
@@ -77,7 +77,7 @@ chrome.commands.onCommand.addListener(function(command) {
         'windowId': parseInt(activeTab.windowId),
       });
     } else if (command == 'move-tab-right') {
-      let newIndex = parseInt(activeTab.index) + 1;
+      var newIndex = parseInt(activeTab.index) + 1;
 
       if (activeTab.pinned == true) {
         if (newIndex > lastPinIndex) {
