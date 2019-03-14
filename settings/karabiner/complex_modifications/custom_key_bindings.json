@@ -896,7 +896,7 @@
       ]
     },
     {
-      "description": "COMMAND + OPTION + CONTROL + Backslash to toggle Google Chrome.app",
+      "description": "COMMAND + CONTROL + Backslash to toggle Google Chrome.app",
       "manipulators": [
         {
           "from": {
@@ -904,7 +904,6 @@
             "modifiers": {
               "mandatory": [
                 "command",
-                "option",
                 "control"
               ],
               "optional": []
@@ -931,7 +930,6 @@
             "modifiers": {
               "mandatory": [
                 "command",
-                "option",
                 "control"
               ],
               "optional": []
