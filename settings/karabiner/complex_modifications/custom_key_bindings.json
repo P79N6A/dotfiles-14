@@ -956,7 +956,7 @@
       ]
     },
     {
-      "description": "COMMAND + OPTION + SHIFT + Backslash to toggle Sublime.app",
+      "description": "COMMAND + CONTROL + OPTION + SHIFT + Backslash to toggle Sublime.app",
       "manipulators": [
         {
           "from": {
@@ -965,7 +965,7 @@
               "mandatory": [
                 "command",
                 "option",
-                "shift"
+                "control"
               ],
               "optional": []
             }
@@ -992,7 +992,7 @@
               "mandatory": [
                 "command",
                 "option",
-                "shift"
+                "control"
               ],
               "optional": []
             }
