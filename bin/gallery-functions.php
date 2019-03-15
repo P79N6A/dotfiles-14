@@ -25,7 +25,7 @@ function createDataLog($source, $file) {
             $fw = @fopen($file, 'a+');
             fwrite($fw, "". trim($buffer[2]) ."\n");
             @fclose($fw);
-        }
+        }FlowType
 
         @ob_flush();
         usleep(400);
