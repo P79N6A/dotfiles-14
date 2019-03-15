@@ -17,5 +17,6 @@ Thumbs.db
 *.last-run
 **.cache
 **.last-run
-./**.cache
-./**.last-run
+*.cache
+*.last-run
+*.so

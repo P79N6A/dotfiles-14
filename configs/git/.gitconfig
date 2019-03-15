@@ -8,6 +8,6 @@
   browser = google-chrome
 [core]
   editor = Atom
-  excludesfile = ~/.dotfiles/configs/git/.gitignore
+  # excludesfile = ~/.dotfiles/configs/git/.gitignore
 [url "git@github.com:"]
   insteadOf = https://github.com/
