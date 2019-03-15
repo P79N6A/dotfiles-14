@@ -2,7 +2,7 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
-      "description": "Disable CONTROL + Left/Right Click",
+      "description": "Disable control+left/right click",
       "manipulators": [
         {
           "from": {
@@ -39,7 +39,70 @@
       ]
     },
     {
-      "description": "cmd+\\ to toggle iTerm.app",
+      "description": "option+left/right click to navigate backward/forward",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$",
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$",
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "command+backslash to toggle iTerm.app",
       "manipulators": [
         {
           "from": {
@@ -47,8 +110,7 @@
             "modifiers": {
               "mandatory": [
                 "command"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
@@ -72,8 +134,7 @@
             "modifiers": {
               "mandatory": [
                 "command"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
@@ -97,7 +158,7 @@
       ]
     },
     {
-      "description": "alt+cmd+\\ to toggle Atom.app",
+      "description": "option+command+backslash to toggle Atom.app",
       "manipulators": [
         {
           "from": {
@@ -106,8 +167,7 @@
               "mandatory": [
                 "command",
                 "option"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
@@ -132,8 +192,7 @@
               "mandatory": [
                 "command",
                 "option"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
@@ -157,7 +216,7 @@
       ]
     },
     {
-      "description": "ctrl+\\ to toggle Google Chrome.app",
+      "description": "control+backslash to toggle Google Chrome.app",
       "manipulators": [
         {
           "from": {
@@ -165,8 +224,7 @@
             "modifiers": {
               "mandatory": [
                 "control"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
@@ -190,8 +248,7 @@
             "modifiers": {
               "mandatory": [
                 "control"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
@@ -215,7 +272,7 @@
       ]
     },
     {
-      "description": "shift+alt+cmd+\\ to toggle Sublime.app",
+      "description": "shift+option+command+backslash to toggle Sublime.app",
       "manipulators": [
         {
           "from": {
@@ -225,8 +282,7 @@
                 "shift",
                 "option",
                 "command"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
@@ -252,8 +308,7 @@
                 "shift",
                 "option",
                 "command"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
@@ -277,7 +332,7 @@
       ]
     },
     {
-      "description": "ctrl+alt+cmd+\\ to toggle Finder.app",
+      "description": "control+option+command+backslash to toggle Finder.app",
       "manipulators": [
         {
           "from": {
@@ -287,8 +342,7 @@
                 "control",
                 "option",
                 "command"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
@@ -314,8 +368,7 @@
                 "control",
                 "option",
                 "command"
-              ],
-              "optional": []
+              ]
             }
           },
           "to": [
