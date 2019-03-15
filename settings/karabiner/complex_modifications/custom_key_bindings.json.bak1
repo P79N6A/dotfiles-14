@@ -1,0 +1,1137 @@
+{
+  "title": "Complex Modifications Rules",
+  "rules": [
+    {
+      "description": "Toggle fn_locked if hold down Fn key",
+      "manipulators": [
+        {
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "fn"
+              },
+              {
+                "key_code": "left_control"
+              },
+              {
+                "key_code": "left_option"
+              },
+              {
+                "key_code": "left_command"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "insensitive",
+              "key_up_when": "all",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "fn_locked",
+                    "value": 1
+                  }
+                },
+                {
+                  "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Mode fn_locked activated.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 0
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "fn"
+              },
+              {
+                "key_code": "left_control"
+              },
+              {
+                "key_code": "left_option"
+              },
+              {
+                "key_code": "left_command"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "insensitive",
+              "key_up_when": "all",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "fn_locked",
+                    "value": 0
+                  }
+                },
+                {
+                  "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Mode fn_locked deactivated.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Change OPTION, F3-4, F7-9 to LEFT_CLICK when fn_locked activate.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 1200
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "left_option"
+          },
+          "to": [
+            {
+              "key_code": "left_option",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 1200
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "right_option"
+          },
+          "to": [
+            {
+              "key_code": "right_option",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 1200
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "f3"
+          },
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 1200
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "f4"
+          },
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 1200
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "f7"
+          },
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 1200
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "f8"
+          },
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 1200
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "f9"
+          },
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 1200
+          },
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Change CONTROL + arrow keys to move mouse cursor when fn_locked activate.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 1.5,
+                "x": -540
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 1.5,
+                "x": 540
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 1.5,
+                "y": -540
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 1.5,
+                "y": 540
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Change Fn + CONTROL + arrow keys to scroll wheel when fn_locked activate.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 1.5,
+                "horizontal_wheel": 64
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 1.5,
+                "horizontal_wheel": -64
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 1.5,
+                "vertical_wheel": -64
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 1.5,
+                "vertical_wheel": 64
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Change CONTROL + hjkl to arrow keys.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "COMMAND + Backslash to toggle iTerm.app",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'iTerm'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Fn + Left/Right Click to Back/Forward in browsers but disable on others",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$",
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$",
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$",
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$",
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Disable CONTROL + Left/Right Click",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "SHIFT + Fn + Left/Right click to Cycle Tabs",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "COMMAND + OPTION + Backslash to toggle Atom.app",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "option"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Atom'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.github\\.atom$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "option"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.github\\.atom$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "COMMAND + CONTROL + Backslash to toggle Google Chrome.app",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "control"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Google Chrome'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "control"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "COMMAND + CONTROL + OPTION + SHIFT + Backslash to toggle Sublime.app",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "option",
+                "control"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Sublime Text'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.sublimetext\\.3$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "option",
+                "control"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.sublimetext\\.3$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "COMMAND + SHIFT + Backslash to toggle Finder.app",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "shift"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Finder'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.finder$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "shift"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.finder$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Toggle RIGHT_CLICK when pressed Fn + PERIOD.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button2"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Save Image",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": []
+            }
+          },
+          "to": [
+            {
+              "key_code": "s",
+              "modifiers": [
+                "control",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
