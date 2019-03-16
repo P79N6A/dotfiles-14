@@ -2,20 +2,30 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
-      "description": "Disable control+left/right click",
+      "description": "Disable option+left/right click on browsers",
       "manipulators": [
         {
           "from": {
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "control"
+                "option"
               ]
             }
           },
           "to": [
             {
               "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$",
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Firefox$"
+              ]
             }
           ],
           "type": "basic"
@@ -25,13 +35,23 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "control"
+                "option"
               ]
             }
           },
           "to": [
             {
               "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome$",
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Firefox$"
+              ]
             }
           ],
           "type": "basic"
@@ -39,14 +59,14 @@
       ]
     },
     {
-      "description": "option+left/right click to navigate backward/forward",
+      "description": "control+left/right click to navigate backward/forward",
       "manipulators": [
         {
           "from": {
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "option"
+                "control"
               ]
             }
           },
@@ -54,17 +74,8 @@
             {
               "key_code": "open_bracket",
               "modifiers": [
+                "shift",
                 "command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.google\\.Chrome$",
-                "^com\\.apple\\.Safari$",
-                "^com\\.apple\\.Firefox$"
               ]
             }
           ],
@@ -75,7 +86,7 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "option"
+                "control"
               ]
             }
           },
@@ -83,17 +94,8 @@
             {
               "key_code": "close_bracket",
               "modifiers": [
+                "shift",
                 "command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.google\\.Chrome$",
-                "^com\\.apple\\.Safari$",
-                "^com\\.apple\\.Firefox$"
               ]
             }
           ],
@@ -216,6 +218,64 @@
       ]
     },
     {
+      "description": "shift+option+command+backslash to toggle Sublime.app",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Sublime Text'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.sublimetext\\.3$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.sublimetext\\.3$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "control+backslash to toggle Google Chrome.app",
       "manipulators": [
         {
@@ -272,40 +332,14 @@
       ]
     },
     {
-      "description": "shift+option+command+backslash to toggle Sublime.app",
+      "description": "control+command+backslash to toggle Finder",
       "manipulators": [
         {
           "from": {
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "shift",
-                "option",
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Sublime Text'"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com\\.sublimetext\\.3$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "backslash",
-            "modifiers": {
-              "mandatory": [
-                "shift",
+                "control",
                 "option",
                 "command"
               ]
@@ -323,17 +357,12 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com\\.sublimetext\\.3$"
+                "^com\\.apple\\.finder$"
               ]
             }
           ],
           "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "control+option+command+backslash to toggle Finder.app",
-      "manipulators": [
+        },
         {
           "from": {
             "key_code": "backslash",
@@ -350,14 +379,6 @@
               "shell_command": "open -a 'Finder'"
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com\\.apple\\.finder$"
-              ]
-            }
-          ],
           "type": "basic"
         },
         {
@@ -365,8 +386,7 @@
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "control",
-                "option",
+                "shift",
                 "command"
               ]
             }
@@ -385,6 +405,23 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.finder$"
               ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Finder'"
             }
           ],
           "type": "basic"
