@@ -2,7 +2,23 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
-      "description": "Disable option+left/right click on browsers",
+      "description": "Toggle iTerm 1x ⏏",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "eject"
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'iTerm'"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Disable ⌥ ＋  on browsers",
       "manipulators": [
         {
           "from": {
@@ -59,7 +75,7 @@
       ]
     },
     {
-      "description": "control+left/right click to navigate backward/forward",
+      "description": "Navigate backward/forward when ⌃ ＋  on browser",
       "manipulators": [
         {
           "from": {
@@ -104,7 +120,7 @@
       ]
     },
     {
-      "description": "command+backslash to toggle iTerm.app",
+      "description": "Toggle iTerm ⌘ ＋ ﹨",
       "manipulators": [
         {
           "from": {
@@ -160,15 +176,15 @@
       ]
     },
     {
-      "description": "option+command+backslash to toggle Atom.app",
+      "description": "Toggle Atom ﹨ ＋ ⌥ ＋ ⌘",
       "manipulators": [
         {
           "from": {
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "command",
-                "option"
+                "option",
+                "command"
               ]
             }
           },
@@ -192,8 +208,8 @@
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "command",
-                "option"
+                "option",
+                "command"
               ]
             }
           },
@@ -218,7 +234,7 @@
       ]
     },
     {
-      "description": "shift+option+command+backslash to toggle Sublime.app",
+      "description": "Toggle Sublime Text ﹨ ＋ ⬆ ＋ ⌥ ＋ ⌘",
       "manipulators": [
         {
           "from": {
@@ -276,7 +292,7 @@
       ]
     },
     {
-      "description": "control+backslash to toggle Google Chrome.app",
+      "description": "Toggle Google Chrome ﹨ ＋ ⌃",
       "manipulators": [
         {
           "from": {
@@ -332,7 +348,7 @@
       ]
     },
     {
-      "description": "control+command+backslash to toggle Finder",
+      "description": "Toggle Finder ﹨ ＋ ⌃ ＋ ⌥ ＋ ⌘",
       "manipulators": [
         {
           "from": {

@@ -1,7 +1,26 @@
+BACKSLASH ﹨
+KEYBOARD ﬽
+SHIFT ⬆
+EJECT ⏏
+RETURN ⏎ ⤶ ⮐
+DELETE ⌫
+COMMAND ⌘
+CONTROL ⌃
+ARROWS ↓→↑←
+PLUS ＋ ✚
+POWER ⎋
+VISIBILITY 
+TAGS  
+LOCK 
+CLICK 
+OPTION ⌥
+
 {
-  "title": "Complex Modifications Rules",
+  "title": "Complex Modifications Rules ⌘",
   "rules": [
     {
+      "description": "⌘ + ⌫ + ＼ + ⌥ + ⌃ + ⬆ + ⏏ + ←↑→↓ + ✕ + × + ∼ + ⌫ + ⇥ + ⎋ + ↩︎",
+      "description": "⌘ + ⌫ + ＼ + ⌥ + ⌃ + ⬆ + ⏏ + ←↑→↓ + ⏎ + ⇥ + ✕ + ×",
       "description": "Toggle fn_locked if hold down Fn key",
       "manipulators": [
         {
@@ -35,7 +54,7 @@
                   "shell_command": "osascript -e 'tell app \"System Events\" to display notification \"Mode fn_locked activated.\" with title \"Keyboard Customizer\" sound name \"Frog\"'"
                 }
               ]
-            }
+            }☀︎
           },
           "parameters": {
             "basic.simultaneous_threshold_milliseconds": 500
