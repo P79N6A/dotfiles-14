@@ -390,4 +390,4 @@ function submoduleup() {
 
 
 alias sme="source-map-explorer"
-alias hide="chflags hidden"
+alias hide="chflags hidden"alias unhide="chflags nohidden"
