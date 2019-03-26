@@ -16,15 +16,51 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
 });
 
 
-/* chrome.runtime.onInstalled.addListener(function () {
+// A generic onclick callback function.
+function genericOnClick(info, tab) {
+  console.log('item ' + info.menuItemId + ' was clicked');
+  console.log('info: ' + JSON.stringify(info));
+  console.log('tab: ' + JSON.stringify(tab));
+}
+
+chrome.runtime.onInstalled.addListener(function () {
   chrome.contextMenus.create({
-    "id": "GCTContextMenu",
-    "title": "Sample Context Menu",
-    "contexts": [
-      "all",
+    'id': 'GCTContextMenu',
+    'title': 'Open in current tab',
+    'contexts': [
+      'link',
     ],
   });
-}); */
+});
+
+chrome.contextMenus.onClicked.addListener(function (info, tab) {
+  var openerTab = tab;
+  if (typeof tab.openerTabId == 'undefined' || tab.openerTabId == '') {
+    //
+  } else {
+    if (typeof info.linkUrl == 'undefined' || info.linkUrl == '') {
+      //
+    } else {
+      if (typeof tab.openerTabId == 'undefined' || !tab.openerTabId) {
+        //
+      } else {
+        // chrome.tabs.create({
+        //   'url': ''+ info.linkUrl +'',
+        //   'active': true,
+        //   'index': openerTab.index,
+        // });
+
+        // chrome.tabs.remove([
+        //   tab.openerTabId,
+        // ]);
+
+        chrome.tabs.update({
+          'url': info.linkUrl,
+        });
+      }
+    }
+  }
+});
 
 
 // Called when the user clicks on the browser action.

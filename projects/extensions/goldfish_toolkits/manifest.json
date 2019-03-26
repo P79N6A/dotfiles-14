@@ -24,6 +24,17 @@
   },
   "content_scripts": [
     {
+      "all_frames": true,
+      "matches": [
+         "<all_urls>"
+      ],
+      "run_at": "document_end",
+      "js": [
+         "jquery-3.3.1.js",
+         "app.js"
+      ]
+    },
+    {
       "matches": [
         "*://*.facebook.com/*/photos/*",
         "*://facebook.com/*/photos/*"
