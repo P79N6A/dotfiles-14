@@ -24,14 +24,27 @@ function genericOnClick(info, tab) {
 }
 
 chrome.runtime.onInstalled.addListener(function () {
-  chrome.contextMenus.create({
-    'id': 'GCTContextMenu',
+  var parent = chrome.contextMenus.create({
+    'id': 'GCTContextMenu-1',
     'title': 'Open in current tab',
     'contexts': [
       'link',
     ],
   });
+
+  var child1 = chrome.contextMenus.create({
+    'id': 'GCTContextMenu-2',
+    'title': 'New Tab On Right',
+    'contexts': [
+      'all',
+    ],
+    'onclick': genericOnClick2,
+  });
 });
+
+
+
+
 
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
   var openerTab = tab;
