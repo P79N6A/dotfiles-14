@@ -32,21 +32,37 @@ chrome.runtime.onInstalled.addListener(function () {
     ],
   });
 
-  var child1 = chrome.contextMenus.create({
-    'id': 'GCTContextMenu-2',
-    'title': 'New Tab On Right',
-    'contexts': [
-      'all',
-    ],
-    'onclick': genericOnClick2,
-  });
+  // var child1 = chrome.contextMenus.create({
+  //   'type': 'normal',
+  //   'id': 'GCTContextMenu-2',
+  //   'title': 'New Tab On Right',
+  //   'contexts': [
+  //     'all',
+  //   ],
+  // });
 });
 
 
 
 
 
-chrome.contextMenus.onClicked.addListener(function (info, tab) {
+chrome.contextMenus.onClicked.addListener(function(info, tab) {
+  // alert('CLICKED');
+  // alert(''+ info.toString() +'');
+  /*
+  (integer|string) menuItemId
+  (integer|string) parentMenuItemId
+  (string:image|audio|video) mediaType
+  (string) linkUrl
+  (string) srcUrl
+  (string) pageUrl
+  (string) frameUrl
+  (string) frameId
+  (string) selectionText
+  */
+
+  // console.log(info, tab);
+
   var openerTab = tab;
   if (typeof tab.openerTabId == 'undefined' || tab.openerTabId == '') {
     //
