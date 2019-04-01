@@ -41,20 +41,18 @@ function _git_prompt_info() {
     [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED ]] && STATUS='DIRTY'
 
 
-    #
-
     case $STATUS in
       "DIRTY" )
         IS_DIRTY='DIRTY'
-        DIRTY_SIDE="%F{red}%f"
+        DIRTY_SIDE="%F{red}%f"
         if [[ -n $IS_UNPUSHED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}2%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
-          DIRTY_SIDE="%F{yellow}DIRTY_SIDEIS_UNPULLED%f"
+          DIRTY_SIDE="%F{yellow}DIRTY_SIDEIS_UNPULLED3%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
         elif [[ -n $IS_ADDED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_ADDED"
         else
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY"
@@ -62,15 +60,15 @@ function _git_prompt_info() {
         ;;
       "CLEAN" )
         IS_CLEAN='CLEAN'
-        CLEAN_SIDE="%F{green}%f"
+        CLEAN_SIDE="%F{green}5%f"
         if [[ -n $IS_UNPUSHED ]]; then
-          CLEAN_SIDE="%F{yellow}%f"
+          CLEAN_SIDE="%F{yellow}6%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
-          CLEAN_SIDE="%F{yellow}CLEAN_SIDEIS_UNPULLED%f"
+          CLEAN_SIDE="%F{yellow}CLEAN_SIDEIS_UNPULLED7%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPULLED"
         elif [[ -n $IS_ADDED ]]; then
-          CLEAN_SIDE="%F{green}%f"
+          CLEAN_SIDE="%F{green}8%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_ADDED"
         else
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN"
@@ -105,15 +103,15 @@ $PROMPT_PS1 '
 
 PROMPT_START='%10c'
 PROMPT_PS1='%F{white}%f'
-ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}DIRTY%f"
-ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}DIRTY_UNPUSHED%f"
-ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED="%F{yellow}DIRTY_UNPULLED%f"
-ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}CLEAN%f"
-ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED="%F{green}CLEAN_UNPUSHED%f"
-ZSH_THEME_GIT_PROMPT_CLEAN_UNPULLED="%F{green}CLEAN_UNPULLED%f"
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}%f"
+ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}%f"
+ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED="%F{yellow}%f"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}%f"
+ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED="%F{green}%f"
+ZSH_THEME_GIT_PROMPT_CLEAN_UNPULLED="%F{green}%f"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="?"
 ZSH_THEME_GIT_PROMPT_ADDED=""
-ZSH_THEME_GIT_PROMPT_DIRTY_ADDED="%F{green}DIRTY_ADDED%f"
+ZSH_THEME_GIT_PROMPT_DIRTY_ADDED="%F{green}%f"
 ZSH_THEME_GIT_PROMPT_CLEAN_ADDED=""
 ZSH_THEME_GIT_PROMPT_MODIFIED="+"
 ZSH_THEME_GIT_PROMPT_RENAMED="»"
