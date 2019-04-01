@@ -41,6 +41,8 @@ function _git_prompt_info() {
     [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED ]] && STATUS='DIRTY'
 
 
+    #
+
     case $STATUS in
       "DIRTY" )
         IS_DIRTY='DIRTY'
