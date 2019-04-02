@@ -31,6 +31,13 @@ chrome.runtime.onInstalled.addListener(function () {
       'link',
     ],
   });
+  var parent = chrome.contextMenus.create({
+    'id': 'OpenFrameInTab',
+    'title': 'Open Frame in tab',
+    'contexts': [
+      'frame',
+    ],
+  });
 
   // var child1 = chrome.contextMenus.create({
   //   'type': 'normal',
@@ -47,6 +54,7 @@ chrome.runtime.onInstalled.addListener(function () {
 
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
+  // alert('pageUrl: '+ info.pageUrl +'');
   // alert('CLICKED');
   // alert(''+ info.toString() +'');
   /*
@@ -64,28 +72,39 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
   // console.log(info, tab);
 
   var openerTab = tab;
-  if (typeof tab.openerTabId == 'undefined' || tab.openerTabId == '') {
-    //
+
+  if (info.menuItemId == 'OpenFrameInTab') {
+    if (typeof info.frameUrl != 'undefined' && info.frameUrl) {
+      chrome.tabs.create({
+        'url': ''+ info.frameUrl +'',
+        'index': openerTab.index + 1,
+        'active': true,
+      });
+    }
   } else {
-    if (typeof info.linkUrl == 'undefined' || info.linkUrl == '') {
+    if (typeof tab.openerTabId == 'undefined' || tab.openerTabId == '') {
       //
     } else {
-      if (typeof tab.openerTabId == 'undefined' || !tab.openerTabId) {
+      if (typeof info.linkUrl == 'undefined' || info.linkUrl == '') {
         //
       } else {
-        // chrome.tabs.create({
-        //   'url': ''+ info.linkUrl +'',
-        //   'active': true,
-        //   'index': openerTab.index,
-        // });
+        if (typeof tab.openerTabId == 'undefined' || !tab.openerTabId) {
+          //
+        } else {
+          // chrome.tabs.create({
+          //   'url': ''+ info.linkUrl +'',
+          //   'active': true,
+          //   'index': openerTab.index,
+          // });
 
-        // chrome.tabs.remove([
-        //   tab.openerTabId,
-        // ]);
+          // chrome.tabs.remove([
+          //   tab.openerTabId,
+          // ]);
 
-        chrome.tabs.update({
-          'url': info.linkUrl,
-        });
+          chrome.tabs.update({
+            'url': info.linkUrl,
+          });
+        }
       }
     }
   }
