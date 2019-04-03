@@ -2,151 +2,21 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
-      "description": "Map ⨍n to left click",
+      "description": "Open Trash Folder ⌫⌃⌘",
       "manipulators": [
         {
           "from": {
-            "key_code": "left_control"
-          },
-          "to": [
-            {
-              "key_code": "left_control"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "pointing_button": "button1"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.google\\.Chrome$",
-                "^com\\.apple\\.Safari$",
-                "^com\\.apple\\.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "fn"
-          },
-          "to": [
-            {
-              "key_code": "fn"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "pointing_button": "button1"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.google\\.Chrome$",
-                "^com\\.apple\\.Safari$",
-                "^com\\.apple\\.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "fn",
+            "key_code": "delete_or_backspace",
             "modifiers": {
-              "optional": [
-                "any"
+              "mandatory": [
+                "command",
+                "control"
               ]
             }
           },
           "to": [
             {
-              "key_code": "fn"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "mission_control"
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "fn pressed",
-              "value": 1
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "fn",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "fn"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "fn"
-            },
-            {
-              "set_variable": {
-                "name": "fn pressed",
-                "value": 1
-              }
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 100
-          },
-          "to_delayed_action": {
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "fn pressed",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "fn pressed",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "Toggle iTerm 1x ⏏ ",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "eject"
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'iTerm'"
+              "shell_command": "cd $HOME/.Trash; open -a 'Finder' ./"
             }
           ],
           "type": "basic"
