@@ -62,7 +62,7 @@ function _git_prompt_info() {
         IS_CLEAN='CLEAN'
         CLEAN_SIDE="%F{green}⬤%f"
         if [[ -n $IS_UNPUSHED ]]; then
-          CLEAN_SIDE="%F{yellow}𝝤 ʎ%f"
+          CLEAN_SIDE="%F{yellow}𝝤%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
           CLEAN_SIDE="%F{yellow}CLEAN_SIDEIS_UNPULLED 7%f"
@@ -102,7 +102,7 @@ PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX$PROMPT_START$ZSH_THEME_GIT_PROMPT_SUFFIX$(_
 $PROMPT_PS1 '
 
 PROMPT_START='%10c'
-PROMPT_PS1='%F{white}$%f'
+PROMPT_PS1='%F{white}ʎ%f'
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED="%F{yellow}%f"
