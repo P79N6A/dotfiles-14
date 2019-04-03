@@ -218,7 +218,7 @@
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "control"
+                "fn"
               ]
             }
           },
@@ -237,7 +237,7 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "control"
+                "fn"
               ]
             }
           },
