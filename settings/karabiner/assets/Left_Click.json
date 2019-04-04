@@ -1,0 +1,338 @@
+{
+  "title": "Post left_click if buttons pressed alone",
+  "rules": [
+    {
+      "description": "grave_accent_and_tilde to left_click",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "grave_accent_and_tilde"
+          },
+          "to_after_key_up": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "pointing_button": "button1",
+              "halt": false,
+              "hold_down_milliseconds": 30
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "caps_lock to left_click (Only in browsers)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome",
+                "^com\\.apple\\.Safari",
+                "^com\\.apple\\.Firefox"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "caps_lock to left_click (Global)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "left_option to left_click (Only in browsers)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome",
+                "^com\\.apple\\.Safari",
+                "^com\\.apple\\.Firefox"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "left_option to left_click (Global)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_option to left_click (Only in browsers)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome",
+                "^com\\.apple\\.Safari",
+                "^com\\.apple\\.Firefox"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_option to left_click (Global)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "left_control to left_click (Only in browsers)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome",
+                "^com\\.apple\\.Safari",
+                "^com\\.apple\\.Firefox"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "left_control to left_click (Global)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "fn to left_click (Only in browsers)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "fn",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "fn"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome",
+                "^com\\.apple\\.Safari",
+                "^com\\.apple\\.Firefox"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "fn to left_click (Global)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "fn",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "fn"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
