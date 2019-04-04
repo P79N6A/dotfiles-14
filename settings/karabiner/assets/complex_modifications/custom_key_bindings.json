@@ -2,7 +2,7 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
-      "description": "Open Trash Folder ⌫⌃⌘",
+      "description": "Open Trash Folder ⌃ + ⌘ + ⌫",
       "manipulators": [
         {
           "from": {
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "description": "Disable ⌥ +  on browsers",
+      "description": "Disable ⌥ +  on browsers",
       "manipulators": [
         {
           "from": {
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "description": "Navigate backward/forward when ⌃ ＋  on browser",
+      "description": "Navigate backward/forward when ⌃ +  on browser",
       "manipulators": [
         {
           "from": {
@@ -124,7 +124,7 @@
       ]
     },
     {
-      "description": "Toggle iTerm ⌘ ＋ ﹨",
+      "description": "Toggle iTerm ⌘ + \\",
       "manipulators": [
         {
           "from": {
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "description": "Toggle Atom ﹨ ＋ ⌥ ＋ ⌘",
+      "description": "Toggle Atom ⌥ + ⌘ + \\",
       "manipulators": [
         {
           "from": {
@@ -238,7 +238,7 @@
       ]
     },
     {
-      "description": "Toggle Sublime Text ﹨ ＋ ⬆ ＋ ⌥ ＋ ⌘",
+      "description": "Toggle Sublime Text ⌥ + ⬆ + ⌘ + \\",
       "manipulators": [
         {
           "from": {
@@ -296,7 +296,7 @@
       ]
     },
     {
-      "description": "Toggle Google Chrome ﹨ ＋ ⌃",
+      "description": "Toggle Google Chrome ⌃ + \\",
       "manipulators": [
         {
           "from": {
@@ -352,7 +352,7 @@
       ]
     },
     {
-      "description": "Toggle Finder ﹨ ＋ ⌃ ＋ ⌥ ＋ ⌘",
+      "description": "Toggle Finder ⌃ + ⌥ + ⌘ + \\",
       "manipulators": [
         {
           "from": {
