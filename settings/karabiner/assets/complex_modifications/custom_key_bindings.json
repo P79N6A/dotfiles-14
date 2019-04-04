@@ -24,7 +24,7 @@
       ]
     },
     {
-      "description": "Disable ⌥ ＋  on browsers",
+      "description": "Disable ⌥ +  on browsers",
       "manipulators": [
         {
           "from": {

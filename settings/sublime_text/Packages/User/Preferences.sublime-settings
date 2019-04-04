@@ -43,7 +43,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "smooth",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Theme - One Dark/One Dark.tmTheme",
+	"color_scheme": "Monokai.sublime-color-scheme",
 	"copy_with_empty_selection": false,
 	"create_window_at_startup": true,
 	"default_encoding": "UTF-8",
@@ -119,9 +119,7 @@
 		"Edit Command Palette",
 		"Eloquent Snippets",
 		"ES6-Toolkit",
-		"FileManager",
 		"FlowType",
-		"FuzzyImports",
 		"HTML Email Snippets",
 		"HTML Page Snippets",
 		"HTML Snippets",
@@ -189,7 +187,7 @@
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag)",
 	"tab_completion": true,
 	"tab_size": 2,
-	"theme": "One Dark.sublime-theme",
+	"theme": "Default.sublime-theme",
 	"theme_font_options":
 	[
 		"no_italic"
