@@ -48497,7 +48497,7 @@ Clear Buffer</string>
 			<key>Name</key>
 			<string>Root</string>
 			<key>Non Ascii Font</key>
-			<string>Material-Design-Icons 12</string>
+			<string>Material-Design-Icons 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -48656,7 +48656,7 @@ Clear Buffer</string>
 			<key>Use Underline Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.3999999999999999</real>
+			<real>1.5</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
