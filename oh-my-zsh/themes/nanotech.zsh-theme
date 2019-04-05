@@ -49,7 +49,7 @@ function _git_prompt_info() {
           DIRTY_SIDE="%F{yellow}⬤%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
-          DIRTY_SIDE="%F{yellow} 3%f"
+          DIRTY_SIDE="%F{yellow}  3%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
         elif [[ -n $IS_ADDED ]]; then
           DIRTY_SIDE="%F{yellow}⬤%f"
