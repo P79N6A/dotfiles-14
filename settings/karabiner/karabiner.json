@@ -43,9 +43,9 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$",
-                                            "^com\\.apple\\.Safari$",
-                                            "^com\\.apple\\.Firefox$"
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^com.apple.Firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -69,9 +69,9 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$",
-                                            "^com\\.apple\\.Safari$",
-                                            "^com\\.apple\\.Firefox$"
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^com.apple.Firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -143,7 +143,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -167,7 +167,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -199,7 +199,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.github\\.atom$"
+                                            "^com.github.atom$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -224,7 +224,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.github\\.atom$"
+                                            "^com.github.atom$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -257,7 +257,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.sublimetext\\.3$"
+                                            "^com.sublimetext.3$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -282,7 +282,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.sublimetext\\.3$"
+                                            "^com.sublimetext.3$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -315,7 +315,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$"
+                                            "^com.google.Chrome$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -339,7 +339,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$"
+                                            "^com.google.Chrome$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -371,7 +371,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.finder$"
+                                            "^com.apple.finder$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -418,7 +418,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.finder$"
+                                            "^com.apple.finder$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
