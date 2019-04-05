@@ -137,7 +137,7 @@
                         ]
                     },
                     {
-                        "description": "Toggle iTerm ⌃ + \\",
+                        "description": "Toggle iTerm ⌘ + \\",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -152,7 +152,7 @@
                                     "key_code": "backslash",
                                     "modifiers": {
                                         "mandatory": [
-                                            "control"
+                                            "command"
                                         ]
                                     }
                                 },
@@ -176,7 +176,7 @@
                                     "key_code": "backslash",
                                     "modifiers": {
                                         "mandatory": [
-                                            "control"
+                                            "command"
                                         ]
                                     }
                                 },
@@ -309,7 +309,7 @@
                         ]
                     },
                     {
-                        "description": "Toggle Google Chrome ⌘ + \\",
+                        "description": "Toggle Google Chrome ⌃ + \\",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -324,7 +324,7 @@
                                     "key_code": "backslash",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "control"
                                         ]
                                     }
                                 },
@@ -348,7 +348,7 @@
                                     "key_code": "backslash",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "control"
                                         ]
                                     }
                                 },
