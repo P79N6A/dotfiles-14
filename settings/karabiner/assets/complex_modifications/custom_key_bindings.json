@@ -124,14 +124,14 @@
       ]
     },
     {
-      "description": "Toggle iTerm ⌘ + \\",
+      "description": "Toggle iTerm ⌃ + \\",
       "manipulators": [
         {
           "from": {
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "command"
+                "control"
               ]
             }
           },
@@ -155,7 +155,7 @@
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "command"
+                "control"
               ]
             }
           },
@@ -296,14 +296,14 @@
       ]
     },
     {
-      "description": "Toggle Google Chrome ⌃ + \\",
+      "description": "Toggle Google Chrome ⌘ + \\",
       "manipulators": [
         {
           "from": {
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "control"
+                "command"
               ]
             }
           },
@@ -327,7 +327,7 @@
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "control"
+                "command"
               ]
             }
           },
