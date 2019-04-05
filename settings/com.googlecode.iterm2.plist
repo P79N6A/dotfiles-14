@@ -47680,7 +47680,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>628 156 775 502 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>469 435 796 486 0 0 1920 1177 </string>
+	<string>469 417 796 486 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 56 1920 1121 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
@@ -48506,7 +48506,7 @@ Clear Buffer</string>
 			<key>Name</key>
 			<string>Root</string>
 			<key>Non Ascii Font</key>
-			<string>FontAwesome5Free-Regular 14</string>
+			<string>FontAwesome5Free-Solid 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
