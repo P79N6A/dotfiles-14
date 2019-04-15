@@ -44,7 +44,7 @@ function _git_prompt_info() {
     case $STATUS in
       "DIRTY" )
         IS_DIRTY='DIRTY'
-        DIRTY_SIDE="%F{red}%f"
+        DIRTY_SIDE="%F{red}DIRTY%f"
         if [[ -n $IS_UNPUSHED ]]; then
           DIRTY_SIDE="%F{yellow}STAGED%f"
           if [[ -n $IS_MODIFIED ]]; then
