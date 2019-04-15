@@ -46,7 +46,10 @@ function _git_prompt_info() {
         IS_DIRTY='DIRTY'
         DIRTY_SIDE="%F{red}%f"
         if [[ -n $IS_UNPUSHED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}ADD+COMMIT%f"
+          if [[ -n $IS_MODIFIED ]]; then
+            DIRTY_SIDE="%F{yellow}UNSTAGED%f"
+          fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
           DIRTY_SIDE="%F{red}        %f %F{yellow}xx%f"
