@@ -53,10 +53,13 @@ function _git_prompt_info() {
           # DIRTY_SIDE="%F{red}⬤%f%F{yellow}  ﴵ  ﲫ   撚 漣  ﲘ 璉 練 聯   3%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
         elif [[ -n $IS_ADDED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}%f"
+          if [[ -n $IS_MODIFIED ]]; then
+            DIRTY_SIDE="%F{yellow} %f"
+          fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_ADDED"
         elif [[ -n $IS_MODIFIED ]]; then
-          DIRTY_SIDE="%F{yellow}IS_MODIFIED%f"
+          DIRTY_SIDE="%F{yellow}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_MODIFIED"
         else
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY"
