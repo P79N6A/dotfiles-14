@@ -44,7 +44,7 @@ function _git_prompt_info() {
     case $STATUS in
       "DIRTY" )
         IS_DIRTY='DIRTY'
-        DIRTY_SIDE="%F{red}%f"
+        DIRTY_SIDE="%F{red}%f"
         if [[ -n $IS_UNPUSHED ]]; then
           DIRTY_SIDE="%F{yellow}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
@@ -53,8 +53,11 @@ function _git_prompt_info() {
           # DIRTY_SIDE="%F{red}⬤%f%F{yellow}  ﴵ  ﲫ   撚 漣  ﲘ 璉 練 聯   3%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
         elif [[ -n $IS_ADDED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_ADDED"
+        elif [[ -n $IS_MODIFIED ]]; then
+          DIRTY_SIDE="%F{yellow}IS_MODIFIED%f"
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_MODIFIED"
         else
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY"
         fi
@@ -71,6 +74,9 @@ function _git_prompt_info() {
         elif [[ -n $IS_ADDED ]]; then
           CLEAN_SIDE="%F{green} 8%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_ADDED"
+        elif [[ -n $IS_MODIFIED ]]; then
+          CLEAN_SIDE="%F{green}MODIFIED%f"
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_MODIFIED"
         else
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN"
         fi

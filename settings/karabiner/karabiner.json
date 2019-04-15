@@ -643,7 +643,16 @@
             ],
             "name": "Enabled",
             "selected": true,
-            "simple_modifications": [],
+            "simple_modifications": [
+                {
+                    "from": {
+                        "pointing_button": "button3"
+                    },
+                    "to": {
+                        "key_code": "vk_none"
+                    }
+                }
+            ],
             "virtual_hid_keyboard": {
                 "country_code": 0
             }
