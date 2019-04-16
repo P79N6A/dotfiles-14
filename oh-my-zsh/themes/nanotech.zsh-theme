@@ -78,7 +78,7 @@ function _git_prompt_info() {
         if [[ -n $IS_UNPUSHED ]]; then
           CLEAN_SIDE="%F{yellow}CLEAN%f"
           if [[ -n $IS_AHEAD ]]; then
-            CLEAN_SIDE="%F{yellow}AHEAD %f"
+            CLEAN_SIDE="%F{yellow}AHEAD        %f"
           fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
@@ -121,7 +121,7 @@ function _git_prompt_info() {
 PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX$PROMPT_START$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
 $PROMPT_PS1 '
 
-PROMPT_START=' %10c'
+PROMPT_START='  %10c'
 PROMPT_PS1='%F{white}$%f'
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}%f"
