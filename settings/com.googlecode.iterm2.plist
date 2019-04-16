@@ -47667,7 +47667,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>564 334 923 242 0 0 1920 1057 </string>
+	<string>564 334 923 348 0 0 1920 1057 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
@@ -48497,8 +48497,10 @@ Clear Buffer</string>
 			<key>Name</key>
 			<string>Root</string>
 			<key>Non Ascii Font</key>
-			<string>FontAwesome5Free-Solid 12</string>
+			<string>master-icons 12</string>
 			<key>Non-ASCII Anti Aliased</key>
+			<true/>
+			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
 			<string>Menlo-Regular 14</string>
@@ -48642,7 +48644,7 @@ Clear Buffer</string>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
-			<false/>
+			<true/>
 			<key>Use Bright Bold</key>
 			<false/>
 			<key>Use Cursor Guide</key>

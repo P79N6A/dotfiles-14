@@ -24,18 +24,41 @@ function genericOnClick(info, tab) {
 }
 
 chrome.runtime.onInstalled.addListener(function () {
-  var parent = chrome.contextMenus.create({
-    'id': 'GCTContextMenu-1',
-    'title': 'Open in current tab',
-    'contexts': [
-      'link',
-    ],
-  });
-  var parent = chrome.contextMenus.create({
+  // var parent = chrome.contextMenus.create({
+  //   'id': 'GCTContextMenu-1',
+  //   'title': 'Open in current tab',
+  //   'contexts': [
+  //     'link',
+  //   ],
+  // });
+  var OpenFrameInTab = chrome.contextMenus.create({
     'id': 'OpenFrameInTab',
     'title': 'Open Frame in tab',
     'contexts': [
       'frame',
+    ],
+  });
+  var AutocompleteText = chrome.contextMenus.create({
+    'id': 'AutocompleteText',
+    'title': 'Open Frame in tab',
+    'contexts': [
+      'all',
+    ],
+  });
+  var DefaultEmail = chrome.contextMenus.create({
+    'parentId': 'AutocompleteText',
+    'id': 'DefaultEmail',
+    'title': 'nopphasin.arayasirikul@gmail.com',
+    'contexts': [
+      'editable',
+    ],
+  });
+  var DefaultName = chrome.contextMenus.create({
+    'parentId': 'AutocompleteText',
+    'id': 'DefaultName',
+    'title': 'Nopphasin Arayasirikul',
+    'contexts': [
+      'editable',
     ],
   });
 
@@ -72,6 +95,9 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
   // console.log(info, tab);
 
   var openerTab = tab;
+  document.addEventListener('click', function (e) {
+    console.log(e);
+  });
 
   if (info.menuItemId == 'OpenFrameInTab') {
     if (typeof info.frameUrl != 'undefined' && info.frameUrl) {
@@ -81,6 +107,10 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         'active': true,
       });
     }
+  } else if (info.menuItemId == 'DefaultEmail') {
+    // var inputs = document.querySelectorAll('input');
+    // console.log(inputs);
+    // console.log(info);
   } else {
     if (typeof tab.openerTabId == 'undefined' || tab.openerTabId == '') {
       //
