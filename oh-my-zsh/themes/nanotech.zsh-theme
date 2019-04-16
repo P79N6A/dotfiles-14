@@ -78,7 +78,7 @@ function _git_prompt_info() {
         if [[ -n $IS_UNPUSHED ]]; then
           CLEAN_SIDE="%F{yellow}%f"
           if [[ -n $IS_AHEAD ]]; then
-            CLEAN_SIDE="%F{black}%f"
+            CLEAN_SIDE="%F{blue}%f"
             # CLEAN_SIDE="%F{green}        %f"
             # CLEAN_SIDE="%F{green}AHEAD        %f"
           fi
