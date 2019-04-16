@@ -37,8 +37,8 @@ function _git_prompt_info() {
     [[ $(_git_commits_behind) > 0 ]] && IS_UNPULLED="UNPULLED"
 
     local STATUS=$(_parse_git_dirty)
-    [[ -n $IS_UNTRACKED ]] && STATUS='DIRTY'
-    [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED ]] && STATUS='DIRTY'
+    # [[ -n $IS_UNTRACKED ]] && STATUS='DIRTY'
+    [[ -n $IS_UNTRACKED || -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED ]] && STATUS='DIRTY'
 
 
     case $STATUS in
@@ -50,7 +50,7 @@ function _git_prompt_info() {
           if [[ ! -n $IS_ADDED ]]; then
             DIRTY_SIDE="%F{yellow}UNSTAGED%f"
           fi
-          if [[ -n $IS_MODIFIED ]]; then
+          if [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED || -n $IS_UNTRACKED ]]; then
             DIRTY_SIDE="%F{yellow}MODIFIED%f"
           fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
@@ -73,7 +73,7 @@ function _git_prompt_info() {
         ;;
       "CLEAN" )
         IS_CLEAN='CLEAN'
-        CLEAN_SIDE="%F{green}%f"
+        CLEAN_SIDE="%F{green}%f -"
         # CLEAN_SIDE="%F{green}%f           !?       +-       1 2 3"
         if [[ -n $IS_UNPUSHED ]]; then
           CLEAN_SIDE="%F{yellow}CLEAN%f"
