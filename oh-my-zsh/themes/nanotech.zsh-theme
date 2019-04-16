@@ -78,7 +78,7 @@ function _git_prompt_info() {
         if [[ -n $IS_UNPUSHED ]]; then
           CLEAN_SIDE="%F{yellow}CLEAN%f"
           if [[ -n $IS_AHEAD ]]; then
-            CLEAN_SIDE="%F{yellow}AHEAD%f"
+            CLEAN_SIDE="%F{yellow}AHEAD %f"
           fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
