@@ -44,14 +44,14 @@ function _git_prompt_info() {
     case $STATUS in
       "DIRTY" )
         IS_DIRTY='DIRTY'
-        DIRTY_SIDE="%F{red}DIRTY%f"
+        DIRTY_SIDE="%F{red}%f"
         if [[ -n $IS_UNPUSHED ]]; then
-          DIRTY_SIDE="%F{yellow}STAGED%f"
+          DIRTY_SIDE="%F{yellow}%f"
           if [[ ! -n $IS_ADDED ]]; then
-            DIRTY_SIDE="%F{yellow}UNSTAGED%f"
+            DIRTY_SIDE="%F{yellow}   %f"
           fi
           if [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED || -n $IS_UNTRACKED ]]; then
-            DIRTY_SIDE="%F{yellow}MODIFIED%f"
+            DIRTY_SIDE="%F{yellow}%f"
           fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
@@ -59,13 +59,13 @@ function _git_prompt_info() {
           # DIRTY_SIDE="%F{red}⬤%f%F{yellow}  ﴵ  ﲫ   撚 漣  ﲘ 璉 練 聯   3%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
         elif [[ -n $IS_ADDED ]]; then
-          DIRTY_SIDE="%F{yellow}STAGED%f"
+          DIRTY_SIDE="%F{yellow}%f"
           if [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED || -n $IS_UNTRACKED ]]; then
-            DIRTY_SIDE="%F{yellow}MODIFIED%f"
+            DIRTY_SIDE="%F{yellow}%f"
           fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_ADDED"
         elif [[ -n $IS_MODIFIED ]]; then
-          DIRTY_SIDE="%F{yellow}MODIFIED%f"
+          DIRTY_SIDE="%F{yellow}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_MODIFIED"
         else
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY"
@@ -78,19 +78,27 @@ function _git_prompt_info() {
         if [[ -n $IS_UNPUSHED ]]; then
           CLEAN_SIDE="%F{yellow}%f"
           if [[ -n $IS_AHEAD ]]; then
-            CLEAN_SIDE="%F{blue}%f"
+            CLEAN_SIDE="%F{blue}%f"
             # CLEAN_SIDE="%F{green}        %f"
             # CLEAN_SIDE="%F{green}AHEAD        %f"
           fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
-          CLEAN_SIDE="%F{yellow} 7%f"
+          CLEAN_SIDE="%F{yellow}%f"
+          if [[ -n $IS_BEHIND ]]; then
+            CLEAN_SIDE="%F{blue}%f"
+            # CLEAN_SIDE="%F{green}        %f"
+            # CLEAN_SIDE="%F{green}AHEAD        %f"
+          fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPULLED"
         elif [[ -n $IS_ADDED ]]; then
-          CLEAN_SIDE="%F{green} 8%f"
+          CLEAN_SIDE="%F{green}%f"
+          if [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED || -n $IS_UNTRACKED ]]; then
+            CLEAN_SIDE="%F{green}%f"
+          fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_ADDED"
         elif [[ -n $IS_MODIFIED ]]; then
-          CLEAN_SIDE="%F{green}MODIFIED%f"
+          CLEAN_SIDE="%F{green}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_MODIFIED"
         else
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN"
