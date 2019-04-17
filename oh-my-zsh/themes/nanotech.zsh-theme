@@ -46,7 +46,7 @@ function _git_prompt_info() {
         IS_DIRTY='DIRTY'
         DIRTY_SIDE="%F{red}%f"
         if [[ -n $IS_UNPUSHED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}%f"
           if [[ ! -n $IS_ADDED ]]; then
             DIRTY_SIDE="%F{yellow}   %f"
           fi
