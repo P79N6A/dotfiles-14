@@ -44,9 +44,9 @@ function _git_prompt_info() {
     case $STATUS in
       "DIRTY" )
         IS_DIRTY='DIRTY'
-        DIRTY_SIDE="%F{red}%f"
+        DIRTY_SIDE="%F{red}%f"
         if [[ -n $IS_UNPUSHED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}%f"
           if [[ ! -n $IS_ADDED ]]; then
             DIRTY_SIDE="%F{yellow}   %f"
           fi
@@ -59,7 +59,7 @@ function _git_prompt_info() {
           # DIRTY_SIDE="%F{red}⬤%f%F{yellow}  ﴵ  ﲫ   撚 漣  ﲘ 璉 練 聯   3%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
         elif [[ -n $IS_ADDED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}%f"
           if [[ -n $IS_MODIFIED || -n $IS_RENAMED || -n $IS_DELETED || -n $IS_UNTRACKED ]]; then
             DIRTY_SIDE="%F{yellow}%f"
           fi
@@ -73,7 +73,8 @@ function _git_prompt_info() {
         ;;
       "CLEAN" )
         IS_CLEAN='CLEAN'
-        CLEAN_SIDE="%F{green}                              %f"
+        CLEAN_SIDE="%F{green}                               %f"
+        # CLEAN_SIDE="%F{green}                                 %f"
         # CLEAN_SIDE="%F{green}%f           !?       +-       1 2 3"
         if [[ -n $IS_UNPUSHED ]]; then
           CLEAN_SIDE="%F{yellow}UNPUSHED%f"
@@ -125,14 +126,18 @@ function _git_prompt_info() {
     fi
   fi
 
-  echo $GIT_CURRENT_BRANCH$GIT_CURRENT_STATUS
+  echo $GIT_CURRENT_STATUS
+  # echo $GIT_CURRENT_BRANCH$GIT_CURRENT_STATUS
 }
 
-PROMPT='$ZSH_THEME_GIT_PROMPT_PREFIX$PROMPT_START$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
+PROMPT='%F{black}--------------------------------------------------------%f
+$ZSH_THEME_GIT_PROMPT_PREFIX$PROMPT_START$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
 $PROMPT_PS1 '
+RPROMPT='  蓼 $(_git_current_branch)'
 
 PROMPT_START='%10c'
-PROMPT_PS1='%F{white}$%f'
+PROMPT_PS1='%F{white}%f'
+PROMPT_PS2='%F{red}%f'
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED="%F{yellow}%f"
@@ -160,8 +165,8 @@ ZSH_THEME_GIT_PROMPT_DIVERGED="" # default "⇕"
 ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE=""
 ZSH_THEME_GIT_PROMPT_PREFIX="%B%F{magenta}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f%b"
-ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH=" %F{def}%B"
-ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH="%b%f"
+ZSH_THEME_GIT_PROMPT_PREFIX_BRANCH=" %F{def}"
+ZSH_THEME_GIT_PROMPT_SUFFIX_BRANCH="%f"
 ZSH_THEME_GIT_PROMPT_CURRENT_STATUS_BEFORE=" "
 ZSH_THEME_GIT_PROMPT_CURRENT_STATUS_AFTER=""
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="["
