@@ -55,7 +55,7 @@ function _git_prompt_info() {
           fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
-          DIRTY_SIDE="%F{red}        %f %F{yellow}xx%f"
+          DIRTY_SIDE="%F{red}         %f %F{yellow}xx%f"
           # DIRTY_SIDE="%F{red}⬤%f%F{yellow}  ﴵ  ﲫ   撚 漣  ﲘ 璉 練 聯   3%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED"
         elif [[ -n $IS_ADDED ]]; then
@@ -84,7 +84,7 @@ function _git_prompt_info() {
           fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_CLEAN_UNPUSHED"
         elif [[ -n $IS_UNPULLED ]]; then
-          CLEAN_SIDE="%F{yellow}%f"
+          CLEAN_SIDE="%F{yellow}%f"
           if [[ -n $IS_BEHIND ]]; then
             CLEAN_SIDE="%F{yellow}%f"
             # CLEAN_SIDE="%F{green}        %f"
