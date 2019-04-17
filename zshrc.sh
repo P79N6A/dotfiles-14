@@ -26,8 +26,9 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="nodeys"
 # ZSH_THEME="nanotech"
 # ZSH_THEME="bureau"
+# ZSH_THEME="refined"
 # ZSH_THEME="ys"
-ZSH_THEME="refined"
+ZSH_THEME="nt9"
 
 SPACESHIP_PROMPT_ADD_NEWLINE="true"
 SPACESHIP_CHAR_SYMBOL=" \uf0e7"

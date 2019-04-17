@@ -10,13 +10,14 @@ function check_git_prompt_info() {
     if git rev-parse --git-dir > /dev/null 2>&1; then
         if [[ -z $(git_prompt_info 2> /dev/null) ]]; then
             echo "%{$fg[blue]%}detached-head%{$reset_color%}) $(git_prompt_status)
-%{$fg[yellow]%}→ "
+%{$fg[cyan]%}$ "
         else
             echo "$(git_prompt_info 2> /dev/null) $(git_prompt_status)
-%{$fg_bold[cyan]%}→ "
+%{$fg_bold[cyan]%}$ "
         fi
     else
-        echo "%{$fg_bold[cyan]%}→ "
+        echo "
+%{$fg_bold[cyan]%}$ "
     fi
 }
 
@@ -28,7 +29,7 @@ function get_right_prompt() {
     fi
 }
 
-PROMPT=$'\n%{$fg_bold[$USERCOLOR]%}%10c %{$fg_no_bold[magenta]%}$(check_git_prompt_info)%{$reset_color%}'
+PROMPT=$'\n%{$fg_bold[red]%}λ %{$fg_bold[$USERCOLOR]%}%10c %{$fg_no_bold[magenta]%}$(check_git_prompt_info)%{$reset_color%}'
 
 # PROMPT=$'\n'$LAMBDA'\
 #  %{$fg_bold[$USERCOLOR]%}%n\
@@ -39,7 +40,7 @@ PROMPT=$'\n%{$fg_bold[$USERCOLOR]%}%10c %{$fg_no_bold[magenta]%}$(check_git_prom
 RPROMPT='$(get_right_prompt)'
 
 # Format for git_prompt_info()
-ZSH_THEME_GIT_PROMPT_PREFIX="at %{$fg[blue]%} "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[black]%}at%{$reset_color%} %{$fg[blue]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%} ✔"
