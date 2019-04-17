@@ -46,10 +46,10 @@ function _git_prompt_info() {
         IS_DIRTY='DIRTY'
         DIRTY_SIDE="%F{red}%f"
         if [[ -n $IS_UNTRACKED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{red}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNTRACKED"
         elif [[ -n $IS_UNPUSHED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}s%f"
           if [[ ! -n $IS_ADDED ]]; then
             DIRTY_SIDE="%F{yellow}   %f"
           fi
@@ -68,7 +68,7 @@ function _git_prompt_info() {
           fi
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_ADDED"
         elif [[ -n $IS_MODIFIED ]]; then
-          DIRTY_SIDE="%F{yellow}%f"
+          DIRTY_SIDE="%F{yellow}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_MODIFIED"
         else
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY"
@@ -76,7 +76,7 @@ function _git_prompt_info() {
         ;;
       "CLEAN" )
         IS_CLEAN='CLEAN'
-        CLEAN_SIDE="%F{green}                                 %f"
+        CLEAN_SIDE="%F{green}                                 %f"
         # CLEAN_SIDE="%F{green}                                 %f"
         # CLEAN_SIDE="%F{green}%f           !?       +-       1 2 3"
         if [[ -n $IS_UNPUSHED ]]; then
@@ -136,7 +136,7 @@ function _git_prompt_info() {
 PROMPT='%F{black}--------------------------------------------------------%f
 $ZSH_THEME_GIT_PROMPT_PREFIX$PROMPT_START$ZSH_THEME_GIT_PROMPT_SUFFIX$(_git_prompt_info)
 $PROMPT_PS1 '
-RPROMPT='  蓼 $(_git_current_branch)'
+RPROMPT='  蓼  $(_git_current_branch)'
 
 PROMPT_START='%10c'
 PROMPT_PS1='%F{white}%f'
