@@ -7,7 +7,7 @@ ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 ### Git [±master ▾●]
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%} "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}git:(%{$reset_color%}%{$fg[gray]%}"
 # ZSH_THEME_GIT_PROMPT_PREFIX="[%{$fg_bold[green]%}±%{$reset_color%}%{$fg_bold[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}%{$reset_color%}"
@@ -72,7 +72,7 @@ bureau_git_prompt () {
   if [[ "${_branch}x" != "x" ]]; then
     _result="$ZSH_THEME_GIT_PROMPT_PREFIX$_branch"
     if [[ "${_status}x" != "x" ]]; then
-      _result="$_result $_status"
+      _result="$_result""%{$fg[green]%})%{$reset_color%} ""$_status"
     fi
     _result="$_result$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
@@ -80,7 +80,7 @@ bureau_git_prompt () {
 }
 
 
-_PATH="%{$fg_bold[white]%}%~%{$reset_color%}"
+_PATH="%{$fg_bold[magenta]%}%~%{$reset_color%}"
 
 if [[ $EUID -eq 0 ]]; then
   _USERNAME=""
@@ -89,7 +89,7 @@ if [[ $EUID -eq 0 ]]; then
 else
   _USERNAME=""
   # _USERNAME="%{$fg_bold[white]%}%n"
-  _LIBERTY="%{$fg[green]%}$"
+  _LIBERTY="%{$fg[white]%}$"
 fi
 _USERNAME=""
 # _USERNAME="$_USERNAME%{$reset_color%}@%m"
