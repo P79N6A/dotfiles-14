@@ -24,7 +24,9 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="smt"
 # ZSH_THEME="kolo"
 # ZSH_THEME="nodeys"
-ZSH_THEME="nanotech"
+# ZSH_THEME="nanotech"
+ZSH_THEME="bureau"
+
 SPACESHIP_PROMPT_ADD_NEWLINE="true"
 SPACESHIP_CHAR_SYMBOL=" \uf0e7"
 SPACESHIP_CHAR_PREFIX="\uf296"
