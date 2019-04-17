@@ -7,15 +7,15 @@ ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 ### Git [±master ▾●]
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%} "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}   "
 # ZSH_THEME_GIT_PROMPT_PREFIX="[%{$fg_bold[green]%}±%{$reset_color%}%{$fg_bold[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✓%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[cyan]%}▴%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[magenta]%}▾%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg[yellow]%}%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg[yellow]%}%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}%{$reset_color%}"
 
 bureau_git_branch () {
   ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
@@ -119,13 +119,13 @@ _1RIGHT=""
 bureau_precmd () {
   _1RIGHT="$(nvm_prompt_info) $(bureau_git_prompt) "
   _1SPACES=`get_space $_1LEFT $_1RIGHT`
-  print
+  # print
   print -rP "$_1LEFT$_1SPACES$_1RIGHT"
 }
 
 setopt prompt_subst
 PROMPT="$_LIBERTY "
-RPROMPT=""
+RPROMPT=" "
 # RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
