@@ -46,7 +46,7 @@ function _git_prompt_info() {
         IS_DIRTY='DIRTY'
         DIRTY_SIDE="%F{red}%f"
         if [[ -n $IS_UNTRACKED ]]; then
-          DIRTY_SIDE="%F{red}%f"
+          DIRTY_SIDE="%F{yellow}%f"
           GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNTRACKED"
         elif [[ -n $IS_UNPUSHED ]]; then
           DIRTY_SIDE="%F{yellow}%f"
