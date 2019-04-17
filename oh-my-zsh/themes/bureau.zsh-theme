@@ -119,7 +119,7 @@ bureau_precmd () {
 
 setopt prompt_subst
 PROMPT='> $_LIBERTY '
-RPROMPT="$(nvm_prompt_info) $(bureau_git_prompt) "
+RPROMPT='[%*] $(nvm_prompt_info) $(bureau_git_prompt) '
 # RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
