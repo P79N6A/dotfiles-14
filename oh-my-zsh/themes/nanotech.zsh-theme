@@ -45,7 +45,10 @@ function _git_prompt_info() {
       "DIRTY" )
         IS_DIRTY='DIRTY'
         DIRTY_SIDE="%F{red}%f"
-        if [[ -n $IS_UNPUSHED ]]; then
+        if [[ -n $IS_UNTRACKED ]]; then
+          DIRTY_SIDE="%F{red}%f"
+          GIT_CURRENT_STATUS="$ZSH_THEME_GIT_PROMPT_DIRTY_UNTRACKED"
+        elif [[ -n $IS_UNPUSHED ]]; then
           DIRTY_SIDE="%F{yellow}%f"
           if [[ ! -n $IS_ADDED ]]; then
             DIRTY_SIDE="%F{yellow}   %f"
@@ -139,6 +142,7 @@ PROMPT_START='%10c'
 PROMPT_PS1='%F{white}%f'
 PROMPT_PS2='%F{red}%f'
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}%f"
+ZSH_THEME_GIT_PROMPT_DIRTY_UNTRACKED="%F{yellow}ZSH_THEME_GIT_PROMPT_DIRTY_UNTRACKED%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPUSHED="%F{yellow}%f"
 ZSH_THEME_GIT_PROMPT_DIRTY_UNPULLED="%F{yellow}%f"
 ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}%f"
