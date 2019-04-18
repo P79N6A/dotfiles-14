@@ -1,3 +1,7 @@
+# source $HOME/.dotfiles/zshrc.sh
+source $HOME/.dotfiles/oh-my-zsh/custom/themes/.purepower
+source $HOME/.dotfiles/oh-my-zsh/custom/powerlevel10k/powerlevel10k.zsh-theme
+
 export DOTFILES=$HOME/.dotfiles
 export ZSHFILES=$HOME/.dotfiles/oh-my-zsh
 
