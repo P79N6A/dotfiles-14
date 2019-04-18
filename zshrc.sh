@@ -30,7 +30,7 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="nt9"
 # ZSH_THEME="kayid"
 # ZSH_THEME="pygmalion"
-ZSH_THEME="lambda"
+ZSH_THEME="mortalscumbag"
 
 SPACESHIP_PROMPT_ADD_NEWLINE="true"
 SPACESHIP_CHAR_SYMBOL=" \uf0e7"
