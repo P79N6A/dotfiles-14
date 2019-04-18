@@ -1,4 +1,5 @@
-local ret_status="%{%F{blue}%}➜%{$reset_color%}"
+local ret_status=""
+# local ret_status="%{%F{blue}%}%{$reset_color%} "
 local return_status="%{$fg[red]%}%(?..⏎)%{$reset_color%} "
 
 function _prompt_char() {
@@ -18,10 +19,11 @@ function get_pwd(){
     unset git_root
     prompt_short_dir=%~
   else
-    parent=${git_root%\/*}
-    prompt_short_dir=${PWD#$parent/}
+    parent=$HOME
+    # parent=${git_root%\/*}
+    prompt_short_dir="~${PWD#$parent}"
   fi
-  echo $prompt_short_dir
+  echo "$prompt_short_dir"
 }
 
 # Determine the time since last commit. If branch is clean,
@@ -81,13 +83,13 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{%F{red}%}!%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{%F{green}%} %{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} "
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} "
-ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} "
-ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} "
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} "
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} +"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} *"
+ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} x"
+ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ->"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ="
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} "
 
-PROMPT='$ret_status %{%F{magenta}%}$(get_pwd)%{%f%k%b%} $(git_prompt_short_sha)$(git_prompt_info)
+PROMPT='$ret_status%{%F{magenta}%}$(get_pwd)%{%f%k%b%} $(git_prompt_short_sha)$(git_prompt_info)
 $(_prompt_char) '
 RPROMPT='${return_status}$(git_time_since_commit)$(git_prompt_status)%{$reset_color%}'

@@ -28,7 +28,8 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="bureau"
 # ZSH_THEME="refined"
 # ZSH_THEME="ys"
-ZSH_THEME="nt9"
+# ZSH_THEME="nt9"
+ZSH_THEME="kayid"
 
 SPACESHIP_PROMPT_ADD_NEWLINE="true"
 SPACESHIP_CHAR_SYMBOL=" \uf0e7"
