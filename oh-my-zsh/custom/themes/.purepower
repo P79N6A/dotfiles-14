@@ -135,7 +135,7 @@ fi
   emulate -L zsh && setopt no_unset pipe_fail
 
   if (( ARGC )); then
-    echo -E "Usage: source $HOME/.dotfiles/oh-my-zsh/custom/themes/.purepower" >&2
+    echo -E "Usage: source ~/.purepower" >&2
     return 1
   fi
 
