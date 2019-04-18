@@ -29,7 +29,7 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="ys"
 # ZSH_THEME="nt9"
 # ZSH_THEME="kayid"
-ZSH_THEME="sorin"
+ZSH_THEME="pygmalion"
 
 SPACESHIP_PROMPT_ADD_NEWLINE="true"
 SPACESHIP_CHAR_SYMBOL=" \uf0e7"
