@@ -38,29 +38,29 @@ chrome.runtime.onInstalled.addListener(function () {
       'frame',
     ],
   });
-  var AutocompleteText = chrome.contextMenus.create({
-    'id': 'AutocompleteText',
-    'title': 'Open Frame in tab',
-    'contexts': [
-      'all',
-    ],
-  });
-  var DefaultEmail = chrome.contextMenus.create({
-    'parentId': 'AutocompleteText',
-    'id': 'DefaultEmail',
-    'title': 'nopphasin.arayasirikul@gmail.com',
-    'contexts': [
-      'editable',
-    ],
-  });
-  var DefaultName = chrome.contextMenus.create({
-    'parentId': 'AutocompleteText',
-    'id': 'DefaultName',
-    'title': 'Nopphasin Arayasirikul',
-    'contexts': [
-      'editable',
-    ],
-  });
+  // var AutocompleteText = chrome.contextMenus.create({
+  //   'id': 'AutocompleteText',
+  //   'title': 'Open Frame in tab',
+  //   'contexts': [
+  //     'all',
+  //   ],
+  // });
+  // var DefaultEmail = chrome.contextMenus.create({
+  //   'parentId': 'AutocompleteText',
+  //   'id': 'DefaultEmail',
+  //   'title': 'nopphasin.arayasirikul@gmail.com',
+  //   'contexts': [
+  //     'editable',
+  //   ],
+  // });
+  // var DefaultName = chrome.contextMenus.create({
+  //   'parentId': 'AutocompleteText',
+  //   'id': 'DefaultName',
+  //   'title': 'Nopphasin Arayasirikul',
+  //   'contexts': [
+  //     'editable',
+  //   ],
+  // });
 
   // var child1 = chrome.contextMenus.create({
   //   'type': 'normal',
