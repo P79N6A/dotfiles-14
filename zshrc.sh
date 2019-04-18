@@ -1,7 +1,3 @@
-# source $HOME/.dotfiles/zshrc.sh
-source $HOME/.dotfiles/oh-my-zsh/custom/themes/.purepower
-source $HOME/.dotfiles/oh-my-zsh/custom/powerlevel10k/powerlevel10k.zsh-theme
-
 export DOTFILES=$HOME/.dotfiles
 export ZSHFILES=$HOME/.dotfiles/oh-my-zsh
 
@@ -26,7 +22,7 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="zhann"
 # ZSH_THEME="smt"
 # ZSH_THEME="kolo"
-# ZSH_THEME="nodeys"
+ZSH_THEME="nodeys"
 # ZSH_THEME="nanotech"
 # ZSH_THEME="bureau"
 # ZSH_THEME="refined"
@@ -34,7 +30,7 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="nt9"
 # ZSH_THEME="kayid"
 # ZSH_THEME="pygmalion"
-ZSH_THEME="amuse"
+# ZSH_THEME="avit"
 
 SPACESHIP_PROMPT_ADD_NEWLINE="true"
 SPACESHIP_CHAR_SYMBOL=" \uf0e7"

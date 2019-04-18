@@ -15,11 +15,11 @@ function box_name {
 local current_dir='${PWD/#$HOME/~}'
 
 # VCS
-YS_VCS_PROMPT_PREFIX1=" on %{$fg[black]%}"
-YS_VCS_PROMPT_PREFIX2=":%{$reset_color%}%{$fg[green]%}"
+YS_VCS_PROMPT_PREFIX1=" %{$fg[white]%}on%{$reset_color%} "
+YS_VCS_PROMPT_PREFIX2=":%{$fg[cyan]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
 YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}x"
-YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}"
+YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}o"
 
 # Git info.
 local git_info='$(git_prompt_info)'
@@ -46,24 +46,34 @@ ys_hg_prompt_info() {
 
 # NVM info
 local nvm_info='$(nvm_prompt_info)'
-ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]%} "
+ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]%}⬢ "
 ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
-%{$terminfo[bold]$fg[magenta]%}${current_dir}%{$reset_color%}\
+%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
+%{$fg[cyan]%}%n \
+%{$fg[white]%}at \
+%{$fg[green]%}$(box_name) \
+%{$fg[white]%}in \
+%{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
 ${git_info} \
-
-%{$fg[red]%}$ %{$reset_color%}"
+%{$fg[white]%}[%*]
+%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
 
 if [[ "$USER" == "root" ]]; then
 PROMPT="
-%{$terminfo[bold]$fg[magenta]%}${current_dir}%{$reset_color%}\
+%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
+%{$bg[yellow]%}%{$fg[cyan]%}%n%{$reset_color%} \
+%{$fg[white]%}at \
+%{$fg[green]%}$(box_name) \
+%{$fg[white]%}in \
+%{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
 ${git_info} \
-
-%{$fg[red]%}$ %{$reset_color%}"
+%{$fg[white]%}[%*]
+%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
 fi
 
 RPROMPT="${nvm_info}%{$reset_color%}"
