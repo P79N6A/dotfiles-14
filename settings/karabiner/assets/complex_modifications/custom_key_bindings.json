@@ -80,10 +80,9 @@
         },
         {
           "from": {
-            "pointing_button": "button2",
+            "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "command",
                 "shift"
               ]
             }
@@ -114,7 +113,7 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "command"
+                "shift"
               ]
             }
           },

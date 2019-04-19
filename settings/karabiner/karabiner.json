@@ -106,11 +106,10 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
                                             "shift"
                                         ]
                                     },
-                                    "pointing_button": "button2"
+                                    "pointing_button": "button1"
                                 },
                                 "to": [
                                     {
@@ -137,7 +136,7 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "shift"
                                         ]
                                     },
                                     "pointing_button": "button2"
