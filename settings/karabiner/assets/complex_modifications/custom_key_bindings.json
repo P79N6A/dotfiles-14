@@ -2,6 +2,97 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
+      "description": "Select previous/next tab with ⬆ + CLICKS ",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Disable middle click except on browsers",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button3"
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "Open Trash Folder ⌃ + ⌘ + ⌫",
       "manipulators": [
         {
@@ -80,50 +171,16 @@
         },
         {
           "from": {
-            "pointing_button": "button1",
+            "pointing_button": "button3",
             "modifiers": {
               "mandatory": [
-                "shift"
+                "option"
               ]
             }
           },
           "to": [
             {
-              "key_code": "open_bracket",
-              "modifiers": [
-                "command",
-                "shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "close_bracket",
-              "modifiers": [
-                "command",
-                "shift"
-              ]
+              "key_code": "vk_none"
             }
           ],
           "conditions": [
