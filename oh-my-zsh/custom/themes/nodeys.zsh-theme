@@ -50,16 +50,14 @@ ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]%} "
 ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
-PROMPT="
-%{$terminfo[bold]$fg[magenta]%}${current_dir}%{$reset_color%}\
+PROMPT="%{$terminfo[bold]$fg[magenta]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
 ${git_info} \
 
 %{$fg[red]%}$ %{$reset_color%}"
 
 if [[ "$USER" == "root" ]]; then
-PROMPT="
-%{$terminfo[bold]$fg[magenta]%}${current_dir}%{$reset_color%}\
+PROMPT="%{$terminfo[bold]$fg[magenta]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
 ${git_info} \
 
