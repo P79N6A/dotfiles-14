@@ -18,8 +18,8 @@ local current_dir='${PWD/#$HOME/~}'
 YS_VCS_PROMPT_PREFIX1=" on %{$fg[black]%}"
 YS_VCS_PROMPT_PREFIX2=":%{$reset_color%}%{$fg[green]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
-YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}"
-YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}"
+YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}●"
+YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}●"
 
 # Git info.
 local git_info='$(git_prompt_info)'
@@ -46,7 +46,7 @@ ys_hg_prompt_info() {
 
 # NVM info
 local nvm_info='$(nvm_prompt_info)'
-ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]%} "
+ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]%}● "
 ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
