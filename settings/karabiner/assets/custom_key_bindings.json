@@ -1,3 +1,69 @@
+"conditions": [
+  {
+    "type": "frontmost_application_if",
+    "bundle_identifiers": [
+      "^com.apple.finder$"
+    ]
+  }
+],
+
+
+"conditions": [
+  {
+    "type": "frontmost_application_if",
+    "bundle_identifiers": [
+      "^com.google.Chrome$",
+      "^com.apple.Safari$",
+      "^com.apple.Firefox$"
+    ]
+  }
+],
+
+
+"to": [
+  {
+    "shell_command": "cd ~/.Trash; open -a 'Finder' ./"
+  }
+],
+
+
+"conditions": [
+  {
+    "type": "frontmost_application_unless",
+    "bundle_identifiers": [
+      "^com.googlecode.iterm2$"
+    ]
+  }
+],
+
+
+"conditions": [
+  {
+    "type": "frontmost_application_unless",
+    "bundle_identifiers": [
+      "^com.github.atom$"
+    ]
+  }
+],
+
+
+"conditions": [
+  {
+    "type": "frontmost_application_unless",
+    "bundle_identifiers": [
+      "^com.sublimetext.3$"
+    ]
+  }
+],
+
+
+
+"description": "⌃ ⌥ ⇧ ⌘ ← ↑ → ↓ ⌫ ⏎ ⎋ ↩ ⇪ ∗ ∙ ⌂ ⏏ ⌨ ⎆ ⎨ ⎬ ⏻ ⧵ Fn ✚",
+
+
+
+
+
 BLANK ␢
 HOME/END ↖︎ ↘︎
 PAGEUP/PAGEDOWN ⇞ ⇟
