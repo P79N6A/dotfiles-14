@@ -63,6 +63,63 @@
       ]
     },
     {
+      "description": "Disable mouse click with Fn",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "Disable mouse click with CONTROL and OPTION on browsers",
       "manipulators": [
         {
@@ -549,7 +606,7 @@
       ]
     },
     {
-      "description": "Back/Forward on browsers     Fn[LEFT_CLICK/RIGHT_CLICK]",
+      "description": "Back/Forward     Fn[LEFT_CLICK/RIGHT_CLICK]",
       "manipulators": [
         {
           "from": {
@@ -574,7 +631,8 @@
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
-                "^com.apple.Firefox$"
+                "^com.apple.Firefox$",
+                "^com.apple.finder$"
               ]
             }
           ],
@@ -603,7 +661,8 @@
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
-                "^com.apple.Firefox$"
+                "^com.apple.Firefox$",
+                "^com.apple.finder$"
               ]
             }
           ],
@@ -612,7 +671,7 @@
       ]
     },
     {
-      "description": "Select tabs on browsers         Fn[LEFT_CLICK/RIGHT_CLICK]",
+      "description": "Select tabs         ⇧Fn[LEFT_CLICK/RIGHT_CLICK] ",
       "manipulators": [
         {
           "from": {
@@ -639,7 +698,8 @@
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
-                "^com.apple.Firefox$"
+                "^com.apple.Firefox$",
+                "^com.apple.finder$"
               ]
             }
           ],
@@ -670,7 +730,8 @@
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
-                "^com.apple.Firefox$"
+                "^com.apple.Firefox$",
+                "^com.apple.finder$"
               ]
             }
           ],

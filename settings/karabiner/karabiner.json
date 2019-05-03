@@ -77,6 +77,63 @@
                         ]
                     },
                     {
+                        "description": "Disable mouse click with Fn",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ]
+                                    },
+                                    "pointing_button": "button1"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ]
+                                    },
+                                    "pointing_button": "button2"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Disable mouse click with CONTROL and OPTION on browsers",
                         "manipulators": [
                             {
@@ -563,7 +620,7 @@
                         ]
                     },
                     {
-                        "description": "Back/Forward on browsers     Fn[LEFT_CLICK/RIGHT_CLICK]",
+                        "description": "Back/Forward     Fn[LEFT_CLICK/RIGHT_CLICK]",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -571,7 +628,8 @@
                                         "bundle_identifiers": [
                                             "^com.google.Chrome$",
                                             "^com.apple.Safari$",
-                                            "^com.apple.Firefox$"
+                                            "^com.apple.Firefox$",
+                                            "^com.apple.finder$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -600,7 +658,8 @@
                                         "bundle_identifiers": [
                                             "^com.google.Chrome$",
                                             "^com.apple.Safari$",
-                                            "^com.apple.Firefox$"
+                                            "^com.apple.Firefox$",
+                                            "^com.apple.finder$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -626,7 +685,7 @@
                         ]
                     },
                     {
-                        "description": "Select tabs on browsers         Fn[LEFT_CLICK/RIGHT_CLICK]",
+                        "description": "Select tabs         ⇧Fn[LEFT_CLICK/RIGHT_CLICK] ",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -634,7 +693,8 @@
                                         "bundle_identifiers": [
                                             "^com.google.Chrome$",
                                             "^com.apple.Safari$",
-                                            "^com.apple.Firefox$"
+                                            "^com.apple.Firefox$",
+                                            "^com.apple.finder$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -665,7 +725,8 @@
                                         "bundle_identifiers": [
                                             "^com.google.Chrome$",
                                             "^com.apple.Safari$",
-                                            "^com.apple.Firefox$"
+                                            "^com.apple.Firefox$",
+                                            "^com.apple.finder$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
