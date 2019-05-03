@@ -685,7 +685,7 @@
                         ]
                     },
                     {
-                        "description": "Select tabs         ⇧Fn",
+                        "description": "Select tabs         ⇧",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -702,7 +702,6 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn",
                                             "shift"
                                         ]
                                     },
@@ -734,7 +733,6 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn",
                                             "shift"
                                         ]
                                     },

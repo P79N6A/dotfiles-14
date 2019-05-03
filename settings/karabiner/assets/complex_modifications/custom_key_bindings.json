@@ -671,14 +671,13 @@
       ]
     },
     {
-      "description": "Select tabs         ⇧Fn",
+      "description": "Select tabs         ⇧",
       "manipulators": [
         {
           "from": {
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "fn",
                 "shift"
               ]
             }
@@ -710,7 +709,6 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "fn",
                 "shift"
               ]
             }
