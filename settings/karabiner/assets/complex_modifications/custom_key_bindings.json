@@ -2,11 +2,11 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
-      "description": "⏏ ⏎ ⌫ ⎋ ⌘ ＼ ⌥ ⬆ ⌃ ← ↑ → ↓ ↩ ⇪ ⇧ ∗ ∙ ⌂ ⌃ ⌘ ⌨ ⌫ ⎆ ⎨ ⎬ ⏏ ⏻ ⧵ Fn",
+      "description": "Disable ⇧⌘[←↑→↓] on Finder",
       "manipulators": [
         {
           "from": {
-            "key_code": "v",
+            "key_code": "left_arrow",
             "modifiers": {
               "mandatory": [
                 "command",
@@ -16,10 +16,37 @@
           },
           "to": [
             {
-              "key_code": "v",
+              "key_code": "home",
               "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.apple.finder$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": [
                 "command",
-                "option"
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "end",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -36,7 +63,171 @@
       ]
     },
     {
-      "description": "Toggle iTerm        ⌘ \\",
+      "description": "Disable mouse click with CONTROL and OPTION on browsers",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Disable mouse click with CONTROL on editors",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.github.atom$",
+                "^com.sublimetext.3$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.github.atom$",
+                "^com.sublimetext.3$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Toggle iTerm                              ⌘⧵",
       "manipulators": [
         {
           "from": {
@@ -92,7 +283,7 @@
       ]
     },
     {
-      "description": "Toggle Atom        ⌥ ⌘ \\",
+      "description": "Toggle Atom                          ⌥ ⌘⧵",
       "manipulators": [
         {
           "from": {
@@ -150,7 +341,7 @@
       ]
     },
     {
-      "description": "Toggle Finder        ⌃ ⌥ ⌘ \\",
+      "description": "Toggle Finder                    ⌃ ⌥ ⌘⧵",
       "manipulators": [
         {
           "from": {
@@ -210,7 +401,7 @@
       ]
     },
     {
-      "description": "Toggle Sublime        ⌃ ⌘ \\",
+      "description": "Toggle Sublime Text             ⌃ ⌘⧵",
       "manipulators": [
         {
           "from": {
@@ -268,7 +459,7 @@
       ]
     },
     {
-      "description": "Toggle Chrome        ⌃ \\",
+      "description": "Toggle Google Chrome             ⌃⧵",
       "manipulators": [
         {
           "from": {
@@ -324,162 +515,32 @@
       ]
     },
     {
-      "description": "Disable on browsers        ⌃ and ⌥ ﬽ 𐑘 ₊ ⁺ ⁺ ＋  ",
+      "description": "Move Item (Finder)                 ⇧⌘V",
       "manipulators": [
         {
           "from": {
-            "pointing_button": "button1",
+            "key_code": "v",
             "modifiers": {
               "mandatory": [
+                "command",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "command",
                 "option"
               ]
             }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button1",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "Disable on text editors        ⌃ \\",
-      "manipulators": [
-        {
-          "from": {
-            "pointing_button": "button1",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.github.atom$",
-                "^com.sublimetext.3$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.github.atom$",
-                "^com.sublimetext.3$"
+                "^com.apple.finder$"
               ]
             }
           ],
