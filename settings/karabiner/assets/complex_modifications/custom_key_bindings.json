@@ -2,7 +2,7 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
-      "description": "Disable switching tabs with ⇧⌘[←↑→↓] on Finder",
+      "description": "Disable ⇧⌘[←↑→↓] on Finder",
       "manipulators": [
         {
           "from": {
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "description": "Disable mouse click with Fn",
+      "description": "Disable Fn",
       "manipulators": [
         {
           "from": {
@@ -120,7 +120,7 @@
       ]
     },
     {
-      "description": "Disable mouse click with CONTROL and OPTION on browsers",
+      "description": "Disable ⌃⌥ on browsers",
       "manipulators": [
         {
           "from": {
@@ -229,7 +229,7 @@
       ]
     },
     {
-      "description": "Disable mouse click with CONTROL on editors",
+      "description": "Disable ⌃ on editors",
       "manipulators": [
         {
           "from": {
@@ -606,7 +606,7 @@
       ]
     },
     {
-      "description": "Back/Forward     Fn[LEFT_CLICK/RIGHT_CLICK]",
+      "description": "Back/Forward     Fn",
       "manipulators": [
         {
           "from": {
@@ -671,7 +671,7 @@
       ]
     },
     {
-      "description": "Select tabs         ⇧Fn[LEFT_CLICK/RIGHT_CLICK] ",
+      "description": "Select tabs         ⇧Fn",
       "manipulators": [
         {
           "from": {

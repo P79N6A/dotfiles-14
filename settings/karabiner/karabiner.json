@@ -16,7 +16,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Disable switching tabs with ⇧⌘[←↑→↓] on Finder",
+                        "description": "Disable ⇧⌘[←↑→↓] on Finder",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -77,7 +77,7 @@
                         ]
                     },
                     {
-                        "description": "Disable mouse click with Fn",
+                        "description": "Disable Fn",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -134,7 +134,7 @@
                         ]
                     },
                     {
-                        "description": "Disable mouse click with CONTROL and OPTION on browsers",
+                        "description": "Disable ⌃⌥ on browsers",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -243,7 +243,7 @@
                         ]
                     },
                     {
-                        "description": "Disable mouse click with CONTROL on editors",
+                        "description": "Disable ⌃ on editors",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -620,7 +620,7 @@
                         ]
                     },
                     {
-                        "description": "Back/Forward     Fn[LEFT_CLICK/RIGHT_CLICK]",
+                        "description": "Back/Forward     Fn",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -685,7 +685,7 @@
                         ]
                     },
                     {
-                        "description": "Select tabs         ⇧Fn[LEFT_CLICK/RIGHT_CLICK] ",
+                        "description": "Select tabs         ⇧Fn",
                         "manipulators": [
                             {
                                 "conditions": [
