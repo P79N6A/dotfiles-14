@@ -398,6 +398,38 @@
       ]
     },
     {
+      "description": "Disable ⇧[RIGHT] (Finder, Browsers)",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$",
+                "^com.apple.finder$"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "Toggle Finder                    ⌃ ⌥ ⌘⧵",
       "manipulators": [
         {
@@ -671,13 +703,14 @@
       ]
     },
     {
-      "description": "Select tabs         ⇧",
+      "description": "Select tabs         ⇧⌘",
       "manipulators": [
         {
           "from": {
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
+                "command",
                 "shift"
               ]
             }
@@ -709,6 +742,7 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
+                "command",
                 "shift"
               ]
             }
