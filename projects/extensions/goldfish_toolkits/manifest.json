@@ -30,6 +30,13 @@
       },
       "description": "Duplicates the current tab."
     },
+    "pin-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "MacCtrl+Shift+P"
+      },
+      "description": "Pin/Unpin the current tab."
+    },
     "move-tab-left": {
       "suggested_key": {
         "default": "Ctrl+Shift+Left",

@@ -59,6 +59,16 @@ chrome.commands.onCommand.addListener(function(command) {
 
     if (command == 'duplicate-tab') {
       chrome.tabs.duplicate(activeTab.id);
+    } else if (command == 'pin-tab') {
+      var pinned = true;
+      if (activeTab.pinned == true) {
+        pinned = false;
+      }
+
+      chrome.tabs.update(activeTab.id, {
+        active: true,
+        pinned: pinned,
+      });
     } else if (command == 'move-tab-left') {
       var newIndex = parseInt(activeTab.index) - 1;
 
