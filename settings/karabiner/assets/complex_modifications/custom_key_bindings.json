@@ -116,22 +116,6 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
                 "control"
               ]
             }
@@ -205,14 +189,23 @@
                 "shift"
               ],
               "optional": [
-                "control",
-                "option"
+                "any"
               ]
             }
           },
           "to": [
             {
               "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
             }
           ],
           "type": "basic"
@@ -815,7 +808,7 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "command"
+                "shift"
               ]
             }
           },

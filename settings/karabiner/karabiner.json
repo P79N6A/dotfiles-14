@@ -9,10 +9,10 @@
             "complex_modifications": {
                 "parameters": {
                     "basic.simultaneous_threshold_milliseconds": 50,
-                    "basic.to_delayed_action_delay_milliseconds": 500,
-                    "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 500,
-                    "mouse_motion_to_scroll.speed": 10
+                    "basic.to_delayed_action_delay_milliseconds": 250,
+                    "basic.to_if_alone_timeout_milliseconds": 500,
+                    "basic.to_if_held_down_threshold_milliseconds": 250,
+                    "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
                     {
@@ -129,22 +129,6 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "shift"
-                                        ]
-                                    },
-                                    "pointing_button": "button2"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": [
                                             "control"
                                         ]
                                     },
@@ -212,14 +196,23 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
                                             "shift"
                                         ],
                                         "optional": [
-                                            "control",
-                                            "option"
+                                            "any"
                                         ]
                                     },
                                     "pointing_button": "button2"
@@ -838,7 +831,7 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "shift"
                                         ]
                                     },
                                     "pointing_button": "button2"
