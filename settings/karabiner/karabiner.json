@@ -723,7 +723,8 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn"
+                                            "fn",
+                                            "shift"
                                         ]
                                     },
                                     "pointing_button": "button1"
@@ -743,7 +744,8 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn"
+                                            "fn",
+                                            "shift"
                                         ]
                                     },
                                     "pointing_button": "button2"
@@ -779,10 +781,10 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "fn"
                                         ]
                                     },
-                                    "pointing_button": "button2"
+                                    "pointing_button": "button1"
                                 },
                                 "to": [
                                     {
@@ -809,8 +811,7 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
-                                            "shift"
+                                            "fn"
                                         ]
                                     },
                                     "pointing_button": "button2"

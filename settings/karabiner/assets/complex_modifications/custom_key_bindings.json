@@ -711,7 +711,8 @@
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "fn",
+                "shift"
               ]
             }
           },
@@ -731,7 +732,8 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "fn",
+                "shift"
               ]
             }
           },
@@ -753,10 +755,10 @@
       "manipulators": [
         {
           "from": {
-            "pointing_button": "button2",
+            "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "command"
+                "fn"
               ]
             }
           },
@@ -786,8 +788,7 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "command",
-                "shift"
+                "fn"
               ]
             }
           },
