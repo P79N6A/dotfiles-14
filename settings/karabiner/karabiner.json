@@ -12,7 +12,7 @@
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
                     "basic.to_if_held_down_threshold_milliseconds": 500,
-                    "mouse_motion_to_scroll.speed": 100
+                    "mouse_motion_to_scroll.speed": 10
                 },
                 "rules": [
                     {
@@ -341,16 +341,46 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "shift"
+                                            "any"
                                         ],
                                         "optional": [
-                                            "control",
-                                            "option"
+                                            "any"
                                         ]
                                     },
+                                    "pointing_button": "button3"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
                                     "pointing_button": "button3"
                                 },
                                 "to": [
@@ -691,47 +721,6 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    },
-                                    "pointing_button": "button3"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "close_bracket",
-                                        "modifiers": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    },
-                                    "pointing_button": "button3"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "open_bracket",
-                                        "modifiers": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": [
                                             "fn",
                                             "shift"
                                         ]
@@ -841,23 +830,26 @@
                                         "bundle_identifiers": [
                                             "^com.google.Chrome$",
                                             "^com.apple.Safari$",
-                                            "^com.apple.Firefox$",
-                                            "^com.apple.finder$"
+                                            "^com.apple.Firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "period",
                                     "modifiers": {
                                         "mandatory": [
-                                            "control"
+                                            "command"
                                         ]
-                                    }
+                                    },
+                                    "pointing_button": "button2"
                                 },
                                 "to": [
                                     {
-                                        "pointing_button": "button2"
+                                        "modifiers": [
+                                            "command",
+                                            "shift"
+                                        ],
+                                        "pointing_button": "button1"
                                     }
                                 ],
                                 "type": "basic"

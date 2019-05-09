@@ -331,17 +331,47 @@
             "pointing_button": "button3",
             "modifiers": {
               "mandatory": [
-                "shift"
+                "any"
               ],
               "optional": [
-                "control",
-                "option"
+                "any"
               ]
             }
           },
           "to": [
             {
               "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button3"
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
             }
           ],
           "type": "basic"
@@ -675,47 +705,6 @@
       "manipulators": [
         {
           "from": {
-            "pointing_button": "button3",
-            "modifiers": {
-              "mandatory": [
-                "command",
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "close_bracket",
-              "modifiers": [
-                "command",
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button3",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "open_bracket",
-              "modifiers": [
-                "command",
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
@@ -823,16 +812,20 @@
         },
         {
           "from": {
-            "key_code": "period",
+            "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "control"
+                "command"
               ]
             }
           },
           "to": [
             {
-              "pointing_button": "button2"
+              "pointing_button": "button1",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
             }
           ],
           "conditions": [
@@ -841,8 +834,7 @@
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
-                "^com.apple.Firefox$",
-                "^com.apple.finder$"
+                "^com.apple.Firefox$"
               ]
             }
           ],
