@@ -82,6 +82,14 @@
               "key_code": "vk_none"
             }
           ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.github.atom$"
+              ]
+            }
+          ],
           "type": "basic"
         },
         {
