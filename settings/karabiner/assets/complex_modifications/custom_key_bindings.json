@@ -70,22 +70,6 @@
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "fn"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button1",
-            "modifiers": {
-              "mandatory": [
                 "option"
               ],
               "optional": [
@@ -109,22 +93,6 @@
               ],
               "optional": [
                 "option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "fn"
               ]
             }
           },
@@ -730,6 +698,46 @@
           "to": [
             {
               "key_code": "open_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
               "modifiers": [
                 "command",
                 "shift"
