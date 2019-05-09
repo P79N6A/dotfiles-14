@@ -38,6 +38,13 @@ chrome.runtime.onInstalled.addListener(function () {
       'frame',
     ],
   });
+  var OpenGoogleTranslate = chrome.contextMenus.create({
+    'id': 'OpenGoogleTranslate',
+    'title': 'Open Google Translate',
+    'contexts': [
+      'page', 'selection',
+    ],
+  });
   // var AutocompleteText = chrome.contextMenus.create({
   //   'id': 'AutocompleteText',
   //   'title': 'Open Frame in tab',
@@ -107,10 +114,17 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         'active': true,
       });
     }
-  } else if (info.menuItemId == 'DefaultEmail') {
-    // var inputs = document.querySelectorAll('input');
-    // console.log(inputs);
-    // console.log(info);
+  } else if (info.menuItemId == 'OpenGoogleTranslate') {
+    var selectionText = '';
+    if (typeof info.selectionText != 'undefined') {
+      selectionText = info.selectionText;
+    }
+
+    chrome.tabs.create({
+      'url': 'https://translate.google.com/#view=home&op=translate&sl=auto&tl=th&text='+ selectionText +'',
+      'index': openerTab.index + 1,
+      'active': true,
+    });
   } else {
     if (typeof tab.openerTabId == 'undefined' || tab.openerTabId == '') {
       //
