@@ -63,7 +63,7 @@
       ]
     },
     {
-      "description": "Disable Fn",
+      "description": "Disable Special CLICK",
       "manipulators": [
         {
           "from": {
@@ -79,14 +79,42 @@
               "key_code": "vk_none"
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ],
+              "optional": [
+                "control"
               ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
             }
           ],
           "type": "basic"
@@ -105,28 +133,212 @@
               "key_code": "vk_none"
             }
           ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ],
+              "optional": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ],
+              "optional": [
+                "control",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
           "conditions": [
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
-                "^com.apple.Firefox$"
+                "^com.apple.Firefox$",
+                "^com.apple.finder$"
               ]
             }
           ],
           "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "Disable ⌃⌥ on browsers",
-      "manipulators": [
+        },
         {
           "from": {
-            "pointing_button": "button1",
+            "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$",
+                "^com.apple.finder$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button3",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button3",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ],
+              "optional": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button3",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
                 "option"
               ]
             }
@@ -136,49 +348,17 @@
               "key_code": "vk_none"
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
           "type": "basic"
         },
         {
           "from": {
-            "pointing_button": "button1",
+            "pointing_button": "button3",
             "modifiers": {
               "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
+                "shift"
+              ],
+              "optional": [
+                "control",
                 "option"
               ]
             }
@@ -188,103 +368,12 @@
               "key_code": "vk_none"
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
           "type": "basic"
         }
       ]
     },
     {
-      "description": "Disable ⌃ on editors",
-      "manipulators": [
-        {
-          "from": {
-            "pointing_button": "button1",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.github.atom$",
-                "^com.sublimetext.3$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.github.atom$",
-                "^com.sublimetext.3$"
-              ]
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "Toggle iTerm                              ⌘⧵",
+      "description": "Toggle iTerm ⌘⧵",
       "manipulators": [
         {
           "from": {
@@ -340,7 +429,7 @@
       ]
     },
     {
-      "description": "Toggle Atom                          ⌥ ⌘⧵",
+      "description": "Toggle Atom ⌥⌘⧵",
       "manipulators": [
         {
           "from": {
@@ -398,39 +487,7 @@
       ]
     },
     {
-      "description": "Disable ⇧[RIGHT] (Finder, Browsers)",
-      "manipulators": [
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$",
-                "^com.apple.finder$"
-              ]
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "Toggle Finder                    ⌃ ⌥ ⌘⧵",
+      "description": "Toggle Finder ⌃⌥⌘⧵",
       "manipulators": [
         {
           "from": {
@@ -490,7 +547,7 @@
       ]
     },
     {
-      "description": "Toggle Sublime Text             ⌃ ⌘⧵",
+      "description": "Toggle Sublime Text ⌃⌘⧵",
       "manipulators": [
         {
           "from": {
@@ -548,7 +605,7 @@
       ]
     },
     {
-      "description": "Toggle Google Chrome             ⌃⧵",
+      "description": "Toggle Google Chrome ⌃⧵",
       "manipulators": [
         {
           "from": {
@@ -604,7 +661,7 @@
       ]
     },
     {
-      "description": "Move Item (Finder)                 ⇧⌘V",
+      "description": "Move Item (Finder) ⇧⌘V",
       "manipulators": [
         {
           "from": {
@@ -638,44 +695,15 @@
       ]
     },
     {
-      "description": "Back/Forward     Fn",
+      "description": "Select tabs",
       "manipulators": [
         {
           "from": {
-            "pointing_button": "button1",
+            "pointing_button": "button3",
             "modifiers": {
               "mandatory": [
-                "fn"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "open_bracket",
-              "modifiers": [
-                "command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$",
-                "^com.apple.finder$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "fn"
+                "command",
+                "shift"
               ]
             }
           },
@@ -683,18 +711,28 @@
             {
               "key_code": "close_bracket",
               "modifiers": [
-                "command"
+                "command",
+                "shift"
               ]
             }
           ],
-          "conditions": [
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button3",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
             {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^com.apple.Firefox$",
-                "^com.apple.finder$"
+              "key_code": "open_bracket",
+              "modifiers": [
+                "command",
+                "shift"
               ]
             }
           ],
@@ -703,15 +741,14 @@
       ]
     },
     {
-      "description": "Select tabs         ⇧⌘",
+      "description": "Browser Key Bindings",
       "manipulators": [
         {
           "from": {
-            "pointing_button": "button1",
+            "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "command",
-                "shift"
+                "command"
               ]
             }
           },
@@ -719,8 +756,7 @@
             {
               "key_code": "open_bracket",
               "modifiers": [
-                "command",
-                "shift"
+                "command"
               ]
             }
           ],
@@ -751,8 +787,7 @@
             {
               "key_code": "close_bracket",
               "modifiers": [
-                "command",
-                "shift"
+                "command"
               ]
             }
           ],

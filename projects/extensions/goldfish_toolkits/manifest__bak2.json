@@ -13,8 +13,8 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "src/background.js",
-      "src/tab_shortcuts.js"
+      "src/bg/background.js",
+      "src/inject/tab_shortcuts.js"
     ],
     "persistent": false
   },
@@ -22,6 +22,28 @@
     "default_icon": "icons/nerd.png",
     "default_title": "Goldfish Toolkits"
   },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [
+         "<all_urls>"
+      ],
+      "run_at": "document_end",
+      "js": [
+         "jquery-3.3.1.js",
+         "app.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.facebook.com/*/photos/*",
+        "*://facebook.com/*/photos/*"
+      ],
+      "js": [
+        "src/inject/facebook.js"
+      ]
+    }
+  ],
   "commands": {
     "duplicate-tab": {
       "suggested_key": {
@@ -47,12 +69,26 @@
   },
   "permissions": [
     "activeTab",
+    "browsingData",
+    "clipboardRead",
+    "clipboardWrite",
     "contentSettings",
     "contextMenus",
+    "cookies",
+    "debugger",
     "declarativeContent",
+    "desktopCapture",
+    "downloads",
+    "geolocation",
+    "history",
+    "idle",
+    "management",
     "nativeMessaging",
     "notifications",
     "pageCapture",
+    "printerProvider",
+    "sessions",
+    "storage",
     "tabCapture",
     "tabs",
     "webNavigation",
