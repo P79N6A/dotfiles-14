@@ -848,6 +848,37 @@
             }
           ],
           "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "shift",
+                "option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
         }
       ]
     }

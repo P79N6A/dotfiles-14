@@ -36,20 +36,6 @@
         "mac": "MacCtrl+Shift+P"
       },
       "description": "Pin/Unpin the current tab."
-    },
-    "move-tab-left": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Left",
-        "mac": "MacCtrl+Shift+Left"
-      },
-      "description": "Move current tab to the left."
-    },
-    "move-tab-right": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Right",
-        "mac": "MacCtrl+Shift+Right"
-      },
-      "description": "Move current tab to the right."
     }
   },
   "permissions": [
