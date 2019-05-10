@@ -47624,6 +47624,12 @@
 	<integer>80</integer>
 	<key>MinTabWidth</key>
 	<integer>80</integer>
+	<key>NSColorPanelMode</key>
+	<string>3</string>
+	<key>NSColorPickerPreferredRGBEntryMode</key>
+	<integer>2</integer>
+	<key>NSColorPickerSlidersDefaults</key>
+	<string>3</string>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
@@ -47638,6 +47644,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 251.000000, NO, NO</string>
+		<string>0.000000, 252.000000, 224.000000, 43.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -47666,14 +47677,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>424 767 224 232 0 0 1920 1177 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>564 334 923 348 0 0 1920 1057 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 126 606 469 0 0 1920 1057 </string>
+	<string>628 156 775 368 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>472 574 796 473 0 0 1920 1057 </string>
+	<string>469 440 796 486 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 53 1920 1004 0 0 1920 1057 </string>
+	<string>0 56 1920 1121 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A3C2F41-B720-4C32-8FAD-E39AB01AB0B4_selection</key>
@@ -48505,7 +48516,7 @@ Clear Buffer</string>
 			<key>Normal Font</key>
 			<string>Menlo-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
-			<false/>
+			<true/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -48580,7 +48591,7 @@ Clear Buffer</string>
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.01756027918781726</real>
+			<real>0.066457804568527928</real>
 			<key>Triggers</key>
 			<array>
 				<dict>
@@ -50166,7 +50177,7 @@ Clear Buffer</string>
 	<key>NoSyncInstallUtilitiesPackage_selection</key>
 	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>5E15EA80-23C1-4E83-9BE1-563CEE72ACCD</string>
+	<string>8685B631-17A2-47B9-B989-31147DFD9600</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -50174,7 +50185,7 @@ Clear Buffer</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>561539640.70262802</real>
+	<real>560099058.36621594</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -50253,7 +50264,7 @@ Clear Buffer</string>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=48</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=18</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SUSendProfileInfo</key>
@@ -50329,7 +50340,7 @@ Clear Buffer</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.2.1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

@@ -145,6 +145,22 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
+                                            "command"
+                                        ]
+                                    },
+                                    "pointing_button": "button2"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": [
                                             "option"
                                         ]
                                     },
