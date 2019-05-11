@@ -48,11 +48,11 @@ function get_images(index = 0) {
 
     var checkButtonDownloadInterval = setInterval(function () {
       clearInterval(checkButtonDownloadInterval);
-      var next = snowlift.querySelector('#photos_snowlift a.snowliftPager.next');
-      if (!next) {
-        return false;
-      }
-      next.click();
+      // var next = snowlift.querySelector('#photos_snowlift a.snowliftPager.next');
+      // if (!next) {
+      //   return false;
+      // }
+      // next.click();
     }, 400);
   }, 400);
 
