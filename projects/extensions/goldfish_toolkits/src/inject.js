@@ -43,6 +43,33 @@ function get_images(index = 0) {
     if (!buttonDownload) {
       return false;
     }
+    buttonOption.click();
+    window.open(buttonDownload.attributes.href.value, '_top');
+  }, 400);
+}
+
+/* function get_images(index = 0) {
+  var snowlift = document.querySelector('#photos_snowlift');
+  if (!snowlift) {
+    return false;
+  }
+
+  if (snowlift.classList.contains('hidden_elem') == true) {
+    return false;
+  }
+
+  var buttonOption = snowlift.querySelector('a[data-action-type="open_options_flyout"]');
+  if (!buttonOption) {
+    return false;
+  }
+  buttonOption.click();
+  var checkButtonOptionInterval = setInterval(function () {
+    clearInterval(checkButtonOptionInterval);
+    var downloadId = buttonOption.getAttribute('aria-controls');
+    var buttonDownload = snowlift.querySelector('#'+ downloadId +' a[data-action-type="download_photo"]');
+    if (!buttonDownload) {
+      return false;
+    }
     buttonDownload.click();
     // window.open(buttonDownload.attributes.href.value, '_blank');
 
@@ -82,7 +109,7 @@ function get_images(index = 0) {
   }
 
   return images;
-}
+} */
 
 
 document.addEventListener('DOMSubtreeModified', function (evt) {
