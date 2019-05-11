@@ -7,6 +7,8 @@
 
 //example of using a message handler from the inject scripts
 chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
+  document.body.setAttribute('data-href', window.location.href);
+
   sendResponse({
     'request': request,
     'sender': sender,
@@ -31,6 +33,13 @@ chrome.runtime.onInstalled.addListener(function () {
   //     'link',
   //   ],
   // });
+  var SaveImageToDownload = chrome.contextMenus.create({
+    'id': 'SaveImageToDownload',
+    'title': 'Save image to download',
+    'contexts': [
+      'image',
+    ],
+  });
   var OpenFrameInTab = chrome.contextMenus.create({
     'id': 'OpenFrameInTab',
     'title': 'Open Frame in tab',
@@ -114,6 +123,8 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         'active': true,
       });
     }
+  } else if (info.menuItemId == 'SaveImageToDownload') {
+
   } else if (info.menuItemId == 'OpenGoogleTranslate') {
     var selectionText = '';
     if (typeof info.selectionText != 'undefined') {

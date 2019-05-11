@@ -141,6 +141,16 @@
               "key_code": "vk_none"
             }
           ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
           "type": "basic"
         },
         {
@@ -220,7 +230,9 @@
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
-                "^com.apple.Firefox$"
+                "^com.apple.Firefox$",
+                "^com.apple.finder$",
+                "^com.github.atom$"
               ]
             }
           ],
@@ -714,6 +726,48 @@
       "manipulators": [
         {
           "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "close_bracket",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
@@ -825,6 +879,36 @@
             "modifiers": {
               "mandatory": [
                 "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button1",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "command"
               ]
             }
           },

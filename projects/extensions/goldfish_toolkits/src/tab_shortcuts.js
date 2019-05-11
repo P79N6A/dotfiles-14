@@ -105,6 +105,8 @@ chrome.commands.onCommand.addListener(function(command) {
       });
     } else if (command == 'download-photo') {
       // alert(command);
+      console.log(activeTab);
+
 
       // chrome.tabs.query({
       //   'currentWindow': true,
@@ -112,8 +114,10 @@ chrome.commands.onCommand.addListener(function(command) {
       // }, function (tabs) {
       //   if (tabs.length > 0) {
       //     var tab = tabs[0];
-      //
-      //     run_app();
+      //     // run_app(tab);
+      //     console.log(event);
+      //     console.log(this);
+      //     console.log(window.document);
       //   }
       // });
 
@@ -134,8 +138,14 @@ chrome.commands.onCommand.addListener(function(command) {
 });
 
 
-var run_app = function () {
-  alert(window.location.href);
-  document.querySelector('body').setAttribute('data-start', 'start');
-  alert(document.querySelector('body').getAttribute('data-start'));
+var run_app = function (tab) {
+  // alert(window.location.href);
+  // document.querySelector('body').setAttribute('data-start', 'start');
+  // alert(document.querySelector('body').getAttribute('data-start'));
+
+  // alert('run');
+  // var btnOption = document.querySelector('#fbPhotoSnowliftActions');
+  // alert(btnOption);
+  // console.log(tab);
+  // console.log(window.chrome.tabs.getCurrent());
 }.bind(this);

@@ -11,12 +11,11 @@ chrome.extension.sendMessage({}, function (response) {
       var request = response.request;
       var sender = response.sender;
 
-      // console.log(request);
-      // console.log(sender);
-      // console.log(response);
-      // console.log(this);
-      // console.log(chrome);
-
+      console.log(request);
+      console.log(sender);
+      console.log(response);
+      console.log(this);
+      console.log(chrome);
     }
   }, 10);
 });
