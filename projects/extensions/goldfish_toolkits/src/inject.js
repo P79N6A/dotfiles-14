@@ -31,27 +31,29 @@ function get_images(index = 0) {
     return false;
   }
 
-  var buttonOption = document.querySelector('#photos_snowlift a[data-action-type="open_options_flyout"]');
+  var buttonOption = snowlift.querySelector('a[data-action-type="open_options_flyout"]');
   if (!buttonOption) {
     return false;
   }
   buttonOption.click();
   var checkButtonOptionInterval = setInterval(function () {
     clearInterval(checkButtonOptionInterval);
-    var buttonDownload = document.querySelector('#photos_snowlift a[data-action-type="download_photo"]');
+    var downloadId = buttonOption.getAttribute('aria-controls');
+    var buttonDownload = snowlift.querySelector('#'+ downloadId +' a[data-action-type="download_photo"]');
     if (!buttonDownload) {
       return false;
     }
     buttonDownload.click();
+    // window.open(buttonDownload.attributes.href.value, '_blank');
 
-    // var checkButtonDownloadInterval = setInterval(function () {
-    //   clearInterval(checkButtonDownloadInterval);
-    //   var next = document.querySelector('#photos_snowlift a.snowliftPager.next');
-    //   if (!next) {
-    //     return false;
-    //   }
-    //   next.click();
-    // }, 400);
+    var checkButtonDownloadInterval = setInterval(function () {
+      clearInterval(checkButtonDownloadInterval);
+      var next = snowlift.querySelector('#photos_snowlift a.snowliftPager.next');
+      if (!next) {
+        return false;
+      }
+      next.click();
+    }, 400);
   }, 400);
 
   return;
@@ -94,7 +96,7 @@ document.addEventListener('DOMSubtreeModified', function (evt) {
     // }
   }
   // console.log(evt);
-  evt.stopPropagation();
+  // evt.stopPropagation();
 });
 
 
