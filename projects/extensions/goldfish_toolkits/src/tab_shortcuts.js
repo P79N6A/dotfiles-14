@@ -106,6 +106,7 @@ chrome.commands.onCommand.addListener(function(command) {
     } else if (command == 'download-photo') {
       // alert(command);
       console.log(activeTab);
+      alert(window.location.href);
 
 
       // chrome.tabs.query({

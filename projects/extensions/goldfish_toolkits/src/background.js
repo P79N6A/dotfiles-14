@@ -33,13 +33,13 @@ chrome.runtime.onInstalled.addListener(function () {
   //     'link',
   //   ],
   // });
-  // var SaveImageToDownload = chrome.contextMenus.create({
-  //   'id': 'SaveImageToDownload',
-  //   'title': 'Save image to download',
-  //   'contexts': [
-  //     'image',
-  //   ],
-  // });
+  var SaveImageToDownload = chrome.contextMenus.create({
+    'id': 'SaveImageToDownload',
+    'title': 'Save image to download',
+    'contexts': [
+      'image',
+    ],
+  });
   var OpenFrameInTab = chrome.contextMenus.create({
     'id': 'OpenFrameInTab',
     'title': 'Open Frame in tab',
@@ -124,7 +124,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
       });
     }
   } else if (info.menuItemId == 'SaveImageToDownload') {
-
+    alert(window.location.href);
   } else if (info.menuItemId == 'OpenGoogleTranslate') {
     var selectionText = '';
     if (typeof info.selectionText != 'undefined') {

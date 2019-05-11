@@ -48,6 +48,13 @@
         "mac": "MacCtrl+Shift+P"
       },
       "description": "Pin/Unpin the current tab."
+    },
+    "download-photo": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "MacCtrl+Shift+S"
+      },
+      "description": "Pin/Unpin the current tab."
     }
   },
   "permissions": [
