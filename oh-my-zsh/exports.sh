@@ -42,6 +42,7 @@ export ATOM_DEV_RESOURCE_PATH=$HOME/.dotfiles/projects/atom-source
 # export LDFLAGS=-L/usr/local/opt/php@`phpversion`/lib
 # export CPPFLAGS=-I/usr/local/opt/php@`phpversion`/include
 
+# export NPM_CONFIG_PREFIX=$HOME/.npm-global
 export ARCHFLAGS="-arch x86_64"
 export BREW_PREFIX="`brew --prefix`"
 export SSH_KEY_PATH=$HOME/.ssh/rsa_id
