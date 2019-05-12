@@ -35,19 +35,12 @@
     "default_title": "Goldfish Toolkits"
   },
   "commands": {
-    "duplicate-tab": {
+    "create-tab": {
       "suggested_key": {
-        "default": "Ctrl+Shift+D",
-        "mac": "MacCtrl+Shift+D"
+        "default": "Ctrl+T",
+        "mac": "MacCtrl+T"
       },
-      "description": "Duplicates the current tab."
-    },
-    "pin-tab": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+P",
-        "mac": "MacCtrl+Shift+P"
-      },
-      "description": "Pin/Unpin the current tab."
+      "description": "Create new tab next to the current tab."
     },
     "move-tab-left": {
       "suggested_key": {

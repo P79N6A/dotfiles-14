@@ -59,6 +59,13 @@ chrome.commands.onCommand.addListener(function(command) {
 
     if (command == 'duplicate-tab') {
       chrome.tabs.duplicate(activeTab.id);
+    } else if (command == 'create-tab') {
+      chrome.tabs.create({
+        active: true,
+        pinned: activeTab.pinned,
+        index: parseInt(activeTab.index) + 1,
+        openerTabId: parseInt(activeTab.id),
+      });
     } else if (command == 'pin-tab') {
       var pinned = true;
       if (activeTab.pinned == true) {
