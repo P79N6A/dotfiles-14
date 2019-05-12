@@ -59,6 +59,8 @@
   },
   "permissions": [
     "activeTab",
+    "downloads",
+    "storage",
     "contentSettings",
     "contextMenus",
     "declarativeContent",
