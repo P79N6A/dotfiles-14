@@ -25,14 +25,44 @@ function genericOnClick(info, tab) {
   console.log('tab: ' + JSON.stringify(tab));
 }
 
+const TextReplacementList = {
+  'DefaultEmail': 'nopphasin.arayasirikul@gmail.com',
+  'DefaultName': 'Nopphasin Arayasirikul',
+  'DefaultAddressEn': '26/354 Moo 4 Soi Khao Makok 1, Huay Yai, Banglamung, Chonburi 20150',
+  'DefaultAddressTh': '26/354 หมู่ 4 ซอยเขามะกอก 1 ต.ห้วยใหญ่ อ.บางละมุง จ.ชลบุรี 20150',
+  'GctEmail': 'goldfishcreative.thailand@gmail.com',
+  'GctName': 'Goldfish Creative',
+  'ArtEmail': 'fineartdeveloper@gmail.com',
+  'ArtName': 'Fineart Developer',
+  'ArtCompanyName': 'Reproduction Galleries LLC',
+  'ReproductionGalleryWeb': 'reproduction-gallery.com',
+};
+
+function get_code(info) {
+  var code = '';
+  var replacement = TextReplacementList[info.menuItemId];
+  code = 'var selectedText = document.getSelection(); if (selectedText != \'\') { document.activeElement.value = document.activeElement.value.replace(selectedText, \''+ replacement +'\'); } else { document.activeElement.value = \''+ replacement +'\'; }';
+
+  return code;
+}
+
+function menu_item_exists(menuItemId = '') {
+  if (!menuItemId) {
+    return false;
+  }
+
+  const arr = Object.keys(TextReplacementList);
+  const hasItem = arr.filter(function (id) {
+    if (menuItemId == id) {
+      return true;
+    }
+    return false;
+  });
+
+  return hasItem.length || false;
+}
+
 chrome.runtime.onInstalled.addListener(function () {
-  // var parent = chrome.contextMenus.create({
-  //   'id': 'GCTContextMenu-1',
-  //   'title': 'Open in current tab',
-  //   'contexts': [
-  //     'link',
-  //   ],
-  // });
   var SaveImageToDownload = chrome.contextMenus.create({
     'id': 'SaveImageToDownload',
     'title': 'Save Image',
@@ -54,38 +84,28 @@ chrome.runtime.onInstalled.addListener(function () {
       'page', 'selection',
     ],
   });
-  // var AutocompleteText = chrome.contextMenus.create({
-  //   'id': 'AutocompleteText',
-  //   'title': 'Open Frame in tab',
-  //   'contexts': [
-  //     'all',
-  //   ],
-  // });
-  // var DefaultEmail = chrome.contextMenus.create({
-  //   'parentId': 'AutocompleteText',
-  //   'id': 'DefaultEmail',
-  //   'title': 'nopphasin.arayasirikul@gmail.com',
-  //   'contexts': [
-  //     'editable',
-  //   ],
-  // });
-  // var DefaultName = chrome.contextMenus.create({
-  //   'parentId': 'AutocompleteText',
-  //   'id': 'DefaultName',
-  //   'title': 'Nopphasin Arayasirikul',
-  //   'contexts': [
-  //     'editable',
-  //   ],
-  // });
+  var TextReplacement = chrome.contextMenus.create({
+    'id': 'TextReplacement',
+    'title': 'Text Replacement',
+    'contexts': [
+      'editable', 'selection',
+    ],
+    'type': 'normal',
+  });
 
-  // var child1 = chrome.contextMenus.create({
-  //   'type': 'normal',
-  //   'id': 'GCTContextMenu-2',
-  //   'title': 'New Tab On Right',
-  //   'contexts': [
-  //     'all',
-  //   ],
-  // });
+  for (var index in TextReplacementList) {
+    if (TextReplacementList.hasOwnProperty(index)) {
+      chrome.contextMenus.create({
+        'id': ''+ index +'',
+        'title': TextReplacementList[index],
+        'contexts': [
+          'editable', 'selection',
+        ],
+        'type': 'normal',
+        'parentId': 'TextReplacement',
+      });
+    }
+  }
 });
 
 
@@ -123,6 +143,10 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         'active': true,
       });
     }
+  } else if (menu_item_exists(info.menuItemId) && menu_item_exists(info.menuItemId) != false) {
+    chrome.tabs.executeScript({
+      code: get_code(info),
+    });
   } else if (info.menuItemId == 'SaveImageToDownload') {
     if (info.mediaType == 'image') {
       if (info.srcUrl) {
@@ -152,16 +176,6 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         if (typeof tab.openerTabId == 'undefined' || !tab.openerTabId) {
           //
         } else {
-          // chrome.tabs.create({
-          //   'url': ''+ info.linkUrl +'',
-          //   'active': true,
-          //   'index': openerTab.index,
-          // });
-
-          // chrome.tabs.remove([
-          //   tab.openerTabId,
-          // ]);
-
           chrome.tabs.update({
             'url': info.linkUrl,
           });
@@ -170,15 +184,3 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
     }
   }
 });
-
-
-// Called when the user clicks on the browser action.
-/* chrome.browserAction.onClicked.addListener(function (tab) {
-  // No tabs or host permissions needed!
-  console.log(tab);
-  console.log('Turning ' + tab.url + ' red!');
-  // alert(document.body.style.backgroundColor);
-  chrome.tabs.executeScript({
-    code: 'document.body.style.backgroundColor="red"'
-  });
-}); */
