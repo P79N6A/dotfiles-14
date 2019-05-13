@@ -43,7 +43,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "smooth",
 	"close_windows_when_empty": true,
-	"color_scheme": "Monokai.sublime-color-scheme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
 	"copy_with_empty_selection": false,
 	"create_window_at_startup": true,
 	"default_encoding": "UTF-8",
@@ -187,7 +187,7 @@
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag)",
 	"tab_completion": true,
 	"tab_size": 2,
-	"theme": "Default.sublime-theme",
+	"theme": "Spacegray Eighties.sublime-theme",
 	"theme_font_options":
 	[
 		"no_italic"

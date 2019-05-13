@@ -95,7 +95,6 @@
 		"LESS",
 		"Messages",
 		"One Dark Color Scheme",
-		"One Dark Material - Theme",
 		"Open Search Result",
 		"Open URL",
 		"OpenPath",
@@ -105,7 +104,9 @@
 		"QuickSearchEnhanced",
 		"Statement",
 		"Statusbar Path",
-		"StatusMessage"
+		"StatusMessage",
+		"Theme - Gravity",
+		"Theme - Spacegray"
 	],
 	"package_destination": "",
 	"package_name_map":

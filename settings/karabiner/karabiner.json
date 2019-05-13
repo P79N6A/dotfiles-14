@@ -8,7 +8,7 @@
         {
             "complex_modifications": {
                 "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 50,
+                    "basic.simultaneous_threshold_milliseconds": 250,
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
                     "basic.to_if_held_down_threshold_milliseconds": 500,
@@ -39,6 +39,7 @@
                                 "to": [
                                     {
                                         "key_code": "home",
+                                        "lazy": true,
                                         "modifiers": [
                                             "shift"
                                         ]
@@ -67,6 +68,7 @@
                                 "to": [
                                     {
                                         "key_code": "end",
+                                        "lazy": true,
                                         "modifiers": [
                                             "shift"
                                         ]
@@ -240,7 +242,9 @@
                                             "shift"
                                         ],
                                         "optional": [
-                                            "any"
+                                            "control",
+                                            "option",
+                                            "command"
                                         ]
                                     },
                                     "pointing_button": "button2"
@@ -435,6 +439,7 @@
                                 },
                                 "to": [
                                     {
+                                        "lazy": true,
                                         "shell_command": "open -a 'iTerm'"
                                     }
                                 ],
@@ -460,6 +465,7 @@
                                 "to": [
                                     {
                                         "key_code": "h",
+                                        "lazy": true,
                                         "modifiers": [
                                             "command"
                                         ]
@@ -492,6 +498,7 @@
                                 },
                                 "to": [
                                     {
+                                        "lazy": true,
                                         "shell_command": "open -a 'Atom'"
                                     }
                                 ],
@@ -518,6 +525,7 @@
                                 "to": [
                                     {
                                         "key_code": "h",
+                                        "lazy": true,
                                         "modifiers": [
                                             "command"
                                         ]
@@ -551,6 +559,7 @@
                                 },
                                 "to": [
                                     {
+                                        "lazy": true,
                                         "shell_command": "open -a 'Finder'"
                                     }
                                 ],
@@ -578,6 +587,7 @@
                                 "to": [
                                     {
                                         "key_code": "h",
+                                        "lazy": true,
                                         "modifiers": [
                                             "command"
                                         ]
@@ -610,6 +620,7 @@
                                 },
                                 "to": [
                                     {
+                                        "lazy": true,
                                         "shell_command": "open -a 'Sublime Text'"
                                     }
                                 ],
@@ -636,6 +647,7 @@
                                 "to": [
                                     {
                                         "key_code": "h",
+                                        "lazy": true,
                                         "modifiers": [
                                             "command"
                                         ]
@@ -667,6 +679,7 @@
                                 },
                                 "to": [
                                     {
+                                        "lazy": true,
                                         "shell_command": "open -a 'Google Chrome'"
                                     }
                                 ],
@@ -692,6 +705,7 @@
                                 "to": [
                                     {
                                         "key_code": "h",
+                                        "lazy": true,
                                         "modifiers": [
                                             "command"
                                         ]
@@ -725,6 +739,7 @@
                                 "to": [
                                     {
                                         "key_code": "v",
+                                        "lazy": true,
                                         "modifiers": [
                                             "command",
                                             "option"
@@ -751,6 +766,7 @@
                                 "to": [
                                     {
                                         "key_code": "open_bracket",
+                                        "lazy": true,
                                         "modifiers": [
                                             "command",
                                             "shift"
@@ -772,6 +788,49 @@
                                 "to": [
                                     {
                                         "key_code": "close_bracket",
+                                        "lazy": true,
+                                        "modifiers": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ]
+                                    },
+                                    "pointing_button": "button1"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "lazy": true,
+                                        "modifiers": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ]
+                                    },
+                                    "pointing_button": "button2"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "lazy": true,
                                         "modifiers": [
                                             "command",
                                             "shift"
@@ -793,9 +852,9 @@
                                 "to": [
                                     {
                                         "key_code": "open_bracket",
+                                        "lazy": true,
                                         "modifiers": [
-                                            "command",
-                                            "shift"
+                                            "command"
                                         ]
                                     }
                                 ],
@@ -814,9 +873,9 @@
                                 "to": [
                                     {
                                         "key_code": "close_bracket",
+                                        "lazy": true,
                                         "modifiers": [
-                                            "command",
-                                            "shift"
+                                            "command"
                                         ]
                                     }
                                 ],
@@ -833,66 +892,6 @@
                                         "bundle_identifiers": [
                                             "^com.google.Chrome$",
                                             "^com.apple.Safari$",
-                                            "^com.apple.Firefox$",
-                                            "^com.apple.finder$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    },
-                                    "pointing_button": "button1"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "open_bracket",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.google.Chrome$",
-                                            "^com.apple.Safari$",
-                                            "^com.apple.Firefox$",
-                                            "^com.apple.finder$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    },
-                                    "pointing_button": "button2"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "close_bracket",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.google.Chrome$",
-                                            "^com.apple.Safari$",
                                             "^com.apple.Firefox$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -901,79 +900,19 @@
                                 "from": {
                                     "modifiers": {
                                         "mandatory": [
-                                            "shift"
+                                            "command"
                                         ]
                                     },
                                     "pointing_button": "button2"
                                 },
                                 "to": [
                                     {
+                                        "lazy": true,
                                         "modifiers": [
                                             "command",
                                             "shift"
                                         ],
                                         "pointing_button": "button1"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.google.Chrome$",
-                                            "^com.apple.Safari$",
-                                            "^com.apple.Firefox$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    },
-                                    "pointing_button": "button2"
-                                },
-                                "to": [
-                                    {
-                                        "modifiers": [
-                                            "command",
-                                            "shift"
-                                        ],
-                                        "pointing_button": "button1"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.google.Chrome$",
-                                            "^com.apple.Safari$",
-                                            "^com.apple.Firefox$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": [
-                                            "shift",
-                                            "option"
-                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -993,7 +932,7 @@
                                     "key_code": "fn"
                                 },
                                 "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 250
+                                    "basic.to_if_alone_timeout_milliseconds": 150
                                 },
                                 "to": [
                                     {

@@ -105,4 +105,6 @@
 	{ "keys": ["super+shift+s"], "command": "prompt_save_as_enhanced" },
 	{ "keys": ["super+o"], "command": "prompt_open_file_enhanced" },
 	{ "keys": ["ctrl+r"], "command": "prompt_rename_file" },
+	{ "keys": ["ctrl+shift+m"], "command": "noop" },
+	{ "keys": ["ctrl+b"], "command": "expand_selection", "args": {"to": "brackets"} },
 ]
