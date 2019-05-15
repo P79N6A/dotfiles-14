@@ -85,10 +85,11 @@
 	[
 		"All Autocomplete",
 		"AutocompletionFuzzy",
+		"Better CoffeeScript",
 		"ClearConsole",
 		"Expression",
-		"FileDialog",
 		"FileList",
+		"FileManager",
 		"FolderFiles",
 		"GitGutter",
 		"GitStatusBar",
