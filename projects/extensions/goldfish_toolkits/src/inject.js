@@ -76,6 +76,11 @@ chrome.extension.sendMessage({}, function (response) {
 });
 
 
+function get_url() {
+  alert(window.location.href);
+}
+
+
 function get_images(index = 0) {
   if (buttonOption()) {
     buttonOption().click();
@@ -124,6 +129,10 @@ document.addEventListener('DOMSubtreeModified', function (evt) {
 document.addEventListener('keypress', function (evt) {
   if (evt.code == 'KeyS' && evt.ctrlKey == true) {
     get_images();
+  }
+
+  if (evt.code == 'KeyC' && evt.ctrlKey == true && evt.metaKey == true) {
+    get_url();
   }
 });
 
