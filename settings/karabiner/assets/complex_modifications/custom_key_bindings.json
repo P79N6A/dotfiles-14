@@ -865,7 +865,8 @@
           },
           "to": [
             {
-              "key_code": "fn"
+              "key_code": "fn",
+              "lazy": true
             }
           ],
           "to_if_alone": [
@@ -884,7 +885,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 150
+            "basic.to_if_alone_timeout_milliseconds": 250
           },
           "type": "basic"
         },
