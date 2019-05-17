@@ -6,6 +6,66 @@
       "manipulators": [
         {
           "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "set_variable": {
+                "name": "fn_locked",
+                "value": 0
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "set_variable": {
+                "name": "fn_locked",
+                "value": 1
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 0
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
