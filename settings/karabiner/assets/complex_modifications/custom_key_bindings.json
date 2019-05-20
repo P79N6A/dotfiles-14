@@ -10,8 +10,7 @@
           },
           "to": [
             {
-              "key_code": "left_control",
-              "lazy": true
+              "key_code": "left_control"
             }
           ],
           "to_if_alone": [
@@ -19,7 +18,8 @@
               "set_variable": {
                 "name": "fn_locked",
                 "value": 0
-              }
+              },
+              "lazy": true
             }
           ],
           "conditions": [
@@ -40,8 +40,7 @@
           },
           "to": [
             {
-              "key_code": "left_control",
-              "lazy": true
+              "key_code": "left_control"
             }
           ],
           "to_if_alone": [
@@ -49,7 +48,8 @@
               "set_variable": {
                 "name": "fn_locked",
                 "value": 1
-              }
+              },
+              "lazy": true
             }
           ],
           "conditions": [
