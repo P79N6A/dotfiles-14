@@ -43,7 +43,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "smooth",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
 	"copy_with_empty_selection": false,
 	"create_window_at_startup": true,
 	"default_encoding": "UTF-8",
