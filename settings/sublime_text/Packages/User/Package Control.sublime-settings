@@ -76,16 +76,6 @@
 	],
 	"in_process_packages":
 	[
-		"Bootstrap 4x Autocomplete",
-		"CoffeeComplete Plus (Autocompletion)",
-		"CSS Completions",
-		"Flow Built-In Type Completion",
-		"JavaScript Completions",
-		"Laravel Blade AutoComplete",
-		"Laravel Helper Completions",
-		"PHP Faker Completions",
-		"PHPIntel",
-		"UnicodeCompletion"
 	],
 	"install_missing": true,
 	"install_prereleases":
