@@ -913,6 +913,7 @@
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
                 "^com.apple.Firefox$"
               ]
             }
@@ -940,6 +941,7 @@
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
                 "^com.apple.Firefox$"
               ]
             }
@@ -972,6 +974,7 @@
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
                 "^com.apple.Firefox$",
                 "^com.google.Chrome$"
               ]
@@ -994,6 +997,7 @@
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
                 "^com.apple.Firefox$"
               ]
             }
