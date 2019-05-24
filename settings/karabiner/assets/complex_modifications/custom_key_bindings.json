@@ -2,6 +2,50 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
+      "description": "fn_locked Bindings",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "s",
+              "modifiers": [
+                "control"
+              ],
+              "lazy": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250
+          },
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "Custom Key Bindings",
       "manipulators": [
         {
@@ -62,6 +106,24 @@
           "parameters": {
             "basic.to_if_alone_timeout_milliseconds": 250
           },
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "fn_locked",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "fn_locked",
+                  "value": 0
+                }
+              }
+            ]
+          },
           "type": "basic"
         },
         {
@@ -70,38 +132,6 @@
             "modifiers": {
               "mandatory": [
                 "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button1",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "vk_none"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "control"
               ]
             }
           },
@@ -994,6 +1024,60 @@
           "conditions": [
             {
               "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
+                "^com.apple.Firefox$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",

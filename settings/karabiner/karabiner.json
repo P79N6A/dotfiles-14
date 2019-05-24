@@ -16,6 +16,50 @@
                 },
                 "rules": [
                     {
+                        "description": "fn_locked Bindings",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "fn_locked",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^org.mozilla.firefox$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_control"
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 250
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "s",
+                                        "lazy": true,
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Custom Key Bindings",
                         "manipulators": [
                             {
@@ -67,6 +111,24 @@
                                         "key_code": "left_control"
                                     }
                                 ],
+                                "to_delayed_action": {
+                                    "to_if_canceled": [
+                                        {
+                                            "set_variable": {
+                                                "name": "fn_locked",
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "fn_locked",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
+                                },
                                 "to_if_alone": [
                                     {
                                         "lazy": true,
@@ -83,38 +145,6 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "shift"
-                                        ]
-                                    },
-                                    "pointing_button": "button2"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    },
-                                    "pointing_button": "button1"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
                                         ]
                                     },
                                     "pointing_button": "button2"
@@ -1014,6 +1044,60 @@
                                 "to": [
                                     {
                                         "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^org.mozilla.firefox$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    },
+                                    "pointing_button": "button1"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^org.mozilla.firefox$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    },
+                                    "pointing_button": "button2"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
                                     }
                                 ],
                                 "type": "basic"
