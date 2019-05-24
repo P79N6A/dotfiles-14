@@ -16,15 +16,10 @@
           "to_if_alone": [
             {
               "key_code": "left_arrow",
-              "lazy": false
+              "lazy": true
             }
           ],
           "conditions": [
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 1
-            },
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
@@ -52,15 +47,10 @@
           "to_if_alone": [
             {
               "key_code": "right_arrow",
-              "lazy": false
+              "lazy": true
             }
           ],
           "conditions": [
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 1
-            },
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
@@ -96,11 +86,6 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 1
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "^com.google.Chrome$",
@@ -120,162 +105,6 @@
     {
       "description": "Custom Key Bindings",
       "manipulators": [
-        {
-          "from": {
-            "key_code": "left_command"
-          },
-          "to": [
-            {
-              "key_code": "left_command"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "set_variable": {
-                "name": "fn_locked",
-                "value": 0
-              },
-              "lazy": true
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 1
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250
-          },
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "left_command"
-          },
-          "to": [
-            {
-              "key_code": "left_command"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "set_variable": {
-                "name": "fn_locked",
-                "value": 1
-              },
-              "lazy": true
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 0
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250
-          },
-          "to_delayed_action": {
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "fn_locked",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "fn_locked",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "left_option"
-          },
-          "to": [
-            {
-              "key_code": "left_option"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "set_variable": {
-                "name": "fn_locked",
-                "value": 0
-              },
-              "lazy": true
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 1
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250
-          },
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "left_option"
-          },
-          "to": [
-            {
-              "key_code": "left_option"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "set_variable": {
-                "name": "fn_locked",
-                "value": 1
-              },
-              "lazy": true
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 0
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250
-          },
-          "to_delayed_action": {
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "fn_locked",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "fn_locked",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "type": "basic"
-        },
         {
           "from": {
             "key_code": "left_control"
@@ -360,6 +189,38 @@
             "modifiers": {
               "mandatory": [
                 "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "pointing_button": "button2",
+            "modifiers": {
+              "mandatory": [
+                "control"
               ]
             }
           },
@@ -1252,60 +1113,6 @@
           "conditions": [
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^org.mozilla.firefox$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button1",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^org.mozilla.firefox$",
-                "^com.apple.Firefox$"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "pointing_button": "button2",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "^com.google.Chrome$",
                 "^com.apple.Safari$",
