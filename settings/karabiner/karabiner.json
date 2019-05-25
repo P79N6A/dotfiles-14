@@ -28,6 +28,104 @@
                                             "^com.apple.Firefox$"
                                         ],
                                         "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "fn_locked",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f8"
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 250
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "s",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^org.mozilla.firefox$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "fn_locked",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f7"
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 250
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^org.mozilla.firefox$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "fn_locked",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f9"
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 250
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^org.mozilla.firefox$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "fn_locked",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
@@ -59,6 +157,11 @@
                                             "^com.apple.Firefox$"
                                         ],
                                         "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "fn_locked",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
@@ -79,40 +182,6 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.google.Chrome$",
-                                            "^com.apple.Safari$",
-                                            "^org.mozilla.firefox$",
-                                            "^com.apple.Firefox$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "left_control"
-                                },
-                                "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 250
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "s",
-                                        "lazy": true,
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
                             }
                         ]
                     },
@@ -123,6 +192,11 @@
                                 "conditions": [
                                     {
                                         "name": "fn_locked",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "control_pressed",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -140,7 +214,9 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "lazy": true,
+                                        "key_code": "left_control"
+                                    },
+                                    {
                                         "set_variable": {
                                             "name": "fn_locked",
                                             "value": 0
@@ -155,6 +231,52 @@
                                         "name": "fn_locked",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "control_pressed",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_control"
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 250
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "left_control"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "fn_locked",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.google.Chrome$",
+                                            "^com.apple.Safari$",
+                                            "^org.mozilla.firefox$",
+                                            "^com.apple.Firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "fn_locked",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
@@ -172,15 +294,21 @@
                                     "to_if_canceled": [
                                         {
                                             "set_variable": {
-                                                "name": "fn_locked",
+                                                "name": "control_pressed",
                                                 "value": 0
                                             }
                                         }
                                     ],
                                     "to_if_invoked": [
                                         {
+                                            "key_code": "s",
+                                            "modifiers": [
+                                                "control"
+                                            ]
+                                        },
+                                        {
                                             "set_variable": {
-                                                "name": "fn_locked",
+                                                "name": "control_pressed",
                                                 "value": 0
                                             }
                                         }
@@ -188,9 +316,54 @@
                                 },
                                 "to_if_alone": [
                                     {
-                                        "lazy": true,
+                                        "key_code": "left_control"
+                                    },
+                                    {
                                         "set_variable": {
-                                            "name": "fn_locked",
+                                            "name": "control_pressed",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "left_control"
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 250
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_delayed_action": {
+                                    "to_if_canceled": [
+                                        {
+                                            "set_variable": {
+                                                "name": "control_pressed",
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "control_pressed",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "left_control"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "control_pressed",
                                             "value": 1
                                         }
                                     }
