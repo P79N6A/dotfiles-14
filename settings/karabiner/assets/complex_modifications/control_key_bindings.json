@@ -28,6 +28,9 @@
                 "value": 0
               },
               "halt": false
+            },
+            {
+              "shell_command": "osascript -e 'display notification \"Deactivated\" with title \"System Administrator\"'"
             }
           ],
           "conditions": [
