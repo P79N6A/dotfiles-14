@@ -103,7 +103,7 @@ function get_images(index = 0) {
             return false;
           }
 
-          window.open(buttonDownload().getHref(), '_top');
+          window.open(buttonDownload().getHref(), '_self');
 
           downloadCheckInterval = setInterval(function () {
             clearInterval(downloadCheckInterval);
