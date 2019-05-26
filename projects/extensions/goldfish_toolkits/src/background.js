@@ -52,6 +52,10 @@ function downloadFacebookImage(url) {
 
   chrome.downloads.download({
     url: url,
+  }, function (downloadId) {
+    console.log(downloadId);
+    console.log(chrome.downloads);
+    console.log(chrome.downloads.State);
   });
 
   // chrome.tabs.query({
@@ -153,6 +157,18 @@ chrome.runtime.onInstalled.addListener(function () {
 });
 
 
+var isProgress = false;
+
+chrome.downloads.onChanged.addListener(function (downloadItem) {
+  if (downloadItem.state) {
+    var downloadState = downloadItem.state.current;
+    if (downloadState == 'complete') {
+      isProgress = false;
+    }
+  }
+});
+
+
 //example of using a message handler from the inject scripts
 chrome.extension.onMessage.addListener(function (message, sender, reply) {
   readyStateCheckInterval = setInterval(function () {
@@ -174,7 +190,12 @@ chrome.extension.onMessage.addListener(function (message, sender, reply) {
       var tab = sender.tab;
 
       if (message.callerId === 'inject_get_images') {
-        downloadFacebookImage(getFacebookDownloadUrl(message.url));
+        if (!isProgress) {
+          isProgress = true;
+          downloadFacebookImage(getFacebookDownloadUrl(message.url));
+        } else {
+
+        }
 
         /* chrome.tabs.create({
           active: false,
