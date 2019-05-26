@@ -1,3 +1,5 @@
+var isProgress = false;
+
 const TextReplacementList = {
   'DefaultEmail': 'nopphasin.arayasirikul@gmail.com',
   'DefaultName': 'Nopphasin Arayasirikul',
@@ -18,6 +20,35 @@ function genericOnClick(info, tab) {
   console.log('item ' + info.menuItemId + ' was clicked');
   console.log('info: ' + JSON.stringify(info));
   console.log('tab: ' + JSON.stringify(tab));
+}
+
+function executeScript(info, tab, openerTab) {
+  chrome.tabs.executeScript({
+    code: get_code(info),
+  });
+}
+
+function openGoogleTranslate(info, tab, openerTab) {
+  var selectionText = '';
+  if (typeof info.selectionText != 'undefined') {
+    selectionText = info.selectionText;
+  }
+
+  chrome.tabs.create({
+    'url': 'https://translate.google.com/#view=home&op=translate&sl=auto&tl=th&text='+ selectionText +'',
+    'index': openerTab.index + 1,
+    'active': true,
+  });
+}
+
+function saveImageToDownload(info, tab) {
+  if (info.mediaType == 'image') {
+    if (typeof info.srcUrl != 'undefined' && info.srcUrl) {
+      chrome.downloads.download({
+        'url': info.srcUrl,
+      });
+    }
+  }
 }
 
 function openLinkInCurrentTab(info, tab) {
@@ -76,10 +107,6 @@ function downloadFacebookImage(url) {
 
   chrome.downloads.download({
     url: url,
-  }, function (downloadId) {
-    console.log(downloadId);
-    console.log(chrome.downloads);
-    console.log(chrome.downloads.State);
   });
 
   // chrome.tabs.query({
@@ -110,8 +137,7 @@ function getFacebookDownloadUrl(path) {
 }
 
 
-chrome.runtime.onInstalled.addListener(function () {
-
+function createContextMenus() {
   var SaveImageToDownload = chrome.contextMenus.create({
     'id': 'SaveImageToDownload',
     'title': 'Save Image',
@@ -139,7 +165,6 @@ chrome.runtime.onInstalled.addListener(function () {
     'contexts': [
       'link', 'frame', 'selection',
     ],
-    'onclick': openLinkInCurrentTab,
   });
   var TextReplacement = chrome.contextMenus.create({
     'id': 'TextReplacement',
@@ -163,11 +188,14 @@ chrome.runtime.onInstalled.addListener(function () {
       });
     }
   }
+}
+
+
+chrome.runtime.onInstalled.addListener(function () {
+
+  createContextMenus();
 
 });
-
-
-var isProgress = false;
 
 
 chrome.downloads.onChanged.addListener(function (downloadItem) {
@@ -221,9 +249,6 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
   */
 
   var openerTab = tab;
-  document.addEventListener('click', function (e) {
-    console.log(e);
-  });
 
   if (info.menuItemId == 'OpenFrameInTab') {
     if (typeof info.frameUrl != 'undefined' && info.frameUrl) {
@@ -234,65 +259,20 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
       });
     }
   } else if (info.menuItemId == 'OpenLinkInCurrentTab') {
-    // openLinkInCurrentTab(info, tab);
+    openLinkInCurrentTab(info, tab);
   } else if (menu_item_exists(info.menuItemId) && menu_item_exists(info.menuItemId) != false) {
-    chrome.tabs.executeScript({
-      code: get_code(info),
-    });
+    executeScript(info, tab, openerTab);
   } else if (info.menuItemId == 'SaveImageToDownload') {
-    if (info.mediaType == 'image') {
-      if (info.srcUrl) {
-        chrome.downloads.download({
-          'url': info.srcUrl,
-        });
-      }
-    }
+    saveImageToDownload(info, tab);
   } else if (info.menuItemId == 'OpenGoogleTranslate') {
-    var selectionText = '';
-    if (typeof info.selectionText != 'undefined') {
-      selectionText = info.selectionText;
-    }
-
-    chrome.tabs.create({
-      'url': 'https://translate.google.com/#view=home&op=translate&sl=auto&tl=th&text='+ selectionText +'',
-      'index': openerTab.index + 1,
-      'active': true,
-    });
+    openGoogleTranslate(info, tab, openerTab);
   } else {
-    if (typeof tab.openerTabId == 'undefined' || tab.openerTabId == '') {
-      //
-    } else {
-      if (typeof info.linkUrl == 'undefined' || info.linkUrl == '') {
-        //
-      } else {
-        if (typeof tab.openerTabId == 'undefined' || !tab.openerTabId) {
-          //
-        } else {
-          chrome.tabs.update({
-            'url': info.linkUrl,
-          });
-        }
-      }
-    }
-  }
 
-  // chrome.contextMenus.onClicked.removeListener(event);
+  }
 });
 
 
 chrome.commands.onCommand.addListener(function (command) {
-  chrome.tabs.query({
-    'currentWindow': true,
-    'active': true,
-  }, function () {
-    var activeTab = tabs[0];
-
-    if (command == 'OpenLinkInCurrentTab') {
-
-    }
-  });
-
-  // console.log(command);
   /* chrome.tabs.query({currentWindow: true}, function(tabs) {
     // Sort tabs according to their index in the window.
     tabs.sort((a, b) => { return a.index < b.index; });
@@ -305,6 +285,4 @@ chrome.commands.onCommand.addListener(function (command) {
       newIndex = activeIndex === lastTab ? 0 : activeIndex + 1;
     chrome.tabs.update(tabs[newIndex].id, {active: true, highlighted: true});
   }); */
-
-  // chrome.commands.onCommand.removeListener(event);
 });
