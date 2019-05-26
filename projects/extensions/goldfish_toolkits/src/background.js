@@ -20,6 +20,30 @@ function genericOnClick(info, tab) {
   console.log('tab: ' + JSON.stringify(tab));
 }
 
+function openLinkInCurrentTab(info, tab) {
+  var linkToOpen = '';
+  var selectedText = '';
+
+  if (typeof info.linkUrl != 'undefined' && info.linkUrl) {
+    linkToOpen = info.linkUrl;
+  } else if (typeof info.frameUrl != 'undefined' && info.frameUrl) {
+    linkToOpen = info.frameUrl;
+  } else if (typeof info.selectionText != 'undefined' && info.selectionText) {
+    selectedText = info.selectionText;
+    var isMatches = selectedText.match("^http\:\/\/|https\:\/\/|www\.");
+    if (isMatches && isMatches.length > 0) {
+      linkToOpen = selectedText;
+    }
+  }
+
+  if (linkToOpen) {
+    chrome.tabs.update({
+      'url': ''+ linkToOpen +'',
+      'active': true,
+    });
+  }
+}
+
 function get_code(info) {
   var code = '';
   var replacement = TextReplacementList[info.menuItemId];
@@ -85,23 +109,8 @@ function getFacebookDownloadUrl(path) {
   return 'https://www.facebook.com' + path;
 }
 
-function getStorageData(name) {
-  chrome.storage.sync.get(name, function (data) {
-    console.log(data[name]);
-  });
-}
-
-function showReply(data) {
-  console.log('data', data);
-}
 
 chrome.runtime.onInstalled.addListener(function () {
-
-  // if you checked "fancy-settings" in extensionizr.com, uncomment this lines
-
-  // var settings = new Store("settings", {
-  //     "sample_setting": "This is how you use Store.js to remember values"
-  // });
 
   var SaveImageToDownload = chrome.contextMenus.create({
     'id': 'SaveImageToDownload',
@@ -130,6 +139,7 @@ chrome.runtime.onInstalled.addListener(function () {
     'contexts': [
       'link', 'frame', 'selection',
     ],
+    'onclick': openLinkInCurrentTab,
   });
   var TextReplacement = chrome.contextMenus.create({
     'id': 'TextReplacement',
@@ -159,6 +169,7 @@ chrome.runtime.onInstalled.addListener(function () {
 
 var isProgress = false;
 
+
 chrome.downloads.onChanged.addListener(function (downloadItem) {
   if (downloadItem.state) {
     var downloadState = downloadItem.state.current;
@@ -169,18 +180,12 @@ chrome.downloads.onChanged.addListener(function (downloadItem) {
 });
 
 
-//example of using a message handler from the inject scripts
 chrome.extension.onMessage.addListener(function (message, sender, reply) {
   readyStateCheckInterval = setInterval(function () {
     if (document.readyState === "complete") {
       clearInterval(readyStateCheckInterval);
 
       document.body.setAttribute('data-href', window.location.href);
-
-      // console.log('message', message);
-      // console.log('sender', sender);
-      // console.log('reply', reply);
-      // showReply(reply());
 
       reply({
         message: message.valueOf(),
@@ -196,38 +201,13 @@ chrome.extension.onMessage.addListener(function (message, sender, reply) {
         } else {
 
         }
-
-        /* chrome.tabs.create({
-          active: false,
-          index: parseInt(tab.index) + 1,
-          openerTabId: parseInt(tab.id),
-        }); */
       }
-
-      // sendResponse({
-      //   'request': message,
-      //   'sender': sender,
-      // });
-      // chrome.pageAction.show(sender.tab.id);
-      // sendResponse();
-
-      /* chrome.storage.local.set({
-        'address': req.address
-      }); */
-
-      /* chrome.storage.sync.get('color', function(data) {
-        changeColor.style.backgroundColor = data.color;
-        changeColor.setAttribute('value', data.color);
-      }); */
     }
   }, 10);
 });
 
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
-  // alert('pageUrl: '+ info.pageUrl +'');
-  // alert('CLICKED');
-  // alert(''+ info.toString() +'');
   /*
   (integer|string) menuItemId
   (integer|string) parentMenuItemId
@@ -239,8 +219,6 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
   (string) frameId
   (string) selectionText
   */
-
-  // console.log(info, tab);
 
   var openerTab = tab;
   document.addEventListener('click', function (e) {
@@ -256,27 +234,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
       });
     }
   } else if (info.menuItemId == 'OpenLinkInCurrentTab') {
-    var linkToOpen = '';
-    var selectedText = '';
-
-    if (typeof info.linkUrl != 'undefined' && info.linkUrl) {
-      linkToOpen = info.linkUrl;
-    } else if (typeof info.frameUrl != 'undefined' && info.frameUrl) {
-      linkToOpen = info.frameUrl;
-    } else if (typeof info.selectionText != 'undefined' && info.selectionText) {
-      selectedText = info.selectionText;
-      var isMatches = selectedText.match("^http\:\/\/|https\:\/\/|www\.");
-      if (isMatches && isMatches.length > 0) {
-        linkToOpen = selectedText;
-      }
-    }
-
-    if (linkToOpen) {
-      chrome.tabs.update({
-        'url': ''+ linkToOpen +'',
-        'active': true,
-      });
-    }
+    // openLinkInCurrentTab(info, tab);
   } else if (menu_item_exists(info.menuItemId) && menu_item_exists(info.menuItemId) != false) {
     chrome.tabs.executeScript({
       code: get_code(info),
@@ -323,6 +281,17 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
 
 
 chrome.commands.onCommand.addListener(function (command) {
+  chrome.tabs.query({
+    'currentWindow': true,
+    'active': true,
+  }, function () {
+    var activeTab = tabs[0];
+
+    if (command == 'OpenLinkInCurrentTab') {
+
+    }
+  });
+
   // console.log(command);
   /* chrome.tabs.query({currentWindow: true}, function(tabs) {
     // Sort tabs according to their index in the window.

@@ -120,11 +120,6 @@ chrome.commands.onCommand.addListener(function(command) {
         'windowId': parseInt(activeTab.windowId),
       });
     } else if (command == 'download-photo') {
-      // alert(command);
-      console.log(activeTab);
-      alert(window.location.href);
-
-
       // chrome.tabs.query({
       //   'currentWindow': true,
       //   'active': true,
