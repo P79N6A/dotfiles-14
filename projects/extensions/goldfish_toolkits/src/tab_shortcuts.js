@@ -60,6 +60,15 @@ chrome.commands.onCommand.addListener(function(command) {
     if (command == 'duplicate-tab') {
       chrome.tabs.duplicate(activeTab.id);
     } else if (command == 'create-tab') {
+      chrome.tabs.query({
+        active: true,
+        currentWindow: true,
+      }, function(tabs) {
+        chrome.tabs.executeScript(tabs[0].id, {
+          code: 'document.body.style.backgroundColor = "red";'
+        });
+      });
+
       chrome.tabs.create({
         active: true,
         pinned: activeTab.pinned,

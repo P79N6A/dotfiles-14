@@ -1,3 +1,7 @@
+function getCallerId() {
+  return 'inject_' + getCallerId.caller.name;
+}
+
 /* for (let i = 0; i < 1e7; i++) {}
 
 // All the below will evaluate to true
@@ -53,7 +57,7 @@ var modifiedCheckIntervalTime = modifiedCheckIntervalDefault;
 var downloadCheckInterval = null;
 
 
-chrome.extension.sendMessage({}, function (response) {
+/* chrome.extension.sendMessage({}, function (response) {
   readyStateCheckInterval = setInterval(function () {
     if (document.readyState === "complete") {
       clearInterval(readyStateCheckInterval);
@@ -73,7 +77,7 @@ chrome.extension.sendMessage({}, function (response) {
       document.body.setAttribute('data-href', window.location.href);
     }
   }, 10);
-});
+}); */
 
 
 function get_url() {
@@ -82,6 +86,8 @@ function get_url() {
 
 
 function get_images(index = 0) {
+  var callerId = getCallerId();
+
   if (buttonOption()) {
     buttonOption().click();
     buttonOption().click();
@@ -103,7 +109,13 @@ function get_images(index = 0) {
             return false;
           }
 
-          window.open(buttonDownload().getHref(), '_self');
+          // window.open(buttonDownload().getHref(), '_self');
+          chrome.extension.sendMessage({
+            'callerId': callerId,
+            'url': buttonDownload().getHref(),
+          }, function (response) {
+            console.log(response);
+          });
 
           downloadCheckInterval = setInterval(function () {
             clearInterval(downloadCheckInterval);

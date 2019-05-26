@@ -1,30 +1,3 @@
-// if you checked "fancy-settings" in extensionizr.com, uncomment this lines
-
-// var settings = new Store("settings", {
-//     "sample_setting": "This is how you use Store.js to remember values"
-// });
-
-
-//example of using a message handler from the inject scripts
-chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
-  document.body.setAttribute('data-href', window.location.href);
-
-  sendResponse({
-    'request': request,
-    'sender': sender,
-  });
-  // chrome.pageAction.show(sender.tab.id);
-  // sendResponse();
-});
-
-
-// A generic onclick callback function.
-function genericOnClick(info, tab) {
-  console.log('item ' + info.menuItemId + ' was clicked');
-  console.log('info: ' + JSON.stringify(info));
-  console.log('tab: ' + JSON.stringify(tab));
-}
-
 const TextReplacementList = {
   'DefaultEmail': 'nopphasin.arayasirikul@gmail.com',
   'DefaultName': 'Nopphasin Arayasirikul',
@@ -36,7 +9,16 @@ const TextReplacementList = {
   'ArtName': 'Fineart Developer',
   'ArtCompanyName': 'Reproduction Galleries LLC',
   'ReproductionGalleryWeb': 'reproduction-gallery.com',
+  'ReproductionGalleriesWeb': 'reproduction-galleries.com',
+  'MailReproductionGallerySales': 'sales@reproduction-gallery.com',
 };
+
+// A generic onclick callback function.
+function genericOnClick(info, tab) {
+  console.log('item ' + info.menuItemId + ' was clicked');
+  console.log('info: ' + JSON.stringify(info));
+  console.log('tab: ' + JSON.stringify(tab));
+}
 
 function get_code(info) {
   var code = '';
@@ -62,7 +44,61 @@ function menu_item_exists(menuItemId = '') {
   return hasItem.length || false;
 }
 
+function downloadFacebookImage(url) {
+  if (url === 'undefined' || !url || url === '#' || url === '/') {
+    alert('No image URL');
+    return;
+  }
+
+  chrome.downloads.download({
+    url: url,
+  });
+
+  // chrome.tabs.query({
+  //   active: true,
+  //   currentWindow: true,
+  // }, function(tabs) {
+  //   var tab = tabs[0];
+  //
+  //   chrome.tabs.create({
+  //     active: false,
+  //     index: parseInt(tab.index) + 1,
+  //     openerTabId: parseInt(tab.id),
+  //     url: url,
+  //   });
+  // });
+}
+
+function getFacebookDownloadUrl(path) {
+  if (path === 'undefined' || !path || path === '#' || path === '/') {
+    return;
+  }
+
+  let isMatches = path.match("^(http|https)\:\/\/");
+  if (isMatches && isMatches.length > 0) {
+    return path;
+  }
+  return 'https://www.facebook.com' + path;
+}
+
+function getStorageData(name) {
+  chrome.storage.sync.get(name, function (data) {
+    console.log(data[name]);
+  });
+}
+
+function showReply(data) {
+  console.log('data', data);
+}
+
 chrome.runtime.onInstalled.addListener(function () {
+
+  // if you checked "fancy-settings" in extensionizr.com, uncomment this lines
+
+  // var settings = new Store("settings", {
+  //     "sample_setting": "This is how you use Store.js to remember values"
+  // });
+
   var SaveImageToDownload = chrome.contextMenus.create({
     'id': 'SaveImageToDownload',
     'title': 'Save Image',
@@ -82,6 +118,13 @@ chrome.runtime.onInstalled.addListener(function () {
     'title': 'Open Google Translate',
     'contexts': [
       'page', 'selection',
+    ],
+  });
+  var OpenLinkInCurrentTab = chrome.contextMenus.create({
+    'id': 'OpenLinkInCurrentTab',
+    'title': 'Open Link In Current Tab',
+    'contexts': [
+      'link', 'frame', 'selection',
     ],
   });
   var TextReplacement = chrome.contextMenus.create({
@@ -106,10 +149,58 @@ chrome.runtime.onInstalled.addListener(function () {
       });
     }
   }
+
 });
 
 
+//example of using a message handler from the inject scripts
+chrome.extension.onMessage.addListener(function (message, sender, reply) {
+  readyStateCheckInterval = setInterval(function () {
+    if (document.readyState === "complete") {
+      clearInterval(readyStateCheckInterval);
 
+      document.body.setAttribute('data-href', window.location.href);
+
+      // console.log('message', message);
+      // console.log('sender', sender);
+      // console.log('reply', reply);
+      // showReply(reply());
+
+      reply({
+        message: message.valueOf(),
+        sender: sender.valueOf(),
+      });
+
+      var tab = sender.tab;
+
+      if (message.callerId === 'inject_get_images') {
+        downloadFacebookImage(getFacebookDownloadUrl(message.url));
+
+        /* chrome.tabs.create({
+          active: false,
+          index: parseInt(tab.index) + 1,
+          openerTabId: parseInt(tab.id),
+        }); */
+      }
+
+      // sendResponse({
+      //   'request': message,
+      //   'sender': sender,
+      // });
+      // chrome.pageAction.show(sender.tab.id);
+      // sendResponse();
+
+      /* chrome.storage.local.set({
+        'address': req.address
+      }); */
+
+      /* chrome.storage.sync.get('color', function(data) {
+        changeColor.style.backgroundColor = data.color;
+        changeColor.setAttribute('value', data.color);
+      }); */
+    }
+  }, 10);
+});
 
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
@@ -140,6 +231,29 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
       chrome.tabs.create({
         'url': ''+ info.frameUrl +'',
         'index': openerTab.index + 1,
+        'active': true,
+      });
+    }
+  } else if (info.menuItemId == 'OpenLinkInCurrentTab') {
+    var linkToOpen = '';
+    var selectedText = '';
+
+    if (typeof info.linkUrl != 'undefined' && info.linkUrl) {
+      linkToOpen = info.linkUrl;
+    } else if (typeof info.frameUrl != 'undefined' && info.frameUrl) {
+      linkToOpen = info.frameUrl;
+    } else if (typeof info.selectionText != 'undefined' && info.selectionText) {
+      selectedText = info.selectionText;
+      var isMatches = selectedText.match("^http\:\/\/|https\:\/\/|www\.");
+      if (isMatches && isMatches.length > 0) {
+        linkToOpen = selectedText;
+      }
+    }
+
+    if (linkToOpen) {
+      chrome.tabs.create({
+        'url': ''+ linkToOpen +'',
+        'index': openerTab.index,
         'active': true,
       });
     }
@@ -183,4 +297,25 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
       }
     }
   }
+
+  // chrome.contextMenus.onClicked.removeListener(event);
+});
+
+
+chrome.commands.onCommand.addListener(function (command) {
+  // console.log(command);
+  /* chrome.tabs.query({currentWindow: true}, function(tabs) {
+    // Sort tabs according to their index in the window.
+    tabs.sort((a, b) => { return a.index < b.index; });
+    let activeIndex = tabs.findIndex((tab) => { return tab.active; });
+    let lastTab = tabs.length - 1;
+    let newIndex = -1;
+    if (command === 'flip-tabs-forward')
+      newIndex = activeIndex === 0 ? lastTab : activeIndex - 1;
+    else  // 'flip-tabs-backwards'
+      newIndex = activeIndex === lastTab ? 0 : activeIndex + 1;
+    chrome.tabs.update(tabs[newIndex].id, {active: true, highlighted: true});
+  }); */
+
+  // chrome.commands.onCommand.removeListener(event);
 });
