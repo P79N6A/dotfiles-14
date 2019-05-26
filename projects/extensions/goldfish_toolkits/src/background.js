@@ -272,9 +272,8 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
     }
 
     if (linkToOpen) {
-      chrome.tabs.create({
+      chrome.tabs.update({
         'url': ''+ linkToOpen +'',
-        'index': openerTab.index,
         'active': true,
       });
     }
