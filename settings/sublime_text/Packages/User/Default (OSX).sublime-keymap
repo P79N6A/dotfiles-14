@@ -12,9 +12,6 @@
 	{
 		"keys": ["ctrl+shift+m"],
 		"command": "markdown_preview_select",
-		"args": {
-			"target": "browser",
-		},
 	},
 	{
 		"keys": ["super+backspace"],
