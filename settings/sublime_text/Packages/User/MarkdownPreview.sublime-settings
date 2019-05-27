@@ -155,7 +155,7 @@
         via the quick panel for which one to use.  If there is only one, it
         will automatically run that parser.
     */
-    "enabled_parsers": ["markdown", "github", "gitlab"],
+    "enabled_parsers": ["markdown"],
 
     /*
         Custom external markdown parsers.
@@ -287,7 +287,7 @@
                     ../build             (Linux/OSX - relative path, in parent dir)
                     ..\\build            (Windows - relative path, in parent dir)
     */
-    "path_tempfile": "",
+    "path_tempfile": "/tmp",
 
     /*
         Sets HTML output to a simple form:
@@ -337,7 +337,7 @@
     "strip_yaml_front_matter": false,
 
     /* do we show the panel when building with CMD+B */
-    "show_panel_on_build": true,
+    "show_panel_on_build": false,
 
     /* do we include the CSS when outputting HTML? */
     "include_head": ["build", "browser", "sublime", "clipboard", "save"]
