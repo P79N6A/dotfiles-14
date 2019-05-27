@@ -2,101 +2,6 @@
   "title": "Complex Modifications Rules",
   "rules": [
     {
-      "description": "fn_locked Bindings",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "f8"
-          },
-          "to": [
-            {
-              "key_code": "left_control"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^org.mozilla.firefox$",
-                "^com.apple.Firefox$"
-              ]
-            },
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 1
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250
-          },
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "f7"
-          },
-          "to": [
-            {
-              "key_code": "left_option"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^org.mozilla.firefox$",
-                "^com.apple.Firefox$"
-              ]
-            },
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 1
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250
-          },
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "f9"
-          },
-          "to": [
-            {
-              "key_code": "left_command"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^org.mozilla.firefox$",
-                "^com.apple.Firefox$"
-              ]
-            },
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 1
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250
-          },
-          "type": "basic"
-        }
-      ]
-    },
-    {
       "description": "Custom Key Bindings",
       "manipulators": [
         {
@@ -1137,11 +1042,11 @@
         },
         {
           "from": {
-            "key_code": "left_option"
+            "key_code": "left_alt"
           },
           "to": [
             {
-              "key_code": "left_option"
+              "key_code": "left_alt"
             }
           ],
           "to_if_alone": [
@@ -1169,46 +1074,16 @@
         },
         {
           "from": {
-            "key_code": "left_command"
+            "key_code": "left_gui"
           },
           "to": [
             {
-              "key_code": "left_command"
+              "key_code": "left_gui"
             }
           ],
           "to_if_alone": [
             {
               "key_code": "right_arrow"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$",
-                "^com.apple.Safari$",
-                "^org.mozilla.firefox$",
-                "^com.apple.Firefox$"
-              ]
-            },
-            {
-              "type": "variable_if",
-              "name": "fn_locked",
-              "value": 1
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "f8"
-          },
-          "to": [
-            {
-              "key_code": "s",
-              "modifiers": [
-                "left_control"
-              ]
             }
           ],
           "conditions": [
@@ -1235,6 +1110,17 @@
           },
           "to": [
             {
+              "key_code": "f7"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_alt",
+              "halt": true
+            }
+          ],
+          "to_after_key_up": [
+            {
               "key_code": "left_arrow"
             }
           ],
@@ -1254,6 +1140,59 @@
               "value": 1
             }
           ],
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "f8"
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "vk_none",
+              "halt": false
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_control",
+              "halt": true
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "key_code": "s",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
+                "^com.apple.Firefox$"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
           "type": "basic"
         },
         {
@@ -1261,6 +1200,17 @@
             "key_code": "f9"
           },
           "to": [
+            {
+              "key_code": "f9"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_gui",
+              "halt": true
+            }
+          ],
+          "to_after_key_up": [
             {
               "key_code": "right_arrow"
             }
@@ -1281,6 +1231,56 @@
               "value": 1
             }
           ],
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "f10"
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "vk_none",
+              "halt": false
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "fn",
+              "halt": true
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "key_code": "f10"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
+                "^com.apple.Firefox$"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
           "type": "basic"
         }
       ]
