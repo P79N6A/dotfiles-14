@@ -1,0 +1,133 @@
+/*
+    Markdown Preview default settings
+*/
+{
+    "browser": "default",
+    "parser": "markdown",
+
+    /*
+        By default, Markdown Preview builds the HTML in the source directory.
+        It expects the file to exist on disk.  It pops up the build output panel etc.
+
+        If you wish to override this behavior, you can change "build_action"
+
+        build - The default build behavior.
+        browser - Preview the file in your browser.
+        clipboard - Copy the HTML output to the clipboard.
+        sublime - Export the HTML to a Sublime tab.
+        save - Run the normal save command that outputs to the source directory.
+            It will also prompt for "save as" if the file does not exit on disk.
+
+        All the build options use the default parser defined above in "parser"
+    */
+    "build_action": "browser",
+    "pygments_inject_css": true,
+    "pygments_style": "github",
+    "pygments_css_class": "codehilite",
+     "markdown_extensions": [
+        "markdown.extensions.footnotes",
+        "markdown.extensions.attr_list",
+        "markdown.extensions.def_list",
+        "markdown.extensions.tables",
+        "markdown.extensions.abbr",
+        "pymdownx.betterem",
+        {
+            "markdown.extensions.codehilite": {
+                "guess_lang": false
+            }
+        },
+        "pymdownx.extrarawhtml",
+        {
+            "markdown.extensions.toc":
+            {
+                "permalink": "\ue157"
+            }
+        },
+        "markdown.extensions.meta",
+        "markdown.extensions.sane_lists",
+        "markdown.extensions.smarty",
+        "markdown.extensions.wikilinks",
+        "markdown.extensions.admonition",
+        {
+            "pymdownx.superfences": {
+                "custom_fences": [
+                    {
+                        "name": "flow",
+                        "class": "uml-flowchart",
+                        "format": {"!!python/name": "pymdownx.superfences.fence_code_format"}
+                    },
+                    {
+                        "name": "sequence",
+                        "class": "uml-sequence-diagram",
+                        "format": {"!!python/name": "pymdownx.superfences.fence_code_format"}
+                    }
+                ]
+            }
+        },
+        {
+            "pymdownx.magiclink": {
+                "repo_url_shortener": true,
+                "repo_url_shorthand": true
+            }
+        },
+        "pymdownx.tasklist",
+        {
+            "pymdownx.tilde": {
+                "subscript": false
+            }
+        },
+        {
+            "pymdownx.emoji": {
+                "emoji_index": {"!!python/name": "pymdownx.emoji.gemoji"},
+                "emoji_generator": {"!!python/name": "pymdownx.emoji.to_png"},
+                "alt": "short",
+                "options": {
+                    "attributes": {
+                        "align": "absmiddle",
+                        "height": "20px",
+                        "width": "20px"
+                    },
+                    "image_path": "https://github.githubassets.com/images/icons/emoji/unicode/",
+                    "non_standard_image_path": "https://github.githubassets.com/images/icons/emoji/"
+                }
+            }
+        }
+    ],
+
+    "enabled_parsers": ["markdown"],
+    "markdown_binary_map": {
+        "multimarkdown": ["/usr/local/bin/multimarkdown"]
+    },
+    "github_mode": "markdown",
+    "gitlab_mode": "gfm",
+    "github_inject_header_ids": false,
+    "css": {
+        "markdown": ["default"],
+        "github": ["default"],
+        "gitlab": ["default"]
+    },
+    "allow_css_overrides": true,
+    "html_template": "",
+    "js": {
+        "markdown": ["default"],
+        "github": ["default"],
+        "gitlab": ["default"]
+    },
+
+    /*
+        Sets syntax highlighting theme for blocks of code.
+
+        Currently, one of "white" (default), "dark", "solarized-dark", "solarized-light", and, "monokai".
+    */
+    "gitlab_highlight_theme": "dark",
+    "enable_autoreload": true,
+    "markdown_filetypes": [".md", ".markdown", ".mdown"],
+    "path_tempfile": "",
+    "html_simple": false,
+    "image_path_conversion": "absolute",
+    "file_path_conversions": "absolute",
+    "strip_critic_marks": "none",
+    "strip_yaml_front_matter": false,
+    "show_panel_on_build": false,
+    "include_head": ["build", "browser", "sublime", "clipboard", "save"]
+}
