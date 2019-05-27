@@ -10,10 +10,7 @@
           },
           "to": [
             {
-              "key_code": "s",
-              "modifiers": [
-                "left_control"
-              ]
+              "key_code": "left_control"
             }
           ],
           "conditions": [
@@ -43,7 +40,7 @@
           },
           "to": [
             {
-              "key_code": "left_arrow"
+              "key_code": "left_option"
             }
           ],
           "conditions": [
@@ -73,7 +70,7 @@
           },
           "to": [
             {
-              "key_code": "right_arrow"
+              "key_code": "left_command"
             }
           ],
           "conditions": [
