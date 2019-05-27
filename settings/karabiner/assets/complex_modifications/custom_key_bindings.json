@@ -1106,11 +1106,11 @@
         },
         {
           "from": {
-            "key_code": "f7"
+            "key_code": "f1"
           },
           "to": [
             {
-              "key_code": "f7"
+              "key_code": "f1"
             }
           ],
           "to_if_held_down": [
@@ -1147,7 +1147,7 @@
         },
         {
           "from": {
-            "key_code": "f8"
+            "key_code": "f2"
           },
           "to": [
             {
@@ -1197,11 +1197,11 @@
         },
         {
           "from": {
-            "key_code": "f9"
+            "key_code": "f3"
           },
           "to": [
             {
-              "key_code": "f9"
+              "key_code": "f3"
             }
           ],
           "to_if_held_down": [
@@ -1238,7 +1238,7 @@
         },
         {
           "from": {
-            "key_code": "f10"
+            "key_code": "f4"
           },
           "to": [
             {
@@ -1259,7 +1259,7 @@
           ],
           "to_after_key_up": [
             {
-              "key_code": "f10"
+              "key_code": "f4"
             }
           ],
           "conditions": [
