@@ -22,7 +22,7 @@
     //       "linux": "/usr/bin/git",
     //       "osx": "/usr/bin/git"
     //   },
-    "git_binary": "",
+    "git_binary": "/usr/bin/git",
 
     // Additional environment variables to pass to git.
     // This list is merged with the global set of environment variables
@@ -51,7 +51,7 @@
     // "patience": use patience diff algorithm
     //             see: http://bramcohen.livejournal.com/73318.html
     // "histogram": use histogram diff algorithm
-    "diff_algorithm": "patience",
+    "diff_algorithm": "default",
 
     // Determines whether GitGutter ignores whitespace in modified files.
     // Set "none" to ensure whitespace is considered in the diff
@@ -98,7 +98,7 @@
     // =0: hide markers
     // >0: width of markers
     // -1: highlight full line
-    "show_in_minimap": 1,
+    "show_in_minimap": 0,
 
     // Add a special marker on untracked files
     "show_markers_on_untracked_file": true,
@@ -223,18 +223,21 @@
     //   {{line_committer_tz}   -- the timezone string of commit
     //   {{line_summary}}       -- the first line of the commit message
     //   {{line_previous}}      -- the hash of the previous commit
-    "status_bar_text": [
-        "{% if repo and branch %}",
-            "{% if not st_git_status %}",
-                "{{repo}}/{{branch}}",
-                "{% if added_files + deleted_files + modified_files > 0 %}*{% endif %}, ",
-            "{% endif %}",
-            "{% if compare not in ('HEAD', branch, None) %}Comparing against {{compare}}, {% endif %}",
-            "{% if state %}File is {{state}}{% endif %}",
-            "{% if deleted > 0 %}, {{deleted}}-{% endif %}",
-            "{% if inserted > 0 %}, {{inserted}}+{% endif %}",
-            "{% if modified > 0 %}, {{modified}}≠{% endif %}",
-            "{% if line_author and line_author_age %}, ⟢ {{line_author}} ({{line_author_age}}){% endif %}",
-        "{% endif %}"
-    ]
+
+
+    "status_bar_text": [],
+    // "status_bar_text": [
+    //     "{% if repo and branch %}",
+    //         "{% if not st_git_status %}",
+    //             "{{repo}}/{{branch}}",
+    //             "{% if added_files + deleted_files + modified_files > 0 %}*{% endif %}, ",
+    //         "{% endif %}",
+    //         "{% if compare not in ('HEAD', branch, None) %}Comparing against {{compare}}, {% endif %}",
+    //         "{% if state %}File is {{state}}{% endif %}",
+    //         "{% if deleted > 0 %}, {{deleted}}-{% endif %}",
+    //         "{% if inserted > 0 %}, {{inserted}}+{% endif %}",
+    //         "{% if modified > 0 %}, {{modified}}≠{% endif %}",
+    //         "{% if line_author and line_author_age %}, ⟢ {{line_author}} ({{line_author_age}}){% endif %}",
+    //     "{% endif %}"
+    // ]
 }

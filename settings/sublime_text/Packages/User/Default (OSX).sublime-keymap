@@ -27,9 +27,10 @@
 	{ "keys": ["super+shift+u"], "command": "remove_package" },
 	{
 		"keys": ["super+shift+d"],
-		"command": "insert_snippet",
-		"args": {
-			"contents": "$SELECTION\n${0:$SELECTION}",
+		"command": "run_macro_file",
+		"args":
+		{
+			"file": "res://Packages/User/Macros/Duplicate Selected Lines.sublime-macro",
 		},
 		"context": [
 			{
@@ -98,7 +99,21 @@
 		"keys": ["-", ">"],
 		"command": "insert_snippet",
 		"args": {
-			"contents": "→ ",
+			"contents": "→ $0",
+		}
+	},
+	{
+		"keys": ["alt+="],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "'+${1: ${2:$SELECTION} }+'$0",
+		}
+	},
+	{
+		"keys": ["alt+/"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "/*${1: ${2:$SELECTION} }*/$0",
 		}
 	},
 	// { "keys": ["super+s"], "command": "save_enhanced" },
@@ -106,5 +121,38 @@
 	{ "keys": ["super+o"], "command": "prompt_open_file_enhanced" },
 	{ "keys": ["ctrl+r"], "command": "prompt_rename_file" },
 	{ "keys": ["ctrl+shift+m"], "command": "noop" },
-	{ "keys": ["ctrl+b"], "command": "expand_selection", "args": {"to": "brackets"} },
+	{
+		"keys": ["ctrl+b"],
+		"command": "expand_selection",
+		"args": {
+			"to": "brackets",
+		},
+	},
+	{"keys": ["alt+shift+s"], "command": "check_syntax"},
+	{"keys": ["alt+shift+r"], "command": "run_script"},
+	{"keys": ["alt+shift+t"], "command": "run_cake_task"},
+	{"keys": ["alt+shift+c"], "command": "compile"},
+	{
+		"keys": ["alt+shift+d"],
+		"command": "compile_and_display",
+		"args": {
+			"opt": "-p",
+		},
+	},
+	{
+		"keys": ["alt+shift+x"],
+		"command": "compile_and_display",
+		"args": {
+			"opt": "-t",
+		},
+	},
+	{
+		"keys": ["alt+shift+n"],
+		"command": "compile_and_display",
+		"args": {
+			"opt": "-n",
+		},
+	},
+	{"keys": ["alt+shift+w"], "command": "toggle_watch"},
+	{"keys": ["alt+shift+z"], "command": "toggle_output_panel"},
 ]

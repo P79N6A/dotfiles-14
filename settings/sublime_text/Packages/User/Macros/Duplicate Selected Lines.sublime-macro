@@ -1,0 +1,28 @@
+[
+	{
+		"args":
+		{
+			"contents": "${1:$SELECTION$2${3:$SELECTION}}$0"
+		},
+		"command": "insert_snippet"
+	},
+	{
+		"args": null,
+		"command": "reindent"
+	},
+	{
+		"args": null,
+		"command": "next_field"
+	},
+	{
+		"args":
+		{
+			"characters": "\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args": null,
+		"command": "next_field"
+	}
+]
