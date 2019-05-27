@@ -12,7 +12,7 @@
             {
               "key_code": "s",
               "modifiers": [
-                "control"
+                "left_control"
               ]
             }
           ],
@@ -123,7 +123,7 @@
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "control"
+                "left_control"
               ]
             }
           },
@@ -147,7 +147,7 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "control"
+                "left_control"
               ]
             }
           },
@@ -171,7 +171,7 @@
             "pointing_button": "button3",
             "modifiers": {
               "mandatory": [
-                "control"
+                "left_control"
               ]
             }
           },
@@ -559,7 +559,7 @@
             "modifiers": {
               "mandatory": [
                 "command",
-                "control"
+                "left_control"
               ]
             }
           },
@@ -585,7 +585,7 @@
             "modifiers": {
               "mandatory": [
                 "command",
-                "control"
+                "left_control"
               ]
             }
           },
@@ -618,7 +618,7 @@
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "control"
+                "left_control"
               ]
             }
           },
@@ -643,7 +643,7 @@
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
-                "control"
+                "left_control"
               ]
             }
           },
@@ -678,7 +678,7 @@
               "mandatory": [
                 "command",
                 "option",
-                "control"
+                "left_control"
               ]
             }
           },
@@ -705,7 +705,7 @@
               "mandatory": [
                 "command",
                 "option",
-                "control"
+                "left_control"
               ]
             }
           },
@@ -987,7 +987,7 @@
             {
               "key_code": "s",
               "modifiers": [
-                "control"
+                "left_control"
               ],
               "lazy": true
             }
@@ -1032,7 +1032,7 @@
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [
-                "control"
+                "left_control"
               ]
             }
           },
@@ -1040,7 +1040,7 @@
             {
               "key_code": "left_arrow",
               "modifiers": [
-                "control",
+                "left_control",
                 "shift"
               ]
             }
@@ -1060,7 +1060,7 @@
             "pointing_button": "button2",
             "modifiers": {
               "mandatory": [
-                "control"
+                "left_control"
               ]
             }
           },
@@ -1068,7 +1068,7 @@
             {
               "key_code": "right_arrow",
               "modifiers": [
-                "control",
+                "left_control",
                 "shift"
               ]
             }
@@ -1101,7 +1101,7 @@
             {
               "key_code": "s",
               "modifiers": [
-                "control"
+                "left_control"
               ]
             }
           ],
@@ -1210,7 +1210,7 @@
             {
               "key_code": "s",
               "modifiers": [
-                "control"
+                "left_control"
               ]
             }
           ],

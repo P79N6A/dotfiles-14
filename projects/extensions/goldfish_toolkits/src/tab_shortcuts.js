@@ -18,6 +18,24 @@ var lastIndex = -1;
 var firstPinIndex = 0;
 var lastPinIndex = -1;
 
+function createTabNextToCurrent(activeTab) {
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true,
+  }, function(tabs) {
+    chrome.tabs.executeScript(tabs[0].id, {
+      code: 'document.body.style.backgroundColor = "red";'
+    });
+  });
+
+  chrome.tabs.create({
+    active: true,
+    pinned: activeTab.pinned,
+    index: parseInt(activeTab.index) + 1,
+    openerTabId: parseInt(activeTab.id),
+  });
+}
+
 chrome.commands.onCommand.addListener(function(command) {
   // Call 'update' with an empty properties object to get access to the current
   // tab (given to us in the callback function).
@@ -60,21 +78,7 @@ chrome.commands.onCommand.addListener(function(command) {
     if (command == 'duplicate-tab') {
       chrome.tabs.duplicate(activeTab.id);
     } else if (command == 'create-tab') {
-      chrome.tabs.query({
-        active: true,
-        currentWindow: true,
-      }, function(tabs) {
-        chrome.tabs.executeScript(tabs[0].id, {
-          code: 'document.body.style.backgroundColor = "red";'
-        });
-      });
-
-      chrome.tabs.create({
-        active: true,
-        pinned: activeTab.pinned,
-        index: parseInt(activeTab.index) + 1,
-        openerTabId: parseInt(activeTab.id),
-      });
+      createTabNextToCurrent(activeTab);
     } else if (command == 'pin-tab') {
       var pinned = true;
       if (activeTab.pinned == true) {
@@ -119,32 +123,8 @@ chrome.commands.onCommand.addListener(function(command) {
         'index': newIndex,
         'windowId': parseInt(activeTab.windowId),
       });
-    } else if (command == 'download-photo') {
-      // chrome.tabs.query({
-      //   'currentWindow': true,
-      //   'active': true,
-      // }, function (tabs) {
-      //   if (tabs.length > 0) {
-      //     var tab = tabs[0];
-      //     // run_app(tab);
-      //     console.log(event);
-      //     console.log(this);
-      //     console.log(window.document);
-      //   }
-      // });
+    } else {
 
-      // chrome.tabs.query({currentWindow: true}, function(tabs) {
-      //   // Sort tabs according to their index in the window.
-      //   tabs.sort((a, b) => { return a.index < b.index; });
-      //   let activeIndex = tabs.findIndex((tab) => { return tab.active; });
-      //   let lastTab = tabs.length - 1;
-      //   let newIndex = -1;
-      //   if (command === 'flip-tabs-forward')
-      //     newIndex = activeIndex === 0 ? lastTab : activeIndex - 1;
-      //   else  // 'flip-tabs-backwards'
-      //     newIndex = activeIndex === lastTab ? 0 : activeIndex + 1;
-      //   chrome.tabs.update(tabs[newIndex].id, {active: true, highlighted: true});
-      // });
     }
   });
 });
