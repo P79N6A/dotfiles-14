@@ -1,0 +1,50 @@
+{
+    // when should this plugin work?
+    "event_listeners": {
+        // called when a view gains input focus
+        "on_activated_async": true,
+        // called when a view is cloned from an existing one
+        "on_clone_async": true,
+        // called when the file is finished loading
+        "on_load_async": true,
+        // called after changes have been made to a view
+        "on_modified_async": true,
+        // called when a new buffer is created
+        "on_new_async": true,
+        // called after there is a paste operation
+        "on_post_paste": true,
+        // called just before a view is saved
+        "on_pre_save_async": true,
+    },
+    // the max lookup length for the first line
+    // a negative number means no limitation
+    "first_line_length_max": 80,
+    // how detailed log messages should be?
+    // "CRITICAL" (very few), "ERROR", "WARNING", "INFO", "DEBUG" (most tedious) and "NOTHING" (nothing)
+    "log_level": "INFO",
+    // syntax maaping rules
+    "syntax_mapping": {
+        // "Packages/PHP/PHP.sublime-syntax": [
+        //     "<\\?php",
+        //     "<\\?="
+        // ]
+    },
+    // the partial file path of the syntax file used when creating a new file
+    "new_file_syntax": "",
+    // the scope that this plugin should work (regular expression)
+    // leave it blank to match any scope
+    "working_scope": "^text.plain\\b",
+    // try to remove these file extensions from the file name and set
+    // a corresponding syntax if there is a matching one
+    "try_filename_remove_exts": [
+        ".backup",
+        ".bak",
+        ".default",
+        ".dist",
+        ".example",
+        ".inc",
+        ".include",
+        ".local",
+        ".sample",
+    ],
+}
