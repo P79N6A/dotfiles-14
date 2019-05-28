@@ -1,0 +1,123 @@
+{
+  "title": "- Modifier Keys",
+  "rules": [
+    {
+      "description": "When fn_locked true, change fn/control to left_click when browsers active",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button1",
+              "halt": true
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.apple.Firefox$",
+                "^com.apple.Safari$",
+                "^com.google.Chrome$",
+                "^org.mozilla.firefox$"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "When hold down control toggle fn_locked mode",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "set_variable": {
+                "name": "fn_locked",
+                "value": 1
+              },
+              "halt": true
+            },
+            {
+              "shell_command": "osascript -e 'display notification \"Activated\" with title \"System Administrator\"'",
+              "halt": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 0
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 500,
+            "basic.to_if_held_down_threshold_milliseconds": 2000
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "set_variable": {
+                "name": "fn_locked",
+                "value": 0
+              },
+              "halt": true
+            },
+            {
+              "shell_command": "osascript -e 'display notification \"Deactivated\" with title \"System Administrator\"'",
+              "halt": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 500,
+            "basic.to_if_held_down_threshold_milliseconds": 2000
+          },
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

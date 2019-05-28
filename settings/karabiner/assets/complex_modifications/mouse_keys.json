@@ -1,0 +1,41 @@
+{
+  "title": "- Mouse Keys",
+  "rules": [
+    {
+      "description": "Make left_click on browsers with fn/control when fn_locked true",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "fn"
+          },
+          "to_if_alone": [
+            {
+              "pointing_button": "button1",
+              "halt": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$",
+                "^com.apple.Safari$",
+                "^org.mozilla.firefox$",
+                "^com.apple.Firefox$"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "fn_locked",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250
+          },
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
