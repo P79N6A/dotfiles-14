@@ -148,10 +148,44 @@
 			"opt": "-n",
 		},
 	},
+	/* When inside double quotes */
 	{
-		"keys": ["ctrl+shift+x"],
+		"keys": ["ctrl+'"],
 		"command": "split_word_to_characters",
-	},
+		"args": {
+			"contents": "${1:$SELECTION}$0",
+			"quoted_double": false,
+			"quoted_single": true,
+		},
+			/*
+	    "context": [
+				{ "key": "selection_empty", "operator": "not_equal", "operand": true, "match_all": true },
+				{ "key": "preceding_text", "operator": "not_regex_contains", "operand": "(\"|')$", "match_all": true },
+				{ "key": "following_text", "operator": "not_regex_contains", "operand": "^(\"|')", "match_all": true },
+				{ "key": "selector", "operator": "not_equal", "operand": "punctuation.definition.string.begin", "match_all": true },
+				{ "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.double - punctuation.definition.string.end", "match_all": true },
+			],
+			*/
+		},
+		/* When inside single quotes */
+		{
+			"keys": ["ctrl+shift+'"],
+			"command": "split_word_to_characters",
+			"args": {
+				"contents": "${1:$SELECTION}$0",
+				"quoted_double": true,
+				"quoted_single": false,
+			},
+			/*
+	    "context": [
+				{ "key": "selection_empty", "operator": "not_equal", "operand": true, "match_all": true },
+				{ "key": "preceding_text", "operator": "not_regex_contains", "operand": "(\"|')$", "match_all": true },
+				{ "key": "following_text", "operator": "not_regex_contains", "operand": "^(\"|')", "match_all": true },
+				{ "key": "selector", "operator": "not_equal", "operand": "punctuation.definition.string.begin", "match_all": true },
+				{ "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.double - punctuation.definition.string.end", "match_all": true },
+			],
+			*/
+		},
 	{
 		"keys": ["d", "e", "f", "a", "t"],
 		"command": "insert_snippet",
@@ -174,21 +208,21 @@
 		}
 	},
 	{
-		"keys": ["d", "e", "f", "n"],
+		"keys": ["d", "e", "f", "n", "a", "m", "e" ],
 		"command": "insert_snippet",
 		"args": {
 			"contents": "${1:Nopphasin Arayasirikul}$0",
 		}
 	},
 	{
-		"keys": ["g", "c", "t", "n"],
+		"keys": ["g", "c", "t", "n", "a", "m", "e" ],
 		"command": "insert_snippet",
 		"args": {
 			"contents": "${1:Goldfish Creative}$0",
 		}
 	},
 	{
-		"keys": ["a", "r", "t", "n"],
+		"keys": ["a", "r", "t", "n", "a", "m", "e" ],
 		"command": "insert_snippet",
 		"args": {
 			"contents": "${1:Fineart Developer}$0",

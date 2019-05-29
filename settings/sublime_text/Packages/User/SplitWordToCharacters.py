@@ -5,26 +5,40 @@ import sublime
 import sublime_plugin
 
 class SplitWordToCharactersCommand(sublime_plugin.TextCommand):
-   def run(self, edit):
+   def run(self, edit, contents, quoted_double, quoted_single):
     for region in self.view.sel():
       if not region.empty():
+        quoted = ''
+
+        if quoted_double:
+          quoted = '"'
+
+        if quoted_single:
+          quoted = "'"
+
         newText = ''
         selectedText = self.view.substr(region)
-        for x in range(0, math.sum([selectedText.count(''), 1])):
+        selectedLength = int(selectedText.count(''))
+
+        for x in range(0, (int(selectedLength) - 1)):
           separator = ''
+          selectedChar = str(selectedText[x])
+          if selectedChar == ' ':
+            selectedChar = str('space')
           if newText != '':
             separator = ' '
-          newText += str(separator) + str(selectedText[x])
-        # collect = str.join(collect)
-        # collect = re.split(r'\B([a-zA-Z0-9\-\_\+\=\.\,\;\'\"\[\]\{\}])\B', ''+ str(selectedText) +'', flags=re.LOCALE))
-        # collect = re.split(r'(\S)', selectedText)
-        # collect = re.split(r'(\S)', str(selectedText), flags=re.IGNORECASE)
+          newText += str(separator) + str(quoted) + str(selectedChar) + str(quoted)
+
+        if newText != '':
+          collect = newText.split(' ')
+          newText = re.sub(r'\s{1,}', ', ', newText)
+
+        # Replace selectedText with newText
         selectedText = str(newText)
-        # re.split(r'\W+', 'Words, words, words.',)
-        # re.split('[a-f]+', '0a3B9', flags=re.IGNORECASE)
-        # age = 18
-        # string = "Hello, I am " + str(age) + " years old"
-        # for x in collect:
-          # newText += ' ' + x
-        # self.view.insert(edit, 0,  s)
+
+        # Delete current and quotes
+        # self.view.run_command('select_a_quotes')
+        # self.view.run_command('delete_in_quotes')
+        # self.view.run_command('delete_quotes')
+
         self.view.replace(edit, region, '' + selectedText + '')
