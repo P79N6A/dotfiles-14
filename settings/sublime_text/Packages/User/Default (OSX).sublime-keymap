@@ -148,6 +148,74 @@
 			"opt": "-n",
 		},
 	},
+	{
+		"keys": ["ctrl+shift+x"],
+		"command": "split_word_to_characters",
+	},
+	{
+		"keys": ["d", "e", "f", "a", "t"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "${1:nopphasin.arayasirikul@gmail.com}$0",
+		}
+	},
+	{
+		"keys": ["g", "c", "t", "a", "t"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "${1:goldfishcreative.thailand@gmail.com}$0",
+		}
+	},
+	{
+		"keys": ["a", "r", "t", "a", "t"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "${1:fineartdeveloper@gmail.com}$0",
+		}
+	},
+	{
+		"keys": ["d", "e", "f", "n"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "${1:Nopphasin Arayasirikul}$0",
+		}
+	},
+	{
+		"keys": ["g", "c", "t", "n"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "${1:Goldfish Creative}$0",
+		}
+	},
+	{
+		"keys": ["a", "r", "t", "n"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "${1:Fineart Developer}$0",
+		}
+	},
+	{
+		"keys": ["d", "e", "f", "u"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "${1:nopphasinara}$0",
+		}
+	},
+	{
+		"keys": ["g", "c", "t", "u"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "${1:gcreativeth}$0",
+		}
+	},
+	{
+		"keys": ["a", "r", "t", "u"],
+		"command": "insert_snippet",
+		"args": {
+			"contents": "${1:fineartdeveloper}$0",
+		}
+	},
+
 	{ "keys": ["alt+shift+w"], "command": "toggle_watch" },
 	{ "keys": ["alt+shift+z"], "command": "toggle_output_panel" },
 	{ "keys": ["alt+m"], "command": "noop" },
