@@ -258,4 +258,14 @@
 	{ "keys": ["super+ctrl+f"], "command": "noop" },
 	{ "keys": ["super+k", "super+b"], "command": "noop" },
 	{ "keys": ["super+ctrl+shift+f"], "command": "noop" },
+	{
+    "keys": ["ctrl+shift+left"],
+    "command": "move_tab",
+    "args": { "position": "-1" }
+  },
+  {
+    "keys": ["ctrl+shift+right"],
+    "command": "move_tab",
+    "args": { "position": "+1" }
+  },
 ]
