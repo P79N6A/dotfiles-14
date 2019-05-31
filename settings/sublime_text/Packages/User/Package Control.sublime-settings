@@ -83,9 +83,11 @@
 	],
 	"installed_packages":
 	[
+		"10% Too Dull for My Tastes Color Scheme",
 		"AlternativeAutocompletion",
 		"Autocomplete Javascript with Method Signature",
 		"AutocompletionFuzzy",
+		"ayu",
 		"Better CoffeeScript",
 		"Better Completion",
 		"Bootstrap 4 Autocomplete",
