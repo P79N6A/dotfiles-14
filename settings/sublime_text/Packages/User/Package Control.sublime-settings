@@ -116,12 +116,14 @@
 		"PHPIntel",
 		"PHPUnit Completions",
 		"QuickSearchEnhanced",
+		"ShellScriptImproved",
 		"Smart Title Case",
 		"Statement",
 		"StatusMessage",
 		"Theme - Gravity",
 		"Themr",
-		"UnicodeCompletion"
+		"UnicodeCompletion",
+		"ZSH"
 	],
 	"package_destination": "",
 	"package_name_map":
