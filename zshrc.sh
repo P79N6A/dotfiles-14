@@ -25,10 +25,10 @@ export ZSH=$ZSHFILES
 # ZSH_THEME="nanotech"
 # ZSH_THEME="bureau"
 # ZSH_THEME="refined"
-# ZSH_THEME="ys"
+ZSH_THEME="ys"
 # ZSH_THEME="nt9"
 # ZSH_THEME="kayid"
-ZSH_THEME="pygmalion"
+# ZSH_THEME="pygmalion"
 # ZSH_THEME="nodeys"
 
 SPACESHIP_PROMPT_ADD_NEWLINE="true"
