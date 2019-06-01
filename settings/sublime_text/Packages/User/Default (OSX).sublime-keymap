@@ -250,14 +250,6 @@
 		}
 	},
 
-	{ "keys": ["alt+shift+w"], "command": "toggle_watch" },
-	{ "keys": ["alt+shift+z"], "command": "toggle_output_panel" },
-	{ "keys": ["alt+m"], "command": "noop" },
-	{ "keys": ["super+ctrl+p"], "command": "noop" },
-	{ "keys": ["super+alt+s"], "command": "noop" },
-	{ "keys": ["super+ctrl+f"], "command": "noop" },
-	{ "keys": ["super+k", "super+b"], "command": "noop" },
-	{ "keys": ["super+ctrl+shift+f"], "command": "noop" },
 	{
     "keys": ["ctrl+shift+left"],
     "command": "move_tab",
@@ -268,4 +260,11 @@
     "command": "move_tab",
     "args": { "position": "+1" }
   },
+
+	{ "keys": ["alt+m"], "command": "noop" },
+	{ "keys": ["super+ctrl+p"], "command": "noop" },
+	{ "keys": ["super+alt+s"], "command": "noop" },
+	{ "keys": ["super+ctrl+f"], "command": "noop" },
+	{ "keys": ["super+k", "super+b"], "command": "noop" },
+	{ "keys": ["super+ctrl+shift+f"], "command": "noop" },
 ]

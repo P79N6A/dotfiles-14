@@ -140,7 +140,7 @@
     //   "auto"  -- show line annotation if word wrap is disabled (default)
     //   "true"  -- always show line annotation
     //   "false" -- never show line annotation
-    "show_line_annotation": "auto",
+    "show_line_annotation": "false",
 
     // (ST3, Build 3124+ only)
     // The 1 based ruler index to align the line annotation text to.
