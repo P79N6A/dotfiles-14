@@ -18,8 +18,8 @@ export ZSH=$ZSHFILES
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="lambda-mod"
-# ZSH_THEME="oxide"
-ZSH_THEME="zhann"
+ZSH_THEME="oxide"
+# ZSH_THEME="zhann"
 # ZSH_THEME="smt"
 # ZSH_THEME="kolo"
 # ZSH_THEME="nanotech"
