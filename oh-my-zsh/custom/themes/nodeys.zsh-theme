@@ -15,7 +15,7 @@ function box_name {
 local current_dir='%{$fg[blue]%}${PWD/#$HOME/~}%{$reset_color%}'
 
 # VCS
-YS_VCS_PROMPT_PREFIX1=" on %{$fg[yellow]%}"
+YS_VCS_PROMPT_PREFIX1=" %{$fg[yellow]%}on%{$reset_color%} %{$fg[yellow]%}"
 YS_VCS_PROMPT_PREFIX2="%{$reset_color%}%{$fg[green]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
 YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}"
