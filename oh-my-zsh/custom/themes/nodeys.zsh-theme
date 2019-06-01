@@ -12,7 +12,7 @@ function box_name {
 }
 
 # Directory info.
-local current_dir="%{$fg[blue]%}${PWD/#$HOME/~}%{$reset_color%}"
+local current_dir='%{$fg[blue]%}${PWD/#$HOME/~}%{$reset_color%}'
 
 # VCS
 YS_VCS_PROMPT_PREFIX1=" on %{$fg[yellow]%}"
