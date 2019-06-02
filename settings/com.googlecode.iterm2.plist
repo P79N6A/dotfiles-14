@@ -47629,7 +47629,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 6</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>/Volumes/Data/.dotfiles/settings</string>
+	<string>~/.dotfiles/settings</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{1164, 792}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -50098,6 +50098,10 @@ Clear Buffer</string>
 	<true/>
 	<key>NoSyncConfirmShellIntegrationCommand_selection</key>
 	<integer>0</integer>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallUtilitiesPackage</key>
@@ -50164,7 +50168,7 @@ Clear Buffer</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Volumes/Data/.dotfiles/settings</string>
+	<string>/Users/sudprawat/.dotfiles/settings</string>
 	<key>PreventEscapeSequenceFromClearingHistory</key>
 	<true/>
 	<key>ProfilesWindowJoinsActiveSpace</key>
