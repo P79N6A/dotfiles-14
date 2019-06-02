@@ -47,16 +47,50 @@ export ARCHFLAGS="-arch x86_64"
 export BREW_PREFIX="`brew --prefix`"
 export SSH_KEY_PATH=$HOME/.ssh/rsa_id
 export MANPATH=/usr/local/man:$MANPATH
-# export BREW_PATH=/usr/local/Cellar
+export BREW_PATH=/usr/local/Cellar
 # export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
+# export PYTHONPATH=/usr/local/Cellar/python/3.7.3/bin
 export COMPOSERBIN=$HOME/.composer/vendor/bin
 # export PHP_HOME=/usr/local/opt/php@`phpversion`
 # export PHPBIN=$PHP_HOME/bin:$PHP_HOME/sbin
-export PATH="/usr/local/bin:$COMPOSERBIN:$DOTFILES/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="$BREW_PATH:$COMPOSERBIN:/usr/local/bin:$DOTFILES/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+# export PATH="/usr/local/opt/gettext/bin:$PATH"
+# export PATH="/usr/local/opt/openssl/bin:$PATH"
+# export PATH="/usr/local/opt/icu4c/bin:$PATH"
+# export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+# export PATH="/usr/local/opt/openldap/bin:$PATH"
+# export PATH="/usr/local/opt/openldap/sbin:$PATH"
+# export PATH="/usr/local/opt/curl-openssl/bin:$PATH"
+# export PATH="/usr/local/opt/sqlite/bin:$PATH"
+# export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+# export PATH="/usr/local/Cellar/python/3.7.3/bin/python3:$PATH"
+# export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+# export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
-# /usr/local/lib/node_modules
+# export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+
+# export LDFLAGS="-L/usr/local/opt/php@7.2/lib"
+# export CPPFLAGS="-I/usr/local/opt/php@7.2/include"
+# export LDFLAGS="-L/usr/local/opt/libpq/lib"
+# export CPPFLAGS="-I/usr/local/opt/libpq/include"
+# export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+# export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+# export LDFLAGS="-L/usr/local/opt/readline/lib"
+# export CPPFLAGS="-I/usr/local/opt/readline/include"
+# export LDFLAGS="-L/usr/local/opt/libffi/lib"
+# export LDFLAGS="-L/usr/local/opt/curl-openssl/lib"
+# export CPPFLAGS="-I/usr/local/opt/curl-openssl/include"
+# export LDFLAGS="-L/usr/local/opt/openldap/lib"
+# export CPPFLAGS="-I/usr/local/opt/openldap/include"
+# export LDFLAGS="-L/usr/local/opt/gettext/lib"
+# export CPPFLAGS="-I/usr/local/opt/gettext/include"
+# export LDFLAGS="-L/usr/local/opt/openssl/lib"
+# export CPPFLAGS="-I/usr/local/opt/openssl/include"
+# export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+# export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
 
 
 ## THEME VARIABLES
@@ -102,8 +136,3 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 # Add colors to Terminal
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-
-export LDFLAGS="-L/usr/local/opt/gettext/lib"
-export CPPFLAGS="-I/usr/local/opt/gettext/include"
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
