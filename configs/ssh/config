@@ -32,7 +32,7 @@
 #   ForwardAgent yes
 #   AddKeysToAgent yes
 #   UseKeychain yes
-#   IdentityFile ~/.ssh/github_id_rsa
+#   IdentityFile ~/.ssh/id_rsa
 #   # LocalCommand open -a Atom
 #   # PermitLocalCommand yes
 
