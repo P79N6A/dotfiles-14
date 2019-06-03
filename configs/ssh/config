@@ -28,13 +28,16 @@
 #   AddKeysToAgent no
 #   UseKeychain no
 
-Host github.com
-  ForwardAgent yes
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/github_id_rsa
+# Host github.com
+#   ForwardAgent yes
+#   AddKeysToAgent yes
+#   UseKeychain yes
+#   IdentityFile ~/.ssh/github_id_rsa
 #   # LocalCommand open -a Atom
 #   # PermitLocalCommand yes
 
 Host *
   SendEnv LANG LC_*
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa

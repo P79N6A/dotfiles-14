@@ -2,6 +2,13 @@ Bash completion has been installed to:
   /usr/local/etc/bash_completion.d
 
 
+# Create github keys
+# --------------------------------------------------------
+
+ssh-keygen -t rsa -b 4096 -C "nopphasin.arayasirikul@gmail.com"
+
+
+
 # NPM ATOM
 # --------------------------------------------------------
 
