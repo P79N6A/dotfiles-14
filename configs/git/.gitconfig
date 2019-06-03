@@ -1,13 +1,13 @@
 [user]
   name = nopphasinara
   email = nopphasin.arayasirikul@gmail.com
-# [credential]
-#   useHttpPath = true
-#   helper = osxkeychain
+[credential]
+  useHttpPath = true
+  helper = osxkeychain
 [web]
   browser = google-chrome
 [core]
   editor = Atom
   # excludesfile = ~/.dotfiles/configs/git/.gitignore
-[url "git@github.com:"]
-  insteadOf = https://github.com/
+# [url "git@github.com:"]
+#   insteadOf = https://github.com/
