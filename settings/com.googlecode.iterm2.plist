@@ -48090,12 +48090,26 @@
 					<key>Text</key>
 					<string>\e[5</string>
 				</dict>
+				<key>0x44-0x120000</key>
+				<dict>
+					<key>Action</key>
+					<integer>28</integer>
+					<key>Text</key>
+					<string>23B761B0-9F09-4D96-9801-55AFD9215E0B</string>
+				</dict>
 				<key>0x52-0x120000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
 					<string>01 0B 73 6f 75 72 63 65 20 7e 2f 2e 64 6f 74 66 69 6c 65 73 2f 67 63 20 26 26 20 63 6c 65 61 72 0D</string>
+				</dict>
+				<key>0x64-0x100000</key>
+				<dict>
+					<key>Action</key>
+					<integer>29</integer>
+					<key>Text</key>
+					<string>23B761B0-9F09-4D96-9801-55AFD9215E0B</string>
 				</dict>
 				<key>0x65-0x100000</key>
 				<dict>
