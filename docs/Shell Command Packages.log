@@ -12,6 +12,19 @@ ssh-keygen -t rsa -b 4096 -C "nopphasin.arayasirikul@gmail.com"
 # NPM ATOM
 # --------------------------------------------------------
 
+Update your git config to finish installation:
+
+  # Update global git config
+  $ git lfs install
+
+  # Update system git config
+  $ git lfs install --system
+
+
+
+# NPM ATOM
+# --------------------------------------------------------
+
 lodash asciidoctor disposify sb-event-kit season sb-react-table atom-space-pen-views atom-package-deps fs-plus underscore-plus bluebird lodash/uniq mobx event-kit atom-package-deps module
 
 
