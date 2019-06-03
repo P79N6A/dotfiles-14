@@ -2,6 +2,13 @@ Bash completion has been installed to:
   /usr/local/etc/bash_completion.d
 
 
+# NPM ATOM
+# --------------------------------------------------------
+
+lodash asciidoctor disposify sb-event-kit season sb-react-table atom-space-pen-views atom-package-deps fs-plus underscore-plus bluebird lodash/uniq mobx event-kit atom-package-deps module
+
+
+
 # GEM
 # --------------------------------------------------------
 

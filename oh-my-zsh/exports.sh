@@ -2,16 +2,11 @@ export h=$HOME
 
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="10"
 
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-
 export HOMEBREW_NO_EMOJI="1"
 export MAILCHECK="-1"
 export TERM="xterm-256color"
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="1;32"
-# export CLICOLOR="1"
-# export LSCOLORS="ExFxCxDxBxegedabagacad"
 export HISTCONTROL="ignoreboth:erasedups"
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE="1000"
@@ -35,62 +30,14 @@ export GIT_AUTHOR_EMAIL=$EMAIL
 export GIT_COMMITTER_EMAIL=$EMAIL
 export GIT_SSL_KEY=$HOME/.ssh/github_id_rsa
 export ATOM_DEV_RESOURCE_PATH=$HOME/.dotfiles/projects/atom-source
-# Fingerprint e8a1cc7b157035e64d21d7ab0884430675b0b62b
-# Refined Github 87608c68d0a291bea87f151502aa9af5f75fed5f
-
-
-# export LDFLAGS=-L/usr/local/opt/php@`phpversion`/lib
-# export CPPFLAGS=-I/usr/local/opt/php@`phpversion`/include
-
 # export NPM_CONFIG_PREFIX=$HOME/.npm-global
 export ARCHFLAGS="-arch x86_64"
 export BREW_PREFIX="`brew --prefix`"
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 export MANPATH="/usr/local/man:$MANPATH"
 export BREW_PATH="/usr/local/Cellar"
-# export BREWGEMBIN=/usr/local/Cellar/ruby/2.5.0_2/bin
-# export PYTHONPATH=/usr/local/Cellar/python/3.7.3/bin
 export COMPOSERBIN="$HOME/.composer/vendor/bin"
-# export PHP_HOME=/usr/local/opt/php@`phpversion`
-# export PHPBIN=$PHP_HOME/bin:$PHP_HOME/sbin
 export PATH="$BREW_PATH:$COMPOSERBIN:/usr/local/bin:$DOTFILES/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-# export PATH="/usr/local/opt/gettext/bin:$PATH"
-# export PATH="/usr/local/opt/openssl/bin:$PATH"
-# export PATH="/usr/local/opt/icu4c/bin:$PATH"
-# export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-# export PATH="/usr/local/opt/openldap/bin:$PATH"
-# export PATH="/usr/local/opt/openldap/sbin:$PATH"
-# export PATH="/usr/local/opt/curl-openssl/bin:$PATH"
-# export PATH="/usr/local/opt/sqlite/bin:$PATH"
-# export PATH="/usr/local/opt/libpq/bin:$PATH"
-export PATH="/usr/local/opt/php@7.2/bin:$PATH"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
-# export PATH="/usr/local/Cellar/python/3.7.3/bin/python3:$PATH"
-# export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
-# export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
-
-# export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
-
-# export LDFLAGS="-L/usr/local/opt/php@7.2/lib"
-# export CPPFLAGS="-I/usr/local/opt/php@7.2/include"
-# export LDFLAGS="-L/usr/local/opt/libpq/lib"
-# export CPPFLAGS="-I/usr/local/opt/libpq/include"
-# export LDFLAGS="-L/usr/local/opt/sqlite/lib"
-# export CPPFLAGS="-I/usr/local/opt/sqlite/include"
-# export LDFLAGS="-L/usr/local/opt/readline/lib"
-# export CPPFLAGS="-I/usr/local/opt/readline/include"
-# export LDFLAGS="-L/usr/local/opt/libffi/lib"
-# export LDFLAGS="-L/usr/local/opt/curl-openssl/lib"
-# export CPPFLAGS="-I/usr/local/opt/curl-openssl/include"
-# export LDFLAGS="-L/usr/local/opt/openldap/lib"
-# export CPPFLAGS="-I/usr/local/opt/openldap/include"
-# export LDFLAGS="-L/usr/local/opt/gettext/lib"
-# export CPPFLAGS="-I/usr/local/opt/gettext/include"
-# export LDFLAGS="-L/usr/local/opt/openssl/lib"
-# export CPPFLAGS="-I/usr/local/opt/openssl/include"
-# export LDFLAGS="-L/usr/local/opt/icu4c/lib"
-# export CPPFLAGS="-I/usr/local/opt/icu4c/include"
-
 
 
 ## THEME VARIABLES
