@@ -65,9 +65,10 @@ alias fgrep="fgrep --color=auto"
 
 ## FOLDER
 ## -------------------------------------------------- ##
-alias lawww="cd ~/www/laravel.local"
-alias repro="cd ~/www/reproduction-gallery.com"
-alias repronew="cd ~/www/repro-gallery-master"
+alias lawww="cd $HOME/www/laravel.local"
+alias repro="cd $HOME/www/reproduction-gallery.com"
+alias dashboard="cd $HOME/www/dashboard"
+alias repronew="cd $HOME/www/repro-gallery-master"
 alias atom-dev="atom --dev"
 
 
