@@ -268,6 +268,10 @@
   	"keys": ["super+ctrl+o"],
   	"command": "fm_open_in_browser",
   },
+  {
+  	"keys": ["super+ctrl+."],
+  	"command": "reveal_in_side_bar",
+  },
 
 	{ "keys": ["alt+m"], "command": "noop" },
 	{ "keys": ["super+ctrl+p"], "command": "noop" },

@@ -1,0 +1,14 @@
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: /Users/Fineart/.gnupg/trustdb.gpg: trustdb created
+gpg: key 294D17AE559B3EFB marked as ultimately trusted
+gpg: directory '/Users/Fineart/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/Users/Fineart/.gnupg/openpgp-revocs.d/25EBA4A2F453A3D41C5D685D294D17AE559B3EFB.rev'
+public and secret key created and signed.
+
+pub   rsa4096 2019-06-04 [SC]
+      25EBA4A2F453A3D41C5D685D294D17AE559B3EFB
+uid                      nopphasinara <nopphasin.arayasirikul@gmail.com>
+sub   rsa4096 2019-06-04 [E]

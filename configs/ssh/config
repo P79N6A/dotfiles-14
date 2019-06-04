@@ -38,6 +38,7 @@
 
 Host *
   SendEnv LANG LC_*
+  ForwardAgent yes
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
