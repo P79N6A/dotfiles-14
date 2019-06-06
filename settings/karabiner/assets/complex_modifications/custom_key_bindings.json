@@ -439,6 +439,35 @@
       "manipulators": [
         {
           "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "option",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.apple.finder$"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
             "key_code": "backslash",
             "modifiers": {
               "mandatory": [
@@ -1208,6 +1237,30 @@
           "parameters": {
             "basic.to_if_held_down_threshold_milliseconds": 2000
           },
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Mouse Key Bindings",
+      "manipulators": [
+        {
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
           "type": "basic"
         }
       ]
