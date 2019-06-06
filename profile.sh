@@ -1,9 +1,7 @@
 export DOTFILES="$HOME/.dotfiles"
 export ZSHFILES="$HOME/.dotfiles/oh-my-zsh"
-
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-
 export HOMEBREW_NO_EMOJI="1"
 export MAILCHECK="-1"
 export TERM="xterm-256color"
@@ -31,21 +29,13 @@ export GIT_SSL_KEY="$HOME/.ssh/id_rsa"
 export ARCHFLAGS="-arch x86_64"
 export BREW_PREFIX="`brew --prefix`"
 export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
-
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export PATH="$HOME/.composer/vendor/bin:/usr/local/Cellar:$PATH"
-
 export PS1="\u on \w\n$ "
-
-
 alias home="cd ~/"
-
 alias ls="exa -l -h -a --git --color=always --group-directories-first"
 alias tree="ls -T"
-
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
-
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
