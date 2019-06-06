@@ -44,6 +44,9 @@ alias tree="ls -T"
 ## GEM
 ## -------------------------------------------------- ##
 alias gem="sudo gem"
+function gemse() {
+  gem search "${*}" -d
+}
 
 
 ## GREP

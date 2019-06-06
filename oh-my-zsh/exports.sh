@@ -37,7 +37,9 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 export MANPATH="/usr/local/man:$MANPATH"
 export BREW_PATH="/usr/local/Cellar"
 export COMPOSERBIN="$HOME/.composer/vendor/bin"
-export PATH="$BREW_PATH:$COMPOSERBIN:/usr/local/bin:$DOTFILES/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+# export GEM_PATH="/Library/Ruby/Gems/2.3.0/gems"
+# export GEM_PATH="/Library/Ruby/Gems/2.3.0/gems/bounce_email-0.2.8/lib"
+export PATH="$GEM_PATH:$BREW_PATH:$COMPOSERBIN:/usr/local/bin:$DOTFILES/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 
 ## THEME VARIABLES
