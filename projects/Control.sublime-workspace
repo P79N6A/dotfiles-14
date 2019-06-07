@@ -24,7 +24,7 @@
 			"file": "/Volumes/Data/Google Drives/- Fineart/Plesk_Oynx.txt",
 			"settings":
 			{
-				"buffer_size": 3081,
+				"buffer_size": 3585,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -41,6 +41,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"wr",
+				"Word Wrap: Toggle"
+			],
 			[
 				"pack",
 				"Package Control: Tests"
@@ -70,6 +74,8 @@
 	},
 	"file_history":
 	[
+		"/Users/Fineart/Desktop/disavow_reproduction-gallery.com_20190607.txt",
+		"/Users/Fineart/Downloads/Disavow_Links_20190606.txt",
 		"/Users/Fineart/.dotfiles/configs/git/.gitconfig",
 		"/Users/Fineart/.dotfiles/docs/gpg.txt",
 		"/Users/Fineart/.dotfiles/docs/chmod.txt",
@@ -92,7 +98,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 55.0
 	},
 	"find_in_files":
 	{
@@ -106,6 +112,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"majes",
+			"^domain\\:.+\\:",
+			"^domain\\:.+\\:.+",
+			"^domain\\:.+\\:.+$",
+			"\\:[0-9]+$",
+			"namenfinden.de",
+			"saatchigallery",
+			"^(http|https)\\:\\/\\/(www\\.)?pinosy\\.",
+			"domain:saatchigallery.com",
+			"saatchigallery.com",
+			"^(!domain\\:)+saatchigallery.com",
+			"^!(domain\\:).+saatchigallery.com",
+			"^.+saatchigallery.com",
+			"^(http|https)\\:\\/\\/(www\\.)?picswe\\.(net|com)",
+			"^(http|https)\\:\\/\\/.*picswe\\.(net|com)",
+			"^(http|https)\\:.*picswe\\.(net|com)",
+			"^.+picswe\\.(com|net)",
+			"shadyseo",
+			"zoho"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -161,15 +186,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3081,
+						"buffer_size": 3585,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2996,
-								2999
+								3118,
+								3118
 							]
 						],
 						"settings":
@@ -178,7 +203,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2398.0,
+						"translation.y": 2597.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -230,7 +255,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 52.0
+		"height": 91.0
 	},
 	"save_all_on_build": true,
 	"select_file":

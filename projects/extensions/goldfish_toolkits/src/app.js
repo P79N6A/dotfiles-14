@@ -1,7 +1,7 @@
-window.onkeypress = function (evt) {
-  console.log(evt)
+window.onkeydown = function (evt) {
+  console.log(evt);
+};
 
-  if (evt.metaKey === true) {
-    alert('meta');
-  }
+window.onkeyup = function (evt) {
+  console.log(evt);
 };

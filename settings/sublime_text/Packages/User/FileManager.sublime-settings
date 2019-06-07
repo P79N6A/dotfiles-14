@@ -69,7 +69,20 @@
     "aliases": {
         "st": "$packages",
         "des": "~/Desktop",
-        "here": "$file_path"
+        "here": "$file_path",
+        "pext": "$project_extension",
+        "pname": "$project_name",
+        "fname": "$file_name",
+        "pkgs": "$packages",
+        "pbname": "$project_base_name",
+        "fbname": "$file_base_name",
+        "f": "$file",
+        "fo": "$folder",
+        "fext": "$file_extension",
+        "ppath": "$project_path",
+        "fpath": "$file_path",
+        "p": "$project",
+        "pf": "$platform",
     },
 
     // See https://math2001.github.io/FileManager/aliases/#watch-out-for-infinite-loops
@@ -96,6 +109,6 @@
     "show_create_from_selection_command": true,
 
     // Set to false to disable the default alt+n key binding
-    "create_keybinding_enabled": true
+    "create_keybinding_enabled": false
 
 }

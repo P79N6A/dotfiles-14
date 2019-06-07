@@ -1,0 +1,9 @@
+[
+    {
+        "command": "fm_create_file_from_selection"
+    },
+    {
+        "caption": "Open In Browser xxx",
+        "command": "fm_open_in_browser"
+    }
+]
