@@ -22,7 +22,7 @@
     // false: disable the log
     // "user": display a user friendly path. eg: ~/Desktop/   (working on window)
     // "computer": display a computer friendly path: C:\User\<user>\Desktop\
-    "log_in_status_bar": "computer",
+    "log_in_status_bar": "user",
 
     // terminals
     // if there is only one, it will directly open it
@@ -109,6 +109,6 @@
     "show_create_from_selection_command": true,
 
     // Set to false to disable the default alt+n key binding
-    "create_keybinding_enabled": false
+    "create_keybinding_enabled": true
 
 }
