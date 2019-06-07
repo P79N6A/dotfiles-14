@@ -18,14 +18,64 @@ var lastIndex = -1;
 var firstPinIndex = 0;
 var lastPinIndex = -1;
 
+function moveTabLeft(activeTab) {
+  var newIndex = parseInt(activeTab.index) - 1;
+
+  if (activeTab.pinned == true) {
+    if (newIndex < firstPinIndex) {
+      newIndex = lastPinIndex;
+    }
+  } else {
+    if (newIndex < firstIndex) {
+      newIndex = lastIndex;
+    }
+  }
+
+  chrome.tabs.move(activeTab.id, {
+    'index': newIndex,
+    'windowId': parseInt(activeTab.windowId),
+  });
+}
+
+function moveTabRight(activeTab) {
+  var newIndex = parseInt(activeTab.index) + 1;
+
+  if (activeTab.pinned == true) {
+    if (newIndex > lastPinIndex) {
+      newIndex = firstPinIndex;
+    }
+  } else {
+    if (newIndex > lastIndex) {
+      newIndex = firstIndex;
+    }
+  }
+
+  chrome.tabs.move(activeTab.id, {
+    'index': newIndex,
+    'windowId': parseInt(activeTab.windowId),
+  });
+}
+
+function pinCurrentTab(activeTab) {
+  var pinned = true;
+  if (activeTab.pinned == true) {
+    pinned = false;
+  }
+
+  chrome.tabs.update(activeTab.id, {
+    active: true,
+    pinned: pinned,
+  });
+}
+
 function createTabNextToCurrent(activeTab) {
   chrome.tabs.query({
     active: true,
     currentWindow: true,
   }, function(tabs) {
-    chrome.tabs.executeScript(tabs[0].id, {
-      code: 'document.body.style.backgroundColor = "red";'
-    });
+    // chrome.tabs.executeScript(tabs[0].id, {
+    //   code: 'document.body.style.backgroundColor = "red";'
+    // });
   });
 
   chrome.tabs.create({
@@ -80,49 +130,11 @@ chrome.commands.onCommand.addListener(function(command) {
     } else if (command == 'create-tab') {
       createTabNextToCurrent(activeTab);
     } else if (command == 'pin-tab') {
-      var pinned = true;
-      if (activeTab.pinned == true) {
-        pinned = false;
-      }
-
-      chrome.tabs.update(activeTab.id, {
-        active: true,
-        pinned: pinned,
-      });
+      pinCurrentTab(activeTab);
     } else if (command == 'move-tab-left') {
-      var newIndex = parseInt(activeTab.index) - 1;
-
-      if (activeTab.pinned == true) {
-        if (newIndex < firstPinIndex) {
-          newIndex = lastPinIndex;
-        }
-      } else {
-        if (newIndex < firstIndex) {
-          newIndex = lastIndex;
-        }
-      }
-
-      chrome.tabs.move(activeTab.id, {
-        'index': newIndex,
-        'windowId': parseInt(activeTab.windowId),
-      });
+      moveTabLeft(activeTab);
     } else if (command == 'move-tab-right') {
-      var newIndex = parseInt(activeTab.index) + 1;
-
-      if (activeTab.pinned == true) {
-        if (newIndex > lastPinIndex) {
-          newIndex = firstPinIndex;
-        }
-      } else {
-        if (newIndex > lastIndex) {
-          newIndex = firstIndex;
-        }
-      }
-
-      chrome.tabs.move(activeTab.id, {
-        'index': newIndex,
-        'windowId': parseInt(activeTab.windowId),
-      });
+      moveTabRight(activeTab);
     } else {
 
     }
@@ -141,3 +153,12 @@ var run_app = function (tab) {
   // console.log(tab);
   // console.log(window.chrome.tabs.getCurrent());
 }.bind(this);
+
+
+document.addEventListener('keypress', function (evt) {
+  console.log(evt);
+
+  if (evt.code == 'KeyT' && evt.ctrlKey == true && evt.metaKey == true) {
+    alert('pressed');
+  }
+});

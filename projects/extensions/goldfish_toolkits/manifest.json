@@ -20,6 +20,17 @@
   },
   "content_scripts": [
     {
+      "all_frames": true,
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/jquery.js",
+        "src/app.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
       "all_frames": false,
       "matches": [
         "*://*.facebook.com/*",
@@ -39,6 +50,7 @@
       "suggested_key": {
         "default": "Ctrl+T",
         "mac": "MacCtrl+T"
+
       },
       "description": "Create new tab next to the current tab."
     },
