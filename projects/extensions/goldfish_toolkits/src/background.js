@@ -222,14 +222,30 @@ chrome.extension.onMessage.addListener(function (message, sender, reply) {
 
       var tab = sender.tab;
 
-      if (message.callerId === 'inject_get_images') {
-        if (!isProgress) {
-          isProgress = true;
-          downloadFacebookImage(getFacebookDownloadUrl(message.url));
-        } else {
-
-        }
+      if (message.callerId === 'get_images') {
+        if (!isProgress) isProgress = true;
+        downloadFacebookImage(getFacebookDownloadUrl(message.url));
       }
+
+      /* if (message.callerId === 'newTabToRight') {
+        helper_newTabToRight();
+      }
+
+      if (message.callerId === 'duplicateCurrentTab') {
+        helper_duplicateCurrentTab();
+      }
+
+      if (message.callerId === 'moveTabLeft') {
+        helper_moveTabLeft();
+      }
+
+      if (message.callerId === 'moveTabRight') {
+        helper_moveTabRight();
+      }
+
+      if (message.callerId === 'pinCurrentTab') {
+        helper_pinCurrentTab();
+      } */
     }
   }, 10);
 });
@@ -272,17 +288,22 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
 });
 
 
-chrome.commands.onCommand.addListener(function (command) {
-  /* chrome.tabs.query({currentWindow: true}, function(tabs) {
-    // Sort tabs according to their index in the window.
-    tabs.sort((a, b) => { return a.index < b.index; });
-    let activeIndex = tabs.findIndex((tab) => { return tab.active; });
-    let lastTab = tabs.length - 1;
-    let newIndex = -1;
-    if (command === 'flip-tabs-forward')
-      newIndex = activeIndex === 0 ? lastTab : activeIndex - 1;
-    else  // 'flip-tabs-backwards'
-      newIndex = activeIndex === lastTab ? 0 : activeIndex + 1;
-    chrome.tabs.update(tabs[newIndex].id, {active: true, highlighted: true});
-  }); */
+chrome.commands.onCommand.addListener(function(command) {
+  helper_run();
+
+  if (command == 'pinCurrentTab') {
+    helper_pinCurrentTab();
+  }
+  if (command == 'newTabToRight') {
+    helper_newTabToRight();
+  }
+  if (command == 'duplicateCurrentTab') {
+    helper_duplicateCurrentTab();
+  }
+  if (command == 'moveTabLeft') {
+    helper_moveTabLeft();
+  }
+  if (command == 'moveTabRight') {
+    helper_moveTabRight();
+  }
 });

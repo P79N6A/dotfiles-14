@@ -14,7 +14,8 @@
   "background": {
     "scripts": [
       "src/helpers.js",
-      "src/background.js"
+      "src/background.js",
+      "src/tab_shortcuts.js"
     ],
     "persistent": false
   },
@@ -37,24 +38,25 @@
   },
   "commands": {
     "newTabToRight": {
-      "description": "run command newTabToRight",
-      "global": true
-    },
-    "duplicateCurrentTab": {
-      "description": "run command duplicateCurrentTab",
-      "global": true
+      "suggested_key": {
+        "default": "Ctrl+T",
+        "mac": "MacCtrl+Command+T"
+      },
+      "description": "run command newTabToRight"
     },
     "moveTabLeft": {
-      "description": "run command moveTabLeft",
-      "global": true
+      "suggested_key": {
+        "default": "Ctrl+Shift+Left",
+        "mac": "MacCtrl+Shift+Left"
+      },
+      "description": "run command moveTabLeft"
     },
     "moveTabRight": {
-      "description": "run command moveTabRight",
-      "global": true
-    },
-    "pinCurrentTab": {
-      "description": "run command pinCurrentTab",
-      "global": true
+      "suggested_key": {
+        "default": "Ctrl+Shift+Right",
+        "mac": "MacCtrl+Shift+Right"
+      },
+      "description": "run command moveTabRight"
     }
   },
   "permissions": [

@@ -1,5 +1,5 @@
-function getCallerId() {
-  return 'inject_' + getCallerId.caller.name;
+function foo() {
+  alert('OK');
 }
 
 /* for (let i = 0; i < 1e7; i++) {}
@@ -138,26 +138,11 @@ document.addEventListener('DOMSubtreeModified', function (evt) {
 });
 
 
-// document.addEventListener('keypress', function (evt) {
-//   if (evt.code == 'KeyS' && evt.ctrlKey == true) {
-//     get_images();
-//   }
-//
-//   if (evt.code == 'KeyC' && evt.ctrlKey == true && evt.metaKey == true) {
-//     get_url();
-//   }
-// });
-
-
-window.addEventListener('keypress', function (evt) {
+window.onkeydown = function (evt) {
   if (evt.code == 'KeyS' && evt.ctrlKey == true) {
     get_images();
   }
-
-  if (evt.code == 'KeyC' && evt.ctrlKey == true && evt.metaKey == true) {
-    get_url();
-  }
-});
+};
 
 
 window.addEventListener('load', function (evt) {

@@ -1,3 +1,30 @@
+// chrome.commands.onCommand.addListener(function(command) {
+//   chrome.tabs.query({
+//     'currentWindow': true,
+//     'active': true,
+//   }, function (tabs) {
+//     helper_run();
+//
+//     alert(command);
+//
+//     if (command == 'pinCurrentTab') {
+//       helper_pinCurrentTab();
+//     }
+//     if (command == 'newTabToRight') {
+//       helper_newTabToRight();
+//     }
+//     if (command == 'duplicateCurrentTab') {
+//       helper_duplicateCurrentTab();
+//     }
+//     if (command == 'moveTabLeft') {
+//       helper_moveTabLeft();
+//     }
+//     if (command == 'moveTabRight') {
+//       helper_moveTabRight();
+//     }
+//   });
+// });
+
 // Copyright (c) 2013 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -7,7 +34,7 @@
 * one of our registered commands is detected.
 */
 
-var hasPinTabs = false;
+/* var hasPinTabs = false;
 var windowTabs = null;
 var firstTab = null;
 var lastTab = null;
@@ -16,9 +43,9 @@ var lastPinTab = null;
 var firstIndex = 0;
 var lastIndex = -1;
 var firstPinIndex = 0;
-var lastPinIndex = -1;
+var lastPinIndex = -1; */
 
-function moveTabLeft(activeTab) {
+/* function moveTabLeft(activeTab) {
   var newIndex = parseInt(activeTab.index) - 1;
 
   if (activeTab.pinned == true) {
@@ -35,9 +62,9 @@ function moveTabLeft(activeTab) {
     'index': newIndex,
     'windowId': parseInt(activeTab.windowId),
   });
-}
+} */
 
-function moveTabRight(activeTab) {
+/* function moveTabRight(activeTab) {
   var newIndex = parseInt(activeTab.index) + 1;
 
   if (activeTab.pinned == true) {
@@ -54,9 +81,9 @@ function moveTabRight(activeTab) {
     'index': newIndex,
     'windowId': parseInt(activeTab.windowId),
   });
-}
+} */
 
-function pinCurrentTab(activeTab) {
+/* function pinCurrentTab(activeTab) {
   var pinned = true;
   if (activeTab.pinned == true) {
     pinned = false;
@@ -66,27 +93,9 @@ function pinCurrentTab(activeTab) {
     active: true,
     pinned: pinned,
   });
-}
+} */
 
-function createTabNextToCurrent(activeTab) {
-  chrome.tabs.query({
-    active: true,
-    currentWindow: true,
-  }, function(tabs) {
-    // chrome.tabs.executeScript(tabs[0].id, {
-    //   code: 'document.body.style.backgroundColor = "red";'
-    // });
-  });
-
-  chrome.tabs.create({
-    active: true,
-    pinned: activeTab.pinned,
-    index: parseInt(activeTab.index) + 1,
-    openerTabId: parseInt(activeTab.id),
-  });
-}
-
-chrome.commands.onCommand.addListener(function(command) {
+/* chrome.commands.onCommand.addListener(function(command) {
   // Call 'update' with an empty properties object to get access to the current
   // tab (given to us in the callback function).
   chrome.tabs.query({
@@ -125,11 +134,7 @@ chrome.commands.onCommand.addListener(function(command) {
   }, function (tabs) {
     var activeTab = tabs[0];
 
-    if (command == 'duplicate-tab') {
-      chrome.tabs.duplicate(activeTab.id);
-    } else if (command == 'create-tab') {
-      createTabNextToCurrent(activeTab);
-    } else if (command == 'pin-tab') {
+    if (command == 'pin-tab') {
       pinCurrentTab(activeTab);
     } else if (command == 'move-tab-left') {
       moveTabLeft(activeTab);
@@ -139,26 +144,17 @@ chrome.commands.onCommand.addListener(function(command) {
 
     }
   });
-});
+}); */
 
 
-var run_app = function (tab) {
-  // alert(window.location.href);
-  // document.querySelector('body').setAttribute('data-start', 'start');
-  // alert(document.querySelector('body').getAttribute('data-start'));
+/* var run_app = function (tab) {
+  alert(window.location.href);
+  document.querySelector('body').setAttribute('data-start', 'start');
+  alert(document.querySelector('body').getAttribute('data-start'));
 
-  // alert('run');
-  // var btnOption = document.querySelector('#fbPhotoSnowliftActions');
-  // alert(btnOption);
-  // console.log(tab);
-  // console.log(window.chrome.tabs.getCurrent());
-}.bind(this);
-
-
-document.addEventListener('keypress', function (evt) {
-  console.log(evt);
-
-  if (evt.code == 'KeyT' && evt.ctrlKey == true && evt.metaKey == true) {
-    alert('pressed');
-  }
-});
+  alert('run');
+  var btnOption = document.querySelector('#fbPhotoSnowliftActions');
+  alert(btnOption);
+  console.log(tab);
+  console.log(window.chrome.tabs.getCurrent());
+}.bind(this); */
