@@ -265,11 +265,11 @@
   	"command": "fm_open_in_explorer",
   },
   {
-  	"keys": ["super+ctrl+o"],
+  	"keys": ["shift+ctrl+o"],
   	"command": "fm_open_in_browser",
   },
   {
-  	"keys": ["super+ctrl+."],
+  	"keys": ["super+escape"],
   	"command": "reveal_in_side_bar",
   },
   {
@@ -291,9 +291,8 @@
   {
   	"keys": ["super+alt+n"],
   	"command": "fm_create",
-  	"mnemonic": "N",
   	"args": {
-  		"paths": [""],
+  		"paths": ["./"],
   	},
   },
   {

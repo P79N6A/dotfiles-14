@@ -1,0 +1,12 @@
+{
+	"bundles":
+	{
+		"Test":
+		{
+			"ignored_packages":
+			[
+			]
+		}
+	},
+	"loaded_bundle": "Test"
+}

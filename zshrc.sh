@@ -1,3 +1,7 @@
+# if [ -f "$HOME/bash_completion.d/pip" ] ; then
+#   . $HOME/bash_completion.d/pip
+# fi
+
 export DOTFILES=$HOME/.dotfiles
 export ZSHFILES=$HOME/.dotfiles/oh-my-zsh
 

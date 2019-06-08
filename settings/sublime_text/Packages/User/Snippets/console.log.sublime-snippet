@@ -2,5 +2,4 @@
   <description>console.log()</description>
   <content><![CDATA[console.log($TM_SELECTED_TEXT${0:$SELECTION});]]></content>
   <tabTrigger>log</tabTrigger>
-  <scope>source.js, source.ts, source.coffee</scope>
 </snippet>

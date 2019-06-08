@@ -7,3 +7,12 @@
 //         "command": "fm_open_in_browser"
 //     }
 // ]
+// [
+//   {
+//     "caption": "New File",
+//     "command": "fm_create",
+//     "args": {
+//       "paths": ["./"]
+//     }
+//   }
+// ]
