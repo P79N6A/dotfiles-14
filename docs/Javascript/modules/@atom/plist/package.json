@@ -1,0 +1,86 @@
+{
+  "_args": [
+    [
+      "@atom/plist@0.4.4",
+      "/Users/vsts/agent/2.150.3/work/1/s/apm"
+    ]
+  ],
+  "_from": "@atom/plist@0.4.4",
+  "_id": "@atom/plist@0.4.4",
+  "_inBundle": false,
+  "_integrity": "sha512-EYwsXOY+Jp9vQ2yNWHuWaJufI58vbQWg235OkvGBWnITFVUOdow49OBj7ET9HCksZz560yXbSa1ywzqDIrFPZw==",
+  "_location": "/atom-package-manager/@atom/plist",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@atom/plist@0.4.4",
+    "name": "@atom/plist",
+    "escapedName": "@atom%2fplist",
+    "scope": "@atom",
+    "rawSpec": "0.4.4",
+    "saveSpec": null,
+    "fetchSpec": "0.4.4"
+  },
+  "_requiredBy": [
+    "/atom-package-manager"
+  ],
+  "_resolved": "https://registry.npmjs.org/@atom/plist/-/plist-0.4.4.tgz",
+  "_spec": "0.4.4",
+  "_where": "/Users/vsts/agent/2.150.3/work/1/s/apm",
+  "author": {
+    "name": "Nathan Rajlich",
+    "email": "nathan@tootallnate.net"
+  },
+  "bugs": {
+    "url": "https://github.com/TooTallNate/node-plist/issues"
+  },
+  "contributors": [
+    {
+      "name": "Hans Huebner",
+      "email": "hans.huebner@gmail.com"
+    },
+    {
+      "name": "Pierre Metrailler"
+    },
+    {
+      "name": "Mike Reinstein",
+      "email": "reinstein.mike@gmail.com"
+    },
+    {
+      "name": "Vladimir Tsvang"
+    },
+    {
+      "name": "Mathieu D'Amours"
+    }
+  ],
+  "dependencies": {
+    "xmlbuilder": "0.4.x",
+    "xmldom": "0.1.x"
+  },
+  "description": "Mac OS X Plist parser/builder for NodeJS. Convert a Plist file or string into a native JS object and native JS object into a Plist file.",
+  "devDependencies": {
+    "nodeunit": "0.7.x"
+  },
+  "engines": {
+    "node": ">= 0.1.100"
+  },
+  "homepage": "https://github.com/TooTallNate/node-plist#readme",
+  "keywords": [
+    "apple",
+    "mac",
+    "plist",
+    "parser",
+    "xml"
+  ],
+  "main": "./lib/plist",
+  "name": "@atom/plist",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TooTallNate/node-plist.git"
+  },
+  "scripts": {
+    "test": "nodeunit tests"
+  },
+  "version": "0.4.4"
+}
